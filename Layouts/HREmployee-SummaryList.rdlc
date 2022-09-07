@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="ReportForNavId_1102755000">
+          <DataField>ReportForNavId_1102755000</DataField>
+        </Field>
+        <Field Name="CompanyInfoName">
+          <DataField>CompanyInfoName</DataField>
+        </Field>
+        <Field Name="CompanyInfoPicture">
+          <DataField>CompanyInfoPicture</DataField>
+        </Field>
+        <Field Name="No_HREmployee">
+          <DataField>No_HREmployee</DataField>
+        </Field>
+        <Field Name="FirstName_HREmployee">
+          <DataField>FirstName_HREmployee</DataField>
+        </Field>
+        <Field Name="MiddleName_HREmployee">
+          <DataField>MiddleName_HREmployee</DataField>
+        </Field>
+        <Field Name="LastName_HREmployee">
+          <DataField>LastName_HREmployee</DataField>
+        </Field>
+        <Field Name="Initials_HREmployee">
+          <DataField>Initials_HREmployee</DataField>
+        </Field>
+        <Field Name="PostalAddress_HREmployee">
+          <DataField>PostalAddress_HREmployee</DataField>
+        </Field>
+        <Field Name="ResidentialAddress_HREmployee">
+          <DataField>ResidentialAddress_HREmployee</DataField>
+        </Field>
+        <Field Name="City_HREmployee">
+          <DataField>City_HREmployee</DataField>
+        </Field>
+        <Field Name="PostCode_HREmployee">
+          <DataField>PostCode_HREmployee</DataField>
+        </Field>
+        <Field Name="DateOfJoin_HREmployee">
+          <DataField>DateOfJoin_HREmployee</DataField>
+        </Field>
+        <Field Name="LengthOfService_HREmployee">
+          <DataField>LengthOfService_HREmployee</DataField>
+        </Field>
+        <Field Name="DateOfBirth_HREmployee">
+          <DataField>DateOfBirth_HREmployee</DataField>
+        </Field>
+        <Field Name="DepartmentCode_HREmployee">
+          <DataField>DepartmentCode_HREmployee</DataField>
+        </Field>
+        <Field Name="Office_HREmployee">
+          <DataField>Office_HREmployee</DataField>
+        </Field>
+        <Field Name="Status_HREmployee">
+          <DataField>Status_HREmployee</DataField>
+        </Field>
+        <Field Name="HomePhoneNumber_HREmployee">
+          <DataField>HomePhoneNumber_HREmployee</DataField>
+        </Field>
+        <Field Name="CellularPhoneNumber_HREmployee">
+          <DataField>CellularPhoneNumber_HREmployee</DataField>
+        </Field>
+        <Field Name="WorkPhoneNumber_HREmployee">
+          <DataField>WorkPhoneNumber_HREmployee</DataField>
+        </Field>
+        <Field Name="Ext_HREmployee">
+          <DataField>Ext_HREmployee</DataField>
+        </Field>
+        <Field Name="EMail_HREmployee">
+          <DataField>EMail_HREmployee</DataField>
+        </Field>
+        <Field Name="IDNumber_HREmployee">
+          <DataField>IDNumber_HREmployee</DataField>
+        </Field>
+        <Field Name="Gender_HREmployee">
+          <DataField>Gender_HREmployee</DataField>
+        </Field>
+        <Field Name="SalaryNotchStep_HREmployee">
+          <DataField>SalaryNotchStep_HREmployee</DataField>
+        </Field>
+        <Field Name="SalaryGrade_HREmployee">
+          <DataField>SalaryGrade_HREmployee</DataField>
+        </Field>
+        <Field Name="JobTitle_HREmployee">
+          <DataField>JobTitle_HREmployee</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

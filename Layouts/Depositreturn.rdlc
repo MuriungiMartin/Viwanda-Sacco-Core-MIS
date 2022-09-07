@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="ReportForNavId_1">
+          <DataField>ReportForNavId_1</DataField>
+        </Field>
+        <Field Name="CompanyName">
+          <DataField>CompanyName</DataField>
+        </Field>
+        <Field Name="Count2">
+          <DataField>Count2</DataField>
+        </Field>
+        <Field Name="Balance2">
+          <DataField>Balance2</DataField>
+        </Field>
+        <Field Name="Balance2Format">
+          <DataField>Balance2Format</DataField>
+        </Field>
+        <Field Name="Count3">
+          <DataField>Count3</DataField>
+        </Field>
+        <Field Name="Balance3">
+          <DataField>Balance3</DataField>
+        </Field>
+        <Field Name="Balance3Format">
+          <DataField>Balance3Format</DataField>
+        </Field>
+        <Field Name="Count4">
+          <DataField>Count4</DataField>
+        </Field>
+        <Field Name="Balance4">
+          <DataField>Balance4</DataField>
+        </Field>
+        <Field Name="Balance4Format">
+          <DataField>Balance4Format</DataField>
+        </Field>
+        <Field Name="Count5">
+          <DataField>Count5</DataField>
+        </Field>
+        <Field Name="Balance5">
+          <DataField>Balance5</DataField>
+        </Field>
+        <Field Name="Balance5Format">
+          <DataField>Balance5Format</DataField>
+        </Field>
+        <Field Name="GrandTotalCount">
+          <DataField>GrandTotalCount</DataField>
+        </Field>
+        <Field Name="GrantTotalBalances">
+          <DataField>GrantTotalBalances</DataField>
+        </Field>
+        <Field Name="GrantTotalBalancesFormat">
+          <DataField>GrantTotalBalancesFormat</DataField>
+        </Field>
+        <Field Name="Count1">
+          <DataField>Count1</DataField>
+        </Field>
+        <Field Name="Balance">
+          <DataField>Balance</DataField>
+        </Field>
+        <Field Name="BalanceFormat">
+          <DataField>BalanceFormat</DataField>
+        </Field>
+        <Field Name="FinancialYear">
+          <DataField>FinancialYear</DataField>
+        </Field>
+        <Field Name="YearBeginDate">
+          <DataField>YearBeginDate</DataField>
+        </Field>
+        <Field Name="AsAt">
+          <DataField>AsAt</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

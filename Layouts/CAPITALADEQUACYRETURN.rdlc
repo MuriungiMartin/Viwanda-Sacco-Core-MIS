@@ -1,0 +1,278 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="Name">
+          <DataField>Name</DataField>
+        </Field>
+        <Field Name="FinancialYear">
+          <DataField>FinancialYear</DataField>
+        </Field>
+        <Field Name="AsAt">
+          <DataField>AsAt</DataField>
+        </Field>
+        <Field Name="StartDate">
+          <DataField>StartDate</DataField>
+        </Field>
+        <Field Name="ShareCapital">
+          <DataField>ShareCapital</DataField>
+        </Field>
+        <Field Name="ShareCapitalFormat">
+          <DataField>ShareCapitalFormat</DataField>
+        </Field>
+        <Field Name="StatutoryReserve">
+          <DataField>StatutoryReserve</DataField>
+        </Field>
+        <Field Name="StatutoryReserveFormat">
+          <DataField>StatutoryReserveFormat</DataField>
+        </Field>
+        <Field Name="Otherreserves">
+          <DataField>Otherreserves</DataField>
+        </Field>
+        <Field Name="OtherreservesFormat">
+          <DataField>OtherreservesFormat</DataField>
+        </Field>
+        <Field Name="retainedEarnins">
+          <DataField>retainedEarnins</DataField>
+        </Field>
+        <Field Name="retainedEarninsFormat">
+          <DataField>retainedEarninsFormat</DataField>
+        </Field>
+        <Field Name="NetSurplusaftertax">
+          <DataField>NetSurplusaftertax</DataField>
+        </Field>
+        <Field Name="NetSurplusaftertaxFormat">
+          <DataField>NetSurplusaftertaxFormat</DataField>
+        </Field>
+        <Field Name="LoansandAdvances">
+          <DataField>LoansandAdvances</DataField>
+        </Field>
+        <Field Name="LoansandAdvancesFormat">
+          <DataField>LoansandAdvancesFormat</DataField>
+        </Field>
+        <Field Name="totalassetsPBSheet">
+          <DataField>totalassetsPBSheet</DataField>
+        </Field>
+        <Field Name="totalassetsPBSheetFormat">
+          <DataField>totalassetsPBSheetFormat</DataField>
+        </Field>
+        <Field Name="Cash">
+          <DataField>Cash</DataField>
+        </Field>
+        <Field Name="CashFormat">
+          <DataField>CashFormat</DataField>
+        </Field>
+        <Field Name="PropertyandEquipment">
+          <DataField>PropertyandEquipment</DataField>
+        </Field>
+        <Field Name="PropertyandEquipmentFormat">
+          <DataField>PropertyandEquipmentFormat</DataField>
+        </Field>
+        <Field Name="GovernmentSecurities">
+          <DataField>GovernmentSecurities</DataField>
+        </Field>
+        <Field Name="GovernmentSecuritiesFormat">
+          <DataField>GovernmentSecuritiesFormat</DataField>
+        </Field>
+        <Field Name="DepositsandBalancesatOtherInstitutions">
+          <DataField>DepositsandBalancesatOtherInstitutions</DataField>
+        </Field>
+        <Field Name="DepositsandBalancesatOtherInstitutionsFormat">
+          <DataField>DepositsandBalancesatOtherInstitutionsFormat</DataField>
+        </Field>
+        <Field Name="Otherassets">
+          <DataField>Otherassets</DataField>
+        </Field>
+        <Field Name="OtherassetsFormat">
+          <DataField>OtherassetsFormat</DataField>
+        </Field>
+        <Field Name="CapitalGrants">
+          <DataField>CapitalGrants</DataField>
+        </Field>
+        <Field Name="CapitalGrantsFormat">
+          <DataField>CapitalGrantsFormat</DataField>
+        </Field>
+        <Field Name="InvestmentsinSubsidiary">
+          <DataField>InvestmentsinSubsidiary</DataField>
+        </Field>
+        <Field Name="InvestmentsinSubsidiaryFormat">
+          <DataField>InvestmentsinSubsidiaryFormat</DataField>
+        </Field>
+        <Field Name="OFFBALANCESHEETASSETS">
+          <DataField>OFFBALANCESHEETASSETS</DataField>
+        </Field>
+        <Field Name="OFFBALANCESHEETASSETSFormat">
+          <DataField>OFFBALANCESHEETASSETSFormat</DataField>
+        </Field>
+        <Field Name="TOTALOnBalanceSheet">
+          <DataField>TOTALOnBalanceSheet</DataField>
+        </Field>
+        <Field Name="TOTALOnBalanceSheetFormat">
+          <DataField>TOTALOnBalanceSheetFormat</DataField>
+        </Field>
+        <Field Name="OtherDeductions">
+          <DataField>OtherDeductions</DataField>
+        </Field>
+        <Field Name="OtherDeductionsFormat">
+          <DataField>OtherDeductionsFormat</DataField>
+        </Field>
+        <Field Name="Sub_Total">
+          <DataField>Sub_Total</DataField>
+        </Field>
+        <Field Name="Sub_TotalFormat">
+          <DataField>Sub_TotalFormat</DataField>
+        </Field>
+        <Field Name="TotalDeductions">
+          <DataField>TotalDeductions</DataField>
+        </Field>
+        <Field Name="TotalDeductionsFormat">
+          <DataField>TotalDeductionsFormat</DataField>
+        </Field>
+        <Field Name="CORECAPITAL">
+          <DataField>CORECAPITAL</DataField>
+        </Field>
+        <Field Name="CORECAPITALFormat">
+          <DataField>CORECAPITALFormat</DataField>
+        </Field>
+        <Field Name="RetainedearningsandDisclosedreserves">
+          <DataField>RetainedearningsandDisclosedreserves</DataField>
+        </Field>
+        <Field Name="RetainedearningsandDisclosedreservesFormat">
+          <DataField>RetainedearningsandDisclosedreservesFormat</DataField>
+        </Field>
+        <Field Name="TotalAssets">
+          <DataField>TotalAssets</DataField>
+        </Field>
+        <Field Name="TotalAssetsFormat">
+          <DataField>TotalAssetsFormat</DataField>
+        </Field>
+        <Field Name="TotalDepositsLiabilities">
+          <DataField>TotalDepositsLiabilities</DataField>
+        </Field>
+        <Field Name="TotalDepositsLiabilitiesFormat">
+          <DataField>TotalDepositsLiabilitiesFormat</DataField>
+        </Field>
+        <Field Name="CorecapitaltoAssetsRatio">
+          <DataField>CorecapitaltoAssetsRatio</DataField>
+        </Field>
+        <Field Name="CorecapitaltoAssetsRatioFormat">
+          <DataField>CorecapitaltoAssetsRatioFormat</DataField>
+        </Field>
+        <Field Name="MinimumCoreCapitaltoAssetsRatioRequirement">
+          <DataField>MinimumCoreCapitaltoAssetsRatioRequirement</DataField>
+        </Field>
+        <Field Name="MinimumCoreCapitaltoAssetsRatioRequirementFormat">
+          <DataField>MinimumCoreCapitaltoAssetsRatioRequirementFormat</DataField>
+        </Field>
+        <Field Name="Excess1">
+          <DataField>Excess1</DataField>
+        </Field>
+        <Field Name="Excess1Format">
+          <DataField>Excess1Format</DataField>
+        </Field>
+        <Field Name="RetainedearningsanddisclosedreservestoCorecapital">
+          <DataField>RetainedearningsanddisclosedreservestoCorecapital</DataField>
+        </Field>
+        <Field Name="RetainedearningsanddisclosedreservestoCorecapitalFormat">
+          <DataField>RetainedearningsanddisclosedreservestoCorecapitalFormat</DataField>
+        </Field>
+        <Field Name="MinimumRetainedearningsanddisclosed">
+          <DataField>MinimumRetainedearningsanddisclosed</DataField>
+        </Field>
+        <Field Name="MinimumRetainedearningsanddisclosedFormat">
+          <DataField>MinimumRetainedearningsanddisclosedFormat</DataField>
+        </Field>
+        <Field Name="Excess2">
+          <DataField>Excess2</DataField>
+        </Field>
+        <Field Name="Excess2Format">
+          <DataField>Excess2Format</DataField>
+        </Field>
+        <Field Name="CorecapitatoDepositsRatio">
+          <DataField>CorecapitatoDepositsRatio</DataField>
+        </Field>
+        <Field Name="CorecapitatoDepositsRatioFormat">
+          <DataField>CorecapitatoDepositsRatioFormat</DataField>
+        </Field>
+        <Field Name="MinimumCoreCapitaltoDeposits">
+          <DataField>MinimumCoreCapitaltoDeposits</DataField>
+        </Field>
+        <Field Name="MinimumCoreCapitaltoDepositsFormat">
+          <DataField>MinimumCoreCapitaltoDepositsFormat</DataField>
+        </Field>
+        <Field Name="Excess">
+          <DataField>Excess</DataField>
+        </Field>
+        <Field Name="ExcessFormat">
+          <DataField>ExcessFormat</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

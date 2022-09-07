@@ -1,0 +1,407 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="ReportForNavId_1">
+          <DataField>ReportForNavId_1</DataField>
+        </Field>
+        <Field Name="PrintBy">
+          <DataField>PrintBy</DataField>
+        </Field>
+        <Field Name="CheckedBy">
+          <DataField>CheckedBy</DataField>
+        </Field>
+        <Field Name="VerifiedBy">
+          <DataField>VerifiedBy</DataField>
+        </Field>
+        <Field Name="ApprovedBy">
+          <DataField>ApprovedBy</DataField>
+        </Field>
+        <Field Name="BasicPayLbl">
+          <DataField>BasicPayLbl</DataField>
+        </Field>
+        <Field Name="payelbl">
+          <DataField>payelbl</DataField>
+        </Field>
+        <Field Name="nssflbl">
+          <DataField>nssflbl</DataField>
+        </Field>
+        <Field Name="nhiflbl">
+          <DataField>nhiflbl</DataField>
+        </Field>
+        <Field Name="Netpaylbl">
+          <DataField>Netpaylbl</DataField>
+        </Field>
+        <Field Name="payeamount">
+          <DataField>payeamount</DataField>
+        </Field>
+        <Field Name="payeamountFormat">
+          <DataField>payeamountFormat</DataField>
+        </Field>
+        <Field Name="nssfam">
+          <DataField>nssfam</DataField>
+        </Field>
+        <Field Name="nssfamFormat">
+          <DataField>nssfamFormat</DataField>
+        </Field>
+        <Field Name="nhifamt">
+          <DataField>nhifamt</DataField>
+        </Field>
+        <Field Name="nhifamtFormat">
+          <DataField>nhifamtFormat</DataField>
+        </Field>
+        <Field Name="NetPay">
+          <DataField>NetPay</DataField>
+        </Field>
+        <Field Name="NetPayFormat">
+          <DataField>NetPayFormat</DataField>
+        </Field>
+        <Field Name="BasicPay">
+          <DataField>BasicPay</DataField>
+        </Field>
+        <Field Name="BasicPayFormat">
+          <DataField>BasicPayFormat</DataField>
+        </Field>
+        <Field Name="CompName">
+          <DataField>CompName</DataField>
+        </Field>
+        <Field Name="pic">
+          <DataField>pic</DataField>
+        </Field>
+        <Field Name="Addr1">
+          <DataField>Addr1</DataField>
+        </Field>
+        <Field Name="Addr2">
+          <DataField>Addr2</DataField>
+        </Field>
+        <Field Name="Email">
+          <DataField>Email</DataField>
+        </Field>
+        <Field Name="periods">
+          <DataField>periods</DataField>
+        </Field>
+        <Field Name="empName">
+          <DataField>empName</DataField>
+        </Field>
+        <Field Name="TransName_1_1">
+          <DataField>TransName_1_1</DataField>
+        </Field>
+        <Field Name="TransName_1_2">
+          <DataField>TransName_1_2</DataField>
+        </Field>
+        <Field Name="TransName_1_3">
+          <DataField>TransName_1_3</DataField>
+        </Field>
+        <Field Name="TransName_1_4">
+          <DataField>TransName_1_4</DataField>
+        </Field>
+        <Field Name="TransName_1_5">
+          <DataField>TransName_1_5</DataField>
+        </Field>
+        <Field Name="TransName_1_6">
+          <DataField>TransName_1_6</DataField>
+        </Field>
+        <Field Name="TransName_1_7">
+          <DataField>TransName_1_7</DataField>
+        </Field>
+        <Field Name="TransName_1_8">
+          <DataField>TransName_1_8</DataField>
+        </Field>
+        <Field Name="TransName_1_9">
+          <DataField>TransName_1_9</DataField>
+        </Field>
+        <Field Name="TransName_1_10">
+          <DataField>TransName_1_10</DataField>
+        </Field>
+        <Field Name="TransName_1_11">
+          <DataField>TransName_1_11</DataField>
+        </Field>
+        <Field Name="TransName_1_12">
+          <DataField>TransName_1_12</DataField>
+        </Field>
+        <Field Name="TransName_1_13">
+          <DataField>TransName_1_13</DataField>
+        </Field>
+        <Field Name="TransName_1_14">
+          <DataField>TransName_1_14</DataField>
+        </Field>
+        <Field Name="TransName_1_15">
+          <DataField>TransName_1_15</DataField>
+        </Field>
+        <Field Name="TransName_1_16">
+          <DataField>TransName_1_16</DataField>
+        </Field>
+        <Field Name="TransName_1_17">
+          <DataField>TransName_1_17</DataField>
+        </Field>
+        <Field Name="TransName_1_18">
+          <DataField>TransName_1_18</DataField>
+        </Field>
+        <Field Name="TransName_1_19">
+          <DataField>TransName_1_19</DataField>
+        </Field>
+        <Field Name="TransName_1_20">
+          <DataField>TransName_1_20</DataField>
+        </Field>
+        <Field Name="TransName_1_21">
+          <DataField>TransName_1_21</DataField>
+        </Field>
+        <Field Name="TransName_1_22">
+          <DataField>TransName_1_22</DataField>
+        </Field>
+        <Field Name="TransName_1_23">
+          <DataField>TransName_1_23</DataField>
+        </Field>
+        <Field Name="TransName_1_24">
+          <DataField>TransName_1_24</DataField>
+        </Field>
+        <Field Name="TransName_1_25">
+          <DataField>TransName_1_25</DataField>
+        </Field>
+        <Field Name="TransName_1_26">
+          <DataField>TransName_1_26</DataField>
+        </Field>
+        <Field Name="TransName_1_27">
+          <DataField>TransName_1_27</DataField>
+        </Field>
+        <Field Name="TransName_1_28">
+          <DataField>TransName_1_28</DataField>
+        </Field>
+        <Field Name="TranscAmount_1_1">
+          <DataField>TranscAmount_1_1</DataField>
+        </Field>
+        <Field Name="TranscAmount_1_1Format">
+          <DataField>TranscAmount_1_1Format</DataField>
+        </Field>
+        <Field Name="TranscAmount_1_2">
+          <DataField>TranscAmount_1_2</DataField>
+        </Field>
+        <Field Name="TranscAmount_1_2Format">
+          <DataField>TranscAmount_1_2Format</DataField>
+        </Field>
+        <Field Name="TranscAmount_1_3">
+          <DataField>TranscAmount_1_3</DataField>
+        </Field>
+        <Field Name="TranscAmount_1_3Format">
+          <DataField>TranscAmount_1_3Format</DataField>
+        </Field>
+        <Field Name="TranscAmount_1_4">
+          <DataField>TranscAmount_1_4</DataField>
+        </Field>
+        <Field Name="TranscAmount_1_4Format">
+          <DataField>TranscAmount_1_4Format</DataField>
+        </Field>
+        <Field Name="TranscAmount_1_5">
+          <DataField>TranscAmount_1_5</DataField>
+        </Field>
+        <Field Name="TranscAmount_1_5Format">
+          <DataField>TranscAmount_1_5Format</DataField>
+        </Field>
+        <Field Name="TranscAmount_1_6">
+          <DataField>TranscAmount_1_6</DataField>
+        </Field>
+        <Field Name="TranscAmount_1_6Format">
+          <DataField>TranscAmount_1_6Format</DataField>
+        </Field>
+        <Field Name="TranscAmount_1_7">
+          <DataField>TranscAmount_1_7</DataField>
+        </Field>
+        <Field Name="TranscAmount_1_7Format">
+          <DataField>TranscAmount_1_7Format</DataField>
+        </Field>
+        <Field Name="TranscAmount_1_8">
+          <DataField>TranscAmount_1_8</DataField>
+        </Field>
+        <Field Name="TranscAmount_1_8Format">
+          <DataField>TranscAmount_1_8Format</DataField>
+        </Field>
+        <Field Name="TranscAmount_1_9">
+          <DataField>TranscAmount_1_9</DataField>
+        </Field>
+        <Field Name="TranscAmount_1_9Format">
+          <DataField>TranscAmount_1_9Format</DataField>
+        </Field>
+        <Field Name="TranscAmount_1_10">
+          <DataField>TranscAmount_1_10</DataField>
+        </Field>
+        <Field Name="TranscAmount_1_10Format">
+          <DataField>TranscAmount_1_10Format</DataField>
+        </Field>
+        <Field Name="TranscAmount_1_11">
+          <DataField>TranscAmount_1_11</DataField>
+        </Field>
+        <Field Name="TranscAmount_1_11Format">
+          <DataField>TranscAmount_1_11Format</DataField>
+        </Field>
+        <Field Name="TranscAmount_1_12">
+          <DataField>TranscAmount_1_12</DataField>
+        </Field>
+        <Field Name="TranscAmount_1_12Format">
+          <DataField>TranscAmount_1_12Format</DataField>
+        </Field>
+        <Field Name="TranscAmount_1_13">
+          <DataField>TranscAmount_1_13</DataField>
+        </Field>
+        <Field Name="TranscAmount_1_13Format">
+          <DataField>TranscAmount_1_13Format</DataField>
+        </Field>
+        <Field Name="TranscAmount_1_14">
+          <DataField>TranscAmount_1_14</DataField>
+        </Field>
+        <Field Name="TranscAmount_1_14Format">
+          <DataField>TranscAmount_1_14Format</DataField>
+        </Field>
+        <Field Name="TranscAmount_1_15">
+          <DataField>TranscAmount_1_15</DataField>
+        </Field>
+        <Field Name="TranscAmount_1_15Format">
+          <DataField>TranscAmount_1_15Format</DataField>
+        </Field>
+        <Field Name="TranscAmount_1_16">
+          <DataField>TranscAmount_1_16</DataField>
+        </Field>
+        <Field Name="TranscAmount_1_16Format">
+          <DataField>TranscAmount_1_16Format</DataField>
+        </Field>
+        <Field Name="TranscAmount_1_17">
+          <DataField>TranscAmount_1_17</DataField>
+        </Field>
+        <Field Name="TranscAmount_1_17Format">
+          <DataField>TranscAmount_1_17Format</DataField>
+        </Field>
+        <Field Name="TranscAmount_1_18">
+          <DataField>TranscAmount_1_18</DataField>
+        </Field>
+        <Field Name="TranscAmount_1_18Format">
+          <DataField>TranscAmount_1_18Format</DataField>
+        </Field>
+        <Field Name="TranscAmount_1_19">
+          <DataField>TranscAmount_1_19</DataField>
+        </Field>
+        <Field Name="TranscAmount_1_19Format">
+          <DataField>TranscAmount_1_19Format</DataField>
+        </Field>
+        <Field Name="TranscAmount_1_20">
+          <DataField>TranscAmount_1_20</DataField>
+        </Field>
+        <Field Name="TranscAmount_1_20Format">
+          <DataField>TranscAmount_1_20Format</DataField>
+        </Field>
+        <Field Name="TranscAmount_1_21">
+          <DataField>TranscAmount_1_21</DataField>
+        </Field>
+        <Field Name="TranscAmount_1_21Format">
+          <DataField>TranscAmount_1_21Format</DataField>
+        </Field>
+        <Field Name="TranscAmount_1_22">
+          <DataField>TranscAmount_1_22</DataField>
+        </Field>
+        <Field Name="TranscAmount_1_22Format">
+          <DataField>TranscAmount_1_22Format</DataField>
+        </Field>
+        <Field Name="TranscAmount_1_23">
+          <DataField>TranscAmount_1_23</DataField>
+        </Field>
+        <Field Name="TranscAmount_1_23Format">
+          <DataField>TranscAmount_1_23Format</DataField>
+        </Field>
+        <Field Name="TranscAmount_1_24">
+          <DataField>TranscAmount_1_24</DataField>
+        </Field>
+        <Field Name="TranscAmount_1_24Format">
+          <DataField>TranscAmount_1_24Format</DataField>
+        </Field>
+        <Field Name="TranscAmount_1_25">
+          <DataField>TranscAmount_1_25</DataField>
+        </Field>
+        <Field Name="TranscAmount_1_25Format">
+          <DataField>TranscAmount_1_25Format</DataField>
+        </Field>
+        <Field Name="TranscAmount_1_26">
+          <DataField>TranscAmount_1_26</DataField>
+        </Field>
+        <Field Name="TranscAmount_1_26Format">
+          <DataField>TranscAmount_1_26Format</DataField>
+        </Field>
+        <Field Name="TranscAmount_1_27">
+          <DataField>TranscAmount_1_27</DataField>
+        </Field>
+        <Field Name="TranscAmount_1_27Format">
+          <DataField>TranscAmount_1_27Format</DataField>
+        </Field>
+        <Field Name="TranscAmount_1_28">
+          <DataField>TranscAmount_1_28</DataField>
+        </Field>
+        <Field Name="TranscAmount_1_28Format">
+          <DataField>TranscAmount_1_28Format</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

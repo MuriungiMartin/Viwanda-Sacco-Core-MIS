@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="ReportForNavId_7769">
+          <DataField>ReportForNavId_7769</DataField>
+        </Field>
+        <Field Name="UserId">
+          <DataField>UserId</DataField>
+        </Field>
+        <Field Name="Today">
+          <DataField>Today</DataField>
+        </Field>
+        <Field Name="PeriodName">
+          <DataField>PeriodName</DataField>
+        </Field>
+        <Field Name="CurrReport_PAGENO">
+          <DataField>CurrReport_PAGENO</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Picture">
+          <DataField>CompanyInfo_Picture</DataField>
+        </Field>
+        <Field Name="prPeriod_Transactions__Group_Text_">
+          <DataField>prPeriod_Transactions__Group_Text_</DataField>
+        </Field>
+        <Field Name="prPeriod_Transactions_Amount">
+          <DataField>prPeriod_Transactions_Amount</DataField>
+        </Field>
+        <Field Name="prPeriod_Transactions_AmountFormat">
+          <DataField>prPeriod_Transactions_AmountFormat</DataField>
+        </Field>
+        <Field Name="prPeriod_Transactions__Transaction_Name_">
+          <DataField>prPeriod_Transactions__Transaction_Name_</DataField>
+        </Field>
+        <Field Name="Allowances_ReportCaption">
+          <DataField>Allowances_ReportCaption</DataField>
+        </Field>
+        <Field Name="User_Name_Caption">
+          <DataField>User_Name_Caption</DataField>
+        </Field>
+        <Field Name="Print_Date_Caption">
+          <DataField>Print_Date_Caption</DataField>
+        </Field>
+        <Field Name="Period_Caption">
+          <DataField>Period_Caption</DataField>
+        </Field>
+        <Field Name="Page_No_Caption">
+          <DataField>Page_No_Caption</DataField>
+        </Field>
+        <Field Name="Transaction_Name_Caption">
+          <DataField>Transaction_Name_Caption</DataField>
+        </Field>
+        <Field Name="Period_Amount_Caption">
+          <DataField>Period_Amount_Caption</DataField>
+        </Field>
+        <Field Name="Prepared_by_______________________________________Date_________________Caption">
+          <DataField>Prepared_by_______________________________________Date_________________Caption</DataField>
+        </Field>
+        <Field Name="Checked_by________________________________________Date_________________Caption">
+          <DataField>Checked_by________________________________________Date_________________Caption</DataField>
+        </Field>
+        <Field Name="Authorized_by____________________________________Date_________________Caption">
+          <DataField>Authorized_by____________________________________Date_________________Caption</DataField>
+        </Field>
+        <Field Name="Approved_by______________________________________Date_________________Caption">
+          <DataField>Approved_by______________________________________Date_________________Caption</DataField>
+        </Field>
+        <Field Name="prPeriod_Transactions_Employee_Code">
+          <DataField>prPeriod_Transactions_Employee_Code</DataField>
+        </Field>
+        <Field Name="prPeriod_Transactions_Transaction_Code">
+          <DataField>prPeriod_Transactions_Transaction_Code</DataField>
+        </Field>
+        <Field Name="prPeriod_Transactions_Period_Month">
+          <DataField>prPeriod_Transactions_Period_Month</DataField>
+        </Field>
+        <Field Name="prPeriod_Transactions_Period_Year">
+          <DataField>prPeriod_Transactions_Period_Year</DataField>
+        </Field>
+        <Field Name="prPeriod_Transactions_Membership">
+          <DataField>prPeriod_Transactions_Membership</DataField>
+        </Field>
+        <Field Name="prPeriod_Transactions_Reference_No">
+          <DataField>prPeriod_Transactions_Reference_No</DataField>
+        </Field>
+        <Field Name="prPeriod_Transactions_Group_Order">
+          <DataField>prPeriod_Transactions_Group_Order</DataField>
+        </Field>
+        <Field Name="prPeriod_Transactions_Department_Code">
+          <DataField>prPeriod_Transactions_Department_Code</DataField>
+        </Field>
+        <Field Name="Employee_Code">
+          <DataField>Employee_Code</DataField>
+        </Field>
+        <Field Name="Employee_Name">
+          <DataField>Employee_Name</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="ReportForNavId_1">
+          <DataField>ReportForNavId_1</DataField>
+        </Field>
+        <Field Name="Company_Name">
+          <DataField>Company_Name</DataField>
+        </Field>
+        <Field Name="Company_Address">
+          <DataField>Company_Address</DataField>
+        </Field>
+        <Field Name="Company_City">
+          <DataField>Company_City</DataField>
+        </Field>
+        <Field Name="Company_Picture">
+          <DataField>Company_Picture</DataField>
+        </Field>
+        <Field Name="Company_Email">
+          <DataField>Company_Email</DataField>
+        </Field>
+        <Field Name="Company_Address_2">
+          <DataField>Company_Address_2</DataField>
+        </Field>
+        <Field Name="Company_Phone_No">
+          <DataField>Company_Phone_No</DataField>
+        </Field>
+        <Field Name="Company_Fax_No">
+          <DataField>Company_Fax_No</DataField>
+        </Field>
+        <Field Name="SN">
+          <DataField>SN</DataField>
+        </Field>
+        <Field Name="CUSTOMERNETRISKRATING_IndividualCustomerRiskRate">
+          <DataField>CUSTOMERNETRISKRATING_IndividualCustomerRiskRate</DataField>
+        </Field>
+        <Field Name="CUSTOMERNETRISKRATING_IndividualCustomerRiskRateFormat">
+          <DataField>CUSTOMERNETRISKRATING_IndividualCustomerRiskRateFormat</DataField>
+        </Field>
+        <Field Name="CustomerCategoryScore_IndividualCustomerRiskRate">
+          <DataField>CustomerCategoryScore_IndividualCustomerRiskRate</DataField>
+        </Field>
+        <Field Name="CustomerCategoryScore_IndividualCustomerRiskRateFormat">
+          <DataField>CustomerCategoryScore_IndividualCustomerRiskRateFormat</DataField>
+        </Field>
+        <Field Name="MembershipApplicationNo_IndividualCustomerRiskRate">
+          <DataField>MembershipApplicationNo_IndividualCustomerRiskRate</DataField>
+        </Field>
+        <Field Name="MemberName_IndividualCustomerRiskRate">
+          <DataField>MemberName_IndividualCustomerRiskRate</DataField>
+        </Field>
+        <Field Name="ReportForNavId_3">
+          <DataField>ReportForNavId_3</DataField>
+        </Field>
+        <Field Name="No_MembersRegister">
+          <DataField>No_MembersRegister</DataField>
+        </Field>
+        <Field Name="MemberRiskLevel_MembersRegister">
+          <DataField>MemberRiskLevel_MembersRegister</DataField>
+        </Field>
+        <Field Name="Name_MembersRegister">
+          <DataField>Name_MembersRegister</DataField>
+        </Field>
+        <Field Name="IDNo_MembersRegister">
+          <DataField>IDNo_MembersRegister</DataField>
+        </Field>
+        <Field Name="PhoneNo_MembersRegister">
+          <DataField>PhoneNo_MembersRegister</DataField>
+        </Field>
+        <Field Name="CreatedBy_MembersRegister">
+          <DataField>CreatedBy_MembersRegister</DataField>
+        </Field>
+        <Field Name="MonthlyTurnOverActual_MembersRegister">
+          <DataField>MonthlyTurnOverActual_MembersRegister</DataField>
+        </Field>
+        <Field Name="MonthlyTurnOverActual_MembersRegisterFormat">
+          <DataField>MonthlyTurnOverActual_MembersRegisterFormat</DataField>
+        </Field>
+        <Field Name="ExpectedMonthlyIncome_MembersRegister">
+          <DataField>ExpectedMonthlyIncome_MembersRegister</DataField>
+        </Field>
+        <Field Name="DueDiligenceMeasure_MembersRegister">
+          <DataField>DueDiligenceMeasure_MembersRegister</DataField>
+        </Field>
+        <Field Name="EmployerName_MembersRegister">
+          <DataField>EmployerName_MembersRegister</DataField>
+        </Field>
+        <Field Name="EmployerCode_MembersRegister">
+          <DataField>EmployerCode_MembersRegister</DataField>
+        </Field>
+        <Field Name="Pin_MembersRegister">
+          <DataField>Pin_MembersRegister</DataField>
+        </Field>
+        <Field Name="BusinessName_MembersRegister">
+          <DataField>BusinessName_MembersRegister</DataField>
+        </Field>
+        <Field Name="MembersResidence_MembersRegister">
+          <DataField>MembersResidence_MembersRegister</DataField>
+        </Field>
+        <Field Name="ExpectedMonthlyIncomeAmount_MembersRegister">
+          <DataField>ExpectedMonthlyIncomeAmount_MembersRegister</DataField>
+        </Field>
+        <Field Name="ExpectedMonthlyIncomeAmount_MembersRegisterFormat">
+          <DataField>ExpectedMonthlyIncomeAmount_MembersRegisterFormat</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

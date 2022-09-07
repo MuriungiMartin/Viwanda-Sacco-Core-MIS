@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="ReportForNavId_1">
+          <DataField>ReportForNavId_1</DataField>
+        </Field>
+        <Field Name="DocumentNo">
+          <DataField>DocumentNo</DataField>
+        </Field>
+        <Field Name="PointOfIssue">
+          <DataField>PointOfIssue</DataField>
+        </Field>
+        <Field Name="PointofUse">
+          <DataField>PointofUse</DataField>
+        </Field>
+        <Field Name="Date">
+          <DataField>Date</DataField>
+        </Field>
+        <Field Name="CompName">
+          <DataField>CompName</DataField>
+        </Field>
+        <Field Name="Pic">
+          <DataField>Pic</DataField>
+        </Field>
+        <Field Name="Address">
+          <DataField>Address</DataField>
+        </Field>
+        <Field Name="City">
+          <DataField>City</DataField>
+        </Field>
+        <Field Name="Picture">
+          <DataField>Picture</DataField>
+        </Field>
+        <Field Name="USER">
+          <DataField>USER</DataField>
+        </Field>
+        <Field Name="Dept">
+          <DataField>Dept</DataField>
+        </Field>
+        <Field Name="ReportForNavId_5">
+          <DataField>ReportForNavId_5</DataField>
+        </Field>
+        <Field Name="ItemNo">
+          <DataField>ItemNo</DataField>
+        </Field>
+        <Field Name="Description">
+          <DataField>Description</DataField>
+        </Field>
+        <Field Name="UnitofIssue">
+          <DataField>UnitofIssue</DataField>
+        </Field>
+        <Field Name="QuantitiyIssued">
+          <DataField>QuantitiyIssued</DataField>
+        </Field>
+        <Field Name="QuantitiyIssuedFormat">
+          <DataField>QuantitiyIssuedFormat</DataField>
+        </Field>
+        <Field Name="QuantityRequested">
+          <DataField>QuantityRequested</DataField>
+        </Field>
+        <Field Name="QuantityRequestedFormat">
+          <DataField>QuantityRequestedFormat</DataField>
+        </Field>
+        <Field Name="LastDateofIssue">
+          <DataField>LastDateofIssue</DataField>
+        </Field>
+        <Field Name="LastQuantityIssued">
+          <DataField>LastQuantityIssued</DataField>
+        </Field>
+        <Field Name="LastQuantityIssuedFormat">
+          <DataField>LastQuantityIssuedFormat</DataField>
+        </Field>
+        <Field Name="Remarks">
+          <DataField>Remarks</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

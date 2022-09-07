@@ -1,0 +1,275 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="ReportForNavId_1826">
+          <DataField>ReportForNavId_1826</DataField>
+        </Field>
+        <Field Name="FORMAT_TODAY_0_4_">
+          <DataField>FORMAT_TODAY_0_4_</DataField>
+        </Field>
+        <Field Name="CurrReport_PAGENO">
+          <DataField>CurrReport_PAGENO</DataField>
+        </Field>
+        <Field Name="UserId">
+          <DataField>UserId</DataField>
+        </Field>
+        <Field Name="Store_Requistion_Header__Required_Date_">
+          <DataField>Store_Requistion_Header__Required_Date_</DataField>
+        </Field>
+        <Field Name="Store_Requistion_Header__Shortcut_Dimension_4_Code_">
+          <DataField>Store_Requistion_Header__Shortcut_Dimension_4_Code_</DataField>
+        </Field>
+        <Field Name="Store_Requistion_Header_Dim4">
+          <DataField>Store_Requistion_Header_Dim4</DataField>
+        </Field>
+        <Field Name="Store_Requistion_Header__Request_date_">
+          <DataField>Store_Requistion_Header__Request_date_</DataField>
+        </Field>
+        <Field Name="Store_Requistion_Header__Shortcut_Dimension_3_Code_">
+          <DataField>Store_Requistion_Header__Shortcut_Dimension_3_Code_</DataField>
+        </Field>
+        <Field Name="Store_Requistion_Header_Dim3">
+          <DataField>Store_Requistion_Header_Dim3</DataField>
+        </Field>
+        <Field Name="Store_Requistion_Header__Request_Description_">
+          <DataField>Store_Requistion_Header__Request_Description_</DataField>
+        </Field>
+        <Field Name="Store_Requistion_Header__Shortcut_Dimension_2_Code_">
+          <DataField>Store_Requistion_Header__Shortcut_Dimension_2_Code_</DataField>
+        </Field>
+        <Field Name="Store_Requistion_Header__Budget_Center_Name_">
+          <DataField>Store_Requistion_Header__Budget_Center_Name_</DataField>
+        </Field>
+        <Field Name="Store_Requistion_Header__No__">
+          <DataField>Store_Requistion_Header__No__</DataField>
+        </Field>
+        <Field Name="Store_Requistion_Header__Global_Dimension_1_Code_">
+          <DataField>Store_Requistion_Header__Global_Dimension_1_Code_</DataField>
+        </Field>
+        <Field Name="Store_Requistion_Header__Function_Name_">
+          <DataField>Store_Requistion_Header__Function_Name_</DataField>
+        </Field>
+        <Field Name="TIME_PRINTED_____FORMAT_TIME_">
+          <DataField>TIME_PRINTED_____FORMAT_TIME_</DataField>
+        </Field>
+        <Field Name="DATE_PRINTED_____FORMAT_TODAY_0_4_">
+          <DataField>DATE_PRINTED_____FORMAT_TODAY_0_4_</DataField>
+        </Field>
+        <Field Name="USERID_Control1102755048">
+          <DataField>USERID_Control1102755048</DataField>
+        </Field>
+        <Field Name="Store_RequistionCaption">
+          <DataField>Store_RequistionCaption</DataField>
+        </Field>
+        <Field Name="CurrReport_PAGENOCaption">
+          <DataField>CurrReport_PAGENOCaption</DataField>
+        </Field>
+        <Field Name="Store_Requistion_Lines_DescriptionCaption">
+          <DataField>Store_Requistion_Lines_DescriptionCaption</DataField>
+        </Field>
+        <Field Name="Store_Requistion_Lines_QuantityCaption">
+          <DataField>Store_Requistion_Lines_QuantityCaption</DataField>
+        </Field>
+        <Field Name="UoMCaption">
+          <DataField>UoMCaption</DataField>
+        </Field>
+        <Field Name="Store_Requistion_Lines__Line_Amount_Caption">
+          <DataField>Store_Requistion_Lines__Line_Amount_Caption</DataField>
+        </Field>
+        <Field Name="Store_Requistion_Lines__Unit_Cost_Caption">
+          <DataField>Store_Requistion_Lines__Unit_Cost_Caption</DataField>
+        </Field>
+        <Field Name="Store_Requistion_Header__Required_Date_Caption">
+          <DataField>Store_Requistion_Header__Required_Date_Caption</DataField>
+        </Field>
+        <Field Name="Store_Requistion_Header__Shortcut_Dimension_4_Code_Caption">
+          <DataField>Store_Requistion_Header__Shortcut_Dimension_4_Code_Caption</DataField>
+        </Field>
+        <Field Name="Store_Requistion_Lines__No__Caption">
+          <DataField>Store_Requistion_Lines__No__Caption</DataField>
+        </Field>
+        <Field Name="Store_Requistion_Header__Request_date_Caption">
+          <DataField>Store_Requistion_Header__Request_date_Caption</DataField>
+        </Field>
+        <Field Name="Store_Requistion_Header__Shortcut_Dimension_3_Code_Caption">
+          <DataField>Store_Requistion_Header__Shortcut_Dimension_3_Code_Caption</DataField>
+        </Field>
+        <Field Name="Store_Requistion_Header__Request_Description_Caption">
+          <DataField>Store_Requistion_Header__Request_Description_Caption</DataField>
+        </Field>
+        <Field Name="Store_Requistion_Header__Shortcut_Dimension_2_Code_Caption">
+          <DataField>Store_Requistion_Header__Shortcut_Dimension_2_Code_Caption</DataField>
+        </Field>
+        <Field Name="Store_Requistion_Header__No__Caption">
+          <DataField>Store_Requistion_Header__No__Caption</DataField>
+        </Field>
+        <Field Name="Store_Requistion_Header__Global_Dimension_1_Code_Caption">
+          <DataField>Store_Requistion_Header__Global_Dimension_1_Code_Caption</DataField>
+        </Field>
+        <Field Name="Date_Caption">
+          <DataField>Date_Caption</DataField>
+        </Field>
+        <Field Name="Name_Caption">
+          <DataField>Name_Caption</DataField>
+        </Field>
+        <Field Name="RecipientCaption">
+          <DataField>RecipientCaption</DataField>
+        </Field>
+        <Field Name="Printed_By_Caption">
+          <DataField>Printed_By_Caption</DataField>
+        </Field>
+        <Field Name="Name_Caption_Control1102755052">
+          <DataField>Name_Caption_Control1102755052</DataField>
+        </Field>
+        <Field Name="Date_Caption_Control1102755053">
+          <DataField>Date_Caption_Control1102755053</DataField>
+        </Field>
+        <Field Name="Signature_Caption">
+          <DataField>Signature_Caption</DataField>
+        </Field>
+        <Field Name="AuthorisationsCaption">
+          <DataField>AuthorisationsCaption</DataField>
+        </Field>
+        <Field Name="EmptyStringCaption">
+          <DataField>EmptyStringCaption</DataField>
+        </Field>
+        <Field Name="Signature_Caption_Control1102755000">
+          <DataField>Signature_Caption_Control1102755000</DataField>
+        </Field>
+        <Field Name="DocHeader">
+          <DataField>DocHeader</DataField>
+        </Field>
+        <Field Name="CompanyInfoName">
+          <DataField>CompanyInfoName</DataField>
+        </Field>
+        <Field Name="CompanyInfoAdd">
+          <DataField>CompanyInfoAdd</DataField>
+        </Field>
+        <Field Name="CompanyInfoAdd2">
+          <DataField>CompanyInfoAdd2</DataField>
+        </Field>
+        <Field Name="CompanyInfoPicture">
+          <DataField>CompanyInfoPicture</DataField>
+        </Field>
+        <Field Name="ReportForNavId_7187">
+          <DataField>ReportForNavId_7187</DataField>
+        </Field>
+        <Field Name="Store_Requistion_Lines__No__">
+          <DataField>Store_Requistion_Lines__No__</DataField>
+        </Field>
+        <Field Name="Store_Requistion_Lines_Description">
+          <DataField>Store_Requistion_Lines_Description</DataField>
+        </Field>
+        <Field Name="Store_Requistion_Lines_Quantity">
+          <DataField>Store_Requistion_Lines_Quantity</DataField>
+        </Field>
+        <Field Name="Store_Requistion_Lines_QuantityFormat">
+          <DataField>Store_Requistion_Lines_QuantityFormat</DataField>
+        </Field>
+        <Field Name="Store_Requistion_Lines__Unit_of_Measure_">
+          <DataField>Store_Requistion_Lines__Unit_of_Measure_</DataField>
+        </Field>
+        <Field Name="Store_Requistion_Lines__Line_Amount_">
+          <DataField>Store_Requistion_Lines__Line_Amount_</DataField>
+        </Field>
+        <Field Name="Store_Requistion_Lines__Line_Amount_Format">
+          <DataField>Store_Requistion_Lines__Line_Amount_Format</DataField>
+        </Field>
+        <Field Name="Store_Requistion_Lines__Unit_Cost_">
+          <DataField>Store_Requistion_Lines__Unit_Cost_</DataField>
+        </Field>
+        <Field Name="Store_Requistion_Lines__Unit_Cost_Format">
+          <DataField>Store_Requistion_Lines__Unit_Cost_Format</DataField>
+        </Field>
+        <Field Name="Store_Requistion_Lines_Requistion_No">
+          <DataField>Store_Requistion_Lines_Requistion_No</DataField>
+        </Field>
+        <Field Name="ReportForNavId_1102755003">
+          <DataField>ReportForNavId_1102755003</DataField>
+        </Field>
+        <Field Name="SequenceNo_ApprovalEntry">
+          <DataField>SequenceNo_ApprovalEntry</DataField>
+        </Field>
+        <Field Name="SenderID_ApprovalEntry">
+          <DataField>SenderID_ApprovalEntry</DataField>
+        </Field>
+        <Field Name="ApproverID_ApprovalEntry">
+          <DataField>ApproverID_ApprovalEntry</DataField>
+        </Field>
+        <Field Name="DateTimeSentforApproval_ApprovalEntry">
+          <DataField>DateTimeSentforApproval_ApprovalEntry</DataField>
+        </Field>
+        <Field Name="LastDateTimeModified_ApprovalEntry">
+          <DataField>LastDateTimeModified_ApprovalEntry</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

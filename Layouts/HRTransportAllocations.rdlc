@@ -1,0 +1,289 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <ReportParameters>
+    <ReportParameter Name="CI_NameCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>CI_NameCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>CI_NameCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="CI_AddressCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>CI_AddressCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>CI_AddressCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="CI_Address2Caption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>CI_Address2Caption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>CI_Address2Caption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="CI_PhoneNoCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>CI_PhoneNoCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>CI_PhoneNoCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="CI_PictureCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>CI_PictureCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>CI_PictureCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="CI_CityCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>CI_CityCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>CI_CityCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="AssignedDriver_HRTransportAllocationsHCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>AssignedDriver_HRTransportAllocationsHCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>AssignedDriver_HRTransportAllocationsHCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="DriverName_HRTransportAllocationsHCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>DriverName_HRTransportAllocationsHCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>DriverName_HRTransportAllocationsHCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="DateofTrip_HRTransportAllocationsHCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>DateofTrip_HRTransportAllocationsHCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>DateofTrip_HRTransportAllocationsHCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="TransportAllocationNo_HRTransportAllocationsHCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>TransportAllocationNo_HRTransportAllocationsHCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>TransportAllocationNo_HRTransportAllocationsHCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="VehicleRegNumber_HRTransportAllocationsHCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>VehicleRegNumber_HRTransportAllocationsHCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>VehicleRegNumber_HRTransportAllocationsHCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="Destinations_HRTransportAllocationsHCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>Destinations_HRTransportAllocationsHCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Destinations_HRTransportAllocationsHCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="EmployeeNo_HRTransportAllocationsCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>EmployeeNo_HRTransportAllocationsCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>EmployeeNo_HRTransportAllocationsCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="PassengersFullNames_HRTransportAllocationsCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>PassengersFullNames_HRTransportAllocationsCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>PassengersFullNames_HRTransportAllocationsCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="Dept_HRTransportAllocationsCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>Dept_HRTransportAllocationsCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Dept_HRTransportAllocationsCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="From_HRTransportAllocationsCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>From_HRTransportAllocationsCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>From_HRTransportAllocationsCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="To_HRTransportAllocationsCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>To_HRTransportAllocationsCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>To_HRTransportAllocationsCaption</Prompt>
+    </ReportParameter>
+  </ReportParameters>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="ReportForNavId_6666">
+          <DataField>ReportForNavId_6666</DataField>
+        </Field>
+        <Field Name="CI_Name">
+          <DataField>CI_Name</DataField>
+        </Field>
+        <Field Name="CI_Address">
+          <DataField>CI_Address</DataField>
+        </Field>
+        <Field Name="CI_Address2">
+          <DataField>CI_Address2</DataField>
+        </Field>
+        <Field Name="CI_PhoneNo">
+          <DataField>CI_PhoneNo</DataField>
+        </Field>
+        <Field Name="CI_Picture">
+          <DataField>CI_Picture</DataField>
+        </Field>
+        <Field Name="CI_City">
+          <DataField>CI_City</DataField>
+        </Field>
+        <Field Name="AssignedDriver_HRTransportAllocationsH">
+          <DataField>AssignedDriver_HRTransportAllocationsH</DataField>
+        </Field>
+        <Field Name="DriverName_HRTransportAllocationsH">
+          <DataField>DriverName_HRTransportAllocationsH</DataField>
+        </Field>
+        <Field Name="DateofTrip_HRTransportAllocationsH">
+          <DataField>DateofTrip_HRTransportAllocationsH</DataField>
+        </Field>
+        <Field Name="TransportAllocationNo_HRTransportAllocationsH">
+          <DataField>TransportAllocationNo_HRTransportAllocationsH</DataField>
+        </Field>
+        <Field Name="VehicleRegNumber_HRTransportAllocationsH">
+          <DataField>VehicleRegNumber_HRTransportAllocationsH</DataField>
+        </Field>
+        <Field Name="Destinations_HRTransportAllocationsH">
+          <DataField>Destinations_HRTransportAllocationsH</DataField>
+        </Field>
+        <Field Name="ReportForNavId_2575">
+          <DataField>ReportForNavId_2575</DataField>
+        </Field>
+        <Field Name="EmployeeNo_HRTransportAllocations">
+          <DataField>EmployeeNo_HRTransportAllocations</DataField>
+        </Field>
+        <Field Name="PassengersFullNames_HRTransportAllocations">
+          <DataField>PassengersFullNames_HRTransportAllocations</DataField>
+        </Field>
+        <Field Name="Dept_HRTransportAllocations">
+          <DataField>Dept_HRTransportAllocations</DataField>
+        </Field>
+        <Field Name="From_HRTransportAllocations">
+          <DataField>From_HRTransportAllocations</DataField>
+        </Field>
+        <Field Name="To_HRTransportAllocations">
+          <DataField>To_HRTransportAllocations</DataField>
+        </Field>
+        <Field Name="No">
+          <DataField>No</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

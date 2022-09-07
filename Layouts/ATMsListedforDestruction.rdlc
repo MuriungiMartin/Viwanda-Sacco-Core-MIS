@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="ReportForNavId_4645">
+          <DataField>ReportForNavId_4645</DataField>
+        </Field>
+        <Field Name="FORMAT_TODAY_0_4_">
+          <DataField>FORMAT_TODAY_0_4_</DataField>
+        </Field>
+        <Field Name="COMPANYNAME">
+          <DataField>COMPANYNAME</DataField>
+        </Field>
+        <Field Name="Company_Name">
+          <DataField>Company_Name</DataField>
+        </Field>
+        <Field Name="Company_Address">
+          <DataField>Company_Address</DataField>
+        </Field>
+        <Field Name="Company_Address_2">
+          <DataField>Company_Address_2</DataField>
+        </Field>
+        <Field Name="Company_Phone_No">
+          <DataField>Company_Phone_No</DataField>
+        </Field>
+        <Field Name="Company_Fax_No">
+          <DataField>Company_Fax_No</DataField>
+        </Field>
+        <Field Name="Company_Picture">
+          <DataField>Company_Picture</DataField>
+        </Field>
+        <Field Name="Company_Email">
+          <DataField>Company_Email</DataField>
+        </Field>
+        <Field Name="CurrReport_PAGENO">
+          <DataField>CurrReport_PAGENO</DataField>
+        </Field>
+        <Field Name="UserId">
+          <DataField>UserId</DataField>
+        </Field>
+        <Field Name="VarEntryNo">
+          <DataField>VarEntryNo</DataField>
+        </Field>
+        <Field Name="No_ATMCardApplications">
+          <DataField>No_ATMCardApplications</DataField>
+        </Field>
+        <Field Name="AccountNo_ATMCardApplications">
+          <DataField>AccountNo_ATMCardApplications</DataField>
+        </Field>
+        <Field Name="BranchCode_ATMCardApplications">
+          <DataField>BranchCode_ATMCardApplications</DataField>
+        </Field>
+        <Field Name="AccountName_ATMCardApplications">
+          <DataField>AccountName_ATMCardApplications</DataField>
+        </Field>
+        <Field Name="RequestType_ATMCardApplications">
+          <DataField>RequestType_ATMCardApplications</DataField>
+        </Field>
+        <Field Name="ApplicationDate_ATMCardApplications">
+          <DataField>ApplicationDate_ATMCardApplications</DataField>
+        </Field>
+        <Field Name="OrderATMCard_ATMCardApplications">
+          <DataField>OrderATMCard_ATMCardApplications</DataField>
+        </Field>
+        <Field Name="OrderedBy_ATMCardApplications">
+          <DataField>OrderedBy_ATMCardApplications</DataField>
+        </Field>
+        <Field Name="OrderedOn_ATMCardApplications">
+          <DataField>OrderedOn_ATMCardApplications</DataField>
+        </Field>
+        <Field Name="CardReceived_ATMCardApplications">
+          <DataField>CardReceived_ATMCardApplications</DataField>
+        </Field>
+        <Field Name="ReceivedBy_ATMCardApplications">
+          <DataField>ReceivedBy_ATMCardApplications</DataField>
+        </Field>
+        <Field Name="ReceivedOn_ATMCardApplications">
+          <DataField>ReceivedOn_ATMCardApplications</DataField>
+        </Field>
+        <Field Name="VarAccountType">
+          <DataField>VarAccountType</DataField>
+        </Field>
+        <Field Name="VarDaysElapsedAfterReceipt">
+          <DataField>VarDaysElapsedAfterReceipt</DataField>
+        </Field>
+        <Field Name="VarListedforDistruction">
+          <DataField>VarListedforDistruction</DataField>
+        </Field>
+        <Field Name="ListedForDestruction_ATMCardApplications">
+          <DataField>ListedForDestruction_ATMCardApplications</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

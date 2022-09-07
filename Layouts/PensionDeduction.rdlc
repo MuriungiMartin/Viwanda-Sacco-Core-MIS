@@ -1,0 +1,470 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="ReportForNavId_8631">
+          <DataField>ReportForNavId_8631</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Picture">
+          <DataField>CompanyInfo_Picture</DataField>
+        </Field>
+        <Field Name="FORMAT_TODAY_0_4_">
+          <DataField>FORMAT_TODAY_0_4_</DataField>
+        </Field>
+        <Field Name="COMPANYNAME">
+          <DataField>COMPANYNAME</DataField>
+        </Field>
+        <Field Name="PeriodName">
+          <DataField>PeriodName</DataField>
+        </Field>
+        <Field Name="PayrollMode">
+          <DataField>PayrollMode</DataField>
+        </Field>
+        <Field Name="strEmpName">
+          <DataField>strEmpName</DataField>
+        </Field>
+        <Field Name="Period">
+          <DataField>Period</DataField>
+        </Field>
+        <Field Name="UserId">
+          <DataField>UserId</DataField>
+        </Field>
+        <Field Name="BasicPay">
+          <DataField>BasicPay</DataField>
+        </Field>
+        <Field Name="BasicPayFormat">
+          <DataField>BasicPayFormat</DataField>
+        </Field>
+        <Field Name="Grosspay">
+          <DataField>Grosspay</DataField>
+        </Field>
+        <Field Name="GrosspayFormat">
+          <DataField>GrosspayFormat</DataField>
+        </Field>
+        <Field Name="nonTaxAmount">
+          <DataField>nonTaxAmount</DataField>
+        </Field>
+        <Field Name="nonTaxAmountFormat">
+          <DataField>nonTaxAmountFormat</DataField>
+        </Field>
+        <Field Name="statutoryDed">
+          <DataField>statutoryDed</DataField>
+        </Field>
+        <Field Name="statutoryDedFormat">
+          <DataField>statutoryDedFormat</DataField>
+        </Field>
+        <Field Name="NetPay">
+          <DataField>NetPay</DataField>
+        </Field>
+        <Field Name="NetPayFormat">
+          <DataField>NetPayFormat</DataField>
+        </Field>
+        <Field Name="OtherAllow">
+          <DataField>OtherAllow</DataField>
+        </Field>
+        <Field Name="OtherAllowFormat">
+          <DataField>OtherAllowFormat</DataField>
+        </Field>
+        <Field Name="TotalDeductions">
+          <DataField>TotalDeductions</DataField>
+        </Field>
+        <Field Name="TotalDeductionsFormat">
+          <DataField>TotalDeductionsFormat</DataField>
+        </Field>
+        <Field Name="nonstatutoryDed">
+          <DataField>nonstatutoryDed</DataField>
+        </Field>
+        <Field Name="nonstatutoryDedFormat">
+          <DataField>nonstatutoryDedFormat</DataField>
+        </Field>
+        <Field Name="CummulativePension_PayrollEmployee">
+          <DataField>CummulativePension_PayrollEmployee</DataField>
+        </Field>
+        <Field Name="CummulativePension_PayrollEmployeeFormat">
+          <DataField>CummulativePension_PayrollEmployeeFormat</DataField>
+        </Field>
+        <Field Name="CummEmployerPensionLCY_PayrollEmployee">
+          <DataField>CummEmployerPensionLCY_PayrollEmployee</DataField>
+        </Field>
+        <Field Name="CummEmployerPensionLCY_PayrollEmployeeFormat">
+          <DataField>CummEmployerPensionLCY_PayrollEmployeeFormat</DataField>
+        </Field>
+        <Field Name="CummulativeEmployerPension_PayrollEmployee">
+          <DataField>CummulativeEmployerPension_PayrollEmployee</DataField>
+        </Field>
+        <Field Name="CummulativeEmployerPension_PayrollEmployeeFormat">
+          <DataField>CummulativeEmployerPension_PayrollEmployeeFormat</DataField>
+        </Field>
+        <Field Name="Pension">
+          <DataField>Pension</DataField>
+        </Field>
+        <Field Name="PensionFormat">
+          <DataField>PensionFormat</DataField>
+        </Field>
+        <Field Name="negNet">
+          <DataField>negNet</DataField>
+        </Field>
+        <Field Name="negNetFormat">
+          <DataField>negNetFormat</DataField>
+        </Field>
+        <Field Name="strCodes">
+          <DataField>strCodes</DataField>
+        </Field>
+        <Field Name="TotnegNet">
+          <DataField>TotnegNet</DataField>
+        </Field>
+        <Field Name="TotnegNetFormat">
+          <DataField>TotnegNetFormat</DataField>
+        </Field>
+        <Field Name="TotNetPay">
+          <DataField>TotNetPay</DataField>
+        </Field>
+        <Field Name="TotNetPayFormat">
+          <DataField>TotNetPayFormat</DataField>
+        </Field>
+        <Field Name="totTotalDeductions">
+          <DataField>totTotalDeductions</DataField>
+        </Field>
+        <Field Name="totTotalDeductionsFormat">
+          <DataField>totTotalDeductionsFormat</DataField>
+        </Field>
+        <Field Name="TotPension">
+          <DataField>TotPension</DataField>
+        </Field>
+        <Field Name="TotPensionFormat">
+          <DataField>TotPensionFormat</DataField>
+        </Field>
+        <Field Name="TotnonstatutoryDed">
+          <DataField>TotnonstatutoryDed</DataField>
+        </Field>
+        <Field Name="TotnonstatutoryDedFormat">
+          <DataField>TotnonstatutoryDedFormat</DataField>
+        </Field>
+        <Field Name="TotstatutoryDed">
+          <DataField>TotstatutoryDed</DataField>
+        </Field>
+        <Field Name="TotstatutoryDedFormat">
+          <DataField>TotstatutoryDedFormat</DataField>
+        </Field>
+        <Field Name="TotnonTaxAmount">
+          <DataField>TotnonTaxAmount</DataField>
+        </Field>
+        <Field Name="TotnonTaxAmountFormat">
+          <DataField>TotnonTaxAmountFormat</DataField>
+        </Field>
+        <Field Name="TotGrosspay">
+          <DataField>TotGrosspay</DataField>
+        </Field>
+        <Field Name="TotGrosspayFormat">
+          <DataField>TotGrosspayFormat</DataField>
+        </Field>
+        <Field Name="TotOtherAllow">
+          <DataField>TotOtherAllow</DataField>
+        </Field>
+        <Field Name="TotOtherAllowFormat">
+          <DataField>TotOtherAllowFormat</DataField>
+        </Field>
+        <Field Name="TotBasicPay">
+          <DataField>TotBasicPay</DataField>
+        </Field>
+        <Field Name="TotBasicPayFormat">
+          <DataField>TotBasicPayFormat</DataField>
+        </Field>
+        <Field Name="DATE____________________________________________________________">
+          <DataField>DATE____________________________________________________________</DataField>
+        </Field>
+        <Field Name="NAME_________________________________________________________________________________________">
+          <DataField>NAME_________________________________________________________________________________________</DataField>
+        </Field>
+        <Field Name="DESIGNATION_____________________________________________________">
+          <DataField>DESIGNATION_____________________________________________________</DataField>
+        </Field>
+        <Field Name="SIGNATURE____________________________________________________">
+          <DataField>SIGNATURE____________________________________________________</DataField>
+        </Field>
+        <Field Name="SIGNATURE_____________________________________________________Control1102756035">
+          <DataField>SIGNATURE_____________________________________________________Control1102756035</DataField>
+        </Field>
+        <Field Name="DATE_____________________________________________________________Control1102756042">
+          <DataField>DATE_____________________________________________________________Control1102756042</DataField>
+        </Field>
+        <Field Name="NAME__________________________________________________________________________________________Control1102756031">
+          <DataField>NAME__________________________________________________________________________________________Control1102756031</DataField>
+        </Field>
+        <Field Name="DESIGNATION______________________________________________________Control1102756034">
+          <DataField>DESIGNATION______________________________________________________Control1102756034</DataField>
+        </Field>
+        <Field Name="Payroll_Summary_ListCaption">
+          <DataField>Payroll_Summary_ListCaption</DataField>
+        </Field>
+        <Field Name="Gross_Taxable_PayCaption">
+          <DataField>Gross_Taxable_PayCaption</DataField>
+        </Field>
+        <Field Name="Non_Taxable_AmountCaption">
+          <DataField>Non_Taxable_AmountCaption</DataField>
+        </Field>
+        <Field Name="Statutory_DeductionsCaption">
+          <DataField>Statutory_DeductionsCaption</DataField>
+        </Field>
+        <Field Name="Total_DeductionsCaption">
+          <DataField>Total_DeductionsCaption</DataField>
+        </Field>
+        <Field Name="Pension_Staff_Cont_Caption">
+          <DataField>Pension_Staff_Cont_Caption</DataField>
+        </Field>
+        <Field Name="Negative_Net_PayCaption">
+          <DataField>Negative_Net_PayCaption</DataField>
+        </Field>
+        <Field Name="Other_AllowancesCaption">
+          <DataField>Other_AllowancesCaption</DataField>
+        </Field>
+        <Field Name="Net_PayCaption">
+          <DataField>Net_PayCaption</DataField>
+        </Field>
+        <Field Name="Basic_PayCaption">
+          <DataField>Basic_PayCaption</DataField>
+        </Field>
+        <Field Name="Employee_Name_Caption">
+          <DataField>Employee_Name_Caption</DataField>
+        </Field>
+        <Field Name="Non_Statutory_DeductionsCaption">
+          <DataField>Non_Statutory_DeductionsCaption</DataField>
+        </Field>
+        <Field Name="Employee_Code_Caption">
+          <DataField>Employee_Code_Caption</DataField>
+        </Field>
+        <Field Name="Totals_Caption">
+          <DataField>Totals_Caption</DataField>
+        </Field>
+        <Field Name="Checked_byCaption">
+          <DataField>Checked_byCaption</DataField>
+        </Field>
+        <Field Name="HR_Employee_No_">
+          <DataField>HR_Employee_No_</DataField>
+        </Field>
+        <Field Name="Paye_Ded">
+          <DataField>Paye_Ded</DataField>
+        </Field>
+        <Field Name="Paye_DedFormat">
+          <DataField>Paye_DedFormat</DataField>
+        </Field>
+        <Field Name="Nssf_Ded">
+          <DataField>Nssf_Ded</DataField>
+        </Field>
+        <Field Name="Nssf_DedFormat">
+          <DataField>Nssf_DedFormat</DataField>
+        </Field>
+        <Field Name="Nhif_Ded">
+          <DataField>Nhif_Ded</DataField>
+        </Field>
+        <Field Name="Nhif_DedFormat">
+          <DataField>Nhif_DedFormat</DataField>
+        </Field>
+        <Field Name="TotPAYE">
+          <DataField>TotPAYE</DataField>
+        </Field>
+        <Field Name="TotPAYEFormat">
+          <DataField>TotPAYEFormat</DataField>
+        </Field>
+        <Field Name="TotNSSF">
+          <DataField>TotNSSF</DataField>
+        </Field>
+        <Field Name="TotNSSFFormat">
+          <DataField>TotNSSFFormat</DataField>
+        </Field>
+        <Field Name="TotNHIF">
+          <DataField>TotNHIF</DataField>
+        </Field>
+        <Field Name="TotNHIFFormat">
+          <DataField>TotNHIFFormat</DataField>
+        </Field>
+        <Field Name="HseAllow">
+          <DataField>HseAllow</DataField>
+        </Field>
+        <Field Name="HseAllowFormat">
+          <DataField>HseAllowFormat</DataField>
+        </Field>
+        <Field Name="HseTotAllow">
+          <DataField>HseTotAllow</DataField>
+        </Field>
+        <Field Name="HseTotAllowFormat">
+          <DataField>HseTotAllowFormat</DataField>
+        </Field>
+        <Field Name="TransAllow">
+          <DataField>TransAllow</DataField>
+        </Field>
+        <Field Name="TransAllowFormat">
+          <DataField>TransAllowFormat</DataField>
+        </Field>
+        <Field Name="TotalTransAllow">
+          <DataField>TotalTransAllow</DataField>
+        </Field>
+        <Field Name="TotalTransAllowFormat">
+          <DataField>TotalTransAllowFormat</DataField>
+        </Field>
+        <Field Name="overtime">
+          <DataField>overtime</DataField>
+        </Field>
+        <Field Name="overtimeFormat">
+          <DataField>overtimeFormat</DataField>
+        </Field>
+        <Field Name="OverTimeTotal">
+          <DataField>OverTimeTotal</DataField>
+        </Field>
+        <Field Name="OverTimeTotalFormat">
+          <DataField>OverTimeTotalFormat</DataField>
+        </Field>
+        <Field Name="Aggregate">
+          <DataField>Aggregate</DataField>
+        </Field>
+        <Field Name="AggregateFormat">
+          <DataField>AggregateFormat</DataField>
+        </Field>
+        <Field Name="TotalAgg">
+          <DataField>TotalAgg</DataField>
+        </Field>
+        <Field Name="TotalAggFormat">
+          <DataField>TotalAggFormat</DataField>
+        </Field>
+        <Field Name="SArrears">
+          <DataField>SArrears</DataField>
+        </Field>
+        <Field Name="SArrearsFormat">
+          <DataField>SArrearsFormat</DataField>
+        </Field>
+        <Field Name="TotalSArrears">
+          <DataField>TotalSArrears</DataField>
+        </Field>
+        <Field Name="TotalSArrearsFormat">
+          <DataField>TotalSArrearsFormat</DataField>
+        </Field>
+        <Field Name="ShareCont">
+          <DataField>ShareCont</DataField>
+        </Field>
+        <Field Name="ShareContFormat">
+          <DataField>ShareContFormat</DataField>
+        </Field>
+        <Field Name="TotalShareCont">
+          <DataField>TotalShareCont</DataField>
+        </Field>
+        <Field Name="TotalShareContFormat">
+          <DataField>TotalShareContFormat</DataField>
+        </Field>
+        <Field Name="LoanRepay">
+          <DataField>LoanRepay</DataField>
+        </Field>
+        <Field Name="LoanRepayFormat">
+          <DataField>LoanRepayFormat</DataField>
+        </Field>
+        <Field Name="TotalLoanRepay">
+          <DataField>TotalLoanRepay</DataField>
+        </Field>
+        <Field Name="TotalLoanRepayFormat">
+          <DataField>TotalLoanRepayFormat</DataField>
+        </Field>
+        <Field Name="ADV12">
+          <DataField>ADV12</DataField>
+        </Field>
+        <Field Name="ADV12Format">
+          <DataField>ADV12Format</DataField>
+        </Field>
+        <Field Name="TotalADV12">
+          <DataField>TotalADV12</DataField>
+        </Field>
+        <Field Name="TotalADV12Format">
+          <DataField>TotalADV12Format</DataField>
+        </Field>
+        <Field Name="IntRepay">
+          <DataField>IntRepay</DataField>
+        </Field>
+        <Field Name="IntRepayFormat">
+          <DataField>IntRepayFormat</DataField>
+        </Field>
+        <Field Name="TotInt">
+          <DataField>TotInt</DataField>
+        </Field>
+        <Field Name="TotIntFormat">
+          <DataField>TotIntFormat</DataField>
+        </Field>
+        <Field Name="HseLoan">
+          <DataField>HseLoan</DataField>
+        </Field>
+        <Field Name="HseLoanFormat">
+          <DataField>HseLoanFormat</DataField>
+        </Field>
+        <Field Name="TotalHseLoan">
+          <DataField>TotalHseLoan</DataField>
+        </Field>
+        <Field Name="TotalHseLoanFormat">
+          <DataField>TotalHseLoanFormat</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="ReportForNavId_6075">
+          <DataField>ReportForNavId_6075</DataField>
+        </Field>
+        <Field Name="FORMAT_TODAY_0_4_">
+          <DataField>FORMAT_TODAY_0_4_</DataField>
+        </Field>
+        <Field Name="COMPANYNAME">
+          <DataField>COMPANYNAME</DataField>
+        </Field>
+        <Field Name="CurrReport_PAGENO">
+          <DataField>CurrReport_PAGENO</DataField>
+        </Field>
+        <Field Name="UserId">
+          <DataField>UserId</DataField>
+        </Field>
+        <Field Name="CI_Picture">
+          <DataField>CI_Picture</DataField>
+        </Field>
+        <Field Name="CI_City">
+          <DataField>CI_City</DataField>
+        </Field>
+        <Field Name="CI__Address_2______CI__Post_Code_">
+          <DataField>CI__Address_2______CI__Post_Code_</DataField>
+        </Field>
+        <Field Name="CI_Address">
+          <DataField>CI_Address</DataField>
+        </Field>
+        <Field Name="HR_Employees__No__">
+          <DataField>HR_Employees__No__</DataField>
+        </Field>
+        <Field Name="HR_Employees__FullName">
+          <DataField>HR_Employees__FullName</DataField>
+        </Field>
+        <Field Name="HR_Employees__HR_Employees___Leave_Balance_">
+          <DataField>HR_Employees__HR_Employees___Leave_Balance_</DataField>
+        </Field>
+        <Field Name="HR_Employees__HR_Employees___Leave_Balance_Format">
+          <DataField>HR_Employees__HR_Employees___Leave_Balance_Format</DataField>
+        </Field>
+        <Field Name="EmployeeCaption">
+          <DataField>EmployeeCaption</DataField>
+        </Field>
+        <Field Name="CurrReport_PAGENOCaption">
+          <DataField>CurrReport_PAGENOCaption</DataField>
+        </Field>
+        <Field Name="Employee_Leave_StatementCaption">
+          <DataField>Employee_Leave_StatementCaption</DataField>
+        </Field>
+        <Field Name="P_O__BoxCaption">
+          <DataField>P_O__BoxCaption</DataField>
+        </Field>
+        <Field Name="HR_Employees__No__Caption">
+          <DataField>HR_Employees__No__Caption</DataField>
+        </Field>
+        <Field Name="NameCaption">
+          <DataField>NameCaption</DataField>
+        </Field>
+        <Field Name="Leave_BalanceCaption">
+          <DataField>Leave_BalanceCaption</DataField>
+        </Field>
+        <Field Name="Day_s_Caption">
+          <DataField>Day_s_Caption</DataField>
+        </Field>
+        <Field Name="No">
+          <DataField>No</DataField>
+        </Field>
+        <Field Name="NoFormat">
+          <DataField>NoFormat</DataField>
+        </Field>
+        <Field Name="ReportForNavId_4961">
+          <DataField>ReportForNavId_4961</DataField>
+        </Field>
+        <Field Name="HR_Leave_Ledger_Entries__Leave_Period_">
+          <DataField>HR_Leave_Ledger_Entries__Leave_Period_</DataField>
+        </Field>
+        <Field Name="HR_Leave_Ledger_Entries__Leave_Entry_Type_">
+          <DataField>HR_Leave_Ledger_Entries__Leave_Entry_Type_</DataField>
+        </Field>
+        <Field Name="HR_Leave_Ledger_Entries__Leave_Type_">
+          <DataField>HR_Leave_Ledger_Entries__Leave_Type_</DataField>
+        </Field>
+        <Field Name="HR_Leave_Ledger_Entries__No__of_days_">
+          <DataField>HR_Leave_Ledger_Entries__No__of_days_</DataField>
+        </Field>
+        <Field Name="HR_Leave_Ledger_Entries__No__of_days_Format">
+          <DataField>HR_Leave_Ledger_Entries__No__of_days_Format</DataField>
+        </Field>
+        <Field Name="HR_Leave_Ledger_Entries__Leave_Posting_Description_">
+          <DataField>HR_Leave_Ledger_Entries__Leave_Posting_Description_</DataField>
+        </Field>
+        <Field Name="HR_Leave_Ledger_Entries__Posting_Date_">
+          <DataField>HR_Leave_Ledger_Entries__Posting_Date_</DataField>
+        </Field>
+        <Field Name="HR_Leave_Ledger_Entries__Leave_Entry_Type_Caption">
+          <DataField>HR_Leave_Ledger_Entries__Leave_Entry_Type_Caption</DataField>
+        </Field>
+        <Field Name="HR_Leave_Ledger_Entries__Leave_Type_Caption">
+          <DataField>HR_Leave_Ledger_Entries__Leave_Type_Caption</DataField>
+        </Field>
+        <Field Name="HR_Leave_Ledger_Entries__No__of_days_Caption">
+          <DataField>HR_Leave_Ledger_Entries__No__of_days_Caption</DataField>
+        </Field>
+        <Field Name="HR_Leave_Ledger_Entries__Leave_Posting_Description_Caption">
+          <DataField>HR_Leave_Ledger_Entries__Leave_Posting_Description_Caption</DataField>
+        </Field>
+        <Field Name="HR_Leave_Ledger_Entries__Posting_Date_Caption">
+          <DataField>HR_Leave_Ledger_Entries__Posting_Date_Caption</DataField>
+        </Field>
+        <Field Name="HR_Leave_Ledger_Entries__Leave_Period_Caption">
+          <DataField>HR_Leave_Ledger_Entries__Leave_Period_Caption</DataField>
+        </Field>
+        <Field Name="HR_Leave_Ledger_Entries_Entry_No_">
+          <DataField>HR_Leave_Ledger_Entries_Entry_No_</DataField>
+        </Field>
+        <Field Name="HR_Leave_Ledger_Entries_Staff_No_">
+          <DataField>HR_Leave_Ledger_Entries_Staff_No_</DataField>
+        </Field>
+        <Field Name="No2">
+          <DataField>No2</DataField>
+        </Field>
+        <Field Name="No2Format">
+          <DataField>No2Format</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="ReportForNavId_6836">
+          <DataField>ReportForNavId_6836</DataField>
+        </Field>
+        <Field Name="CustAddr_1__1_">
+          <DataField>CustAddr_1__1_</DataField>
+        </Field>
+        <Field Name="CustAddr_1__2_">
+          <DataField>CustAddr_1__2_</DataField>
+        </Field>
+        <Field Name="CustAddr_1__3_">
+          <DataField>CustAddr_1__3_</DataField>
+        </Field>
+        <Field Name="CustAddr_1__4_">
+          <DataField>CustAddr_1__4_</DataField>
+        </Field>
+        <Field Name="CustAddr_1__5_">
+          <DataField>CustAddr_1__5_</DataField>
+        </Field>
+        <Field Name="CustAddr_1__6_">
+          <DataField>CustAddr_1__6_</DataField>
+        </Field>
+        <Field Name="CustAddr_2__1_">
+          <DataField>CustAddr_2__1_</DataField>
+        </Field>
+        <Field Name="CustAddr_2__2_">
+          <DataField>CustAddr_2__2_</DataField>
+        </Field>
+        <Field Name="CustAddr_2__3_">
+          <DataField>CustAddr_2__3_</DataField>
+        </Field>
+        <Field Name="CustAddr_2__4_">
+          <DataField>CustAddr_2__4_</DataField>
+        </Field>
+        <Field Name="CustAddr_2__5_">
+          <DataField>CustAddr_2__5_</DataField>
+        </Field>
+        <Field Name="CustAddr_2__6_">
+          <DataField>CustAddr_2__6_</DataField>
+        </Field>
+        <Field Name="CustAddr_3__1_">
+          <DataField>CustAddr_3__1_</DataField>
+        </Field>
+        <Field Name="CustAddr_3__2_">
+          <DataField>CustAddr_3__2_</DataField>
+        </Field>
+        <Field Name="CustAddr_3__3_">
+          <DataField>CustAddr_3__3_</DataField>
+        </Field>
+        <Field Name="CustAddr_3__4_">
+          <DataField>CustAddr_3__4_</DataField>
+        </Field>
+        <Field Name="CustAddr_3__5_">
+          <DataField>CustAddr_3__5_</DataField>
+        </Field>
+        <Field Name="CustAddr_3__6_">
+          <DataField>CustAddr_3__6_</DataField>
+        </Field>
+        <Field Name="CustAddr_1__7_">
+          <DataField>CustAddr_1__7_</DataField>
+        </Field>
+        <Field Name="CustAddr_1__8_">
+          <DataField>CustAddr_1__8_</DataField>
+        </Field>
+        <Field Name="CustAddr_2__7_">
+          <DataField>CustAddr_2__7_</DataField>
+        </Field>
+        <Field Name="CustAddr_2__8_">
+          <DataField>CustAddr_2__8_</DataField>
+        </Field>
+        <Field Name="CustAddr_3__7_">
+          <DataField>CustAddr_3__7_</DataField>
+        </Field>
+        <Field Name="CustAddr_3__8_">
+          <DataField>CustAddr_3__8_</DataField>
+        </Field>
+        <Field Name="ShowBody1">
+          <DataField>ShowBody1</DataField>
+        </Field>
+        <Field Name="GroupNo1">
+          <DataField>GroupNo1</DataField>
+        </Field>
+        <Field Name="ShowBody2">
+          <DataField>ShowBody2</DataField>
+        </Field>
+        <Field Name="ShowBody3">
+          <DataField>ShowBody3</DataField>
+        </Field>
+        <Field Name="ShowBody4">
+          <DataField>ShowBody4</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

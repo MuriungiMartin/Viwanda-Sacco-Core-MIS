@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="Company_Name">
+          <DataField>Company_Name</DataField>
+        </Field>
+        <Field Name="Company_Address">
+          <DataField>Company_Address</DataField>
+        </Field>
+        <Field Name="Company_City">
+          <DataField>Company_City</DataField>
+        </Field>
+        <Field Name="Company_Picture">
+          <DataField>Company_Picture</DataField>
+        </Field>
+        <Field Name="Company_Email">
+          <DataField>Company_Email</DataField>
+        </Field>
+        <Field Name="Company_Address_2">
+          <DataField>Company_Address_2</DataField>
+        </Field>
+        <Field Name="Company_Phone_No">
+          <DataField>Company_Phone_No</DataField>
+        </Field>
+        <Field Name="Company_Fax_No">
+          <DataField>Company_Fax_No</DataField>
+        </Field>
+        <Field Name="SN">
+          <DataField>SN</DataField>
+        </Field>
+        <Field Name="MemberRiskLevel_MembersRegister">
+          <DataField>MemberRiskLevel_MembersRegister</DataField>
+        </Field>
+        <Field Name="Name_MembersRegister">
+          <DataField>Name_MembersRegister</DataField>
+        </Field>
+        <Field Name="No_MembersRegister">
+          <DataField>No_MembersRegister</DataField>
+        </Field>
+        <Field Name="CreatedBy_MembersRegister">
+          <DataField>CreatedBy_MembersRegister</DataField>
+        </Field>
+        <Field Name="TransactionDeclaration_Transactions">
+          <DataField>TransactionDeclaration_Transactions</DataField>
+        </Field>
+        <Field Name="EvidenceObtained_Transactions">
+          <DataField>EvidenceObtained_Transactions</DataField>
+        </Field>
+        <Field Name="TransactionType_Transactions">
+          <DataField>TransactionType_Transactions</DataField>
+        </Field>
+        <Field Name="MemberNo_Transactions">
+          <DataField>MemberNo_Transactions</DataField>
+        </Field>
+        <Field Name="CheckedBy_Transactions">
+          <DataField>CheckedBy_Transactions</DataField>
+        </Field>
+        <Field Name="TransactionDate_Transactions">
+          <DataField>TransactionDate_Transactions</DataField>
+        </Field>
+        <Field Name="Amount_Transactions">
+          <DataField>Amount_Transactions</DataField>
+        </Field>
+        <Field Name="Amount_TransactionsFormat">
+          <DataField>Amount_TransactionsFormat</DataField>
+        </Field>
+        <Field Name="PostedBy_Transactions">
+          <DataField>PostedBy_Transactions</DataField>
+        </Field>
+        <Field Name="SN2">
+          <DataField>SN2</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

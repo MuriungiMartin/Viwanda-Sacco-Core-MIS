@@ -1,0 +1,271 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <ReportParameters>
+    <ReportParameter Name="PurchaseOrderCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>PurchaseOrderCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>PurchaseOrderCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="ExpiryDate_PurchaseHeaderCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>ExpiryDate_PurchaseHeaderCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>ExpiryDate_PurchaseHeaderCaption</Prompt>
+    </ReportParameter>
+  </ReportParameters>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="ReportForNavId_1">
+          <DataField>ReportForNavId_1</DataField>
+        </Field>
+        <Field Name="PaytoVendorNo_PurchaseHeader">
+          <DataField>PaytoVendorNo_PurchaseHeader</DataField>
+        </Field>
+        <Field Name="PaytoName_PurchaseHeader">
+          <DataField>PaytoName_PurchaseHeader</DataField>
+        </Field>
+        <Field Name="PaytoName2_PurchaseHeader">
+          <DataField>PaytoName2_PurchaseHeader</DataField>
+        </Field>
+        <Field Name="PaytoAddress_PurchaseHeader">
+          <DataField>PaytoAddress_PurchaseHeader</DataField>
+        </Field>
+        <Field Name="PaytoAddress2_PurchaseHeader">
+          <DataField>PaytoAddress2_PurchaseHeader</DataField>
+        </Field>
+        <Field Name="PaytoCity_PurchaseHeader">
+          <DataField>PaytoCity_PurchaseHeader</DataField>
+        </Field>
+        <Field Name="ShiptoCode_PurchaseHeader">
+          <DataField>ShiptoCode_PurchaseHeader</DataField>
+        </Field>
+        <Field Name="ShiptoName_PurchaseHeader">
+          <DataField>ShiptoName_PurchaseHeader</DataField>
+        </Field>
+        <Field Name="ShiptoName2_PurchaseHeader">
+          <DataField>ShiptoName2_PurchaseHeader</DataField>
+        </Field>
+        <Field Name="ShiptoAddress_PurchaseHeader">
+          <DataField>ShiptoAddress_PurchaseHeader</DataField>
+        </Field>
+        <Field Name="ShiptoAddress2_PurchaseHeader">
+          <DataField>ShiptoAddress2_PurchaseHeader</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Name">
+          <DataField>CompanyInfo_Name</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Address">
+          <DataField>CompanyInfo_Address</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Address2">
+          <DataField>CompanyInfo_Address2</DataField>
+        </Field>
+        <Field Name="CompanyInfo_City">
+          <DataField>CompanyInfo_City</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Phone">
+          <DataField>CompanyInfo_Phone</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Fax">
+          <DataField>CompanyInfo_Fax</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Picture">
+          <DataField>CompanyInfo_Picture</DataField>
+        </Field>
+        <Field Name="ExpectedReceiptDate_PurchaseHeader">
+          <DataField>ExpectedReceiptDate_PurchaseHeader</DataField>
+        </Field>
+        <Field Name="PostingDate_PurchaseHeader">
+          <DataField>PostingDate_PurchaseHeader</DataField>
+        </Field>
+        <Field Name="No_PurchaseHeader">
+          <DataField>No_PurchaseHeader</DataField>
+        </Field>
+        <Field Name="CopyText">
+          <DataField>CopyText</DataField>
+        </Field>
+        <Field Name="PaymentTermsCode_PurchaseHeader">
+          <DataField>PaymentTermsCode_PurchaseHeader</DataField>
+        </Field>
+        <Field Name="CurrencyCode_PurchaseHeader">
+          <DataField>CurrencyCode_PurchaseHeader</DataField>
+        </Field>
+        <Field Name="ExpiryDate_PurchaseHeader">
+          <DataField>ExpiryDate_PurchaseHeader</DataField>
+        </Field>
+        <Field Name="Amount_PurchaseHeader">
+          <DataField>Amount_PurchaseHeader</DataField>
+        </Field>
+        <Field Name="Amount_PurchaseHeaderFormat">
+          <DataField>Amount_PurchaseHeaderFormat</DataField>
+        </Field>
+        <Field Name="AmountIncludingVAT_PurchaseHeader">
+          <DataField>AmountIncludingVAT_PurchaseHeader</DataField>
+        </Field>
+        <Field Name="AmountIncludingVAT_PurchaseHeaderFormat">
+          <DataField>AmountIncludingVAT_PurchaseHeaderFormat</DataField>
+        </Field>
+        <Field Name="TotalDiscountAmount">
+          <DataField>TotalDiscountAmount</DataField>
+        </Field>
+        <Field Name="TotalDiscountAmountFormat">
+          <DataField>TotalDiscountAmountFormat</DataField>
+        </Field>
+        <Field Name="SpecialRemark_PurchaseHeader">
+          <DataField>SpecialRemark_PurchaseHeader</DataField>
+        </Field>
+        <Field Name="NumberText">
+          <DataField>NumberText</DataField>
+        </Field>
+        <Field Name="NoPrinted">
+          <DataField>NoPrinted</DataField>
+        </Field>
+        <Field Name="LPOText">
+          <DataField>LPOText</DataField>
+        </Field>
+        <Field Name="ReportForNavId_2">
+          <DataField>ReportForNavId_2</DataField>
+        </Field>
+        <Field Name="LineNo_PurchaseLine">
+          <DataField>LineNo_PurchaseLine</DataField>
+        </Field>
+        <Field Name="LineAmount_PurchaseLine">
+          <DataField>LineAmount_PurchaseLine</DataField>
+        </Field>
+        <Field Name="LineAmount_PurchaseLineFormat">
+          <DataField>LineAmount_PurchaseLineFormat</DataField>
+        </Field>
+        <Field Name="DirectUnitCost_PurchaseLine">
+          <DataField>DirectUnitCost_PurchaseLine</DataField>
+        </Field>
+        <Field Name="DirectUnitCost_PurchaseLineFormat">
+          <DataField>DirectUnitCost_PurchaseLineFormat</DataField>
+        </Field>
+        <Field Name="Quantity_PurchaseLine">
+          <DataField>Quantity_PurchaseLine</DataField>
+        </Field>
+        <Field Name="Quantity_PurchaseLineFormat">
+          <DataField>Quantity_PurchaseLineFormat</DataField>
+        </Field>
+        <Field Name="No_PurchaseLine">
+          <DataField>No_PurchaseLine</DataField>
+        </Field>
+        <Field Name="Description_PurchaseLine">
+          <DataField>Description_PurchaseLine</DataField>
+        </Field>
+        <Field Name="UnitofMeasure_PurchaseLine">
+          <DataField>UnitofMeasure_PurchaseLine</DataField>
+        </Field>
+        <Field Name="LineDiscount_PurchaseLine">
+          <DataField>LineDiscount_PurchaseLine</DataField>
+        </Field>
+        <Field Name="LineDiscount_PurchaseLineFormat">
+          <DataField>LineDiscount_PurchaseLineFormat</DataField>
+        </Field>
+        <Field Name="LineDiscountAmount_PurchaseLine">
+          <DataField>LineDiscountAmount_PurchaseLine</DataField>
+        </Field>
+        <Field Name="LineDiscountAmount_PurchaseLineFormat">
+          <DataField>LineDiscountAmount_PurchaseLineFormat</DataField>
+        </Field>
+        <Field Name="VAT">
+          <DataField>VAT</DataField>
+        </Field>
+        <Field Name="VATFormat">
+          <DataField>VATFormat</DataField>
+        </Field>
+        <Field Name="ReportForNavId_35">
+          <DataField>ReportForNavId_35</DataField>
+        </Field>
+        <Field Name="SequenceNo_ApprovalEntry">
+          <DataField>SequenceNo_ApprovalEntry</DataField>
+        </Field>
+        <Field Name="ApproverID_ApprovalEntry">
+          <DataField>ApproverID_ApprovalEntry</DataField>
+        </Field>
+        <Field Name="LastDateTimeModified_ApprovalEntry">
+          <DataField>LastDateTimeModified_ApprovalEntry</DataField>
+        </Field>
+        <Field Name="SenderID_ApprovalEntry">
+          <DataField>SenderID_ApprovalEntry</DataField>
+        </Field>
+        <Field Name="DateTimeSentforApproval_ApprovalEntry">
+          <DataField>DateTimeSentforApproval_ApprovalEntry</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

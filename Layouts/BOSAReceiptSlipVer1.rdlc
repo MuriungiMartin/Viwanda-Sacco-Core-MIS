@@ -1,0 +1,221 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="No_Transactions">
+          <DataField>No_Transactions</DataField>
+        </Field>
+        <Field Name="NumberText_1_">
+          <DataField>NumberText_1_</DataField>
+        </Field>
+        <Field Name="MemberNo_Transactions">
+          <DataField>MemberNo_Transactions</DataField>
+        </Field>
+        <Field Name="MemberName_Transactions">
+          <DataField>MemberName_Transactions</DataField>
+        </Field>
+        <Field Name="Amount_Transactions">
+          <DataField>Amount_Transactions</DataField>
+        </Field>
+        <Field Name="Amount_TransactionsFormat">
+          <DataField>Amount_TransactionsFormat</DataField>
+        </Field>
+        <Field Name="AllocatedAmount_Transactions">
+          <DataField>AllocatedAmount_Transactions</DataField>
+        </Field>
+        <Field Name="AllocatedAmount_TransactionsFormat">
+          <DataField>AllocatedAmount_TransactionsFormat</DataField>
+        </Field>
+        <Field Name="Posted_Transactions">
+          <DataField>Posted_Transactions</DataField>
+        </Field>
+        <Field Name="Cashier_Transactions">
+          <DataField>Cashier_Transactions</DataField>
+        </Field>
+        <Field Name="Remarks_Transactions">
+          <DataField>Remarks_Transactions</DataField>
+        </Field>
+        <Field Name="TransactionDate_Transactions">
+          <DataField>TransactionDate_Transactions</DataField>
+        </Field>
+        <Field Name="TransactionTime_Transactions">
+          <DataField>TransactionTime_Transactions</DataField>
+        </Field>
+        <Field Name="DocumentDate_Transactions">
+          <DataField>DocumentDate_Transactions</DataField>
+        </Field>
+        <Field Name="id_no">
+          <DataField>id_no</DataField>
+        </Field>
+        <Field Name="emp_no">
+          <DataField>emp_no</DataField>
+        </Field>
+        <Field Name="CompanyName">
+          <DataField>CompanyName</DataField>
+        </Field>
+        <Field Name="CompanyAddress">
+          <DataField>CompanyAddress</DataField>
+        </Field>
+        <Field Name="CompanyCity">
+          <DataField>CompanyCity</DataField>
+        </Field>
+        <Field Name="CompanyPhoneNo">
+          <DataField>CompanyPhoneNo</DataField>
+        </Field>
+        <Field Name="CompanyPicture">
+          <DataField>CompanyPicture</DataField>
+        </Field>
+        <Field Name="DocumentNo_ReceiptAllocation">
+          <DataField>DocumentNo_ReceiptAllocation</DataField>
+        </Field>
+        <Field Name="MemberNo_ReceiptAllocation">
+          <DataField>MemberNo_ReceiptAllocation</DataField>
+        </Field>
+        <Field Name="TransactionType_ReceiptAllocation">
+          <DataField>TransactionType_ReceiptAllocation</DataField>
+        </Field>
+        <Field Name="LN">
+          <DataField>LN</DataField>
+        </Field>
+        <Field Name="Amount_ReceiptAllocation">
+          <DataField>Amount_ReceiptAllocation</DataField>
+        </Field>
+        <Field Name="Amount_ReceiptAllocationFormat">
+          <DataField>Amount_ReceiptAllocationFormat</DataField>
+        </Field>
+        <Field Name="InterestAmount_ReceiptAllocation">
+          <DataField>InterestAmount_ReceiptAllocation</DataField>
+        </Field>
+        <Field Name="InterestAmount_ReceiptAllocationFormat">
+          <DataField>InterestAmount_ReceiptAllocationFormat</DataField>
+        </Field>
+        <Field Name="TotalAmount_ReceiptAllocation">
+          <DataField>TotalAmount_ReceiptAllocation</DataField>
+        </Field>
+        <Field Name="TotalAmount_ReceiptAllocationFormat">
+          <DataField>TotalAmount_ReceiptAllocationFormat</DataField>
+        </Field>
+        <Field Name="AmountBalance_ReceiptAllocation">
+          <DataField>AmountBalance_ReceiptAllocation</DataField>
+        </Field>
+        <Field Name="AmountBalance_ReceiptAllocationFormat">
+          <DataField>AmountBalance_ReceiptAllocationFormat</DataField>
+        </Field>
+        <Field Name="InterestBalance_ReceiptAllocation">
+          <DataField>InterestBalance_ReceiptAllocation</DataField>
+        </Field>
+        <Field Name="InterestBalance_ReceiptAllocationFormat">
+          <DataField>InterestBalance_ReceiptAllocationFormat</DataField>
+        </Field>
+        <Field Name="LoanID_ReceiptAllocation">
+          <DataField>LoanID_ReceiptAllocation</DataField>
+        </Field>
+        <Field Name="PrepaymentDate_ReceiptAllocation">
+          <DataField>PrepaymentDate_ReceiptAllocation</DataField>
+        </Field>
+        <Field Name="LoanInsurance_ReceiptAllocation">
+          <DataField>LoanInsurance_ReceiptAllocation</DataField>
+        </Field>
+        <Field Name="LoanInsurance_ReceiptAllocationFormat">
+          <DataField>LoanInsurance_ReceiptAllocationFormat</DataField>
+        </Field>
+        <Field Name="AppliedAmount_ReceiptAllocation">
+          <DataField>AppliedAmount_ReceiptAllocation</DataField>
+        </Field>
+        <Field Name="AppliedAmount_ReceiptAllocationFormat">
+          <DataField>AppliedAmount_ReceiptAllocationFormat</DataField>
+        </Field>
+        <Field Name="Insurance_ReceiptAllocation">
+          <DataField>Insurance_ReceiptAllocation</DataField>
+        </Field>
+        <Field Name="Insurance_ReceiptAllocationFormat">
+          <DataField>Insurance_ReceiptAllocationFormat</DataField>
+        </Field>
+        <Field Name="UnAllocatedAmount_ReceiptAllocation">
+          <DataField>UnAllocatedAmount_ReceiptAllocation</DataField>
+        </Field>
+        <Field Name="UnAllocatedAmount_ReceiptAllocationFormat">
+          <DataField>UnAllocatedAmount_ReceiptAllocationFormat</DataField>
+        </Field>
+        <Field Name="GlobalDimension1Code_ReceiptAllocation">
+          <DataField>GlobalDimension1Code_ReceiptAllocation</DataField>
+        </Field>
+        <Field Name="GlobalDimension2Code_ReceiptAllocation">
+          <DataField>GlobalDimension2Code_ReceiptAllocation</DataField>
+        </Field>
+        <Field Name="Description_ReceiptAllocation">
+          <DataField>Description_ReceiptAllocation</DataField>
+        </Field>
+        <Field Name="AccountNo_ReceiptAllocation">
+          <DataField>AccountNo_ReceiptAllocation</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

@@ -1,0 +1,424 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <ReportParameters>
+    <ReportParameter Name="BankCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>BankCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>BankCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="BankNameCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>BankNameCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>BankNameCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="PayModeCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>PayModeCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>PayModeCaption</Prompt>
+    </ReportParameter>
+  </ReportParameters>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="ReportForNavId_6437">
+          <DataField>ReportForNavId_6437</DataField>
+        </Field>
+        <Field Name="DOCNAME">
+          <DataField>DOCNAME</DataField>
+        </Field>
+        <Field Name="Payments_Header__No__">
+          <DataField>Payments_Header__No__</DataField>
+        </Field>
+        <Field Name="CurrCode">
+          <DataField>CurrCode</DataField>
+        </Field>
+        <Field Name="StrCopyText">
+          <DataField>StrCopyText</DataField>
+        </Field>
+        <Field Name="Payments_Header__Cheque_No__">
+          <DataField>Payments_Header__Cheque_No__</DataField>
+        </Field>
+        <Field Name="Payments_Header_Payee">
+          <DataField>Payments_Header_Payee</DataField>
+        </Field>
+        <Field Name="PMODE">
+          <DataField>PMODE</DataField>
+        </Field>
+        <Field Name="Payments_Header__Payments_Header__Date">
+          <DataField>Payments_Header__Payments_Header__Date</DataField>
+        </Field>
+        <Field Name="Payments_Header__Global_Dimension_1_Code_">
+          <DataField>Payments_Header__Global_Dimension_1_Code_</DataField>
+        </Field>
+        <Field Name="Payments_Header__Shortcut_Dimension_2_Code_">
+          <DataField>Payments_Header__Shortcut_Dimension_2_Code_</DataField>
+        </Field>
+        <Field Name="UserId">
+          <DataField>UserId</DataField>
+        </Field>
+        <Field Name="NumberText_1_">
+          <DataField>NumberText_1_</DataField>
+        </Field>
+        <Field Name="TTotal">
+          <DataField>TTotal</DataField>
+        </Field>
+        <Field Name="TTotalFormat">
+          <DataField>TTotalFormat</DataField>
+        </Field>
+        <Field Name="TIME_PRINTED_____FORMAT_TIME_">
+          <DataField>TIME_PRINTED_____FORMAT_TIME_</DataField>
+        </Field>
+        <Field Name="DATE_PRINTED_____FORMAT_TODAY_0_4_">
+          <DataField>DATE_PRINTED_____FORMAT_TODAY_0_4_</DataField>
+        </Field>
+        <Field Name="CurrCode_Control1102756010">
+          <DataField>CurrCode_Control1102756010</DataField>
+        </Field>
+        <Field Name="CurrCode_Control1102756012">
+          <DataField>CurrCode_Control1102756012</DataField>
+        </Field>
+        <Field Name="Approved_">
+          <DataField>Approved_</DataField>
+        </Field>
+        <Field Name="Approval_Status_____">
+          <DataField>Approval_Status_____</DataField>
+        </Field>
+        <Field Name="TIME_PRINTED_____FORMAT_TIME__Control1102755003">
+          <DataField>TIME_PRINTED_____FORMAT_TIME__Control1102755003</DataField>
+        </Field>
+        <Field Name="DATE_PRINTED_____FORMAT_TODAY_0_4__Control1102755004">
+          <DataField>DATE_PRINTED_____FORMAT_TODAY_0_4__Control1102755004</DataField>
+        </Field>
+        <Field Name="USERID_Control1102755012">
+          <DataField>USERID_Control1102755012</DataField>
+        </Field>
+        <Field Name="NumberText_1__Control1102755016">
+          <DataField>NumberText_1__Control1102755016</DataField>
+        </Field>
+        <Field Name="TTotal_Control1102755034">
+          <DataField>TTotal_Control1102755034</DataField>
+        </Field>
+        <Field Name="TTotal_Control1102755034Format">
+          <DataField>TTotal_Control1102755034Format</DataField>
+        </Field>
+        <Field Name="Bname">
+          <DataField>Bname</DataField>
+        </Field>
+        <Field Name="CurrCode_Control1102755035">
+          <DataField>CurrCode_Control1102755035</DataField>
+        </Field>
+        <Field Name="CurrCode_Control1102755037">
+          <DataField>CurrCode_Control1102755037</DataField>
+        </Field>
+        <Field Name="VATCaption">
+          <DataField>VATCaption</DataField>
+        </Field>
+        <Field Name="PAYMENT_DETAILSCaption">
+          <DataField>PAYMENT_DETAILSCaption</DataField>
+        </Field>
+        <Field Name="AMOUNTCaption">
+          <DataField>AMOUNTCaption</DataField>
+        </Field>
+        <Field Name="NET_AMOUNTCaption">
+          <DataField>NET_AMOUNTCaption</DataField>
+        </Field>
+        <Field Name="W_TAXCaption">
+          <DataField>W_TAXCaption</DataField>
+        </Field>
+        <Field Name="Document_No___Caption">
+          <DataField>Document_No___Caption</DataField>
+        </Field>
+        <Field Name="Currency_Caption">
+          <DataField>Currency_Caption</DataField>
+        </Field>
+        <Field Name="Payment_To_Caption">
+          <DataField>Payment_To_Caption</DataField>
+        </Field>
+        <Field Name="Document_Date_Caption">
+          <DataField>Document_Date_Caption</DataField>
+        </Field>
+        <Field Name="Cheque_No__Caption">
+          <DataField>Cheque_No__Caption</DataField>
+        </Field>
+        <Field Name="Payments_Header__Global_Dimension_1_Code_Caption">
+          <DataField>Payments_Header__Global_Dimension_1_Code_Caption</DataField>
+        </Field>
+        <Field Name="Payments_Header__Shortcut_Dimension_2_Code_Caption">
+          <DataField>Payments_Header__Shortcut_Dimension_2_Code_Caption</DataField>
+        </Field>
+        <Field Name="R_CENTERCaption">
+          <DataField>R_CENTERCaption</DataField>
+        </Field>
+        <Field Name="PROJECTCaption">
+          <DataField>PROJECTCaption</DataField>
+        </Field>
+        <Field Name="TotalCaption">
+          <DataField>TotalCaption</DataField>
+        </Field>
+        <Field Name="Printed_By_Caption">
+          <DataField>Printed_By_Caption</DataField>
+        </Field>
+        <Field Name="Amount_in_wordsCaption">
+          <DataField>Amount_in_wordsCaption</DataField>
+        </Field>
+        <Field Name="EmptyStringCaption">
+          <DataField>EmptyStringCaption</DataField>
+        </Field>
+        <Field Name="EmptyStringCaption_Control1102755013">
+          <DataField>EmptyStringCaption_Control1102755013</DataField>
+        </Field>
+        <Field Name="Amount_in_wordsCaption_Control1102755021">
+          <DataField>Amount_in_wordsCaption_Control1102755021</DataField>
+        </Field>
+        <Field Name="Printed_By_Caption_Control1102755026">
+          <DataField>Printed_By_Caption_Control1102755026</DataField>
+        </Field>
+        <Field Name="TotalCaption_Control1102755033">
+          <DataField>TotalCaption_Control1102755033</DataField>
+        </Field>
+        <Field Name="Signature_Caption">
+          <DataField>Signature_Caption</DataField>
+        </Field>
+        <Field Name="Date_Caption">
+          <DataField>Date_Caption</DataField>
+        </Field>
+        <Field Name="Name_Caption">
+          <DataField>Name_Caption</DataField>
+        </Field>
+        <Field Name="RecipientCaption">
+          <DataField>RecipientCaption</DataField>
+        </Field>
+        <Field Name="CompanyInfoName">
+          <DataField>CompanyInfoName</DataField>
+        </Field>
+        <Field Name="CompanyInfoAddress">
+          <DataField>CompanyInfoAddress</DataField>
+        </Field>
+        <Field Name="CompanyInfoAddress2">
+          <DataField>CompanyInfoAddress2</DataField>
+        </Field>
+        <Field Name="CompanyInfoPic">
+          <DataField>CompanyInfoPic</DataField>
+        </Field>
+        <Field Name="Bank">
+          <DataField>Bank</DataField>
+        </Field>
+        <Field Name="BankName">
+          <DataField>BankName</DataField>
+        </Field>
+        <Field Name="PayMode">
+          <DataField>PayMode</DataField>
+        </Field>
+        <Field Name="CreationDocNo_PaymentsHeader">
+          <DataField>CreationDocNo_PaymentsHeader</DataField>
+        </Field>
+        <Field Name="CreationDoc">
+          <DataField>CreationDoc</DataField>
+        </Field>
+        <Field Name="ReportForNavId_8">
+          <DataField>ReportForNavId_8</DataField>
+        </Field>
+        <Field Name="DocNo">
+          <DataField>DocNo</DataField>
+        </Field>
+        <Field Name="Amt">
+          <DataField>Amt</DataField>
+        </Field>
+        <Field Name="AmtFormat">
+          <DataField>AmtFormat</DataField>
+        </Field>
+        <Field Name="ReportForNavId_3474">
+          <DataField>ReportForNavId_3474</DataField>
+        </Field>
+        <Field Name="Payment_Line__Net_Amount__">
+          <DataField>Payment_Line__Net_Amount__</DataField>
+        </Field>
+        <Field Name="Payment_Line__Net_Amount__Format">
+          <DataField>Payment_Line__Net_Amount__Format</DataField>
+        </Field>
+        <Field Name="Payment_Line_Amount">
+          <DataField>Payment_Line_Amount</DataField>
+        </Field>
+        <Field Name="Payment_Line_AmountFormat">
+          <DataField>Payment_Line_AmountFormat</DataField>
+        </Field>
+        <Field Name="Transaction_Name_______Account_No________Account_Name_____">
+          <DataField>Transaction_Name_______Account_No________Account_Name_____</DataField>
+        </Field>
+        <Field Name="AccountNo_PaymentLine">
+          <DataField>AccountNo_PaymentLine</DataField>
+        </Field>
+        <Field Name="AccountName_PaymentLine">
+          <DataField>AccountName_PaymentLine</DataField>
+        </Field>
+        <Field Name="Payment_remarks">
+          <DataField>Payment_remarks</DataField>
+        </Field>
+        <Field Name="Payment_Line__Withholding_Tax_Amount_">
+          <DataField>Payment_Line__Withholding_Tax_Amount_</DataField>
+        </Field>
+        <Field Name="Payment_Line__Withholding_Tax_Amount_Format">
+          <DataField>Payment_Line__Withholding_Tax_Amount_Format</DataField>
+        </Field>
+        <Field Name="Payment_Line__VAT_Amount_">
+          <DataField>Payment_Line__VAT_Amount_</DataField>
+        </Field>
+        <Field Name="Payment_Line__VAT_Amount_Format">
+          <DataField>Payment_Line__VAT_Amount_Format</DataField>
+        </Field>
+        <Field Name="Payment_Line__Global_Dimension_1_Code_">
+          <DataField>Payment_Line__Global_Dimension_1_Code_</DataField>
+        </Field>
+        <Field Name="Payment_Line__Shortcut_Dimension_2_Code_">
+          <DataField>Payment_Line__Shortcut_Dimension_2_Code_</DataField>
+        </Field>
+        <Field Name="Payment_Line_Line_No_">
+          <DataField>Payment_Line_Line_No_</DataField>
+        </Field>
+        <Field Name="Payment_Line_No">
+          <DataField>Payment_Line_No</DataField>
+        </Field>
+        <Field Name="Payment_Line_Type">
+          <DataField>Payment_Line_Type</DataField>
+        </Field>
+        <Field Name="InvNum">
+          <DataField>InvNum</DataField>
+        </Field>
+        <Field Name="InvAmt">
+          <DataField>InvAmt</DataField>
+        </Field>
+        <Field Name="InvAmtFormat">
+          <DataField>InvAmtFormat</DataField>
+        </Field>
+        <Field Name="TTotal2">
+          <DataField>TTotal2</DataField>
+        </Field>
+        <Field Name="TTotal2Format">
+          <DataField>TTotal2Format</DataField>
+        </Field>
+        <Field Name="ReportForNavId_3476">
+          <DataField>ReportForNavId_3476</DataField>
+        </Field>
+        <Field Name="ReportForNavId_3570">
+          <DataField>ReportForNavId_3570</DataField>
+        </Field>
+        <Field Name="ReportForNavId_5444">
+          <DataField>ReportForNavId_5444</DataField>
+        </Field>
+        <Field Name="ReportForNavId_1937">
+          <DataField>ReportForNavId_1937</DataField>
+        </Field>
+        <Field Name="ReportForNavId_1000000014">
+          <DataField>ReportForNavId_1000000014</DataField>
+        </Field>
+        <Field Name="SequenceNo_ApprovalEntry">
+          <DataField>SequenceNo_ApprovalEntry</DataField>
+        </Field>
+        <Field Name="LastDateTimeModified_ApprovalEntry">
+          <DataField>LastDateTimeModified_ApprovalEntry</DataField>
+        </Field>
+        <Field Name="ApproverID_ApprovalEntry">
+          <DataField>ApproverID_ApprovalEntry</DataField>
+        </Field>
+        <Field Name="SenderID_ApprovalEntry">
+          <DataField>SenderID_ApprovalEntry</DataField>
+        </Field>
+        <Field Name="ReportForNavId_1000000025">
+          <DataField>ReportForNavId_1000000025</DataField>
+        </Field>
+        <Field Name="SequenceNo_CreationApprovalEntry">
+          <DataField>SequenceNo_CreationApprovalEntry</DataField>
+        </Field>
+        <Field Name="SenderID_CreationApprovalEntry">
+          <DataField>SenderID_CreationApprovalEntry</DataField>
+        </Field>
+        <Field Name="ApproverID_CreationApprovalEntry">
+          <DataField>ApproverID_CreationApprovalEntry</DataField>
+        </Field>
+        <Field Name="DateTimeSentforApproval_CreationApprovalEntry">
+          <DataField>DateTimeSentforApproval_CreationApprovalEntry</DataField>
+        </Field>
+        <Field Name="LastDateTimeModified_CreationApprovalEntry">
+          <DataField>LastDateTimeModified_CreationApprovalEntry</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

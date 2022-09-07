@@ -1,0 +1,260 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="FORMAT_TODAY_0_4_">
+          <DataField>FORMAT_TODAY_0_4_</DataField>
+        </Field>
+        <Field Name="COMPANYNAME">
+          <DataField>COMPANYNAME</DataField>
+        </Field>
+        <Field Name="UserId">
+          <DataField>UserId</DataField>
+        </Field>
+        <Field Name="Customer__No__">
+          <DataField>Customer__No__</DataField>
+        </Field>
+        <Field Name="Company_Address">
+          <DataField>Company_Address</DataField>
+        </Field>
+        <Field Name="Company_Address2">
+          <DataField>Company_Address2</DataField>
+        </Field>
+        <Field Name="Company_PhoneNo">
+          <DataField>Company_PhoneNo</DataField>
+        </Field>
+        <Field Name="Company_Email">
+          <DataField>Company_Email</DataField>
+        </Field>
+        <Field Name="Company_Picture">
+          <DataField>Company_Picture</DataField>
+        </Field>
+        <Field Name="Customer__Payroll_Staff_No_">
+          <DataField>Customer__Payroll_Staff_No_</DataField>
+        </Field>
+        <Field Name="Customer_Name">
+          <DataField>Customer_Name</DataField>
+        </Field>
+        <Field Name="Customer_Customer__Qualifying_Shares_">
+          <DataField>Customer_Customer__Qualifying_Shares_</DataField>
+        </Field>
+        <Field Name="Customer_Customer__Qualifying_Shares_Format">
+          <DataField>Customer_Customer__Qualifying_Shares_Format</DataField>
+        </Field>
+        <Field Name="Customer__Dividend_Amount_">
+          <DataField>Customer__Dividend_Amount_</DataField>
+        </Field>
+        <Field Name="Customer__Dividend_Amount_Format">
+          <DataField>Customer__Dividend_Amount_Format</DataField>
+        </Field>
+        <Field Name="WithholdingTax">
+          <DataField>WithholdingTax</DataField>
+        </Field>
+        <Field Name="WithholdingTaxFormat">
+          <DataField>WithholdingTaxFormat</DataField>
+        </Field>
+        <Field Name="DividendWithholdingTax">
+          <DataField>DividendWithholdingTax</DataField>
+        </Field>
+        <Field Name="DividendWithholdingTaxFormat">
+          <DataField>DividendWithholdingTaxFormat</DataField>
+        </Field>
+        <Field Name="DividendCapitalized">
+          <DataField>DividendCapitalized</DataField>
+        </Field>
+        <Field Name="DividendCapitalizedFormat">
+          <DataField>DividendCapitalizedFormat</DataField>
+        </Field>
+        <Field Name="DividendCapitalizedNew">
+          <DataField>DividendCapitalizedNew</DataField>
+        </Field>
+        <Field Name="DividendCapitalizedNewFormat">
+          <DataField>DividendCapitalizedNewFormat</DataField>
+        </Field>
+        <Field Name="SharesDiv">
+          <DataField>SharesDiv</DataField>
+        </Field>
+        <Field Name="SharesDivFormat">
+          <DataField>SharesDivFormat</DataField>
+        </Field>
+        <Field Name="CurrentShares">
+          <DataField>CurrentShares</DataField>
+        </Field>
+        <Field Name="CurrentSharesFormat">
+          <DataField>CurrentSharesFormat</DataField>
+        </Field>
+        <Field Name="PayableDiv">
+          <DataField>PayableDiv</DataField>
+        </Field>
+        <Field Name="PayableDivFormat">
+          <DataField>PayableDivFormat</DataField>
+        </Field>
+        <Field Name="Customer__Dividend_Amount__Control1000000022">
+          <DataField>Customer__Dividend_Amount__Control1000000022</DataField>
+        </Field>
+        <Field Name="Customer__Dividend_Amount__Control1000000022Format">
+          <DataField>Customer__Dividend_Amount__Control1000000022Format</DataField>
+        </Field>
+        <Field Name="TWTax">
+          <DataField>TWTax</DataField>
+        </Field>
+        <Field Name="TWTaxFormat">
+          <DataField>TWTaxFormat</DataField>
+        </Field>
+        <Field Name="GrossDividend">
+          <DataField>GrossDividend</DataField>
+        </Field>
+        <Field Name="GrossDividendFormat">
+          <DataField>GrossDividendFormat</DataField>
+        </Field>
+        <Field Name="TPDiv">
+          <DataField>TPDiv</DataField>
+        </Field>
+        <Field Name="TPDivFormat">
+          <DataField>TPDivFormat</DataField>
+        </Field>
+        <Field Name="RetainedShares">
+          <DataField>RetainedShares</DataField>
+        </Field>
+        <Field Name="RetainedSharesFormat">
+          <DataField>RetainedSharesFormat</DataField>
+        </Field>
+        <Field Name="TSharesDiv">
+          <DataField>TSharesDiv</DataField>
+        </Field>
+        <Field Name="TSharesDivFormat">
+          <DataField>TSharesDivFormat</DataField>
+        </Field>
+        <Field Name="Dividend_Amount____TSharesDiv">
+          <DataField>Dividend_Amount____TSharesDiv</DataField>
+        </Field>
+        <Field Name="Dividend_Amount____TSharesDivFormat">
+          <DataField>Dividend_Amount____TSharesDivFormat</DataField>
+        </Field>
+        <Field Name="TDividendCapitalized">
+          <DataField>TDividendCapitalized</DataField>
+        </Field>
+        <Field Name="TDividendCapitalizedFormat">
+          <DataField>TDividendCapitalizedFormat</DataField>
+        </Field>
+        <Field Name="Dividends_RegisterCaption">
+          <DataField>Dividends_RegisterCaption</DataField>
+        </Field>
+        <Field Name="CurrReport_PAGENOCaption">
+          <DataField>CurrReport_PAGENOCaption</DataField>
+        </Field>
+        <Field Name="Customer__No__Caption">
+          <DataField>Customer__No__Caption</DataField>
+        </Field>
+        <Field Name="Customer__Payroll_Staff_No_Caption">
+          <DataField>Customer__Payroll_Staff_No_Caption</DataField>
+        </Field>
+        <Field Name="Customer_NameCaption">
+          <DataField>Customer_NameCaption</DataField>
+        </Field>
+        <Field Name="Qualifying_SharesCaption">
+          <DataField>Qualifying_SharesCaption</DataField>
+        </Field>
+        <Field Name="Gross_DividendsCaption">
+          <DataField>Gross_DividendsCaption</DataField>
+        </Field>
+        <Field Name="Withholding_TaxCaption">
+          <DataField>Withholding_TaxCaption</DataField>
+        </Field>
+        <Field Name="Dividend_CapitalizedCaption">
+          <DataField>Dividend_CapitalizedCaption</DataField>
+        </Field>
+        <Field Name="Dividends__Shares_Caption">
+          <DataField>Dividends__Shares_Caption</DataField>
+        </Field>
+        <Field Name="Dividends__Deposits_Caption">
+          <DataField>Dividends__Deposits_Caption</DataField>
+        </Field>
+        <Field Name="Dividend_PayableCaption">
+          <DataField>Dividend_PayableCaption</DataField>
+        </Field>
+        <Field Name="TotalsCaption">
+          <DataField>TotalsCaption</DataField>
+        </Field>
+        <Field Name="CommisionCharged">
+          <DataField>CommisionCharged</DataField>
+        </Field>
+        <Field Name="CommisionChargedFormat">
+          <DataField>CommisionChargedFormat</DataField>
+        </Field>
+        <Field Name="ExciseDuty">
+          <DataField>ExciseDuty</DataField>
+        </Field>
+        <Field Name="ExciseDutyFormat">
+          <DataField>ExciseDutyFormat</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

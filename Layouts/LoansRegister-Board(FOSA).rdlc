@@ -1,0 +1,308 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="FORMAT_TODAY_0_4_">
+          <DataField>FORMAT_TODAY_0_4_</DataField>
+        </Field>
+        <Field Name="COMPANYNAME">
+          <DataField>COMPANYNAME</DataField>
+        </Field>
+        <Field Name="UserId">
+          <DataField>UserId</DataField>
+        </Field>
+        <Field Name="CompanyInfoName">
+          <DataField>CompanyInfoName</DataField>
+        </Field>
+        <Field Name="CompanyInfoAddress">
+          <DataField>CompanyInfoAddress</DataField>
+        </Field>
+        <Field Name="CompanyInfoAddress2">
+          <DataField>CompanyInfoAddress2</DataField>
+        </Field>
+        <Field Name="CompanyInfoPic">
+          <DataField>CompanyInfoPic</DataField>
+        </Field>
+        <Field Name="Verified_By__________________________________________________Caption">
+          <DataField>Verified_By__________________________________________________Caption</DataField>
+        </Field>
+        <Field Name="Confirmed_By__________________________________________________Caption">
+          <DataField>Confirmed_By__________________________________________________Caption</DataField>
+        </Field>
+        <Field Name="Sign________________________Caption">
+          <DataField>Sign________________________Caption</DataField>
+        </Field>
+        <Field Name="Sign________________________Caption_Control1102755003">
+          <DataField>Sign________________________Caption_Control1102755003</DataField>
+        </Field>
+        <Field Name="Date________________________Caption">
+          <DataField>Date________________________Caption</DataField>
+        </Field>
+        <Field Name="Date________________________Caption_Control1102755005">
+          <DataField>Date________________________Caption_Control1102755005</DataField>
+        </Field>
+        <Field Name="NameCreditOff">
+          <DataField>NameCreditOff</DataField>
+        </Field>
+        <Field Name="NameCreditDate">
+          <DataField>NameCreditDate</DataField>
+        </Field>
+        <Field Name="NameCreditSign">
+          <DataField>NameCreditSign</DataField>
+        </Field>
+        <Field Name="NameCreditMNG">
+          <DataField>NameCreditMNG</DataField>
+        </Field>
+        <Field Name="NameCreditMNGDate">
+          <DataField>NameCreditMNGDate</DataField>
+        </Field>
+        <Field Name="NameCreditMNGSign">
+          <DataField>NameCreditMNGSign</DataField>
+        </Field>
+        <Field Name="NameCEO">
+          <DataField>NameCEO</DataField>
+        </Field>
+        <Field Name="NameCEOSign">
+          <DataField>NameCEOSign</DataField>
+        </Field>
+        <Field Name="NameCEODate">
+          <DataField>NameCEODate</DataField>
+        </Field>
+        <Field Name="CreditCom1">
+          <DataField>CreditCom1</DataField>
+        </Field>
+        <Field Name="CreditCom1Date">
+          <DataField>CreditCom1Date</DataField>
+        </Field>
+        <Field Name="CreditCom2">
+          <DataField>CreditCom2</DataField>
+        </Field>
+        <Field Name="CreditCom2Sign">
+          <DataField>CreditCom2Sign</DataField>
+        </Field>
+        <Field Name="CreditCom2Date">
+          <DataField>CreditCom2Date</DataField>
+        </Field>
+        <Field Name="CreditCom3">
+          <DataField>CreditCom3</DataField>
+        </Field>
+        <Field Name="CreditComDate3">
+          <DataField>CreditComDate3</DataField>
+        </Field>
+        <Field Name="CreditComSign3">
+          <DataField>CreditComSign3</DataField>
+        </Field>
+        <Field Name="AmountK">
+          <DataField>AmountK</DataField>
+        </Field>
+        <Field Name="AmountKFormat">
+          <DataField>AmountKFormat</DataField>
+        </Field>
+        <Field Name="AmountO">
+          <DataField>AmountO</DataField>
+        </Field>
+        <Field Name="AmountOFormat">
+          <DataField>AmountOFormat</DataField>
+        </Field>
+        <Field Name="AmountHS">
+          <DataField>AmountHS</DataField>
+        </Field>
+        <Field Name="AmountHSFormat">
+          <DataField>AmountHSFormat</DataField>
+        </Field>
+        <Field Name="AmountSA">
+          <DataField>AmountSA</DataField>
+        </Field>
+        <Field Name="AmountSAFormat">
+          <DataField>AmountSAFormat</DataField>
+        </Field>
+        <Field Name="AmountSp">
+          <DataField>AmountSp</DataField>
+        </Field>
+        <Field Name="AmountSpFormat">
+          <DataField>AmountSpFormat</DataField>
+        </Field>
+        <Field Name="ApprovedK">
+          <DataField>ApprovedK</DataField>
+        </Field>
+        <Field Name="ApprovedKFormat">
+          <DataField>ApprovedKFormat</DataField>
+        </Field>
+        <Field Name="ApprovedO">
+          <DataField>ApprovedO</DataField>
+        </Field>
+        <Field Name="ApprovedOFormat">
+          <DataField>ApprovedOFormat</DataField>
+        </Field>
+        <Field Name="ApprovedHS">
+          <DataField>ApprovedHS</DataField>
+        </Field>
+        <Field Name="ApprovedHSFormat">
+          <DataField>ApprovedHSFormat</DataField>
+        </Field>
+        <Field Name="ApprovedSA">
+          <DataField>ApprovedSA</DataField>
+        </Field>
+        <Field Name="ApprovedSAFormat">
+          <DataField>ApprovedSAFormat</DataField>
+        </Field>
+        <Field Name="ApprovedSP">
+          <DataField>ApprovedSP</DataField>
+        </Field>
+        <Field Name="ApprovedSPFormat">
+          <DataField>ApprovedSPFormat</DataField>
+        </Field>
+        <Field Name="NETKAR">
+          <DataField>NETKAR</DataField>
+        </Field>
+        <Field Name="NETKARFormat">
+          <DataField>NETKARFormat</DataField>
+        </Field>
+        <Field Name="NETOK">
+          <DataField>NETOK</DataField>
+        </Field>
+        <Field Name="NETOKFormat">
+          <DataField>NETOKFormat</DataField>
+        </Field>
+        <Field Name="NETHS">
+          <DataField>NETHS</DataField>
+        </Field>
+        <Field Name="NETHSFormat">
+          <DataField>NETHSFormat</DataField>
+        </Field>
+        <Field Name="NETSA">
+          <DataField>NETSA</DataField>
+        </Field>
+        <Field Name="NETSAFormat">
+          <DataField>NETSAFormat</DataField>
+        </Field>
+        <Field Name="NETSP">
+          <DataField>NETSP</DataField>
+        </Field>
+        <Field Name="NETSPFormat">
+          <DataField>NETSPFormat</DataField>
+        </Field>
+        <Field Name="netamount">
+          <DataField>netamount</DataField>
+        </Field>
+        <Field Name="netamountFormat">
+          <DataField>netamountFormat</DataField>
+        </Field>
+        <Field Name="MONTH">
+          <DataField>MONTH</DataField>
+        </Field>
+        <Field Name="Intcount">
+          <DataField>Intcount</DataField>
+        </Field>
+        <Field Name="EmpCode">
+          <DataField>EmpCode</DataField>
+        </Field>
+        <Field Name="Staff_no">
+          <DataField>Staff_no</DataField>
+        </Field>
+        <Field Name="Member_No">
+          <DataField>Member_No</DataField>
+        </Field>
+        <Field Name="Member_Name">
+          <DataField>Member_Name</DataField>
+        </Field>
+        <Field Name="Loan_Type">
+          <DataField>Loan_Type</DataField>
+        </Field>
+        <Field Name="Loan_No">
+          <DataField>Loan_No</DataField>
+        </Field>
+        <Field Name="Cheque_No">
+          <DataField>Cheque_No</DataField>
+        </Field>
+        <Field Name="Requested_Amount">
+          <DataField>Requested_Amount</DataField>
+        </Field>
+        <Field Name="Requested_AmountFormat">
+          <DataField>Requested_AmountFormat</DataField>
+        </Field>
+        <Field Name="Approved_Amount">
+          <DataField>Approved_Amount</DataField>
+        </Field>
+        <Field Name="Approved_AmountFormat">
+          <DataField>Approved_AmountFormat</DataField>
+        </Field>
+        <Field Name="Top_Up_Amount">
+          <DataField>Top_Up_Amount</DataField>
+        </Field>
+        <Field Name="Top_Up_AmountFormat">
+          <DataField>Top_Up_AmountFormat</DataField>
+        </Field>
+        <Field Name="Installments">
+          <DataField>Installments</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

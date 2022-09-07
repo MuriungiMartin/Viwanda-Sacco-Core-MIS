@@ -1,0 +1,346 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <ReportParameters>
+    <ReportParameter Name="PhNo_BankAccountCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>PhNo_BankAccountCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>PhNo_BankAccountCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="CurrencyCode_BankAccountCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>CurrencyCode_BankAccountCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>CurrencyCode_BankAccountCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="DocType_BankAccLedgCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>DocType_BankAccLedgCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>DocType_BankAccLedgCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="DocNo_BankAccLedgCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>DocNo_BankAccLedgCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>DocNo_BankAccLedgCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="Desc_BankAccLedgCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>Desc_BankAccLedgCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Desc_BankAccLedgCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="RemaningAmt_BankAccLedgCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>RemaningAmt_BankAccLedgCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>RemaningAmt_BankAccLedgCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="EntryNo_BankAccLedgCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>EntryNo_BankAccLedgCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>EntryNo_BankAccLedgCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="Amount_BankAccLedgCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>Amount_BankAccLedgCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Amount_BankAccLedgCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="EntryAmtLcy_BankAccLedgCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>EntryAmtLcy_BankAccLedgCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>EntryAmtLcy_BankAccLedgCaption</Prompt>
+    </ReportParameter>
+  </ReportParameters>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="ReportForNavId_4558">
+          <DataField>ReportForNavId_4558</DataField>
+        </Field>
+        <Field Name="FilterPeriod_BankAccLedg">
+          <DataField>FilterPeriod_BankAccLedg</DataField>
+        </Field>
+        <Field Name="CompanyName">
+          <DataField>CompanyName</DataField>
+        </Field>
+        <Field Name="ExcludeBalanceOnly">
+          <DataField>ExcludeBalanceOnly</DataField>
+        </Field>
+        <Field Name="BankAccFilter">
+          <DataField>BankAccFilter</DataField>
+        </Field>
+        <Field Name="StartBalanceLCY">
+          <DataField>StartBalanceLCY</DataField>
+        </Field>
+        <Field Name="StartBalanceLCYFormat">
+          <DataField>StartBalanceLCYFormat</DataField>
+        </Field>
+        <Field Name="StartBalance">
+          <DataField>StartBalance</DataField>
+        </Field>
+        <Field Name="StartBalanceFormat">
+          <DataField>StartBalanceFormat</DataField>
+        </Field>
+        <Field Name="PrintOnlyOnePerPage">
+          <DataField>PrintOnlyOnePerPage</DataField>
+        </Field>
+        <Field Name="ReportFilter">
+          <DataField>ReportFilter</DataField>
+        </Field>
+        <Field Name="No_BankAccount">
+          <DataField>No_BankAccount</DataField>
+        </Field>
+        <Field Name="Name_BankAccount">
+          <DataField>Name_BankAccount</DataField>
+        </Field>
+        <Field Name="PhNo_BankAccount">
+          <DataField>PhNo_BankAccount</DataField>
+        </Field>
+        <Field Name="CurrencyCode_BankAccount">
+          <DataField>CurrencyCode_BankAccount</DataField>
+        </Field>
+        <Field Name="StartBalance2">
+          <DataField>StartBalance2</DataField>
+        </Field>
+        <Field Name="StartBalance2Format">
+          <DataField>StartBalance2Format</DataField>
+        </Field>
+        <Field Name="BankAccDetailTrialBalCap">
+          <DataField>BankAccDetailTrialBalCap</DataField>
+        </Field>
+        <Field Name="CurrReportPageNoCaption">
+          <DataField>CurrReportPageNoCaption</DataField>
+        </Field>
+        <Field Name="RepInclBankAcchavingBal">
+          <DataField>RepInclBankAcchavingBal</DataField>
+        </Field>
+        <Field Name="BankAccLedgPostingDateCaption">
+          <DataField>BankAccLedgPostingDateCaption</DataField>
+        </Field>
+        <Field Name="BankAccBalanceCaption">
+          <DataField>BankAccBalanceCaption</DataField>
+        </Field>
+        <Field Name="OpenFormatCaption">
+          <DataField>OpenFormatCaption</DataField>
+        </Field>
+        <Field Name="BankAccBalanceLCYCaption">
+          <DataField>BankAccBalanceLCYCaption</DataField>
+        </Field>
+        <Field Name="ReportForNavId_4920">
+          <DataField>ReportForNavId_4920</DataField>
+        </Field>
+        <Field Name="PostingDate_BankAccLedg">
+          <DataField>PostingDate_BankAccLedg</DataField>
+        </Field>
+        <Field Name="DocType_BankAccLedg">
+          <DataField>DocType_BankAccLedg</DataField>
+        </Field>
+        <Field Name="DocNo_BankAccLedg">
+          <DataField>DocNo_BankAccLedg</DataField>
+        </Field>
+        <Field Name="Desc_BankAccLedg">
+          <DataField>Desc_BankAccLedg</DataField>
+        </Field>
+        <Field Name="BankAccBalance">
+          <DataField>BankAccBalance</DataField>
+        </Field>
+        <Field Name="BankAccBalanceFormat">
+          <DataField>BankAccBalanceFormat</DataField>
+        </Field>
+        <Field Name="RemaningAmt_BankAccLedg">
+          <DataField>RemaningAmt_BankAccLedg</DataField>
+        </Field>
+        <Field Name="RemaningAmt_BankAccLedgFormat">
+          <DataField>RemaningAmt_BankAccLedgFormat</DataField>
+        </Field>
+        <Field Name="EntryNo_BankAccLedg">
+          <DataField>EntryNo_BankAccLedg</DataField>
+        </Field>
+        <Field Name="OpenFormat">
+          <DataField>OpenFormat</DataField>
+        </Field>
+        <Field Name="Amount_BankAccLedg">
+          <DataField>Amount_BankAccLedg</DataField>
+        </Field>
+        <Field Name="Amount_BankAccLedgFormat">
+          <DataField>Amount_BankAccLedgFormat</DataField>
+        </Field>
+        <Field Name="EntryAmtLcy_BankAccLedg">
+          <DataField>EntryAmtLcy_BankAccLedg</DataField>
+        </Field>
+        <Field Name="EntryAmtLcy_BankAccLedgFormat">
+          <DataField>EntryAmtLcy_BankAccLedgFormat</DataField>
+        </Field>
+        <Field Name="BankAccBalanceLCY">
+          <DataField>BankAccBalanceLCY</DataField>
+        </Field>
+        <Field Name="BankAccBalanceLCYFormat">
+          <DataField>BankAccBalanceLCYFormat</DataField>
+        </Field>
+        <Field Name="ContinuedCaption">
+          <DataField>ContinuedCaption</DataField>
+        </Field>
+        <Field Name="DebitAmount_BankAccountLedgerEntry">
+          <DataField>DebitAmount_BankAccountLedgerEntry</DataField>
+        </Field>
+        <Field Name="DebitAmount_BankAccountLedgerEntryFormat">
+          <DataField>DebitAmount_BankAccountLedgerEntryFormat</DataField>
+        </Field>
+        <Field Name="CreditAmount_BankAccountLedgerEntry">
+          <DataField>CreditAmount_BankAccountLedgerEntry</DataField>
+        </Field>
+        <Field Name="CreditAmount_BankAccountLedgerEntryFormat">
+          <DataField>CreditAmount_BankAccountLedgerEntryFormat</DataField>
+        </Field>
+        <Field Name="ReportForNavId_5444">
+          <DataField>ReportForNavId_5444</DataField>
+        </Field>
+        <Field Name="StartBalanceLCY2">
+          <DataField>StartBalanceLCY2</DataField>
+        </Field>
+        <Field Name="StartBalanceLCY2Format">
+          <DataField>StartBalanceLCY2Format</DataField>
+        </Field>
+        <Field Name="ReportForNavId_1000000021">
+          <DataField>ReportForNavId_1000000021</DataField>
+        </Field>
+        <Field Name="DocumentNo">
+          <DataField>DocumentNo</DataField>
+        </Field>
+        <Field Name="AccountNo">
+          <DataField>AccountNo</DataField>
+        </Field>
+        <Field Name="AccountName">
+          <DataField>AccountName</DataField>
+        </Field>
+        <Field Name="ChequeType">
+          <DataField>ChequeType</DataField>
+        </Field>
+        <Field Name="ChequeNo">
+          <DataField>ChequeNo</DataField>
+        </Field>
+        <Field Name="ChequeDate">
+          <DataField>ChequeDate</DataField>
+        </Field>
+        <Field Name="MaturityDate">
+          <DataField>MaturityDate</DataField>
+        </Field>
+        <Field Name="Amount">
+          <DataField>Amount</DataField>
+        </Field>
+        <Field Name="AmountFormat">
+          <DataField>AmountFormat</DataField>
+        </Field>
+        <Field Name="TransactionDate_Transactions">
+          <DataField>TransactionDate_Transactions</DataField>
+        </Field>
+        <Field Name="Payee_Transactions">
+          <DataField>Payee_Transactions</DataField>
+        </Field>
+        <Field Name="TypeTransactions_Transactions">
+          <DataField>TypeTransactions_Transactions</DataField>
+        </Field>
+        <Field Name="Description_Transactions">
+          <DataField>Description_Transactions</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

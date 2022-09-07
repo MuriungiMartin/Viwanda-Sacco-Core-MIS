@@ -1,0 +1,284 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="No_TreasuryTransactions">
+          <DataField>No_TreasuryTransactions</DataField>
+        </Field>
+        <Field Name="TransactionDate_TreasuryTransactions">
+          <DataField>TransactionDate_TreasuryTransactions</DataField>
+        </Field>
+        <Field Name="TransactionType_TreasuryTransactions">
+          <DataField>TransactionType_TreasuryTransactions</DataField>
+        </Field>
+        <Field Name="ToAccountName_TreasuryTransactions">
+          <DataField>ToAccountName_TreasuryTransactions</DataField>
+        </Field>
+        <Field Name="TInterTeller">
+          <DataField>TInterTeller</DataField>
+        </Field>
+        <Field Name="TInterTellerFormat">
+          <DataField>TInterTellerFormat</DataField>
+        </Field>
+        <Field Name="TCashDeposit">
+          <DataField>TCashDeposit</DataField>
+        </Field>
+        <Field Name="TCashDepositFormat">
+          <DataField>TCashDepositFormat</DataField>
+        </Field>
+        <Field Name="TCashWithdrawals">
+          <DataField>TCashWithdrawals</DataField>
+        </Field>
+        <Field Name="TCashWithdrawalsFormat">
+          <DataField>TCashWithdrawalsFormat</DataField>
+        </Field>
+        <Field Name="TissuetoTeller">
+          <DataField>TissuetoTeller</DataField>
+        </Field>
+        <Field Name="TissuetoTellerFormat">
+          <DataField>TissuetoTellerFormat</DataField>
+        </Field>
+        <Field Name="TotalReceipts">
+          <DataField>TotalReceipts</DataField>
+        </Field>
+        <Field Name="TotalReceiptsFormat">
+          <DataField>TotalReceiptsFormat</DataField>
+        </Field>
+        <Field Name="TotalAmountReceived">
+          <DataField>TotalAmountReceived</DataField>
+        </Field>
+        <Field Name="TotalAmountReceivedFormat">
+          <DataField>TotalAmountReceivedFormat</DataField>
+        </Field>
+        <Field Name="TotalPayment">
+          <DataField>TotalPayment</DataField>
+        </Field>
+        <Field Name="TotalPaymentFormat">
+          <DataField>TotalPaymentFormat</DataField>
+        </Field>
+        <Field Name="ActualCashAtHand_TreasuryTransactions">
+          <DataField>ActualCashAtHand_TreasuryTransactions</DataField>
+        </Field>
+        <Field Name="ActualCashAtHand_TreasuryTransactionsFormat">
+          <DataField>ActualCashAtHand_TreasuryTransactionsFormat</DataField>
+        </Field>
+        <Field Name="FromAccountName_TreasuryTransactions">
+          <DataField>FromAccountName_TreasuryTransactions</DataField>
+        </Field>
+        <Field Name="FromAccount_TreasuryTransactions">
+          <DataField>FromAccount_TreasuryTransactions</DataField>
+        </Field>
+        <Field Name="ToAccount_TreasuryTransactions">
+          <DataField>ToAccount_TreasuryTransactions</DataField>
+        </Field>
+        <Field Name="Description_TreasuryTransactions">
+          <DataField>Description_TreasuryTransactions</DataField>
+        </Field>
+        <Field Name="Amount_TreasuryTransactions">
+          <DataField>Amount_TreasuryTransactions</DataField>
+        </Field>
+        <Field Name="Amount_TreasuryTransactionsFormat">
+          <DataField>Amount_TreasuryTransactionsFormat</DataField>
+        </Field>
+        <Field Name="Posted_TreasuryTransactions">
+          <DataField>Posted_TreasuryTransactions</DataField>
+        </Field>
+        <Field Name="DatePosted_TreasuryTransactions">
+          <DataField>DatePosted_TreasuryTransactions</DataField>
+        </Field>
+        <Field Name="TimePosted_TreasuryTransactions">
+          <DataField>TimePosted_TreasuryTransactions</DataField>
+        </Field>
+        <Field Name="PostedBy_TreasuryTransactions">
+          <DataField>PostedBy_TreasuryTransactions</DataField>
+        </Field>
+        <Field Name="NoSeries_TreasuryTransactions">
+          <DataField>NoSeries_TreasuryTransactions</DataField>
+        </Field>
+        <Field Name="TransactionTime_TreasuryTransactions">
+          <DataField>TransactionTime_TreasuryTransactions</DataField>
+        </Field>
+        <Field Name="CoinageAmount_TreasuryTransactions">
+          <DataField>CoinageAmount_TreasuryTransactions</DataField>
+        </Field>
+        <Field Name="CoinageAmount_TreasuryTransactionsFormat">
+          <DataField>CoinageAmount_TreasuryTransactionsFormat</DataField>
+        </Field>
+        <Field Name="CurrencyCode_TreasuryTransactions">
+          <DataField>CurrencyCode_TreasuryTransactions</DataField>
+        </Field>
+        <Field Name="Issued_TreasuryTransactions">
+          <DataField>Issued_TreasuryTransactions</DataField>
+        </Field>
+        <Field Name="DateIssued_TreasuryTransactions">
+          <DataField>DateIssued_TreasuryTransactions</DataField>
+        </Field>
+        <Field Name="TimeIssued_TreasuryTransactions">
+          <DataField>TimeIssued_TreasuryTransactions</DataField>
+        </Field>
+        <Field Name="IssueReceived_TreasuryTransactions">
+          <DataField>IssueReceived_TreasuryTransactions</DataField>
+        </Field>
+        <Field Name="DateReceived_TreasuryTransactions">
+          <DataField>DateReceived_TreasuryTransactions</DataField>
+        </Field>
+        <Field Name="TimeReceived_TreasuryTransactions">
+          <DataField>TimeReceived_TreasuryTransactions</DataField>
+        </Field>
+        <Field Name="IssuedBy_TreasuryTransactions">
+          <DataField>IssuedBy_TreasuryTransactions</DataField>
+        </Field>
+        <Field Name="ReceivedBy_TreasuryTransactions">
+          <DataField>ReceivedBy_TreasuryTransactions</DataField>
+        </Field>
+        <Field Name="Received_TreasuryTransactions">
+          <DataField>Received_TreasuryTransactions</DataField>
+        </Field>
+        <Field Name="RequestNo_TreasuryTransactions">
+          <DataField>RequestNo_TreasuryTransactions</DataField>
+        </Field>
+        <Field Name="BankNo_TreasuryTransactions">
+          <DataField>BankNo_TreasuryTransactions</DataField>
+        </Field>
+        <Field Name="DenominationTotal_TreasuryTransactions">
+          <DataField>DenominationTotal_TreasuryTransactions</DataField>
+        </Field>
+        <Field Name="DenominationTotal_TreasuryTransactionsFormat">
+          <DataField>DenominationTotal_TreasuryTransactionsFormat</DataField>
+        </Field>
+        <Field Name="ExternalDocumentNo_TreasuryTransactions">
+          <DataField>ExternalDocumentNo_TreasuryTransactions</DataField>
+        </Field>
+        <Field Name="ChequeNo_TreasuryTransactions">
+          <DataField>ChequeNo_TreasuryTransactions</DataField>
+        </Field>
+        <Field Name="TransactingBranch_TreasuryTransactions">
+          <DataField>TransactingBranch_TreasuryTransactions</DataField>
+        </Field>
+        <Field Name="Approved_TreasuryTransactions">
+          <DataField>Approved_TreasuryTransactions</DataField>
+        </Field>
+        <Field Name="EndofDayTransTime_TreasuryTransactions">
+          <DataField>EndofDayTransTime_TreasuryTransactions</DataField>
+        </Field>
+        <Field Name="EndofDay_TreasuryTransactions">
+          <DataField>EndofDay_TreasuryTransactions</DataField>
+        </Field>
+        <Field Name="LastTransaction_TreasuryTransactions">
+          <DataField>LastTransaction_TreasuryTransactions</DataField>
+        </Field>
+        <Field Name="TotalCashonTreasuryCoinage_TreasuryTransactions">
+          <DataField>TotalCashonTreasuryCoinage_TreasuryTransactions</DataField>
+        </Field>
+        <Field Name="TotalCashonTreasuryCoinage_TreasuryTransactionsFormat">
+          <DataField>TotalCashonTreasuryCoinage_TreasuryTransactionsFormat</DataField>
+        </Field>
+        <Field Name="TillTreasuryBalance_TreasuryTransactions">
+          <DataField>TillTreasuryBalance_TreasuryTransactions</DataField>
+        </Field>
+        <Field Name="TillTreasuryBalance_TreasuryTransactionsFormat">
+          <DataField>TillTreasuryBalance_TreasuryTransactionsFormat</DataField>
+        </Field>
+        <Field Name="ExcessShortageAmount_TreasuryTransactions">
+          <DataField>ExcessShortageAmount_TreasuryTransactions</DataField>
+        </Field>
+        <Field Name="ExcessShortageAmount_TreasuryTransactionsFormat">
+          <DataField>ExcessShortageAmount_TreasuryTransactionsFormat</DataField>
+        </Field>
+        <Field Name="No_TreasuryCoinage">
+          <DataField>No_TreasuryCoinage</DataField>
+        </Field>
+        <Field Name="Code_TreasuryCoinage">
+          <DataField>Code_TreasuryCoinage</DataField>
+        </Field>
+        <Field Name="Description_TreasuryCoinage">
+          <DataField>Description_TreasuryCoinage</DataField>
+        </Field>
+        <Field Name="Type_TreasuryCoinage">
+          <DataField>Type_TreasuryCoinage</DataField>
+        </Field>
+        <Field Name="Value_TreasuryCoinage">
+          <DataField>Value_TreasuryCoinage</DataField>
+        </Field>
+        <Field Name="Value_TreasuryCoinageFormat">
+          <DataField>Value_TreasuryCoinageFormat</DataField>
+        </Field>
+        <Field Name="Quantity_TreasuryCoinage">
+          <DataField>Quantity_TreasuryCoinage</DataField>
+        </Field>
+        <Field Name="TotalAmount_TreasuryCoinage">
+          <DataField>TotalAmount_TreasuryCoinage</DataField>
+        </Field>
+        <Field Name="TotalAmount_TreasuryCoinageFormat">
+          <DataField>TotalAmount_TreasuryCoinageFormat</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

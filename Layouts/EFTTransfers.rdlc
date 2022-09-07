@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="No_EFTHeaderDetails">
+          <DataField>No_EFTHeaderDetails</DataField>
+        </Field>
+        <Field Name="NoSeries_EFTHeaderDetails">
+          <DataField>NoSeries_EFTHeaderDetails</DataField>
+        </Field>
+        <Field Name="Transferred_EFTHeaderDetails">
+          <DataField>Transferred_EFTHeaderDetails</DataField>
+        </Field>
+        <Field Name="DateTransferred_EFTHeaderDetails">
+          <DataField>DateTransferred_EFTHeaderDetails</DataField>
+        </Field>
+        <Field Name="TimeTransferred_EFTHeaderDetails">
+          <DataField>TimeTransferred_EFTHeaderDetails</DataField>
+        </Field>
+        <Field Name="TransferredBy_EFTHeaderDetails">
+          <DataField>TransferredBy_EFTHeaderDetails</DataField>
+        </Field>
+        <Field Name="DateEntered_EFTHeaderDetails">
+          <DataField>DateEntered_EFTHeaderDetails</DataField>
+        </Field>
+        <Field Name="TimeEntered_EFTHeaderDetails">
+          <DataField>TimeEntered_EFTHeaderDetails</DataField>
+        </Field>
+        <Field Name="EnteredBy_EFTHeaderDetails">
+          <DataField>EnteredBy_EFTHeaderDetails</DataField>
+        </Field>
+        <Field Name="Remarks_EFTHeaderDetails">
+          <DataField>Remarks_EFTHeaderDetails</DataField>
+        </Field>
+        <Field Name="PayeeBankName_EFTHeaderDetails">
+          <DataField>PayeeBankName_EFTHeaderDetails</DataField>
+        </Field>
+        <Field Name="BankNo_EFTHeaderDetails">
+          <DataField>BankNo_EFTHeaderDetails</DataField>
+        </Field>
+        <Field Name="SalaryProcessingNo_EFTHeaderDetails">
+          <DataField>SalaryProcessingNo_EFTHeaderDetails</DataField>
+        </Field>
+        <Field Name="SalaryOptions_EFTHeaderDetails">
+          <DataField>SalaryOptions_EFTHeaderDetails</DataField>
+        </Field>
+        <Field Name="Total_EFTHeaderDetails">
+          <DataField>Total_EFTHeaderDetails</DataField>
+        </Field>
+        <Field Name="Total_EFTHeaderDetailsFormat">
+          <DataField>Total_EFTHeaderDetailsFormat</DataField>
+        </Field>
+        <Field Name="TotalCount_EFTHeaderDetails">
+          <DataField>TotalCount_EFTHeaderDetails</DataField>
+        </Field>
+        <Field Name="RTGS_EFTHeaderDetails">
+          <DataField>RTGS_EFTHeaderDetails</DataField>
+        </Field>
+        <Field Name="DocumentNoFilter_EFTHeaderDetails">
+          <DataField>DocumentNoFilter_EFTHeaderDetails</DataField>
+        </Field>
+        <Field Name="DateFilter_EFTHeaderDetails">
+          <DataField>DateFilter_EFTHeaderDetails</DataField>
+        </Field>
+        <Field Name="Bank_EFTHeaderDetails">
+          <DataField>Bank_EFTHeaderDetails</DataField>
+        </Field>
+        <Field Name="DateEntered_EFTDetails">
+          <DataField>DateEntered_EFTDetails</DataField>
+        </Field>
+        <Field Name="TimeEntered_EFTDetails">
+          <DataField>TimeEntered_EFTDetails</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Name">
+          <DataField>CompanyInfo_Name</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Picture">
+          <DataField>CompanyInfo_Picture</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Address">
+          <DataField>CompanyInfo_Address</DataField>
+        </Field>
+        <Field Name="No_EFTDetails">
+          <DataField>No_EFTDetails</DataField>
+        </Field>
+        <Field Name="DateTransferred_EFTDetails">
+          <DataField>DateTransferred_EFTDetails</DataField>
+        </Field>
+        <Field Name="TimeTransferred_EFTDetails">
+          <DataField>TimeTransferred_EFTDetails</DataField>
+        </Field>
+        <Field Name="DestinationAccountNo_EFTDetails">
+          <DataField>DestinationAccountNo_EFTDetails</DataField>
+        </Field>
+        <Field Name="DestinationAccountName_EFTDetails">
+          <DataField>DestinationAccountName_EFTDetails</DataField>
+        </Field>
+        <Field Name="DestinationAccountType_EFTDetails">
+          <DataField>DestinationAccountType_EFTDetails</DataField>
+        </Field>
+        <Field Name="AccountNo_EFTDetails">
+          <DataField>AccountNo_EFTDetails</DataField>
+        </Field>
+        <Field Name="AccountName_EFTDetails">
+          <DataField>AccountName_EFTDetails</DataField>
+        </Field>
+        <Field Name="AccountType_EFTDetails">
+          <DataField>AccountType_EFTDetails</DataField>
+        </Field>
+        <Field Name="Amount_EFTDetails">
+          <DataField>Amount_EFTDetails</DataField>
+        </Field>
+        <Field Name="Amount_EFTDetailsFormat">
+          <DataField>Amount_EFTDetailsFormat</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

@@ -1,0 +1,284 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="ReportForNavId_1">
+          <DataField>ReportForNavId_1</DataField>
+        </Field>
+        <Field Name="COMPANYNAME">
+          <DataField>COMPANYNAME</DataField>
+        </Field>
+        <Field Name="AsAt">
+          <DataField>AsAt</DataField>
+        </Field>
+        <Field Name="LoanCount">
+          <DataField>LoanCount</DataField>
+        </Field>
+        <Field Name="LoanCountSubstandard">
+          <DataField>LoanCountSubstandard</DataField>
+        </Field>
+        <Field Name="LoanCountDoubtful">
+          <DataField>LoanCountDoubtful</DataField>
+        </Field>
+        <Field Name="LoanCountWatch">
+          <DataField>LoanCountWatch</DataField>
+        </Field>
+        <Field Name="LoanCountLoss">
+          <DataField>LoanCountLoss</DataField>
+        </Field>
+        <Field Name="OutstandingLoanPer">
+          <DataField>OutstandingLoanPer</DataField>
+        </Field>
+        <Field Name="OutstandingLoanPerFormat">
+          <DataField>OutstandingLoanPerFormat</DataField>
+        </Field>
+        <Field Name="OutstandingLoanwatch">
+          <DataField>OutstandingLoanwatch</DataField>
+        </Field>
+        <Field Name="OutstandingLoanwatchFormat">
+          <DataField>OutstandingLoanwatchFormat</DataField>
+        </Field>
+        <Field Name="OutstandingLoandoubtful">
+          <DataField>OutstandingLoandoubtful</DataField>
+        </Field>
+        <Field Name="OutstandingLoandoubtfulFormat">
+          <DataField>OutstandingLoandoubtfulFormat</DataField>
+        </Field>
+        <Field Name="OutstandingLoanSub">
+          <DataField>OutstandingLoanSub</DataField>
+        </Field>
+        <Field Name="OutstandingLoanSubFormat">
+          <DataField>OutstandingLoanSubFormat</DataField>
+        </Field>
+        <Field Name="OutstandingLoanloss">
+          <DataField>OutstandingLoanloss</DataField>
+        </Field>
+        <Field Name="OutstandingLoanlossFormat">
+          <DataField>OutstandingLoanlossFormat</DataField>
+        </Field>
+        <Field Name="LoanCountResch">
+          <DataField>LoanCountResch</DataField>
+        </Field>
+        <Field Name="OutstandingLoanPerResc">
+          <DataField>OutstandingLoanPerResc</DataField>
+        </Field>
+        <Field Name="OutstandingLoanPerRescFormat">
+          <DataField>OutstandingLoanPerRescFormat</DataField>
+        </Field>
+        <Field Name="LoanCountWatchResc">
+          <DataField>LoanCountWatchResc</DataField>
+        </Field>
+        <Field Name="OutstandingLoanwatchResc">
+          <DataField>OutstandingLoanwatchResc</DataField>
+        </Field>
+        <Field Name="OutstandingLoanwatchRescFormat">
+          <DataField>OutstandingLoanwatchRescFormat</DataField>
+        </Field>
+        <Field Name="LoanCountDoubtfulResc">
+          <DataField>LoanCountDoubtfulResc</DataField>
+        </Field>
+        <Field Name="OutstandingLoandoubtfulResc">
+          <DataField>OutstandingLoandoubtfulResc</DataField>
+        </Field>
+        <Field Name="OutstandingLoandoubtfulRescFormat">
+          <DataField>OutstandingLoandoubtfulRescFormat</DataField>
+        </Field>
+        <Field Name="LoanCountSubstandardResc">
+          <DataField>LoanCountSubstandardResc</DataField>
+        </Field>
+        <Field Name="OutstandingLoanSubResc">
+          <DataField>OutstandingLoanSubResc</DataField>
+        </Field>
+        <Field Name="OutstandingLoanSubRescFormat">
+          <DataField>OutstandingLoanSubRescFormat</DataField>
+        </Field>
+        <Field Name="LoanCountLossRec">
+          <DataField>LoanCountLossRec</DataField>
+        </Field>
+        <Field Name="OutstandingLoanlossResc">
+          <DataField>OutstandingLoanlossResc</DataField>
+        </Field>
+        <Field Name="OutstandingLoanlossRescFormat">
+          <DataField>OutstandingLoanlossRescFormat</DataField>
+        </Field>
+        <Field Name="ClassifiedNonRescheduledper">
+          <DataField>ClassifiedNonRescheduledper</DataField>
+        </Field>
+        <Field Name="ClassifiedNonRescheduledperFormat">
+          <DataField>ClassifiedNonRescheduledperFormat</DataField>
+        </Field>
+        <Field Name="ClassifiedNonRescheduledDoubtful">
+          <DataField>ClassifiedNonRescheduledDoubtful</DataField>
+        </Field>
+        <Field Name="ClassifiedNonRescheduledDoubtfulFormat">
+          <DataField>ClassifiedNonRescheduledDoubtfulFormat</DataField>
+        </Field>
+        <Field Name="ClassifiedNonRescheduledLoss">
+          <DataField>ClassifiedNonRescheduledLoss</DataField>
+        </Field>
+        <Field Name="ClassifiedNonRescheduledLossFormat">
+          <DataField>ClassifiedNonRescheduledLossFormat</DataField>
+        </Field>
+        <Field Name="ClassifiedNonRescheduledsubstandard">
+          <DataField>ClassifiedNonRescheduledsubstandard</DataField>
+        </Field>
+        <Field Name="ClassifiedNonRescheduledsubstandardFormat">
+          <DataField>ClassifiedNonRescheduledsubstandardFormat</DataField>
+        </Field>
+        <Field Name="ClassifiedNonRescheduledWatch">
+          <DataField>ClassifiedNonRescheduledWatch</DataField>
+        </Field>
+        <Field Name="ClassifiedNonRescheduledWatchFormat">
+          <DataField>ClassifiedNonRescheduledWatchFormat</DataField>
+        </Field>
+        <Field Name="ClassifiedRescheduledLoss">
+          <DataField>ClassifiedRescheduledLoss</DataField>
+        </Field>
+        <Field Name="ClassifiedRescheduledLossFormat">
+          <DataField>ClassifiedRescheduledLossFormat</DataField>
+        </Field>
+        <Field Name="ClassifiedRescheduledPer">
+          <DataField>ClassifiedRescheduledPer</DataField>
+        </Field>
+        <Field Name="ClassifiedRescheduledPerFormat">
+          <DataField>ClassifiedRescheduledPerFormat</DataField>
+        </Field>
+        <Field Name="ClassifiedRescheduledSubstandard">
+          <DataField>ClassifiedRescheduledSubstandard</DataField>
+        </Field>
+        <Field Name="ClassifiedRescheduledSubstandardFormat">
+          <DataField>ClassifiedRescheduledSubstandardFormat</DataField>
+        </Field>
+        <Field Name="ClassifiedRescheduledWatch">
+          <DataField>ClassifiedRescheduledWatch</DataField>
+        </Field>
+        <Field Name="ClassifiedRescheduledWatchFormat">
+          <DataField>ClassifiedRescheduledWatchFormat</DataField>
+        </Field>
+        <Field Name="ClassifiedRescheduledDoubtful">
+          <DataField>ClassifiedRescheduledDoubtful</DataField>
+        </Field>
+        <Field Name="ClassifiedRescheduledDoubtfulFormat">
+          <DataField>ClassifiedRescheduledDoubtfulFormat</DataField>
+        </Field>
+        <Field Name="subtotal">
+          <DataField>subtotal</DataField>
+        </Field>
+        <Field Name="subtotalFormat">
+          <DataField>subtotalFormat</DataField>
+        </Field>
+        <Field Name="TotalClassffiedRecheduled">
+          <DataField>TotalClassffiedRecheduled</DataField>
+        </Field>
+        <Field Name="TotalClassffiedRecheduledFormat">
+          <DataField>TotalClassffiedRecheduledFormat</DataField>
+        </Field>
+        <Field Name="TotalClassffied">
+          <DataField>TotalClassffied</DataField>
+        </Field>
+        <Field Name="TotalClassffiedFormat">
+          <DataField>TotalClassffiedFormat</DataField>
+        </Field>
+        <Field Name="subtotalRescheduled">
+          <DataField>subtotalRescheduled</DataField>
+        </Field>
+        <Field Name="subtotalRescheduledFormat">
+          <DataField>subtotalRescheduledFormat</DataField>
+        </Field>
+        <Field Name="Subtotalcount">
+          <DataField>Subtotalcount</DataField>
+        </Field>
+        <Field Name="SubtotalcountResc">
+          <DataField>SubtotalcountResc</DataField>
+        </Field>
+        <Field Name="GRANDTOTAL">
+          <DataField>GRANDTOTAL</DataField>
+        </Field>
+        <Field Name="GRANDTOTALFormat">
+          <DataField>GRANDTOTALFormat</DataField>
+        </Field>
+        <Field Name="GRANDTOTALCOUNT">
+          <DataField>GRANDTOTALCOUNT</DataField>
+        </Field>
+        <Field Name="GRANDTOTALCLASSIF">
+          <DataField>GRANDTOTALCLASSIF</DataField>
+        </Field>
+        <Field Name="GRANDTOTALCLASSIFFormat">
+          <DataField>GRANDTOTALCLASSIFFormat</DataField>
+        </Field>
+        <Field Name="YearBeginDate">
+          <DataField>YearBeginDate</DataField>
+        </Field>
+        <Field Name="FinancialYear">
+          <DataField>FinancialYear</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

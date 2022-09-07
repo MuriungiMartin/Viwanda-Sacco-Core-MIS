@@ -1,0 +1,394 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <ReportParameters>
+    <ReportParameter Name="CI_NameCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>CI_NameCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>CI_NameCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="CI_AddressCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>CI_AddressCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>CI_AddressCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="CI_Address2Caption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>CI_Address2Caption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>CI_Address2Caption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="CI_PhoneNoCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>CI_PhoneNoCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>CI_PhoneNoCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="CI_PictureCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>CI_PictureCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>CI_PictureCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="CI_CityCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>CI_CityCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>CI_CityCaption</Prompt>
+    </ReportParameter>
+  </ReportParameters>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="ReportForNavId_6437">
+          <DataField>ReportForNavId_6437</DataField>
+        </Field>
+        <Field Name="CI_Name">
+          <DataField>CI_Name</DataField>
+        </Field>
+        <Field Name="CI_Address">
+          <DataField>CI_Address</DataField>
+        </Field>
+        <Field Name="CI_Address2">
+          <DataField>CI_Address2</DataField>
+        </Field>
+        <Field Name="CI_PhoneNo">
+          <DataField>CI_PhoneNo</DataField>
+        </Field>
+        <Field Name="CI_Picture">
+          <DataField>CI_Picture</DataField>
+        </Field>
+        <Field Name="CI_City">
+          <DataField>CI_City</DataField>
+        </Field>
+        <Field Name="DOCNAME">
+          <DataField>DOCNAME</DataField>
+        </Field>
+        <Field Name="VarApproverI">
+          <DataField>VarApproverI</DataField>
+        </Field>
+        <Field Name="VarApproverIDate">
+          <DataField>VarApproverIDate</DataField>
+        </Field>
+        <Field Name="VarApproverII">
+          <DataField>VarApproverII</DataField>
+        </Field>
+        <Field Name="VarApproverIIDate">
+          <DataField>VarApproverIIDate</DataField>
+        </Field>
+        <Field Name="UserId">
+          <DataField>UserId</DataField>
+        </Field>
+        <Field Name="NumberText_1_">
+          <DataField>NumberText_1_</DataField>
+        </Field>
+        <Field Name="TTotal">
+          <DataField>TTotal</DataField>
+        </Field>
+        <Field Name="TTotalFormat">
+          <DataField>TTotalFormat</DataField>
+        </Field>
+        <Field Name="TIME_PRINTED_____FORMAT_TIME_">
+          <DataField>TIME_PRINTED_____FORMAT_TIME_</DataField>
+        </Field>
+        <Field Name="DATE_PRINTED_____FORMAT_TODAY_0_4_">
+          <DataField>DATE_PRINTED_____FORMAT_TODAY_0_4_</DataField>
+        </Field>
+        <Field Name="CurrCode_Control1102756010">
+          <DataField>CurrCode_Control1102756010</DataField>
+        </Field>
+        <Field Name="CurrCode_Control1102756012">
+          <DataField>CurrCode_Control1102756012</DataField>
+        </Field>
+        <Field Name="Approved_">
+          <DataField>Approved_</DataField>
+        </Field>
+        <Field Name="Approval_Status_____">
+          <DataField>Approval_Status_____</DataField>
+        </Field>
+        <Field Name="TIME_PRINTED_____FORMAT_TIME__Control1102755003">
+          <DataField>TIME_PRINTED_____FORMAT_TIME__Control1102755003</DataField>
+        </Field>
+        <Field Name="DATE_PRINTED_____FORMAT_TODAY_0_4__Control1102755004">
+          <DataField>DATE_PRINTED_____FORMAT_TODAY_0_4__Control1102755004</DataField>
+        </Field>
+        <Field Name="USERID_Control1102755012">
+          <DataField>USERID_Control1102755012</DataField>
+        </Field>
+        <Field Name="NumberText_1__Control1102755016">
+          <DataField>NumberText_1__Control1102755016</DataField>
+        </Field>
+        <Field Name="CompanyInfoName">
+          <DataField>CompanyInfoName</DataField>
+        </Field>
+        <Field Name="CompanyInfoAddress">
+          <DataField>CompanyInfoAddress</DataField>
+        </Field>
+        <Field Name="CompanyInfoAddress2">
+          <DataField>CompanyInfoAddress2</DataField>
+        </Field>
+        <Field Name="CompanyInfoPic">
+          <DataField>CompanyInfoPic</DataField>
+        </Field>
+        <Field Name="No_ChequeReceiptsFamily">
+          <DataField>No_ChequeReceiptsFamily</DataField>
+        </Field>
+        <Field Name="TransactionDate_ChequeReceiptsFamily">
+          <DataField>TransactionDate_ChequeReceiptsFamily</DataField>
+        </Field>
+        <Field Name="RefferenceDocument_ChequeReceiptsFamily">
+          <DataField>RefferenceDocument_ChequeReceiptsFamily</DataField>
+        </Field>
+        <Field Name="TransactionTime_ChequeReceiptsFamily">
+          <DataField>TransactionTime_ChequeReceiptsFamily</DataField>
+        </Field>
+        <Field Name="CreatedBy_ChequeReceiptsFamily">
+          <DataField>CreatedBy_ChequeReceiptsFamily</DataField>
+        </Field>
+        <Field Name="PostedBy_ChequeReceiptsFamily">
+          <DataField>PostedBy_ChequeReceiptsFamily</DataField>
+        </Field>
+        <Field Name="Posted_ChequeReceiptsFamily">
+          <DataField>Posted_ChequeReceiptsFamily</DataField>
+        </Field>
+        <Field Name="NoSeries_ChequeReceiptsFamily">
+          <DataField>NoSeries_ChequeReceiptsFamily</DataField>
+        </Field>
+        <Field Name="UnpaidBy_ChequeReceiptsFamily">
+          <DataField>UnpaidBy_ChequeReceiptsFamily</DataField>
+        </Field>
+        <Field Name="Unpaid_ChequeReceiptsFamily">
+          <DataField>Unpaid_ChequeReceiptsFamily</DataField>
+        </Field>
+        <Field Name="Imported_ChequeReceiptsFamily">
+          <DataField>Imported_ChequeReceiptsFamily</DataField>
+        </Field>
+        <Field Name="Processed_ChequeReceiptsFamily">
+          <DataField>Processed_ChequeReceiptsFamily</DataField>
+        </Field>
+        <Field Name="DocumentName_ChequeReceiptsFamily">
+          <DataField>DocumentName_ChequeReceiptsFamily</DataField>
+        </Field>
+        <Field Name="BankAccount_ChequeReceiptsFamily">
+          <DataField>BankAccount_ChequeReceiptsFamily</DataField>
+        </Field>
+        <Field Name="Status_ChequeReceiptsFamily">
+          <DataField>Status_ChequeReceiptsFamily</DataField>
+        </Field>
+        <Field Name="Closed_ChequeReceiptsFamily">
+          <DataField>Closed_ChequeReceiptsFamily</DataField>
+        </Field>
+        <Field Name="ReportForNavId_3474">
+          <DataField>ReportForNavId_3474</DataField>
+        </Field>
+        <Field Name="ChqReceiptNo_ChequeIssueLinesFamily">
+          <DataField>ChqReceiptNo_ChequeIssueLinesFamily</DataField>
+        </Field>
+        <Field Name="ChequeSerialNo_ChequeIssueLinesFamily">
+          <DataField>ChequeSerialNo_ChequeIssueLinesFamily</DataField>
+        </Field>
+        <Field Name="AccountNo_ChequeIssueLinesFamily">
+          <DataField>AccountNo_ChequeIssueLinesFamily</DataField>
+        </Field>
+        <Field Name="DateRefferenceNo_ChequeIssueLinesFamily">
+          <DataField>DateRefferenceNo_ChequeIssueLinesFamily</DataField>
+        </Field>
+        <Field Name="TransactionCode_ChequeIssueLinesFamily">
+          <DataField>TransactionCode_ChequeIssueLinesFamily</DataField>
+        </Field>
+        <Field Name="BranchCode_ChequeIssueLinesFamily">
+          <DataField>BranchCode_ChequeIssueLinesFamily</DataField>
+        </Field>
+        <Field Name="Currency_ChequeIssueLinesFamily">
+          <DataField>Currency_ChequeIssueLinesFamily</DataField>
+        </Field>
+        <Field Name="Amount_ChequeIssueLinesFamily">
+          <DataField>Amount_ChequeIssueLinesFamily</DataField>
+        </Field>
+        <Field Name="Amount_ChequeIssueLinesFamilyFormat">
+          <DataField>Amount_ChequeIssueLinesFamilyFormat</DataField>
+        </Field>
+        <Field Name="Date1_ChequeIssueLinesFamily">
+          <DataField>Date1_ChequeIssueLinesFamily</DataField>
+        </Field>
+        <Field Name="Date2_ChequeIssueLinesFamily">
+          <DataField>Date2_ChequeIssueLinesFamily</DataField>
+        </Field>
+        <Field Name="FamilyRoutingNo_ChequeIssueLinesFamily">
+          <DataField>FamilyRoutingNo_ChequeIssueLinesFamily</DataField>
+        </Field>
+        <Field Name="Fillers_ChequeIssueLinesFamily">
+          <DataField>Fillers_ChequeIssueLinesFamily</DataField>
+        </Field>
+        <Field Name="TransactionRefference_ChequeIssueLinesFamily">
+          <DataField>TransactionRefference_ChequeIssueLinesFamily</DataField>
+        </Field>
+        <Field Name="AccountName_ChequeIssueLinesFamily">
+          <DataField>AccountName_ChequeIssueLinesFamily</DataField>
+        </Field>
+        <Field Name="UnpayCode_ChequeIssueLinesFamily">
+          <DataField>UnpayCode_ChequeIssueLinesFamily</DataField>
+        </Field>
+        <Field Name="Interpretation_ChequeIssueLinesFamily">
+          <DataField>Interpretation_ChequeIssueLinesFamily</DataField>
+        </Field>
+        <Field Name="FamilyAccountNo_ChequeIssueLinesFamily">
+          <DataField>FamilyAccountNo_ChequeIssueLinesFamily</DataField>
+        </Field>
+        <Field Name="UnPayChargeAmount_ChequeIssueLinesFamily">
+          <DataField>UnPayChargeAmount_ChequeIssueLinesFamily</DataField>
+        </Field>
+        <Field Name="UnPayChargeAmount_ChequeIssueLinesFamilyFormat">
+          <DataField>UnPayChargeAmount_ChequeIssueLinesFamilyFormat</DataField>
+        </Field>
+        <Field Name="UnpayDate_ChequeIssueLinesFamily">
+          <DataField>UnpayDate_ChequeIssueLinesFamily</DataField>
+        </Field>
+        <Field Name="Status_ChequeIssueLinesFamily">
+          <DataField>Status_ChequeIssueLinesFamily</DataField>
+        </Field>
+        <Field Name="ChequeNo_ChequeIssueLinesFamily">
+          <DataField>ChequeNo_ChequeIssueLinesFamily</DataField>
+        </Field>
+        <Field Name="HeaderNo_ChequeIssueLinesFamily">
+          <DataField>HeaderNo_ChequeIssueLinesFamily</DataField>
+        </Field>
+        <Field Name="AccountBalance_ChequeIssueLinesFamily">
+          <DataField>AccountBalance_ChequeIssueLinesFamily</DataField>
+        </Field>
+        <Field Name="AccountBalance_ChequeIssueLinesFamilyFormat">
+          <DataField>AccountBalance_ChequeIssueLinesFamilyFormat</DataField>
+        </Field>
+        <Field Name="FrontImage_ChequeIssueLinesFamily">
+          <DataField>FrontImage_ChequeIssueLinesFamily</DataField>
+        </Field>
+        <Field Name="FrontGrayImage_ChequeIssueLinesFamily">
+          <DataField>FrontGrayImage_ChequeIssueLinesFamily</DataField>
+        </Field>
+        <Field Name="BackImages_ChequeIssueLinesFamily">
+          <DataField>BackImages_ChequeIssueLinesFamily</DataField>
+        </Field>
+        <Field Name="VerificationStatus_ChequeIssueLinesFamily">
+          <DataField>VerificationStatus_ChequeIssueLinesFamily</DataField>
+        </Field>
+        <Field Name="Processed_ChequeIssueLinesFamily">
+          <DataField>Processed_ChequeIssueLinesFamily</DataField>
+        </Field>
+        <Field Name="TransactionDate_ChequeIssueLinesFamily">
+          <DataField>TransactionDate_ChequeIssueLinesFamily</DataField>
+        </Field>
+        <Field Name="MemberBranch_ChequeIssueLinesFamily">
+          <DataField>MemberBranch_ChequeIssueLinesFamily</DataField>
+        </Field>
+        <Field Name="UnpayUserId_ChequeIssueLinesFamily">
+          <DataField>UnpayUserId_ChequeIssueLinesFamily</DataField>
+        </Field>
+        <Field Name="ChargeAmount_ChequeIssueLinesFamily">
+          <DataField>ChargeAmount_ChequeIssueLinesFamily</DataField>
+        </Field>
+        <Field Name="ChargeAmount_ChequeIssueLinesFamilyFormat">
+          <DataField>ChargeAmount_ChequeIssueLinesFamilyFormat</DataField>
+        </Field>
+        <Field Name="ChargeAmountSaccoIncome_ChequeIssueLinesFamily">
+          <DataField>ChargeAmountSaccoIncome_ChequeIssueLinesFamily</DataField>
+        </Field>
+        <Field Name="ChargeAmountSaccoIncome_ChequeIssueLinesFamilyFormat">
+          <DataField>ChargeAmountSaccoIncome_ChequeIssueLinesFamilyFormat</DataField>
+        </Field>
+        <Field Name="ChargeUnpaySaccoIncome_ChequeIssueLinesFamily">
+          <DataField>ChargeUnpaySaccoIncome_ChequeIssueLinesFamily</DataField>
+        </Field>
+        <Field Name="ChargeUnpaySaccoIncome_ChequeIssueLinesFamilyFormat">
+          <DataField>ChargeUnpaySaccoIncome_ChequeIssueLinesFamilyFormat</DataField>
+        </Field>
+        <Field Name="VarPayStatus">
+          <DataField>VarPayStatus</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

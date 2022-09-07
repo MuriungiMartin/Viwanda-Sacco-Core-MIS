@@ -1,0 +1,302 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="ReportForNavId_1000000000">
+          <DataField>ReportForNavId_1000000000</DataField>
+        </Field>
+        <Field Name="CName">
+          <DataField>CName</DataField>
+        </Field>
+        <Field Name="CAddress">
+          <DataField>CAddress</DataField>
+        </Field>
+        <Field Name="CPic">
+          <DataField>CPic</DataField>
+        </Field>
+        <Field Name="TaxRegNo">
+          <DataField>TaxRegNo</DataField>
+        </Field>
+        <Field Name="No_HREmployees">
+          <DataField>No_HREmployees</DataField>
+        </Field>
+        <Field Name="FirstName_HREmployees">
+          <DataField>FirstName_HREmployees</DataField>
+        </Field>
+        <Field Name="MiddleName_HREmployees">
+          <DataField>MiddleName_HREmployees</DataField>
+        </Field>
+        <Field Name="LastName_HREmployees">
+          <DataField>LastName_HREmployees</DataField>
+        </Field>
+        <Field Name="Initials_HREmployees">
+          <DataField>Initials_HREmployees</DataField>
+        </Field>
+        <Field Name="SearchName_HREmployees">
+          <DataField>SearchName_HREmployees</DataField>
+        </Field>
+        <Field Name="PostalAddress_HREmployees">
+          <DataField>PostalAddress_HREmployees</DataField>
+        </Field>
+        <Field Name="ResidentialAddress_HREmployees">
+          <DataField>ResidentialAddress_HREmployees</DataField>
+        </Field>
+        <Field Name="PIN">
+          <DataField>PIN</DataField>
+        </Field>
+        <Field Name="TotalH">
+          <DataField>TotalH</DataField>
+        </Field>
+        <Field Name="TotalHFormat">
+          <DataField>TotalHFormat</DataField>
+        </Field>
+        <Field Name="TotalL">
+          <DataField>TotalL</DataField>
+        </Field>
+        <Field Name="TotalLFormat">
+          <DataField>TotalLFormat</DataField>
+        </Field>
+        <Field Name="ReportForNavId_1000000009">
+          <DataField>ReportForNavId_1000000009</DataField>
+        </Field>
+        <Field Name="PensionAmt">
+          <DataField>PensionAmt</DataField>
+        </Field>
+        <Field Name="PensionAmtFormat">
+          <DataField>PensionAmtFormat</DataField>
+        </Field>
+        <Field Name="PenNSSF">
+          <DataField>PenNSSF</DataField>
+        </Field>
+        <Field Name="PenNSSFFormat">
+          <DataField>PenNSSFFormat</DataField>
+        </Field>
+        <Field Name="EmployeeCode_PayrollEmployeeP9">
+          <DataField>EmployeeCode_PayrollEmployeeP9</DataField>
+        </Field>
+        <Field Name="BasicPay_PayrollEmployeeP9">
+          <DataField>BasicPay_PayrollEmployeeP9</DataField>
+        </Field>
+        <Field Name="BasicPay_PayrollEmployeeP9Format">
+          <DataField>BasicPay_PayrollEmployeeP9Format</DataField>
+        </Field>
+        <Field Name="Allowances_PayrollEmployeeP9">
+          <DataField>Allowances_PayrollEmployeeP9</DataField>
+        </Field>
+        <Field Name="Allowances_PayrollEmployeeP9Format">
+          <DataField>Allowances_PayrollEmployeeP9Format</DataField>
+        </Field>
+        <Field Name="Benefits_PayrollEmployeeP9">
+          <DataField>Benefits_PayrollEmployeeP9</DataField>
+        </Field>
+        <Field Name="Benefits_PayrollEmployeeP9Format">
+          <DataField>Benefits_PayrollEmployeeP9Format</DataField>
+        </Field>
+        <Field Name="ValueOfQuarters_PayrollEmployeeP9">
+          <DataField>ValueOfQuarters_PayrollEmployeeP9</DataField>
+        </Field>
+        <Field Name="ValueOfQuarters_PayrollEmployeeP9Format">
+          <DataField>ValueOfQuarters_PayrollEmployeeP9Format</DataField>
+        </Field>
+        <Field Name="DefinedContribution_PayrollEmployeeP9">
+          <DataField>DefinedContribution_PayrollEmployeeP9</DataField>
+        </Field>
+        <Field Name="DefinedContribution_PayrollEmployeeP9Format">
+          <DataField>DefinedContribution_PayrollEmployeeP9Format</DataField>
+        </Field>
+        <Field Name="OwnerOccupierInterest_PayrollEmployeeP9">
+          <DataField>OwnerOccupierInterest_PayrollEmployeeP9</DataField>
+        </Field>
+        <Field Name="OwnerOccupierInterest_PayrollEmployeeP9Format">
+          <DataField>OwnerOccupierInterest_PayrollEmployeeP9Format</DataField>
+        </Field>
+        <Field Name="GrossPay_PayrollEmployeeP9">
+          <DataField>GrossPay_PayrollEmployeeP9</DataField>
+        </Field>
+        <Field Name="GrossPay_PayrollEmployeeP9Format">
+          <DataField>GrossPay_PayrollEmployeeP9Format</DataField>
+        </Field>
+        <Field Name="TaxablePay_PayrollEmployeeP9">
+          <DataField>TaxablePay_PayrollEmployeeP9</DataField>
+        </Field>
+        <Field Name="TaxablePay_PayrollEmployeeP9Format">
+          <DataField>TaxablePay_PayrollEmployeeP9Format</DataField>
+        </Field>
+        <Field Name="TaxCharged_PayrollEmployeeP9">
+          <DataField>TaxCharged_PayrollEmployeeP9</DataField>
+        </Field>
+        <Field Name="TaxCharged_PayrollEmployeeP9Format">
+          <DataField>TaxCharged_PayrollEmployeeP9Format</DataField>
+        </Field>
+        <Field Name="InsuranceRelief_PayrollEmployeeP9">
+          <DataField>InsuranceRelief_PayrollEmployeeP9</DataField>
+        </Field>
+        <Field Name="InsuranceRelief_PayrollEmployeeP9Format">
+          <DataField>InsuranceRelief_PayrollEmployeeP9Format</DataField>
+        </Field>
+        <Field Name="TaxRelief_PayrollEmployeeP9">
+          <DataField>TaxRelief_PayrollEmployeeP9</DataField>
+        </Field>
+        <Field Name="TaxRelief_PayrollEmployeeP9Format">
+          <DataField>TaxRelief_PayrollEmployeeP9Format</DataField>
+        </Field>
+        <Field Name="PAYE_PayrollEmployeeP9">
+          <DataField>PAYE_PayrollEmployeeP9</DataField>
+        </Field>
+        <Field Name="PAYE_PayrollEmployeeP9Format">
+          <DataField>PAYE_PayrollEmployeeP9Format</DataField>
+        </Field>
+        <Field Name="NSSF_PayrollEmployeeP9">
+          <DataField>NSSF_PayrollEmployeeP9</DataField>
+        </Field>
+        <Field Name="NSSF_PayrollEmployeeP9Format">
+          <DataField>NSSF_PayrollEmployeeP9Format</DataField>
+        </Field>
+        <Field Name="NHIF_PayrollEmployeeP9">
+          <DataField>NHIF_PayrollEmployeeP9</DataField>
+        </Field>
+        <Field Name="NHIF_PayrollEmployeeP9Format">
+          <DataField>NHIF_PayrollEmployeeP9Format</DataField>
+        </Field>
+        <Field Name="Deductions_PayrollEmployeeP9">
+          <DataField>Deductions_PayrollEmployeeP9</DataField>
+        </Field>
+        <Field Name="Deductions_PayrollEmployeeP9Format">
+          <DataField>Deductions_PayrollEmployeeP9Format</DataField>
+        </Field>
+        <Field Name="NetPay_PayrollEmployeeP9">
+          <DataField>NetPay_PayrollEmployeeP9</DataField>
+        </Field>
+        <Field Name="NetPay_PayrollEmployeeP9Format">
+          <DataField>NetPay_PayrollEmployeeP9Format</DataField>
+        </Field>
+        <Field Name="PeriodMonth_PayrollEmployeeP9">
+          <DataField>PeriodMonth_PayrollEmployeeP9</DataField>
+        </Field>
+        <Field Name="PeriodYear_PayrollEmployeeP9">
+          <DataField>PeriodYear_PayrollEmployeeP9</DataField>
+        </Field>
+        <Field Name="PayrollPeriod_PayrollEmployeeP9">
+          <DataField>PayrollPeriod_PayrollEmployeeP9</DataField>
+        </Field>
+        <Field Name="PeriodFilter_PayrollEmployeeP9">
+          <DataField>PeriodFilter_PayrollEmployeeP9</DataField>
+        </Field>
+        <Field Name="Pension_PayrollEmployeeP9">
+          <DataField>Pension_PayrollEmployeeP9</DataField>
+        </Field>
+        <Field Name="Pension_PayrollEmployeeP9Format">
+          <DataField>Pension_PayrollEmployeeP9Format</DataField>
+        </Field>
+        <Field Name="HELB_PayrollEmployeeP9">
+          <DataField>HELB_PayrollEmployeeP9</DataField>
+        </Field>
+        <Field Name="HELB_PayrollEmployeeP9Format">
+          <DataField>HELB_PayrollEmployeeP9Format</DataField>
+        </Field>
+        <Field Name="PayrollCode_PayrollEmployeeP9">
+          <DataField>PayrollCode_PayrollEmployeeP9</DataField>
+        </Field>
+        <Field Name="MonthText">
+          <DataField>MonthText</DataField>
+        </Field>
+        <Field Name="ColG">
+          <DataField>ColG</DataField>
+        </Field>
+        <Field Name="ColGFormat">
+          <DataField>ColGFormat</DataField>
+        </Field>
+        <Field Name="Grosspay_ColG">
+          <DataField>Grosspay_ColG</DataField>
+        </Field>
+        <Field Name="Grosspay_ColGFormat">
+          <DataField>Grosspay_ColGFormat</DataField>
+        </Field>
+        <Field Name="FixedContribution">
+          <DataField>FixedContribution</DataField>
+        </Field>
+        <Field Name="FixedContributionFormat">
+          <DataField>FixedContributionFormat</DataField>
+        </Field>
+        <Field Name="Amount3">
+          <DataField>Amount3</DataField>
+        </Field>
+        <Field Name="Amount3Format">
+          <DataField>Amount3Format</DataField>
+        </Field>
+        <Field Name="Amount1">
+          <DataField>Amount1</DataField>
+        </Field>
+        <Field Name="Amount1Format">
+          <DataField>Amount1Format</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

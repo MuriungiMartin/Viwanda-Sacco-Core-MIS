@@ -1,0 +1,449 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="ReportForNavId_1000000000">
+          <DataField>ReportForNavId_1000000000</DataField>
+        </Field>
+        <Field Name="GroupCode_Loans">
+          <DataField>GroupCode_Loans</DataField>
+        </Field>
+        <Field Name="IDNO_Loans">
+          <DataField>IDNO_Loans</DataField>
+        </Field>
+        <Field Name="ClientName_Loans">
+          <DataField>ClientName_Loans</DataField>
+        </Field>
+        <Field Name="LoanNo_Loans">
+          <DataField>LoanNo_Loans</DataField>
+        </Field>
+        <Field Name="ApplicationDate_Loans">
+          <DataField>ApplicationDate_Loans</DataField>
+        </Field>
+        <Field Name="LoanProductType_Loans">
+          <DataField>LoanProductType_Loans</DataField>
+        </Field>
+        <Field Name="ClientCode_Loans">
+          <DataField>ClientCode_Loans</DataField>
+        </Field>
+        <Field Name="GroupCode">
+          <DataField>GroupCode</DataField>
+        </Field>
+        <Field Name="Savings_Loans">
+          <DataField>Savings_Loans</DataField>
+        </Field>
+        <Field Name="Savings_LoansFormat">
+          <DataField>Savings_LoansFormat</DataField>
+        </Field>
+        <Field Name="ExistingLoan_Loans">
+          <DataField>ExistingLoan_Loans</DataField>
+        </Field>
+        <Field Name="ExistingLoan_LoansFormat">
+          <DataField>ExistingLoan_LoansFormat</DataField>
+        </Field>
+        <Field Name="RequestedAmount_Loans">
+          <DataField>RequestedAmount_Loans</DataField>
+        </Field>
+        <Field Name="RequestedAmount_LoansFormat">
+          <DataField>RequestedAmount_LoansFormat</DataField>
+        </Field>
+        <Field Name="ApprovedAmount_Loans">
+          <DataField>ApprovedAmount_Loans</DataField>
+        </Field>
+        <Field Name="ApprovedAmount_LoansFormat">
+          <DataField>ApprovedAmount_LoansFormat</DataField>
+        </Field>
+        <Field Name="LoanType">
+          <DataField>LoanType</DataField>
+        </Field>
+        <Field Name="BranchCode">
+          <DataField>BranchCode</DataField>
+        </Field>
+        <Field Name="Installments">
+          <DataField>Installments</DataField>
+        </Field>
+        <Field Name="OutstandingBalance_Loans">
+          <DataField>OutstandingBalance_Loans</DataField>
+        </Field>
+        <Field Name="OutstandingBalance_LoansFormat">
+          <DataField>OutstandingBalance_LoansFormat</DataField>
+        </Field>
+        <Field Name="IssuedDate_Loans">
+          <DataField>IssuedDate_Loans</DataField>
+        </Field>
+        <Field Name="Repayment">
+          <DataField>Repayment</DataField>
+        </Field>
+        <Field Name="RepaymentFormat">
+          <DataField>RepaymentFormat</DataField>
+        </Field>
+        <Field Name="GrossProfit">
+          <DataField>GrossProfit</DataField>
+        </Field>
+        <Field Name="GrossProfitFormat">
+          <DataField>GrossProfitFormat</DataField>
+        </Field>
+        <Field Name="NetCome">
+          <DataField>NetCome</DataField>
+        </Field>
+        <Field Name="NetComeFormat">
+          <DataField>NetComeFormat</DataField>
+        </Field>
+        <Field Name="FamilyExpenses">
+          <DataField>FamilyExpenses</DataField>
+        </Field>
+        <Field Name="FamilyExpensesFormat">
+          <DataField>FamilyExpensesFormat</DataField>
+        </Field>
+        <Field Name="AvailableBal">
+          <DataField>AvailableBal</DataField>
+        </Field>
+        <Field Name="AvailableBalFormat">
+          <DataField>AvailableBalFormat</DataField>
+        </Field>
+        <Field Name="ApplicantBal">
+          <DataField>ApplicantBal</DataField>
+        </Field>
+        <Field Name="ApplicantBalFormat">
+          <DataField>ApplicantBalFormat</DataField>
+        </Field>
+        <Field Name="LnNo">
+          <DataField>LnNo</DataField>
+        </Field>
+        <Field Name="LoanBal">
+          <DataField>LoanBal</DataField>
+        </Field>
+        <Field Name="LoanBalFormat">
+          <DataField>LoanBalFormat</DataField>
+        </Field>
+        <Field Name="FOSALoanBal">
+          <DataField>FOSALoanBal</DataField>
+        </Field>
+        <Field Name="FOSALoanBalFormat">
+          <DataField>FOSALoanBalFormat</DataField>
+        </Field>
+        <Field Name="FOSALnNo">
+          <DataField>FOSALnNo</DataField>
+        </Field>
+        <Field Name="CompanyPicture">
+          <DataField>CompanyPicture</DataField>
+        </Field>
+        <Field Name="TotalSal">
+          <DataField>TotalSal</DataField>
+        </Field>
+        <Field Name="TotalSalFormat">
+          <DataField>TotalSalFormat</DataField>
+        </Field>
+        <Field Name="TotalSalCat">
+          <DataField>TotalSalCat</DataField>
+        </Field>
+        <Field Name="TotalSalCatFormat">
+          <DataField>TotalSalCatFormat</DataField>
+        </Field>
+        <Field Name="CompanyName">
+          <DataField>CompanyName</DataField>
+        </Field>
+        <Field Name="TShares">
+          <DataField>TShares</DataField>
+        </Field>
+        <Field Name="TSharesFormat">
+          <DataField>TSharesFormat</DataField>
+        </Field>
+        <Field Name="DEpMultiplier">
+          <DataField>DEpMultiplier</DataField>
+        </Field>
+        <Field Name="DEpMultiplierFormat">
+          <DataField>DEpMultiplierFormat</DataField>
+        </Field>
+        <Field Name="ReportForNavId_1000000086">
+          <DataField>ReportForNavId_1000000086</DataField>
+        </Field>
+        <Field Name="AppraisalClientCode">
+          <DataField>AppraisalClientCode</DataField>
+        </Field>
+        <Field Name="AppraisalCode">
+          <DataField>AppraisalCode</DataField>
+        </Field>
+        <Field Name="AppraisalDescription">
+          <DataField>AppraisalDescription</DataField>
+        </Field>
+        <Field Name="AppraisalTypes">
+          <DataField>AppraisalTypes</DataField>
+        </Field>
+        <Field Name="AppraisalAmount">
+          <DataField>AppraisalAmount</DataField>
+        </Field>
+        <Field Name="AppraisalAmountFormat">
+          <DataField>AppraisalAmountFormat</DataField>
+        </Field>
+        <Field Name="AppraisalLoanNo">
+          <DataField>AppraisalLoanNo</DataField>
+        </Field>
+        <Field Name="ReportForNavId_1000000077">
+          <DataField>ReportForNavId_1000000077</DataField>
+        </Field>
+        <Field Name="ClientCode_AppraisalSalaryDetails2">
+          <DataField>ClientCode_AppraisalSalaryDetails2</DataField>
+        </Field>
+        <Field Name="Code_AppraisalSalaryDetails2">
+          <DataField>Code_AppraisalSalaryDetails2</DataField>
+        </Field>
+        <Field Name="Description_AppraisalSalaryDetails2">
+          <DataField>Description_AppraisalSalaryDetails2</DataField>
+        </Field>
+        <Field Name="Type_AppraisalSalaryDetails2">
+          <DataField>Type_AppraisalSalaryDetails2</DataField>
+        </Field>
+        <Field Name="Amount_AppraisalSalaryDetails2">
+          <DataField>Amount_AppraisalSalaryDetails2</DataField>
+        </Field>
+        <Field Name="Amount_AppraisalSalaryDetails2Format">
+          <DataField>Amount_AppraisalSalaryDetails2Format</DataField>
+        </Field>
+        <Field Name="LoanNo_AppraisalSalaryDetails2">
+          <DataField>LoanNo_AppraisalSalaryDetails2</DataField>
+        </Field>
+        <Field Name="SNo">
+          <DataField>SNo</DataField>
+        </Field>
+        <Field Name="NetCome2">
+          <DataField>NetCome2</DataField>
+        </Field>
+        <Field Name="NetCome2Format">
+          <DataField>NetCome2Format</DataField>
+        </Field>
+        <Field Name="FamilyExpenses2">
+          <DataField>FamilyExpenses2</DataField>
+        </Field>
+        <Field Name="FamilyExpenses2Format">
+          <DataField>FamilyExpenses2Format</DataField>
+        </Field>
+        <Field Name="ReportForNavId_1000000068">
+          <DataField>ReportForNavId_1000000068</DataField>
+        </Field>
+        <Field Name="MicroAverageMonthlySales_MicroProfitabilityAnalysis">
+          <DataField>MicroAverageMonthlySales_MicroProfitabilityAnalysis</DataField>
+        </Field>
+        <Field Name="MicroAverageMonthlySales_MicroProfitabilityAnalysisFormat">
+          <DataField>MicroAverageMonthlySales_MicroProfitabilityAnalysisFormat</DataField>
+        </Field>
+        <Field Name="MicroAverageMonthlyPurchase_MicroProfitabilityAnalysis">
+          <DataField>MicroAverageMonthlyPurchase_MicroProfitabilityAnalysis</DataField>
+        </Field>
+        <Field Name="MicroAverageMonthlyPurchase_MicroProfitabilityAnalysisFormat">
+          <DataField>MicroAverageMonthlyPurchase_MicroProfitabilityAnalysisFormat</DataField>
+        </Field>
+        <Field Name="MicroGrossProfit_MicroProfitabilityAnalysis">
+          <DataField>MicroGrossProfit_MicroProfitabilityAnalysis</DataField>
+        </Field>
+        <Field Name="MicroGrossProfit_MicroProfitabilityAnalysisFormat">
+          <DataField>MicroGrossProfit_MicroProfitabilityAnalysisFormat</DataField>
+        </Field>
+        <Field Name="MicroAmount_MicroProfitabilityAnalysis">
+          <DataField>MicroAmount_MicroProfitabilityAnalysis</DataField>
+        </Field>
+        <Field Name="MicroAmount_MicroProfitabilityAnalysisFormat">
+          <DataField>MicroAmount_MicroProfitabilityAnalysisFormat</DataField>
+        </Field>
+        <Field Name="ProfDescription">
+          <DataField>ProfDescription</DataField>
+        </Field>
+        <Field Name="CodeType">
+          <DataField>CodeType</DataField>
+        </Field>
+        <Field Name="MicroCode">
+          <DataField>MicroCode</DataField>
+        </Field>
+        <Field Name="ReportForNavId_1000000033">
+          <DataField>ReportForNavId_1000000033</DataField>
+        </Field>
+        <Field Name="ExpenseCode_AppraisalExpensesMicro">
+          <DataField>ExpenseCode_AppraisalExpensesMicro</DataField>
+        </Field>
+        <Field Name="ExpenseDescription_AppraisalExpensesMicro">
+          <DataField>ExpenseDescription_AppraisalExpensesMicro</DataField>
+        </Field>
+        <Field Name="ExpenseType_AppraisalExpensesMicro">
+          <DataField>ExpenseType_AppraisalExpensesMicro</DataField>
+        </Field>
+        <Field Name="ExpenseAmount_AppraisalExpensesMicro">
+          <DataField>ExpenseAmount_AppraisalExpensesMicro</DataField>
+        </Field>
+        <Field Name="ExpenseAmount_AppraisalExpensesMicroFormat">
+          <DataField>ExpenseAmount_AppraisalExpensesMicroFormat</DataField>
+        </Field>
+        <Field Name="ReportForNavId_1000000047">
+          <DataField>ReportForNavId_1000000047</DataField>
+        </Field>
+        <Field Name="LedAmount_LoanApp">
+          <DataField>LedAmount_LoanApp</DataField>
+        </Field>
+        <Field Name="LedAmount_LoanAppFormat">
+          <DataField>LedAmount_LoanAppFormat</DataField>
+        </Field>
+        <Field Name="LedLoanNo_LoanApp">
+          <DataField>LedLoanNo_LoanApp</DataField>
+        </Field>
+        <Field Name="ReportForNavId_5140">
+          <DataField>ReportForNavId_5140</DataField>
+        </Field>
+        <Field Name="Amont_Guarant">
+          <DataField>Amont_Guarant</DataField>
+        </Field>
+        <Field Name="Name">
+          <DataField>Name</DataField>
+        </Field>
+        <Field Name="AmontGuaranteed_LoansGuaranteeDetails">
+          <DataField>AmontGuaranteed_LoansGuaranteeDetails</DataField>
+        </Field>
+        <Field Name="AmontGuaranteed_LoansGuaranteeDetailsFormat">
+          <DataField>AmontGuaranteed_LoansGuaranteeDetailsFormat</DataField>
+        </Field>
+        <Field Name="Guarantor_Memb_No">
+          <DataField>Guarantor_Memb_No</DataField>
+        </Field>
+        <Field Name="G_Shares">
+          <DataField>G_Shares</DataField>
+        </Field>
+        <Field Name="G_SharesFormat">
+          <DataField>G_SharesFormat</DataField>
+        </Field>
+        <Field Name="Loan_Guarant">
+          <DataField>Loan_Guarant</DataField>
+        </Field>
+        <Field Name="Guarantor_Outstanding">
+          <DataField>Guarantor_Outstanding</DataField>
+        </Field>
+        <Field Name="Guarantor_OutstandingFormat">
+          <DataField>Guarantor_OutstandingFormat</DataField>
+        </Field>
+        <Field Name="Employer_code">
+          <DataField>Employer_code</DataField>
+        </Field>
+        <Field Name="TShares2">
+          <DataField>TShares2</DataField>
+        </Field>
+        <Field Name="TShares2Format">
+          <DataField>TShares2Format</DataField>
+        </Field>
+        <Field Name="ReportForNavId_1000000099">
+          <DataField>ReportForNavId_1000000099</DataField>
+        </Field>
+        <Field Name="LoanNo_LoanCollateralDetails">
+          <DataField>LoanNo_LoanCollateralDetails</DataField>
+        </Field>
+        <Field Name="Type_LoanCollateralDetails">
+          <DataField>Type_LoanCollateralDetails</DataField>
+        </Field>
+        <Field Name="SecurityDetails_LoanCollateralDetails">
+          <DataField>SecurityDetails_LoanCollateralDetails</DataField>
+        </Field>
+        <Field Name="Remarks_LoanCollateralDetails">
+          <DataField>Remarks_LoanCollateralDetails</DataField>
+        </Field>
+        <Field Name="LoanType_LoanCollateralDetails">
+          <DataField>LoanType_LoanCollateralDetails</DataField>
+        </Field>
+        <Field Name="Value_LoanCollateralDetails">
+          <DataField>Value_LoanCollateralDetails</DataField>
+        </Field>
+        <Field Name="Value_LoanCollateralDetailsFormat">
+          <DataField>Value_LoanCollateralDetailsFormat</DataField>
+        </Field>
+        <Field Name="GuaranteeValue_LoanCollateralDetails">
+          <DataField>GuaranteeValue_LoanCollateralDetails</DataField>
+        </Field>
+        <Field Name="GuaranteeValue_LoanCollateralDetailsFormat">
+          <DataField>GuaranteeValue_LoanCollateralDetailsFormat</DataField>
+        </Field>
+        <Field Name="Code_LoanCollateralDetails">
+          <DataField>Code_LoanCollateralDetails</DataField>
+        </Field>
+        <Field Name="Category_LoanCollateralDetails">
+          <DataField>Category_LoanCollateralDetails</DataField>
+        </Field>
+        <Field Name="CollateralMultiplier_LoanCollateralDetails">
+          <DataField>CollateralMultiplier_LoanCollateralDetails</DataField>
+        </Field>
+        <Field Name="CollateralMultiplier_LoanCollateralDetailsFormat">
+          <DataField>CollateralMultiplier_LoanCollateralDetailsFormat</DataField>
+        </Field>
+        <Field Name="ViewDocument_LoanCollateralDetails">
+          <DataField>ViewDocument_LoanCollateralDetails</DataField>
+        </Field>
+        <Field Name="AssesmentDone_LoanCollateralDetails">
+          <DataField>AssesmentDone_LoanCollateralDetails</DataField>
+        </Field>
+        <Field Name="AccountNo_LoanCollateralDetails">
+          <DataField>AccountNo_LoanCollateralDetails</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

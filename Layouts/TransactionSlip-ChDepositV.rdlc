@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="Transactions_Type">
+          <DataField>Transactions_Type</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Name">
+          <DataField>CompanyInfo_Name</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Picture">
+          <DataField>CompanyInfo_Picture</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Address">
+          <DataField>CompanyInfo_Address</DataField>
+        </Field>
+        <Field Name="Transactions_Amount">
+          <DataField>Transactions_Amount</DataField>
+        </Field>
+        <Field Name="Transactions_AmountFormat">
+          <DataField>Transactions_AmountFormat</DataField>
+        </Field>
+        <Field Name="MemberName_Transactions">
+          <DataField>MemberName_Transactions</DataField>
+        </Field>
+        <Field Name="Transactions__Cheque_No_">
+          <DataField>Transactions__Cheque_No_</DataField>
+        </Field>
+        <Field Name="Transactions__Staff_Payroll_No_">
+          <DataField>Transactions__Staff_Payroll_No_</DataField>
+        </Field>
+        <Field Name="NumberText_1_">
+          <DataField>NumberText_1_</DataField>
+        </Field>
+        <Field Name="Transactions_Transactions__Branch_Refference_">
+          <DataField>Transactions_Transactions__Branch_Refference_</DataField>
+        </Field>
+        <Field Name="Transactions__Account_Name_">
+          <DataField>Transactions__Account_Name_</DataField>
+        </Field>
+        <Field Name="Transactions__Account_No_">
+          <DataField>Transactions__Account_No_</DataField>
+        </Field>
+        <Field Name="Transactions_Transactions_Cashier">
+          <DataField>Transactions_Transactions_Cashier</DataField>
+        </Field>
+        <Field Name="Transactions_Transactions__Transaction_Time_">
+          <DataField>Transactions_Transactions__Transaction_Time_</DataField>
+        </Field>
+        <Field Name="Transactions__Transaction_Date_">
+          <DataField>Transactions__Transaction_Date_</DataField>
+        </Field>
+        <Field Name="Transactions_No">
+          <DataField>Transactions_No</DataField>
+        </Field>
+        <Field Name="Transactions_Transactions_Remarks">
+          <DataField>Transactions_Transactions_Remarks</DataField>
+        </Field>
+        <Field Name="Amount_DepositedCaption">
+          <DataField>Amount_DepositedCaption</DataField>
+        </Field>
+        <Field Name="Transactions__Cheque_No_Caption">
+          <DataField>Transactions__Cheque_No_Caption</DataField>
+        </Field>
+        <Field Name="Staff_Payroll_No_Caption">
+          <DataField>Staff_Payroll_No_Caption</DataField>
+        </Field>
+        <Field Name="Account_Name_Caption">
+          <DataField>Account_Name_Caption</DataField>
+        </Field>
+        <Field Name="Account_No_Caption">
+          <DataField>Account_No_Caption</DataField>
+        </Field>
+        <Field Name="TellerCaption">
+          <DataField>TellerCaption</DataField>
+        </Field>
+        <Field Name="Time_Caption">
+          <DataField>Time_Caption</DataField>
+        </Field>
+        <Field Name="Date_Caption">
+          <DataField>Date_Caption</DataField>
+        </Field>
+        <Field Name="Trans_No_Caption">
+          <DataField>Trans_No_Caption</DataField>
+        </Field>
+        <Field Name="Deposited_By_Caption">
+          <DataField>Deposited_By_Caption</DataField>
+        </Field>
+        <Field Name="Transactions_Transaction_Type">
+          <DataField>Transactions_Transaction_Type</DataField>
+        </Field>
+        <Field Name="ValueDate">
+          <DataField>ValueDate</DataField>
+        </Field>
+        <Field Name="Transaction_Charges_Description">
+          <DataField>Transaction_Charges_Description</DataField>
+        </Field>
+        <Field Name="Transaction_Charges__Charge_Amount_">
+          <DataField>Transaction_Charges__Charge_Amount_</DataField>
+        </Field>
+        <Field Name="Transaction_Charges__Charge_Amount_Format">
+          <DataField>Transaction_Charges__Charge_Amount_Format</DataField>
+        </Field>
+        <Field Name="Transaction_Charges_Transaction_Type">
+          <DataField>Transaction_Charges_Transaction_Type</DataField>
+        </Field>
+        <Field Name="Transaction_Charges_Charge_Code">
+          <DataField>Transaction_Charges_Charge_Code</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="ReportForNavId_1">
+          <DataField>ReportForNavId_1</DataField>
+        </Field>
+        <Field Name="Date">
+          <DataField>Date</DataField>
+        </Field>
+        <Field Name="Document_No">
+          <DataField>Document_No</DataField>
+        </Field>
+        <Field Name="Supplier_Requisitioning_Office">
+          <DataField>Supplier_Requisitioning_Office</DataField>
+        </Field>
+        <Field Name="Quantity">
+          <DataField>Quantity</DataField>
+        </Field>
+        <Field Name="QuantityFormat">
+          <DataField>QuantityFormat</DataField>
+        </Field>
+        <Field Name="Receipt">
+          <DataField>Receipt</DataField>
+        </Field>
+        <Field Name="InvoiceUnitPrice">
+          <DataField>InvoiceUnitPrice</DataField>
+        </Field>
+        <Field Name="InvoiceUnitPriceFormat">
+          <DataField>InvoiceUnitPriceFormat</DataField>
+        </Field>
+        <Field Name="Value">
+          <DataField>Value</DataField>
+        </Field>
+        <Field Name="ValueFormat">
+          <DataField>ValueFormat</DataField>
+        </Field>
+        <Field Name="Issue">
+          <DataField>Issue</DataField>
+        </Field>
+        <Field Name="Balance">
+          <DataField>Balance</DataField>
+        </Field>
+        <Field Name="Item_Description">
+          <DataField>Item_Description</DataField>
+        </Field>
+        <Field Name="Unit_of_Issue">
+          <DataField>Unit_of_Issue</DataField>
+        </Field>
+        <Field Name="Location">
+          <DataField>Location</DataField>
+        </Field>
+        <Field Name="ReceiptValue">
+          <DataField>ReceiptValue</DataField>
+        </Field>
+        <Field Name="ReceiptValueFormat">
+          <DataField>ReceiptValueFormat</DataField>
+        </Field>
+        <Field Name="IssueValue">
+          <DataField>IssueValue</DataField>
+        </Field>
+        <Field Name="IssueValueFormat">
+          <DataField>IssueValueFormat</DataField>
+        </Field>
+        <Field Name="Cost_Balance">
+          <DataField>Cost_Balance</DataField>
+        </Field>
+        <Field Name="Cost_BalanceFormat">
+          <DataField>Cost_BalanceFormat</DataField>
+        </Field>
+        <Field Name="AverageUnitPrice">
+          <DataField>AverageUnitPrice</DataField>
+        </Field>
+        <Field Name="AverageUnitPriceFormat">
+          <DataField>AverageUnitPriceFormat</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

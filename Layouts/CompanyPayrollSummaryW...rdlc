@@ -1,0 +1,1403 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="ReportForNavId_1">
+          <DataField>ReportForNavId_1</DataField>
+        </Field>
+        <Field Name="COMPANYNAME">
+          <DataField>COMPANYNAME</DataField>
+        </Field>
+        <Field Name="COMPANYNAME_Control1102755015">
+          <DataField>COMPANYNAME_Control1102755015</DataField>
+        </Field>
+        <Field Name="COMPANYNAME_Control1102756027">
+          <DataField>COMPANYNAME_Control1102756027</DataField>
+        </Field>
+        <Field Name="COMPANYNAME_Control1102756028">
+          <DataField>COMPANYNAME_Control1102756028</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Picture">
+          <DataField>CompanyInfo_Picture</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Picture_Control1102756014">
+          <DataField>CompanyInfo_Picture_Control1102756014</DataField>
+        </Field>
+        <Field Name="PayrollSummary">
+          <DataField>PayrollSummary</DataField>
+        </Field>
+        <Field Name="PeriodNamez">
+          <DataField>PeriodNamez</DataField>
+        </Field>
+        <Field Name="TransDesc">
+          <DataField>TransDesc</DataField>
+        </Field>
+        <Field Name="payments">
+          <DataField>payments</DataField>
+        </Field>
+        <Field Name="deductions">
+          <DataField>deductions</DataField>
+        </Field>
+        <Field Name="kirinyagatitle">
+          <DataField>kirinyagatitle</DataField>
+        </Field>
+        <Field Name="abreviation">
+          <DataField>abreviation</DataField>
+        </Field>
+        <Field Name="DetDate">
+          <DataField>DetDate</DataField>
+        </Field>
+        <Field Name="GPY">
+          <DataField>GPY</DataField>
+        </Field>
+        <Field Name="GPYFormat">
+          <DataField>GPYFormat</DataField>
+        </Field>
+        <Field Name="NETS">
+          <DataField>NETS</DataField>
+        </Field>
+        <Field Name="NETSFormat">
+          <DataField>NETSFormat</DataField>
+        </Field>
+        <Field Name="STAT">
+          <DataField>STAT</DataField>
+        </Field>
+        <Field Name="STATFormat">
+          <DataField>STATFormat</DataField>
+        </Field>
+        <Field Name="DED">
+          <DataField>DED</DataField>
+        </Field>
+        <Field Name="DEDFormat">
+          <DataField>DEDFormat</DataField>
+        </Field>
+        <Field Name="payTrans_1">
+          <DataField>payTrans_1</DataField>
+        </Field>
+        <Field Name="payTrans_2">
+          <DataField>payTrans_2</DataField>
+        </Field>
+        <Field Name="payTrans_3">
+          <DataField>payTrans_3</DataField>
+        </Field>
+        <Field Name="payTrans_4">
+          <DataField>payTrans_4</DataField>
+        </Field>
+        <Field Name="payTrans_5">
+          <DataField>payTrans_5</DataField>
+        </Field>
+        <Field Name="payTrans_6">
+          <DataField>payTrans_6</DataField>
+        </Field>
+        <Field Name="payTrans_7">
+          <DataField>payTrans_7</DataField>
+        </Field>
+        <Field Name="payTrans_8">
+          <DataField>payTrans_8</DataField>
+        </Field>
+        <Field Name="payTrans_9">
+          <DataField>payTrans_9</DataField>
+        </Field>
+        <Field Name="payTrans_10">
+          <DataField>payTrans_10</DataField>
+        </Field>
+        <Field Name="payTrans_11">
+          <DataField>payTrans_11</DataField>
+        </Field>
+        <Field Name="payTrans_12">
+          <DataField>payTrans_12</DataField>
+        </Field>
+        <Field Name="payTrans_13">
+          <DataField>payTrans_13</DataField>
+        </Field>
+        <Field Name="payTrans_14">
+          <DataField>payTrans_14</DataField>
+        </Field>
+        <Field Name="payTrans_15">
+          <DataField>payTrans_15</DataField>
+        </Field>
+        <Field Name="payTrans_16">
+          <DataField>payTrans_16</DataField>
+        </Field>
+        <Field Name="payTrans_17">
+          <DataField>payTrans_17</DataField>
+        </Field>
+        <Field Name="payTrans_18">
+          <DataField>payTrans_18</DataField>
+        </Field>
+        <Field Name="payTrans_19">
+          <DataField>payTrans_19</DataField>
+        </Field>
+        <Field Name="payTrans_20">
+          <DataField>payTrans_20</DataField>
+        </Field>
+        <Field Name="payTrans_21">
+          <DataField>payTrans_21</DataField>
+        </Field>
+        <Field Name="payTrans_22">
+          <DataField>payTrans_22</DataField>
+        </Field>
+        <Field Name="payTrans_23">
+          <DataField>payTrans_23</DataField>
+        </Field>
+        <Field Name="payTrans_24">
+          <DataField>payTrans_24</DataField>
+        </Field>
+        <Field Name="payTrans_25">
+          <DataField>payTrans_25</DataField>
+        </Field>
+        <Field Name="payTrans_26">
+          <DataField>payTrans_26</DataField>
+        </Field>
+        <Field Name="payTrans_27">
+          <DataField>payTrans_27</DataField>
+        </Field>
+        <Field Name="payTrans_28">
+          <DataField>payTrans_28</DataField>
+        </Field>
+        <Field Name="payTrans_29">
+          <DataField>payTrans_29</DataField>
+        </Field>
+        <Field Name="payTrans_30">
+          <DataField>payTrans_30</DataField>
+        </Field>
+        <Field Name="payTrans_31">
+          <DataField>payTrans_31</DataField>
+        </Field>
+        <Field Name="payTrans_32">
+          <DataField>payTrans_32</DataField>
+        </Field>
+        <Field Name="payTrans_33">
+          <DataField>payTrans_33</DataField>
+        </Field>
+        <Field Name="payTrans_34">
+          <DataField>payTrans_34</DataField>
+        </Field>
+        <Field Name="payTrans_35">
+          <DataField>payTrans_35</DataField>
+        </Field>
+        <Field Name="payTrans_36">
+          <DataField>payTrans_36</DataField>
+        </Field>
+        <Field Name="payTrans_37">
+          <DataField>payTrans_37</DataField>
+        </Field>
+        <Field Name="payTrans_38">
+          <DataField>payTrans_38</DataField>
+        </Field>
+        <Field Name="payTrans_39">
+          <DataField>payTrans_39</DataField>
+        </Field>
+        <Field Name="payTrans_40">
+          <DataField>payTrans_40</DataField>
+        </Field>
+        <Field Name="payTrans_41">
+          <DataField>payTrans_41</DataField>
+        </Field>
+        <Field Name="payTrans_42">
+          <DataField>payTrans_42</DataField>
+        </Field>
+        <Field Name="payTrans_43">
+          <DataField>payTrans_43</DataField>
+        </Field>
+        <Field Name="payTrans_44">
+          <DataField>payTrans_44</DataField>
+        </Field>
+        <Field Name="payTrans_45">
+          <DataField>payTrans_45</DataField>
+        </Field>
+        <Field Name="payTrans_46">
+          <DataField>payTrans_46</DataField>
+        </Field>
+        <Field Name="payTrans_47">
+          <DataField>payTrans_47</DataField>
+        </Field>
+        <Field Name="payTrans_48">
+          <DataField>payTrans_48</DataField>
+        </Field>
+        <Field Name="payTrans_49">
+          <DataField>payTrans_49</DataField>
+        </Field>
+        <Field Name="payTrans_50">
+          <DataField>payTrans_50</DataField>
+        </Field>
+        <Field Name="payTrans_51">
+          <DataField>payTrans_51</DataField>
+        </Field>
+        <Field Name="payTrans_52">
+          <DataField>payTrans_52</DataField>
+        </Field>
+        <Field Name="payTrans_53">
+          <DataField>payTrans_53</DataField>
+        </Field>
+        <Field Name="payTrans_54">
+          <DataField>payTrans_54</DataField>
+        </Field>
+        <Field Name="payTrans_55">
+          <DataField>payTrans_55</DataField>
+        </Field>
+        <Field Name="payTrans_56">
+          <DataField>payTrans_56</DataField>
+        </Field>
+        <Field Name="payTrans_57">
+          <DataField>payTrans_57</DataField>
+        </Field>
+        <Field Name="payTrans_58">
+          <DataField>payTrans_58</DataField>
+        </Field>
+        <Field Name="payTrans_59">
+          <DataField>payTrans_59</DataField>
+        </Field>
+        <Field Name="payTrans_60">
+          <DataField>payTrans_60</DataField>
+        </Field>
+        <Field Name="payTrans_61">
+          <DataField>payTrans_61</DataField>
+        </Field>
+        <Field Name="payTrans_62">
+          <DataField>payTrans_62</DataField>
+        </Field>
+        <Field Name="payTrans_63">
+          <DataField>payTrans_63</DataField>
+        </Field>
+        <Field Name="payTrans_64">
+          <DataField>payTrans_64</DataField>
+        </Field>
+        <Field Name="payTrans_65">
+          <DataField>payTrans_65</DataField>
+        </Field>
+        <Field Name="payTrans_66">
+          <DataField>payTrans_66</DataField>
+        </Field>
+        <Field Name="payTrans_67">
+          <DataField>payTrans_67</DataField>
+        </Field>
+        <Field Name="payTrans_68">
+          <DataField>payTrans_68</DataField>
+        </Field>
+        <Field Name="payTrans_69">
+          <DataField>payTrans_69</DataField>
+        </Field>
+        <Field Name="payTrans_70">
+          <DataField>payTrans_70</DataField>
+        </Field>
+        <Field Name="PayTransAmt_1">
+          <DataField>PayTransAmt_1</DataField>
+        </Field>
+        <Field Name="PayTransAmt_1Format">
+          <DataField>PayTransAmt_1Format</DataField>
+        </Field>
+        <Field Name="PayTransAmt_2">
+          <DataField>PayTransAmt_2</DataField>
+        </Field>
+        <Field Name="PayTransAmt_2Format">
+          <DataField>PayTransAmt_2Format</DataField>
+        </Field>
+        <Field Name="PayTransAmt_3">
+          <DataField>PayTransAmt_3</DataField>
+        </Field>
+        <Field Name="PayTransAmt_3Format">
+          <DataField>PayTransAmt_3Format</DataField>
+        </Field>
+        <Field Name="PayTransAmt_4">
+          <DataField>PayTransAmt_4</DataField>
+        </Field>
+        <Field Name="PayTransAmt_4Format">
+          <DataField>PayTransAmt_4Format</DataField>
+        </Field>
+        <Field Name="PayTransAmt_5">
+          <DataField>PayTransAmt_5</DataField>
+        </Field>
+        <Field Name="PayTransAmt_5Format">
+          <DataField>PayTransAmt_5Format</DataField>
+        </Field>
+        <Field Name="PayTransAmt_6">
+          <DataField>PayTransAmt_6</DataField>
+        </Field>
+        <Field Name="PayTransAmt_6Format">
+          <DataField>PayTransAmt_6Format</DataField>
+        </Field>
+        <Field Name="PayTransAmt_7">
+          <DataField>PayTransAmt_7</DataField>
+        </Field>
+        <Field Name="PayTransAmt_7Format">
+          <DataField>PayTransAmt_7Format</DataField>
+        </Field>
+        <Field Name="PayTransAmt_8">
+          <DataField>PayTransAmt_8</DataField>
+        </Field>
+        <Field Name="PayTransAmt_8Format">
+          <DataField>PayTransAmt_8Format</DataField>
+        </Field>
+        <Field Name="PayTransAmt_9">
+          <DataField>PayTransAmt_9</DataField>
+        </Field>
+        <Field Name="PayTransAmt_9Format">
+          <DataField>PayTransAmt_9Format</DataField>
+        </Field>
+        <Field Name="PayTransAmt_10">
+          <DataField>PayTransAmt_10</DataField>
+        </Field>
+        <Field Name="PayTransAmt_10Format">
+          <DataField>PayTransAmt_10Format</DataField>
+        </Field>
+        <Field Name="PayTransAmt_11">
+          <DataField>PayTransAmt_11</DataField>
+        </Field>
+        <Field Name="PayTransAmt_11Format">
+          <DataField>PayTransAmt_11Format</DataField>
+        </Field>
+        <Field Name="PayTransAmt_12">
+          <DataField>PayTransAmt_12</DataField>
+        </Field>
+        <Field Name="PayTransAmt_12Format">
+          <DataField>PayTransAmt_12Format</DataField>
+        </Field>
+        <Field Name="PayTransAmt_13">
+          <DataField>PayTransAmt_13</DataField>
+        </Field>
+        <Field Name="PayTransAmt_13Format">
+          <DataField>PayTransAmt_13Format</DataField>
+        </Field>
+        <Field Name="PayTransAmt_14">
+          <DataField>PayTransAmt_14</DataField>
+        </Field>
+        <Field Name="PayTransAmt_14Format">
+          <DataField>PayTransAmt_14Format</DataField>
+        </Field>
+        <Field Name="PayTransAmt_15">
+          <DataField>PayTransAmt_15</DataField>
+        </Field>
+        <Field Name="PayTransAmt_15Format">
+          <DataField>PayTransAmt_15Format</DataField>
+        </Field>
+        <Field Name="PayTransAmt_16">
+          <DataField>PayTransAmt_16</DataField>
+        </Field>
+        <Field Name="PayTransAmt_16Format">
+          <DataField>PayTransAmt_16Format</DataField>
+        </Field>
+        <Field Name="PayTransAmt_17">
+          <DataField>PayTransAmt_17</DataField>
+        </Field>
+        <Field Name="PayTransAmt_17Format">
+          <DataField>PayTransAmt_17Format</DataField>
+        </Field>
+        <Field Name="PayTransAmt_18">
+          <DataField>PayTransAmt_18</DataField>
+        </Field>
+        <Field Name="PayTransAmt_18Format">
+          <DataField>PayTransAmt_18Format</DataField>
+        </Field>
+        <Field Name="PayTransAmt_19">
+          <DataField>PayTransAmt_19</DataField>
+        </Field>
+        <Field Name="PayTransAmt_19Format">
+          <DataField>PayTransAmt_19Format</DataField>
+        </Field>
+        <Field Name="PayTransAmt_20">
+          <DataField>PayTransAmt_20</DataField>
+        </Field>
+        <Field Name="PayTransAmt_20Format">
+          <DataField>PayTransAmt_20Format</DataField>
+        </Field>
+        <Field Name="PayTransAmt_21">
+          <DataField>PayTransAmt_21</DataField>
+        </Field>
+        <Field Name="PayTransAmt_21Format">
+          <DataField>PayTransAmt_21Format</DataField>
+        </Field>
+        <Field Name="PayTransAmt_22">
+          <DataField>PayTransAmt_22</DataField>
+        </Field>
+        <Field Name="PayTransAmt_22Format">
+          <DataField>PayTransAmt_22Format</DataField>
+        </Field>
+        <Field Name="PayTransAmt_23">
+          <DataField>PayTransAmt_23</DataField>
+        </Field>
+        <Field Name="PayTransAmt_23Format">
+          <DataField>PayTransAmt_23Format</DataField>
+        </Field>
+        <Field Name="PayTransAmt_24">
+          <DataField>PayTransAmt_24</DataField>
+        </Field>
+        <Field Name="PayTransAmt_24Format">
+          <DataField>PayTransAmt_24Format</DataField>
+        </Field>
+        <Field Name="PayTransAmt_25">
+          <DataField>PayTransAmt_25</DataField>
+        </Field>
+        <Field Name="PayTransAmt_25Format">
+          <DataField>PayTransAmt_25Format</DataField>
+        </Field>
+        <Field Name="PayTransAmt_26">
+          <DataField>PayTransAmt_26</DataField>
+        </Field>
+        <Field Name="PayTransAmt_26Format">
+          <DataField>PayTransAmt_26Format</DataField>
+        </Field>
+        <Field Name="PayTransAmt_27">
+          <DataField>PayTransAmt_27</DataField>
+        </Field>
+        <Field Name="PayTransAmt_27Format">
+          <DataField>PayTransAmt_27Format</DataField>
+        </Field>
+        <Field Name="PayTransAmt_28">
+          <DataField>PayTransAmt_28</DataField>
+        </Field>
+        <Field Name="PayTransAmt_28Format">
+          <DataField>PayTransAmt_28Format</DataField>
+        </Field>
+        <Field Name="PayTransAmt_29">
+          <DataField>PayTransAmt_29</DataField>
+        </Field>
+        <Field Name="PayTransAmt_29Format">
+          <DataField>PayTransAmt_29Format</DataField>
+        </Field>
+        <Field Name="PayTransAmt_30">
+          <DataField>PayTransAmt_30</DataField>
+        </Field>
+        <Field Name="PayTransAmt_30Format">
+          <DataField>PayTransAmt_30Format</DataField>
+        </Field>
+        <Field Name="PayTransAmt_31">
+          <DataField>PayTransAmt_31</DataField>
+        </Field>
+        <Field Name="PayTransAmt_31Format">
+          <DataField>PayTransAmt_31Format</DataField>
+        </Field>
+        <Field Name="PayTransAmt_32">
+          <DataField>PayTransAmt_32</DataField>
+        </Field>
+        <Field Name="PayTransAmt_32Format">
+          <DataField>PayTransAmt_32Format</DataField>
+        </Field>
+        <Field Name="PayTransAmt_33">
+          <DataField>PayTransAmt_33</DataField>
+        </Field>
+        <Field Name="PayTransAmt_33Format">
+          <DataField>PayTransAmt_33Format</DataField>
+        </Field>
+        <Field Name="PayTransAmt_34">
+          <DataField>PayTransAmt_34</DataField>
+        </Field>
+        <Field Name="PayTransAmt_34Format">
+          <DataField>PayTransAmt_34Format</DataField>
+        </Field>
+        <Field Name="PayTransAmt_35">
+          <DataField>PayTransAmt_35</DataField>
+        </Field>
+        <Field Name="PayTransAmt_35Format">
+          <DataField>PayTransAmt_35Format</DataField>
+        </Field>
+        <Field Name="PayTransAmt_36">
+          <DataField>PayTransAmt_36</DataField>
+        </Field>
+        <Field Name="PayTransAmt_36Format">
+          <DataField>PayTransAmt_36Format</DataField>
+        </Field>
+        <Field Name="PayTransAmt_37">
+          <DataField>PayTransAmt_37</DataField>
+        </Field>
+        <Field Name="PayTransAmt_37Format">
+          <DataField>PayTransAmt_37Format</DataField>
+        </Field>
+        <Field Name="PayTransAmt_38">
+          <DataField>PayTransAmt_38</DataField>
+        </Field>
+        <Field Name="PayTransAmt_38Format">
+          <DataField>PayTransAmt_38Format</DataField>
+        </Field>
+        <Field Name="PayTransAmt_39">
+          <DataField>PayTransAmt_39</DataField>
+        </Field>
+        <Field Name="PayTransAmt_39Format">
+          <DataField>PayTransAmt_39Format</DataField>
+        </Field>
+        <Field Name="PayTransAmt_40">
+          <DataField>PayTransAmt_40</DataField>
+        </Field>
+        <Field Name="PayTransAmt_40Format">
+          <DataField>PayTransAmt_40Format</DataField>
+        </Field>
+        <Field Name="PayTransAmt_41">
+          <DataField>PayTransAmt_41</DataField>
+        </Field>
+        <Field Name="PayTransAmt_41Format">
+          <DataField>PayTransAmt_41Format</DataField>
+        </Field>
+        <Field Name="PayTransAmt_42">
+          <DataField>PayTransAmt_42</DataField>
+        </Field>
+        <Field Name="PayTransAmt_42Format">
+          <DataField>PayTransAmt_42Format</DataField>
+        </Field>
+        <Field Name="PayTransAmt_43">
+          <DataField>PayTransAmt_43</DataField>
+        </Field>
+        <Field Name="PayTransAmt_43Format">
+          <DataField>PayTransAmt_43Format</DataField>
+        </Field>
+        <Field Name="PayTransAmt_44">
+          <DataField>PayTransAmt_44</DataField>
+        </Field>
+        <Field Name="PayTransAmt_44Format">
+          <DataField>PayTransAmt_44Format</DataField>
+        </Field>
+        <Field Name="PayTransAmt_45">
+          <DataField>PayTransAmt_45</DataField>
+        </Field>
+        <Field Name="PayTransAmt_45Format">
+          <DataField>PayTransAmt_45Format</DataField>
+        </Field>
+        <Field Name="PayTransAmt_46">
+          <DataField>PayTransAmt_46</DataField>
+        </Field>
+        <Field Name="PayTransAmt_46Format">
+          <DataField>PayTransAmt_46Format</DataField>
+        </Field>
+        <Field Name="PayTransAmt_47">
+          <DataField>PayTransAmt_47</DataField>
+        </Field>
+        <Field Name="PayTransAmt_47Format">
+          <DataField>PayTransAmt_47Format</DataField>
+        </Field>
+        <Field Name="PayTransAmt_48">
+          <DataField>PayTransAmt_48</DataField>
+        </Field>
+        <Field Name="PayTransAmt_48Format">
+          <DataField>PayTransAmt_48Format</DataField>
+        </Field>
+        <Field Name="PayTransAmt_49">
+          <DataField>PayTransAmt_49</DataField>
+        </Field>
+        <Field Name="PayTransAmt_49Format">
+          <DataField>PayTransAmt_49Format</DataField>
+        </Field>
+        <Field Name="PayTransAmt_50">
+          <DataField>PayTransAmt_50</DataField>
+        </Field>
+        <Field Name="PayTransAmt_50Format">
+          <DataField>PayTransAmt_50Format</DataField>
+        </Field>
+        <Field Name="PayTransAmt_51">
+          <DataField>PayTransAmt_51</DataField>
+        </Field>
+        <Field Name="PayTransAmt_51Format">
+          <DataField>PayTransAmt_51Format</DataField>
+        </Field>
+        <Field Name="PayTransAmt_52">
+          <DataField>PayTransAmt_52</DataField>
+        </Field>
+        <Field Name="PayTransAmt_52Format">
+          <DataField>PayTransAmt_52Format</DataField>
+        </Field>
+        <Field Name="PayTransAmt_53">
+          <DataField>PayTransAmt_53</DataField>
+        </Field>
+        <Field Name="PayTransAmt_53Format">
+          <DataField>PayTransAmt_53Format</DataField>
+        </Field>
+        <Field Name="PayTransAmt_54">
+          <DataField>PayTransAmt_54</DataField>
+        </Field>
+        <Field Name="PayTransAmt_54Format">
+          <DataField>PayTransAmt_54Format</DataField>
+        </Field>
+        <Field Name="PayTransAmt_55">
+          <DataField>PayTransAmt_55</DataField>
+        </Field>
+        <Field Name="PayTransAmt_55Format">
+          <DataField>PayTransAmt_55Format</DataField>
+        </Field>
+        <Field Name="PayTransAmt_56">
+          <DataField>PayTransAmt_56</DataField>
+        </Field>
+        <Field Name="PayTransAmt_56Format">
+          <DataField>PayTransAmt_56Format</DataField>
+        </Field>
+        <Field Name="PayTransAmt_57">
+          <DataField>PayTransAmt_57</DataField>
+        </Field>
+        <Field Name="PayTransAmt_57Format">
+          <DataField>PayTransAmt_57Format</DataField>
+        </Field>
+        <Field Name="PayTransAmt_58">
+          <DataField>PayTransAmt_58</DataField>
+        </Field>
+        <Field Name="PayTransAmt_58Format">
+          <DataField>PayTransAmt_58Format</DataField>
+        </Field>
+        <Field Name="PayTransAmt_59">
+          <DataField>PayTransAmt_59</DataField>
+        </Field>
+        <Field Name="PayTransAmt_59Format">
+          <DataField>PayTransAmt_59Format</DataField>
+        </Field>
+        <Field Name="PayTransAmt_60">
+          <DataField>PayTransAmt_60</DataField>
+        </Field>
+        <Field Name="PayTransAmt_60Format">
+          <DataField>PayTransAmt_60Format</DataField>
+        </Field>
+        <Field Name="PayTransAmt_61">
+          <DataField>PayTransAmt_61</DataField>
+        </Field>
+        <Field Name="PayTransAmt_61Format">
+          <DataField>PayTransAmt_61Format</DataField>
+        </Field>
+        <Field Name="PayTransAmt_62">
+          <DataField>PayTransAmt_62</DataField>
+        </Field>
+        <Field Name="PayTransAmt_62Format">
+          <DataField>PayTransAmt_62Format</DataField>
+        </Field>
+        <Field Name="PayTransAmt_63">
+          <DataField>PayTransAmt_63</DataField>
+        </Field>
+        <Field Name="PayTransAmt_63Format">
+          <DataField>PayTransAmt_63Format</DataField>
+        </Field>
+        <Field Name="PayTransAmt_64">
+          <DataField>PayTransAmt_64</DataField>
+        </Field>
+        <Field Name="PayTransAmt_64Format">
+          <DataField>PayTransAmt_64Format</DataField>
+        </Field>
+        <Field Name="PayTransAmt_65">
+          <DataField>PayTransAmt_65</DataField>
+        </Field>
+        <Field Name="PayTransAmt_65Format">
+          <DataField>PayTransAmt_65Format</DataField>
+        </Field>
+        <Field Name="PayTransAmt_66">
+          <DataField>PayTransAmt_66</DataField>
+        </Field>
+        <Field Name="PayTransAmt_66Format">
+          <DataField>PayTransAmt_66Format</DataField>
+        </Field>
+        <Field Name="PayTransAmt_67">
+          <DataField>PayTransAmt_67</DataField>
+        </Field>
+        <Field Name="PayTransAmt_67Format">
+          <DataField>PayTransAmt_67Format</DataField>
+        </Field>
+        <Field Name="PayTransAmt_68">
+          <DataField>PayTransAmt_68</DataField>
+        </Field>
+        <Field Name="PayTransAmt_68Format">
+          <DataField>PayTransAmt_68Format</DataField>
+        </Field>
+        <Field Name="PayTransAmt_69">
+          <DataField>PayTransAmt_69</DataField>
+        </Field>
+        <Field Name="PayTransAmt_69Format">
+          <DataField>PayTransAmt_69Format</DataField>
+        </Field>
+        <Field Name="PayTransAmt_70">
+          <DataField>PayTransAmt_70</DataField>
+        </Field>
+        <Field Name="PayTransAmt_70Format">
+          <DataField>PayTransAmt_70Format</DataField>
+        </Field>
+        <Field Name="DedTrans_1">
+          <DataField>DedTrans_1</DataField>
+        </Field>
+        <Field Name="DedTrans_2">
+          <DataField>DedTrans_2</DataField>
+        </Field>
+        <Field Name="DedTrans_3">
+          <DataField>DedTrans_3</DataField>
+        </Field>
+        <Field Name="DedTrans_4">
+          <DataField>DedTrans_4</DataField>
+        </Field>
+        <Field Name="DedTrans_5">
+          <DataField>DedTrans_5</DataField>
+        </Field>
+        <Field Name="DedTrans_6">
+          <DataField>DedTrans_6</DataField>
+        </Field>
+        <Field Name="DedTrans_7">
+          <DataField>DedTrans_7</DataField>
+        </Field>
+        <Field Name="DedTrans_8">
+          <DataField>DedTrans_8</DataField>
+        </Field>
+        <Field Name="DedTrans_9">
+          <DataField>DedTrans_9</DataField>
+        </Field>
+        <Field Name="DedTrans_10">
+          <DataField>DedTrans_10</DataField>
+        </Field>
+        <Field Name="DedTrans_11">
+          <DataField>DedTrans_11</DataField>
+        </Field>
+        <Field Name="DedTrans_12">
+          <DataField>DedTrans_12</DataField>
+        </Field>
+        <Field Name="DedTrans_13">
+          <DataField>DedTrans_13</DataField>
+        </Field>
+        <Field Name="DedTrans_14">
+          <DataField>DedTrans_14</DataField>
+        </Field>
+        <Field Name="DedTrans_15">
+          <DataField>DedTrans_15</DataField>
+        </Field>
+        <Field Name="DedTrans_16">
+          <DataField>DedTrans_16</DataField>
+        </Field>
+        <Field Name="DedTrans_17">
+          <DataField>DedTrans_17</DataField>
+        </Field>
+        <Field Name="DedTrans_18">
+          <DataField>DedTrans_18</DataField>
+        </Field>
+        <Field Name="DedTrans_19">
+          <DataField>DedTrans_19</DataField>
+        </Field>
+        <Field Name="DedTrans_20">
+          <DataField>DedTrans_20</DataField>
+        </Field>
+        <Field Name="DedTrans_21">
+          <DataField>DedTrans_21</DataField>
+        </Field>
+        <Field Name="DedTrans_22">
+          <DataField>DedTrans_22</DataField>
+        </Field>
+        <Field Name="DedTrans_23">
+          <DataField>DedTrans_23</DataField>
+        </Field>
+        <Field Name="DedTrans_24">
+          <DataField>DedTrans_24</DataField>
+        </Field>
+        <Field Name="DedTrans_25">
+          <DataField>DedTrans_25</DataField>
+        </Field>
+        <Field Name="DedTrans_26">
+          <DataField>DedTrans_26</DataField>
+        </Field>
+        <Field Name="DedTrans_27">
+          <DataField>DedTrans_27</DataField>
+        </Field>
+        <Field Name="DedTrans_28">
+          <DataField>DedTrans_28</DataField>
+        </Field>
+        <Field Name="DedTrans_29">
+          <DataField>DedTrans_29</DataField>
+        </Field>
+        <Field Name="DedTrans_30">
+          <DataField>DedTrans_30</DataField>
+        </Field>
+        <Field Name="DedTrans_31">
+          <DataField>DedTrans_31</DataField>
+        </Field>
+        <Field Name="DedTrans_32">
+          <DataField>DedTrans_32</DataField>
+        </Field>
+        <Field Name="DedTrans_33">
+          <DataField>DedTrans_33</DataField>
+        </Field>
+        <Field Name="DedTrans_34">
+          <DataField>DedTrans_34</DataField>
+        </Field>
+        <Field Name="DedTrans_35">
+          <DataField>DedTrans_35</DataField>
+        </Field>
+        <Field Name="DedTrans_36">
+          <DataField>DedTrans_36</DataField>
+        </Field>
+        <Field Name="DedTrans_37">
+          <DataField>DedTrans_37</DataField>
+        </Field>
+        <Field Name="DedTrans_38">
+          <DataField>DedTrans_38</DataField>
+        </Field>
+        <Field Name="DedTrans_39">
+          <DataField>DedTrans_39</DataField>
+        </Field>
+        <Field Name="DedTrans_40">
+          <DataField>DedTrans_40</DataField>
+        </Field>
+        <Field Name="DedTrans_41">
+          <DataField>DedTrans_41</DataField>
+        </Field>
+        <Field Name="DedTrans_42">
+          <DataField>DedTrans_42</DataField>
+        </Field>
+        <Field Name="DedTrans_43">
+          <DataField>DedTrans_43</DataField>
+        </Field>
+        <Field Name="DedTrans_44">
+          <DataField>DedTrans_44</DataField>
+        </Field>
+        <Field Name="DedTrans_45">
+          <DataField>DedTrans_45</DataField>
+        </Field>
+        <Field Name="DedTrans_46">
+          <DataField>DedTrans_46</DataField>
+        </Field>
+        <Field Name="DedTrans_47">
+          <DataField>DedTrans_47</DataField>
+        </Field>
+        <Field Name="DedTrans_48">
+          <DataField>DedTrans_48</DataField>
+        </Field>
+        <Field Name="DedTrans_49">
+          <DataField>DedTrans_49</DataField>
+        </Field>
+        <Field Name="DedTrans_50">
+          <DataField>DedTrans_50</DataField>
+        </Field>
+        <Field Name="DedTrans_51">
+          <DataField>DedTrans_51</DataField>
+        </Field>
+        <Field Name="DedTrans_52">
+          <DataField>DedTrans_52</DataField>
+        </Field>
+        <Field Name="DedTrans_53">
+          <DataField>DedTrans_53</DataField>
+        </Field>
+        <Field Name="DedTrans_54">
+          <DataField>DedTrans_54</DataField>
+        </Field>
+        <Field Name="DedTrans_55">
+          <DataField>DedTrans_55</DataField>
+        </Field>
+        <Field Name="DedTrans_56">
+          <DataField>DedTrans_56</DataField>
+        </Field>
+        <Field Name="DedTrans_57">
+          <DataField>DedTrans_57</DataField>
+        </Field>
+        <Field Name="DedTrans_58">
+          <DataField>DedTrans_58</DataField>
+        </Field>
+        <Field Name="DedTrans_59">
+          <DataField>DedTrans_59</DataField>
+        </Field>
+        <Field Name="DedTrans_60">
+          <DataField>DedTrans_60</DataField>
+        </Field>
+        <Field Name="DedTrans_61">
+          <DataField>DedTrans_61</DataField>
+        </Field>
+        <Field Name="DedTrans_62">
+          <DataField>DedTrans_62</DataField>
+        </Field>
+        <Field Name="DedTrans_63">
+          <DataField>DedTrans_63</DataField>
+        </Field>
+        <Field Name="DedTrans_64">
+          <DataField>DedTrans_64</DataField>
+        </Field>
+        <Field Name="DedTrans_65">
+          <DataField>DedTrans_65</DataField>
+        </Field>
+        <Field Name="DedTrans_66">
+          <DataField>DedTrans_66</DataField>
+        </Field>
+        <Field Name="DedTrans_67">
+          <DataField>DedTrans_67</DataField>
+        </Field>
+        <Field Name="DedTrans_68">
+          <DataField>DedTrans_68</DataField>
+        </Field>
+        <Field Name="DedTrans_69">
+          <DataField>DedTrans_69</DataField>
+        </Field>
+        <Field Name="DedTrans_70">
+          <DataField>DedTrans_70</DataField>
+        </Field>
+        <Field Name="DedTransAmt_1">
+          <DataField>DedTransAmt_1</DataField>
+        </Field>
+        <Field Name="DedTransAmt_1Format">
+          <DataField>DedTransAmt_1Format</DataField>
+        </Field>
+        <Field Name="DedTransAmt_2">
+          <DataField>DedTransAmt_2</DataField>
+        </Field>
+        <Field Name="DedTransAmt_2Format">
+          <DataField>DedTransAmt_2Format</DataField>
+        </Field>
+        <Field Name="DedTransAmt_3">
+          <DataField>DedTransAmt_3</DataField>
+        </Field>
+        <Field Name="DedTransAmt_3Format">
+          <DataField>DedTransAmt_3Format</DataField>
+        </Field>
+        <Field Name="DedTransAmt_4">
+          <DataField>DedTransAmt_4</DataField>
+        </Field>
+        <Field Name="DedTransAmt_4Format">
+          <DataField>DedTransAmt_4Format</DataField>
+        </Field>
+        <Field Name="DedTransAmt_5">
+          <DataField>DedTransAmt_5</DataField>
+        </Field>
+        <Field Name="DedTransAmt_5Format">
+          <DataField>DedTransAmt_5Format</DataField>
+        </Field>
+        <Field Name="DedTransAmt_6">
+          <DataField>DedTransAmt_6</DataField>
+        </Field>
+        <Field Name="DedTransAmt_6Format">
+          <DataField>DedTransAmt_6Format</DataField>
+        </Field>
+        <Field Name="DedTransAmt_7">
+          <DataField>DedTransAmt_7</DataField>
+        </Field>
+        <Field Name="DedTransAmt_7Format">
+          <DataField>DedTransAmt_7Format</DataField>
+        </Field>
+        <Field Name="DedTransAmt_8">
+          <DataField>DedTransAmt_8</DataField>
+        </Field>
+        <Field Name="DedTransAmt_8Format">
+          <DataField>DedTransAmt_8Format</DataField>
+        </Field>
+        <Field Name="DedTransAmt_9">
+          <DataField>DedTransAmt_9</DataField>
+        </Field>
+        <Field Name="DedTransAmt_9Format">
+          <DataField>DedTransAmt_9Format</DataField>
+        </Field>
+        <Field Name="DedTransAmt_10">
+          <DataField>DedTransAmt_10</DataField>
+        </Field>
+        <Field Name="DedTransAmt_10Format">
+          <DataField>DedTransAmt_10Format</DataField>
+        </Field>
+        <Field Name="DedTransAmt_11">
+          <DataField>DedTransAmt_11</DataField>
+        </Field>
+        <Field Name="DedTransAmt_11Format">
+          <DataField>DedTransAmt_11Format</DataField>
+        </Field>
+        <Field Name="DedTransAmt_12">
+          <DataField>DedTransAmt_12</DataField>
+        </Field>
+        <Field Name="DedTransAmt_12Format">
+          <DataField>DedTransAmt_12Format</DataField>
+        </Field>
+        <Field Name="DedTransAmt_13">
+          <DataField>DedTransAmt_13</DataField>
+        </Field>
+        <Field Name="DedTransAmt_13Format">
+          <DataField>DedTransAmt_13Format</DataField>
+        </Field>
+        <Field Name="DedTransAmt_14">
+          <DataField>DedTransAmt_14</DataField>
+        </Field>
+        <Field Name="DedTransAmt_14Format">
+          <DataField>DedTransAmt_14Format</DataField>
+        </Field>
+        <Field Name="DedTransAmt_15">
+          <DataField>DedTransAmt_15</DataField>
+        </Field>
+        <Field Name="DedTransAmt_15Format">
+          <DataField>DedTransAmt_15Format</DataField>
+        </Field>
+        <Field Name="DedTransAmt_16">
+          <DataField>DedTransAmt_16</DataField>
+        </Field>
+        <Field Name="DedTransAmt_16Format">
+          <DataField>DedTransAmt_16Format</DataField>
+        </Field>
+        <Field Name="DedTransAmt_17">
+          <DataField>DedTransAmt_17</DataField>
+        </Field>
+        <Field Name="DedTransAmt_17Format">
+          <DataField>DedTransAmt_17Format</DataField>
+        </Field>
+        <Field Name="DedTransAmt_18">
+          <DataField>DedTransAmt_18</DataField>
+        </Field>
+        <Field Name="DedTransAmt_18Format">
+          <DataField>DedTransAmt_18Format</DataField>
+        </Field>
+        <Field Name="DedTransAmt_19">
+          <DataField>DedTransAmt_19</DataField>
+        </Field>
+        <Field Name="DedTransAmt_19Format">
+          <DataField>DedTransAmt_19Format</DataField>
+        </Field>
+        <Field Name="DedTransAmt_20">
+          <DataField>DedTransAmt_20</DataField>
+        </Field>
+        <Field Name="DedTransAmt_20Format">
+          <DataField>DedTransAmt_20Format</DataField>
+        </Field>
+        <Field Name="DedTransAmt_21">
+          <DataField>DedTransAmt_21</DataField>
+        </Field>
+        <Field Name="DedTransAmt_21Format">
+          <DataField>DedTransAmt_21Format</DataField>
+        </Field>
+        <Field Name="DedTransAmt_22">
+          <DataField>DedTransAmt_22</DataField>
+        </Field>
+        <Field Name="DedTransAmt_22Format">
+          <DataField>DedTransAmt_22Format</DataField>
+        </Field>
+        <Field Name="DedTransAmt_23">
+          <DataField>DedTransAmt_23</DataField>
+        </Field>
+        <Field Name="DedTransAmt_23Format">
+          <DataField>DedTransAmt_23Format</DataField>
+        </Field>
+        <Field Name="DedTransAmt_24">
+          <DataField>DedTransAmt_24</DataField>
+        </Field>
+        <Field Name="DedTransAmt_24Format">
+          <DataField>DedTransAmt_24Format</DataField>
+        </Field>
+        <Field Name="DedTransAmt_25">
+          <DataField>DedTransAmt_25</DataField>
+        </Field>
+        <Field Name="DedTransAmt_25Format">
+          <DataField>DedTransAmt_25Format</DataField>
+        </Field>
+        <Field Name="DedTransAmt_26">
+          <DataField>DedTransAmt_26</DataField>
+        </Field>
+        <Field Name="DedTransAmt_26Format">
+          <DataField>DedTransAmt_26Format</DataField>
+        </Field>
+        <Field Name="DedTransAmt_27">
+          <DataField>DedTransAmt_27</DataField>
+        </Field>
+        <Field Name="DedTransAmt_27Format">
+          <DataField>DedTransAmt_27Format</DataField>
+        </Field>
+        <Field Name="DedTransAmt_28">
+          <DataField>DedTransAmt_28</DataField>
+        </Field>
+        <Field Name="DedTransAmt_28Format">
+          <DataField>DedTransAmt_28Format</DataField>
+        </Field>
+        <Field Name="DedTransAmt_29">
+          <DataField>DedTransAmt_29</DataField>
+        </Field>
+        <Field Name="DedTransAmt_29Format">
+          <DataField>DedTransAmt_29Format</DataField>
+        </Field>
+        <Field Name="DedTransAmt_30">
+          <DataField>DedTransAmt_30</DataField>
+        </Field>
+        <Field Name="DedTransAmt_30Format">
+          <DataField>DedTransAmt_30Format</DataField>
+        </Field>
+        <Field Name="DedTransAmt_31">
+          <DataField>DedTransAmt_31</DataField>
+        </Field>
+        <Field Name="DedTransAmt_31Format">
+          <DataField>DedTransAmt_31Format</DataField>
+        </Field>
+        <Field Name="DedTransAmt_32">
+          <DataField>DedTransAmt_32</DataField>
+        </Field>
+        <Field Name="DedTransAmt_32Format">
+          <DataField>DedTransAmt_32Format</DataField>
+        </Field>
+        <Field Name="DedTransAmt_33">
+          <DataField>DedTransAmt_33</DataField>
+        </Field>
+        <Field Name="DedTransAmt_33Format">
+          <DataField>DedTransAmt_33Format</DataField>
+        </Field>
+        <Field Name="DedTransAmt_34">
+          <DataField>DedTransAmt_34</DataField>
+        </Field>
+        <Field Name="DedTransAmt_34Format">
+          <DataField>DedTransAmt_34Format</DataField>
+        </Field>
+        <Field Name="DedTransAmt_35">
+          <DataField>DedTransAmt_35</DataField>
+        </Field>
+        <Field Name="DedTransAmt_35Format">
+          <DataField>DedTransAmt_35Format</DataField>
+        </Field>
+        <Field Name="DedTransAmt_36">
+          <DataField>DedTransAmt_36</DataField>
+        </Field>
+        <Field Name="DedTransAmt_36Format">
+          <DataField>DedTransAmt_36Format</DataField>
+        </Field>
+        <Field Name="DedTransAmt_37">
+          <DataField>DedTransAmt_37</DataField>
+        </Field>
+        <Field Name="DedTransAmt_37Format">
+          <DataField>DedTransAmt_37Format</DataField>
+        </Field>
+        <Field Name="DedTransAmt_38">
+          <DataField>DedTransAmt_38</DataField>
+        </Field>
+        <Field Name="DedTransAmt_38Format">
+          <DataField>DedTransAmt_38Format</DataField>
+        </Field>
+        <Field Name="DedTransAmt_39">
+          <DataField>DedTransAmt_39</DataField>
+        </Field>
+        <Field Name="DedTransAmt_39Format">
+          <DataField>DedTransAmt_39Format</DataField>
+        </Field>
+        <Field Name="DedTransAmt_40">
+          <DataField>DedTransAmt_40</DataField>
+        </Field>
+        <Field Name="DedTransAmt_40Format">
+          <DataField>DedTransAmt_40Format</DataField>
+        </Field>
+        <Field Name="DedTransAmt_41">
+          <DataField>DedTransAmt_41</DataField>
+        </Field>
+        <Field Name="DedTransAmt_41Format">
+          <DataField>DedTransAmt_41Format</DataField>
+        </Field>
+        <Field Name="DedTransAmt_42">
+          <DataField>DedTransAmt_42</DataField>
+        </Field>
+        <Field Name="DedTransAmt_42Format">
+          <DataField>DedTransAmt_42Format</DataField>
+        </Field>
+        <Field Name="DedTransAmt_43">
+          <DataField>DedTransAmt_43</DataField>
+        </Field>
+        <Field Name="DedTransAmt_43Format">
+          <DataField>DedTransAmt_43Format</DataField>
+        </Field>
+        <Field Name="DedTransAmt_44">
+          <DataField>DedTransAmt_44</DataField>
+        </Field>
+        <Field Name="DedTransAmt_44Format">
+          <DataField>DedTransAmt_44Format</DataField>
+        </Field>
+        <Field Name="DedTransAmt_45">
+          <DataField>DedTransAmt_45</DataField>
+        </Field>
+        <Field Name="DedTransAmt_45Format">
+          <DataField>DedTransAmt_45Format</DataField>
+        </Field>
+        <Field Name="DedTransAmt_46">
+          <DataField>DedTransAmt_46</DataField>
+        </Field>
+        <Field Name="DedTransAmt_46Format">
+          <DataField>DedTransAmt_46Format</DataField>
+        </Field>
+        <Field Name="DedTransAmt_47">
+          <DataField>DedTransAmt_47</DataField>
+        </Field>
+        <Field Name="DedTransAmt_47Format">
+          <DataField>DedTransAmt_47Format</DataField>
+        </Field>
+        <Field Name="DedTransAmt_48">
+          <DataField>DedTransAmt_48</DataField>
+        </Field>
+        <Field Name="DedTransAmt_48Format">
+          <DataField>DedTransAmt_48Format</DataField>
+        </Field>
+        <Field Name="DedTransAmt_49">
+          <DataField>DedTransAmt_49</DataField>
+        </Field>
+        <Field Name="DedTransAmt_49Format">
+          <DataField>DedTransAmt_49Format</DataField>
+        </Field>
+        <Field Name="DedTransAmt_50">
+          <DataField>DedTransAmt_50</DataField>
+        </Field>
+        <Field Name="DedTransAmt_50Format">
+          <DataField>DedTransAmt_50Format</DataField>
+        </Field>
+        <Field Name="DedTransAmt_51">
+          <DataField>DedTransAmt_51</DataField>
+        </Field>
+        <Field Name="DedTransAmt_51Format">
+          <DataField>DedTransAmt_51Format</DataField>
+        </Field>
+        <Field Name="DedTransAmt_52">
+          <DataField>DedTransAmt_52</DataField>
+        </Field>
+        <Field Name="DedTransAmt_52Format">
+          <DataField>DedTransAmt_52Format</DataField>
+        </Field>
+        <Field Name="DedTransAmt_53">
+          <DataField>DedTransAmt_53</DataField>
+        </Field>
+        <Field Name="DedTransAmt_53Format">
+          <DataField>DedTransAmt_53Format</DataField>
+        </Field>
+        <Field Name="DedTransAmt_54">
+          <DataField>DedTransAmt_54</DataField>
+        </Field>
+        <Field Name="DedTransAmt_54Format">
+          <DataField>DedTransAmt_54Format</DataField>
+        </Field>
+        <Field Name="DedTransAmt_55">
+          <DataField>DedTransAmt_55</DataField>
+        </Field>
+        <Field Name="DedTransAmt_55Format">
+          <DataField>DedTransAmt_55Format</DataField>
+        </Field>
+        <Field Name="DedTransAmt_56">
+          <DataField>DedTransAmt_56</DataField>
+        </Field>
+        <Field Name="DedTransAmt_56Format">
+          <DataField>DedTransAmt_56Format</DataField>
+        </Field>
+        <Field Name="DedTransAmt_57">
+          <DataField>DedTransAmt_57</DataField>
+        </Field>
+        <Field Name="DedTransAmt_57Format">
+          <DataField>DedTransAmt_57Format</DataField>
+        </Field>
+        <Field Name="DedTransAmt_58">
+          <DataField>DedTransAmt_58</DataField>
+        </Field>
+        <Field Name="DedTransAmt_58Format">
+          <DataField>DedTransAmt_58Format</DataField>
+        </Field>
+        <Field Name="DedTransAmt_59">
+          <DataField>DedTransAmt_59</DataField>
+        </Field>
+        <Field Name="DedTransAmt_59Format">
+          <DataField>DedTransAmt_59Format</DataField>
+        </Field>
+        <Field Name="DedTransAmt_60">
+          <DataField>DedTransAmt_60</DataField>
+        </Field>
+        <Field Name="DedTransAmt_60Format">
+          <DataField>DedTransAmt_60Format</DataField>
+        </Field>
+        <Field Name="DedTransAmt_61">
+          <DataField>DedTransAmt_61</DataField>
+        </Field>
+        <Field Name="DedTransAmt_61Format">
+          <DataField>DedTransAmt_61Format</DataField>
+        </Field>
+        <Field Name="DedTransAmt_62">
+          <DataField>DedTransAmt_62</DataField>
+        </Field>
+        <Field Name="DedTransAmt_62Format">
+          <DataField>DedTransAmt_62Format</DataField>
+        </Field>
+        <Field Name="DedTransAmt_63">
+          <DataField>DedTransAmt_63</DataField>
+        </Field>
+        <Field Name="DedTransAmt_63Format">
+          <DataField>DedTransAmt_63Format</DataField>
+        </Field>
+        <Field Name="DedTransAmt_64">
+          <DataField>DedTransAmt_64</DataField>
+        </Field>
+        <Field Name="DedTransAmt_64Format">
+          <DataField>DedTransAmt_64Format</DataField>
+        </Field>
+        <Field Name="DedTransAmt_65">
+          <DataField>DedTransAmt_65</DataField>
+        </Field>
+        <Field Name="DedTransAmt_65Format">
+          <DataField>DedTransAmt_65Format</DataField>
+        </Field>
+        <Field Name="DedTransAmt_66">
+          <DataField>DedTransAmt_66</DataField>
+        </Field>
+        <Field Name="DedTransAmt_66Format">
+          <DataField>DedTransAmt_66Format</DataField>
+        </Field>
+        <Field Name="DedTransAmt_67">
+          <DataField>DedTransAmt_67</DataField>
+        </Field>
+        <Field Name="DedTransAmt_67Format">
+          <DataField>DedTransAmt_67Format</DataField>
+        </Field>
+        <Field Name="DedTransAmt_68">
+          <DataField>DedTransAmt_68</DataField>
+        </Field>
+        <Field Name="DedTransAmt_68Format">
+          <DataField>DedTransAmt_68Format</DataField>
+        </Field>
+        <Field Name="DedTransAmt_69">
+          <DataField>DedTransAmt_69</DataField>
+        </Field>
+        <Field Name="DedTransAmt_69Format">
+          <DataField>DedTransAmt_69Format</DataField>
+        </Field>
+        <Field Name="DedTransAmt_70">
+          <DataField>DedTransAmt_70</DataField>
+        </Field>
+        <Field Name="DedTransAmt_70Format">
+          <DataField>DedTransAmt_70Format</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

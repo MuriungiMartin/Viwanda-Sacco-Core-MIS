@@ -1,0 +1,358 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <ReportParameters>
+    <ReportParameter Name="PhoneNo_CustCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>PhoneNo_CustCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>PhoneNo_CustCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="DocType_CustLedgEntryCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>DocType_CustLedgEntryCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>DocType_CustLedgEntryCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="DocNo_CustLedgEntryCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>DocNo_CustLedgEntryCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>DocNo_CustLedgEntryCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="Desc_CustLedgEntryCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>Desc_CustLedgEntryCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Desc_CustLedgEntryCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="EntryNo_CustLedgEntryCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>EntryNo_CustLedgEntryCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>EntryNo_CustLedgEntryCaption</Prompt>
+    </ReportParameter>
+  </ReportParameters>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="ReportForNavId_6836">
+          <DataField>ReportForNavId_6836</DataField>
+        </Field>
+        <Field Name="TodayFormatted">
+          <DataField>TodayFormatted</DataField>
+        </Field>
+        <Field Name="PeriodCustDatetFilter">
+          <DataField>PeriodCustDatetFilter</DataField>
+        </Field>
+        <Field Name="CompanyName">
+          <DataField>CompanyName</DataField>
+        </Field>
+        <Field Name="PrintAmountsInLCY">
+          <DataField>PrintAmountsInLCY</DataField>
+        </Field>
+        <Field Name="ExcludeBalanceOnly">
+          <DataField>ExcludeBalanceOnly</DataField>
+        </Field>
+        <Field Name="CustFilterCaption">
+          <DataField>CustFilterCaption</DataField>
+        </Field>
+        <Field Name="CustFilter">
+          <DataField>CustFilter</DataField>
+        </Field>
+        <Field Name="AmountCaption">
+          <DataField>AmountCaption</DataField>
+        </Field>
+        <Field Name="RemainingAmtCaption">
+          <DataField>RemainingAmtCaption</DataField>
+        </Field>
+        <Field Name="No_Cust">
+          <DataField>No_Cust</DataField>
+        </Field>
+        <Field Name="Name_Cust">
+          <DataField>Name_Cust</DataField>
+        </Field>
+        <Field Name="PhoneNo_Cust">
+          <DataField>PhoneNo_Cust</DataField>
+        </Field>
+        <Field Name="PageGroupNo">
+          <DataField>PageGroupNo</DataField>
+        </Field>
+        <Field Name="StartBalanceLCY">
+          <DataField>StartBalanceLCY</DataField>
+        </Field>
+        <Field Name="StartBalanceLCYFormat">
+          <DataField>StartBalanceLCYFormat</DataField>
+        </Field>
+        <Field Name="StartBalAdjLCY">
+          <DataField>StartBalAdjLCY</DataField>
+        </Field>
+        <Field Name="StartBalAdjLCYFormat">
+          <DataField>StartBalAdjLCYFormat</DataField>
+        </Field>
+        <Field Name="CustBalanceLCY">
+          <DataField>CustBalanceLCY</DataField>
+        </Field>
+        <Field Name="CustBalanceLCYFormat">
+          <DataField>CustBalanceLCYFormat</DataField>
+        </Field>
+        <Field Name="CustLedgerEntryAmtLCY">
+          <DataField>CustLedgerEntryAmtLCY</DataField>
+        </Field>
+        <Field Name="CustLedgerEntryAmtLCYFormat">
+          <DataField>CustLedgerEntryAmtLCYFormat</DataField>
+        </Field>
+        <Field Name="StartBalanceLCYAdjLCY">
+          <DataField>StartBalanceLCYAdjLCY</DataField>
+        </Field>
+        <Field Name="StartBalanceLCYAdjLCYFormat">
+          <DataField>StartBalanceLCYAdjLCYFormat</DataField>
+        </Field>
+        <Field Name="StrtBalLCYCustLedgEntryAmt">
+          <DataField>StrtBalLCYCustLedgEntryAmt</DataField>
+        </Field>
+        <Field Name="StrtBalLCYCustLedgEntryAmtFormat">
+          <DataField>StrtBalLCYCustLedgEntryAmtFormat</DataField>
+        </Field>
+        <Field Name="CustDetailTrialBalCaption">
+          <DataField>CustDetailTrialBalCaption</DataField>
+        </Field>
+        <Field Name="PageNoCaption">
+          <DataField>PageNoCaption</DataField>
+        </Field>
+        <Field Name="AllAmtsLCYCaption">
+          <DataField>AllAmtsLCYCaption</DataField>
+        </Field>
+        <Field Name="RepInclCustsBalCptn">
+          <DataField>RepInclCustsBalCptn</DataField>
+        </Field>
+        <Field Name="PostingDateCaption">
+          <DataField>PostingDateCaption</DataField>
+        </Field>
+        <Field Name="DueDateCaption">
+          <DataField>DueDateCaption</DataField>
+        </Field>
+        <Field Name="BalanceLCYCaption">
+          <DataField>BalanceLCYCaption</DataField>
+        </Field>
+        <Field Name="AdjOpeningBalCaption">
+          <DataField>AdjOpeningBalCaption</DataField>
+        </Field>
+        <Field Name="BeforePeriodCaption">
+          <DataField>BeforePeriodCaption</DataField>
+        </Field>
+        <Field Name="TotalCaption">
+          <DataField>TotalCaption</DataField>
+        </Field>
+        <Field Name="OpeningBalCaption">
+          <DataField>OpeningBalCaption</DataField>
+        </Field>
+        <Field Name="ReportForNavId_8503">
+          <DataField>ReportForNavId_8503</DataField>
+        </Field>
+        <Field Name="PostDate_CustLedgEntry">
+          <DataField>PostDate_CustLedgEntry</DataField>
+        </Field>
+        <Field Name="DocType_CustLedgEntry">
+          <DataField>DocType_CustLedgEntry</DataField>
+        </Field>
+        <Field Name="DocNo_CustLedgEntry">
+          <DataField>DocNo_CustLedgEntry</DataField>
+        </Field>
+        <Field Name="Desc_CustLedgEntry">
+          <DataField>Desc_CustLedgEntry</DataField>
+        </Field>
+        <Field Name="CustAmount">
+          <DataField>CustAmount</DataField>
+        </Field>
+        <Field Name="CustAmountFormat">
+          <DataField>CustAmountFormat</DataField>
+        </Field>
+        <Field Name="CustRemainAmount">
+          <DataField>CustRemainAmount</DataField>
+        </Field>
+        <Field Name="CustRemainAmountFormat">
+          <DataField>CustRemainAmountFormat</DataField>
+        </Field>
+        <Field Name="CustEntryDueDate">
+          <DataField>CustEntryDueDate</DataField>
+        </Field>
+        <Field Name="EntryNo_CustLedgEntry">
+          <DataField>EntryNo_CustLedgEntry</DataField>
+        </Field>
+        <Field Name="CustCurrencyCode">
+          <DataField>CustCurrencyCode</DataField>
+        </Field>
+        <Field Name="CustBalanceLCY1">
+          <DataField>CustBalanceLCY1</DataField>
+        </Field>
+        <Field Name="CustBalanceLCY1Format">
+          <DataField>CustBalanceLCY1Format</DataField>
+        </Field>
+        <Field Name="ClosedByDocNo">
+          <DataField>ClosedByDocNo</DataField>
+        </Field>
+        <Field Name="CreationDocNo">
+          <DataField>CreationDocNo</DataField>
+        </Field>
+        <Field Name="ReportForNavId_6942">
+          <DataField>ReportForNavId_6942</DataField>
+        </Field>
+        <Field Name="EntryType_DtldCustLedgEntry">
+          <DataField>EntryType_DtldCustLedgEntry</DataField>
+        </Field>
+        <Field Name="Correction">
+          <DataField>Correction</DataField>
+        </Field>
+        <Field Name="CorrectionFormat">
+          <DataField>CorrectionFormat</DataField>
+        </Field>
+        <Field Name="CustBalanceLCY2">
+          <DataField>CustBalanceLCY2</DataField>
+        </Field>
+        <Field Name="CustBalanceLCY2Format">
+          <DataField>CustBalanceLCY2Format</DataField>
+        </Field>
+        <Field Name="ApplicationRounding">
+          <DataField>ApplicationRounding</DataField>
+        </Field>
+        <Field Name="ApplicationRoundingFormat">
+          <DataField>ApplicationRoundingFormat</DataField>
+        </Field>
+        <Field Name="CustLedgerEntryAmtLCY2">
+          <DataField>CustLedgerEntryAmtLCY2</DataField>
+        </Field>
+        <Field Name="CustLedgerEntryAmtLCY2Format">
+          <DataField>CustLedgerEntryAmtLCY2Format</DataField>
+        </Field>
+        <Field Name="StrtBalLCYCustLedgEntryAmt2">
+          <DataField>StrtBalLCYCustLedgEntryAmt2</DataField>
+        </Field>
+        <Field Name="StrtBalLCYCustLedgEntryAmt2Format">
+          <DataField>StrtBalLCYCustLedgEntryAmt2Format</DataField>
+        </Field>
+        <Field Name="ReportForNavId_5444">
+          <DataField>ReportForNavId_5444</DataField>
+        </Field>
+        <Field Name="Name1_Cust">
+          <DataField>Name1_Cust</DataField>
+        </Field>
+        <Field Name="CustBalanceLCY4">
+          <DataField>CustBalanceLCY4</DataField>
+        </Field>
+        <Field Name="CustBalanceLCY4Format">
+          <DataField>CustBalanceLCY4Format</DataField>
+        </Field>
+        <Field Name="StartBalanceLCY2">
+          <DataField>StartBalanceLCY2</DataField>
+        </Field>
+        <Field Name="StartBalanceLCY2Format">
+          <DataField>StartBalanceLCY2Format</DataField>
+        </Field>
+        <Field Name="StartBalAdjLCY2">
+          <DataField>StartBalAdjLCY2</DataField>
+        </Field>
+        <Field Name="StartBalAdjLCY2Format">
+          <DataField>StartBalAdjLCY2Format</DataField>
+        </Field>
+        <Field Name="CustBalStBalStBalAdjLCY">
+          <DataField>CustBalStBalStBalAdjLCY</DataField>
+        </Field>
+        <Field Name="CustBalStBalStBalAdjLCYFormat">
+          <DataField>CustBalStBalStBalAdjLCYFormat</DataField>
+        </Field>
+        <Field Name="StartBalanceLCYAdjLCY2">
+          <DataField>StartBalanceLCYAdjLCY2</DataField>
+        </Field>
+        <Field Name="StartBalanceLCYAdjLCY2Format">
+          <DataField>StartBalanceLCYAdjLCY2Format</DataField>
+        </Field>
+        <Field Name="StrtBalLCYCustLedgEntryAmt3">
+          <DataField>StrtBalLCYCustLedgEntryAmt3</DataField>
+        </Field>
+        <Field Name="StrtBalLCYCustLedgEntryAmt3Format">
+          <DataField>StrtBalLCYCustLedgEntryAmt3Format</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

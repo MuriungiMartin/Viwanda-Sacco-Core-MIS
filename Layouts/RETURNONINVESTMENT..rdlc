@@ -1,0 +1,254 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="AsAt">
+          <DataField>AsAt</DataField>
+        </Field>
+        <Field Name="StartDate">
+          <DataField>StartDate</DataField>
+        </Field>
+        <Field Name="FinancialYear">
+          <DataField>FinancialYear</DataField>
+        </Field>
+        <Field Name="name">
+          <DataField>name</DataField>
+        </Field>
+        <Field Name="CoreCapital">
+          <DataField>CoreCapital</DataField>
+        </Field>
+        <Field Name="CoreCapitalFormat">
+          <DataField>CoreCapitalFormat</DataField>
+        </Field>
+        <Field Name="TotalAssets">
+          <DataField>TotalAssets</DataField>
+        </Field>
+        <Field Name="TotalAssetsFormat">
+          <DataField>TotalAssetsFormat</DataField>
+        </Field>
+        <Field Name="TotalDeposits">
+          <DataField>TotalDeposits</DataField>
+        </Field>
+        <Field Name="TotalDepositsFormat">
+          <DataField>TotalDepositsFormat</DataField>
+        </Field>
+        <Field Name="Nonearningassets">
+          <DataField>Nonearningassets</DataField>
+        </Field>
+        <Field Name="NonearningassetsFormat">
+          <DataField>NonearningassetsFormat</DataField>
+        </Field>
+        <Field Name="FinancialAssets">
+          <DataField>FinancialAssets</DataField>
+        </Field>
+        <Field Name="FinancialAssetsFormat">
+          <DataField>FinancialAssetsFormat</DataField>
+        </Field>
+        <Field Name="SubsidiaryandRelated">
+          <DataField>SubsidiaryandRelated</DataField>
+        </Field>
+        <Field Name="SubsidiaryandRelatedFormat">
+          <DataField>SubsidiaryandRelatedFormat</DataField>
+        </Field>
+        <Field Name="Equityinvestment">
+          <DataField>Equityinvestment</DataField>
+        </Field>
+        <Field Name="EquityinvestmentFormat">
+          <DataField>EquityinvestmentFormat</DataField>
+        </Field>
+        <Field Name="Otherinvestments">
+          <DataField>Otherinvestments</DataField>
+        </Field>
+        <Field Name="OtherinvestmentsFormat">
+          <DataField>OtherinvestmentsFormat</DataField>
+        </Field>
+        <Field Name="LandBuilding">
+          <DataField>LandBuilding</DataField>
+        </Field>
+        <Field Name="LandBuildingFormat">
+          <DataField>LandBuildingFormat</DataField>
+        </Field>
+        <Field Name="OtherassetsLandBuilding">
+          <DataField>OtherassetsLandBuilding</DataField>
+        </Field>
+        <Field Name="OtherassetsLandBuildingFormat">
+          <DataField>OtherassetsLandBuildingFormat</DataField>
+        </Field>
+        <Field Name="LandBuildingstoAssetsRatio">
+          <DataField>LandBuildingstoAssetsRatio</DataField>
+        </Field>
+        <Field Name="LandBuildingstoAssetsRatioFormat">
+          <DataField>LandBuildingstoAssetsRatioFormat</DataField>
+        </Field>
+        <Field Name="MaxLandBuildingtoAssetrequirement">
+          <DataField>MaxLandBuildingtoAssetrequirement</DataField>
+        </Field>
+        <Field Name="MaxLandBuildingtoAssetrequirementFormat">
+          <DataField>MaxLandBuildingtoAssetrequirementFormat</DataField>
+        </Field>
+        <Field Name="Excessdeficiency2">
+          <DataField>Excessdeficiency2</DataField>
+        </Field>
+        <Field Name="Excessdeficiency2Format">
+          <DataField>Excessdeficiency2Format</DataField>
+        </Field>
+        <Field Name="FinancialinvestmentstoCorecapital">
+          <DataField>FinancialinvestmentstoCorecapital</DataField>
+        </Field>
+        <Field Name="FinancialinvestmentstoCorecapitalFormat">
+          <DataField>FinancialinvestmentstoCorecapitalFormat</DataField>
+        </Field>
+        <Field Name="MaximumfinancialinvestmentstoCorecapital">
+          <DataField>MaximumfinancialinvestmentstoCorecapital</DataField>
+        </Field>
+        <Field Name="MaximumfinancialinvestmentstoCorecapitalFormat">
+          <DataField>MaximumfinancialinvestmentstoCorecapitalFormat</DataField>
+        </Field>
+        <Field Name="ExcessCoreCapital">
+          <DataField>ExcessCoreCapital</DataField>
+        </Field>
+        <Field Name="ExcessCoreCapitalFormat">
+          <DataField>ExcessCoreCapitalFormat</DataField>
+        </Field>
+        <Field Name="EquityinvestmentstoCoreCapitalRatio">
+          <DataField>EquityinvestmentstoCoreCapitalRatio</DataField>
+        </Field>
+        <Field Name="EquityinvestmentstoCoreCapitalRatioFormat">
+          <DataField>EquityinvestmentstoCoreCapitalRatioFormat</DataField>
+        </Field>
+        <Field Name="MaxfinancialinvestmentstoTotalDepositsliablitiesRatio">
+          <DataField>MaxfinancialinvestmentstoTotalDepositsliablitiesRatio</DataField>
+        </Field>
+        <Field Name="MaxfinancialinvestmentstoTotalDepositsliablitiesRatioFormat">
+          <DataField>MaxfinancialinvestmentstoTotalDepositsliablitiesRatioFormat</DataField>
+        </Field>
+        <Field Name="ExcessEquity">
+          <DataField>ExcessEquity</DataField>
+        </Field>
+        <Field Name="ExcessEquityFormat">
+          <DataField>ExcessEquityFormat</DataField>
+        </Field>
+        <Field Name="SubsidiaryrelatedentityinvestmenttoCoreCapitalRatio">
+          <DataField>SubsidiaryrelatedentityinvestmenttoCoreCapitalRatio</DataField>
+        </Field>
+        <Field Name="SubsidiaryrelatedentityinvestmenttoCoreCapitalRatioFormat">
+          <DataField>SubsidiaryrelatedentityinvestmenttoCoreCapitalRatioFormat</DataField>
+        </Field>
+        <Field Name="MaximumSubsidiaryinvestmenttoTotalassetsRatio">
+          <DataField>MaximumSubsidiaryinvestmenttoTotalassetsRatio</DataField>
+        </Field>
+        <Field Name="MaximumSubsidiaryinvestmenttoTotalassetsRatioFormat">
+          <DataField>MaximumSubsidiaryinvestmenttoTotalassetsRatioFormat</DataField>
+        </Field>
+        <Field Name="ExcessSubsidiary">
+          <DataField>ExcessSubsidiary</DataField>
+        </Field>
+        <Field Name="ExcessSubsidiaryFormat">
+          <DataField>ExcessSubsidiaryFormat</DataField>
+        </Field>
+        <Field Name="OtherinvestmentstoCoreCapitalRatio">
+          <DataField>OtherinvestmentstoCoreCapitalRatio</DataField>
+        </Field>
+        <Field Name="OtherinvestmentstoCoreCapitalRatioFormat">
+          <DataField>OtherinvestmentstoCoreCapitalRatioFormat</DataField>
+        </Field>
+        <Field Name="MaximumOtherinvestmentstoCoreCapital">
+          <DataField>MaximumOtherinvestmentstoCoreCapital</DataField>
+        </Field>
+        <Field Name="MaximumOtherinvestmentstoCoreCapitalFormat">
+          <DataField>MaximumOtherinvestmentstoCoreCapitalFormat</DataField>
+        </Field>
+        <Field Name="ExcessOtherInvestment">
+          <DataField>ExcessOtherInvestment</DataField>
+        </Field>
+        <Field Name="ExcessOtherInvestmentFormat">
+          <DataField>ExcessOtherInvestmentFormat</DataField>
+        </Field>
+        <Field Name="MaxLandBuildingtoAssetrequirementNew">
+          <DataField>MaxLandBuildingtoAssetrequirementNew</DataField>
+        </Field>
+        <Field Name="MaxLandBuildingtoAssetrequirementNewFormat">
+          <DataField>MaxLandBuildingtoAssetrequirementNewFormat</DataField>
+        </Field>
+        <Field Name="LandBuildingEquipmentNew">
+          <DataField>LandBuildingEquipmentNew</DataField>
+        </Field>
+        <Field Name="LandBuildingEquipmentNewFormat">
+          <DataField>LandBuildingEquipmentNewFormat</DataField>
+        </Field>
+        <Field Name="Excessdeficiency3">
+          <DataField>Excessdeficiency3</DataField>
+        </Field>
+        <Field Name="Excessdeficiency3Format">
+          <DataField>Excessdeficiency3Format</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

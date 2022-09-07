@@ -1,0 +1,319 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <ReportParameters>
+    <ReportParameter Name="CI_NameCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>CI_NameCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>CI_NameCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="CI_AddressCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>CI_AddressCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>CI_AddressCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="CI_Address2Caption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>CI_Address2Caption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>CI_Address2Caption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="CI_PhoneNoCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>CI_PhoneNoCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>CI_PhoneNoCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="CI_PictureCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>CI_PictureCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>CI_PictureCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="CI_CityCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>CI_CityCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>CI_CityCaption</Prompt>
+    </ReportParameter>
+  </ReportParameters>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="ReportForNavId_6437">
+          <DataField>ReportForNavId_6437</DataField>
+        </Field>
+        <Field Name="CI_Name">
+          <DataField>CI_Name</DataField>
+        </Field>
+        <Field Name="CI_Address">
+          <DataField>CI_Address</DataField>
+        </Field>
+        <Field Name="CI_Address2">
+          <DataField>CI_Address2</DataField>
+        </Field>
+        <Field Name="CI_PhoneNo">
+          <DataField>CI_PhoneNo</DataField>
+        </Field>
+        <Field Name="CI_Picture">
+          <DataField>CI_Picture</DataField>
+        </Field>
+        <Field Name="CI_City">
+          <DataField>CI_City</DataField>
+        </Field>
+        <Field Name="DOCNAME">
+          <DataField>DOCNAME</DataField>
+        </Field>
+        <Field Name="VarApproverI">
+          <DataField>VarApproverI</DataField>
+        </Field>
+        <Field Name="VarApproverIDate">
+          <DataField>VarApproverIDate</DataField>
+        </Field>
+        <Field Name="VarApproverII">
+          <DataField>VarApproverII</DataField>
+        </Field>
+        <Field Name="VarApproverIIDate">
+          <DataField>VarApproverIIDate</DataField>
+        </Field>
+        <Field Name="UserId">
+          <DataField>UserId</DataField>
+        </Field>
+        <Field Name="NumberText_1_">
+          <DataField>NumberText_1_</DataField>
+        </Field>
+        <Field Name="TTotal">
+          <DataField>TTotal</DataField>
+        </Field>
+        <Field Name="TTotalFormat">
+          <DataField>TTotalFormat</DataField>
+        </Field>
+        <Field Name="TIME_PRINTED_____FORMAT_TIME_">
+          <DataField>TIME_PRINTED_____FORMAT_TIME_</DataField>
+        </Field>
+        <Field Name="DATE_PRINTED_____FORMAT_TODAY_0_4_">
+          <DataField>DATE_PRINTED_____FORMAT_TODAY_0_4_</DataField>
+        </Field>
+        <Field Name="CurrCode_Control1102756010">
+          <DataField>CurrCode_Control1102756010</DataField>
+        </Field>
+        <Field Name="CurrCode_Control1102756012">
+          <DataField>CurrCode_Control1102756012</DataField>
+        </Field>
+        <Field Name="Approved_">
+          <DataField>Approved_</DataField>
+        </Field>
+        <Field Name="Approval_Status_____">
+          <DataField>Approval_Status_____</DataField>
+        </Field>
+        <Field Name="TIME_PRINTED_____FORMAT_TIME__Control1102755003">
+          <DataField>TIME_PRINTED_____FORMAT_TIME__Control1102755003</DataField>
+        </Field>
+        <Field Name="DATE_PRINTED_____FORMAT_TODAY_0_4__Control1102755004">
+          <DataField>DATE_PRINTED_____FORMAT_TODAY_0_4__Control1102755004</DataField>
+        </Field>
+        <Field Name="USERID_Control1102755012">
+          <DataField>USERID_Control1102755012</DataField>
+        </Field>
+        <Field Name="NumberText_1__Control1102755016">
+          <DataField>NumberText_1__Control1102755016</DataField>
+        </Field>
+        <Field Name="CompanyInfoName">
+          <DataField>CompanyInfoName</DataField>
+        </Field>
+        <Field Name="CompanyInfoAddress">
+          <DataField>CompanyInfoAddress</DataField>
+        </Field>
+        <Field Name="CompanyInfoAddress2">
+          <DataField>CompanyInfoAddress2</DataField>
+        </Field>
+        <Field Name="CompanyInfoPic">
+          <DataField>CompanyInfoPic</DataField>
+        </Field>
+        <Field Name="No_InternalPVHeader">
+          <DataField>No_InternalPVHeader</DataField>
+        </Field>
+        <Field Name="NoSeries_InternalPVHeader">
+          <DataField>NoSeries_InternalPVHeader</DataField>
+        </Field>
+        <Field Name="Posted_InternalPVHeader">
+          <DataField>Posted_InternalPVHeader</DataField>
+        </Field>
+        <Field Name="DatePosted_InternalPVHeader">
+          <DataField>DatePosted_InternalPVHeader</DataField>
+        </Field>
+        <Field Name="TimePosted_InternalPVHeader">
+          <DataField>TimePosted_InternalPVHeader</DataField>
+        </Field>
+        <Field Name="PostedBy_InternalPVHeader">
+          <DataField>PostedBy_InternalPVHeader</DataField>
+        </Field>
+        <Field Name="DateEntered_InternalPVHeader">
+          <DataField>DateEntered_InternalPVHeader</DataField>
+        </Field>
+        <Field Name="TimeEntered_InternalPVHeader">
+          <DataField>TimeEntered_InternalPVHeader</DataField>
+        </Field>
+        <Field Name="EnteredBy_InternalPVHeader">
+          <DataField>EnteredBy_InternalPVHeader</DataField>
+        </Field>
+        <Field Name="TransactionDescription_InternalPVHeader">
+          <DataField>TransactionDescription_InternalPVHeader</DataField>
+        </Field>
+        <Field Name="TotalDebits_InternalPVHeader">
+          <DataField>TotalDebits_InternalPVHeader</DataField>
+        </Field>
+        <Field Name="TotalDebits_InternalPVHeaderFormat">
+          <DataField>TotalDebits_InternalPVHeaderFormat</DataField>
+        </Field>
+        <Field Name="TotalCount_InternalPVHeader">
+          <DataField>TotalCount_InternalPVHeader</DataField>
+        </Field>
+        <Field Name="TotalCredits_InternalPVHeader">
+          <DataField>TotalCredits_InternalPVHeader</DataField>
+        </Field>
+        <Field Name="TotalCredits_InternalPVHeaderFormat">
+          <DataField>TotalCredits_InternalPVHeaderFormat</DataField>
+        </Field>
+        <Field Name="Status_InternalPVHeader">
+          <DataField>Status_InternalPVHeader</DataField>
+        </Field>
+        <Field Name="ChequeNo_InternalPVHeader">
+          <DataField>ChequeNo_InternalPVHeader</DataField>
+        </Field>
+        <Field Name="GlobalDimension1Code_InternalPVHeader">
+          <DataField>GlobalDimension1Code_InternalPVHeader</DataField>
+        </Field>
+        <Field Name="GlobalDimension2Code_InternalPVHeader">
+          <DataField>GlobalDimension2Code_InternalPVHeader</DataField>
+        </Field>
+        <Field Name="ReportForNavId_3474">
+          <DataField>ReportForNavId_3474</DataField>
+        </Field>
+        <Field Name="No_InternalPVLines">
+          <DataField>No_InternalPVLines</DataField>
+        </Field>
+        <Field Name="Type_InternalPVLines">
+          <DataField>Type_InternalPVLines</DataField>
+        </Field>
+        <Field Name="AccountType_InternalPVLines">
+          <DataField>AccountType_InternalPVLines</DataField>
+        </Field>
+        <Field Name="AccountNo_InternalPVLines">
+          <DataField>AccountNo_InternalPVLines</DataField>
+        </Field>
+        <Field Name="Description_InternalPVLines">
+          <DataField>Description_InternalPVLines</DataField>
+        </Field>
+        <Field Name="CreditAmount_InternalPVLines">
+          <DataField>CreditAmount_InternalPVLines</DataField>
+        </Field>
+        <Field Name="CreditAmount_InternalPVLinesFormat">
+          <DataField>CreditAmount_InternalPVLinesFormat</DataField>
+        </Field>
+        <Field Name="DebitAmount_InternalPVLines">
+          <DataField>DebitAmount_InternalPVLines</DataField>
+        </Field>
+        <Field Name="DebitAmount_InternalPVLinesFormat">
+          <DataField>DebitAmount_InternalPVLinesFormat</DataField>
+        </Field>
+        <Field Name="Amount_InternalPVLines">
+          <DataField>Amount_InternalPVLines</DataField>
+        </Field>
+        <Field Name="Amount_InternalPVLinesFormat">
+          <DataField>Amount_InternalPVLinesFormat</DataField>
+        </Field>
+        <Field Name="AccountName_InternalPVLines">
+          <DataField>AccountName_InternalPVLines</DataField>
+        </Field>
+        <Field Name="HeaderNo_InternalPVLines">
+          <DataField>HeaderNo_InternalPVLines</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

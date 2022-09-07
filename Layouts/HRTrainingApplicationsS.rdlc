@@ -1,0 +1,376 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <ReportParameters>
+    <ReportParameter Name="CourseTitle_HRTrainingApplicationsCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>CourseTitle_HRTrainingApplicationsCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>CourseTitle_HRTrainingApplicationsCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="FromDate_HRTrainingApplicationsCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>FromDate_HRTrainingApplicationsCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>FromDate_HRTrainingApplicationsCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="ToDate_HRTrainingApplicationsCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>ToDate_HRTrainingApplicationsCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>ToDate_HRTrainingApplicationsCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="DurationUnits_HRTrainingApplicationsCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>DurationUnits_HRTrainingApplicationsCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>DurationUnits_HRTrainingApplicationsCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="Duration_HRTrainingApplicationsCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>Duration_HRTrainingApplicationsCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Duration_HRTrainingApplicationsCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="CostOfTraining_HRTrainingApplicationsCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>CostOfTraining_HRTrainingApplicationsCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>CostOfTraining_HRTrainingApplicationsCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="Location_HRTrainingApplicationsCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>Location_HRTrainingApplicationsCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Location_HRTrainingApplicationsCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="ApplicationNo_HRTrainingApplicationsCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>ApplicationNo_HRTrainingApplicationsCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>ApplicationNo_HRTrainingApplicationsCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="EmployeeNo_HRTrainingApplicationsCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>EmployeeNo_HRTrainingApplicationsCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>EmployeeNo_HRTrainingApplicationsCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="EmployeeName_HRTrainingApplicationsCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>EmployeeName_HRTrainingApplicationsCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>EmployeeName_HRTrainingApplicationsCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="ApplicationDate_HRTrainingApplicationsCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>ApplicationDate_HRTrainingApplicationsCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>ApplicationDate_HRTrainingApplicationsCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="EmployeeDepartment_HRTrainingApplicationsCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>EmployeeDepartment_HRTrainingApplicationsCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>EmployeeDepartment_HRTrainingApplicationsCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="CI_NameCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>CI_NameCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>CI_NameCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="CI_AddressCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>CI_AddressCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>CI_AddressCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="CI_Address2Caption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>CI_Address2Caption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>CI_Address2Caption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="CI_PhoneNoCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>CI_PhoneNoCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>CI_PhoneNoCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="CI_PictureCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>CI_PictureCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>CI_PictureCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="CI_CityCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>CI_CityCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>CI_CityCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="UserID_ApprovalCommentLineCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>UserID_ApprovalCommentLineCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>UserID_ApprovalCommentLineCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="Comment_ApprovalCommentLineCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>Comment_ApprovalCommentLineCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Comment_ApprovalCommentLineCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="SenderID_ApprovalEntryCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>SenderID_ApprovalEntryCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>SenderID_ApprovalEntryCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="ApproverID_ApprovalEntryCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>ApproverID_ApprovalEntryCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>ApproverID_ApprovalEntryCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="DateTimeSentforApproval_ApprovalEntryCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>DateTimeSentforApproval_ApprovalEntryCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>DateTimeSentforApproval_ApprovalEntryCaption</Prompt>
+    </ReportParameter>
+  </ReportParameters>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="ReportForNavId_6373">
+          <DataField>ReportForNavId_6373</DataField>
+        </Field>
+        <Field Name="CourseTitle_HRTrainingApplications">
+          <DataField>CourseTitle_HRTrainingApplications</DataField>
+        </Field>
+        <Field Name="FromDate_HRTrainingApplications">
+          <DataField>FromDate_HRTrainingApplications</DataField>
+        </Field>
+        <Field Name="ToDate_HRTrainingApplications">
+          <DataField>ToDate_HRTrainingApplications</DataField>
+        </Field>
+        <Field Name="DurationUnits_HRTrainingApplications">
+          <DataField>DurationUnits_HRTrainingApplications</DataField>
+        </Field>
+        <Field Name="Duration_HRTrainingApplications">
+          <DataField>Duration_HRTrainingApplications</DataField>
+        </Field>
+        <Field Name="Duration_HRTrainingApplicationsFormat">
+          <DataField>Duration_HRTrainingApplicationsFormat</DataField>
+        </Field>
+        <Field Name="CostOfTraining_HRTrainingApplications">
+          <DataField>CostOfTraining_HRTrainingApplications</DataField>
+        </Field>
+        <Field Name="CostOfTraining_HRTrainingApplicationsFormat">
+          <DataField>CostOfTraining_HRTrainingApplicationsFormat</DataField>
+        </Field>
+        <Field Name="Location_HRTrainingApplications">
+          <DataField>Location_HRTrainingApplications</DataField>
+        </Field>
+        <Field Name="ApplicationNo_HRTrainingApplications">
+          <DataField>ApplicationNo_HRTrainingApplications</DataField>
+        </Field>
+        <Field Name="EmployeeNo_HRTrainingApplications">
+          <DataField>EmployeeNo_HRTrainingApplications</DataField>
+        </Field>
+        <Field Name="EmployeeName_HRTrainingApplications">
+          <DataField>EmployeeName_HRTrainingApplications</DataField>
+        </Field>
+        <Field Name="ApplicationDate_HRTrainingApplications">
+          <DataField>ApplicationDate_HRTrainingApplications</DataField>
+        </Field>
+        <Field Name="EmployeeDepartment_HRTrainingApplications">
+          <DataField>EmployeeDepartment_HRTrainingApplications</DataField>
+        </Field>
+        <Field Name="Description_HRTrainingApplications">
+          <DataField>Description_HRTrainingApplications</DataField>
+        </Field>
+        <Field Name="PurposeofTraining_HRTrainingApplications">
+          <DataField>PurposeofTraining_HRTrainingApplications</DataField>
+        </Field>
+        <Field Name="CI_Name">
+          <DataField>CI_Name</DataField>
+        </Field>
+        <Field Name="CI_Address">
+          <DataField>CI_Address</DataField>
+        </Field>
+        <Field Name="CI_Address2">
+          <DataField>CI_Address2</DataField>
+        </Field>
+        <Field Name="CI_PhoneNo">
+          <DataField>CI_PhoneNo</DataField>
+        </Field>
+        <Field Name="CI_Picture">
+          <DataField>CI_Picture</DataField>
+        </Field>
+        <Field Name="CI_City">
+          <DataField>CI_City</DataField>
+        </Field>
+        <Field Name="ReportForNavId_8731">
+          <DataField>ReportForNavId_8731</DataField>
+        </Field>
+        <Field Name="UserID_ApprovalCommentLine">
+          <DataField>UserID_ApprovalCommentLine</DataField>
+        </Field>
+        <Field Name="Comment_ApprovalCommentLine">
+          <DataField>Comment_ApprovalCommentLine</DataField>
+        </Field>
+        <Field Name="ReportForNavId_1171">
+          <DataField>ReportForNavId_1171</DataField>
+        </Field>
+        <Field Name="SenderID_ApprovalEntry">
+          <DataField>SenderID_ApprovalEntry</DataField>
+        </Field>
+        <Field Name="ApproverID_ApprovalEntry">
+          <DataField>ApproverID_ApprovalEntry</DataField>
+        </Field>
+        <Field Name="DateTimeSentforApproval_ApprovalEntry">
+          <DataField>DateTimeSentforApproval_ApprovalEntry</DataField>
+        </Field>
+        <Field Name="ReportForNavId_7968">
+          <DataField>ReportForNavId_7968</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

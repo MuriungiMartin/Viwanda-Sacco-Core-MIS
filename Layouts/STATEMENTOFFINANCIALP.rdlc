@@ -1,0 +1,389 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="ReportForNavId_1">
+          <DataField>ReportForNavId_1</DataField>
+        </Field>
+        <Field Name="StartDate">
+          <DataField>StartDate</DataField>
+        </Field>
+        <Field Name="FinancialYear">
+          <DataField>FinancialYear</DataField>
+        </Field>
+        <Field Name="Asat">
+          <DataField>Asat</DataField>
+        </Field>
+        <Field Name="Name">
+          <DataField>Name</DataField>
+        </Field>
+        <Field Name="Cashinhand">
+          <DataField>Cashinhand</DataField>
+        </Field>
+        <Field Name="CashinhandFormat">
+          <DataField>CashinhandFormat</DataField>
+        </Field>
+        <Field Name="Cashatbank">
+          <DataField>Cashatbank</DataField>
+        </Field>
+        <Field Name="CashatbankFormat">
+          <DataField>CashatbankFormat</DataField>
+        </Field>
+        <Field Name="CashCashEquivalent">
+          <DataField>CashCashEquivalent</DataField>
+        </Field>
+        <Field Name="CashCashEquivalentFormat">
+          <DataField>CashCashEquivalentFormat</DataField>
+        </Field>
+        <Field Name="PrepaymentsSundryReceivables">
+          <DataField>PrepaymentsSundryReceivables</DataField>
+        </Field>
+        <Field Name="PrepaymentsSundryReceivablesFormat">
+          <DataField>PrepaymentsSundryReceivablesFormat</DataField>
+        </Field>
+        <Field Name="FinancialInvestments">
+          <DataField>FinancialInvestments</DataField>
+        </Field>
+        <Field Name="FinancialInvestmentsFormat">
+          <DataField>FinancialInvestmentsFormat</DataField>
+        </Field>
+        <Field Name="GovernmentSecurities">
+          <DataField>GovernmentSecurities</DataField>
+        </Field>
+        <Field Name="GovernmentSecuritiesFormat">
+          <DataField>GovernmentSecuritiesFormat</DataField>
+        </Field>
+        <Field Name="Placement">
+          <DataField>Placement</DataField>
+        </Field>
+        <Field Name="PlacementFormat">
+          <DataField>PlacementFormat</DataField>
+        </Field>
+        <Field Name="CommercialPapers">
+          <DataField>CommercialPapers</DataField>
+        </Field>
+        <Field Name="CommercialPapersFormat">
+          <DataField>CommercialPapersFormat</DataField>
+        </Field>
+        <Field Name="CollectiveInvestment">
+          <DataField>CollectiveInvestment</DataField>
+        </Field>
+        <Field Name="CollectiveInvestmentFormat">
+          <DataField>CollectiveInvestmentFormat</DataField>
+        </Field>
+        <Field Name="Derivatives">
+          <DataField>Derivatives</DataField>
+        </Field>
+        <Field Name="DerivativesFormat">
+          <DataField>DerivativesFormat</DataField>
+        </Field>
+        <Field Name="EquityInvestments">
+          <DataField>EquityInvestments</DataField>
+        </Field>
+        <Field Name="EquityInvestmentsFormat">
+          <DataField>EquityInvestmentsFormat</DataField>
+        </Field>
+        <Field Name="Investmentincompanies">
+          <DataField>Investmentincompanies</DataField>
+        </Field>
+        <Field Name="InvestmentincompaniesFormat">
+          <DataField>InvestmentincompaniesFormat</DataField>
+        </Field>
+        <Field Name="GrossLoanPortfolio">
+          <DataField>GrossLoanPortfolio</DataField>
+        </Field>
+        <Field Name="GrossLoanPortfolioFormat">
+          <DataField>GrossLoanPortfolioFormat</DataField>
+        </Field>
+        <Field Name="PropertyEquipment">
+          <DataField>PropertyEquipment</DataField>
+        </Field>
+        <Field Name="PropertyEquipmentFormat">
+          <DataField>PropertyEquipmentFormat</DataField>
+        </Field>
+        <Field Name="AllowanceforLoanLoss">
+          <DataField>AllowanceforLoanLoss</DataField>
+        </Field>
+        <Field Name="AllowanceforLoanLossFormat">
+          <DataField>AllowanceforLoanLossFormat</DataField>
+        </Field>
+        <Field Name="Nonwithdrawabledeposits">
+          <DataField>Nonwithdrawabledeposits</DataField>
+        </Field>
+        <Field Name="NonwithdrawabledepositsFormat">
+          <DataField>NonwithdrawabledepositsFormat</DataField>
+        </Field>
+        <Field Name="TaxPayable">
+          <DataField>TaxPayable</DataField>
+        </Field>
+        <Field Name="TaxPayableFormat">
+          <DataField>TaxPayableFormat</DataField>
+        </Field>
+        <Field Name="DeferredTaxLiability">
+          <DataField>DeferredTaxLiability</DataField>
+        </Field>
+        <Field Name="DeferredTaxLiabilityFormat">
+          <DataField>DeferredTaxLiabilityFormat</DataField>
+        </Field>
+        <Field Name="RetirementBenefitsLiability">
+          <DataField>RetirementBenefitsLiability</DataField>
+        </Field>
+        <Field Name="RetirementBenefitsLiabilityFormat">
+          <DataField>RetirementBenefitsLiabilityFormat</DataField>
+        </Field>
+        <Field Name="OtherLiabilities">
+          <DataField>OtherLiabilities</DataField>
+        </Field>
+        <Field Name="OtherLiabilitiesFormat">
+          <DataField>OtherLiabilitiesFormat</DataField>
+        </Field>
+        <Field Name="ExternalBorrowings">
+          <DataField>ExternalBorrowings</DataField>
+        </Field>
+        <Field Name="ExternalBorrowingsFormat">
+          <DataField>ExternalBorrowingsFormat</DataField>
+        </Field>
+        <Field Name="TotalLiabilities">
+          <DataField>TotalLiabilities</DataField>
+        </Field>
+        <Field Name="TotalLiabilitiesFormat">
+          <DataField>TotalLiabilitiesFormat</DataField>
+        </Field>
+        <Field Name="ShareCapital">
+          <DataField>ShareCapital</DataField>
+        </Field>
+        <Field Name="ShareCapitalFormat">
+          <DataField>ShareCapitalFormat</DataField>
+        </Field>
+        <Field Name="StatutoryReserve">
+          <DataField>StatutoryReserve</DataField>
+        </Field>
+        <Field Name="StatutoryReserveFormat">
+          <DataField>StatutoryReserveFormat</DataField>
+        </Field>
+        <Field Name="OtherReserves">
+          <DataField>OtherReserves</DataField>
+        </Field>
+        <Field Name="OtherReservesFormat">
+          <DataField>OtherReservesFormat</DataField>
+        </Field>
+        <Field Name="RevaluationReserves">
+          <DataField>RevaluationReserves</DataField>
+        </Field>
+        <Field Name="RevaluationReservesFormat">
+          <DataField>RevaluationReservesFormat</DataField>
+        </Field>
+        <Field Name="ProposedDividends">
+          <DataField>ProposedDividends</DataField>
+        </Field>
+        <Field Name="ProposedDividendsFormat">
+          <DataField>ProposedDividendsFormat</DataField>
+        </Field>
+        <Field Name="AdjustmenttoEquity">
+          <DataField>AdjustmenttoEquity</DataField>
+        </Field>
+        <Field Name="AdjustmenttoEquityFormat">
+          <DataField>AdjustmenttoEquityFormat</DataField>
+        </Field>
+        <Field Name="PrioryarRetainedEarnings">
+          <DataField>PrioryarRetainedEarnings</DataField>
+        </Field>
+        <Field Name="PrioryarRetainedEarningsFormat">
+          <DataField>PrioryarRetainedEarningsFormat</DataField>
+        </Field>
+        <Field Name="CurrentYearSurplus">
+          <DataField>CurrentYearSurplus</DataField>
+        </Field>
+        <Field Name="CurrentYearSurplusFormat">
+          <DataField>CurrentYearSurplusFormat</DataField>
+        </Field>
+        <Field Name="TaxRecoverable">
+          <DataField>TaxRecoverable</DataField>
+        </Field>
+        <Field Name="TaxRecoverableFormat">
+          <DataField>TaxRecoverableFormat</DataField>
+        </Field>
+        <Field Name="DeferredTaxAssets">
+          <DataField>DeferredTaxAssets</DataField>
+        </Field>
+        <Field Name="DeferredTaxAssetsFormat">
+          <DataField>DeferredTaxAssetsFormat</DataField>
+        </Field>
+        <Field Name="RetirementBenefitAssets">
+          <DataField>RetirementBenefitAssets</DataField>
+        </Field>
+        <Field Name="RetirementBenefitAssetsFormat">
+          <DataField>RetirementBenefitAssetsFormat</DataField>
+        </Field>
+        <Field Name="OtherAssets">
+          <DataField>OtherAssets</DataField>
+        </Field>
+        <Field Name="OtherAssetsFormat">
+          <DataField>OtherAssetsFormat</DataField>
+        </Field>
+        <Field Name="IntangibleAssets">
+          <DataField>IntangibleAssets</DataField>
+        </Field>
+        <Field Name="IntangibleAssetsFormat">
+          <DataField>IntangibleAssetsFormat</DataField>
+        </Field>
+        <Field Name="PrepaidLeaseentals">
+          <DataField>PrepaidLeaseentals</DataField>
+        </Field>
+        <Field Name="PrepaidLeaseentalsFormat">
+          <DataField>PrepaidLeaseentalsFormat</DataField>
+        </Field>
+        <Field Name="InvestmentProperties">
+          <DataField>InvestmentProperties</DataField>
+        </Field>
+        <Field Name="InvestmentPropertiesFormat">
+          <DataField>InvestmentPropertiesFormat</DataField>
+        </Field>
+        <Field Name="DividendPayable">
+          <DataField>DividendPayable</DataField>
+        </Field>
+        <Field Name="DividendPayableFormat">
+          <DataField>DividendPayableFormat</DataField>
+        </Field>
+        <Field Name="NetLoanPortfolio">
+          <DataField>NetLoanPortfolio</DataField>
+        </Field>
+        <Field Name="NetLoanPortfolioFormat">
+          <DataField>NetLoanPortfolioFormat</DataField>
+        </Field>
+        <Field Name="AccountsReceivables">
+          <DataField>AccountsReceivables</DataField>
+        </Field>
+        <Field Name="AccountsReceivablesFormat">
+          <DataField>AccountsReceivablesFormat</DataField>
+        </Field>
+        <Field Name="PropertyEquipmentOtheassets">
+          <DataField>PropertyEquipmentOtheassets</DataField>
+        </Field>
+        <Field Name="PropertyEquipmentOtheassetsFormat">
+          <DataField>PropertyEquipmentOtheassetsFormat</DataField>
+        </Field>
+        <Field Name="AccountsPayableOtherLiabilities">
+          <DataField>AccountsPayableOtherLiabilities</DataField>
+        </Field>
+        <Field Name="AccountsPayableOtherLiabilitiesFormat">
+          <DataField>AccountsPayableOtherLiabilitiesFormat</DataField>
+        </Field>
+        <Field Name="CapitalGrants">
+          <DataField>CapitalGrants</DataField>
+        </Field>
+        <Field Name="CapitalGrantsFormat">
+          <DataField>CapitalGrantsFormat</DataField>
+        </Field>
+        <Field Name="EQUITY">
+          <DataField>EQUITY</DataField>
+        </Field>
+        <Field Name="EQUITYFormat">
+          <DataField>EQUITYFormat</DataField>
+        </Field>
+        <Field Name="RetainedEarnings">
+          <DataField>RetainedEarnings</DataField>
+        </Field>
+        <Field Name="RetainedEarningsFormat">
+          <DataField>RetainedEarningsFormat</DataField>
+        </Field>
+        <Field Name="OtherEquityAccounts">
+          <DataField>OtherEquityAccounts</DataField>
+        </Field>
+        <Field Name="OtherEquityAccountsFormat">
+          <DataField>OtherEquityAccountsFormat</DataField>
+        </Field>
+        <Field Name="TotalEquity">
+          <DataField>TotalEquity</DataField>
+        </Field>
+        <Field Name="TotalEquityFormat">
+          <DataField>TotalEquityFormat</DataField>
+        </Field>
+        <Field Name="TotalLiabilitiesandEquity">
+          <DataField>TotalLiabilitiesandEquity</DataField>
+        </Field>
+        <Field Name="TotalLiabilitiesandEquityFormat">
+          <DataField>TotalLiabilitiesandEquityFormat</DataField>
+        </Field>
+        <Field Name="TotalLiabilitiesNew">
+          <DataField>TotalLiabilitiesNew</DataField>
+        </Field>
+        <Field Name="TotalLiabilitiesNewFormat">
+          <DataField>TotalLiabilitiesNewFormat</DataField>
+        </Field>
+        <Field Name="TotalAssets">
+          <DataField>TotalAssets</DataField>
+        </Field>
+        <Field Name="TotalAssetsFormat">
+          <DataField>TotalAssetsFormat</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="ReportForNavId_1102755000">
+          <DataField>ReportForNavId_1102755000</DataField>
+        </Field>
+        <Field Name="ApplicationNo_HRJobApplications">
+          <DataField>ApplicationNo_HRJobApplications</DataField>
+        </Field>
+        <Field Name="FirstName_HRJobApplications">
+          <DataField>FirstName_HRJobApplications</DataField>
+        </Field>
+        <Field Name="MiddleName_HRJobApplications">
+          <DataField>MiddleName_HRJobApplications</DataField>
+        </Field>
+        <Field Name="LastName_HRJobApplications">
+          <DataField>LastName_HRJobApplications</DataField>
+        </Field>
+        <Field Name="Initials_HRJobApplications">
+          <DataField>Initials_HRJobApplications</DataField>
+        </Field>
+        <Field Name="SearchName_HRJobApplications">
+          <DataField>SearchName_HRJobApplications</DataField>
+        </Field>
+        <Field Name="PostalAddress_HRJobApplications">
+          <DataField>PostalAddress_HRJobApplications</DataField>
+        </Field>
+        <Field Name="ResidentialAddress_HRJobApplications">
+          <DataField>ResidentialAddress_HRJobApplications</DataField>
+        </Field>
+        <Field Name="City_HRJobApplications">
+          <DataField>City_HRJobApplications</DataField>
+        </Field>
+        <Field Name="PostCode_HRJobApplications">
+          <DataField>PostCode_HRJobApplications</DataField>
+        </Field>
+        <Field Name="County_HRJobApplications">
+          <DataField>County_HRJobApplications</DataField>
+        </Field>
+        <Field Name="HomePhoneNumber_HRJobApplications">
+          <DataField>HomePhoneNumber_HRJobApplications</DataField>
+        </Field>
+        <Field Name="CellPhoneNumber_HRJobApplications">
+          <DataField>CellPhoneNumber_HRJobApplications</DataField>
+        </Field>
+        <Field Name="WorkPhoneNumber_HRJobApplications">
+          <DataField>WorkPhoneNumber_HRJobApplications</DataField>
+        </Field>
+        <Field Name="Ext_HRJobApplications">
+          <DataField>Ext_HRJobApplications</DataField>
+        </Field>
+        <Field Name="EMail_HRJobApplications">
+          <DataField>EMail_HRJobApplications</DataField>
+        </Field>
+        <Field Name="IDNumber_HRJobApplications">
+          <DataField>IDNumber_HRJobApplications</DataField>
+        </Field>
+        <Field Name="Gender_HRJobApplications">
+          <DataField>Gender_HRJobApplications</DataField>
+        </Field>
+        <Field Name="CountryCode_HRJobApplications">
+          <DataField>CountryCode_HRJobApplications</DataField>
+        </Field>
+        <Field Name="Status_HRJobApplications">
+          <DataField>Status_HRJobApplications</DataField>
+        </Field>
+        <Field Name="Comment_HRJobApplications">
+          <DataField>Comment_HRJobApplications</DataField>
+        </Field>
+        <Field Name="FaxNumber_HRJobApplications">
+          <DataField>FaxNumber_HRJobApplications</DataField>
+        </Field>
+        <Field Name="CompanyInfoName">
+          <DataField>CompanyInfoName</DataField>
+        </Field>
+        <Field Name="CompanyInfoPicture">
+          <DataField>CompanyInfoPicture</DataField>
+        </Field>
+        <Field Name="JobAppliedFor_HRJobApplications">
+          <DataField>JobAppliedFor_HRJobApplications</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

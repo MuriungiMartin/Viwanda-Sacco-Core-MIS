@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="StartDate">
+          <DataField>StartDate</DataField>
+        </Field>
+        <Field Name="MStartDate">
+          <DataField>MStartDate</DataField>
+        </Field>
+        <Field Name="MEndDate">
+          <DataField>MEndDate</DataField>
+        </Field>
+        <Field Name="AsAt">
+          <DataField>AsAt</DataField>
+        </Field>
+        <Field Name="EmplNme">
+          <DataField>EmplNme</DataField>
+        </Field>
+        <Field Name="EmplNme1">
+          <DataField>EmplNme1</DataField>
+        </Field>
+        <Field Name="LoanNo_LoansRegister">
+          <DataField>LoanNo_LoansRegister</DataField>
+        </Field>
+        <Field Name="qwe">
+          <DataField>qwe</DataField>
+        </Field>
+        <Field Name="EmplNmeboard">
+          <DataField>EmplNmeboard</DataField>
+        </Field>
+        <Field Name="EmplNme1board">
+          <DataField>EmplNme1board</DataField>
+        </Field>
+        <Field Name="LoanNo">
+          <DataField>LoanNo</DataField>
+        </Field>
+        <Field Name="LoanNo1">
+          <DataField>LoanNo1</DataField>
+        </Field>
+        <Field Name="LoanNo2">
+          <DataField>LoanNo2</DataField>
+        </Field>
+        <Field Name="RequestedAmount_LoansRegister">
+          <DataField>RequestedAmount_LoansRegister</DataField>
+        </Field>
+        <Field Name="RequestedAmount_LoansRegisterFormat">
+          <DataField>RequestedAmount_LoansRegisterFormat</DataField>
+        </Field>
+        <Field Name="LoanNo3">
+          <DataField>LoanNo3</DataField>
+        </Field>
+        <Field Name="InsiderBoard_LoansRegister">
+          <DataField>InsiderBoard_LoansRegister</DataField>
+        </Field>
+        <Field Name="insiderEmployee_LoansRegister">
+          <DataField>insiderEmployee_LoansRegister</DataField>
+        </Field>
+        <Field Name="t">
+          <DataField>t</DataField>
+        </Field>
+        <Field Name="MEMBERNUMBER">
+          <DataField>MEMBERNUMBER</DataField>
+        </Field>
+        <Field Name="POSITIONHELD">
+          <DataField>POSITIONHELD</DataField>
+        </Field>
+        <Field Name="AMOUNTGRANTED">
+          <DataField>AMOUNTGRANTED</DataField>
+        </Field>
+        <Field Name="AMOUNTGRANTEDFormat">
+          <DataField>AMOUNTGRANTEDFormat</DataField>
+        </Field>
+        <Field Name="DATEAPPROVED">
+          <DataField>DATEAPPROVED</DataField>
+        </Field>
+        <Field Name="AMOUNTrequested">
+          <DataField>AMOUNTrequested</DataField>
+        </Field>
+        <Field Name="AMOUNTrequestedFormat">
+          <DataField>AMOUNTrequestedFormat</DataField>
+        </Field>
+        <Field Name="AMOUNTOFBOSADEPOSITS">
+          <DataField>AMOUNTOFBOSADEPOSITS</DataField>
+        </Field>
+        <Field Name="AMOUNTOFBOSADEPOSITSFormat">
+          <DataField>AMOUNTOFBOSADEPOSITSFormat</DataField>
+        </Field>
+        <Field Name="NATUREOFSECURITY">
+          <DataField>NATUREOFSECURITY</DataField>
+        </Field>
+        <Field Name="REPAYMENTCOMMENCEMENT">
+          <DataField>REPAYMENTCOMMENCEMENT</DataField>
+        </Field>
+        <Field Name="REPAYMENTPERIOD">
+          <DataField>REPAYMENTPERIOD</DataField>
+        </Field>
+        <Field Name="LOANTYPENAME">
+          <DataField>LOANTYPENAME</DataField>
+        </Field>
+        <Field Name="OUTSTANDINGAMOUNT">
+          <DataField>OUTSTANDINGAMOUNT</DataField>
+        </Field>
+        <Field Name="OUTSTANDINGAMOUNTFormat">
+          <DataField>OUTSTANDINGAMOUNTFormat</DataField>
+        </Field>
+        <Field Name="PERFORMANCE">
+          <DataField>PERFORMANCE</DataField>
+        </Field>
+        <Field Name="LoansCategorySASRA_LoansRegister">
+          <DataField>LoansCategorySASRA_LoansRegister</DataField>
+        </Field>
+        <Field Name="name">
+          <DataField>name</DataField>
+        </Field>
+        <Field Name="LoansCategory_LoansRegister">
+          <DataField>LoansCategory_LoansRegister</DataField>
+        </Field>
+        <Field Name="SN">
+          <DataField>SN</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

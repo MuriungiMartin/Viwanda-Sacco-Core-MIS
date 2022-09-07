@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <ReportParameters>
+    <ReportParameter Name="CI_NameCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>CI_NameCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>CI_NameCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="CI_AddressCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>CI_AddressCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>CI_AddressCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="CI_Address2Caption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>CI_Address2Caption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>CI_Address2Caption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="CI_CityCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>CI_CityCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>CI_CityCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="JobID_HRJobsCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>JobID_HRJobsCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>JobID_HRJobsCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="JobDescription_HRJobsCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>JobDescription_HRJobsCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>JobDescription_HRJobsCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="No_HREmployeesCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>No_HREmployeesCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>No_HREmployeesCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="FirstName_HREmployeesCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>FirstName_HREmployeesCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>FirstName_HREmployeesCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="MiddleName_HREmployeesCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>MiddleName_HREmployeesCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>MiddleName_HREmployeesCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="LastName_HREmployeesCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>LastName_HREmployeesCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>LastName_HREmployeesCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="JobTitle_HREmployeesCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>JobTitle_HREmployeesCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>JobTitle_HREmployeesCaption</Prompt>
+    </ReportParameter>
+  </ReportParameters>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="ReportForNavId_1000000000">
+          <DataField>ReportForNavId_1000000000</DataField>
+        </Field>
+        <Field Name="CI_Name">
+          <DataField>CI_Name</DataField>
+        </Field>
+        <Field Name="CI_Address">
+          <DataField>CI_Address</DataField>
+        </Field>
+        <Field Name="CI_Address2">
+          <DataField>CI_Address2</DataField>
+        </Field>
+        <Field Name="CI_PhoneNo">
+          <DataField>CI_PhoneNo</DataField>
+        </Field>
+        <Field Name="CI_Picture">
+          <DataField>CI_Picture</DataField>
+        </Field>
+        <Field Name="CI_City">
+          <DataField>CI_City</DataField>
+        </Field>
+        <Field Name="JobID_HRJobs">
+          <DataField>JobID_HRJobs</DataField>
+        </Field>
+        <Field Name="JobDescription_HRJobs">
+          <DataField>JobDescription_HRJobs</DataField>
+        </Field>
+        <Field Name="ReportForNavId_1000000001">
+          <DataField>ReportForNavId_1000000001</DataField>
+        </Field>
+        <Field Name="No_HREmployees">
+          <DataField>No_HREmployees</DataField>
+        </Field>
+        <Field Name="FirstName_HREmployees">
+          <DataField>FirstName_HREmployees</DataField>
+        </Field>
+        <Field Name="MiddleName_HREmployees">
+          <DataField>MiddleName_HREmployees</DataField>
+        </Field>
+        <Field Name="LastName_HREmployees">
+          <DataField>LastName_HREmployees</DataField>
+        </Field>
+        <Field Name="JobTitle_HREmployees">
+          <DataField>JobTitle_HREmployees</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="Staff_No">
+          <DataField>Staff_No</DataField>
+        </Field>
+        <Field Name="MNo">
+          <DataField>MNo</DataField>
+        </Field>
+        <Field Name="Name">
+          <DataField>Name</DataField>
+        </Field>
+        <Field Name="Address">
+          <DataField>Address</DataField>
+        </Field>
+        <Field Name="City">
+          <DataField>City</DataField>
+        </Field>
+        <Field Name="DearM">
+          <DataField>DearM</DataField>
+        </Field>
+        <Field Name="Loan_Type">
+          <DataField>Loan_Type</DataField>
+        </Field>
+        <Field Name="LBalance1">
+          <DataField>LBalance1</DataField>
+        </Field>
+        <Field Name="LBalance1Format">
+          <DataField>LBalance1Format</DataField>
+        </Field>
+        <Field Name="LBalance2">
+          <DataField>LBalance2</DataField>
+        </Field>
+        <Field Name="LBalance2Format">
+          <DataField>LBalance2Format</DataField>
+        </Field>
+        <Field Name="LPrincipal">
+          <DataField>LPrincipal</DataField>
+        </Field>
+        <Field Name="LPrincipalFormat">
+          <DataField>LPrincipalFormat</DataField>
+        </Field>
+        <Field Name="Bal">
+          <DataField>Bal</DataField>
+        </Field>
+        <Field Name="BalFormat">
+          <DataField>BalFormat</DataField>
+        </Field>
+        <Field Name="SenderName">
+          <DataField>SenderName</DataField>
+        </Field>
+        <Field Name="Current_Payments">
+          <DataField>Current_Payments</DataField>
+        </Field>
+        <Field Name="Current_PaymentsFormat">
+          <DataField>Current_PaymentsFormat</DataField>
+        </Field>
+        <Field Name="Loan_No">
+          <DataField>Loan_No</DataField>
+        </Field>
+        <Field Name="Loan_Product_type">
+          <DataField>Loan_Product_type</DataField>
+        </Field>
+        <Field Name="Outstanding_Bal">
+          <DataField>Outstanding_Bal</DataField>
+        </Field>
+        <Field Name="Outstanding_BalFormat">
+          <DataField>Outstanding_BalFormat</DataField>
+        </Field>
+        <Field Name="Interest_Due">
+          <DataField>Interest_Due</DataField>
+        </Field>
+        <Field Name="Interest_DueFormat">
+          <DataField>Interest_DueFormat</DataField>
+        </Field>
+        <Field Name="Penalty">
+          <DataField>Penalty</DataField>
+        </Field>
+        <Field Name="PenaltyFormat">
+          <DataField>PenaltyFormat</DataField>
+        </Field>
+        <Field Name="LastPDate">
+          <DataField>LastPDate</DataField>
+        </Field>
+        <Field Name="Total_Amount">
+          <DataField>Total_Amount</DataField>
+        </Field>
+        <Field Name="Total_AmountFormat">
+          <DataField>Total_AmountFormat</DataField>
+        </Field>
+        <Field Name="Member_No">
+          <DataField>Member_No</DataField>
+        </Field>
+        <Field Name="NameG">
+          <DataField>NameG</DataField>
+        </Field>
+        <Field Name="Personal_No">
+          <DataField>Personal_No</DataField>
+        </Field>
+        <Field Name="intcount">
+          <DataField>intcount</DataField>
+        </Field>
+        <Field Name="Outstanding_Bal2">
+          <DataField>Outstanding_Bal2</DataField>
+        </Field>
+        <Field Name="Outstanding_Bal2Format">
+          <DataField>Outstanding_Bal2Format</DataField>
+        </Field>
+        <Field Name="Interest_Due2">
+          <DataField>Interest_Due2</DataField>
+        </Field>
+        <Field Name="Interest_Due2Format">
+          <DataField>Interest_Due2Format</DataField>
+        </Field>
+        <Field Name="Penalty2">
+          <DataField>Penalty2</DataField>
+        </Field>
+        <Field Name="Penalty2Format">
+          <DataField>Penalty2Format</DataField>
+        </Field>
+        <Field Name="Total_Amount2">
+          <DataField>Total_Amount2</DataField>
+        </Field>
+        <Field Name="Total_Amount2Format">
+          <DataField>Total_Amount2Format</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

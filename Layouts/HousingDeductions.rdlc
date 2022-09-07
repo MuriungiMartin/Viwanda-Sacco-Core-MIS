@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="ReportForNavId_1">
+          <DataField>ReportForNavId_1</DataField>
+        </Field>
+        <Field Name="PF_No">
+          <DataField>PF_No</DataField>
+        </Field>
+        <Field Name="Main_Bank">
+          <DataField>Main_Bank</DataField>
+        </Field>
+        <Field Name="Branch_Bank">
+          <DataField>Branch_Bank</DataField>
+        </Field>
+        <Field Name="Acc_No">
+          <DataField>Acc_No</DataField>
+        </Field>
+        <Field Name="id">
+          <DataField>id</DataField>
+        </Field>
+        <Field Name="CompName">
+          <DataField>CompName</DataField>
+        </Field>
+        <Field Name="pic">
+          <DataField>pic</DataField>
+        </Field>
+        <Field Name="Addr1">
+          <DataField>Addr1</DataField>
+        </Field>
+        <Field Name="Addr2">
+          <DataField>Addr2</DataField>
+        </Field>
+        <Field Name="Email">
+          <DataField>Email</DataField>
+        </Field>
+        <Field Name="Net_Pay">
+          <DataField>Net_Pay</DataField>
+        </Field>
+        <Field Name="Net_PayFormat">
+          <DataField>Net_PayFormat</DataField>
+        </Field>
+        <Field Name="Name">
+          <DataField>Name</DataField>
+        </Field>
+        <Field Name="BasicPay">
+          <DataField>BasicPay</DataField>
+        </Field>
+        <Field Name="BasicPayFormat">
+          <DataField>BasicPayFormat</DataField>
+        </Field>
+        <Field Name="Grosspay">
+          <DataField>Grosspay</DataField>
+        </Field>
+        <Field Name="GrosspayFormat">
+          <DataField>GrosspayFormat</DataField>
+        </Field>
+        <Field Name="PeriodName">
+          <DataField>PeriodName</DataField>
+        </Field>
+        <Field Name="User_Name_Caption">
+          <DataField>User_Name_Caption</DataField>
+        </Field>
+        <Field Name="Print_Date_Caption">
+          <DataField>Print_Date_Caption</DataField>
+        </Field>
+        <Field Name="Period_Caption">
+          <DataField>Period_Caption</DataField>
+        </Field>
+        <Field Name="Page_No_Caption">
+          <DataField>Page_No_Caption</DataField>
+        </Field>
+        <Field Name="Transaction_Name_Caption">
+          <DataField>Transaction_Name_Caption</DataField>
+        </Field>
+        <Field Name="Period_Amount_Caption">
+          <DataField>Period_Amount_Caption</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

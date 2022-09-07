@@ -1,0 +1,313 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <ReportParameters>
+    <ReportParameter Name="CI_NameCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>CI_NameCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>CI_NameCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="CI_AddressCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>CI_AddressCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>CI_AddressCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="CI_Address2Caption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>CI_Address2Caption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>CI_Address2Caption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="CI_PhoneNoCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>CI_PhoneNoCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>CI_PhoneNoCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="CI_PictureCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>CI_PictureCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>CI_PictureCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="CI_CityCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>CI_CityCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>CI_CityCaption</Prompt>
+    </ReportParameter>
+  </ReportParameters>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="ReportForNavId_6437">
+          <DataField>ReportForNavId_6437</DataField>
+        </Field>
+        <Field Name="CI_Name">
+          <DataField>CI_Name</DataField>
+        </Field>
+        <Field Name="CI_Address">
+          <DataField>CI_Address</DataField>
+        </Field>
+        <Field Name="CI_Address2">
+          <DataField>CI_Address2</DataField>
+        </Field>
+        <Field Name="CI_PhoneNo">
+          <DataField>CI_PhoneNo</DataField>
+        </Field>
+        <Field Name="CI_Picture">
+          <DataField>CI_Picture</DataField>
+        </Field>
+        <Field Name="CI_City">
+          <DataField>CI_City</DataField>
+        </Field>
+        <Field Name="DOCNAME">
+          <DataField>DOCNAME</DataField>
+        </Field>
+        <Field Name="CellGroupCode_MemberCellGroups">
+          <DataField>CellGroupCode_MemberCellGroups</DataField>
+        </Field>
+        <Field Name="CellGroupName_MemberCellGroups">
+          <DataField>CellGroupName_MemberCellGroups</DataField>
+        </Field>
+        <Field Name="DateFormed_MemberCellGroups">
+          <DataField>DateFormed_MemberCellGroups</DataField>
+        </Field>
+        <Field Name="MeetingDate_MemberCellGroups">
+          <DataField>MeetingDate_MemberCellGroups</DataField>
+        </Field>
+        <Field Name="GroupLeader_MemberCellGroups">
+          <DataField>GroupLeader_MemberCellGroups</DataField>
+        </Field>
+        <Field Name="GroupLeaderName_MemberCellGroups">
+          <DataField>GroupLeaderName_MemberCellGroups</DataField>
+        </Field>
+        <Field Name="AssistantgroupLeader_MemberCellGroups">
+          <DataField>AssistantgroupLeader_MemberCellGroups</DataField>
+        </Field>
+        <Field Name="AssistantGroupName_MemberCellGroups">
+          <DataField>AssistantGroupName_MemberCellGroups</DataField>
+        </Field>
+        <Field Name="MeetingPlace_MemberCellGroups">
+          <DataField>MeetingPlace_MemberCellGroups</DataField>
+        </Field>
+        <Field Name="CreatedBy_MemberCellGroups">
+          <DataField>CreatedBy_MemberCellGroups</DataField>
+        </Field>
+        <Field Name="CreatedOn_MemberCellGroups">
+          <DataField>CreatedOn_MemberCellGroups</DataField>
+        </Field>
+        <Field Name="NoSeries_MemberCellGroups">
+          <DataField>NoSeries_MemberCellGroups</DataField>
+        </Field>
+        <Field Name="GroupLeaderEmail_MemberCellGroups">
+          <DataField>GroupLeaderEmail_MemberCellGroups</DataField>
+        </Field>
+        <Field Name="AssistantGroupLeaderEmail_MemberCellGroups">
+          <DataField>AssistantGroupLeaderEmail_MemberCellGroups</DataField>
+        </Field>
+        <Field Name="GroupSatatus_MemberCellGroups">
+          <DataField>GroupSatatus_MemberCellGroups</DataField>
+        </Field>
+        <Field Name="GlobalDimension2Code_MemberCellGroups">
+          <DataField>GlobalDimension2Code_MemberCellGroups</DataField>
+        </Field>
+        <Field Name="GroupLeaderPhoneNo_MemberCellGroups">
+          <DataField>GroupLeaderPhoneNo_MemberCellGroups</DataField>
+        </Field>
+        <Field Name="AssistantGroupLeaderPhoneN_MemberCellGroups">
+          <DataField>AssistantGroupLeaderPhoneN_MemberCellGroups</DataField>
+        </Field>
+        <Field Name="NoofMembers_MemberCellGroups">
+          <DataField>NoofMembers_MemberCellGroups</DataField>
+        </Field>
+        <Field Name="VarNoGroupMembers">
+          <DataField>VarNoGroupMembers</DataField>
+        </Field>
+        <Field Name="VarExitDeposits">
+          <DataField>VarExitDeposits</DataField>
+        </Field>
+        <Field Name="VarExitDepositsFormat">
+          <DataField>VarExitDepositsFormat</DataField>
+        </Field>
+        <Field Name="VarExitLoans">
+          <DataField>VarExitLoans</DataField>
+        </Field>
+        <Field Name="VarExitLoansFormat">
+          <DataField>VarExitLoansFormat</DataField>
+        </Field>
+        <Field Name="ReportForNavId_3474">
+          <DataField>ReportForNavId_3474</DataField>
+        </Field>
+        <Field Name="TotalLoansOutstanding_MembersRegister">
+          <DataField>TotalLoansOutstanding_MembersRegister</DataField>
+        </Field>
+        <Field Name="TotalLoansOutstanding_MembersRegisterFormat">
+          <DataField>TotalLoansOutstanding_MembersRegisterFormat</DataField>
+        </Field>
+        <Field Name="CurrentShares_MembersRegister">
+          <DataField>CurrentShares_MembersRegister</DataField>
+        </Field>
+        <Field Name="CurrentShares_MembersRegisterFormat">
+          <DataField>CurrentShares_MembersRegisterFormat</DataField>
+        </Field>
+        <Field Name="SharesRetained_MembersRegister">
+          <DataField>SharesRetained_MembersRegister</DataField>
+        </Field>
+        <Field Name="SharesRetained_MembersRegisterFormat">
+          <DataField>SharesRetained_MembersRegisterFormat</DataField>
+        </Field>
+        <Field Name="No_MembersRegister">
+          <DataField>No_MembersRegister</DataField>
+        </Field>
+        <Field Name="Name_MembersRegister">
+          <DataField>Name_MembersRegister</DataField>
+        </Field>
+        <Field Name="Status_MembersRegister">
+          <DataField>Status_MembersRegister</DataField>
+        </Field>
+        <Field Name="VarCollateralSecurity">
+          <DataField>VarCollateralSecurity</DataField>
+        </Field>
+        <Field Name="VarCollateralSecurityFormat">
+          <DataField>VarCollateralSecurityFormat</DataField>
+        </Field>
+        <Field Name="VarLoanRisk">
+          <DataField>VarLoanRisk</DataField>
+        </Field>
+        <Field Name="VarLoanRiskFormat">
+          <DataField>VarLoanRiskFormat</DataField>
+        </Field>
+        <Field Name="VarTotalArrears">
+          <DataField>VarTotalArrears</DataField>
+        </Field>
+        <Field Name="VarTotalArrearsFormat">
+          <DataField>VarTotalArrearsFormat</DataField>
+        </Field>
+        <Field Name="HouseGroupStatus_MembersRegister">
+          <DataField>HouseGroupStatus_MembersRegister</DataField>
+        </Field>
+        <Field Name="VarMemberGuarantorshipLiability">
+          <DataField>VarMemberGuarantorshipLiability</DataField>
+        </Field>
+        <Field Name="VarMemberGuarantorshipLiabilityFormat">
+          <DataField>VarMemberGuarantorshipLiabilityFormat</DataField>
+        </Field>
+        <Field Name="NoofMonthsArrearsDeposit">
+          <DataField>NoofMonthsArrearsDeposit</DataField>
+        </Field>
+        <Field Name="NoofMonthsArrearsDepositFormat">
+          <DataField>NoofMonthsArrearsDepositFormat</DataField>
+        </Field>
+        <Field Name="AmountArrearsDeposit">
+          <DataField>AmountArrearsDeposit</DataField>
+        </Field>
+        <Field Name="AmountArrearsDepositFormat">
+          <DataField>AmountArrearsDepositFormat</DataField>
+        </Field>
+        <Field Name="VarTotalLoansIssued">
+          <DataField>VarTotalLoansIssued</DataField>
+        </Field>
+        <Field Name="VarTotalLoansIssuedFormat">
+          <DataField>VarTotalLoansIssuedFormat</DataField>
+        </Field>
+        <Field Name="VarLSABalance">
+          <DataField>VarLSABalance</DataField>
+        </Field>
+        <Field Name="VarLSABalanceFormat">
+          <DataField>VarLSABalanceFormat</DataField>
+        </Field>
+        <Field Name="VarInstalmentAmount">
+          <DataField>VarInstalmentAmount</DataField>
+        </Field>
+        <Field Name="VarInstalmentAmountFormat">
+          <DataField>VarInstalmentAmountFormat</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

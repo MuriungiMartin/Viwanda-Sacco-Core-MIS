@@ -1,0 +1,1951 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+      <rd:DataSourceID>5556874a-495d-439e-8872-e4a1ecaa8cfd</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <ReportItems>
+          <Textbox Name="Prepared_By______________________________________________________________________________________________________________________________________________________________________Caption2">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=Fields!Prepared_By______________________________________________________________________________________________________________________________________________________________________Caption.Value</Value>
+                    <Style>
+                      <FontFamily>Maiandra GD</FontFamily>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <Top>5.52406in</Top>
+            <Left>0.7505in</Left>
+            <Height>0.52885cm</Height>
+            <Width>5.212cm</Width>
+            <Style>
+              <VerticalAlign>Bottom</VerticalAlign>
+              <PaddingLeft>0.075cm</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Signature_Date______________________________________________________________________________________________________________________________________________________________________Caption2">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=Fields!Signature_Date______________________________________________________________________________________________________________________________________________________________________Caption.Value</Value>
+                    <Style>
+                      <FontFamily>Maiandra GD</FontFamily>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <Top>5.52406in</Top>
+            <Left>2.81636in</Left>
+            <Height>0.52885cm</Height>
+            <Width>5.78732cm</Width>
+            <ZIndex>1</ZIndex>
+            <Style>
+              <VerticalAlign>Bottom</VerticalAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>0.075cm</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Member_No_Caption">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=Fields!Member_No_Caption.Value</Value>
+                    <Style>
+                      <FontFamily>Maiandra GD</FontFamily>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <Top>2.59198in</Top>
+            <Left>0.77456in</Left>
+            <Height>0.50239cm</Height>
+            <Width>3.0475cm</Width>
+            <ZIndex>2</ZIndex>
+            <Style>
+              <VerticalAlign>Middle</VerticalAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>0.075cm</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Members__No__">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=Fields!Members__No__.Value</Value>
+                    <Style>
+                      <FontFamily>Maiandra GD</FontFamily>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <Top>2.59198in</Top>
+            <Left>1.97436in</Left>
+            <Height>0.50239cm</Height>
+            <Width>6.13332cm</Width>
+            <ZIndex>3</ZIndex>
+            <Style>
+              <VerticalAlign>Middle</VerticalAlign>
+              <PaddingLeft>0.075cm</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="TextBox1">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value />
+                    <Style>
+                      <FontFamily>Maiandra GD</FontFamily>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <Top>2.59198in</Top>
+            <Left>4.38906in</Left>
+            <Height>0.50239cm</Height>
+            <Width>2.55001cm</Width>
+            <ZIndex>4</ZIndex>
+            <Style>
+              <VerticalAlign>Middle</VerticalAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Members_NameCaption">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=Fields!Members_NameCaption.Value</Value>
+                    <Style>
+                      <FontFamily>Maiandra GD</FontFamily>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <Top>2.78977in</Top>
+            <Left>0.77456in</Left>
+            <Height>0.47562cm</Height>
+            <Width>3.0475cm</Width>
+            <ZIndex>5</ZIndex>
+            <Style>
+              <VerticalAlign>Middle</VerticalAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>0.075cm</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Members_Name">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=Fields!Members_Name.Value</Value>
+                    <Style>
+                      <FontFamily>Maiandra GD</FontFamily>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <Top>2.78977in</Top>
+            <Left>1.97436in</Left>
+            <Height>0.47562cm</Height>
+            <Width>6.13332cm</Width>
+            <ZIndex>6</ZIndex>
+            <Style>
+              <VerticalAlign>Middle</VerticalAlign>
+              <PaddingLeft>0.075cm</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="TextBox11">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value />
+                    <Style>
+                      <FontFamily>Maiandra GD</FontFamily>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <Top>2.78977in</Top>
+            <Left>4.38906in</Left>
+            <Height>0.47562cm</Height>
+            <Width>2.55001cm</Width>
+            <ZIndex>7</ZIndex>
+            <Style>
+              <VerticalAlign>Middle</VerticalAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Members__ID_No__Caption">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=Fields!Members__ID_No__Caption.Value</Value>
+                    <Style>
+                      <FontFamily>Maiandra GD</FontFamily>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <Top>2.97703in</Top>
+            <Left>0.77456in</Left>
+            <Height>0.44948cm</Height>
+            <Width>3.0475cm</Width>
+            <ZIndex>8</ZIndex>
+            <Style>
+              <VerticalAlign>Middle</VerticalAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>0.075cm</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Members__ID_No__">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=Fields!Members__ID_No__.Value</Value>
+                    <Style>
+                      <FontFamily>Maiandra GD</FontFamily>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <Top>2.97703in</Top>
+            <Left>1.97436in</Left>
+            <Height>0.44948cm</Height>
+            <Width>6.13332cm</Width>
+            <ZIndex>9</ZIndex>
+            <Style>
+              <VerticalAlign>Middle</VerticalAlign>
+              <PaddingLeft>0.075cm</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="TextBox13">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value />
+                    <Style>
+                      <FontFamily>Maiandra GD</FontFamily>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <Top>2.97703in</Top>
+            <Left>4.38906in</Left>
+            <Height>0.44948cm</Height>
+            <Width>2.55001cm</Width>
+            <ZIndex>10</ZIndex>
+            <Style>
+              <VerticalAlign>Middle</VerticalAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Members__Payroll_Staff_No_Caption">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=Fields!Members__Payroll_Staff_No_Caption.Value</Value>
+                    <Style>
+                      <FontFamily>Maiandra GD</FontFamily>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <Top>3.15399in</Top>
+            <Left>0.77456in</Left>
+            <Height>0.47592cm</Height>
+            <Width>3.0475cm</Width>
+            <ZIndex>11</ZIndex>
+            <Style>
+              <VerticalAlign>Middle</VerticalAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>0.075cm</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Members__Payroll_Staff_No_">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=Fields!Members__Payroll_Staff_No_.Value</Value>
+                    <Style>
+                      <FontFamily>Maiandra GD</FontFamily>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <Top>3.15399in</Top>
+            <Left>1.97436in</Left>
+            <Height>0.47592cm</Height>
+            <Width>6.13332cm</Width>
+            <ZIndex>12</ZIndex>
+            <Style>
+              <VerticalAlign>Middle</VerticalAlign>
+              <PaddingLeft>0.075cm</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="TextBox15">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value />
+                    <Style>
+                      <FontFamily>Maiandra GD</FontFamily>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <Top>3.15399in</Top>
+            <Left>4.38906in</Left>
+            <Height>0.47592cm</Height>
+            <Width>2.55001cm</Width>
+            <ZIndex>13</ZIndex>
+            <Style>
+              <VerticalAlign>Middle</VerticalAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Member_StatusCaption">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=Fields!Member_StatusCaption.Value</Value>
+                    <Style>
+                      <FontFamily>Maiandra GD</FontFamily>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <Top>3.34136in</Top>
+            <Left>0.77456in</Left>
+            <Height>0.47592cm</Height>
+            <Width>3.0475cm</Width>
+            <ZIndex>14</ZIndex>
+            <Style>
+              <VerticalAlign>Bottom</VerticalAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>0.075cm</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Members_Members_Status">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=Fields!Members_Members_Status.Value</Value>
+                    <Style>
+                      <FontFamily>Maiandra GD</FontFamily>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <Top>3.34136in</Top>
+            <Left>1.97436in</Left>
+            <Height>0.47592cm</Height>
+            <Width>6.13332cm</Width>
+            <ZIndex>15</ZIndex>
+            <Style>
+              <VerticalAlign>Middle</VerticalAlign>
+              <PaddingLeft>0.075cm</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="TextBox17">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value />
+                    <Style>
+                      <FontFamily>Maiandra GD</FontFamily>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <Top>3.34136in</Top>
+            <Left>4.38906in</Left>
+            <Height>0.47592cm</Height>
+            <Width>2.55001cm</Width>
+            <ZIndex>16</ZIndex>
+            <Style>
+              <VerticalAlign>Middle</VerticalAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="ADD_Caption">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>ADD</Value>
+                    <Style>
+                      <FontFamily>Maiandra GD</FontFamily>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <Top>3.77873in</Top>
+            <Left>0.77456in</Left>
+            <Height>0.6876cm</Height>
+            <Width>3.0475cm</Width>
+            <ZIndex>17</ZIndex>
+            <Style>
+              <VerticalAlign>Middle</VerticalAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>0.075cm</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Deposit_ContributionCaption">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>BOSA Deposits</Value>
+                    <Style>
+                      <FontFamily>Maiandra GD</FontFamily>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <Top>3.77873in</Top>
+            <Left>1.97436in</Left>
+            <Height>0.6876cm</Height>
+            <Width>6.13332cm</Width>
+            <ZIndex>18</ZIndex>
+            <Style>
+              <VerticalAlign>Middle</VerticalAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>0.075cm</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Current_Shares___1">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=Fields!Current_Shares___1.Value</Value>
+                    <Style>
+                      <FontFamily>Maiandra GD</FontFamily>
+                      <Format>=Fields!Current_Shares___1Format.Value</Format>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Right</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <Top>3.77873in</Top>
+            <Left>4.38906in</Left>
+            <Height>0.6876cm</Height>
+            <Width>2.55001cm</Width>
+            <ZIndex>19</ZIndex>
+            <Style>
+              <VerticalAlign>Middle</VerticalAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox30">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value />
+                    <Style>
+                      <FontFamily>Maiandra GD</FontFamily>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox30</rd:DefaultName>
+            <Top>4.04943in</Top>
+            <Left>0.77456in</Left>
+            <Height>0.6cm</Height>
+            <Width>3.0475cm</Width>
+            <ZIndex>20</ZIndex>
+            <Style>
+              <VerticalAlign>Middle</VerticalAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox37">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Share Capital</Value>
+                    <Style>
+                      <FontFamily>Maiandra GD</FontFamily>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox37</rd:DefaultName>
+            <Top>4.04943in</Top>
+            <Left>1.97436in</Left>
+            <Height>0.6cm</Height>
+            <Width>6.13332cm</Width>
+            <ZIndex>21</ZIndex>
+            <Style>
+              <VerticalAlign>Middle</VerticalAlign>
+              <PaddingLeft>0.075cm</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="VarShareCapitalsellAdd">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=Fields!VarShareCapitalsellAdd.Value</Value>
+                    <Style>
+                      <FontFamily>Maiandra GD</FontFamily>
+                      <Format>#,0.00;(#,0.00)</Format>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Right</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>VarShareCapitalsellAdd</rd:DefaultName>
+            <Top>4.04943in</Top>
+            <Left>4.38906in</Left>
+            <Height>0.6cm</Height>
+            <Width>2.55001cm</Width>
+            <ZIndex>22</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <VerticalAlign>Middle</VerticalAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="TextBox122">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value />
+                    <Style>
+                      <FontFamily>Maiandra GD</FontFamily>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <Top>4.28566in</Top>
+            <Left>0.77456in</Left>
+            <Height>0.52885cm</Height>
+            <Width>3.0475cm</Width>
+            <ZIndex>23</ZIndex>
+            <Style>
+              <VerticalAlign>Middle</VerticalAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="TotalCaption">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Total</Value>
+                    <Style>
+                      <FontFamily>Maiandra GD</FontFamily>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <Top>4.28566in</Top>
+            <Left>1.97436in</Left>
+            <Height>0.52885cm</Height>
+            <Width>6.13332cm</Width>
+            <ZIndex>24</ZIndex>
+            <Style>
+              <VerticalAlign>Middle</VerticalAlign>
+              <PaddingLeft>0.075cm</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="CICLoan___Current_Shares___1__UnpaidDividends___Insurance_Fund___1__FExpenses">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=Fields!TotalAdds.Value</Value>
+                    <Style>
+                      <FontFamily>Maiandra GD</FontFamily>
+                      <FontWeight>Bold</FontWeight>
+                      <Format>=Fields!CICLoan___Current_Shares___1__UnpaidDividends___Insurance_Fund___1__FExpensesFormat.Value</Format>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Right</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <Top>4.28566in</Top>
+            <Left>4.38906in</Left>
+            <Height>0.52885cm</Height>
+            <Width>2.55001cm</Width>
+            <ZIndex>25</ZIndex>
+            <Style>
+              <VerticalAlign>Middle</VerticalAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="LESS_Caption">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Less</Value>
+                    <Style>
+                      <FontFamily>Maiandra GD</FontFamily>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <Top>4.49386in</Top>
+            <Left>0.77456in</Left>
+            <Height>0.55529cm</Height>
+            <Width>3.0475cm</Width>
+            <ZIndex>26</ZIndex>
+            <Style>
+              <VerticalAlign>Middle</VerticalAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>0.075cm</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Current_Oustanding_LoanCaption">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Total Outstanding Loans BOSA</Value>
+                    <Style>
+                      <FontFamily>Maiandra GD</FontFamily>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <Top>4.49386in</Top>
+            <Left>1.97436in</Left>
+            <Height>0.55529cm</Height>
+            <Width>6.13332cm</Width>
+            <ZIndex>27</ZIndex>
+            <Style>
+              <VerticalAlign>Middle</VerticalAlign>
+              <PaddingLeft>0.075cm</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Members__Outstanding_Balance_">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=Fields!TotalLoanBOSA.Value</Value>
+                    <Style>
+                      <FontFamily>Maiandra GD</FontFamily>
+                      <Format>=Fields!Members__Outstanding_Balance_Format.Value</Format>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Right</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <Top>4.49386in</Top>
+            <Left>4.38906in</Left>
+            <Height>0.55529cm</Height>
+            <Width>2.55001cm</Width>
+            <ZIndex>28</ZIndex>
+            <Style>
+              <VerticalAlign>Middle</VerticalAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="TextBox127">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value />
+                    <Style>
+                      <FontFamily>Maiandra GD</FontFamily>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <Top>4.71248in</Top>
+            <Left>0.77456in</Left>
+            <Height>0.52852cm</Height>
+            <Width>3.0475cm</Width>
+            <ZIndex>29</ZIndex>
+            <Style>
+              <VerticalAlign>Middle</VerticalAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Members__Accrued_Interest_Caption">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Total Outstanding Interest BOSA</Value>
+                    <Style>
+                      <FontFamily>Maiandra GD</FontFamily>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <Top>4.71248in</Top>
+            <Left>1.97436in</Left>
+            <Height>0.52852cm</Height>
+            <Width>6.13332cm</Width>
+            <ZIndex>30</ZIndex>
+            <Style>
+              <VerticalAlign>Middle</VerticalAlign>
+              <PaddingLeft>0.075cm</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Members__Accrued_Interest_">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=Fields!TotalIntDueBOSA.Value</Value>
+                    <Style>
+                      <FontFamily>Maiandra GD</FontFamily>
+                      <Format>=Fields!Members__Accrued_Interest_Format.Value</Format>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Right</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <Top>4.71248in</Top>
+            <Left>4.38906in</Left>
+            <Height>0.52852cm</Height>
+            <Width>2.55001cm</Width>
+            <ZIndex>31</ZIndex>
+            <Style>
+              <VerticalAlign>Middle</VerticalAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="TextBox140">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value />
+                    <Style>
+                      <FontFamily>Maiandra GD</FontFamily>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <Top>4.92017in</Top>
+            <Left>0.77456in</Left>
+            <Height>0.44948cm</Height>
+            <Width>3.0475cm</Width>
+            <ZIndex>32</ZIndex>
+            <Style>
+              <VerticalAlign>Middle</VerticalAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Withdrawal_FeesCaption">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Membership Exit Fee</Value>
+                    <Style>
+                      <FontFamily>Maiandra GD</FontFamily>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <Top>4.92017in</Top>
+            <Left>1.97436in</Left>
+            <Height>0.44948cm</Height>
+            <Width>6.13332cm</Width>
+            <ZIndex>33</ZIndex>
+            <Style>
+              <VerticalAlign>Middle</VerticalAlign>
+              <PaddingLeft>0.075cm</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="FWithdrawal">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=Fields!FWithdrawal.Value</Value>
+                    <Style>
+                      <FontFamily>Maiandra GD</FontFamily>
+                      <Format>=Fields!FWithdrawalFormat.Value</Format>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Right</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <Top>4.92017in</Top>
+            <Left>4.38906in</Left>
+            <Height>0.44948cm</Height>
+            <Width>2.55001cm</Width>
+            <ZIndex>34</ZIndex>
+            <Style>
+              <VerticalAlign>Middle</VerticalAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="TextBox146">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value />
+                    <Style>
+                      <FontFamily>Maiandra GD</FontFamily>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <Top>5.09713in</Top>
+            <Left>0.77456in</Left>
+            <Height>0.50239cm</Height>
+            <Width>3.0475cm</Width>
+            <ZIndex>35</ZIndex>
+            <Style>
+              <VerticalAlign>Middle</VerticalAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="TotalCaption_Control1102760055">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Total Deduction</Value>
+                    <Style>
+                      <FontFamily>Maiandra GD</FontFamily>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <Top>5.09713in</Top>
+            <Left>1.97436in</Left>
+            <Height>0.50239cm</Height>
+            <Width>6.13332cm</Width>
+            <ZIndex>36</ZIndex>
+            <Style>
+              <VerticalAlign>Middle</VerticalAlign>
+              <PaddingLeft>0.075cm</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Outstanding_Balance___Accrued_Interest___FOSA_Outstanding_Balance__FOSAInterest_FWithdrawal__InsFund__1_">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=Fields!VarTotalDeduction.Value</Value>
+                    <Style>
+                      <FontFamily>Maiandra GD</FontFamily>
+                      <FontWeight>Bold</FontWeight>
+                      <Format>=Fields!Outstanding_Balance___Accrued_Interest___FOSA_Outstanding_Balance__FOSAInterest_FWithdrawal__InsFund__1_Format.Value</Format>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Right</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <Top>5.09713in</Top>
+            <Left>4.38906in</Left>
+            <Height>0.50239cm</Height>
+            <Width>2.55001cm</Width>
+            <ZIndex>37</ZIndex>
+            <Style>
+              <VerticalAlign>Middle</VerticalAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="TextBox149">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value />
+                    <Style>
+                      <FontFamily>Maiandra GD</FontFamily>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <Top>5.29492in</Top>
+            <Left>0.77456in</Left>
+            <Height>0.52885cm</Height>
+            <Width>3.0475cm</Width>
+            <ZIndex>38</ZIndex>
+            <Style>
+              <VerticalAlign>Middle</VerticalAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Net_RefundCaption">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Net Refund</Value>
+                    <Style>
+                      <FontFamily>Maiandra GD</FontFamily>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <Top>5.29492in</Top>
+            <Left>1.97436in</Left>
+            <Height>0.52885cm</Height>
+            <Width>6.13332cm</Width>
+            <ZIndex>39</ZIndex>
+            <Style>
+              <VerticalAlign>Middle</VerticalAlign>
+              <PaddingLeft>0.075cm</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="NetPayable">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=Fields!NetPayable.Value</Value>
+                    <Style>
+                      <FontFamily>Maiandra GD</FontFamily>
+                      <FontWeight>Bold</FontWeight>
+                      <Format>=Fields!NetPayableFormat.Value</Format>
+                      <TextDecoration>Underline</TextDecoration>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Right</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <Top>5.29492in</Top>
+            <Left>4.38906in</Left>
+            <Height>0.52885cm</Height>
+            <Width>2.55001cm</Width>
+            <ZIndex>40</ZIndex>
+            <Style>
+              <VerticalAlign>Middle</VerticalAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Certified_By______________________________________________________________________________________________________________________________________________________________________Caption3">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Approved By............................</Value>
+                    <Style>
+                      <FontFamily>Maiandra GD</FontFamily>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <Top>5.70784in</Top>
+            <Left>0.77456in</Left>
+            <Height>0.50239cm</Height>
+            <Width>5.212cm</Width>
+            <ZIndex>41</ZIndex>
+            <Style>
+              <VerticalAlign>Bottom</VerticalAlign>
+              <PaddingLeft>0.075cm</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Signature_Date______________________________________________________________________________________________________________________________________________________________________Caption_Control20">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=Fields!Signature_Date______________________________________________________________________________________________________________________________________________________________________Caption_Control1000000008.Value</Value>
+                    <Style>
+                      <FontFamily>Maiandra GD</FontFamily>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <Top>5.70784in</Top>
+            <Left>2.84042in</Left>
+            <Height>0.50239cm</Height>
+            <Width>5.78732cm</Width>
+            <ZIndex>42</ZIndex>
+            <Style>
+              <VerticalAlign>Bottom</VerticalAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>0.075cm</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="ACCOUNT_CLOSURE_SLIPCaption1">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Account Closure Slip</Value>
+                    <Style>
+                      <FontFamily>Maiandra GD</FontFamily>
+                      <FontSize>11pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <Top>5.70473cm</Top>
+            <Left>4.38386cm</Left>
+            <Height>0.423cm</Height>
+            <Width>7.5cm</Width>
+            <ZIndex>43</ZIndex>
+            <Style>
+              <VerticalAlign>Middle</VerticalAlign>
+            </Style>
+          </Textbox>
+          <Textbox Name="UserIdTextBox2">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=User!UserID</Value>
+                    <Style>
+                      <FontFamily>Maiandra GD</FontFamily>
+                      <FontSize>8pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Right</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <Top>1.24113cm</Top>
+            <Left>11.35372cm</Left>
+            <Height>0.423cm</Height>
+            <Width>3.25cm</Width>
+            <ZIndex>44</ZIndex>
+            <Style>
+              <VerticalAlign>Middle</VerticalAlign>
+            </Style>
+          </Textbox>
+          <Textbox Name="ExecutionTimeTextBox2">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=Globals!ExecutionTime</Value>
+                    <Style>
+                      <FontFamily>Maiandra GD</FontFamily>
+                      <FontSize>8pt</FontSize>
+                      <Format>g</Format>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Right</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <Top>0.39513cm</Top>
+            <Left>11.45372cm</Left>
+            <Height>0.423cm</Height>
+            <Width>3.15cm</Width>
+            <ZIndex>45</ZIndex>
+            <Style>
+              <VerticalAlign>Middle</VerticalAlign>
+            </Style>
+          </Textbox>
+          <Image Name="Company_Picture3">
+            <Source>Database</Source>
+            <Value>=First(Fields!CompanyinfoPicture.Value, "DataSet_Result")</Value>
+            <MIMEType>image/jpeg</MIMEType>
+            <Sizing>FitProportional</Sizing>
+            <Left>1.10699in</Left>
+            <Height>0.81945in</Height>
+            <Width>1.58258in</Width>
+            <ZIndex>46</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+          </Image>
+          <Textbox Name="Textbox4">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>PV NO:</Value>
+                    <Style>
+                      <FontSize>11pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox2</rd:DefaultName>
+            <Top>2.2578cm</Top>
+            <Left>2.81177cm</Left>
+            <Height>0.6cm</Height>
+            <Width>3.0475cm</Width>
+            <ZIndex>47</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox5">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=First(Fields!ClosureNo.Value, "DataSet_Result")</Value>
+                    <Style>
+                      <FontSize>12pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox2</rd:DefaultName>
+            <Top>2.2578cm</Top>
+            <Left>7.7722cm</Left>
+            <Height>0.6cm</Height>
+            <Width>3.0475cm</Width>
+            <ZIndex>48</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Member_StatusCaption2">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Payee</Value>
+                    <Style>
+                      <FontFamily>Maiandra GD</FontFamily>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <Top>3.52873in</Top>
+            <Left>0.77457in</Left>
+            <Height>0.47592cm</Height>
+            <Width>3.0475cm</Width>
+            <ZIndex>49</ZIndex>
+            <Style>
+              <VerticalAlign>Bottom</VerticalAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>0.075cm</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Members_Members_Status2">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=First(Fields!Payee.Value, "DataSet_Result")</Value>
+                    <Style>
+                      <FontFamily>Maiandra GD</FontFamily>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <Top>3.52873in</Top>
+            <Left>1.97437in</Left>
+            <Height>0.47592cm</Height>
+            <Width>6.13332cm</Width>
+            <ZIndex>50</ZIndex>
+            <Style>
+              <VerticalAlign>Middle</VerticalAlign>
+              <PaddingLeft>0.075cm</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="TextBox18">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value />
+                    <Style>
+                      <FontFamily>Maiandra GD</FontFamily>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <Top>3.52873in</Top>
+            <Left>4.38907in</Left>
+            <Height>0.47592cm</Height>
+            <Width>2.55001cm</Width>
+            <ZIndex>51</ZIndex>
+            <Style>
+              <VerticalAlign>Middle</VerticalAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+        </ReportItems>
+        <Height>5.90563in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="FORMAT_TODAY_0_4_">
+          <DataField>FORMAT_TODAY_0_4_</DataField>
+        </Field>
+        <Field Name="UserId">
+          <DataField>UserId</DataField>
+        </Field>
+        <Field Name="COMPANYNAME">
+          <DataField>COMPANYNAME</DataField>
+        </Field>
+        <Field Name="Companyinfo_Name">
+          <DataField>Companyinfo_Name</DataField>
+        </Field>
+        <Field Name="Companyinfo_Address">
+          <DataField>Companyinfo_Address</DataField>
+        </Field>
+        <Field Name="Members__No__">
+          <DataField>Members__No__</DataField>
+        </Field>
+        <Field Name="Members_Name">
+          <DataField>Members_Name</DataField>
+        </Field>
+        <Field Name="Members__ID_No__">
+          <DataField>Members__ID_No__</DataField>
+        </Field>
+        <Field Name="RiskFund">
+          <DataField>RiskFund</DataField>
+        </Field>
+        <Field Name="RiskFundFormat">
+          <DataField>RiskFundFormat</DataField>
+        </Field>
+        <Field Name="TotalAdds">
+          <DataField>TotalAdds</DataField>
+        </Field>
+        <Field Name="TotalAddsFormat">
+          <DataField>TotalAddsFormat</DataField>
+        </Field>
+        <Field Name="UnpaidDividendsNew">
+          <DataField>UnpaidDividendsNew</DataField>
+        </Field>
+        <Field Name="UnpaidDividendsNewFormat">
+          <DataField>UnpaidDividendsNewFormat</DataField>
+        </Field>
+        <Field Name="TotalLoanBOSA">
+          <DataField>TotalLoanBOSA</DataField>
+        </Field>
+        <Field Name="TotalLoanBOSAFormat">
+          <DataField>TotalLoanBOSAFormat</DataField>
+        </Field>
+        <Field Name="TotalIntDueBOSA">
+          <DataField>TotalIntDueBOSA</DataField>
+        </Field>
+        <Field Name="TotalIntDueBOSAFormat">
+          <DataField>TotalIntDueBOSAFormat</DataField>
+        </Field>
+        <Field Name="TotalLoanFOSA">
+          <DataField>TotalLoanFOSA</DataField>
+        </Field>
+        <Field Name="TotalLoanFOSAFormat">
+          <DataField>TotalLoanFOSAFormat</DataField>
+        </Field>
+        <Field Name="TotalIntDueFOSA">
+          <DataField>TotalIntDueFOSA</DataField>
+        </Field>
+        <Field Name="TotalIntDueFOSAFormat">
+          <DataField>TotalIntDueFOSAFormat</DataField>
+        </Field>
+        <Field Name="Totallesses">
+          <DataField>Totallesses</DataField>
+        </Field>
+        <Field Name="TotallessesFormat">
+          <DataField>TotallessesFormat</DataField>
+        </Field>
+        <Field Name="VarTotalDeduction">
+          <DataField>VarTotalDeduction</DataField>
+        </Field>
+        <Field Name="VarTotalDeductionFormat">
+          <DataField>VarTotalDeductionFormat</DataField>
+        </Field>
+        <Field Name="TaxOnWithdrawalFee">
+          <DataField>TaxOnWithdrawalFee</DataField>
+        </Field>
+        <Field Name="TaxOnWithdrawalFeeFormat">
+          <DataField>TaxOnWithdrawalFeeFormat</DataField>
+        </Field>
+        <Field Name="TaxOnShareCapSell">
+          <DataField>TaxOnShareCapSell</DataField>
+        </Field>
+        <Field Name="TaxOnShareCapSellFormat">
+          <DataField>TaxOnShareCapSellFormat</DataField>
+        </Field>
+        <Field Name="RiskFundBeneficiary">
+          <DataField>RiskFundBeneficiary</DataField>
+        </Field>
+        <Field Name="RiskRefund">
+          <DataField>RiskRefund</DataField>
+        </Field>
+        <Field Name="RiskRefundFormat">
+          <DataField>RiskRefundFormat</DataField>
+        </Field>
+        <Field Name="Members__Payroll_Staff_No_">
+          <DataField>Members__Payroll_Staff_No_</DataField>
+        </Field>
+        <Field Name="Members__Outstanding_Balance_">
+          <DataField>Members__Outstanding_Balance_</DataField>
+        </Field>
+        <Field Name="Members__Outstanding_Balance_Format">
+          <DataField>Members__Outstanding_Balance_Format</DataField>
+        </Field>
+        <Field Name="TranferFee">
+          <DataField>TranferFee</DataField>
+        </Field>
+        <Field Name="TranferFeeFormat">
+          <DataField>TranferFeeFormat</DataField>
+        </Field>
+        <Field Name="CompanyinfoPicture">
+          <DataField>CompanyinfoPicture</DataField>
+        </Field>
+        <Field Name="Current_Shares___1">
+          <DataField>Current_Shares___1</DataField>
+        </Field>
+        <Field Name="Current_Shares___1Format">
+          <DataField>Current_Shares___1Format</DataField>
+        </Field>
+        <Field Name="Insurance_Fund___1">
+          <DataField>Insurance_Fund___1</DataField>
+        </Field>
+        <Field Name="Insurance_Fund___1Format">
+          <DataField>Insurance_Fund___1Format</DataField>
+        </Field>
+        <Field Name="RiskFund_MembersRegister">
+          <DataField>RiskFund_MembersRegister</DataField>
+        </Field>
+        <Field Name="RiskFund_MembersRegisterFormat">
+          <DataField>RiskFund_MembersRegisterFormat</DataField>
+        </Field>
+        <Field Name="Members__Accrued_Interest_">
+          <DataField>Members__Accrued_Interest_</DataField>
+        </Field>
+        <Field Name="Members__Accrued_Interest_Format">
+          <DataField>Members__Accrued_Interest_Format</DataField>
+        </Field>
+        <Field Name="OutstandingInterest_Members">
+          <DataField>OutstandingInterest_Members</DataField>
+        </Field>
+        <Field Name="OutstandingInterest_MembersFormat">
+          <DataField>OutstandingInterest_MembersFormat</DataField>
+        </Field>
+        <Field Name="Members__Current_Shares_">
+          <DataField>Members__Current_Shares_</DataField>
+        </Field>
+        <Field Name="Members__Current_Shares_Format">
+          <DataField>Members__Current_Shares_Format</DataField>
+        </Field>
+        <Field Name="UnpaidDividends">
+          <DataField>UnpaidDividends</DataField>
+        </Field>
+        <Field Name="UnpaidDividendsFormat">
+          <DataField>UnpaidDividendsFormat</DataField>
+        </Field>
+        <Field Name="Members__Insurance_Fund_">
+          <DataField>Members__Insurance_Fund_</DataField>
+        </Field>
+        <Field Name="Members__Insurance_Fund_Format">
+          <DataField>Members__Insurance_Fund_Format</DataField>
+        </Field>
+        <Field Name="NetPayable">
+          <DataField>NetPayable</DataField>
+        </Field>
+        <Field Name="NetPayableFormat">
+          <DataField>NetPayableFormat</DataField>
+        </Field>
+        <Field Name="Members__Current_Investment_Total_">
+          <DataField>Members__Current_Investment_Total_</DataField>
+        </Field>
+        <Field Name="Members__Current_Investment_Total_Format">
+          <DataField>Members__Current_Investment_Total_Format</DataField>
+        </Field>
+        <Field Name="Members__Dividend_Amount_">
+          <DataField>Members__Dividend_Amount_</DataField>
+        </Field>
+        <Field Name="Members__Dividend_Amount_Format">
+          <DataField>Members__Dividend_Amount_Format</DataField>
+        </Field>
+        <Field Name="FWithdrawal">
+          <DataField>FWithdrawal</DataField>
+        </Field>
+        <Field Name="FWithdrawalFormat">
+          <DataField>FWithdrawalFormat</DataField>
+        </Field>
+        <Field Name="Members_Members__Batch_No__">
+          <DataField>Members_Members__Batch_No__</DataField>
+        </Field>
+        <Field Name="Members_Members_Status">
+          <DataField>Members_Members_Status</DataField>
+        </Field>
+        <Field Name="FOSAInterest">
+          <DataField>FOSAInterest</DataField>
+        </Field>
+        <Field Name="FOSAInterestFormat">
+          <DataField>FOSAInterestFormat</DataField>
+        </Field>
+        <Field Name="Members__FOSA_Outstanding_Balance_">
+          <DataField>Members__FOSA_Outstanding_Balance_</DataField>
+        </Field>
+        <Field Name="Members__FOSA_Outstanding_Balance_Format">
+          <DataField>Members__FOSA_Outstanding_Balance_Format</DataField>
+        </Field>
+        <Field Name="Members_Members__Shares_Retained_">
+          <DataField>Members_Members__Shares_Retained_</DataField>
+        </Field>
+        <Field Name="Members_Members__Shares_Retained_Format">
+          <DataField>Members_Members__Shares_Retained_Format</DataField>
+        </Field>
+        <Field Name="FExpenses">
+          <DataField>FExpenses</DataField>
+        </Field>
+        <Field Name="FExpensesFormat">
+          <DataField>FExpensesFormat</DataField>
+        </Field>
+        <Field Name="InsFund__1">
+          <DataField>InsFund__1</DataField>
+        </Field>
+        <Field Name="InsFund__1Format">
+          <DataField>InsFund__1Format</DataField>
+        </Field>
+        <Field Name="CICLoan">
+          <DataField>CICLoan</DataField>
+        </Field>
+        <Field Name="CICLoanFormat">
+          <DataField>CICLoanFormat</DataField>
+        </Field>
+        <Field Name="CICLoan___Current_Shares___1__UnpaidDividends___Insurance_Fund___1__FExpenses">
+          <DataField>CICLoan___Current_Shares___1__UnpaidDividends___Insurance_Fund___1__FExpenses</DataField>
+        </Field>
+        <Field Name="CICLoan___Current_Shares___1__UnpaidDividends___Insurance_Fund___1__FExpensesFormat">
+          <DataField>CICLoan___Current_Shares___1__UnpaidDividends___Insurance_Fund___1__FExpensesFormat</DataField>
+        </Field>
+        <Field Name="Outstanding_Balance___Accrued_Interest___FOSA_Outstanding_Balance__FOSAInterest_FWithdrawal__InsFund__1_">
+          <DataField>Outstanding_Balance___Accrued_Interest___FOSA_Outstanding_Balance__FOSAInterest_FWithdrawal__InsFund__1_</DataField>
+        </Field>
+        <Field Name="Outstanding_Balance___Accrued_Interest___FOSA_Outstanding_Balance__FOSAInterest_FWithdrawal__InsFund__1_Format">
+          <DataField>Outstanding_Balance___Accrued_Interest___FOSA_Outstanding_Balance__FOSAInterest_FWithdrawal__InsFund__1_Format</DataField>
+        </Field>
+        <Field Name="CurrReport_PAGENOCaption">
+          <DataField>CurrReport_PAGENOCaption</DataField>
+        </Field>
+        <Field Name="ACCOUNT_CLOSURE_SLIPCaption">
+          <DataField>ACCOUNT_CLOSURE_SLIPCaption</DataField>
+        </Field>
+        <Field Name="P_O_BOX_75629___00200__NAIROBICaption">
+          <DataField>P_O_BOX_75629___00200__NAIROBICaption</DataField>
+        </Field>
+        <Field Name="Member_No_Caption">
+          <DataField>Member_No_Caption</DataField>
+        </Field>
+        <Field Name="Members_NameCaption">
+          <DataField>Members_NameCaption</DataField>
+        </Field>
+        <Field Name="Members__ID_No__Caption">
+          <DataField>Members__ID_No__Caption</DataField>
+        </Field>
+        <Field Name="Members__Payroll_Staff_No_Caption">
+          <DataField>Members__Payroll_Staff_No_Caption</DataField>
+        </Field>
+        <Field Name="Current_Oustanding_LoanCaption">
+          <DataField>Current_Oustanding_LoanCaption</DataField>
+        </Field>
+        <Field Name="Deposit_ContributionCaption">
+          <DataField>Deposit_ContributionCaption</DataField>
+        </Field>
+        <Field Name="Other_DeductionsCaption">
+          <DataField>Other_DeductionsCaption</DataField>
+        </Field>
+        <Field Name="Insurance_Fund_Caption">
+          <DataField>Insurance_Fund_Caption</DataField>
+        </Field>
+        <Field Name="Members__Accrued_Interest_Caption">
+          <DataField>Members__Accrued_Interest_Caption</DataField>
+        </Field>
+        <Field Name="ADD__Unpaid_DividendsCaption">
+          <DataField>ADD__Unpaid_DividendsCaption</DataField>
+        </Field>
+        <Field Name="LESS_Caption">
+          <DataField>LESS_Caption</DataField>
+        </Field>
+        <Field Name="ADD_Caption">
+          <DataField>ADD_Caption</DataField>
+        </Field>
+        <Field Name="Net_RefundCaption">
+          <DataField>Net_RefundCaption</DataField>
+        </Field>
+        <Field Name="Withdrawal_FeesCaption">
+          <DataField>Withdrawal_FeesCaption</DataField>
+        </Field>
+        <Field Name="Batch_No_Caption">
+          <DataField>Batch_No_Caption</DataField>
+        </Field>
+        <Field Name="DataItem1000000004">
+          <DataField>DataItem1000000004</DataField>
+        </Field>
+        <Field Name="DataItem1000000005">
+          <DataField>DataItem1000000005</DataField>
+        </Field>
+        <Field Name="DataItem1000000007">
+          <DataField>DataItem1000000007</DataField>
+        </Field>
+        <Field Name="DataItem1000000008">
+          <DataField>DataItem1000000008</DataField>
+        </Field>
+        <Field Name="Member_StatusCaption">
+          <DataField>Member_StatusCaption</DataField>
+        </Field>
+        <Field Name="FOSA_Accrued_InterestCaption">
+          <DataField>FOSA_Accrued_InterestCaption</DataField>
+        </Field>
+        <Field Name="FOSA_Current_Oustanding_LoanCaption">
+          <DataField>FOSA_Current_Oustanding_LoanCaption</DataField>
+        </Field>
+        <Field Name="Funeral_ExpensesCaption">
+          <DataField>Funeral_ExpensesCaption</DataField>
+        </Field>
+        <Field Name="Under_Excess_InsuranceCaption">
+          <DataField>Under_Excess_InsuranceCaption</DataField>
+        </Field>
+        <Field Name="Insurance__CIC_Caption">
+          <DataField>Insurance__CIC_Caption</DataField>
+        </Field>
+        <Field Name="TotalCaption">
+          <DataField>TotalCaption</DataField>
+        </Field>
+        <Field Name="TotalCaption_Control1102760055">
+          <DataField>TotalCaption_Control1102760055</DataField>
+        </Field>
+        <Field Name="VarShareCapitalsellAdd">
+          <DataField>VarShareCapitalsellAdd</DataField>
+        </Field>
+        <Field Name="VarShareCapitalsellAddFormat">
+          <DataField>VarShareCapitalsellAddFormat</DataField>
+        </Field>
+        <Field Name="BuyerMemberNo_ShareCapitalSell">
+          <DataField>BuyerMemberNo_ShareCapitalSell</DataField>
+        </Field>
+        <Field Name="BuyerName_ShareCapitalSell">
+          <DataField>BuyerName_ShareCapitalSell</DataField>
+        </Field>
+        <Field Name="Amount_ShareCapitalSell">
+          <DataField>Amount_ShareCapitalSell</DataField>
+        </Field>
+        <Field Name="Amount_ShareCapitalSellFormat">
+          <DataField>Amount_ShareCapitalSellFormat</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

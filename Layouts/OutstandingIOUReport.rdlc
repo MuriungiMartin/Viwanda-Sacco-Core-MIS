@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="ReportForNavId_1102755000">
+          <DataField>ReportForNavId_1102755000</DataField>
+        </Field>
+        <Field Name="No_StaffAdvanceHeader">
+          <DataField>No_StaffAdvanceHeader</DataField>
+        </Field>
+        <Field Name="Date_StaffAdvanceHeader">
+          <DataField>Date_StaffAdvanceHeader</DataField>
+        </Field>
+        <Field Name="CurrencyCode_StaffAdvanceHeader">
+          <DataField>CurrencyCode_StaffAdvanceHeader</DataField>
+        </Field>
+        <Field Name="Payee_StaffAdvanceHeader">
+          <DataField>Payee_StaffAdvanceHeader</DataField>
+        </Field>
+        <Field Name="OnBehalfOf_StaffAdvanceHeader">
+          <DataField>OnBehalfOf_StaffAdvanceHeader</DataField>
+        </Field>
+        <Field Name="Cashier_StaffAdvanceHeader">
+          <DataField>Cashier_StaffAdvanceHeader</DataField>
+        </Field>
+        <Field Name="Posted_StaffAdvanceHeader">
+          <DataField>Posted_StaffAdvanceHeader</DataField>
+        </Field>
+        <Field Name="DatePosted_StaffAdvanceHeader">
+          <DataField>DatePosted_StaffAdvanceHeader</DataField>
+        </Field>
+        <Field Name="TimePosted_StaffAdvanceHeader">
+          <DataField>TimePosted_StaffAdvanceHeader</DataField>
+        </Field>
+        <Field Name="PostedBy_StaffAdvanceHeader">
+          <DataField>PostedBy_StaffAdvanceHeader</DataField>
+        </Field>
+        <Field Name="TotalPaymentAmount_StaffAdvanceHeader">
+          <DataField>TotalPaymentAmount_StaffAdvanceHeader</DataField>
+        </Field>
+        <Field Name="TotalPaymentAmount_StaffAdvanceHeaderFormat">
+          <DataField>TotalPaymentAmount_StaffAdvanceHeaderFormat</DataField>
+        </Field>
+        <Field Name="PayingBankAccount_StaffAdvanceHeader">
+          <DataField>PayingBankAccount_StaffAdvanceHeader</DataField>
+        </Field>
+        <Field Name="TotalVATAmount_StaffAdvanceHeader">
+          <DataField>TotalVATAmount_StaffAdvanceHeader</DataField>
+        </Field>
+        <Field Name="TotalVATAmount_StaffAdvanceHeaderFormat">
+          <DataField>TotalVATAmount_StaffAdvanceHeaderFormat</DataField>
+        </Field>
+        <Field Name="TotalWitholdingTaxAmount_StaffAdvanceHeader">
+          <DataField>TotalWitholdingTaxAmount_StaffAdvanceHeader</DataField>
+        </Field>
+        <Field Name="TotalWitholdingTaxAmount_StaffAdvanceHeaderFormat">
+          <DataField>TotalWitholdingTaxAmount_StaffAdvanceHeaderFormat</DataField>
+        </Field>
+        <Field Name="TotalNetAmount_StaffAdvanceHeader">
+          <DataField>TotalNetAmount_StaffAdvanceHeader</DataField>
+        </Field>
+        <Field Name="TotalNetAmount_StaffAdvanceHeaderFormat">
+          <DataField>TotalNetAmount_StaffAdvanceHeaderFormat</DataField>
+        </Field>
+        <Field Name="TotalNetAmountLCY_StaffAdvanceHeader">
+          <DataField>TotalNetAmountLCY_StaffAdvanceHeader</DataField>
+        </Field>
+        <Field Name="TotalNetAmountLCY_StaffAdvanceHeaderFormat">
+          <DataField>TotalNetAmountLCY_StaffAdvanceHeaderFormat</DataField>
+        </Field>
+        <Field Name="Purpose_StaffAdvanceHeader">
+          <DataField>Purpose_StaffAdvanceHeader</DataField>
+        </Field>
+        <Field Name="AccountType_StaffAdvanceHeader">
+          <DataField>AccountType_StaffAdvanceHeader</DataField>
+        </Field>
+        <Field Name="AccountNo_StaffAdvanceHeader">
+          <DataField>AccountNo_StaffAdvanceHeader</DataField>
+        </Field>
+        <Field Name="ComapnyName">
+          <DataField>ComapnyName</DataField>
+        </Field>
+        <Field Name="CompanyPicture">
+          <DataField>CompanyPicture</DataField>
+        </Field>
+        <Field Name="RemainingAmount">
+          <DataField>RemainingAmount</DataField>
+        </Field>
+        <Field Name="RemainingAmountFormat">
+          <DataField>RemainingAmountFormat</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

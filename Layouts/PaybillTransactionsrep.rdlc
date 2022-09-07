@@ -1,0 +1,268 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <ReportParameters>
+    <ReportParameter Name="CI_NameCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>CI_NameCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>CI_NameCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="CI_AddressCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>CI_AddressCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>CI_AddressCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="CI_Address2Caption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>CI_Address2Caption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>CI_Address2Caption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="CI_PhoneNoCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>CI_PhoneNoCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>CI_PhoneNoCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="CI_PictureCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>CI_PictureCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>CI_PictureCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="CI_CityCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>CI_CityCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>CI_CityCaption</Prompt>
+    </ReportParameter>
+  </ReportParameters>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="ReportForNavId_1000000000">
+          <DataField>ReportForNavId_1000000000</DataField>
+        </Field>
+        <Field Name="CI_Name">
+          <DataField>CI_Name</DataField>
+        </Field>
+        <Field Name="CI_Address">
+          <DataField>CI_Address</DataField>
+        </Field>
+        <Field Name="CI_Address2">
+          <DataField>CI_Address2</DataField>
+        </Field>
+        <Field Name="CI_PhoneNo">
+          <DataField>CI_PhoneNo</DataField>
+        </Field>
+        <Field Name="CI_Picture">
+          <DataField>CI_Picture</DataField>
+        </Field>
+        <Field Name="CI_City">
+          <DataField>CI_City</DataField>
+        </Field>
+        <Field Name="DOCNAME">
+          <DataField>DOCNAME</DataField>
+        </Field>
+        <Field Name="No_SaccoTransfers">
+          <DataField>No_SaccoTransfers</DataField>
+        </Field>
+        <Field Name="TransactionDate_SaccoTransfers">
+          <DataField>TransactionDate_SaccoTransfers</DataField>
+        </Field>
+        <Field Name="ScheduleTotal_SaccoTransfers">
+          <DataField>ScheduleTotal_SaccoTransfers</DataField>
+        </Field>
+        <Field Name="Approved_SaccoTransfers">
+          <DataField>Approved_SaccoTransfers</DataField>
+        </Field>
+        <Field Name="ApprovedBy_SaccoTransfers">
+          <DataField>ApprovedBy_SaccoTransfers</DataField>
+        </Field>
+        <Field Name="Posted_SaccoTransfers">
+          <DataField>Posted_SaccoTransfers</DataField>
+        </Field>
+        <Field Name="NoSeries_SaccoTransfers">
+          <DataField>NoSeries_SaccoTransfers</DataField>
+        </Field>
+        <Field Name="ResponsibilityCenter_SaccoTransfers">
+          <DataField>ResponsibilityCenter_SaccoTransfers</DataField>
+        </Field>
+        <Field Name="Remarks_SaccoTransfers">
+          <DataField>Remarks_SaccoTransfers</DataField>
+        </Field>
+        <Field Name="SourceAccountType_SaccoTransfers">
+          <DataField>SourceAccountType_SaccoTransfers</DataField>
+        </Field>
+        <Field Name="SourceAccountNo_SaccoTransfers">
+          <DataField>SourceAccountNo_SaccoTransfers</DataField>
+        </Field>
+        <Field Name="SourceTransactionType_SaccoTransfers">
+          <DataField>SourceTransactionType_SaccoTransfers</DataField>
+        </Field>
+        <Field Name="SourceAccountName_SaccoTransfers">
+          <DataField>SourceAccountName_SaccoTransfers</DataField>
+        </Field>
+        <Field Name="SourceLoanNo_SaccoTransfers">
+          <DataField>SourceLoanNo_SaccoTransfers</DataField>
+        </Field>
+        <Field Name="CreatedBy_SaccoTransfers">
+          <DataField>CreatedBy_SaccoTransfers</DataField>
+        </Field>
+        <Field Name="Debit_SaccoTransfers">
+          <DataField>Debit_SaccoTransfers</DataField>
+        </Field>
+        <Field Name="Refund_SaccoTransfers">
+          <DataField>Refund_SaccoTransfers</DataField>
+        </Field>
+        <Field Name="GuarantorRecovery_SaccoTransfers">
+          <DataField>GuarantorRecovery_SaccoTransfers</DataField>
+        </Field>
+        <Field Name="PayrolNo_SaccoTransfers">
+          <DataField>PayrolNo_SaccoTransfers</DataField>
+        </Field>
+        <Field Name="GlobalDimension1Code_SaccoTransfers">
+          <DataField>GlobalDimension1Code_SaccoTransfers</DataField>
+        </Field>
+        <Field Name="GlobalDimension2Code_SaccoTransfers">
+          <DataField>GlobalDimension2Code_SaccoTransfers</DataField>
+        </Field>
+        <Field Name="BosaNumber_SaccoTransfers">
+          <DataField>BosaNumber_SaccoTransfers</DataField>
+        </Field>
+        <Field Name="Status_SaccoTransfers">
+          <DataField>Status_SaccoTransfers</DataField>
+        </Field>
+        <Field Name="NumberText_1_">
+          <DataField>NumberText_1_</DataField>
+        </Field>
+        <Field Name="ReportForNavId_1000000001">
+          <DataField>ReportForNavId_1000000001</DataField>
+        </Field>
+        <Field Name="No_SaccoTransfersSchedule">
+          <DataField>No_SaccoTransfersSchedule</DataField>
+        </Field>
+        <Field Name="DestinationAccountNo_SaccoTransfersSchedule">
+          <DataField>DestinationAccountNo_SaccoTransfersSchedule</DataField>
+        </Field>
+        <Field Name="DestinationAccountName_SaccoTransfersSchedule">
+          <DataField>DestinationAccountName_SaccoTransfersSchedule</DataField>
+        </Field>
+        <Field Name="DestinationAccountType_SaccoTransfersSchedule">
+          <DataField>DestinationAccountType_SaccoTransfersSchedule</DataField>
+        </Field>
+        <Field Name="DestinationType_SaccoTransfersSchedule">
+          <DataField>DestinationType_SaccoTransfersSchedule</DataField>
+        </Field>
+        <Field Name="DestinationLoan_SaccoTransfersSchedule">
+          <DataField>DestinationLoan_SaccoTransfersSchedule</DataField>
+        </Field>
+        <Field Name="Amount_SaccoTransfersSchedule">
+          <DataField>Amount_SaccoTransfersSchedule</DataField>
+        </Field>
+        <Field Name="Description_SaccoTransfersSchedule">
+          <DataField>Description_SaccoTransfersSchedule</DataField>
+        </Field>
+        <Field Name="CreatedBy_SaccoTransfersSchedule">
+          <DataField>CreatedBy_SaccoTransfersSchedule</DataField>
+        </Field>
+        <Field Name="CummulativeTotalPaymentLoan_SaccoTransfersSchedule">
+          <DataField>CummulativeTotalPaymentLoan_SaccoTransfersSchedule</DataField>
+        </Field>
+        <Field Name="Credit_SaccoTransfersSchedule">
+          <DataField>Credit_SaccoTransfersSchedule</DataField>
+        </Field>
+        <Field Name="GlobalDimension1Code_SaccoTransfersSchedule">
+          <DataField>GlobalDimension1Code_SaccoTransfersSchedule</DataField>
+        </Field>
+        <Field Name="GlobalDimension2Code_SaccoTransfersSchedule">
+          <DataField>GlobalDimension2Code_SaccoTransfersSchedule</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

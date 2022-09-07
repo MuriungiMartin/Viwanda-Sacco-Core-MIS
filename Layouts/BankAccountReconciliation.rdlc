@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="ReportForNavId_1">
+          <DataField>ReportForNavId_1</DataField>
+        </Field>
+        <Field Name="BankNo">
+          <DataField>BankNo</DataField>
+        </Field>
+        <Field Name="StatementNo">
+          <DataField>StatementNo</DataField>
+        </Field>
+        <Field Name="StatementBalance">
+          <DataField>StatementBalance</DataField>
+        </Field>
+        <Field Name="StatementBalanceFormat">
+          <DataField>StatementBalanceFormat</DataField>
+        </Field>
+        <Field Name="StatementDate">
+          <DataField>StatementDate</DataField>
+        </Field>
+        <Field Name="CName">
+          <DataField>CName</DataField>
+        </Field>
+        <Field Name="CAddress">
+          <DataField>CAddress</DataField>
+        </Field>
+        <Field Name="CPic">
+          <DataField>CPic</DataField>
+        </Field>
+        <Field Name="CashBal">
+          <DataField>CashBal</DataField>
+        </Field>
+        <Field Name="CashBalFormat">
+          <DataField>CashBalFormat</DataField>
+        </Field>
+        <Field Name="UnpresentedDepositSlips">
+          <DataField>UnpresentedDepositSlips</DataField>
+        </Field>
+        <Field Name="UnpresentedDepositSlipsFormat">
+          <DataField>UnpresentedDepositSlipsFormat</DataField>
+        </Field>
+        <Field Name="UnpresentedCheques">
+          <DataField>UnpresentedCheques</DataField>
+        </Field>
+        <Field Name="UnpresentedChequesFormat">
+          <DataField>UnpresentedChequesFormat</DataField>
+        </Field>
+        <Field Name="ReconcilledBalance">
+          <DataField>ReconcilledBalance</DataField>
+        </Field>
+        <Field Name="ReconcilledBalanceFormat">
+          <DataField>ReconcilledBalanceFormat</DataField>
+        </Field>
+        <Field Name="BankStmtBalance">
+          <DataField>BankStmtBalance</DataField>
+        </Field>
+        <Field Name="BankStmtBalanceFormat">
+          <DataField>BankStmtBalanceFormat</DataField>
+        </Field>
+        <Field Name="Differences">
+          <DataField>Differences</DataField>
+        </Field>
+        <Field Name="DifferencesFormat">
+          <DataField>DifferencesFormat</DataField>
+        </Field>
+        <Field Name="BankName">
+          <DataField>BankName</DataField>
+        </Field>
+        <Field Name="ReportForNavId_6">
+          <DataField>ReportForNavId_6</DataField>
+        </Field>
+        <Field Name="DocumentNo">
+          <DataField>DocumentNo</DataField>
+        </Field>
+        <Field Name="TransactionDate">
+          <DataField>TransactionDate</DataField>
+        </Field>
+        <Field Name="Description">
+          <DataField>Description</DataField>
+        </Field>
+        <Field Name="StatementAmount">
+          <DataField>StatementAmount</DataField>
+        </Field>
+        <Field Name="StatementAmountFormat">
+          <DataField>StatementAmountFormat</DataField>
+        </Field>
+        <Field Name="AppliedAmount">
+          <DataField>AppliedAmount</DataField>
+        </Field>
+        <Field Name="AppliedAmountFormat">
+          <DataField>AppliedAmountFormat</DataField>
+        </Field>
+        <Field Name="Difference">
+          <DataField>Difference</DataField>
+        </Field>
+        <Field Name="DifferenceFormat">
+          <DataField>DifferenceFormat</DataField>
+        </Field>
+        <Field Name="CheckNo">
+          <DataField>CheckNo</DataField>
+        </Field>
+        <Field Name="ReportForNavId_18">
+          <DataField>ReportForNavId_18</DataField>
+        </Field>
+        <Field Name="DocumentNo2">
+          <DataField>DocumentNo2</DataField>
+        </Field>
+        <Field Name="TransactionDate2">
+          <DataField>TransactionDate2</DataField>
+        </Field>
+        <Field Name="Description2">
+          <DataField>Description2</DataField>
+        </Field>
+        <Field Name="Amount2">
+          <DataField>Amount2</DataField>
+        </Field>
+        <Field Name="Amount2Format">
+          <DataField>Amount2Format</DataField>
+        </Field>
+        <Field Name="RemainingAmount2">
+          <DataField>RemainingAmount2</DataField>
+        </Field>
+        <Field Name="RemainingAmount2Format">
+          <DataField>RemainingAmount2Format</DataField>
+        </Field>
+        <Field Name="CheckNo2">
+          <DataField>CheckNo2</DataField>
+        </Field>
+        <Field Name="Status">
+          <DataField>Status</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

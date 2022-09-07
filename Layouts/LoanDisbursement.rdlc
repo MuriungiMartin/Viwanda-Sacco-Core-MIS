@@ -1,0 +1,1435 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+      <rd:DataSourceID>9a45afda-f75f-4111-816e-1170dc542b62</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <ReportItems>
+          <Tablix Name="Tablix2">
+            <TablixBody>
+              <TablixColumns>
+                <TablixColumn>
+                  <Width>2.98756cm</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>2.5cm</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>2.5cm</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>4.21979cm</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>3.86858cm</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>3.40062cm</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>3.15543cm</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>2.92333cm</Width>
+                </TablixColumn>
+              </TablixColumns>
+              <TablixRows>
+                <TablixRow>
+                  <Height>0.52062cm</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox8">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Loan No</Value>
+                                  <Style>
+                                    <FontFamily>Maiandra GD</FontFamily>
+                                    <FontSize>9pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox8</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox2">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>SR No.</Value>
+                                  <Style>
+                                    <FontFamily>Maiandra GD</FontFamily>
+                                    <FontSize>9pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox2</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox12">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>P No.</Value>
+                                  <Style>
+                                    <FontFamily>Maiandra GD</FontFamily>
+                                    <FontSize>9pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox12</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox16">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>MEMBER NAME</Value>
+                                  <Style>
+                                    <FontFamily>Maiandra GD</FontFamily>
+                                    <FontSize>9pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox16</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox18">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>LOAN TYPE</Value>
+                                  <Style>
+                                    <FontFamily>Maiandra GD</FontFamily>
+                                    <FontSize>9pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox18</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox20">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>AMOUNT APPRAISED</Value>
+                                  <Style>
+                                    <FontStyle>Normal</FontStyle>
+                                    <FontFamily>Maiandra GD</FontFamily>
+                                    <FontSize>9pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                    <TextDecoration>None</TextDecoration>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox20</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox22">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>CURRENT TOTAL DEPOSITS</Value>
+                                  <Style>
+                                    <FontFamily>Maiandra GD</FontFamily>
+                                    <FontSize>9pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox22</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox1">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>CURRENT TOTAL LOANS OUTSTANDING</Value>
+                                  <Style>
+                                    <FontFamily>Maiandra GD</FontFamily>
+                                    <FontSize>9pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox1</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+                <TablixRow>
+                  <Height>0.54708cm</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Loans__Loan__No__1">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!Loans__Loan__No__.Value</Value>
+                                  <Style>
+                                    <FontFamily>Maiandra GD</FontFamily>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Loans__Loan__No__1</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="EntryNo">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!EntryNo.Value</Value>
+                                  <Style>
+                                    <FontFamily>Maiandra GD</FontFamily>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>EntryNo</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox14">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!Loans__Client_Code_.Value</Value>
+                                  <Style>
+                                    <FontFamily>Maiandra GD</FontFamily>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox14</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox17">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!Loans__Client_Name_.Value</Value>
+                                  <Style>
+                                    <FontFamily>Maiandra GD</FontFamily>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Left</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox17</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="LoanProductTypeName_LoansRegister">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!LoanProductTypeName_LoansRegister.Value</Value>
+                                  <Style>
+                                    <FontFamily>Maiandra GD</FontFamily>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>LoanProductTypeName_LoansRegister</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="ApprovedAmount_LoansRegister">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!ApprovedAmount_LoansRegister.Value</Value>
+                                  <Style>
+                                    <FontFamily>Maiandra GD</FontFamily>
+                                    <Format>#,0.00;(#,0.00)</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>ApprovedAmount_LoansRegister</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="CurrentShares_LoansRegister">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!CurrentShares_LoansRegister.Value</Value>
+                                  <Style>
+                                    <FontFamily>Maiandra GD</FontFamily>
+                                    <Format>#,0.00;(#,0.00)</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>CurrentShares_LoansRegister</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="TotalLoansOutstanding_LoansRegister2">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!TotalLoansOutstanding_LoansRegister2.Value</Value>
+                                  <Style>
+                                    <FontFamily>Maiandra GD</FontFamily>
+                                    <Format>n2</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>TotalLoansOutstanding_LoansRegister2</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+                <TablixRow>
+                  <Height>0.6cm</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox34">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value />
+                                  <Style>
+                                    <FontFamily>Maiandra GD</FontFamily>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox34</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <ColSpan>5</ColSpan>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox38">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Sum(Fields!ApprovedAmount_LoansRegister.Value)</Value>
+                                  <Style>
+                                    <FontFamily>Maiandra GD</FontFamily>
+                                    <FontWeight>Bold</FontWeight>
+                                    <Format>#,0.00;(#,0.00)</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox38</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox39">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value />
+                                  <Style>
+                                    <FontFamily>Maiandra GD</FontFamily>
+                                    <FontWeight>Bold</FontWeight>
+                                    <Format>#,0.00;(#,0.00)</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox39</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox3">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value />
+                                  <Style>
+                                    <FontFamily>Maiandra GD</FontFamily>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox3</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+              </TablixRows>
+            </TablixBody>
+            <TablixColumnHierarchy>
+              <TablixMembers>
+                <TablixMember>
+                  <Visibility>
+                    <Hidden>true</Hidden>
+                  </Visibility>
+                </TablixMember>
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+              </TablixMembers>
+            </TablixColumnHierarchy>
+            <TablixRowHierarchy>
+              <TablixMembers>
+                <TablixMember>
+                  <KeepWithGroup>After</KeepWithGroup>
+                </TablixMember>
+                <TablixMember>
+                  <Group Name="Details1" />
+                </TablixMember>
+                <TablixMember>
+                  <KeepWithGroup>Before</KeepWithGroup>
+                </TablixMember>
+              </TablixMembers>
+            </TablixRowHierarchy>
+            <DataSetName>DataSet_Result</DataSetName>
+            <Top>0.17639cm</Top>
+            <Left>0cm</Left>
+            <Height>1.6677cm</Height>
+            <Width>25.55531cm</Width>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+          </Tablix>
+        </ReportItems>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>10.09401in</Width>
+      <Page>
+        <PageHeader>
+          <Height>0.98611in</Height>
+          <PrintOnFirstPage>true</PrintOnFirstPage>
+          <PrintOnLastPage>true</PrintOnLastPage>
+          <ReportItems>
+            <Textbox Name="Loans_RegisterCaption1">
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>LOANS DISBURSEMENT SCHEDULE</Value>
+                      <Style>
+                        <FontFamily>Maiandra GD</FontFamily>
+                        <FontWeight>Bold</FontWeight>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style>
+                    <TextAlign>Center</TextAlign>
+                  </Style>
+                </Paragraph>
+              </Paragraphs>
+              <Top>1.83477cm</Top>
+              <Left>3.57262cm</Left>
+              <Height>0.423cm</Height>
+              <Width>8.95521cm</Width>
+              <Style>
+                <VerticalAlign>Middle</VerticalAlign>
+              </Style>
+            </Textbox>
+            <Image Name="Image1">
+              <Source>Database</Source>
+              <Value>=First(Fields!CompanyInfoPic.Value, "DataSet_Result")</Value>
+              <MIMEType>image/jpeg</MIMEType>
+              <Sizing>FitProportional</Sizing>
+              <Top>0.1398cm</Top>
+              <Left>0.10061cm</Left>
+              <Height>2.18853cm</Height>
+              <Width>2.98756cm</Width>
+              <ZIndex>1</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+              </Style>
+            </Image>
+            <Textbox Name="NAME">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>=First(Fields!CompanyInfoName.Value, "DataSet_Result")</Value>
+                      <Style>
+                        <FontFamily>Maiandra GD</FontFamily>
+                        <FontSize>14pt</FontSize>
+                        <FontWeight>Bold</FontWeight>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style>
+                    <TextAlign>Center</TextAlign>
+                  </Style>
+                </Paragraph>
+              </Paragraphs>
+              <rd:DefaultName>NAME</rd:DefaultName>
+              <Top>0.1398cm</Top>
+              <Left>3.12345cm</Left>
+              <Height>0.6cm</Height>
+              <Width>10.6449cm</Width>
+              <ZIndex>2</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+            <Textbox Name="PageNumberTextBox">
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>=Globals!PageNumber</Value>
+                      <Style>
+                        <FontFamily>Maiandra GD</FontFamily>
+                        <FontSize>7pt</FontSize>
+                      </Style>
+                    </TextRun>
+                    <TextRun>
+                      <Value>cccc</Value>
+                      <Style>
+                        <FontFamily>Maiandra GD</FontFamily>
+                        <FontSize>7pt</FontSize>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style>
+                    <TextAlign>Right</TextAlign>
+                  </Style>
+                </Paragraph>
+              </Paragraphs>
+              <Top>0.66863cm</Top>
+              <Left>17.19675cm</Left>
+              <Height>0.423cm</Height>
+              <Width>0.45cm</Width>
+              <ZIndex>3</ZIndex>
+              <Style>
+                <VerticalAlign>Middle</VerticalAlign>
+              </Style>
+            </Textbox>
+            <Textbox Name="UserIdTextBox">
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>=User!UserID</Value>
+                      <Style>
+                        <FontFamily>Maiandra GD</FontFamily>
+                        <FontSize>7pt</FontSize>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style>
+                    <TextAlign>Right</TextAlign>
+                  </Style>
+                </Paragraph>
+              </Paragraphs>
+              <Top>0.9858cm</Top>
+              <Left>14.39675cm</Left>
+              <Height>0.423cm</Height>
+              <Width>3.25cm</Width>
+              <ZIndex>4</ZIndex>
+              <Style>
+                <VerticalAlign>Middle</VerticalAlign>
+              </Style>
+            </Textbox>
+            <Textbox Name="ExecutionTimeTextBox">
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>=Globals!ExecutionTime</Value>
+                      <Style>
+                        <FontFamily>Maiandra GD</FontFamily>
+                        <FontSize>7pt</FontSize>
+                        <Format>g</Format>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style>
+                    <TextAlign>Right</TextAlign>
+                  </Style>
+                </Paragraph>
+              </Paragraphs>
+              <Top>0.05504in</Top>
+              <Left>14.49675cm</Left>
+              <Height>0.423cm</Height>
+              <Width>3.15cm</Width>
+              <ZIndex>5</ZIndex>
+              <Style>
+                <VerticalAlign>Middle</VerticalAlign>
+              </Style>
+            </Textbox>
+            <Textbox Name="CurrReport_PAGENOCaption1">
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>PAGE</Value>
+                      <Style>
+                        <FontFamily>Maiandra GD</FontFamily>
+                        <FontSize>7pt</FontSize>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style />
+                </Paragraph>
+              </Paragraphs>
+              <Top>0.66863cm</Top>
+              <Left>16.44675cm</Left>
+              <Height>0.423cm</Height>
+              <Width>0.75cm</Width>
+              <ZIndex>6</ZIndex>
+              <Style>
+                <VerticalAlign>Middle</VerticalAlign>
+              </Style>
+            </Textbox>
+            <Line Name="Line1">
+              <Top>2.50472cm</Top>
+              <Height>0cm</Height>
+              <Width>25.55532cm</Width>
+              <ZIndex>7</ZIndex>
+              <Style>
+                <Border>
+                  <Style>Solid</Style>
+                  <Width>2.25pt</Width>
+                </Border>
+                <TopBorder>
+                  <Width>2.25pt</Width>
+                </TopBorder>
+                <BottomBorder>
+                  <Width>2.25pt</Width>
+                </BottomBorder>
+                <LeftBorder>
+                  <Width>2.25pt</Width>
+                </LeftBorder>
+                <RightBorder>
+                  <Width>2.25pt</Width>
+                </RightBorder>
+              </Style>
+            </Line>
+          </ReportItems>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+          </Style>
+        </PageHeader>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="FORMAT_TODAY_0_4_">
+          <DataField>FORMAT_TODAY_0_4_</DataField>
+        </Field>
+        <Field Name="COMPANYNAME">
+          <DataField>COMPANYNAME</DataField>
+        </Field>
+        <Field Name="UserId">
+          <DataField>UserId</DataField>
+        </Field>
+        <Field Name="LoanType">
+          <DataField>LoanType</DataField>
+        </Field>
+        <Field Name="RFilters">
+          <DataField>RFilters</DataField>
+        </Field>
+        <Field Name="CompanyInfoName">
+          <DataField>CompanyInfoName</DataField>
+        </Field>
+        <Field Name="CompanyInfoAddress">
+          <DataField>CompanyInfoAddress</DataField>
+        </Field>
+        <Field Name="CompanyInfoAddress2">
+          <DataField>CompanyInfoAddress2</DataField>
+        </Field>
+        <Field Name="CompanyInfoPic">
+          <DataField>CompanyInfoPic</DataField>
+        </Field>
+        <Field Name="Loans__Loan__No__">
+          <DataField>Loans__Loan__No__</DataField>
+        </Field>
+        <Field Name="Loans__Client_Code_">
+          <DataField>Loans__Client_Code_</DataField>
+        </Field>
+        <Field Name="Loans__Client_Name_">
+          <DataField>Loans__Client_Name_</DataField>
+        </Field>
+        <Field Name="OutstandingBalance_LoansRegister">
+          <DataField>OutstandingBalance_LoansRegister</DataField>
+        </Field>
+        <Field Name="OutstandingBalance_LoansRegisterFormat">
+          <DataField>OutstandingBalance_LoansRegisterFormat</DataField>
+        </Field>
+        <Field Name="ApprovedAmount_LoansRegister">
+          <DataField>ApprovedAmount_LoansRegister</DataField>
+        </Field>
+        <Field Name="ApprovedAmount_LoansRegisterFormat">
+          <DataField>ApprovedAmount_LoansRegisterFormat</DataField>
+        </Field>
+        <Field Name="Loans__Requested_Amount_">
+          <DataField>Loans__Requested_Amount_</DataField>
+        </Field>
+        <Field Name="Loans__Requested_Amount_Format">
+          <DataField>Loans__Requested_Amount_Format</DataField>
+        </Field>
+        <Field Name="CurrentShares_LoansRegister">
+          <DataField>CurrentShares_LoansRegister</DataField>
+        </Field>
+        <Field Name="CurrentShares_LoansRegisterFormat">
+          <DataField>CurrentShares_LoansRegisterFormat</DataField>
+        </Field>
+        <Field Name="TotalloanOutstanding_LoansRegister">
+          <DataField>TotalloanOutstanding_LoansRegister</DataField>
+        </Field>
+        <Field Name="TotalloanOutstanding_LoansRegisterFormat">
+          <DataField>TotalloanOutstanding_LoansRegisterFormat</DataField>
+        </Field>
+        <Field Name="TotalsLoanOutstanding_Loans">
+          <DataField>TotalsLoanOutstanding_Loans</DataField>
+        </Field>
+        <Field Name="TotalsLoanOutstanding_LoansFormat">
+          <DataField>TotalsLoanOutstanding_LoansFormat</DataField>
+        </Field>
+        <Field Name="Loans__Approved_Amount_">
+          <DataField>Loans__Approved_Amount_</DataField>
+        </Field>
+        <Field Name="Loans__Approved_Amount_Format">
+          <DataField>Loans__Approved_Amount_Format</DataField>
+        </Field>
+        <Field Name="AmountPayedOff">
+          <DataField>AmountPayedOff</DataField>
+        </Field>
+        <Field Name="AmountPayedOffFormat">
+          <DataField>AmountPayedOffFormat</DataField>
+        </Field>
+        <Field Name="CashFlowOut">
+          <DataField>CashFlowOut</DataField>
+        </Field>
+        <Field Name="CashFlowOutFormat">
+          <DataField>CashFlowOutFormat</DataField>
+        </Field>
+        <Field Name="EntryNo">
+          <DataField>EntryNo</DataField>
+        </Field>
+        <Field Name="Upfronts">
+          <DataField>Upfronts</DataField>
+        </Field>
+        <Field Name="UpfrontsFormat">
+          <DataField>UpfrontsFormat</DataField>
+        </Field>
+        <Field Name="Netdisbursed">
+          <DataField>Netdisbursed</DataField>
+        </Field>
+        <Field Name="NetdisbursedFormat">
+          <DataField>NetdisbursedFormat</DataField>
+        </Field>
+        <Field Name="VarAmountDisbursed">
+          <DataField>VarAmountDisbursed</DataField>
+        </Field>
+        <Field Name="VarAmountDisbursedFormat">
+          <DataField>VarAmountDisbursedFormat</DataField>
+        </Field>
+        <Field Name="CurrentShares_Loans">
+          <DataField>CurrentShares_Loans</DataField>
+        </Field>
+        <Field Name="CurrentShares_LoansFormat">
+          <DataField>CurrentShares_LoansFormat</DataField>
+        </Field>
+        <Field Name="EmployerName_Loans">
+          <DataField>EmployerName_Loans</DataField>
+        </Field>
+        <Field Name="TotalUpfronts">
+          <DataField>TotalUpfronts</DataField>
+        </Field>
+        <Field Name="TotalUpfrontsFormat">
+          <DataField>TotalUpfrontsFormat</DataField>
+        </Field>
+        <Field Name="EmployerCode_Loans">
+          <DataField>EmployerCode_Loans</DataField>
+        </Field>
+        <Field Name="TotalNetPay">
+          <DataField>TotalNetPay</DataField>
+        </Field>
+        <Field Name="TotalNetPayFormat">
+          <DataField>TotalNetPayFormat</DataField>
+        </Field>
+        <Field Name="Loans_Installments">
+          <DataField>Loans_Installments</DataField>
+        </Field>
+        <Field Name="DateApproved_Loans">
+          <DataField>DateApproved_Loans</DataField>
+        </Field>
+        <Field Name="Loans__Loan_Status_">
+          <DataField>Loans__Loan_Status_</DataField>
+        </Field>
+        <Field Name="Loans_Loans__Outstanding_Balance_">
+          <DataField>Loans_Loans__Outstanding_Balance_</DataField>
+        </Field>
+        <Field Name="Loans_Loans__Outstanding_Balance_Format">
+          <DataField>Loans_Loans__Outstanding_Balance_Format</DataField>
+        </Field>
+        <Field Name="Loans__Application_Date_">
+          <DataField>Loans__Application_Date_</DataField>
+        </Field>
+        <Field Name="Loans__Issued_Date_">
+          <DataField>Loans__Issued_Date_</DataField>
+        </Field>
+        <Field Name="Loans__Oustanding_Interest_">
+          <DataField>Loans__Oustanding_Interest_</DataField>
+        </Field>
+        <Field Name="Loans__Oustanding_Interest_Format">
+          <DataField>Loans__Oustanding_Interest_Format</DataField>
+        </Field>
+        <Field Name="Loans_Loans__Loan_Product_Type_">
+          <DataField>Loans_Loans__Loan_Product_Type_</DataField>
+        </Field>
+        <Field Name="LoanProductTypeName_LoansRegister">
+          <DataField>LoanProductTypeName_LoansRegister</DataField>
+        </Field>
+        <Field Name="Loans__Last_Pay_Date_">
+          <DataField>Loans__Last_Pay_Date_</DataField>
+        </Field>
+        <Field Name="Loans__Top_Up_Amount_">
+          <DataField>Loans__Top_Up_Amount_</DataField>
+        </Field>
+        <Field Name="Loans__Top_Up_Amount_Format">
+          <DataField>Loans__Top_Up_Amount_Format</DataField>
+        </Field>
+        <Field Name="Loans__Approved_Amount__Control1102760017">
+          <DataField>Loans__Approved_Amount__Control1102760017</DataField>
+        </Field>
+        <Field Name="Loans__Approved_Amount__Control1102760017Format">
+          <DataField>Loans__Approved_Amount__Control1102760017Format</DataField>
+        </Field>
+        <Field Name="Loans__Requested_Amount__Control1102760038">
+          <DataField>Loans__Requested_Amount__Control1102760038</DataField>
+        </Field>
+        <Field Name="Loans__Requested_Amount__Control1102760038Format">
+          <DataField>Loans__Requested_Amount__Control1102760038Format</DataField>
+        </Field>
+        <Field Name="LCount">
+          <DataField>LCount</DataField>
+        </Field>
+        <Field Name="Loans_Loans__Outstanding_Balance__Control1102760040">
+          <DataField>Loans_Loans__Outstanding_Balance__Control1102760040</DataField>
+        </Field>
+        <Field Name="Loans_Loans__Outstanding_Balance__Control1102760040Format">
+          <DataField>Loans_Loans__Outstanding_Balance__Control1102760040Format</DataField>
+        </Field>
+        <Field Name="Loans__Oustanding_Interest__Control1102760041">
+          <DataField>Loans__Oustanding_Interest__Control1102760041</DataField>
+        </Field>
+        <Field Name="Loans__Oustanding_Interest__Control1102760041Format">
+          <DataField>Loans__Oustanding_Interest__Control1102760041Format</DataField>
+        </Field>
+        <Field Name="Loans__Top_Up_Amount__Control1000000001">
+          <DataField>Loans__Top_Up_Amount__Control1000000001</DataField>
+        </Field>
+        <Field Name="Loans__Top_Up_Amount__Control1000000001Format">
+          <DataField>Loans__Top_Up_Amount__Control1000000001Format</DataField>
+        </Field>
+        <Field Name="Loans_RegisterCaption">
+          <DataField>Loans_RegisterCaption</DataField>
+        </Field>
+        <Field Name="CurrReport_PAGENOCaption">
+          <DataField>CurrReport_PAGENOCaption</DataField>
+        </Field>
+        <Field Name="Loan_TypeCaption">
+          <DataField>Loan_TypeCaption</DataField>
+        </Field>
+        <Field Name="Loans__Loan__No__Caption">
+          <DataField>Loans__Loan__No__Caption</DataField>
+        </Field>
+        <Field Name="Client_No_Caption">
+          <DataField>Client_No_Caption</DataField>
+        </Field>
+        <Field Name="Comment">
+          <DataField>Comment</DataField>
+        </Field>
+        <Field Name="Loans__Client_Name_Caption">
+          <DataField>Loans__Client_Name_Caption</DataField>
+        </Field>
+        <Field Name="Loans__Requested_Amount_Caption">
+          <DataField>Loans__Requested_Amount_Caption</DataField>
+        </Field>
+        <Field Name="Loans__Approved_Amount_Caption">
+          <DataField>Loans__Approved_Amount_Caption</DataField>
+        </Field>
+        <Field Name="Loans__Loan_Status_Caption">
+          <DataField>Loans__Loan_Status_Caption</DataField>
+        </Field>
+        <Field Name="Outstanding_LoanCaption">
+          <DataField>Outstanding_LoanCaption</DataField>
+        </Field>
+        <Field Name="PeriodCaption">
+          <DataField>PeriodCaption</DataField>
+        </Field>
+        <Field Name="Loans__Application_Date_Caption">
+          <DataField>Loans__Application_Date_Caption</DataField>
+        </Field>
+        <Field Name="Approved_DateCaption">
+          <DataField>Approved_DateCaption</DataField>
+        </Field>
+        <Field Name="Loans__Oustanding_Interest_Caption">
+          <DataField>Loans__Oustanding_Interest_Caption</DataField>
+        </Field>
+        <Field Name="Loan_TypeCaption_Control1102760043">
+          <DataField>Loan_TypeCaption_Control1102760043</DataField>
+        </Field>
+        <Field Name="Loans__Last_Pay_Date_Caption">
+          <DataField>Loans__Last_Pay_Date_Caption</DataField>
+        </Field>
+        <Field Name="Loans__Top_Up_Amount_Caption">
+          <DataField>Loans__Top_Up_Amount_Caption</DataField>
+        </Field>
+        <Field Name="Verified_By__________________________________________________Caption">
+          <DataField>Verified_By__________________________________________________Caption</DataField>
+        </Field>
+        <Field Name="LoanCentre_LoansRegister">
+          <DataField>LoanCentre_LoansRegister</DataField>
+        </Field>
+        <Field Name="Confirmed_By__________________________________________________Caption">
+          <DataField>Confirmed_By__________________________________________________Caption</DataField>
+        </Field>
+        <Field Name="Sign________________________Caption">
+          <DataField>Sign________________________Caption</DataField>
+        </Field>
+        <Field Name="Sign________________________Caption_Control1102755003">
+          <DataField>Sign________________________Caption_Control1102755003</DataField>
+        </Field>
+        <Field Name="Date________________________Caption">
+          <DataField>Date________________________Caption</DataField>
+        </Field>
+        <Field Name="Date________________________Caption_Control1102755005">
+          <DataField>Date________________________Caption_Control1102755005</DataField>
+        </Field>
+        <Field Name="NameCreditOff">
+          <DataField>NameCreditOff</DataField>
+        </Field>
+        <Field Name="NameCreditDate">
+          <DataField>NameCreditDate</DataField>
+        </Field>
+        <Field Name="NameCreditSign">
+          <DataField>NameCreditSign</DataField>
+        </Field>
+        <Field Name="NameCreditMNG">
+          <DataField>NameCreditMNG</DataField>
+        </Field>
+        <Field Name="NameCreditMNGDate">
+          <DataField>NameCreditMNGDate</DataField>
+        </Field>
+        <Field Name="NameCreditMNGSign">
+          <DataField>NameCreditMNGSign</DataField>
+        </Field>
+        <Field Name="NameCEO">
+          <DataField>NameCEO</DataField>
+        </Field>
+        <Field Name="NameCEOSign">
+          <DataField>NameCEOSign</DataField>
+        </Field>
+        <Field Name="NameCEODate">
+          <DataField>NameCEODate</DataField>
+        </Field>
+        <Field Name="CreditCom1">
+          <DataField>CreditCom1</DataField>
+        </Field>
+        <Field Name="CreditCom1Date">
+          <DataField>CreditCom1Date</DataField>
+        </Field>
+        <Field Name="CreditCom2">
+          <DataField>CreditCom2</DataField>
+        </Field>
+        <Field Name="CreditCom2Sign">
+          <DataField>CreditCom2Sign</DataField>
+        </Field>
+        <Field Name="CreditCom2Date">
+          <DataField>CreditCom2Date</DataField>
+        </Field>
+        <Field Name="CreditCom3">
+          <DataField>CreditCom3</DataField>
+        </Field>
+        <Field Name="CreditComDate3">
+          <DataField>CreditComDate3</DataField>
+        </Field>
+        <Field Name="CreditComSign3">
+          <DataField>CreditComSign3</DataField>
+        </Field>
+        <Field Name="COMPPIC">
+          <DataField>COMPPIC</DataField>
+        </Field>
+        <Field Name="Name">
+          <DataField>Name</DataField>
+        </Field>
+        <Field Name="Category">
+          <DataField>Category</DataField>
+        </Field>
+        <Field Name="BranchCode_LoansRegister">
+          <DataField>BranchCode_LoansRegister</DataField>
+        </Field>
+        <Field Name="TotalLoansOutstanding_LoansRegister2">
+          <DataField>TotalLoansOutstanding_LoansRegister2</DataField>
+        </Field>
+        <Field Name="TotalLoansOutstanding_LoansRegister2Format">
+          <DataField>TotalLoansOutstanding_LoansRegister2Format</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

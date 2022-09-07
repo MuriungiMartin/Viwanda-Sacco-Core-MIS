@@ -1,0 +1,227 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="ReportForNavId_1">
+          <DataField>ReportForNavId_1</DataField>
+        </Field>
+        <Field Name="BankAccountNo_BankAccountStatement">
+          <DataField>BankAccountNo_BankAccountStatement</DataField>
+        </Field>
+        <Field Name="StatementNo_BankAccountStatement">
+          <DataField>StatementNo_BankAccountStatement</DataField>
+        </Field>
+        <Field Name="StatementEndingBalance_BankAccountStatement">
+          <DataField>StatementEndingBalance_BankAccountStatement</DataField>
+        </Field>
+        <Field Name="StatementEndingBalance_BankAccountStatementFormat">
+          <DataField>StatementEndingBalance_BankAccountStatementFormat</DataField>
+        </Field>
+        <Field Name="StatementDate_BankAccountStatement">
+          <DataField>StatementDate_BankAccountStatement</DataField>
+        </Field>
+        <Field Name="BalanceLastStatement_BankAccountStatement">
+          <DataField>BalanceLastStatement_BankAccountStatement</DataField>
+        </Field>
+        <Field Name="BalanceLastStatement_BankAccountStatementFormat">
+          <DataField>BalanceLastStatement_BankAccountStatementFormat</DataField>
+        </Field>
+        <Field Name="CashBookBalance_BankAccountStatement">
+          <DataField>CashBookBalance_BankAccountStatement</DataField>
+        </Field>
+        <Field Name="CashBookBalance_BankAccountStatementFormat">
+          <DataField>CashBookBalance_BankAccountStatementFormat</DataField>
+        </Field>
+        <Field Name="BankCode">
+          <DataField>BankCode</DataField>
+        </Field>
+        <Field Name="BankAccountNo">
+          <DataField>BankAccountNo</DataField>
+        </Field>
+        <Field Name="BankName">
+          <DataField>BankName</DataField>
+        </Field>
+        <Field Name="BankAccountBalanceasperCashBook">
+          <DataField>BankAccountBalanceasperCashBook</DataField>
+        </Field>
+        <Field Name="BankAccountBalanceasperCashBookFormat">
+          <DataField>BankAccountBalanceasperCashBookFormat</DataField>
+        </Field>
+        <Field Name="UnpresentedChequesTotal">
+          <DataField>UnpresentedChequesTotal</DataField>
+        </Field>
+        <Field Name="UnpresentedChequesTotalFormat">
+          <DataField>UnpresentedChequesTotalFormat</DataField>
+        </Field>
+        <Field Name="UncreditedBanking">
+          <DataField>UncreditedBanking</DataField>
+        </Field>
+        <Field Name="UncreditedBankingFormat">
+          <DataField>UncreditedBankingFormat</DataField>
+        </Field>
+        <Field Name="CompanyName">
+          <DataField>CompanyName</DataField>
+        </Field>
+        <Field Name="CompanyAddress">
+          <DataField>CompanyAddress</DataField>
+        </Field>
+        <Field Name="ReportForNavId_14">
+          <DataField>ReportForNavId_14</DataField>
+        </Field>
+        <Field Name="BankAccountNo_BankAccountStatementLine">
+          <DataField>BankAccountNo_BankAccountStatementLine</DataField>
+        </Field>
+        <Field Name="StatementLineNo_BankAccountStatementLine">
+          <DataField>StatementLineNo_BankAccountStatementLine</DataField>
+        </Field>
+        <Field Name="StatementNo_BankAccountStatementLine">
+          <DataField>StatementNo_BankAccountStatementLine</DataField>
+        </Field>
+        <Field Name="StatementAmount_BankAccountStatementLine">
+          <DataField>StatementAmount_BankAccountStatementLine</DataField>
+        </Field>
+        <Field Name="StatementAmount_BankAccountStatementLineFormat">
+          <DataField>StatementAmount_BankAccountStatementLineFormat</DataField>
+        </Field>
+        <Field Name="Description_BankAccountStatementLine">
+          <DataField>Description_BankAccountStatementLine</DataField>
+        </Field>
+        <Field Name="TransactionDate_BankAccountStatementLine">
+          <DataField>TransactionDate_BankAccountStatementLine</DataField>
+        </Field>
+        <Field Name="DocumentNo_BankAccountStatementLine">
+          <DataField>DocumentNo_BankAccountStatementLine</DataField>
+        </Field>
+        <Field Name="Debit_BankAccountStatementLine">
+          <DataField>Debit_BankAccountStatementLine</DataField>
+        </Field>
+        <Field Name="Debit_BankAccountStatementLineFormat">
+          <DataField>Debit_BankAccountStatementLineFormat</DataField>
+        </Field>
+        <Field Name="TDate">
+          <DataField>TDate</DataField>
+        </Field>
+        <Field Name="VendName">
+          <DataField>VendName</DataField>
+        </Field>
+        <Field Name="Credit_BankAccountStatementLine">
+          <DataField>Credit_BankAccountStatementLine</DataField>
+        </Field>
+        <Field Name="Credit_BankAccountStatementLineFormat">
+          <DataField>Credit_BankAccountStatementLineFormat</DataField>
+        </Field>
+        <Field Name="Check_no">
+          <DataField>Check_no</DataField>
+        </Field>
+        <Field Name="OpenType_BankAccountStatementLine">
+          <DataField>OpenType_BankAccountStatementLine</DataField>
+        </Field>
+        <Field Name="ReportForNavId_35">
+          <DataField>ReportForNavId_35</DataField>
+        </Field>
+        <Field Name="BankAccountNo_BankAccountStatementLine1">
+          <DataField>BankAccountNo_BankAccountStatementLine1</DataField>
+        </Field>
+        <Field Name="StatementLineNo_BankAccountStatementLine1">
+          <DataField>StatementLineNo_BankAccountStatementLine1</DataField>
+        </Field>
+        <Field Name="StatementNo_BankAccountStatementLine1">
+          <DataField>StatementNo_BankAccountStatementLine1</DataField>
+        </Field>
+        <Field Name="StatementAmount_BankAccountStatementLine1">
+          <DataField>StatementAmount_BankAccountStatementLine1</DataField>
+        </Field>
+        <Field Name="StatementAmount_BankAccountStatementLine1Format">
+          <DataField>StatementAmount_BankAccountStatementLine1Format</DataField>
+        </Field>
+        <Field Name="Description_BankAccountStatementLine1">
+          <DataField>Description_BankAccountStatementLine1</DataField>
+        </Field>
+        <Field Name="TransactionDate_BankAccountStatementLine1">
+          <DataField>TransactionDate_BankAccountStatementLine1</DataField>
+        </Field>
+        <Field Name="DocumentNo_BankAccountStatementLine1">
+          <DataField>DocumentNo_BankAccountStatementLine1</DataField>
+        </Field>
+        <Field Name="Debit_BankAccountStatementLine1">
+          <DataField>Debit_BankAccountStatementLine1</DataField>
+        </Field>
+        <Field Name="Debit_BankAccountStatementLine1Format">
+          <DataField>Debit_BankAccountStatementLine1Format</DataField>
+        </Field>
+        <Field Name="OpenType_BankAccountStatementLine1">
+          <DataField>OpenType_BankAccountStatementLine1</DataField>
+        </Field>
+        <Field Name="Check2">
+          <DataField>Check2</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="No">
+          <DataField>No</DataField>
+        </Field>
+        <Field Name="Name">
+          <DataField>Name</DataField>
+        </Field>
+        <Field Name="Loan_No">
+          <DataField>Loan_No</DataField>
+        </Field>
+        <Field Name="Loan_Type">
+          <DataField>Loan_Type</DataField>
+        </Field>
+        <Field Name="Approved_Amount">
+          <DataField>Approved_Amount</DataField>
+        </Field>
+        <Field Name="Approved_AmountFormat">
+          <DataField>Approved_AmountFormat</DataField>
+        </Field>
+        <Field Name="Posting_Date">
+          <DataField>Posting_Date</DataField>
+        </Field>
+        <Field Name="Document_No">
+          <DataField>Document_No</DataField>
+        </Field>
+        <Field Name="Description">
+          <DataField>Description</DataField>
+        </Field>
+        <Field Name="Amount">
+          <DataField>Amount</DataField>
+        </Field>
+        <Field Name="AmountFormat">
+          <DataField>AmountFormat</DataField>
+        </Field>
+        <Field Name="OpeningBal">
+          <DataField>OpeningBal</DataField>
+        </Field>
+        <Field Name="OpeningBalFormat">
+          <DataField>OpeningBalFormat</DataField>
+        </Field>
+        <Field Name="DataItem1000000013">
+          <DataField>DataItem1000000013</DataField>
+        </Field>
+        <Field Name="DataItem1000000013Format">
+          <DataField>DataItem1000000013Format</DataField>
+        </Field>
+        <Field Name="ClosingBal">
+          <DataField>ClosingBal</DataField>
+        </Field>
+        <Field Name="ClosingBalFormat">
+          <DataField>ClosingBalFormat</DataField>
+        </Field>
+        <Field Name="DataItem1000000021">
+          <DataField>DataItem1000000021</DataField>
+        </Field>
+        <Field Name="DataItem1000000020">
+          <DataField>DataItem1000000020</DataField>
+        </Field>
+        <Field Name="DataItem1000000019">
+          <DataField>DataItem1000000019</DataField>
+        </Field>
+        <Field Name="DataItem1000000018">
+          <DataField>DataItem1000000018</DataField>
+        </Field>
+        <Field Name="DataItem1000000018Format">
+          <DataField>DataItem1000000018Format</DataField>
+        </Field>
+        <Field Name="DataItem1000000017">
+          <DataField>DataItem1000000017</DataField>
+        </Field>
+        <Field Name="DataItem1000000017Format">
+          <DataField>DataItem1000000017Format</DataField>
+        </Field>
+        <Field Name="DataItem1000000016">
+          <DataField>DataItem1000000016</DataField>
+        </Field>
+        <Field Name="DataItem1000000016Format">
+          <DataField>DataItem1000000016Format</DataField>
+        </Field>
+        <Field Name="DataItem1000000015">
+          <DataField>DataItem1000000015</DataField>
+        </Field>
+        <Field Name="DataItem1000000015Format">
+          <DataField>DataItem1000000015Format</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

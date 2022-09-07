@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="ReportForNavId_8631">
+          <DataField>ReportForNavId_8631</DataField>
+        </Field>
+        <Field Name="PayrollNo_PayrollEmployee">
+          <DataField>PayrollNo_PayrollEmployee</DataField>
+        </Field>
+        <Field Name="SaccoMembershipNo_PayrollEmployee">
+          <DataField>SaccoMembershipNo_PayrollEmployee</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Picture">
+          <DataField>CompanyInfo_Picture</DataField>
+        </Field>
+        <Field Name="FORMAT_TODAY_0_4_">
+          <DataField>FORMAT_TODAY_0_4_</DataField>
+        </Field>
+        <Field Name="COMPANYNAME">
+          <DataField>COMPANYNAME</DataField>
+        </Field>
+        <Field Name="PeriodName">
+          <DataField>PeriodName</DataField>
+        </Field>
+        <Field Name="PayrollMode">
+          <DataField>PayrollMode</DataField>
+        </Field>
+        <Field Name="strEmpName">
+          <DataField>strEmpName</DataField>
+        </Field>
+        <Field Name="Period">
+          <DataField>Period</DataField>
+        </Field>
+        <Field Name="UserId">
+          <DataField>UserId</DataField>
+        </Field>
+        <Field Name="BasicPay">
+          <DataField>BasicPay</DataField>
+        </Field>
+        <Field Name="BasicPayFormat">
+          <DataField>BasicPayFormat</DataField>
+        </Field>
+        <Field Name="Grosspay">
+          <DataField>Grosspay</DataField>
+        </Field>
+        <Field Name="GrosspayFormat">
+          <DataField>GrosspayFormat</DataField>
+        </Field>
+        <Field Name="HR_Employee_No_">
+          <DataField>HR_Employee_No_</DataField>
+        </Field>
+        <Field Name="ActingAllowance">
+          <DataField>ActingAllowance</DataField>
+        </Field>
+        <Field Name="ActingAllowanceFormat">
+          <DataField>ActingAllowanceFormat</DataField>
+        </Field>
+        <Field Name="HouseAllowance">
+          <DataField>HouseAllowance</DataField>
+        </Field>
+        <Field Name="HouseAllowanceFormat">
+          <DataField>HouseAllowanceFormat</DataField>
+        </Field>
+        <Field Name="MedicalAllowance">
+          <DataField>MedicalAllowance</DataField>
+        </Field>
+        <Field Name="MedicalAllowanceFormat">
+          <DataField>MedicalAllowanceFormat</DataField>
+        </Field>
+        <Field Name="LeaveAllowance">
+          <DataField>LeaveAllowance</DataField>
+        </Field>
+        <Field Name="LeaveAllowanceFormat">
+          <DataField>LeaveAllowanceFormat</DataField>
+        </Field>
+        <Field Name="EntertainmentAllowance">
+          <DataField>EntertainmentAllowance</DataField>
+        </Field>
+        <Field Name="EntertainmentAllowanceFormat">
+          <DataField>EntertainmentAllowanceFormat</DataField>
+        </Field>
+        <Field Name="CarAllowance">
+          <DataField>CarAllowance</DataField>
+        </Field>
+        <Field Name="CarAllowanceFormat">
+          <DataField>CarAllowanceFormat</DataField>
+        </Field>
+        <Field Name="CommuterAllowance">
+          <DataField>CommuterAllowance</DataField>
+        </Field>
+        <Field Name="CommuterAllowanceFormat">
+          <DataField>CommuterAllowanceFormat</DataField>
+        </Field>
+        <Field Name="RiskAllowance">
+          <DataField>RiskAllowance</DataField>
+        </Field>
+        <Field Name="RiskAllowanceFormat">
+          <DataField>RiskAllowanceFormat</DataField>
+        </Field>
+        <Field Name="StatutoryDeductionsTotal">
+          <DataField>StatutoryDeductionsTotal</DataField>
+        </Field>
+        <Field Name="StatutoryDeductionsTotalFormat">
+          <DataField>StatutoryDeductionsTotalFormat</DataField>
+        </Field>
+        <Field Name="PersonalRelief">
+          <DataField>PersonalRelief</DataField>
+        </Field>
+        <Field Name="PersonalReliefFormat">
+          <DataField>PersonalReliefFormat</DataField>
+        </Field>
+        <Field Name="StaffPensionContribution">
+          <DataField>StaffPensionContribution</DataField>
+        </Field>
+        <Field Name="StaffPensionContributionFormat">
+          <DataField>StaffPensionContributionFormat</DataField>
+        </Field>
+        <Field Name="OtherDeductions">
+          <DataField>OtherDeductions</DataField>
+        </Field>
+        <Field Name="OtherDeductionsFormat">
+          <DataField>OtherDeductionsFormat</DataField>
+        </Field>
+        <Field Name="TotalDeductions">
+          <DataField>TotalDeductions</DataField>
+        </Field>
+        <Field Name="TotalDeductionsFormat">
+          <DataField>TotalDeductionsFormat</DataField>
+        </Field>
+        <Field Name="NetPay">
+          <DataField>NetPay</DataField>
+        </Field>
+        <Field Name="NetPayFormat">
+          <DataField>NetPayFormat</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

@@ -1,0 +1,343 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <ReportParameters>
+    <ReportParameter Name="RequisitionNo_HREmployeeRequisitionsCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>RequisitionNo_HREmployeeRequisitionsCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>RequisitionNo_HREmployeeRequisitionsCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="JobDescription_HREmployeeRequisitionsCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>JobDescription_HREmployeeRequisitionsCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>JobDescription_HREmployeeRequisitionsCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="JobGrade_HREmployeeRequisitionsCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>JobGrade_HREmployeeRequisitionsCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>JobGrade_HREmployeeRequisitionsCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="GlobalDimension2Code_HREmployeeRequisitionsCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>GlobalDimension2Code_HREmployeeRequisitionsCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>GlobalDimension2Code_HREmployeeRequisitionsCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="ReasonforRequestOther_HREmployeeRequisitionsCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>ReasonforRequestOther_HREmployeeRequisitionsCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>ReasonforRequestOther_HREmployeeRequisitionsCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="ReasonForRequest_HREmployeeRequisitionsCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>ReasonForRequest_HREmployeeRequisitionsCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>ReasonForRequest_HREmployeeRequisitionsCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="TypeofContractRequired_HREmployeeRequisitionsCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>TypeofContractRequired_HREmployeeRequisitionsCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>TypeofContractRequired_HREmployeeRequisitionsCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="AnyAdditionalInformation_HREmployeeRequisitionsCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>AnyAdditionalInformation_HREmployeeRequisitionsCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>AnyAdditionalInformation_HREmployeeRequisitionsCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="RequisitionDate_HREmployeeRequisitionsCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>RequisitionDate_HREmployeeRequisitionsCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>RequisitionDate_HREmployeeRequisitionsCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="JobSupervisorManager_HREmployeeRequisitionsCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>JobSupervisorManager_HREmployeeRequisitionsCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>JobSupervisorManager_HREmployeeRequisitionsCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="CI_PictureCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>CI_PictureCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>CI_PictureCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="CI_NameCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>CI_NameCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>CI_NameCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="CI_AddressCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>CI_AddressCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>CI_AddressCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="CI_Address2Caption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>CI_Address2Caption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>CI_Address2Caption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="CI_CityCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>CI_CityCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>CI_CityCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="CI_PhoneNoCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>CI_PhoneNoCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>CI_PhoneNoCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="Comment_ApprovalEntryCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>Comment_ApprovalEntryCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Comment_ApprovalEntryCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="ApproverID_ApprovalEntryCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>ApproverID_ApprovalEntryCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>ApproverID_ApprovalEntryCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="DateTimeSentforApproval_ApprovalEntryCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>DateTimeSentforApproval_ApprovalEntryCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>DateTimeSentforApproval_ApprovalEntryCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="SenderID_ApprovalEntryCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>SenderID_ApprovalEntryCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>SenderID_ApprovalEntryCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="UserID_UserSetupCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>UserID_UserSetupCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>UserID_UserSetupCaption</Prompt>
+    </ReportParameter>
+  </ReportParameters>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="ReportForNavId_1102755000">
+          <DataField>ReportForNavId_1102755000</DataField>
+        </Field>
+        <Field Name="RequisitionNo_HREmployeeRequisitions">
+          <DataField>RequisitionNo_HREmployeeRequisitions</DataField>
+        </Field>
+        <Field Name="JobDescription_HREmployeeRequisitions">
+          <DataField>JobDescription_HREmployeeRequisitions</DataField>
+        </Field>
+        <Field Name="JobGrade_HREmployeeRequisitions">
+          <DataField>JobGrade_HREmployeeRequisitions</DataField>
+        </Field>
+        <Field Name="GlobalDimension2Code_HREmployeeRequisitions">
+          <DataField>GlobalDimension2Code_HREmployeeRequisitions</DataField>
+        </Field>
+        <Field Name="ReasonforRequestOther_HREmployeeRequisitions">
+          <DataField>ReasonforRequestOther_HREmployeeRequisitions</DataField>
+        </Field>
+        <Field Name="ReasonForRequest_HREmployeeRequisitions">
+          <DataField>ReasonForRequest_HREmployeeRequisitions</DataField>
+        </Field>
+        <Field Name="TypeofContractRequired_HREmployeeRequisitions">
+          <DataField>TypeofContractRequired_HREmployeeRequisitions</DataField>
+        </Field>
+        <Field Name="AnyAdditionalInformation_HREmployeeRequisitions">
+          <DataField>AnyAdditionalInformation_HREmployeeRequisitions</DataField>
+        </Field>
+        <Field Name="RequisitionDate_HREmployeeRequisitions">
+          <DataField>RequisitionDate_HREmployeeRequisitions</DataField>
+        </Field>
+        <Field Name="JobSupervisorManager_HREmployeeRequisitions">
+          <DataField>JobSupervisorManager_HREmployeeRequisitions</DataField>
+        </Field>
+        <Field Name="CI_Picture">
+          <DataField>CI_Picture</DataField>
+        </Field>
+        <Field Name="CI_Name">
+          <DataField>CI_Name</DataField>
+        </Field>
+        <Field Name="CI_Address">
+          <DataField>CI_Address</DataField>
+        </Field>
+        <Field Name="CI_Address2">
+          <DataField>CI_Address2</DataField>
+        </Field>
+        <Field Name="CI_City">
+          <DataField>CI_City</DataField>
+        </Field>
+        <Field Name="CI_PhoneNo">
+          <DataField>CI_PhoneNo</DataField>
+        </Field>
+        <Field Name="ReportForNavId_1102755001">
+          <DataField>ReportForNavId_1102755001</DataField>
+        </Field>
+        <Field Name="Comment_ApprovalEntry">
+          <DataField>Comment_ApprovalEntry</DataField>
+        </Field>
+        <Field Name="ApproverID_ApprovalEntry">
+          <DataField>ApproverID_ApprovalEntry</DataField>
+        </Field>
+        <Field Name="DateTimeSentforApproval_ApprovalEntry">
+          <DataField>DateTimeSentforApproval_ApprovalEntry</DataField>
+        </Field>
+        <Field Name="SenderID_ApprovalEntry">
+          <DataField>SenderID_ApprovalEntry</DataField>
+        </Field>
+        <Field Name="LastDateTimeModified_ApprovalEntry">
+          <DataField>LastDateTimeModified_ApprovalEntry</DataField>
+        </Field>
+        <Field Name="LastModifiedByID_ApprovalEntry">
+          <DataField>LastModifiedByID_ApprovalEntry</DataField>
+        </Field>
+        <Field Name="ReportForNavId_1102755002">
+          <DataField>ReportForNavId_1102755002</DataField>
+        </Field>
+        <Field Name="UserID_UserSetup">
+          <DataField>UserID_UserSetup</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

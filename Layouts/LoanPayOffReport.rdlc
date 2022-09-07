@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="ReportForNavId_1000000000">
+          <DataField>ReportForNavId_1000000000</DataField>
+        </Field>
+        <Field Name="DocumentNo_LoansPayOffDetails">
+          <DataField>DocumentNo_LoansPayOffDetails</DataField>
+        </Field>
+        <Field Name="LoantoPayOff_LoansPayOffDetails">
+          <DataField>LoantoPayOff_LoansPayOffDetails</DataField>
+        </Field>
+        <Field Name="MemberNo_LoansPayOffDetails">
+          <DataField>MemberNo_LoansPayOffDetails</DataField>
+        </Field>
+        <Field Name="LoanType_LoansPayOffDetails">
+          <DataField>LoanType_LoansPayOffDetails</DataField>
+        </Field>
+        <Field Name="PrinciplePayOff_LoansPayOffDetails">
+          <DataField>PrinciplePayOff_LoansPayOffDetails</DataField>
+        </Field>
+        <Field Name="PrinciplePayOff_LoansPayOffDetailsFormat">
+          <DataField>PrinciplePayOff_LoansPayOffDetailsFormat</DataField>
+        </Field>
+        <Field Name="InterestOnPayOff_LoansPayOffDetails">
+          <DataField>InterestOnPayOff_LoansPayOffDetails</DataField>
+        </Field>
+        <Field Name="InterestOnPayOff_LoansPayOffDetailsFormat">
+          <DataField>InterestOnPayOff_LoansPayOffDetailsFormat</DataField>
+        </Field>
+        <Field Name="TotalPayOff_LoansPayOffDetails">
+          <DataField>TotalPayOff_LoansPayOffDetails</DataField>
+        </Field>
+        <Field Name="TotalPayOff_LoansPayOffDetailsFormat">
+          <DataField>TotalPayOff_LoansPayOffDetailsFormat</DataField>
+        </Field>
+        <Field Name="MonthlyRepayment_LoansPayOffDetails">
+          <DataField>MonthlyRepayment_LoansPayOffDetails</DataField>
+        </Field>
+        <Field Name="MonthlyRepayment_LoansPayOffDetailsFormat">
+          <DataField>MonthlyRepayment_LoansPayOffDetailsFormat</DataField>
+        </Field>
+        <Field Name="InterestPaid_LoansPayOffDetails">
+          <DataField>InterestPaid_LoansPayOffDetails</DataField>
+        </Field>
+        <Field Name="InterestPaid_LoansPayOffDetailsFormat">
+          <DataField>InterestPaid_LoansPayOffDetailsFormat</DataField>
+        </Field>
+        <Field Name="OutstandingBalance_LoansPayOffDetails">
+          <DataField>OutstandingBalance_LoansPayOffDetails</DataField>
+        </Field>
+        <Field Name="OutstandingBalance_LoansPayOffDetailsFormat">
+          <DataField>OutstandingBalance_LoansPayOffDetailsFormat</DataField>
+        </Field>
+        <Field Name="InterestRate_LoansPayOffDetails">
+          <DataField>InterestRate_LoansPayOffDetails</DataField>
+        </Field>
+        <Field Name="InterestRate_LoansPayOffDetailsFormat">
+          <DataField>InterestRate_LoansPayOffDetailsFormat</DataField>
+        </Field>
+        <Field Name="IDNO_LoansPayOffDetails">
+          <DataField>IDNO_LoansPayOffDetails</DataField>
+        </Field>
+        <Field Name="CommisiononPayOff_LoansPayOffDetails">
+          <DataField>CommisiononPayOff_LoansPayOffDetails</DataField>
+        </Field>
+        <Field Name="CommisiononPayOff_LoansPayOffDetailsFormat">
+          <DataField>CommisiononPayOff_LoansPayOffDetailsFormat</DataField>
+        </Field>
+        <Field Name="PartialBridged_LoansPayOffDetails">
+          <DataField>PartialBridged_LoansPayOffDetails</DataField>
+        </Field>
+        <Field Name="RemainingInstallments_LoansPayOffDetails">
+          <DataField>RemainingInstallments_LoansPayOffDetails</DataField>
+        </Field>
+        <Field Name="RemainingInstallments_LoansPayOffDetailsFormat">
+          <DataField>RemainingInstallments_LoansPayOffDetailsFormat</DataField>
+        </Field>
+        <Field Name="FinaleInstalment_LoansPayOffDetails">
+          <DataField>FinaleInstalment_LoansPayOffDetails</DataField>
+        </Field>
+        <Field Name="FinaleInstalment_LoansPayOffDetailsFormat">
+          <DataField>FinaleInstalment_LoansPayOffDetailsFormat</DataField>
+        </Field>
+        <Field Name="PenaltyCharged_LoansPayOffDetails">
+          <DataField>PenaltyCharged_LoansPayOffDetails</DataField>
+        </Field>
+        <Field Name="PenaltyCharged_LoansPayOffDetailsFormat">
+          <DataField>PenaltyCharged_LoansPayOffDetailsFormat</DataField>
+        </Field>
+        <Field Name="StaffNo_LoansPayOffDetails">
+          <DataField>StaffNo_LoansPayOffDetails</DataField>
+        </Field>
+        <Field Name="CommissioningBalance_LoansPayOffDetails">
+          <DataField>CommissioningBalance_LoansPayOffDetails</DataField>
+        </Field>
+        <Field Name="CommissioningBalance_LoansPayOffDetailsFormat">
+          <DataField>CommissioningBalance_LoansPayOffDetailsFormat</DataField>
+        </Field>
+        <Field Name="Source_LoansPayOffDetails">
+          <DataField>Source_LoansPayOffDetails</DataField>
+        </Field>
+        <Field Name="LoanOutstanding_LoansPayOffDetails">
+          <DataField>LoanOutstanding_LoansPayOffDetails</DataField>
+        </Field>
+        <Field Name="LoanOutstanding_LoansPayOffDetailsFormat">
+          <DataField>LoanOutstanding_LoansPayOffDetailsFormat</DataField>
+        </Field>
+        <Field Name="Posted_LoansPayOffDetails">
+          <DataField>Posted_LoansPayOffDetails</DataField>
+        </Field>
+        <Field Name="PostingDate_LoansPayOffDetails">
+          <DataField>PostingDate_LoansPayOffDetails</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

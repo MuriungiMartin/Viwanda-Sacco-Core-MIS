@@ -1,0 +1,325 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <ReportParameters>
+    <ReportParameter Name="Location_HRTrainingNeedsCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>Location_HRTrainingNeedsCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Location_HRTrainingNeedsCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="GlobalDimension2Code_HRTrainingNeedsCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>GlobalDimension2Code_HRTrainingNeedsCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>GlobalDimension2Code_HRTrainingNeedsCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="Closed_HRTrainingNeedsCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>Closed_HRTrainingNeedsCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Closed_HRTrainingNeedsCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="QualificationCode_HRTrainingNeedsCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>QualificationCode_HRTrainingNeedsCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>QualificationCode_HRTrainingNeedsCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="QualificationType_HRTrainingNeedsCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>QualificationType_HRTrainingNeedsCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>QualificationType_HRTrainingNeedsCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="QualificationDescription_HRTrainingNeedsCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>QualificationDescription_HRTrainingNeedsCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>QualificationDescription_HRTrainingNeedsCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="ProviderName_HRTrainingNeedsCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>ProviderName_HRTrainingNeedsCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>ProviderName_HRTrainingNeedsCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="Code_HRTrainingNeedsCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>Code_HRTrainingNeedsCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Code_HRTrainingNeedsCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="StartDate_HRTrainingNeedsCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>StartDate_HRTrainingNeedsCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>StartDate_HRTrainingNeedsCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="EndDate_HRTrainingNeedsCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>EndDate_HRTrainingNeedsCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>EndDate_HRTrainingNeedsCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="DurationUnits_HRTrainingNeedsCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>DurationUnits_HRTrainingNeedsCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>DurationUnits_HRTrainingNeedsCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="Duration_HRTrainingNeedsCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>Duration_HRTrainingNeedsCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Duration_HRTrainingNeedsCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="CostOfTraining_HRTrainingNeedsCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>CostOfTraining_HRTrainingNeedsCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>CostOfTraining_HRTrainingNeedsCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="Description_HRTrainingNeedsCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>Description_HRTrainingNeedsCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Description_HRTrainingNeedsCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="CI_NameCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>CI_NameCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>CI_NameCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="CI_AddressCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>CI_AddressCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>CI_AddressCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="CI_Address2Caption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>CI_Address2Caption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>CI_Address2Caption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="CI_PhoneNoCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>CI_PhoneNoCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>CI_PhoneNoCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="CI_PictureCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>CI_PictureCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>CI_PictureCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="CI_CityCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>CI_CityCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>CI_CityCaption</Prompt>
+    </ReportParameter>
+  </ReportParameters>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="ReportForNavId_1905">
+          <DataField>ReportForNavId_1905</DataField>
+        </Field>
+        <Field Name="Location_HRTrainingNeeds">
+          <DataField>Location_HRTrainingNeeds</DataField>
+        </Field>
+        <Field Name="GlobalDimension2Code_HRTrainingNeeds">
+          <DataField>GlobalDimension2Code_HRTrainingNeeds</DataField>
+        </Field>
+        <Field Name="Closed_HRTrainingNeeds">
+          <DataField>Closed_HRTrainingNeeds</DataField>
+        </Field>
+        <Field Name="QualificationCode_HRTrainingNeeds">
+          <DataField>QualificationCode_HRTrainingNeeds</DataField>
+        </Field>
+        <Field Name="QualificationType_HRTrainingNeeds">
+          <DataField>QualificationType_HRTrainingNeeds</DataField>
+        </Field>
+        <Field Name="QualificationDescription_HRTrainingNeeds">
+          <DataField>QualificationDescription_HRTrainingNeeds</DataField>
+        </Field>
+        <Field Name="ProviderName_HRTrainingNeeds">
+          <DataField>ProviderName_HRTrainingNeeds</DataField>
+        </Field>
+        <Field Name="Code_HRTrainingNeeds">
+          <DataField>Code_HRTrainingNeeds</DataField>
+        </Field>
+        <Field Name="StartDate_HRTrainingNeeds">
+          <DataField>StartDate_HRTrainingNeeds</DataField>
+        </Field>
+        <Field Name="EndDate_HRTrainingNeeds">
+          <DataField>EndDate_HRTrainingNeeds</DataField>
+        </Field>
+        <Field Name="DurationUnits_HRTrainingNeeds">
+          <DataField>DurationUnits_HRTrainingNeeds</DataField>
+        </Field>
+        <Field Name="Duration_HRTrainingNeeds">
+          <DataField>Duration_HRTrainingNeeds</DataField>
+        </Field>
+        <Field Name="Duration_HRTrainingNeedsFormat">
+          <DataField>Duration_HRTrainingNeedsFormat</DataField>
+        </Field>
+        <Field Name="CostOfTraining_HRTrainingNeeds">
+          <DataField>CostOfTraining_HRTrainingNeeds</DataField>
+        </Field>
+        <Field Name="CostOfTraining_HRTrainingNeedsFormat">
+          <DataField>CostOfTraining_HRTrainingNeedsFormat</DataField>
+        </Field>
+        <Field Name="Description_HRTrainingNeeds">
+          <DataField>Description_HRTrainingNeeds</DataField>
+        </Field>
+        <Field Name="CI_Name">
+          <DataField>CI_Name</DataField>
+        </Field>
+        <Field Name="CI_Address">
+          <DataField>CI_Address</DataField>
+        </Field>
+        <Field Name="CI_Address2">
+          <DataField>CI_Address2</DataField>
+        </Field>
+        <Field Name="CI_PhoneNo">
+          <DataField>CI_PhoneNo</DataField>
+        </Field>
+        <Field Name="CI_Picture">
+          <DataField>CI_Picture</DataField>
+        </Field>
+        <Field Name="CI_City">
+          <DataField>CI_City</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

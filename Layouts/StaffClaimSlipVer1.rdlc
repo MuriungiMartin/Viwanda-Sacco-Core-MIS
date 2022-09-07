@@ -1,0 +1,538 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <ReportParameters>
+    <ReportParameter Name="CI_NameCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>CI_NameCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>CI_NameCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="CI_AddressCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>CI_AddressCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>CI_AddressCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="CI_Address2Caption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>CI_Address2Caption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>CI_Address2Caption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="CI_PhoneNoCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>CI_PhoneNoCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>CI_PhoneNoCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="CI_PictureCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>CI_PictureCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>CI_PictureCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="CI_CityCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>CI_CityCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>CI_CityCaption</Prompt>
+    </ReportParameter>
+  </ReportParameters>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="CI_Name">
+          <DataField>CI_Name</DataField>
+        </Field>
+        <Field Name="CI_Address">
+          <DataField>CI_Address</DataField>
+        </Field>
+        <Field Name="CI_Address2">
+          <DataField>CI_Address2</DataField>
+        </Field>
+        <Field Name="CI_PhoneNo">
+          <DataField>CI_PhoneNo</DataField>
+        </Field>
+        <Field Name="CI_Picture">
+          <DataField>CI_Picture</DataField>
+        </Field>
+        <Field Name="CI_City">
+          <DataField>CI_City</DataField>
+        </Field>
+        <Field Name="DOCNAME">
+          <DataField>DOCNAME</DataField>
+        </Field>
+        <Field Name="VarApproverI">
+          <DataField>VarApproverI</DataField>
+        </Field>
+        <Field Name="VarApproverIDate">
+          <DataField>VarApproverIDate</DataField>
+        </Field>
+        <Field Name="VarApproverII">
+          <DataField>VarApproverII</DataField>
+        </Field>
+        <Field Name="VarApproverIIDate">
+          <DataField>VarApproverIIDate</DataField>
+        </Field>
+        <Field Name="UserId">
+          <DataField>UserId</DataField>
+        </Field>
+        <Field Name="NumberText_1_">
+          <DataField>NumberText_1_</DataField>
+        </Field>
+        <Field Name="TTotal">
+          <DataField>TTotal</DataField>
+        </Field>
+        <Field Name="TTotalFormat">
+          <DataField>TTotalFormat</DataField>
+        </Field>
+        <Field Name="TIME_PRINTED_____FORMAT_TIME_">
+          <DataField>TIME_PRINTED_____FORMAT_TIME_</DataField>
+        </Field>
+        <Field Name="DATE_PRINTED_____FORMAT_TODAY_0_4_">
+          <DataField>DATE_PRINTED_____FORMAT_TODAY_0_4_</DataField>
+        </Field>
+        <Field Name="CurrCode_Control1102756010">
+          <DataField>CurrCode_Control1102756010</DataField>
+        </Field>
+        <Field Name="CurrCode_Control1102756012">
+          <DataField>CurrCode_Control1102756012</DataField>
+        </Field>
+        <Field Name="Approved_">
+          <DataField>Approved_</DataField>
+        </Field>
+        <Field Name="Approval_Status_____">
+          <DataField>Approval_Status_____</DataField>
+        </Field>
+        <Field Name="TIME_PRINTED_____FORMAT_TIME__Control1102755003">
+          <DataField>TIME_PRINTED_____FORMAT_TIME__Control1102755003</DataField>
+        </Field>
+        <Field Name="DATE_PRINTED_____FORMAT_TODAY_0_4__Control1102755004">
+          <DataField>DATE_PRINTED_____FORMAT_TODAY_0_4__Control1102755004</DataField>
+        </Field>
+        <Field Name="USERID_Control1102755012">
+          <DataField>USERID_Control1102755012</DataField>
+        </Field>
+        <Field Name="NumberText_1__Control1102755016">
+          <DataField>NumberText_1__Control1102755016</DataField>
+        </Field>
+        <Field Name="CompanyInfoName">
+          <DataField>CompanyInfoName</DataField>
+        </Field>
+        <Field Name="CompanyInfoAddress">
+          <DataField>CompanyInfoAddress</DataField>
+        </Field>
+        <Field Name="CompanyInfoAddress2">
+          <DataField>CompanyInfoAddress2</DataField>
+        </Field>
+        <Field Name="CompanyInfoPic">
+          <DataField>CompanyInfoPic</DataField>
+        </Field>
+        <Field Name="No_StaffClaimsHeader">
+          <DataField>No_StaffClaimsHeader</DataField>
+        </Field>
+        <Field Name="Date_StaffClaimsHeader">
+          <DataField>Date_StaffClaimsHeader</DataField>
+        </Field>
+        <Field Name="CurrencyFactor_StaffClaimsHeader">
+          <DataField>CurrencyFactor_StaffClaimsHeader</DataField>
+        </Field>
+        <Field Name="CurrencyFactor_StaffClaimsHeaderFormat">
+          <DataField>CurrencyFactor_StaffClaimsHeaderFormat</DataField>
+        </Field>
+        <Field Name="CurrencyCode_StaffClaimsHeader">
+          <DataField>CurrencyCode_StaffClaimsHeader</DataField>
+        </Field>
+        <Field Name="Payee">
+          <DataField>Payee</DataField>
+        </Field>
+        <Field Name="OnBehalfOf_StaffClaimsHeader">
+          <DataField>OnBehalfOf_StaffClaimsHeader</DataField>
+        </Field>
+        <Field Name="Cashier_StaffClaimsHeader">
+          <DataField>Cashier_StaffClaimsHeader</DataField>
+        </Field>
+        <Field Name="Posted_StaffClaimsHeader">
+          <DataField>Posted_StaffClaimsHeader</DataField>
+        </Field>
+        <Field Name="DatePosted_StaffClaimsHeader">
+          <DataField>DatePosted_StaffClaimsHeader</DataField>
+        </Field>
+        <Field Name="TimePosted_StaffClaimsHeader">
+          <DataField>TimePosted_StaffClaimsHeader</DataField>
+        </Field>
+        <Field Name="PostedBy_StaffClaimsHeader">
+          <DataField>PostedBy_StaffClaimsHeader</DataField>
+        </Field>
+        <Field Name="TotalPaymentAmount_StaffClaimsHeader">
+          <DataField>TotalPaymentAmount_StaffClaimsHeader</DataField>
+        </Field>
+        <Field Name="TotalPaymentAmount_StaffClaimsHeaderFormat">
+          <DataField>TotalPaymentAmount_StaffClaimsHeaderFormat</DataField>
+        </Field>
+        <Field Name="PayingType_StaffClaimsHeader">
+          <DataField>PayingType_StaffClaimsHeader</DataField>
+        </Field>
+        <Field Name="PayingBankAccount_StaffClaimsHeader">
+          <DataField>PayingBankAccount_StaffClaimsHeader</DataField>
+        </Field>
+        <Field Name="GlobalDimension1Code_StaffClaimsHeader">
+          <DataField>GlobalDimension1Code_StaffClaimsHeader</DataField>
+        </Field>
+        <Field Name="Status_StaffClaimsHeader">
+          <DataField>Status_StaffClaimsHeader</DataField>
+        </Field>
+        <Field Name="PaymentType_StaffClaimsHeader">
+          <DataField>PaymentType_StaffClaimsHeader</DataField>
+        </Field>
+        <Field Name="ShortcutDimension2Code_StaffClaimsHeader">
+          <DataField>ShortcutDimension2Code_StaffClaimsHeader</DataField>
+        </Field>
+        <Field Name="FunctionName_StaffClaimsHeader">
+          <DataField>FunctionName_StaffClaimsHeader</DataField>
+        </Field>
+        <Field Name="BudgetCenterName_StaffClaimsHeader">
+          <DataField>BudgetCenterName_StaffClaimsHeader</DataField>
+        </Field>
+        <Field Name="BankName_StaffClaimsHeader">
+          <DataField>BankName_StaffClaimsHeader</DataField>
+        </Field>
+        <Field Name="NoSeries_StaffClaimsHeader">
+          <DataField>NoSeries_StaffClaimsHeader</DataField>
+        </Field>
+        <Field Name="Select_StaffClaimsHeader">
+          <DataField>Select_StaffClaimsHeader</DataField>
+        </Field>
+        <Field Name="TotalVATAmount_StaffClaimsHeader">
+          <DataField>TotalVATAmount_StaffClaimsHeader</DataField>
+        </Field>
+        <Field Name="TotalVATAmount_StaffClaimsHeaderFormat">
+          <DataField>TotalVATAmount_StaffClaimsHeaderFormat</DataField>
+        </Field>
+        <Field Name="TotalWitholdingTaxAmount_StaffClaimsHeader">
+          <DataField>TotalWitholdingTaxAmount_StaffClaimsHeader</DataField>
+        </Field>
+        <Field Name="TotalWitholdingTaxAmount_StaffClaimsHeaderFormat">
+          <DataField>TotalWitholdingTaxAmount_StaffClaimsHeaderFormat</DataField>
+        </Field>
+        <Field Name="TotalNetAmount_StaffClaimsHeader">
+          <DataField>TotalNetAmount_StaffClaimsHeader</DataField>
+        </Field>
+        <Field Name="TotalNetAmount_StaffClaimsHeaderFormat">
+          <DataField>TotalNetAmount_StaffClaimsHeaderFormat</DataField>
+        </Field>
+        <Field Name="CurrentStatus_StaffClaimsHeader">
+          <DataField>CurrentStatus_StaffClaimsHeader</DataField>
+        </Field>
+        <Field Name="ChequeNo_StaffClaimsHeader">
+          <DataField>ChequeNo_StaffClaimsHeader</DataField>
+        </Field>
+        <Field Name="PayMode_StaffClaimsHeader">
+          <DataField>PayMode_StaffClaimsHeader</DataField>
+        </Field>
+        <Field Name="PaymentReleaseDate_StaffClaimsHeader">
+          <DataField>PaymentReleaseDate_StaffClaimsHeader</DataField>
+        </Field>
+        <Field Name="NoPrinted_StaffClaimsHeader">
+          <DataField>NoPrinted_StaffClaimsHeader</DataField>
+        </Field>
+        <Field Name="VATBaseAmount_StaffClaimsHeader">
+          <DataField>VATBaseAmount_StaffClaimsHeader</DataField>
+        </Field>
+        <Field Name="VATBaseAmount_StaffClaimsHeaderFormat">
+          <DataField>VATBaseAmount_StaffClaimsHeaderFormat</DataField>
+        </Field>
+        <Field Name="ExchangeRate_StaffClaimsHeader">
+          <DataField>ExchangeRate_StaffClaimsHeader</DataField>
+        </Field>
+        <Field Name="ExchangeRate_StaffClaimsHeaderFormat">
+          <DataField>ExchangeRate_StaffClaimsHeaderFormat</DataField>
+        </Field>
+        <Field Name="CurrencyReciprical_StaffClaimsHeader">
+          <DataField>CurrencyReciprical_StaffClaimsHeader</DataField>
+        </Field>
+        <Field Name="CurrencyReciprical_StaffClaimsHeaderFormat">
+          <DataField>CurrencyReciprical_StaffClaimsHeaderFormat</DataField>
+        </Field>
+        <Field Name="CurrentSourceACBal_StaffClaimsHeader">
+          <DataField>CurrentSourceACBal_StaffClaimsHeader</DataField>
+        </Field>
+        <Field Name="CurrentSourceACBal_StaffClaimsHeaderFormat">
+          <DataField>CurrentSourceACBal_StaffClaimsHeaderFormat</DataField>
+        </Field>
+        <Field Name="CancellationRemarks_StaffClaimsHeader">
+          <DataField>CancellationRemarks_StaffClaimsHeader</DataField>
+        </Field>
+        <Field Name="RegisterNumber_StaffClaimsHeader">
+          <DataField>RegisterNumber_StaffClaimsHeader</DataField>
+        </Field>
+        <Field Name="FromEntryNo_StaffClaimsHeader">
+          <DataField>FromEntryNo_StaffClaimsHeader</DataField>
+        </Field>
+        <Field Name="ToEntryNo_StaffClaimsHeader">
+          <DataField>ToEntryNo_StaffClaimsHeader</DataField>
+        </Field>
+        <Field Name="InvoiceCurrencyCode_StaffClaimsHeader">
+          <DataField>InvoiceCurrencyCode_StaffClaimsHeader</DataField>
+        </Field>
+        <Field Name="TotalNetAmountLCY_StaffClaimsHeader">
+          <DataField>TotalNetAmountLCY_StaffClaimsHeader</DataField>
+        </Field>
+        <Field Name="TotalNetAmountLCY_StaffClaimsHeaderFormat">
+          <DataField>TotalNetAmountLCY_StaffClaimsHeaderFormat</DataField>
+        </Field>
+        <Field Name="DocumentType_StaffClaimsHeader">
+          <DataField>DocumentType_StaffClaimsHeader</DataField>
+        </Field>
+        <Field Name="ShortcutDimension3Code_StaffClaimsHeader">
+          <DataField>ShortcutDimension3Code_StaffClaimsHeader</DataField>
+        </Field>
+        <Field Name="ShortcutDimension4Code_StaffClaimsHeader">
+          <DataField>ShortcutDimension4Code_StaffClaimsHeader</DataField>
+        </Field>
+        <Field Name="Dim3_StaffClaimsHeader">
+          <DataField>Dim3_StaffClaimsHeader</DataField>
+        </Field>
+        <Field Name="Dim4_StaffClaimsHeader">
+          <DataField>Dim4_StaffClaimsHeader</DataField>
+        </Field>
+        <Field Name="ResponsibilityCenter_StaffClaimsHeader">
+          <DataField>ResponsibilityCenter_StaffClaimsHeader</DataField>
+        </Field>
+        <Field Name="AccountType_StaffClaimsHeader">
+          <DataField>AccountType_StaffClaimsHeader</DataField>
+        </Field>
+        <Field Name="AccountNo_StaffClaimsHeader">
+          <DataField>AccountNo_StaffClaimsHeader</DataField>
+        </Field>
+        <Field Name="SurrenderStatus_StaffClaimsHeader">
+          <DataField>SurrenderStatus_StaffClaimsHeader</DataField>
+        </Field>
+        <Field Name="Purpose_StaffClaimsHeader">
+          <DataField>Purpose_StaffClaimsHeader</DataField>
+        </Field>
+        <Field Name="ExternalDocumentNo_StaffClaimsHeader">
+          <DataField>ExternalDocumentNo_StaffClaimsHeader</DataField>
+        </Field>
+        <Field Name="CreationDocNo_StaffClaimsHeader">
+          <DataField>CreationDocNo_StaffClaimsHeader</DataField>
+        </Field>
+        <Field Name="DimensionSetID_StaffClaimsHeader">
+          <DataField>DimensionSetID_StaffClaimsHeader</DataField>
+        </Field>
+        <Field Name="No_StaffClaimLines">
+          <DataField>No_StaffClaimLines</DataField>
+        </Field>
+        <Field Name="AccountNo_StaffClaimLines">
+          <DataField>AccountNo_StaffClaimLines</DataField>
+        </Field>
+        <Field Name="AccountName_StaffClaimLines">
+          <DataField>AccountName_StaffClaimLines</DataField>
+        </Field>
+        <Field Name="Amount_StaffClaimLines">
+          <DataField>Amount_StaffClaimLines</DataField>
+        </Field>
+        <Field Name="Amount_StaffClaimLinesFormat">
+          <DataField>Amount_StaffClaimLinesFormat</DataField>
+        </Field>
+        <Field Name="DueDate_StaffClaimLines">
+          <DataField>DueDate_StaffClaimLines</DataField>
+        </Field>
+        <Field Name="ImprestHolder_StaffClaimLines">
+          <DataField>ImprestHolder_StaffClaimLines</DataField>
+        </Field>
+        <Field Name="ActualSpent_StaffClaimLines">
+          <DataField>ActualSpent_StaffClaimLines</DataField>
+        </Field>
+        <Field Name="ActualSpent_StaffClaimLinesFormat">
+          <DataField>ActualSpent_StaffClaimLinesFormat</DataField>
+        </Field>
+        <Field Name="GlobalDimension1Code_StaffClaimLines">
+          <DataField>GlobalDimension1Code_StaffClaimLines</DataField>
+        </Field>
+        <Field Name="Applyto_StaffClaimLines">
+          <DataField>Applyto_StaffClaimLines</DataField>
+        </Field>
+        <Field Name="ApplytoID_StaffClaimLines">
+          <DataField>ApplytoID_StaffClaimLines</DataField>
+        </Field>
+        <Field Name="SurrenderDate_StaffClaimLines">
+          <DataField>SurrenderDate_StaffClaimLines</DataField>
+        </Field>
+        <Field Name="Surrendered_StaffClaimLines">
+          <DataField>Surrendered_StaffClaimLines</DataField>
+        </Field>
+        <Field Name="MRNo_StaffClaimLines">
+          <DataField>MRNo_StaffClaimLines</DataField>
+        </Field>
+        <Field Name="DateIssued_StaffClaimLines">
+          <DataField>DateIssued_StaffClaimLines</DataField>
+        </Field>
+        <Field Name="TypeofSurrender_StaffClaimLines">
+          <DataField>TypeofSurrender_StaffClaimLines</DataField>
+        </Field>
+        <Field Name="DeptVchNo_StaffClaimLines">
+          <DataField>DeptVchNo_StaffClaimLines</DataField>
+        </Field>
+        <Field Name="CashSurrenderAmt_StaffClaimLines">
+          <DataField>CashSurrenderAmt_StaffClaimLines</DataField>
+        </Field>
+        <Field Name="CashSurrenderAmt_StaffClaimLinesFormat">
+          <DataField>CashSurrenderAmt_StaffClaimLinesFormat</DataField>
+        </Field>
+        <Field Name="BankPettyCash_StaffClaimLines">
+          <DataField>BankPettyCash_StaffClaimLines</DataField>
+        </Field>
+        <Field Name="SurrenderDocNo_StaffClaimLines">
+          <DataField>SurrenderDocNo_StaffClaimLines</DataField>
+        </Field>
+        <Field Name="DateTaken_StaffClaimLines">
+          <DataField>DateTaken_StaffClaimLines</DataField>
+        </Field>
+        <Field Name="Purpose_StaffClaimLines">
+          <DataField>Purpose_StaffClaimLines</DataField>
+        </Field>
+        <Field Name="ShortcutDimension2Code_StaffClaimLines">
+          <DataField>ShortcutDimension2Code_StaffClaimLines</DataField>
+        </Field>
+        <Field Name="BudgetaryControlAC_StaffClaimLines">
+          <DataField>BudgetaryControlAC_StaffClaimLines</DataField>
+        </Field>
+        <Field Name="ShortcutDimension3Code_StaffClaimLines">
+          <DataField>ShortcutDimension3Code_StaffClaimLines</DataField>
+        </Field>
+        <Field Name="ShortcutDimension4Code_StaffClaimLines">
+          <DataField>ShortcutDimension4Code_StaffClaimLines</DataField>
+        </Field>
+        <Field Name="Committed_StaffClaimLines">
+          <DataField>Committed_StaffClaimLines</DataField>
+        </Field>
+        <Field Name="AdvanceType_StaffClaimLines">
+          <DataField>AdvanceType_StaffClaimLines</DataField>
+        </Field>
+        <Field Name="CurrencyFactor_StaffClaimLines">
+          <DataField>CurrencyFactor_StaffClaimLines</DataField>
+        </Field>
+        <Field Name="CurrencyFactor_StaffClaimLinesFormat">
+          <DataField>CurrencyFactor_StaffClaimLinesFormat</DataField>
+        </Field>
+        <Field Name="CurrencyCode_StaffClaimLines">
+          <DataField>CurrencyCode_StaffClaimLines</DataField>
+        </Field>
+        <Field Name="AmountLCY_StaffClaimLines">
+          <DataField>AmountLCY_StaffClaimLines</DataField>
+        </Field>
+        <Field Name="AmountLCY_StaffClaimLinesFormat">
+          <DataField>AmountLCY_StaffClaimLinesFormat</DataField>
+        </Field>
+        <Field Name="LineNo_StaffClaimLines">
+          <DataField>LineNo_StaffClaimLines</DataField>
+        </Field>
+        <Field Name="ClaimReceiptNo_StaffClaimLines">
+          <DataField>ClaimReceiptNo_StaffClaimLines</DataField>
+        </Field>
+        <Field Name="ExpenditureDate_StaffClaimLines">
+          <DataField>ExpenditureDate_StaffClaimLines</DataField>
+        </Field>
+        <Field Name="AttendeeOrganizationNames_StaffClaimLines">
+          <DataField>AttendeeOrganizationNames_StaffClaimLines</DataField>
+        </Field>
+        <Field Name="Grouping_StaffClaimLines">
+          <DataField>Grouping_StaffClaimLines</DataField>
+        </Field>
+        <Field Name="DimensionSetID_StaffClaimLines">
+          <DataField>DimensionSetID_StaffClaimLines</DataField>
+        </Field>
+        <Field Name="AccountType_StaffClaimLines">
+          <DataField>AccountType_StaffClaimLines</DataField>
+        </Field>
+        <Field Name="AccountNo_StaffClaimLinesII">
+          <DataField>AccountNo_StaffClaimLinesII</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

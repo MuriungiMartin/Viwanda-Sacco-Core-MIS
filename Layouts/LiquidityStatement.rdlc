@@ -1,0 +1,209 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="ReportForNavId_1">
+          <DataField>ReportForNavId_1</DataField>
+        </Field>
+        <Field Name="Name">
+          <DataField>Name</DataField>
+        </Field>
+        <Field Name="AsAt">
+          <DataField>AsAt</DataField>
+        </Field>
+        <Field Name="BeginDate">
+          <DataField>BeginDate</DataField>
+        </Field>
+        <Field Name="FinancialYear">
+          <DataField>FinancialYear</DataField>
+        </Field>
+        <Field Name="LocalNotes">
+          <DataField>LocalNotes</DataField>
+        </Field>
+        <Field Name="LocalNotesFormat">
+          <DataField>LocalNotesFormat</DataField>
+        </Field>
+        <Field Name="ForeignNotes">
+          <DataField>ForeignNotes</DataField>
+        </Field>
+        <Field Name="ForeignNotesFormat">
+          <DataField>ForeignNotesFormat</DataField>
+        </Field>
+        <Field Name="BalanceswithCommercialBanks">
+          <DataField>BalanceswithCommercialBanks</DataField>
+        </Field>
+        <Field Name="BalanceswithCommercialBanksFormat">
+          <DataField>BalanceswithCommercialBanksFormat</DataField>
+        </Field>
+        <Field Name="TimeDeposits">
+          <DataField>TimeDeposits</DataField>
+        </Field>
+        <Field Name="TimeDepositsFormat">
+          <DataField>TimeDepositsFormat</DataField>
+        </Field>
+        <Field Name="OverdraftsandMatured">
+          <DataField>OverdraftsandMatured</DataField>
+        </Field>
+        <Field Name="OverdraftsandMaturedFormat">
+          <DataField>OverdraftsandMaturedFormat</DataField>
+        </Field>
+        <Field Name="BalanceswithotherSaccoSocieties">
+          <DataField>BalanceswithotherSaccoSocieties</DataField>
+        </Field>
+        <Field Name="BalanceswithotherSaccoSocietiesFormat">
+          <DataField>BalanceswithotherSaccoSocietiesFormat</DataField>
+        </Field>
+        <Field Name="BalanceswithotherFinancialInstitutions">
+          <DataField>BalanceswithotherFinancialInstitutions</DataField>
+        </Field>
+        <Field Name="BalanceswithotherFinancialInstitutionsFormat">
+          <DataField>BalanceswithotherFinancialInstitutionsFormat</DataField>
+        </Field>
+        <Field Name="BalancesDuetootherSaccosocieties">
+          <DataField>BalancesDuetootherSaccosocieties</DataField>
+        </Field>
+        <Field Name="BalancesDuetootherSaccosocietiesFormat">
+          <DataField>BalancesDuetootherSaccosocietiesFormat</DataField>
+        </Field>
+        <Field Name="BalancesduetoFinanciaInstitutions">
+          <DataField>BalancesduetoFinanciaInstitutions</DataField>
+        </Field>
+        <Field Name="BalancesduetoFinanciaInstitutionsFormat">
+          <DataField>BalancesduetoFinanciaInstitutionsFormat</DataField>
+        </Field>
+        <Field Name="MaturedLoansandAdvances">
+          <DataField>MaturedLoansandAdvances</DataField>
+        </Field>
+        <Field Name="MaturedLoansandAdvancesFormat">
+          <DataField>MaturedLoansandAdvancesFormat</DataField>
+        </Field>
+        <Field Name="TreasuryBills">
+          <DataField>TreasuryBills</DataField>
+        </Field>
+        <Field Name="TreasuryBillsFormat">
+          <DataField>TreasuryBillsFormat</DataField>
+        </Field>
+        <Field Name="TreasuryBonds">
+          <DataField>TreasuryBonds</DataField>
+        </Field>
+        <Field Name="TreasuryBondsFormat">
+          <DataField>TreasuryBondsFormat</DataField>
+        </Field>
+        <Field Name="NETLIQUIDASSETS">
+          <DataField>NETLIQUIDASSETS</DataField>
+        </Field>
+        <Field Name="NETLIQUIDASSETSFormat">
+          <DataField>NETLIQUIDASSETSFormat</DataField>
+        </Field>
+        <Field Name="MaturedLiabilities">
+          <DataField>MaturedLiabilities</DataField>
+        </Field>
+        <Field Name="MaturedLiabilitiesFormat">
+          <DataField>MaturedLiabilitiesFormat</DataField>
+        </Field>
+        <Field Name="LiabilitiesMaturingwithin91Days">
+          <DataField>LiabilitiesMaturingwithin91Days</DataField>
+        </Field>
+        <Field Name="LiabilitiesMaturingwithin91DaysFormat">
+          <DataField>LiabilitiesMaturingwithin91DaysFormat</DataField>
+        </Field>
+        <Field Name="TotalOtherliabilities">
+          <DataField>TotalOtherliabilities</DataField>
+        </Field>
+        <Field Name="TotalOtherliabilitiesFormat">
+          <DataField>TotalOtherliabilitiesFormat</DataField>
+        </Field>
+        <Field Name="TotalOtherliabilitiesNew">
+          <DataField>TotalOtherliabilitiesNew</DataField>
+        </Field>
+        <Field Name="TotalOtherliabilitiesNewFormat">
+          <DataField>TotalOtherliabilitiesNewFormat</DataField>
+        </Field>
+        <Field Name="Ratio">
+          <DataField>Ratio</DataField>
+        </Field>
+        <Field Name="RatioFormat">
+          <DataField>RatioFormat</DataField>
+        </Field>
+        <Field Name="Minumholding">
+          <DataField>Minumholding</DataField>
+        </Field>
+        <Field Name="MinumholdingFormat">
+          <DataField>MinumholdingFormat</DataField>
+        </Field>
+        <Field Name="Excess">
+          <DataField>Excess</DataField>
+        </Field>
+        <Field Name="ExcessFormat">
+          <DataField>ExcessFormat</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

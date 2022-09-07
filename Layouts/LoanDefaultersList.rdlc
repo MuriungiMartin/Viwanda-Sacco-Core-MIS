@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="ReportForNavId_1102755000">
+          <DataField>ReportForNavId_1102755000</DataField>
+        </Field>
+        <Field Name="LoanNo">
+          <DataField>LoanNo</DataField>
+        </Field>
+        <Field Name="LoanType">
+          <DataField>LoanType</DataField>
+        </Field>
+        <Field Name="ClientCode">
+          <DataField>ClientCode</DataField>
+        </Field>
+        <Field Name="ClientName">
+          <DataField>ClientName</DataField>
+        </Field>
+        <Field Name="ApprovedAmnt">
+          <DataField>ApprovedAmnt</DataField>
+        </Field>
+        <Field Name="ApprovedAmntFormat">
+          <DataField>ApprovedAmntFormat</DataField>
+        </Field>
+        <Field Name="AmountPaid">
+          <DataField>AmountPaid</DataField>
+        </Field>
+        <Field Name="AmountPaidFormat">
+          <DataField>AmountPaidFormat</DataField>
+        </Field>
+        <Field Name="Outstandingbal">
+          <DataField>Outstandingbal</DataField>
+        </Field>
+        <Field Name="OutstandingbalFormat">
+          <DataField>OutstandingbalFormat</DataField>
+        </Field>
+        <Field Name="TotalActual">
+          <DataField>TotalActual</DataField>
+        </Field>
+        <Field Name="TotalActualFormat">
+          <DataField>TotalActualFormat</DataField>
+        </Field>
+        <Field Name="AmountDefaulted">
+          <DataField>AmountDefaulted</DataField>
+        </Field>
+        <Field Name="AmountDefaultedFormat">
+          <DataField>AmountDefaultedFormat</DataField>
+        </Field>
+        <Field Name="LaSTpaydate">
+          <DataField>LaSTpaydate</DataField>
+        </Field>
+        <Field Name="IssuedDate">
+          <DataField>IssuedDate</DataField>
+        </Field>
+        <Field Name="Period">
+          <DataField>Period</DataField>
+        </Field>
+        <Field Name="PeriodFormat">
+          <DataField>PeriodFormat</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

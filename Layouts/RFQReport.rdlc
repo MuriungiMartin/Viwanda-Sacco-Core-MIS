@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="ReportForNavId_1102755000">
+          <DataField>ReportForNavId_1102755000</DataField>
+        </Field>
+        <Field Name="No_PurchaseQuoteHeader">
+          <DataField>No_PurchaseQuoteHeader</DataField>
+        </Field>
+        <Field Name="ShiptoCode_PurchaseQuoteHeader">
+          <DataField>ShiptoCode_PurchaseQuoteHeader</DataField>
+        </Field>
+        <Field Name="ShiptoName_PurchaseQuoteHeader">
+          <DataField>ShiptoName_PurchaseQuoteHeader</DataField>
+        </Field>
+        <Field Name="ShiptoAddress_PurchaseQuoteHeader">
+          <DataField>ShiptoAddress_PurchaseQuoteHeader</DataField>
+        </Field>
+        <Field Name="LocationCode_PurchaseQuoteHeader">
+          <DataField>LocationCode_PurchaseQuoteHeader</DataField>
+        </Field>
+        <Field Name="ShortcutDimension1Code_PurchaseQuoteHeader">
+          <DataField>ShortcutDimension1Code_PurchaseQuoteHeader</DataField>
+        </Field>
+        <Field Name="ShortcutDimension2Code_PurchaseQuoteHeader">
+          <DataField>ShortcutDimension2Code_PurchaseQuoteHeader</DataField>
+        </Field>
+        <Field Name="PostingDescription_PurchaseQuoteHeader">
+          <DataField>PostingDescription_PurchaseQuoteHeader</DataField>
+        </Field>
+        <Field Name="ExpectedClosingDate_PurchaseQuoteHeader">
+          <DataField>ExpectedClosingDate_PurchaseQuoteHeader</DataField>
+        </Field>
+        <Field Name="CompayInfoName">
+          <DataField>CompayInfoName</DataField>
+        </Field>
+        <Field Name="CompayInfoPicture">
+          <DataField>CompayInfoPicture</DataField>
+        </Field>
+        <Field Name="PostingDate_PurchaseQuoteHeader">
+          <DataField>PostingDate_PurchaseQuoteHeader</DataField>
+        </Field>
+        <Field Name="ReleasedBy_PurchaseQuoteHeader">
+          <DataField>ReleasedBy_PurchaseQuoteHeader</DataField>
+        </Field>
+        <Field Name="ReleaseDate_PurchaseQuoteHeader">
+          <DataField>ReleaseDate_PurchaseQuoteHeader</DataField>
+        </Field>
+        <Field Name="ReportForNavId_1102755001">
+          <DataField>ReportForNavId_1102755001</DataField>
+        </Field>
+        <Field Name="VendorNo_QuotationRequestVendors">
+          <DataField>VendorNo_QuotationRequestVendors</DataField>
+        </Field>
+        <Field Name="VendorName_QuotationRequestVendors">
+          <DataField>VendorName_QuotationRequestVendors</DataField>
+        </Field>
+        <Field Name="VendorAddress">
+          <DataField>VendorAddress</DataField>
+        </Field>
+        <Field Name="VendorAddress2">
+          <DataField>VendorAddress2</DataField>
+        </Field>
+        <Field Name="ReportForNavId_1102755002">
+          <DataField>ReportForNavId_1102755002</DataField>
+        </Field>
+        <Field Name="Type_PurchaseQuoteLine">
+          <DataField>Type_PurchaseQuoteLine</DataField>
+        </Field>
+        <Field Name="No_PurchaseQuoteLine">
+          <DataField>No_PurchaseQuoteLine</DataField>
+        </Field>
+        <Field Name="Description_PurchaseQuoteLine">
+          <DataField>Description_PurchaseQuoteLine</DataField>
+        </Field>
+        <Field Name="UnitofMeasure_PurchaseQuoteLine">
+          <DataField>UnitofMeasure_PurchaseQuoteLine</DataField>
+        </Field>
+        <Field Name="Quantity_PurchaseQuoteLine">
+          <DataField>Quantity_PurchaseQuoteLine</DataField>
+        </Field>
+        <Field Name="Quantity_PurchaseQuoteLineFormat">
+          <DataField>Quantity_PurchaseQuoteLineFormat</DataField>
+        </Field>
+        <Field Name="LineNo_PurchaseQuoteLine">
+          <DataField>LineNo_PurchaseQuoteLine</DataField>
+        </Field>
+        <Field Name="DESC2">
+          <DataField>DESC2</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

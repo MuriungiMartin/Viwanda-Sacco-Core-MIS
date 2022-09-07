@@ -1,0 +1,251 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="FORMAT_TODAY_0_4_">
+          <DataField>FORMAT_TODAY_0_4_</DataField>
+        </Field>
+        <Field Name="COMPANYNAME">
+          <DataField>COMPANYNAME</DataField>
+        </Field>
+        <Field Name="UserId">
+          <DataField>UserId</DataField>
+        </Field>
+        <Field Name="Members__No__">
+          <DataField>Members__No__</DataField>
+        </Field>
+        <Field Name="Members_Name">
+          <DataField>Members_Name</DataField>
+        </Field>
+        <Field Name="Members__Payroll_Staff_No_">
+          <DataField>Members__Payroll_Staff_No_</DataField>
+        </Field>
+        <Field Name="Members__Current_Shares_">
+          <DataField>Members__Current_Shares_</DataField>
+        </Field>
+        <Field Name="Members__Current_Shares_Format">
+          <DataField>Members__Current_Shares_Format</DataField>
+        </Field>
+        <Field Name="Loan_GuaranteedCaption">
+          <DataField>Loan_GuaranteedCaption</DataField>
+        </Field>
+        <Field Name="CurrReport_PAGENOCaption">
+          <DataField>CurrReport_PAGENOCaption</DataField>
+        </Field>
+        <Field Name="Members__No__Caption">
+          <DataField>Members__No__Caption</DataField>
+        </Field>
+        <Field Name="Members_NameCaption">
+          <DataField>Members_NameCaption</DataField>
+        </Field>
+        <Field Name="Personal_No_Caption">
+          <DataField>Personal_No_Caption</DataField>
+        </Field>
+        <Field Name="Loan_Guarantors__Loan_No_Caption">
+          <DataField>Loan_Guarantors__Loan_No_Caption</DataField>
+        </Field>
+        <Field Name="NameCaption">
+          <DataField>NameCaption</DataField>
+        </Field>
+        <Field Name="Loan_Guarantors_SubstitutedCaption">
+          <DataField>Loan_Guarantors_SubstitutedCaption</DataField>
+        </Field>
+        <Field Name="Oustanding_BalanceCaption">
+          <DataField>Oustanding_BalanceCaption</DataField>
+        </Field>
+        <Field Name="Loan_AmountCaption">
+          <DataField>Loan_AmountCaption</DataField>
+        </Field>
+        <Field Name="Current_SharesCaption">
+          <DataField>Current_SharesCaption</DataField>
+        </Field>
+        <Field Name="Staff_No_Caption">
+          <DataField>Staff_No_Caption</DataField>
+        </Field>
+        <Field Name="Loan_TypeCaption">
+          <DataField>Loan_TypeCaption</DataField>
+        </Field>
+        <Field Name="Loan_Guarantors__Amont_Guaranteed_Caption">
+          <DataField>Loan_Guarantors__Amont_Guaranteed_Caption</DataField>
+        </Field>
+        <Field Name="Total_DepositsCaption">
+          <DataField>Total_DepositsCaption</DataField>
+        </Field>
+        <Field Name="MNo_Caption">
+          <DataField>MNo_Caption</DataField>
+        </Field>
+        <Field Name="Members_FOSA_Account">
+          <DataField>Members_FOSA_Account</DataField>
+        </Field>
+        <Field Name="Loan_Guarantors__Loan_No_">
+          <DataField>Loan_Guarantors__Loan_No_</DataField>
+        </Field>
+        <Field Name="Loans__Client_Name_">
+          <DataField>Loans__Client_Name_</DataField>
+        </Field>
+        <Field Name="Loans__Approved_Amount_">
+          <DataField>Loans__Approved_Amount_</DataField>
+        </Field>
+        <Field Name="Loans__Approved_Amount_Format">
+          <DataField>Loans__Approved_Amount_Format</DataField>
+        </Field>
+        <Field Name="Shares__1">
+          <DataField>Shares__1</DataField>
+        </Field>
+        <Field Name="Shares__1Format">
+          <DataField>Shares__1Format</DataField>
+        </Field>
+        <Field Name="Loans__Staff_No_">
+          <DataField>Loans__Staff_No_</DataField>
+        </Field>
+        <Field Name="Loans__Loan_Product_Type_">
+          <DataField>Loans__Loan_Product_Type_</DataField>
+        </Field>
+        <Field Name="Loan_Guarantors__Amont_Guaranteed_">
+          <DataField>Loan_Guarantors__Amont_Guaranteed_</DataField>
+        </Field>
+        <Field Name="Loan_Guarantors__Amont_Guaranteed_Format">
+          <DataField>Loan_Guarantors__Amont_Guaranteed_Format</DataField>
+        </Field>
+        <Field Name="Loan_Guarantors__Member_No_">
+          <DataField>Loan_Guarantors__Member_No_</DataField>
+        </Field>
+        <Field Name="Loans__Outstanding_Balance_">
+          <DataField>Loans__Outstanding_Balance_</DataField>
+        </Field>
+        <Field Name="Loans__Outstanding_Balance_Format">
+          <DataField>Loans__Outstanding_Balance_Format</DataField>
+        </Field>
+        <Field Name="Loan_Guarantors_Substituted">
+          <DataField>Loan_Guarantors_Substituted</DataField>
+        </Field>
+        <Field Name="Loans__Outstanding_Balance__Control1102755004">
+          <DataField>Loans__Outstanding_Balance__Control1102755004</DataField>
+        </Field>
+        <Field Name="Loans__Outstanding_Balance__Control1102755004Format">
+          <DataField>Loans__Outstanding_Balance__Control1102755004Format</DataField>
+        </Field>
+        <Field Name="Loan_Guarantors_Staff_Payroll_No_">
+          <DataField>Loan_Guarantors_Staff_Payroll_No_</DataField>
+        </Field>
+        <Field Name="Loan_Guarantors_FOSA_Substituted">
+          <DataField>Loan_Guarantors_FOSA_Substituted</DataField>
+        </Field>
+        <Field Name="Loan_Guarantors_FOSA_SubstitutedFormat">
+          <DataField>Loan_Guarantors_FOSA_SubstitutedFormat</DataField>
+        </Field>
+        <Field Name="Loans__Outstanding_Balance__Control1102760023">
+          <DataField>Loans__Outstanding_Balance__Control1102760023</DataField>
+        </Field>
+        <Field Name="Loans__Outstanding_Balance__Control1102760023Format">
+          <DataField>Loans__Outstanding_Balance__Control1102760023Format</DataField>
+        </Field>
+        <Field Name="Loans__Approved_Amount__Control1102760024">
+          <DataField>Loans__Approved_Amount__Control1102760024</DataField>
+        </Field>
+        <Field Name="Loans__Approved_Amount__Control1102760024Format">
+          <DataField>Loans__Approved_Amount__Control1102760024Format</DataField>
+        </Field>
+        <Field Name="Shares__1_Control1102760025">
+          <DataField>Shares__1_Control1102760025</DataField>
+        </Field>
+        <Field Name="Shares__1_Control1102760025Format">
+          <DataField>Shares__1_Control1102760025Format</DataField>
+        </Field>
+        <Field Name="Loans__Client_Name__Control1102760026">
+          <DataField>Loans__Client_Name__Control1102760026</DataField>
+        </Field>
+        <Field Name="Loan_Guarantors_FOSA__Loan_No_">
+          <DataField>Loan_Guarantors_FOSA__Loan_No_</DataField>
+        </Field>
+        <Field Name="Loans__Staff_No__Control1102760029">
+          <DataField>Loans__Staff_No__Control1102760029</DataField>
+        </Field>
+        <Field Name="Loans__Loan_Product_Type__Control1102760031">
+          <DataField>Loans__Loan_Product_Type__Control1102760031</DataField>
+        </Field>
+        <Field Name="Account_No_">
+          <DataField>Account_No_</DataField>
+        </Field>
+        <Field Name="Loan_Guarantors_FOSA_Staff_Payroll_No_">
+          <DataField>Loan_Guarantors_FOSA_Staff_Payroll_No_</DataField>
+        </Field>
+        <Field Name="Loan_Guarantors_FOSA_Staff_Payroll_No_Format">
+          <DataField>Loan_Guarantors_FOSA_Staff_Payroll_No_Format</DataField>
+        </Field>
+        <Field Name="Loan_Guarantors_FOSA_Account_No_">
+          <DataField>Loan_Guarantors_FOSA_Account_No_</DataField>
+        </Field>
+        <Field Name="Loan_Guarantors_FOSA_Signed">
+          <DataField>Loan_Guarantors_FOSA_Signed</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>
