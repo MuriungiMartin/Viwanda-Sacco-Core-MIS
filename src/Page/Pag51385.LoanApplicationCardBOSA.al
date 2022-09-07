@@ -38,6 +38,10 @@ Page 51385 "Loan Application Card(BOSA)"
                     Editable = false;
                     Importance = Additional;
                 }
+                field("Position In The Sacco"; "Position In The Sacco")
+                { }
+                field("Member Paying Type"; "Member Paying Type")
+                { }
                 field("Member Deposits"; "Member Deposits")
                 {
                     ApplicationArea = Basic;
