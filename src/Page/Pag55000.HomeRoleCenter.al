@@ -596,7 +596,7 @@ page 55000 "Home Role Center" // default role center change to comapny name
                     RunObject = Page "Bank Acc. Reconciliation List";
                     ToolTip = 'Reconcile bank accounts in your system with bank statements received from your bank.';
                 }
-            }
+            } 
             group(Action84)
             {
                 Caption = 'Membership Management';

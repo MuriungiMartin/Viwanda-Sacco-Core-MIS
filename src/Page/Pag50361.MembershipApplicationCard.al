@@ -25,6 +25,14 @@ Page 50361 "Membership Application Card"
                     Enabled = false;
                     Visible = false;
                 }
+                field("Assigned Member No"; "Assigned Member No")
+                {
+                    ApplicationArea = Basic;
+                    Editable = true;
+                    Enabled = true;
+                    Visible = true;
+
+                }
                 field("Account Category"; "Account Category")
                 {
                     ApplicationArea = Basic;
@@ -132,9 +140,18 @@ Page 50361 "Membership Application Card"
                 {
                     ApplicationArea = Basic;
                 }
+                field("Position In The Sacco"; "Position In The Sacco")
+                {
+
+                }
+                field("Member Paying Type"; "Member Paying Type")
+                {
+
+                }
                 field("IPRS Details"; "IPRS Details")
                 {
                     ApplicationArea = Basic;
+                    Visible = false;
                 }
                 field("IPRS Error Description"; "IPRS Error Description")
                 {
@@ -142,7 +159,6 @@ Page 50361 "Membership Application Card"
                 }
                 field("Passport No."; "Passport No.")
                 {
-                    ApplicationArea = Basic;
                     Editable = PassportEditable;
                 }
                 field("KRA PIN"; "KRA PIN")
@@ -797,6 +813,7 @@ Page 50361 "Membership Application Card"
                 {
                     ApplicationArea = Basic;
                 }
+
             }
         }
         area(factboxes)
@@ -975,70 +992,14 @@ Page 50361 "Membership Application Card"
                     PromotedOnly = true;
 
                     trigger OnAction()
+
                     var
                         Text001: label 'This request is already pending approval';
                         ApprovalsMgmt: Codeunit "Approvals Mgmt.";
+                        WFEvents: codeunit "Custom Workflow Events";
                     begin
-
-                        /* FnCheckfieldrestriction;
-
-                         ObjProductsApp.Reset;
-                         ObjProductsApp.SetRange(ObjProductsApp."Membership Applicaton No", "No.");
-                         if ObjProductsApp.FindSet then begin
-                             VarProductCount := ObjProductsApp.Count;
-                             if VarProductCount < 1 then
-                                 Error('You must select Membership and atleast 1 Account product to create');
-                         end;
-
-                         ObjProductsApp.Reset;
-                         ObjProductsApp.SetRange(ObjProductsApp."Membership Applicaton No", "No.");
-                         if ObjProductsApp.FindSet = false then begin
-                             Error('You must select products for the member');
-                         end;
-
-                         ObjGenSetUp.Get();
-
-                         if "Account Category" = "account category"::Joint then
-                             TestField("Joint Account Name");
-
-                         //=============================================================================================Check of Member Already Exists
-
-                         IF "ID No."<>'' THEN BEGIN
-                         CustomerTable.RESET;
-                         CustomerTable.SETRANGE(CustomerTable."ID No.","ID No.");
-                         CustomerTable.SETRANGE(CustomerTable."Customer Type",CustomerTable."Customer Type"::Member);
-                         IF CustomerTable.FIND('-') THEN BEGIN
-                         IF (CustomerTable."No." <> "No.") AND ("Account Category"="Account Category"::Individual) AND (CustomerTable.Status=CustomerTable.Status::Active) THEN
-                            //ERROR('Member has already been created');
-                         END;
-                         END;
-
-
-                         //========================================================================================Check Next of Kin Info
-                         if ("Account Category" = "account category"::Individual) then begin
-                             ObjNOkApp.Reset;
-                             ObjNOkApp.SetRange(ObjNOkApp."Account No", "No.");
-                             if ObjNOkApp.Find('-') = false then begin
-                                 Error('Please Insert Next of kin Information');
-                             end;
-                         end;
-                         if "Account Category" = "account category"::Individual then begin
-                             //  TESTFIELD(Picture);
-                             //  TESTFIELD(Signature);
-                         end;
-
-                         //===================================================================================Check if there is any product Selected
-                         ObjProductsApp.Reset;
-                         ObjProductsApp.SetRange(ObjProductsApp."Membership Applicaton No", "No.");
-                         if ObjProductsApp.Find('-') = false then begin
-                             Error('Please Select Products to be Openned');
-                         end;*/
-
-
-
                         if WorkflowManagement.CheckMembershipApplicationApprovalsWorkflowEnabled(Rec) then
                             WorkflowManagement.OnSendMembershipApplicationForApproval(Rec);
-                        //  Message('nimetuma');
 
                     end;
                 }
@@ -1140,8 +1101,8 @@ Page 50361 "Membership Application Card"
                                 VarNewMembNo := NoSeriesMgt.GetNextNo(SaccoNoSeries."Members Nos", Today, true);
 
                                 //Create Member
-                                Message('the number is %1', VarNewMembNo);
-                                CustomerTable."No." := Format(VarNewMembNo);
+                                //Message('the number is %1', VarNewMembNo);
+                                CustomerTable."No." := "Assigned Member No";//Format(VarNewMembNo);
                                 CustomerTable.Name := Name;
                                 CustomerTable.Address := Address;
                                 CustomerTable."Address 2" := "Address 2";

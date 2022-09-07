@@ -8,10 +8,10 @@ Page 50849 "Membership Cue"
     {
         area(content)
         {
-            usercontrol(logo; "Logo Control Addin")
-            {
-                ApplicationArea = basic, suite;
-            }
+            // usercontrol(logo; "Logo Control Addin")
+            // {
+            //     ApplicationArea = basic, suite;
+            // }
             cuegroup(Members)
             {
                 field("Active Members"; "Active Members")

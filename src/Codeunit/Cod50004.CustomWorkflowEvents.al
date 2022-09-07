@@ -4,6 +4,7 @@ Codeunit 50004 "Custom Workflow Events"
 
     trigger OnRun()
     begin
+        AddEventsToLib();
     end;
 
     var
@@ -247,6 +248,8 @@ Codeunit 50004 "Custom Workflow Events"
                                     Database::"Salary Processing Headerr", 'Approval of  Salary Processing  is Requested.', 0, false);
         WFHandler.AddEventToLibrary(RunWorkflowOnCancelSalaryProcessingApprovalRequestCode,
                                     Database::"Salary Processing Headerr", 'An Approval request for Salary Processing is canceled.', 0, false);
+
+        Message('Events added');
 
         //-------------------------------------------End Approval Events-------------------------------------------------------------
     end;

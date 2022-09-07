@@ -1,11 +1,11 @@
 controladdin "Logo Control Addin"
 {
-    Images = 'Suresteplogo.jpg';
+    Images = 'Viwandalogo.jpg';
     HorizontalShrink = true;
     VerticalShrink = true;
     HorizontalStretch = true;
     VerticalStretch = true;
-    RequestedHeight = 200;
-    RequestedWidth = 200;
+    RequestedHeight = 100;
+    RequestedWidth = 100;
     StartupScript = 'startup.js';
 }

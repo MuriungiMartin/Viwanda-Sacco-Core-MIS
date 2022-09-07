@@ -968,7 +968,7 @@ Codeunit 50162 "WorkflowIntegration"
                     ApprovalAmountLCY := 0;
                     ApprovalEntryArgument."Document Type" := ApprovalEntryArgument."document type"::MembershipApplication;
                     ApprovalEntryArgument."Document No." := MembershipApplication."No.";
-                    ApprovalEntryArgument."Salespers./Purch. Code" := MembershipApplication.Name;
+                    ApprovalEntryArgument."Salespers./Purch. Code" := MembershipApplication."First Name";
                     ApprovalEntryArgument.Amount := ApprovalAmount;
                     ApprovalEntryArgument."Amount (LCY)" := ApprovalAmountLCY;
                     ApprovalEntryArgument."Currency Code" := '';

@@ -1454,6 +1454,14 @@ Table 50360 "Membership Applications"
 
             end;
         }
+        field(69223; "Position In The Sacco"; Enum "Position In the Sacco")
+        {
+
+        }
+        field(69224; "Member Paying Type"; enum "Member Pay Type")
+        {
+
+        }
     }
 
     keys
