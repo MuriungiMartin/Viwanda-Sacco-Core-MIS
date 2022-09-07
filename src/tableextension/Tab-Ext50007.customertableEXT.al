@@ -2525,7 +2525,14 @@ tableextension 50007 "customertableEXT" extends Customer
         {
 
         }
+        field(69297; "Position In The Sacco"; Enum "Position In the Sacco")
+        {
 
+        }
+        field(69298; "Member Paying Type"; enum "Member Pay Type")
+        {
+
+        }
 
 
     }

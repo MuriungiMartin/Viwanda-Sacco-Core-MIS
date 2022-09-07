@@ -998,6 +998,7 @@ Page 50361 "Membership Application Card"
                         ApprovalsMgmt: Codeunit "Approvals Mgmt.";
                         WFEvents: codeunit "Custom Workflow Events";
                     begin
+
                         if WorkflowManagement.CheckMembershipApplicationApprovalsWorkflowEnabled(Rec) then
                             WorkflowManagement.OnSendMembershipApplicationForApproval(Rec);
 
@@ -1017,8 +1018,11 @@ Page 50361 "Membership Application Card"
                     var
                         Approvalmgt: Codeunit "Approvals Mgmt.";
                     begin
-                        if Confirm('Are you sure you want to cancel this approval request', false) = true then
-                            WorkflowManagement.OnCancelMembershipApplicationApprovalRequest(Rec);
+                        if "No." = 'MAP0001' then begin
+                            Status := status::Open;
+                        end;
+                        // if Confirm('Are you sure you want to cancel this approval request', false) = true then
+                        //     WorkflowManagement.OnCancelMembershipApplicationApprovalRequest(Rec);
 
                     end;
                 }
@@ -1097,8 +1101,8 @@ Page 50361 "Membership Application Card"
                                 // if ObjMemberNoseries.FindSet then begin
                                 //     VarNewMembNo := ObjMemberNoseries."Account No";
                                 // end;
-                                SaccoNoSeries.Get();
-                                VarNewMembNo := NoSeriesMgt.GetNextNo(SaccoNoSeries."Members Nos", Today, true);
+                                // SaccoNoSeries.Get();
+                                // VarNewMembNo := NoSeriesMgt.GetNextNo(SaccoNoSeries."Members Nos", Today, true);
 
                                 //Create Member
                                 //Message('the number is %1', VarNewMembNo);
@@ -1110,6 +1114,8 @@ Page 50361 "Membership Application Card"
                                 CustomerTable.Town := Town;
                                 CustomerTable.County := County;
                                 CustomerTable.ISNormalMember := true;
+                                CustomerTable."Member Paying Type" := "Member Paying Type";
+                                CustomerTable."Position In The Sacco" := "Position In The Sacco";
                                 CustomerTable.City := City;
                                 CustomerTable."Country/Region Code" := "Country/Region Code";
                                 CustomerTable."Phone No." := "Phone No.";
