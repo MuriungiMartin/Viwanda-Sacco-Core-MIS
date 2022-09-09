@@ -197,6 +197,12 @@ Page 50413 "Sacco No. Series"
                 {
                     ApplicationArea = Basic;
                 }
+                field("Cheque No."; "Cheque No.")
+                {
+                    ApplicationArea = Basic;
+                }
+
+
             }
             group("Banking Services")
             {

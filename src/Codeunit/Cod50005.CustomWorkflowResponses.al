@@ -31,6 +31,24 @@ Codeunit 50005 "Custom Workflow Responses"
                                                  SurestepWFEvents.RunWorkflowOnCancelPaymentApprovalRequestCode);
         WFResponseHandler.AddResponsePredecessor(WFResponseHandler.CancelAllApprovalRequestsCode,
                                                  SurestepWFEvents.RunWorkflowOnCancelPaymentApprovalRequestCode);
+        //cheque Register
+        WFResponseHandler.AddResponsePredecessor(WFResponseHandler.SetStatusToPendingApprovalCode,
+                                                   SurestepWFEvents.RunWorkflowOnSendChequeForApprovalCode);
+        WFResponseHandler.AddResponsePredecessor(WFResponseHandler.CreateApprovalRequestsCode,
+                                                      SurestepWFEvents.RunWorkflowOnSendChequeForApprovalCode);
+        WFResponseHandler.AddResponsePredecessor(WFResponseHandler.SendApprovalRequestForApprovalCode,
+                                                   SurestepWFEvents.RunWorkflowOnSendChequeForApprovalCode);
+        WFResponseHandler.AddResponsePredecessor(WFResponseHandler.OpenDocumentCode,
+                                                    SurestepWFEvents.RunWorkflowOnSendChequeForApprovalCode);
+        WFResponseHandler.AddResponsePredecessor(WFResponseHandler.CancelAllApprovalRequestsCode,
+                                                  SurestepWFEvents.RunWorkflowOnSendChequeForApprovalCode);
+
+
+
+
+
+
+
 
         //Membership Application
         WFResponseHandler.AddResponsePredecessor(WFResponseHandler.SetStatusToPendingApprovalCode,
@@ -511,6 +529,7 @@ Codeunit 50005 "Custom Workflow Responses"
     [EventSubscriber(ObjectType::Codeunit, Codeunit::"Workflow Response Handling", 'OnExecuteWorkflowResponse', '', true, true)]
     procedure SetStatusToPendingApproval(var Variant: Variant)
     var
+        ChequeRegister: Record ChequeRegister;
         RecRef: RecordRef;
         IsHandled: Boolean;
         PaymentHeader: Record "Payments Header";
@@ -574,6 +593,14 @@ Codeunit 50005 "Custom Workflow Responses"
                     MembershipApplication.Validate(Status, MembershipApplication.Status::"Pending Approval");
                     MembershipApplication.Modify(true);
                     Variant := MembershipApplication;
+                end;
+            //Cheque Register
+            Database::ChequeRegister:
+                begin
+                    RecRef.SetTable(ChequeRegister);
+                    ChequeRegister.Validate(Status, ChequeRegister.Status::Pending);
+                    ChequeRegister.Modify(true);
+                    Variant := ChequeRegister;
                 end;
             //Loan Application
             Database::"Loans Register":
@@ -2035,6 +2062,7 @@ Codeunit 50005 "Custom Workflow Responses"
     [EventSubscriber(ObjectType::Codeunit, Codeunit::"Workflow Response Handling", 'OnOpenDocument', '', true, true)]
     local procedure OnOpenDocument(RecRef: RecordRef; var Handled: Boolean)
     var
+        ChequeRegister: Record ChequeRegister;
         PaymentHeader: Record "Payments Header";
         SaccoTransfers: Record "Sacco Transfers";
         ObjMembership: Record "Membership Applications";
@@ -2083,6 +2111,14 @@ Codeunit 50005 "Custom Workflow Responses"
                     RecRef.SetTable(MembershipApp);
                     MembershipApp.Status := MembershipApp.Status::Open;
                     MembershipApp.Modify(true);
+                    Handled := true;
+                end;
+            //cheque Register
+            Database::ChequeRegister:
+                begin
+                    RecRef.SetTable(ChequeRegister);
+                    ChequeRegister.Status := ChequeRegister.Status::Open;
+                    ChequeRegister.Modify(true);
                     Handled := true;
                 end;
             Database::"Sacco Transfers":
@@ -2184,6 +2220,7 @@ Codeunit 50005 "Custom Workflow Responses"
     [EventSubscriber(ObjectType::Codeunit, Codeunit::"Workflow Response Handling", 'OnExecuteWorkflowResponse', '', true, true)]
     local procedure OnSetStatusToPendingApproval(var Variant: Variant)
     var
+        ChequeRegister: Record ChequeRegister;
         RecRef: RecordRef;
         IsHandled: Boolean;
         PaymentHeader: Record "Payments Header";
@@ -2595,6 +2632,7 @@ Codeunit 50005 "Custom Workflow Responses"
     [EventSubscriber(ObjectType::Codeunit, Codeunit::"Workflow Response Handling", 'OnReleaseDocument', '', true, true)]
     local procedure OnReleaseDocument(RecRef: RecordRef; var Handled: Boolean)
     var
+        ChequeRegister: Record ChequeRegister;
         MemberShipApp: Record "Membership Applications";
         SaccoTransfers: Record "Sacco Transfers";
         MemberAgentNOKChange: Record "Member Agent/Next Of Kin Chang";
@@ -2623,6 +2661,14 @@ Codeunit 50005 "Custom Workflow Responses"
                     RecRef.SetTable(LeaveApp);
                     LeaveApp.Status := LeaveApp.Status::Approved;
                     LeaveApp.Modify(true);
+                    Handled := true;
+                end;
+            //Cheque Register
+            Database::ChequeRegister:
+                begin
+                    RecRef.SetTable(ChequeRegister);
+                    ChequeRegister.Status := ChequeRegister.Status::Aproved;
+                    ChequeRegister.Modify(true);
                     Handled := true;
                 end;
             database::"EFT/RTGS Header":

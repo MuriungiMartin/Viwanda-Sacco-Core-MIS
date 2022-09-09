@@ -131,4 +131,9 @@ enumextension 50025 "ApprovaldocEnumEXT" extends "Approval Document Type"
     value(48; SalaryProcessing)
     {
     }
+    value(49; ChequeRegister)
+    {
+
+    }
+
 }

@@ -22,6 +22,32 @@ Codeunit 50162 "WorkflowIntegration"
 
     [IntegrationEvent(false, false)]
 
+    procedure OnSendChequeForApproval(var "Cheque register": Record Chequeregister)
+    begin
+    end;
+
+    [IntegrationEvent(false, false)]
+
+    procedure OnCancelChequeApprovalRequest(var "Cheque register": Record Chequeregister)
+    begin
+    end;
+
+    procedure CheckChequeApprovalsWorkflowEnabled(var "Cheque register": Record Chequeregister): Boolean
+    begin
+        if not IsChequeApprovalsWorkflowEnabled("Cheque register") then
+            Error(NoWorkflowEnabledErr);
+
+        exit(true);
+    end;
+
+
+    procedure IsChequeApprovalsWorkflowEnabled(var "Cheque register": Record Chequeregister): Boolean
+    begin
+        exit(WorkflowManagement.CanExecuteWorkflow("Cheque register", SurestepWFEvents.RunWorkflowOnSendPaymentDocForApprovalCode));//todo
+    end;
+
+    [IntegrationEvent(false, false)]
+
     procedure OnSendPaymentDocForApproval(var PaymentHeader: Record "Payments Header")
     begin
     end;
@@ -895,6 +921,7 @@ Codeunit 50162 "WorkflowIntegration"
     [EventSubscriber(ObjectType::Codeunit, Codeunit::"Approvals Mgmt.", 'OnPopulateApprovalEntryArgument', '', true, true)]
     local procedure PopulateSurestepEntries(RecRef: RecordRef; WorkflowStepInstance: Record "Workflow Step Instance"; var ApprovalEntryArgument: Record "Approval Entry")
     var
+        VarChequeregister: Record ChequeRegister;
         Customer: Record Customer;
         GenJournalBatch: Record "Gen. Journal Batch";
         GenJournalLine: Record "Gen. Journal Line";
@@ -959,7 +986,21 @@ Codeunit 50162 "WorkflowIntegration"
                     ApprovalEntryArgument."Amount (LCY)" := ApprovalAmountLCY;
                     ApprovalEntryArgument."Currency Code" := PaymentHeader."Currency Code";
                 end;
+            Database::ChequeRegister:
+                begin
+                    RecRef.SetTable(VarChequeregister);
 
+                    ApprovalAmount := VarChequeregister."Cheque Amount";
+                    ApprovalEntryArgument."Document Type" := ApprovalEntryArgument."document type"::"ChequeRegister";
+                    ApprovalEntryArgument."Document No." := VarChequeregister."Cheque No";
+                    ApprovalEntryArgument.Amount := VarChequeregister."Cheque Amount";
+
+
+
+
+
+
+                end;
             //Membership Applications
             Database::"Membership Applications":
                 begin
