@@ -887,7 +887,7 @@ Report 50352 "Loan Appraisal-Posted"
                             DEpMultiplier := LoanType."Shares Multiplier" * (Cshares + ShareCap)
                         end else
                             if "1st Time Loanee" = true then begin
-                                DEpMultiplier := LoanType."Deposit Multiplier 1st Loan" * (Cshares + ShareCap);
+                              //  DEpMultiplier := LoanType."Deposit Multiplier 1st Loan" * (Cshares + ShareCap);
                             end;
                         BridgedRepayment := 0;
                         TotalRepayments := 0;

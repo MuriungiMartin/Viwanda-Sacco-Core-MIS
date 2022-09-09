@@ -85,6 +85,24 @@ Page 51385 "Loan Application Card(BOSA)"
                 {
                     ApplicationArea = Basic;
                     Editable = LProdTypeEditable;
+                    trigger OnValidate()
+                    var
+                        myInt: Integer;
+                    begin
+                        if "Loan Product Type" = 'DL' then begin
+                            DevSubCategoryVisible := true;
+
+                        end;
+
+                    end;
+                }
+                group("Development Category")
+                {
+                    Visible = DevSubCategoryVisible;
+                    field("Development Loan Category"; "Development Loan Category")
+                    {
+
+                    }
                 }
                 field("Loan Product Type Name"; "Loan Product Type Name")
                 {
@@ -1472,6 +1490,7 @@ Page 51385 "Loan Application Card(BOSA)"
         ObjLoanStages: Record "Loan Stages";
         ObjLoanApplicationStages: Record "Loan Application Stages";
         ErrorPostingAccount: label 'Specify the Loan Disburesment Account';
+        DevSubCategoryVisible: Boolean;
 
 
     procedure UpdateControl()

@@ -106,7 +106,10 @@ Table 50371 "Loans Register"
                             Source := LoanType.Source;
                             "OneOff Loan Repayment" := LoanType."OneOff  Loan Repayment";
                             "Recovery Mode" := LoanType."Recovery Mode";
-                            "Loan Deposit Multiplier" := LoanType."Deposits Multiplier";
+                            if ("Member Paying Type" = "Member Paying Type"::"KIE Member") or ("Member Paying Type" = "Member Paying Type"::Staff) then
+                                "Loan Deposit Multiplier" := LoanType."Deposits Multiplier (KIE)"
+                            else
+                                "Loan Deposit Multiplier" := LoanType."Deposit Multiplier(IND)";
                             //"Loan Deposit Multiplier":= LoanType."Shares Multiplier";
                             //Where repayment is by employer
 
@@ -220,6 +223,8 @@ Table 50371 "Loans Register"
             if (Source = filter(" ")) Customer."No.";
 
             trigger OnValidate()
+            var
+                Dformula: text[10];
             begin
                 //credit policy assessment-check if member is a defaulter
                 LoanApp.Reset;
@@ -276,6 +281,11 @@ Table 50371 "Loans Register"
 
 
                 if CustomerRecord.Get("BOSA No") then begin
+                    ObjGenSetup.Get();
+                    Dformula := '-' + Format(ObjGenSetup."No. Of Months BeforeLoan") + 'M';
+                    if CalcDate(Dformula, "Application Date") > CustomerRecord."Registration Date" then
+                        Error('Loan applicant must have completed uninterrupted six months membership.');
+
                     if CustomerRecord.Blocked = CustomerRecord.Blocked::All then
                         Error('Member is blocked from transacting ' + "Client Code");
 
@@ -324,6 +334,8 @@ Table 50371 "Loans Register"
                     "Bank Branch" := CustomerRecord."Bank Branch Code";
                     "Bank Branch Name" := CustomerRecord."Bank Branch Name";
                     "Bank Account No" := CustomerRecord."Bank Account No.";
+                    "Member Paying Type" := CustomerRecord."Member Paying Type";
+                    "Position In The Sacco" := CustomerRecord."Position In The Sacco";
                     if CustomerRecord."Account Category" = CustomerRecord."account category"::Joint then
                         "Corporate Loan" := true;
                     if CustomerRecord."Shares Retained" < GenSetUp."Retained Shares" then begin
@@ -447,10 +459,24 @@ Table 50371 "Loans Register"
             trigger OnValidate()
             begin
                 if LoanType.Get("Loan Product Type") then begin
-                    if "Requested Amount" > LoanType."Max. Loan Amount" then begin
-                        Error('You Can not request more than the Loan Allowable limit of %1', LoanType."Max. Loan Amount");
-                    end;
+                    if LoanType.Code = 'DL' then begin
+                        if "Development Loan Category" = "Development Loan Category"::"Development A" then begin
+                            if "Requested Amount" > LoanType."DevelopmentA Max Range" then begin
+                                Error('You Can not request more than the Loan Allowable limit of %1', LoanType."DevelopmentA Max Range");
+                            end;
+                        end;
+                        if "Development Loan Category" = "Development Loan Category"::"Development B" then begin
+                            if "Requested Amount" > LoanType."DevelopmentB Max Range" then begin
+                                Error('You Can not request more than the Loan Allowable limit of %1', LoanType."DevelopmentB Max Range");
+                            end;
+                        end;
+
+                    end else
+                        if "Requested Amount" > LoanType."Max. Loan Amount" then begin
+                            Error('You Can not request more than the Loan Allowable limit of %1', LoanType."Max. Loan Amount");
+                        end;
                 end;
+
                 //"Approved Amount":="Requested Amount";
                 "Net Payment to FOSA" := "Requested Amount";
 
@@ -3729,6 +3755,18 @@ Table 50371 "Loans Register"
         {
             DataClassification = ToBeClassified;
         }
+        field(51516290; "Position In The Sacco"; Enum "Position In the Sacco")
+        {
+
+        }
+        field(51516291; "Member Paying Type"; enum "Member Pay Type")
+        {
+
+        }
+        field(51516292; "Development Loan Category"; Option)
+        {
+            OptionMembers = ,"Development A","Development B";
+        }
     }
 
     keys
@@ -4084,6 +4122,7 @@ Table 50371 "Loans Register"
         MemberLedgerEntry: Record "Cust. Ledger Entry";
         VarLoanDisburesementDay: Integer;
         BanksVer2: Record "Banks Ver2";
+        ObjGenSetup: record "Sacco General Set-Up";
 
 
     procedure CreateAnnuityLoan()

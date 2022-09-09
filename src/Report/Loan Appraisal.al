@@ -1387,46 +1387,36 @@ Report 50384 "Loan Appraisal Draft"
         TotalBridgeAmount := 0;
         GenSetUp.Get();
         Multiplier := 0;
-        if LoanType.Get("Loans Register"."Loan Product Type") then
-            //MESSAGE('%1|%2',LoanType."Deposits Multiplier",LoanType.Code);
-            if ("Loans Register"."Loan Product Type" <> 'L18B') or ("Loans Register"."Loan Product Type" <> 'L08B') then begin
-                if ObjCust.Get("Loans Register"."Client Code") then begin
-                    ObjCust.CalcFields(ObjCust."Current Shares");
-                    if (ObjCust."Current Shares" < 0) then begin
-                        DEpMultiplier := LoanType."Deposits Multiplier" * (ObjCust."Current Shares");//"Loans Register"."Boosted Amount"+
-                        Multiplier := LoanType."Deposits Multiplier";
-                    end else begin
-                        DEpMultiplier := LoanType."Deposits Multiplier" * (ObjCust."Current Shares") + "Loans Register"."Boosted Amount" * GenSetUp."Deposits Multiplier";//"Loans Register"."Boosted Amount"+
-                        Multiplier := LoanType."Deposits Multiplier";
-                    end;
-                end;
-            end else
-                if ("Loans Register".Savings + "Loans Register"."Boosted Amount") < 0 then
-                    DEpMultiplier := 0;
         if LoanType.Get("Loans Register"."Loan Product Type") then begin
+            //MESSAGE('%1|%2',LoanType."Deposits Multiplier",LoanType.Code);
+            if ObjCust.Get("Loans Register"."Client Code") then begin
+                ObjCust.CalcFields(ObjCust."Current Shares");
+                if (ObjCust."Current Shares" <> 0) then begin
+                    case
+                        "Loans Register"."Member Paying Type" of
+                        "Loans Register"."Member Paying Type"::"KIE Member":
+                            begin
+                                DEpMultiplier := LoanType."Deposits Multiplier (KIE)" * (ObjCust."Current Shares");//"Loans Register"."Boosted Amount"+
+                                Multiplier := LoanType."Deposits Multiplier (KIE)";
+                            end;
+                        "Loans Register"."Member Paying Type"::Staff:
+                            begin
+                                DEpMultiplier := LoanType."Deposits Multiplier (KIE)" * (ObjCust."Current Shares");//"Loans Register"."Boosted Amount"+
+                                Multiplier := LoanType."Deposits Multiplier (KIE)";
+                            end;
+                        "Loans Register"."Member Paying Type"::"Individual Paying Member":
+                            begin
+                                DEpMultiplier := LoanType."Deposit Multiplier(IND)" * (ObjCust."Current Shares");//"Loans Register"."Boosted Amount"+
+                                Multiplier := LoanType."Deposit Multiplier(IND)";
+                            end;
 
-            //************Find Loan Balances BOSA********************//
-            LoanApp.Reset;
-            LoanApp.SetRange(LoanApp."Client Code", "Loans Register"."Client Code");
-            //LoanApp.SETRANGE(LoanApp.Source,LoanApp.Source::BOSA);
-            LoanApp.SetRange(LoanApp.Posted, true);
-            if LoanApp.Find('-') then begin
-                LoanApp.CalcFields(LoanApp."Outstanding Balance", LoanApp."Outstanding Balance");
-                /*REPEAT
-                   LoanApp.CALCFIELDS(LoanApp."Outstanding Balance",LoanApp."Outstanding Balance Bosa");
-                   IF LoanApp."Outstanding Balance">0 THEN
-                     BEGIN
-                       //LOANBALANCE:=LOANBALANCE+LoanApp."Outstanding Balance Bosa";
-                       TotalRepayments:=TotalRepayments+LoanApp.Repayment;
-                   END;
-
-               UNTIL LoanApp.NEXT=0;*/
-                if LoanApp.Source = LoanApp.Source::BOSA then begin
-                    LOANBALANCE := LoanApp."Outstanding Balance";
-                end else
-                    if LoanApp.Source = LoanApp.Source::FOSA then begin
-                        LOANBALANCE := LoanApp."Outstanding Balance";
                     end;
+                    //     DEpMultiplier := LoanType."Deposits Multiplier" * (ObjCust."Current Shares");//"Loans Register"."Boosted Amount"+
+                    //     Multiplier := LoanType."Deposits Multiplier";
+                    // end else begin
+                    //     DEpMultiplier := LoanType."Deposits Multiplier" * (ObjCust."Current Shares") + "Loans Register"."Boosted Amount" * GenSetUp."Deposits Multiplier";//"Loans Register"."Boosted Amount"+
+                    //     Multiplier := LoanType."Deposits Multiplier";
+                end;
             end;
 
             LoanTopUp.Reset;
@@ -1589,9 +1579,9 @@ Report 50384 "Loan Appraisal Draft"
             LoanTransferFee := 0;
             LoanInsurance := SFactory.FnGetChargeFee("Loans Register"."Loan Product Type", "Loans Register"."Approved Amount", 'CRB');
             ProcessingFee := SFactory.FnGetChargeFee("Loans Register"."Loan Product Type", "Loans Register"."Approved Amount", 'LPF');
-            LoanFormFee := SFactory.FnGetChargeFee("Loans Register"."Loan Product Type", "Loans Register"."Approved Amount", 'FACI');
-            LAppraisalFee := SFactory.FnGetChargeFee("Loans Register"."Loan Product Type", "Loans Register"."Approved Amount", 'LAF');
-            EmergencyUpfront := SFactory.FnGetChargeFee("Loans Register"."Loan Product Type", "Loans Register"."Approved Amount", 'INT');
+            // LoanFormFee := SFactory.FnGetChargeFee("Loans Register"."Loan Product Type", "Loans Register"."Approved Amount", 'FACI');
+            // LAppraisalFee := SFactory.FnGetChargeFee("Loans Register"."Loan Product Type", "Loans Register"."Approved Amount", 'LAF');
+            // EmergencyUpfront := SFactory.FnGetChargeFee("Loans Register"."Loan Product Type", "Loans Register"."Approved Amount", 'INT');
 
             LoanProductCharges.Reset;
             LoanProductCharges.SetRange("Product Code", "Loans Register"."Loan Product Type");

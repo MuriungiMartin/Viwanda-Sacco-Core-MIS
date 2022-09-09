@@ -253,7 +253,7 @@ Table 50381 "Loan Products Setup"
             OptionCaption = ' ,Checkoff,Standing Order,Salary,Pension,Recover From FOSA,Cash';
             OptionMembers = " ",Checkoff,"Standing Order",Salary,Pension,"Recover From FOSA",Cash;
         }
-        field(83; "Deposits Multiplier"; Decimal)
+        field(83; "Deposits Multiplier (KIE)"; Decimal)
         {
         }
         field(84; "Appraise Collateral"; Decimal)
@@ -305,7 +305,7 @@ Table 50381 "Loan Products Setup"
         {
             TableRelation = "G/L Account";
         }
-        field(102; "Deposit Multiplier 1st Loan"; Decimal)
+        field(102; "Deposit Multiplier(IND)"; Decimal)
         {
         }
         field(103; "Loan Partial Disburesment A/C."; Code[20])
@@ -429,6 +429,15 @@ Table 50381 "Loan Products Setup"
         {
             DataClassification = ToBeClassified;
         }
+        field(51516062; "DevelopmentA Max Range"; Decimal)
+        {
+            DataClassification = ToBeClassified;
+        }
+        field(51516063; "DevelopmentB Max Range"; Decimal)
+        {
+            DataClassification = ToBeClassified;
+        }
+
     }
 
     keys

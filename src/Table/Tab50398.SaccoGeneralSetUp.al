@@ -877,6 +877,12 @@ Table 50398 "Sacco General Set-Up"
             DataClassification = ToBeClassified;
             // TableRelation = "G/L Account"."No.";
         }
+        field(255; "No. Of Months BeforeLoan"; Integer)
+        {
+            DataClassification = ToBeClassified;
+            // TableRelation = "G/L Account"."No.";
+        }
+
     }
 
     keys
