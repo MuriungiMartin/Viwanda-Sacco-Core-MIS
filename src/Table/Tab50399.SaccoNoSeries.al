@@ -616,6 +616,12 @@ Table 50399 "Sacco No. Series"
             DataClassification = ToBeClassified;
             TableRelation = "No. Series";
         }
+        field(51516084; "Cheque No."; Code[20])
+        {
+            DataClassification = ToBeClassified;
+            TableRelation = "No. Series";
+        }
+
     }
 
     keys

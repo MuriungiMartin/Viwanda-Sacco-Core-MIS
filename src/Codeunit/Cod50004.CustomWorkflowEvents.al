@@ -23,6 +23,13 @@ Codeunit 50004 "Custom Workflow Events"
                                     Database::"Payments Header", 'Approval of a Payment Document is Requested.', 0, false);
         WFHandler.AddEventToLibrary(RunWorkflowOnCancelPaymentApprovalRequestCode,
                                     Database::"Payments Header", 'An Approval request for a Payment Document is Canceled.', 0, false);
+        //Cheque Register
+        WFHandler.AddEventToLibrary(RunWorkflowOnSendChequeForApprovalCode,
+                                    Database::"ChequeRegister", 'Approval of a cheque Document is Requsted.', 0, false);
+        WFHandler.AddEventToLibrary(RunWorkflowOnCancelChequeApprovalRequestCode,
+                                    Database::"ChequeRegister", 'An Approval request for a Cheque Document is Canceled.', 0, false);
+
+
 
         //Membership Application
         WFHandler.AddEventToLibrary(RunWorkflowOnSendMembershipApplicationForApprovalCode,
@@ -774,6 +781,34 @@ Codeunit 50004 "Custom Workflow Events"
     begin
         WorkflowManagement.HandleEvent(RunWorkflowOnCancelFAccountApplicationApprovalRequestCode, FAccount);
     end;
+
+    //-----------------------cheques-------------------------------------------------
+    procedure RunWorkflowOnSendChequeForApprovalCode(): Code[128]
+    begin
+        exit(UpperCase('RunWorkflowOnSendChequeForApproval'));
+    end;
+
+
+    procedure RunWorkflowOnCancelChequeApprovalRequestCode(): Code[128]
+    begin
+        exit(UpperCase('RunWorkflowOnCancelChequeApprovalRequest'));
+    end;
+
+    [EventSubscriber(ObjectType::Codeunit, Codeunit::WorkflowIntegration, 'OnSendChequeForApproval', '', false, false)]
+
+    procedure RunWorkflowOnSendChequeForApproval(var "Cheque register": Record ChequeRegister)
+    begin
+        WorkflowManagement.HandleEvent(RunWorkflowOnSendChequeForApprovalCode, "Cheque register");
+        
+    end;
+
+    [EventSubscriber(ObjectType::Codeunit, Codeunit::WorkflowIntegration, 'OnCancelChequeApprovalRequest', '', false, false)]
+
+    procedure RunWorkflowOnCancelChequeApprovalRequest(var "Cheque register": Record ChequeRegister)
+    begin
+        WorkflowManagement.HandleEvent(RunWorkflowOnCancelChequeApprovalRequestCode, "Cheque register");
+    end;
+    //-------------------------end cheques----------------------------------------
 
 
     procedure RunWorkflowOnSendSReqApplicationForApprovalCode(): Code[128]
@@ -1690,6 +1725,7 @@ Codeunit 50004 "Custom Workflow Events"
         InwardChequeClearing: Record "Cheque Receipts-Family";
         InvalidPaybillTransactions: Record "Paybill Processing Header";
         InternalPV: Record "Internal PV Header";
+        ChequeRegister: Record ChequeRegister;
         JournalBatch: Record "Gen. Journal Batch";
         SProcessing: Record "Salary Processing Headerr";
         GuarantorshipSubstitution: Record "Guarantorship Substitution H";
@@ -1705,6 +1741,17 @@ Codeunit 50004 "Custom Workflow Events"
                     IsHandled := true;
 
                 end;
+            //Cheque Register
+
+            Database::ChequeRegister:
+                begin
+                    RecRef.SetTable(ChequeRegister);
+                    ChequeRegister.Validate(Status, ChequeRegister.Status::"Pending");
+                    ChequeRegister.Modify(true);
+                    IsHandled := true;
+
+                end;
+
 
             //Membership Application
             Database::"Membership Applications":
