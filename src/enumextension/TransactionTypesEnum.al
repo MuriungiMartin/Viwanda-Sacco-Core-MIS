@@ -6,7 +6,7 @@ enum 51001 TransactionTypesEnum
     }
     value(1; "Registration Fee")
     {
-        
+
     }
     value(2; "Share Capital")
     {
@@ -78,5 +78,13 @@ enum 51001 TransactionTypesEnum
     }
     value(24; "Insurance Retension")
     {
+    }
+    value(25; "Loan Processing Fee charged")
+    {
+
+    }
+    value(26; "Loan Processing Fee Paid")
+    {
+
     }
 }

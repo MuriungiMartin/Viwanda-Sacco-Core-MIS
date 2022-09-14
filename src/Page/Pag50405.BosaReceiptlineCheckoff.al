@@ -58,6 +58,26 @@ Page 50405 "Bosa Receipt line-Checkoff"
                 {
                     ApplicationArea = Basic;
                 }
+                field("Sacco Shares"; "Sacco Shares")
+                {
+
+                }
+                field("Sacco Total Loan"; "Sacco Total Loan")
+                {
+
+                }
+                field("Sacco Total Interest"; "Sacco Total Interest")
+                {
+
+                }
+                field("Sacco Appl Fee"; "Sacco Appl Fee")
+                {
+
+                }
+                field("Saccco Benevolent"; "Saccco Benevolent")
+                {
+
+                }
             }
         }
     }

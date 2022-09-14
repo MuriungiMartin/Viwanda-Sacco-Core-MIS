@@ -4117,8 +4117,8 @@ Codeunit 50039 "CloudPESALivetest2"
                 //*******Create Loan *********//
                 SaccoNoSeries.Reset;
                 SaccoNoSeries.Get;
-                SaccoNoSeries.TestField(SaccoNoSeries."BOSA Loans Nos");
-                NoSeriesMgt.InitSeries(SaccoNoSeries."BOSA Loans Nos", LoansRegister."No. Series", 0D, LoansRegister."Loan  No.", LoansRegister."No. Series");
+                SaccoNoSeries.TestField(SaccoNoSeries."Emergency Loans Nos");
+                NoSeriesMgt.InitSeries(SaccoNoSeries."Emergency Loans Nos", LoansRegister."No. Series", 0D, LoansRegister."Loan  No.", LoansRegister."No. Series");
                 loanNo := LoansRegister."Loan  No.";
 
                 LoansRegister.Init;
@@ -4152,7 +4152,7 @@ Codeunit 50039 "CloudPESALivetest2"
                 if LoansRegister."Branch Code" = '' then
                     LoansRegister."Branch Code" := Members."Global Dimension 2 Code";
                 LoansRegister."Loan  No." := loanNo;
-                LoansRegister."No. Series" := SaccoNoSeries."BOSA Loans Nos";
+                LoansRegister."No. Series" := SaccoNoSeries."Emergency Loans Nos";
                 LoansRegister."Doc No Used" := docNo;
                 LoansRegister."Loan Interest Repayment" := InterestAmount;
                 LoansRegister."Loan Principle Repayment" := AmountDispursed;

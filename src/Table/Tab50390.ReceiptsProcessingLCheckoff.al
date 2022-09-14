@@ -126,21 +126,6 @@ Table 50390 "ReceiptsProcessing_L-Checkoff"
                                 Amount := 100
                             end else
                                 if "Trans Type" = "trans type"::sBenevolent then begin
-                                    //memb.CALCFIELDS(memb."KMA Withdrawable Savings");
-                                    //Amount:=memb."KMA Withdrawable Savings"*-1;
-                                    // end else if "Trans Type"="trans type":: then begin
-                                    // //memb.CALCFIELDS(memb."Children Savings");
-                                    // //Amount:=memb."Children Savings"*-1;
-                                    // end else if "Trans Type"="trans type"::"8" then begin
-                                    // //memb.CALCFIELDS(memb."CIC Fixed Deposits");
-                                    // //Amount:=memb."CIC Fixed Deposits"*-1;
-                                    // end else if "Trans Type"="trans type"::"9" then begin
-                                    //memb.CALCFIELDS(memb."UAP Premiums");
-                                    //Amount:=memb."UAP Premiums"*-1;
-
-
-
-
                                 end;
                 end;
             end;
@@ -163,6 +148,28 @@ Table 50390 "ReceiptsProcessing_L-Checkoff"
         field(30; "Entry No"; Integer)
         {
         }
+        field(31; "Sacco Shares"; Decimal)
+        {
+
+        }
+        field(32; "Sacco Total Loan"; decimal)
+        {
+
+        }
+        field(33; "Sacco Total Interest"; decimal)
+        {
+
+        }
+        field(34; "Saccco Benevolent"; decimal)
+        {
+
+        }
+        field(35; "Sacco Appl Fee"; decimal)
+        {
+
+        }
+        
+
     }
 
     keys
