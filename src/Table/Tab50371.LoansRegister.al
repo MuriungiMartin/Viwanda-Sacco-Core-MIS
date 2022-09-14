@@ -301,8 +301,8 @@ Table 50371 "Loans Register"
                     "Existing Loan" := CustomerRecord."Outstanding Balance";
                     "Account No" := CustomerRecord."FOSA Account No.";
                     "Staff No" := CustomerRecord."Payroll No";
-                    "Member Paying Type":=customerrecord."Member Paying Type";
-                    "Position In The Sacco":=CustomerRecord."Position In The Sacco";
+                    "Member Paying Type" := customerrecord."Member Paying Type";
+                    "Position In The Sacco" := CustomerRecord."Position In The Sacco";
                     "Registration Date" := CustomerRecord."Registration Date";
                     "Member Share Capital" := CustomerRecord."Shares Retained";
                     "Insider Status" := CustomerRecord."Insider Status";
@@ -3748,7 +3748,7 @@ Table 50371 "Loans Register"
         {
             DataClassification = ToBeClassified;
         }
-             field(51516290; "Position In The Sacco"; Enum "Position In the Sacco")
+        field(51516290; "Position In The Sacco"; Enum "Position In the Sacco")
         {
 
         }
