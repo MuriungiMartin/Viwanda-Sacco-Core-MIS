@@ -43,7 +43,7 @@ Codeunit 50162 "WorkflowIntegration"
 
     procedure IsChequeApprovalsWorkflowEnabled(var "Cheque register": Record Chequeregister): Boolean
     begin
-        exit(WorkflowManagement.CanExecuteWorkflow("Cheque register", SurestepWFEvents.RunWorkflowOnSendPaymentDocForApprovalCode));//todo
+        exit(WorkflowManagement.CanExecuteWorkflow("Cheque register", SurestepWFEvents.RunWorkflowOnSendChequeForApprovalCode()));//todo
     end;
 
     [IntegrationEvent(false, false)]

@@ -14,6 +14,7 @@ page 51396 ChequeCard
                 field("Cheque No"; "Cheque No")
                 {
                     ApplicationArea = All;
+                    Editable = false;
 
                 }
                 field("Bank"; "Bank")
@@ -39,6 +40,7 @@ page 51396 ChequeCard
                 field("Status"; "Status")
                 {
                     ApplicationArea = All;
+                    Editable = false;
 
                 }
 
@@ -70,6 +72,20 @@ page 51396 ChequeCard
                         .OnSendChequeForApproval(Rec);
                 end;
             }
+            action("Add Responses")
+            {
+                ApplicationArea = All;
+
+
+                trigger OnAction()
+
+                begin
+                    Codeunit.Run(Codeunit::"Custom Workflow Events");
+
+                end;
+            }
+
+
         }
     }
 

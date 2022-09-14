@@ -27,7 +27,7 @@ Codeunit 50004 "Custom Workflow Events"
         WFHandler.AddEventToLibrary(RunWorkflowOnSendChequeForApprovalCode,
                                     Database::"ChequeRegister", 'Approval of a cheque Document is Requsted.', 0, false);
         WFHandler.AddEventToLibrary(RunWorkflowOnCancelChequeApprovalRequestCode,
-                                    Database::"ChequeRegister", 'An Approval request for a Payment Document is Canceled.', 0, false);
+                                    Database::"ChequeRegister", 'An Approval request for a Cheque Document is Canceled.', 0, false);
 
 
 
@@ -798,7 +798,8 @@ Codeunit 50004 "Custom Workflow Events"
 
     procedure RunWorkflowOnSendChequeForApproval(var "Cheque register": Record ChequeRegister)
     begin
-        WorkflowManagement.HandleEvent(RunWorkflowOnSendFAccountApplicationForApprovalCode, "Cheque register");
+        WorkflowManagement.HandleEvent(RunWorkflowOnSendChequeForApprovalCode, "Cheque register");
+        
     end;
 
     [EventSubscriber(ObjectType::Codeunit, Codeunit::WorkflowIntegration, 'OnCancelChequeApprovalRequest', '', false, false)]
