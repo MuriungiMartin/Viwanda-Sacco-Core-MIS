@@ -2667,7 +2667,7 @@ Codeunit 50005 "Custom Workflow Responses"
             Database::ChequeRegister:
                 begin
                     RecRef.SetTable(ChequeRegister);
-                    ChequeRegister.Status := ChequeRegister.Status::Aproved;
+                    ChequeRegister.Status := ChequeRegister.Status::Approved;
                     ChequeRegister.Modify(true);
                     Handled := true;
                 end;

@@ -49,6 +49,7 @@ page 55000 "Home Role Center" // default role center change to comapny name
                 ApplicationArea = Basic, Suite;
                 Visible = false;
             }
+
             part(Control106; "My Job Queue")
             {
                 ApplicationArea = Basic, Suite;
@@ -496,6 +497,63 @@ page 55000 "Home Role Center" // default role center change to comapny name
             {
                 Caption = 'Cash Management';
                 ToolTip = 'Process incoming and outgoing payments. Set up bank accounts and service connections for electronic banking.  ';
+
+                group("Cheque Manangement")
+                {
+                    action(CollectedCheques)
+                    {
+                        ApplicationArea = Basic, Suite;
+                        caption = 'Collected Cheques';
+                        promoted = true;
+                        PromotedCategory = Process;
+                        RunObject = page CollectedCheques;
+                    }
+                    action(ProcessedCheques)
+                    {
+                        ApplicationArea = Basic, Suite;
+                        caption = 'Procesed Cheques';
+                        promoted = true;
+                        PromotedCategory = Process;
+                        RunObject = page ProccesedCheques;
+                    }
+                    action("OpenCheques")
+                    {
+                        ApplicationArea = Basic, Suite;
+                        Caption = 'Open Cheques';
+                        promoted = true;
+                        PromotedCategory = Process;
+                        RunObject = Page OpenCheques;
+
+                    }
+                    action("RejectedCheques")
+                    {
+                        ApplicationArea = Basic, Suite;
+                        Caption = 'Rejected Cheques';
+                        promoted = true;
+                        PromotedCategory = Process;
+                        RunObject = Page RejectedCheques;
+
+                    }
+                    action("ApprovedCheques")
+                    {
+                        ApplicationArea = Basic, Suite;
+                        Caption = 'Approved Cheques';
+                        promoted = true;
+                        PromotedCategory = Process;
+                        RunObject = Page ApprovedCheques;
+
+                    }
+                    action("PendingCheques")
+                    {
+                        ApplicationArea = Basic, Suite;
+                        Caption = 'Pending Cheques';
+                        promoted = true;
+                        PromotedCategory = Process;
+                        RunObject = Page PendingCheques;
+
+                    }
+
+                }
                 action(CashReceiptJournals)
                 {
                     ApplicationArea = Basic, Suite;
@@ -520,6 +578,7 @@ page 55000 "Home Role Center" // default role center change to comapny name
                                         Recurring = CONST(false));
                     ToolTip = 'Register payments to vendors. A payment journal is a type of general journal that is used to post outgoing payment transactions to G/L, bank, customer, vendor, employee, and fixed assets accounts. The Suggest Vendor Payments functions automatically fills the journal with payments that are due. When payments are posted, you can export the payments to a bank file for upload to your bank if your system is set up for electronic banking. You can also issue computer checks from the payment journal.';
                 }
+
                 action(Action164)
                 {
                     ApplicationArea = Basic, Suite;
@@ -596,7 +655,7 @@ page 55000 "Home Role Center" // default role center change to comapny name
                     RunObject = Page "Bank Acc. Reconciliation List";
                     ToolTip = 'Reconcile bank accounts in your system with bank statements received from your bank.';
                 }
-            } 
+            }
             group(Action84)
             {
                 Caption = 'Membership Management';
@@ -620,7 +679,7 @@ page 55000 "Home Role Center" // default role center change to comapny name
                 }
                 group(ChangeRequest)
                 {
-                    Caption = 'Chenge Request';
+                    Caption = 'Change Request';
                     action("Change Request")
                     {
                         ApplicationArea = All;

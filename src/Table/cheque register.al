@@ -60,10 +60,20 @@ table 51001 ChequeRegister
         field(9; "Status"; option)
         {
             DataClassification = ToBeClassified;
-            OptionMembers = Open,Pending,Aproved,Rejected;
+            OptionMembers = Open,Pending,Approved,Rejected;
 
 
         }
+        field(10; "Cheque Processed"; Boolean)
+        {
+            DataClassification = ToBeClassified;
+        }
+        field(11; "Cheque Collected"; Boolean)
+        {
+            DataClassification = ToBeClassified;
+        }
+
+
     }
 
     keys

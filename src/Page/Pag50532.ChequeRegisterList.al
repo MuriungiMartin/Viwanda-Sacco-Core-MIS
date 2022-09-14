@@ -5,6 +5,7 @@ Page 50532 "Cheque Register List"
     UsageCategory = Lists;
     ApplicationArea = All;
     SourceTable = "Cheques Register";
+    SourceTableView = where(Status = Filter(Pending));
 
     layout
     {
