@@ -2,15 +2,13 @@ tableextension 50003 "GenJournalineTExt" extends "Gen. Journal Line"
 {
     fields
     {
-        field(51516220; "Transaction Type"; Option)
+        field(51516220; "Transaction Type"; Enum TransactionTypesEnum)
         {
-            OptionCaption = ' ,Registration Fee,Share Capital,Interest Paid,Loan Repayment,Deposit Contribution,Insurance Contribution,Benevolent Fund,Loan,Unallocated Funds,Dividend,FOSA Account,Loan Insurance Charged,Loan Insurance Paid,Recovery Account,FOSA Shares,Additional Shares,Interest Due,Capital Reserve,Loan Penalty Charged,Loan Penalty Paid,Junior Savings,Safari Savings,Silver Savings,Insurance Retension';
-            OptionMembers = " ","Registration Fee","Share Capital","Interest Paid","Loan Repayment","Deposit Contribution","Insurance Contribution","Benevolent Fund",Loan,"Unallocated Funds",Dividend,"FOSA Account","Loan Insurance Charged","Loan Insurance Paid","Recovery Account","FOSA Shares","Additional Shares","Interest Due","Capital Reserve","Loan Penalty Charged","Loan Penalty Paid","Junior Savings","Safari Savings","Silver Savings","Insurance Retension";
-
             trigger OnValidate()
             begin
                 Description := Format("Transaction Type");
             end;
+
         }
         field(51516221; "Loan No"; Code[20])
         {
@@ -163,7 +161,7 @@ tableextension 50003 "GenJournalineTExt" extends "Gen. Journal Line"
         }
         modify("Account No.")
         {
-            TableRelation = if ("Account Type" = filter(Member)) "Members Register";
+            TableRelation = if ("Account Type" = filter(Member)) Customer;
         }
     }
     var

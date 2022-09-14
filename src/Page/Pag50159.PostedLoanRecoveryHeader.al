@@ -538,7 +538,7 @@ Page 50159 "Posted Loan Recovery Header"
                                     ObjSaccoNoSeries.Get();
                                     //Create Loan
                                     ObjNoSeries.Reset;
-                                    ObjNoSeries.SetRange(ObjNoSeries."Series Code", ObjSaccoNoSeries."BOSA Loans Nos");
+                                    ObjNoSeries.SetRange(ObjNoSeries."Series Code", ObjSaccoNoSeries."Emergency Loans Nos");
                                     if ObjNoSeries.FindSet then begin
                                         LastNoUsed := ObjNoSeries."Last No. Used";
                                         ObjLoansRec.Init;

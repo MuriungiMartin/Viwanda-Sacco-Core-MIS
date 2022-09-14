@@ -8,4 +8,7 @@ enum 50004 "Member Pay Type"
     value(1; "Individual Paying Member")
     {
     }
+    value(2; "Staff")
+    {
+    }
 }

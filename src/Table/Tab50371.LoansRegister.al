@@ -13,28 +13,19 @@ Table 50371 "Loans Register"
             begin
 
                 //SURESTEP
-                if Source = Source::BOSA then begin
+                if "Loan Product Prefix" = 'DL' then begin
 
                     if "Loan  No." <> xRec."Loan  No." then begin
                         SalesSetup.Get;
-                        NoSeriesMgt.TestManual(SalesSetup."BOSA Loans Nos");
+                        NoSeriesMgt.TestManual(SalesSetup."Development Loans Nos");
                         "No. Series" := '';
                     end;
 
                 end else
-                    if Source = Source::FOSA then begin
+                    if "Loan Product Prefix" = 'EM' then begin
                         if "Loan  No." <> xRec."Loan  No." then begin
                             SalesSetup.Get;
-                            NoSeriesMgt.TestManual(SalesSetup."FOSA Loans Nos");
-                            "No. Series" := '';
-                        end;
-
-
-                    end else begin
-
-                        if "Loan  No." <> xRec."Loan  No." then begin
-                            SalesSetup.Get;
-                            NoSeriesMgt.TestManual(SalesSetup."Micro Loans");
+                            NoSeriesMgt.TestManual(SalesSetup."Emergency Loans Nos");
                             "No. Series" := '';
                         end;
 
@@ -57,9 +48,7 @@ Table 50371 "Loans Register"
         field(3; "Loan Product Type"; Code[25])
         {
             Editable = true;
-            TableRelation = if (Source = filter(BOSA | FOSA)) "Loan Products Setup".Code where(Source = filter(BOSA | FOSA))
-            else
-            if (Source = filter(MICRO)) "Loan Products Setup".Code where(Source = filter(MICRO));
+            TableRelation = "Loan Products Setup".Code;
 
             trigger OnValidate()
             begin
@@ -106,7 +95,10 @@ Table 50371 "Loans Register"
                             Source := LoanType.Source;
                             "OneOff Loan Repayment" := LoanType."OneOff  Loan Repayment";
                             "Recovery Mode" := LoanType."Recovery Mode";
-                            "Loan Deposit Multiplier" := LoanType."Deposits Multiplier";
+                            if ("Member Paying Type" = "Member Paying Type"::"KIE Member") or ("Member Paying Type" = "Member Paying Type"::Staff) then
+                                "Loan Deposit Multiplier" := LoanType."Deposits Multiplier (KIE)"
+                            else
+                                "Loan Deposit Multiplier" := LoanType."Deposit Multiplier(IND)";
                             //"Loan Deposit Multiplier":= LoanType."Shares Multiplier";
                             //Where repayment is by employer
 
@@ -220,6 +212,8 @@ Table 50371 "Loans Register"
             if (Source = filter(" ")) Customer."No.";
 
             trigger OnValidate()
+            var
+                Dformula: text[10];
             begin
 
 
@@ -278,6 +272,11 @@ Table 50371 "Loans Register"
 
 
                 if CustomerRecord.Get("BOSA No") then begin
+                    // ObjGenSetup.Get();
+                    // Dformula := '-' + Format(ObjGenSetup."No. Of Months BeforeLoan") + 'M';
+                    // if CalcDate(Dformula, "Application Date") > CustomerRecord."Registration Date" then
+                    //     Error('Loan applicant must have completed uninterrupted six months membership.');
+
                     if CustomerRecord.Blocked = CustomerRecord.Blocked::All then
                         Error('Member is blocked from transacting ' + "Client Code");
 
@@ -328,6 +327,8 @@ Table 50371 "Loans Register"
                     "Bank Branch" := CustomerRecord."Bank Branch Code";
                     "Bank Branch Name" := CustomerRecord."Bank Branch Name";
                     "Bank Account No" := CustomerRecord."Bank Account No.";
+                    "Member Paying Type" := CustomerRecord."Member Paying Type";
+                    "Position In The Sacco" := CustomerRecord."Position In The Sacco";
                     if CustomerRecord."Account Category" = CustomerRecord."account category"::Joint then
                         "Corporate Loan" := true;
                     if CustomerRecord."Shares Retained" < GenSetUp."Retained Shares" then begin
@@ -451,10 +452,24 @@ Table 50371 "Loans Register"
             trigger OnValidate()
             begin
                 if LoanType.Get("Loan Product Type") then begin
-                    if "Requested Amount" > LoanType."Max. Loan Amount" then begin
-                        Error('You Can not request more than the Loan Allowable limit of %1', LoanType."Max. Loan Amount");
-                    end;
+                    if LoanType.Code = 'DL' then begin
+                        if "Development Loan Category" = "Development Loan Category"::"Development A" then begin
+                            if "Requested Amount" > LoanType."DevelopmentA Max Range" then begin
+                                Error('You Can not request more than the Loan Allowable limit of %1', LoanType."DevelopmentA Max Range");
+                            end;
+                        end;
+                        if "Development Loan Category" = "Development Loan Category"::"Development B" then begin
+                            if "Requested Amount" > LoanType."DevelopmentB Max Range" then begin
+                                Error('You Can not request more than the Loan Allowable limit of %1', LoanType."DevelopmentB Max Range");
+                            end;
+                        end;
+
+                    end else
+                        if "Requested Amount" > LoanType."Max. Loan Amount" then begin
+                            Error('You Can not request more than the Loan Allowable limit of %1', LoanType."Max. Loan Amount");
+                        end;
                 end;
+
                 //"Approved Amount":="Requested Amount";
                 "Net Payment to FOSA" := "Requested Amount";
 
@@ -3741,6 +3756,20 @@ Table 50371 "Loans Register"
         {
 
         }
+        field(51516292; "Development Loan Category"; Option)
+        {
+            OptionMembers = ,"Development A","Development B";
+        }
+        field(51516293; "Loan Product Prefix"; Code[10])
+        {
+            TableRelation = "Loan Products Setup".Code;
+        }
+        field(51516294; "Outstanding Processing Fee"; Decimal)
+        {
+            FieldClass = FlowField;
+            CalcFormula = sum("Cust. Ledger Entry"."Transaction Amount" where("Transaction Type" = filter("Loan Processing Fee Charged" | "Loan Processing Fee Paid"), "Loan No" = field("Loan  No."),
+            "Posting Date" = field("Date filter")));
+        }
     }
 
     keys
@@ -3839,50 +3868,42 @@ Table 50371 "Loans Register"
 
 
 
-        if Source = Source::BOSA then begin
+        if "Loan Product Prefix" = 'EM' then begin
             if "Loan  No." = '' then begin
                 SalesSetup.Get;
-                SalesSetup.TestField(SalesSetup."BOSA Loans Nos");
-                NoSeriesMgt.InitSeries(SalesSetup."BOSA Loans Nos", xRec."No. Series", 0D, "Loan  No.", "No. Series");
+                SalesSetup.TestField(SalesSetup."Emergency Loans Nos");
+                NoSeriesMgt.InitSeries(SalesSetup."Emergency Loans Nos", xRec."No. Series", 0D, "Loan  No.", "No. Series");
             end;
 
         end else
-            if Source = Source::FOSA then begin
+            if "Loan Product Prefix" = 'DL' then begin
                 if "Loan  No." = '' then begin
                     SalesSetup.Get;
-                    SalesSetup.TestField(SalesSetup."FOSA Loans Nos");
-                    NoSeriesMgt.InitSeries(SalesSetup."FOSA Loans Nos", xRec."No. Series", 0D, "Loan  No.", "No. Series");
+                    SalesSetup.TestField(SalesSetup."Development Loans Nos");
+                    NoSeriesMgt.InitSeries(SalesSetup."Development Loans Nos", xRec."No. Series", 0D, "Loan  No.", "No. Series");
                 end;
 
 
-            end else begin
 
-                if "Loan  No." = '' then begin
-                    SalesSetup.Get;
-                    SalesSetup.TestField(SalesSetup."Micro Loans");
-                    NoSeriesMgt.InitSeries(SalesSetup."Micro Loans", xRec."No. Series", 0D, "Loan  No.", "No. Series");
+                //SURESTEP
+
+                "Application Date" := Today;
+                Advice := true;
+
+
+                "Captured By" := UpperCase(UserId);
+
+
+                Users.Reset;
+                Users.SetRange(Users."User Name", "Captured By");
+                if Users.Find('-') then begin
+                    //   "Cashier Branch":=Users."Branch Code";
+                    //   "Branch Code":=Users."Branch Code";
+                    //   //MODIFY;
                 end;
 
-
+                "Mode of Disbursement" := "mode of disbursement"::EFT;
             end;
-        //SURESTEP
-
-        "Application Date" := Today;
-        Advice := true;
-
-
-        "Captured By" := UpperCase(UserId);
-
-
-        Users.Reset;
-        Users.SetRange(Users."User Name", "Captured By");
-        if Users.Find('-') then begin
-            //   "Cashier Branch":=Users."Branch Code";
-            //   "Branch Code":=Users."Branch Code";
-            //   //MODIFY;
-        end;
-
-        "Mode of Disbursement" := "mode of disbursement"::EFT;
     end;
 
     trigger OnModify()
@@ -4096,6 +4117,8 @@ Table 50371 "Loans Register"
         MemberLedgerEntry: Record "Cust. Ledger Entry";
         VarLoanDisburesementDay: Integer;
         BanksVer2: Record "Banks Ver2";
+        ObjGenSetup: record "Sacco General Set-Up";
+
 
 
     procedure CreateAnnuityLoan()
@@ -4697,19 +4720,19 @@ Table 50371 "Loans Register"
     begin
 
         //SURESTEP
-        if Source = Source::BOSA then begin
+        if "Loan Product Prefix" = 'DL' then begin
 
             if "Loan  No." <> xRec."Loan  No." then begin
                 SalesSetup.Get;
-                NoSeriesMgt.TestManual(SalesSetup."BOSA Loans Nos");
+                NoSeriesMgt.TestManual(SalesSetup."Development Loans Nos");
                 "No. Series" := '';
             end;
 
         end else
-            if Source = Source::FOSA then begin
+            if "Loan Product Prefix" = 'EM' then begin
                 if "Loan  No." <> xRec."Loan  No." then begin
                     SalesSetup.Get;
-                    NoSeriesMgt.TestManual(SalesSetup."FOSA Loans Nos");
+                    NoSeriesMgt.TestManual(SalesSetup."Emergency Loans Nos");
                     "No. Series" := '';
                 end;
 

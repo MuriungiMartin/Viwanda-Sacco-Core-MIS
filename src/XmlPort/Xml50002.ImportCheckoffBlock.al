@@ -19,8 +19,21 @@ XmlPort 50002 "Import Checkoff Block"
                 fieldelement(Member_No; "ReceiptsProcessing_L-Checkoff"."Member No")
                 {
                 }
-                fieldelement(Amount; "ReceiptsProcessing_L-Checkoff".Amount)
+                fieldelement(SharesAmount; "ReceiptsProcessing_L-Checkoff"."Sacco Shares")
                 {
+                }
+                fieldelement(APPLAmount; "ReceiptsProcessing_L-Checkoff"."Sacco Appl Fee")
+                {
+                }
+                fieldelement(TotalLoanAmount; "ReceiptsProcessing_L-Checkoff"."Sacco Total Loan")
+
+                {
+
+                }
+                fieldelement(TotalInterest; "ReceiptsProcessing_L-Checkoff"."Sacco Total Interest")
+
+                {
+
                 }
             }
         }

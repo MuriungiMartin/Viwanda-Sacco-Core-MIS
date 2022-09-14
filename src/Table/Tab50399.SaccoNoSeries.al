@@ -7,7 +7,7 @@ Table 50399 "Sacco No. Series"
         field(1; "Primary Key"; Code[10])
         {
         }
-        field(2; "FOSA Loans Nos"; Code[10])
+        field(2; "Development Loans Nos"; Code[10])
         {
             TableRelation = "No. Series";
         }
@@ -26,7 +26,7 @@ Table 50399 "Sacco No. Series"
 
             end;
         }
-        field(4; "BOSA Loans Nos"; Code[10])
+        field(4; "Emergency Loans Nos"; Code[10])
         {
             TableRelation = "No. Series";
 
