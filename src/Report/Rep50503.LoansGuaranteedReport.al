@@ -5,7 +5,7 @@ Report 50503 "Loans Guaranteed Report"
 
     dataset
     {
-        dataitem("Members Register"; Customer)
+        dataitem(Customer; Customer)
         {
             CalcFields = "Current Shares";
             RequestFilterFields = "No.", Name;
@@ -39,7 +39,7 @@ Report 50503 "Loans Guaranteed Report"
             column(UserId; UserId)
             {
             }
-            column(No_Members; "Members Register"."No.")
+            column(No_Members; Customer."No.")
             {
             }
             column(RNo; RNo)
@@ -48,19 +48,19 @@ Report 50503 "Loans Guaranteed Report"
             column(AvailableSH; AvailableSH)
             {
             }
-            column(Name_Members; "Members Register".Name)
+            column(Name_Members; Customer.Name)
             {
             }
-            column(PhoneNo_Members; "Members Register"."Phone No.")
+            column(PhoneNo_Members; Customer."Phone No.")
             {
             }
-            column(OutstandingBalance_Members; "Members Register"."Outstanding Balance")
+            column(OutstandingBalance_Members; Customer."Outstanding Balance")
             {
             }
-            column(PayrollNo_MembersRegister; "Members Register"."Payroll No")
+            column(PayrollNo_MembersRegister; Customer."Payroll No")
             {
             }
-            column(CurrentShares_MembersRegister; "Members Register"."Current Shares")
+            column(CurrentShares_MembersRegister; Customer."Current Shares")
             {
             }
             dataitem("Loans Guarantee Details"; "Loans Guarantee Details")
@@ -258,11 +258,11 @@ Report 50503 "Loans Guaranteed Report"
 
     trigger OnPostReport()
     begin
-            end;
+    end;
 
     trigger OnPreReport()
     begin
-        
+
     end;
 
     var

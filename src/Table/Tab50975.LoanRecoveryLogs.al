@@ -9,7 +9,7 @@ Table 50975 "Loan Recovery Logs"
         }
         field(2; "Member No"; Code[30])
         {
-            TableRelation = "Members Register"."No.";
+            TableRelation = Customer."No.";
         }
         field(3; "Member Name"; Code[100])
         {

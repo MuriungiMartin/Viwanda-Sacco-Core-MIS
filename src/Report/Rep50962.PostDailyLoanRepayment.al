@@ -229,7 +229,7 @@ Report 50962 "Post Daily Loan Repayment"
         VarAvailableOtherFOSAAccounts: Decimal;
         VarAmouttoRecover: Decimal;
         VarDebtCollectorFee: Decimal;
-        ObjCust: Record "Members Register";
+        ObjCust: Record Customer;
         VarAmountInArrears: Decimal;
         ObjSurestep: Codeunit "SURESTEP Factory";
         ObjDemands: Record "Default Notices Register";

@@ -257,6 +257,6 @@ Table 50415 "Checkoff Lines-Distributed"
     }
 
     var
-        Cust: Record "Members Register";
+        Cust: Record Customer;
 }
 

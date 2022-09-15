@@ -78,7 +78,7 @@ Table 50361 "Member App Nominee"
         }
         field(18; "Member No"; Code[20])
         {
-            TableRelation = "Members Register"."No.";
+            TableRelation = Customer."No.";
 
             trigger OnValidate()
             begin
@@ -111,6 +111,6 @@ Table 50361 "Member App Nominee"
         TotalAllocation: Decimal;
         Dates: Codeunit "Dates Calculation";
         DAge: DateFormula;
-        ObjCust: Record "Members Register";
+        ObjCust: Record Customer;
 }
 

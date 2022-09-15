@@ -18,7 +18,7 @@ Table 50074 "Scheduled Statements"
         }
         field(2; "Member No"; Code[30])
         {
-            TableRelation = "Members Register"."No.";
+            TableRelation = Customer."No.";
 
             trigger OnValidate()
             begin
@@ -139,7 +139,7 @@ Table 50074 "Scheduled Statements"
     var
         SalesSetup: Record "Sacco No. Series";
         NoSeriesMgt: Codeunit NoSeriesManagement;
-        ObjCust: Record "Members Register";
+        ObjCust: Record Customer;
         ObjAccount: Record Vendor;
 }
 

@@ -19,7 +19,7 @@ Table 50979 "Deposit Arrears Penalty Buffer"
         field(3; "Account No."; Code[20])
         {
             Caption = 'Customer No.';
-            TableRelation = "Members Register"."No.";
+            TableRelation = Customer."No.";
         }
         field(4; "Posting Date"; Date)
         {
@@ -107,7 +107,7 @@ Table 50979 "Deposit Arrears Penalty Buffer"
         }
         field(51516167; "Member No"; Code[30])
         {
-            TableRelation = "Members Register"."No.";
+            TableRelation = Customer."No.";
         }
     }
 

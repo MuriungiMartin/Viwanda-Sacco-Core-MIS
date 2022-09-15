@@ -3,7 +3,7 @@ Page 50524 "Customer Care Card"
 {
     Editable = false;
     PageType = Card;
-    SourceTable = "Members Register";
+    SourceTable = Customer;
 
     layout
     {
@@ -138,7 +138,7 @@ Page 50524 "Customer Care Card"
                 {
                     ApplicationArea = Basic;
                 }
-                field(Picture; Picture)
+                field(Picture; Piccture)
                 {
                     ApplicationArea = Basic;
                 }
@@ -487,7 +487,7 @@ Page 50524 "Customer Care Card"
         StatusPermissions: Record "Status Change Permision";
         Charges: Record Charges;
         Vend: Record Vendor;
-        Cust: Record "Members Register";
+        Cust: Record Customer;
         LineNo: Integer;
         UsersID: Record User;
         GeneralSetup: Record "Sacco General Set-Up";

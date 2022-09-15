@@ -59,7 +59,7 @@ Table 50967 "OverDraft Application"
         }
         field(7; "Member No"; Code[50])
         {
-            TableRelation = "Members Register"."No.";
+            TableRelation = Customer."No.";
 
             trigger OnValidate()
             begin
@@ -220,7 +220,7 @@ Table 50967 "OverDraft Application"
         NoSeriesMgt: Codeunit NoSeriesManagement;
         ObjAccount: Record Vendor;
         SFactory: Codeunit "SURESTEP Factory";
-        ObjCust: Record "Members Register";
+        ObjCust: Record Customer;
         ObjAccountTypes: Record "Account Types-Saving Products";
         VarSetupODMaturityDate: Date;
         VarActualODMaturityDate: Date;

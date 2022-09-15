@@ -18,7 +18,7 @@ Table 50496 "Customer Care Logs"
         }
         field(2; "Member No"; Code[20])
         {
-            TableRelation = "Members Register"."No.";
+            TableRelation = Customer."No.";
 
             trigger OnValidate()
             begin
@@ -211,7 +211,7 @@ Table 50496 "Customer Care Logs"
         NoSeriesMgt: Codeunit NoSeriesManagement;
         Loans: Record "Loans Register";
         GenSetUp: Record "Sacco General Set-Up";
-        Cust: Record "Members Register";
+        Cust: Record Customer;
         PVApp: Record "Member Ledger Entry";
         UserMgt: Codeunit "User Setup Management";
         PRD: Record Customer;

@@ -7,12 +7,12 @@ Report 50475 "CheckOff Advice"
 
     dataset
     {
-        dataitem("Members Register"; "Members Register")
+        dataitem(Customer; Customer)
         {
             trigger OnAfterGetRecord();
             begin
                 LoansRec.Reset;
-                LoansRec.SetRange(LoansRec."Client Code", "Members Register"."No.");
+                LoansRec.SetRange(LoansRec."Client Code", Customer."No.");
                 LoansRec.SetRange(LoansRec."Loan Product Type", 'NORMAL');
                 if LoansRec.Find('-') then begin
                     if LoansRec."Outstanding Balance" > 0 then begin
@@ -21,7 +21,7 @@ Report 50475 "CheckOff Advice"
                     end;
                 end;
                 LoansRec.Reset;
-                LoansRec.SetRange(LoansRec."Client Code", "Members Register"."No.");
+                LoansRec.SetRange(LoansRec."Client Code", Customer."No.");
                 LoansRec.SetRange(LoansRec."Loan Product Type", 'EMERGENCY');
                 if LoansRec.Find('-') then begin
                     if LoansRec."Outstanding Balance" > 0 then begin
@@ -30,7 +30,7 @@ Report 50475 "CheckOff Advice"
                     end;
                 end;
                 LoansRec.Reset;
-                LoansRec.SetRange(LoansRec."Client Code", "Members Register"."No.");
+                LoansRec.SetRange(LoansRec."Client Code", Customer."No.");
                 LoansRec.SetRange(LoansRec."Loan Product Type", 'COLLEGE');
                 if LoansRec.Find('-') then begin
                     if LoansRec."Outstanding Balance" > 0 then begin
@@ -39,7 +39,7 @@ Report 50475 "CheckOff Advice"
                     end;
                 end;
                 LoansRec.Reset;
-                LoansRec.SetRange(LoansRec."Client Code", "Members Register"."No.");
+                LoansRec.SetRange(LoansRec."Client Code", Customer."No.");
                 LoansRec.SetRange(LoansRec."Loan Product Type", 'TOP - UP');
                 if LoansRec.Find('-') then begin
                     if LoansRec."Outstanding Balance" > 0 then begin
@@ -48,7 +48,7 @@ Report 50475 "CheckOff Advice"
                     end;
                 end;
                 LoansRec.Reset;
-                LoansRec.SetRange(LoansRec."Client Code", "Members Register"."No.");
+                LoansRec.SetRange(LoansRec."Client Code", Customer."No.");
                 LoansRec.SetRange(LoansRec."Loan Product Type", 'School');
                 if LoansRec.Find('-') then begin
                     if LoansRec."Outstanding Balance" > 0 then begin

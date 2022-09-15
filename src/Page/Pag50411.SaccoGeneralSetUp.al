@@ -777,7 +777,7 @@ Page 50411 "Sacco General Set-Up"
     }
 
     var
-        Cust: Record "Members Register";
+        Cust: Record Customer;
         Loans: Record "Loans Register";
 }
 

@@ -14,7 +14,7 @@ Report 50861 "Member & Group Balances Report"
 
     dataset
     {
-        dataitem("Members Register"; "Members Register")
+        dataitem(Customer; Customer)
         {
             DataItemTableView = where("Current Shares" = filter(<> 0));
             PrintOnlyIfDetail = false;
@@ -53,46 +53,46 @@ Report 50861 "Member & Group Balances Report"
             column(UserId; UserId)
             {
             }
-            column(PersonalNo_MembersRegister; "Members Register"."Payroll No")
+            column(PersonalNo_MembersRegister; Customer."Payroll No")
             {
             }
-            column(IDNo_MembersRegister; "Members Register"."ID No.")
+            column(IDNo_MembersRegister; Customer."ID No.")
             {
             }
-            column(MobilePhoneNo_MembersRegister; "Members Register"."Mobile Phone No")
+            column(MobilePhoneNo_MembersRegister; Customer."Mobile Phone No")
             {
             }
-            column(No_MembersRegister; "Members Register"."No.")
+            column(No_MembersRegister; Customer."No.")
             {
             }
-            column(Name_MembersRegister; "Members Register".Name)
+            column(Name_MembersRegister; Customer.Name)
             {
             }
-            column(Status_MembersRegister; "Members Register".Status)
+            column(Status_MembersRegister; Customer.Status)
             {
             }
-            column(CurrentShares_MembersRegister; "Members Register"."Current Shares")
+            column(CurrentShares_MembersRegister; Customer."Current Shares")
             {
             }
-            column(SharesRetained_MembersRegister; "Members Register"."Shares Retained")
+            column(SharesRetained_MembersRegister; Customer."Shares Retained")
             {
             }
-            column(TotalBOSALoanBalance_MembersRegister; "Members Register"."Total BOSA Loan Balance")
+            column(TotalBOSALoanBalance_MembersRegister; Customer."Total BOSA Loan Balance")
             {
             }
-            column(GlobalDimension2Code_MembersRegister; "Members Register"."Global Dimension 2 Code")
+            column(GlobalDimension2Code_MembersRegister; Customer."Global Dimension 2 Code")
             {
             }
-            column(DepositsAccountNo_MembersRegister; "Members Register"."Deposits Account No")
+            column(DepositsAccountNo_MembersRegister; Customer."Deposits Account No")
             {
             }
-            column(MemberHouseGroup_MembersRegister; "Members Register"."Member House Group")
+            column(MemberHouseGroup_MembersRegister; Customer."Member House Group")
             {
             }
-            column(MemberHouseGroupName_MembersRegister; "Members Register"."Member House Group Name")
+            column(MemberHouseGroupName_MembersRegister; Customer."Member House Group Name")
             {
             }
-            column(PendingLoanApplicationAmt_MembersRegister; "Members Register"."Pending Loan Application Amt")
+            column(PendingLoanApplicationAmt_MembersRegister; Customer."Pending Loan Application Amt")
             {
             }
             column(LoanApplicationDate; LoanApplicationDate)
@@ -122,16 +122,16 @@ Report 50861 "Member & Group Balances Report"
             trigger OnAfterGetRecord();
             begin
                 EntryNo := EntryNo + 1;
-                /*"Members Register".SETFILTER("Members Register"."Date Filter",DateFilter);
-				"Members Register".CALCFIELDS("Members Register"."Current Shares");
+                /*Customer.SETFILTER(Customer."Date Filter",DateFilter);
+				Customer.CALCFIELDS(Customer."Current Shares");
 				*/
-                //DepositMultiplier:=CloudPesa.fnget("Members Register"."No.");
-                MultiplierAmount := "Members Register"."Current Shares" * DepositMultiplier;
+                //DepositMultiplier:=CloudPesa.fnget(Customer."No.");
+                MultiplierAmount := Customer."Current Shares" * DepositMultiplier;
                 LoanApplicationDate := 0D;
                 LoanProductApplied := '';
-                "Members Register".CalcFields("Members Register"."Pending Loan Application No.");
+                Customer.CalcFields(Customer."Pending Loan Application No.");
                 LoansReg.Reset;
-                LoansReg.SetRange(LoansReg."Loan  No.", "Members Register"."Pending Loan Application No.");
+                LoansReg.SetRange(LoansReg."Loan  No.", Customer."Pending Loan Application No.");
                 if LoansReg.FindSet then begin
                     LoanApplicationDate := LoansReg."Application Date";
                     LoanProductApplied := LoansReg."Loan Product Type Name";
@@ -140,7 +140,7 @@ Report 50861 "Member & Group Balances Report"
                 GroupLoans := 0;
                 GroupNetworth := 0;
                 /*CustRecord.RESET;
-				CustRecord.SETRANGE(CustRecord."Member House Group","Members Register"."Member House Group");
+				CustRecord.SETRANGE(CustRecord."Member House Group",Customer."Member House Group");
 				CustRecord.SETRANGE(CustRecord."House Group Status",CustRecord."House Group Status"::Active);
 				IF CustRecord.FINDSET THEN
 				BEGIN
@@ -229,7 +229,7 @@ Report 50861 "Member & Group Balances Report"
         ApprovalSetup: Record "Table Permission Buffer";
         LocationFilter: Code[20];
         TotalApproved: Decimal;
-        cust: Record "Members Register";
+        cust: Record Customer;
         BOSABal: Decimal;
         SuperBal: Decimal;
         LoansReg: Record "Loans Register";
@@ -257,8 +257,8 @@ Report 50861 "Member & Group Balances Report"
         Date________________________Caption_Control1102755005Lbl: label 'Date..............';
         GenSetUp: Record "Sacco General Set-Up";
         LoanApp: Record "Loans Register";
-        CustRec: Record "Members Register";
-        CustRecord: Record "Members Register";
+        CustRec: Record Customer;
+        CustRecord: Record Customer;
         TShares: Decimal;
         TLoans: Decimal;
         LoanShareRatio: Decimal;

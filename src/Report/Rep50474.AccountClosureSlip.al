@@ -14,7 +14,7 @@ Report 50474 "Account Closure Slip"
 
     dataset
     {
-        dataitem("Members Register"; Customer)
+        dataitem(Customer; Customer)
         {
             DataItemTableView = sorting("No.");
             RequestFilterFields = "No.";
@@ -37,13 +37,13 @@ Report 50474 "Account Closure Slip"
             column(Companyinfo_Address; Companyinfo.Address)
             {
             }
-            column(Members__No__; "Members Register"."No.")
+            column(Members__No__; Customer."No.")
             {
             }
-            column(Members_Name; "Members Register".Name)
+            column(Members_Name; Customer.Name)
             {
             }
-            column(Members__ID_No__; "Members Register"."ID No.")
+            column(Members__ID_No__; Customer."ID No.")
             {
             }
             column(RiskFund; RiskFund)
@@ -85,10 +85,10 @@ Report 50474 "Account Closure Slip"
             column(RiskRefund; RiskRefund)
             {
             }
-            column(Members__Payroll_Staff_No_; "Members Register"."Payroll No")
+            column(Members__Payroll_Staff_No_; Customer."Payroll No")
             {
             }
-            column(Members__Outstanding_Balance_; "Members Register"."Outstanding Balance")
+            column(Members__Outstanding_Balance_; Customer."Outstanding Balance")
             {
             }
             column(TranferFee; TranferFee)
@@ -97,55 +97,55 @@ Report 50474 "Account Closure Slip"
             column(CompanyinfoPicture; Companyinfo.Picture)
             {
             }
-            column(Current_Shares___1; "Members Register"."Current Shares")
+            column(Current_Shares___1; Customer."Current Shares")
             {
             }
-            column(Insurance_Fund___1; "Members Register"."Insurance Fund")
+            column(Insurance_Fund___1; Customer."Insurance Fund")
             {
             }
-            column(RiskFund_MembersRegister; "Members Register"."Risk Fund")
+            column(RiskFund_MembersRegister; Customer."Risk Fund")
             {
             }
-            column(Members__Accrued_Interest_; "Members Register"."Accrued Interest")
+            column(Members__Accrued_Interest_; Customer."Accrued Interest")
             {
             }
-            column(OutstandingInterest_Members; "Members Register"."Outstanding Interest")
+            column(OutstandingInterest_Members; Customer."Outstanding Interest")
             {
             }
-            column(Members__Current_Shares_; "Members Register"."Current Shares")
+            column(Members__Current_Shares_; Customer."Current Shares")
             {
             }
             column(UnpaidDividends; UnpaidDividends)
             {
             }
-            column(Members__Insurance_Fund_; "Members Register"."Insurance Fund")
+            column(Members__Insurance_Fund_; Customer."Insurance Fund")
             {
             }
             column(NetPayable; NetPayable)
             {
             }
-            column(Members__Current_Investment_Total_; "Members Register"."Current Investment Total")
+            column(Members__Current_Investment_Total_; Customer."Current Investment Total")
             {
             }
-            column(Members__Dividend_Amount_; "Members Register"."Dividend Amount")
+            column(Members__Dividend_Amount_; Customer."Dividend Amount")
             {
             }
             column(FWithdrawal; FWithdrawal)
             {
             }
-            column(Members_Members__Batch_No__; "Members Register"."Batch No.")
+            column(Members_Members__Batch_No__; Customer."Batch No.")
             {
             }
-            column(Members_Members_Status; "Members Register".Status)
+            column(Members_Members_Status; Customer.Status)
             {
             }
             column(FOSAInterest; FOSAInterest)
             {
             }
-            column(Members__FOSA_Outstanding_Balance_; "Members Register"."FOSA Outstanding Balance")
+            column(Members__FOSA_Outstanding_Balance_; Customer."FOSA Outstanding Balance")
             {
             }
-            column(Members_Members__Shares_Retained_; "Members Register"."Shares Retained")
+            column(Members_Members__Shares_Retained_; Customer."Shares Retained")
             {
             }
             column(FExpenses; FExpenses)
@@ -339,7 +339,7 @@ Report 50474 "Account Closure Slip"
                         Closure."Risk Fund Arrears" := NetPayable;
                     end;
                 Closure.Modify;
-                /*IF "Members Register".GET(Withdrawal."Member No.") THEN BEGIN
+                /*IF Customer.GET(Withdrawal."Member No.") THEN BEGIN
 				Withdrawal."Net Payable to FOSA":=NetPayable;
 				  Withdrawal.MODIFY;
 				END;*/

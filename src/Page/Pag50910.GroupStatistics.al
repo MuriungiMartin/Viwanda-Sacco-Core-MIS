@@ -2,7 +2,7 @@
 Page 50910 "Group Statistics"
 {
     PageType = Card;
-    SourceTable = "Members Register";
+    SourceTable = Customer;
 
     layout
     {

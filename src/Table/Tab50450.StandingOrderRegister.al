@@ -47,7 +47,7 @@ Table 50450 "Standing Order Register"
         }
         field(8; "BOSA Account No."; Code[20])
         {
-            TableRelation = "Members Register"."No.";
+            TableRelation = Customer."No.";
         }
         field(9; "Effective/Start Date"; Date)
         {

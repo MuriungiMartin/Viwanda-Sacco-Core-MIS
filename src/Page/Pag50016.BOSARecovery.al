@@ -575,12 +575,12 @@ Page 50016 "BOSA Recovery"
         ObjVendors: Record Vendor;
         AvailableBal: Decimal;
         ObjAccTypes: Record "Account Types-Saving Products";
-        ObjMember: Record "Members Register";
+        ObjMember: Record Customer;
         VarMemberNoEditable: Boolean;
         ObjLoans: Record "Loans Register";
         window: Dialog;
         SourceLoanVisible: Boolean;
-        cust: Record "Members Register";
+        cust: Record Customer;
 
     local procedure AddRecordRestriction()
     begin

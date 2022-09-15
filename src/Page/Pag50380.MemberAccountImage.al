@@ -2,13 +2,13 @@
 Page 50380 "Member Account Image"
 {
     PageType = Card;
-    SourceTable = "Members Register";
+    SourceTable = Customer;
 
     layout
     {
         area(content)
         {
-            field(Picture; Picture)
+            field(Picture; Piccture)
             {
                 ApplicationArea = Basic;
             }

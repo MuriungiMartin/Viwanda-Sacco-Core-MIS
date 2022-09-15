@@ -6,7 +6,7 @@ Report 50506 "Transactions HighRisk Accounts"
 
     dataset
     {
-        dataitem("Members Register"; "Members Register")
+        dataitem(Customer; Customer)
         {
             DataItemTableView = where("Member Risk Level" = const("High Risk"));
 
@@ -37,16 +37,16 @@ Report 50506 "Transactions HighRisk Accounts"
             column(SN; SN)
             {
             }
-            column(MemberRiskLevel_MembersRegister; "Members Register"."Member Risk Level")
+            column(MemberRiskLevel_MembersRegister; Customer."Member Risk Level")
             {
             }
-            column(Name_MembersRegister; "Members Register".Name)
+            column(Name_MembersRegister; Customer.Name)
             {
             }
-            column(No_MembersRegister; "Members Register"."No.")
+            column(No_MembersRegister; Customer."No.")
             {
             }
-            column(CreatedBy_MembersRegister; "Members Register"."Created By")
+            column(CreatedBy_MembersRegister; Customer."Created By")
             {
             }
             dataitem(Transactions; Transactions)

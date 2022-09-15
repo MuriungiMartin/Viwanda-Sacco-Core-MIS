@@ -29,7 +29,7 @@ Table 50915 "Member House Groups"
         }
         field(5; "Group Leader"; Code[20])
         {
-            TableRelation = "Members Register"."No." where("Member House Group" = field("Cell Group Code"));
+            TableRelation = Customer."No." where("Member House Group" = field("Cell Group Code"));
 
             trigger OnValidate()
             begin
@@ -49,7 +49,7 @@ Table 50915 "Member House Groups"
         }
         field(7; "Assistant group Leader"; Code[20])
         {
-            TableRelation = "Members Register"."No." where("Member House Group" = field("Cell Group Code"));
+            TableRelation = Customer."No." where("Member House Group" = field("Cell Group Code"));
 
             trigger OnValidate()
             begin
@@ -135,7 +135,7 @@ Table 50915 "Member House Groups"
         }
         field(19; "No of Members"; Integer)
         {
-            CalcFormula = count("Members Register" where("Member House Group" = field("Cell Group Code")));
+            CalcFormula = count(Customer where("Member House Group" = field("Cell Group Code")));
             FieldClass = FlowField;
         }
         field(51516229; "Credit Officer"; Code[30])
@@ -188,7 +188,7 @@ Table 50915 "Member House Groups"
     var
         SalesSetup: Record "Sacco No. Series";
         NoSeriesMgt: Codeunit NoSeriesManagement;
-        ObjCust: Record "Members Register";
+        ObjCust: Record Customer;
         VarTotalMemberDeposits: Decimal;
         VarTotalLoans: Decimal;
 }

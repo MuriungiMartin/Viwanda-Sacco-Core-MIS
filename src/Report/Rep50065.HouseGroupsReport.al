@@ -258,7 +258,7 @@ Report 50065 "House Groups Report"
         Comment: label '....................';
         Company: Record "Company Information";
         EntryNo: Integer;
-        ObjCust: Record "Members Register";
+        ObjCust: Record Customer;
         VarReportDate: Date;
         VarReportDateFilter: Text;
         VarGroupDeposit: Decimal;

@@ -83,7 +83,7 @@ Report 50611 "Update Accounts"
 
     var
         ObjAccountTypes: Record "Account Types-Saving Products";
-        ObjCust: Record "Members Register";
+        ObjCust: Record Customer;
 
     var
 }

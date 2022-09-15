@@ -29,7 +29,7 @@ Table 50602 "Funds Transaction Types"
             else
             if ("Account Type" = const(Vendor)) Vendor
             else
-            if ("Account Type" = const(Member)) "Members Register";
+            if ("Account Type" = const(Member)) Customer;
 
             trigger OnValidate()
             begin
@@ -77,7 +77,7 @@ Table 50602 "Funds Transaction Types"
             else
             if ("Account Type" = const(Vendor)) "Vendor Posting Group"
             else
-            if ("Account Type" = const(Member)) "Members Register"
+            if ("Account Type" = const(Member)) Customer
             else
             if ("Account Type" = const("Bank Account")) "Bank Account Posting Group"
             else

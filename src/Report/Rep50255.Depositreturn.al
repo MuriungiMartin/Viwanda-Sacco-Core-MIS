@@ -166,7 +166,7 @@ Report 50255 "Deposit return"
     end;
 
     var
-        MemberRegister: Record "Members Register";
+        MemberRegister: Record Customer;
         Shares: Decimal;
         Count1: Integer;
         Balance: Decimal;

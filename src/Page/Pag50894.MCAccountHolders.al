@@ -7,7 +7,7 @@ Page 50894 "MC Account Holders"
     UsageCategory = Lists;
     ApplicationArea = All;
     PromotedActionCategories = 'New,Process,Reports,Approval,Budgetary Control,Cancellation,Category7_caption,Category8_caption,Category9_caption,Category10_caption';
-    SourceTable = "Members Register";
+    SourceTable = Customer;
     SourceTableView = where("Customer Posting Group" = const('MICRO'),
                             "Global Dimension 1 Code" = const('MICRO'),
                             "BRID No" = const('NO'));

@@ -479,7 +479,7 @@ Report 50059 "Loans Portfolio Listing"
         CreditComSign3: label 'Signature.................';
         Comment: label '....................';
         Company: Record "Company Information";
-        ObjCust: Record "Members Register";
+        ObjCust: Record Customer;
         ObjAccount: Record Vendor;
         VarMemberDeposits: Decimal;
         VarLSABalance: Decimal;

@@ -357,7 +357,7 @@ Report 50487 "Loans Register - Board(FOSA)"
         CreditComSign3: label 'Signature..................................';
         Comment: label '....................';
         RPeriod: Decimal;
-        Cust: Record "Members Register";
+        Cust: Record Customer;
         EmpCode: Code[30];
         Intcount: Integer;
         LoanType: Record "Loan Products Setup";

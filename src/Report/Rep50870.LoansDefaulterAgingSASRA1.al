@@ -381,7 +381,7 @@ Report 50870 "Loans Defaulter Aging - SASRA1"
         Over3MonthC: Integer;
         NoLoans: Integer;
         PhoneNo: Text[30];
-        Cust: Record "Members Register";
+        Cust: Record Customer;
         "StaffNo.": Text[30];
         Deposits: Decimal;
         GrandTotal: Decimal;

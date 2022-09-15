@@ -385,7 +385,7 @@ Table 50417 "Data Sheet Main"
     var
         Month: Integer;
         StatusPermissions: Record "Status Change Permision";
-        Cust: Record "Members Register";
+        Cust: Record Customer;
         PTEN: Code[20];
         Date2: Date;
 }

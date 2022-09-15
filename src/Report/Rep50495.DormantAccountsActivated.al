@@ -74,14 +74,14 @@ Report 50495 "Dormant Accounts Activated"
             column(VarDormancyDate; Format(VarDormancyDate, 0, '<Day,2> <Month Text,3> <Year4>'))
             {
             }
-            dataitem("Members Register"; "Members Register")
+            dataitem(Customer; Customer)
             {
                 DataItemLink = "No." = field("Account No");
 
-                column(ComputerName_MembersRegister; "Members Register"."Computer Name")
+                column(ComputerName_MembersRegister; Customer."Computer Name")
                 {
                 }
-                column(StatusChangeDate_MembersRegister; "Members Register"."Status Change Date")
+                column(StatusChangeDate_MembersRegister; Customer."Status Change Date")
                 {
                 }
             }

@@ -21,7 +21,7 @@ Table 50958 "CRB Check Charge"
         field(2; "Member No"; Code[20])
         {
             Editable = false;
-            TableRelation = "Members Register"."No.";
+            TableRelation = Customer."No.";
 
             trigger OnValidate()
             begin
@@ -120,7 +120,7 @@ Table 50958 "CRB Check Charge"
         SalesSetup: Record "Sacco No. Series";
         NoSeriesMgt: Codeunit NoSeriesManagement;
         ObjAccount: Record Vendor;
-        ObjCust: Record "Members Register";
+        ObjCust: Record Customer;
         ObjLoans: Record "Loans Register";
         ObjSurestep: Codeunit "SURESTEP Factory";
         VarAmountInArrears: Decimal;

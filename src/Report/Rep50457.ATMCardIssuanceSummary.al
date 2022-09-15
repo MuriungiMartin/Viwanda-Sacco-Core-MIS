@@ -298,7 +298,7 @@ Report 50457 "ATM Card Issuance Summary"
         FORM_4CaptionLbl: label 'FORM 4';
         SASRA_2_004CaptionLbl: label 'SASRA 2/004';
         R__46_CaptionLbl: label 'R.(46)';
-        ObjMembers: Record "Members Register";
+        ObjMembers: Record Customer;
         VarMonth1DateFilter: Text;
         VarMonth2DateFilter: Text;
         VarMonth3DateFilter: Text;

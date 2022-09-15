@@ -14,7 +14,7 @@ Report 50419 "Generate Dormant A|Cs"
 
     dataset
     {
-        dataitem(Customer; "Members Register")
+        dataitem(Customer; Customer)
         {
             DataItemTableView = sorting("No.") where("Customer Type" = const(Member), "Current Shares" = filter(0));
             RequestFilterFields = "No.";
@@ -177,7 +177,7 @@ Report 50419 "Generate Dormant A|Cs"
         SN: Integer;
         Company: Record "Company Information";
         GenSetup: Record "Sacco General Set-Up";
-        Cust: Record "Members Register";
+        Cust: Record Customer;
         AsAt: Date;
         DateFilter: Text[30];
         DormancyDate: Date;

@@ -17,7 +17,7 @@ Table 50407 "BOSA TransferS Schedule"
             else
             if ("Source Type" = filter("G/L ACCOUNT")) "G/L Account"."No."
             else
-            if ("Source Type" = filter(MEMBER)) "Members Register"."No.";
+            if ("Source Type" = filter(MEMBER)) Customer."No.";
 
             trigger OnValidate()
             begin
@@ -87,7 +87,7 @@ Table 50407 "BOSA TransferS Schedule"
             else
             if ("Destination Account Type" = const("G/L ACCOUNT")) "G/L Account"."No."
             else
-            if ("Destination Account Type" = const(MEMBER)) "Members Register"."No.";
+            if ("Destination Account Type" = const(MEMBER)) Customer."No.";
 
             trigger OnValidate()
             begin
@@ -249,11 +249,11 @@ Table 50407 "BOSA TransferS Schedule"
     end;
 
     var
-        Cust: Record "Members Register";
+        Cust: Record Customer;
         Vend: Record Vendor;
         Bank: Record "Bank Account";
         Bosa: Record "BOSA Transfers";
         "G/L": Record "G/L Account";
-        memb: Record "Members Register";
+        memb: Record Customer;
 }
 

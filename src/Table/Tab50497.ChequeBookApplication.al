@@ -234,7 +234,7 @@ Table 50497 "Cheque Book Application"
         }
         field(68034; "Member No"; Code[30])
         {
-            CalcFormula = lookup("Members Register"."BOSA Account No." where("ID No." = field("ID No.")));
+            CalcFormula = lookup(Customer."BOSA Account No." where("ID No." = field("ID No.")));
             FieldClass = FlowField;
         }
     }

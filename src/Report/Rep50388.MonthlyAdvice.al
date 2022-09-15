@@ -14,7 +14,7 @@ Report 50388 "Monthly Advice"
 
     dataset
     {
-        dataitem("Members Register"; "Members Register")
+        dataitem(Customer; Customer)
         {
             DataItemTableView = sorting("No.") where("Current Shares" = filter(< 0), "Outstanding Balance" = filter(0));
             PrintOnlyIfDetail = false;
@@ -46,19 +46,19 @@ Report 50388 "Monthly Advice"
             column(UserId; UserId)
             {
             }
-            column(Member_No; "Members Register"."No.")
+            column(Member_No; Customer."No.")
             {
             }
-            column(Staff_No; "Members Register"."Payroll No")
+            column(Staff_No; Customer."Payroll No")
             {
             }
-            column(Member_Name; "Members Register".Name)
+            column(Member_Name; Customer.Name)
             {
             }
-            column(Risk_Fund; "Members Register"."Risk Fund")
+            column(Risk_Fund; Customer."Risk Fund")
             {
             }
-            column(Shares_Deduction; "Members Register"."Monthly Contribution")
+            column(Shares_Deduction; Customer."Monthly Contribution")
             {
             }
             column(TotalLoanDeductions; TotalLoanDeductions)
@@ -67,13 +67,13 @@ Report 50388 "Monthly Advice"
             column(TotalDeductions; TotalDeductions)
             {
             }
-            column(Outstanding_Bal; "Members Register"."Outstanding Balance")
+            column(Outstanding_Bal; Customer."Outstanding Balance")
             {
             }
-            column(COMPPIC; "Members Register".Picture)
+            column(COMPPIC; Customer.Piccture)
             {
             }
-            column(NAME1; "Members Register".Name)
+            column(NAME1; Customer.Name)
             {
             }
             trigger OnAfterGetRecord();
@@ -213,7 +213,7 @@ Report 50388 "Monthly Advice"
         ApprovalSetup: Record "Table Permission Buffer";
         LocationFilter: Code[20];
         TotalApproved: Decimal;
-        cust: Record "Members Register";
+        cust: Record Customer;
         BOSABal: Decimal;
         SuperBal: Decimal;
         LAppl: Record "HR Transport Requisition Pass";
@@ -241,8 +241,8 @@ Report 50388 "Monthly Advice"
         Date________________________Caption_Control1102755005Lbl: label 'Date........................';
         GenSetUp: Record "HR Leave Planner Lines";
         LoanApp: Record "HR Transport Requisition Pass";
-        CustRec: Record "Members Register";
-        CustRecord: Record "Members Register";
+        CustRec: Record Customer;
+        CustRecord: Record Customer;
         TShares: Decimal;
         TLoans: Decimal;
         LoanShareRatio: Decimal;

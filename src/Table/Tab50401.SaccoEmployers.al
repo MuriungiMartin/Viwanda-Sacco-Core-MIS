@@ -30,14 +30,14 @@ Table 50401 "Sacco Employers"
         }
         field(5; "No. of Members"; Integer)
         {
-            CalcFormula = count("Members Register" where(Status = filter(Active | Dormant | Deceased | "Awaiting Exit" | Exited),
+            CalcFormula = count(Customer where(Status = filter(Active | Dormant | Deceased | "Awaiting Exit" | Exited),
                                                           "Employer Code" = field(Code),
                                                           "Customer Posting Group" = const('MEMBER')));
             FieldClass = FlowField;
         }
         field(6; Male; Integer)
         {
-            CalcFormula = count("Members Register" where(Status = filter(Active | Dormant | Deceased | "Awaiting Exit" | Exited),
+            CalcFormula = count(Customer where(Status = filter(Active | Dormant | Deceased | "Awaiting Exit" | Exited),
                                                           "Employer Code" = field(Code),
                                                           "Customer Posting Group" = const('MEMBER'),
                                                           Gender = const(" ")));
@@ -46,7 +46,7 @@ Table 50401 "Sacco Employers"
         }
         field(7; Female; Integer)
         {
-            CalcFormula = count("Members Register" where(Status = filter(Active | Dormant | Deceased | "Awaiting Exit" | Exited),
+            CalcFormula = count(Customer where(Status = filter(Active | Dormant | Deceased | "Awaiting Exit" | Exited),
                                                           "Employer Code" = field(Code),
                                                           "Customer Posting Group" = const('MEMBER'),
                                                           Gender = const(Male)));
@@ -61,7 +61,7 @@ Table 50401 "Sacco Employers"
         }
         field(10; "Active Members"; Integer)
         {
-            CalcFormula = count("Members Register" where(Status = filter(Active),
+            CalcFormula = count(Customer where(Status = filter(Active),
                                                           "Employer Code" = field(Code),
                                                           "Customer Posting Group" = const('MEMBER')));
             Editable = false;
@@ -69,7 +69,7 @@ Table 50401 "Sacco Employers"
         }
         field(11; "Dormant Members"; Integer)
         {
-            CalcFormula = count("Members Register" where(Status = filter(Dormant),
+            CalcFormula = count(Customer where(Status = filter(Dormant),
                                                           "Employer Code" = field(Code),
                                                           "Customer Posting Group" = const('MEMBER')));
             Editable = false;
@@ -77,7 +77,7 @@ Table 50401 "Sacco Employers"
         }
         field(12; Withdrawn; Integer)
         {
-            CalcFormula = count("Members Register" where(Status = filter(Exited),
+            CalcFormula = count(Customer where(Status = filter(Exited),
                                                           "Employer Code" = field(Code),
                                                           "Customer Posting Group" = const('MEMBER')));
             Editable = false;
@@ -85,7 +85,7 @@ Table 50401 "Sacco Employers"
         }
         field(13; Deceased; Integer)
         {
-            CalcFormula = count("Members Register" where(Status = filter(Deceased),
+            CalcFormula = count(Customer where(Status = filter(Deceased),
                                                           "Employer Code" = field(Code),
                                                           "Customer Posting Group" = const('MEMBER')));
             Editable = false;

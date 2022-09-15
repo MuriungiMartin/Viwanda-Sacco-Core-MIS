@@ -308,7 +308,7 @@ Report 50423 "Recover Defaulted Loan -Guaran"
         Vend: Record Vendor;
         LoanGuar: Record "Loans Guarantee Details";
         Lbal: Decimal;
-        cust: Record "Members Register";
+        cust: Record Customer;
         GenJournalLine: Record "Gen. Journal Line";
         GenLedgerSetup: Record "General Ledger Setup";
         Hesabu: Integer;

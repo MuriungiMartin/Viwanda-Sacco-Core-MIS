@@ -9,7 +9,7 @@ Table 50560 "Member Agent Details"
         field(1; "Account No"; Code[20])
         {
             NotBlank = true;
-            TableRelation = "Members Register"."No.";
+            TableRelation = Customer."No.";
         }
         field(2; Names; Text[50])
         {
@@ -43,20 +43,20 @@ Table 50560 "Member Agent Details"
         }
         field(12; "BOSA No."; Code[30])
         {
-            TableRelation = "Members Register";
+            TableRelation = Customer;
 
             trigger OnValidate()
             begin
                 CUST.Reset;
                 CUST.SetRange(CUST."No.", "BOSA No.");
                 if CUST.Find('-') then begin
-                    //CUST.CALCFIELDS(CUST.Picture,CUST.Signature);
+                    //CUST.CALCFIELDS(Cust.Piccture,CUST.Signature);
                     Names := CUST.Name;
                     "Mobile No." := CUST."Mobile Phone No";
                     "Date Of Birth" := CUST."Date of Birth";
                     "Staff/Payroll" := CUST."Payroll No";
                     "ID No." := CUST."ID No.";
-                    //Picture:=CUST.Picture;
+                    //Picture:=Cust.Piccture;
                     //Signature:=CUST.Signature;
                 end;
             end;
@@ -148,7 +148,7 @@ Table 50560 "Member Agent Details"
     end;
 
     var
-        CUST: Record "Members Register";
+        CUST: Record Customer;
         NoSeriesmgt: Codeunit NoSeriesManagement;
         SalesSetup: Record "Sacco No. Series";
 }

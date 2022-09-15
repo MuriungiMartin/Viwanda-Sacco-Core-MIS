@@ -220,5 +220,5 @@ tableextension 50003 "GenJournalineTExt" extends "Gen. Journal Line"
         SalespersonPurchPrivacyBlockErr: label 'Privacy Blocked must not be true for Salesperson / Purchaser %1.', Comment = '%1 = salesperson / purchaser code.';
         BlockedErr: label 'The Blocked field must not be %1 for %2 %3.', Comment = '%1=Blocked field value,%2=Account Type,%3=Account No.';
         BlockedEmplErr: label 'You cannot export file because employee %1 is blocked due to privacy.', Comment = '%1 = Employee no. ';
-        Membr: Record "Members Register";
+        Membr: Record Customer;
 }

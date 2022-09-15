@@ -59,7 +59,7 @@ Table 50357 "Status Update"
     }
 
     var
-        Memb: Record "Members Register";
+        Memb: Record Customer;
         SUpdate: Record "Status Update";
 }
 

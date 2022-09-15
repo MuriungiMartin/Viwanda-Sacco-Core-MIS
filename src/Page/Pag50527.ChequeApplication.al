@@ -549,7 +549,7 @@ Page 50527 "Cheque Application"
         EndingChequeNoEditable: Boolean;
         AccountNoEditable: Boolean;
         ChequeBookTypeEditable: Boolean;
-        ObjMember: Record "Members Register";
+        ObjMember: Record Customer;
         SMSMessage: Text;
         CloudPesa: Codeunit CloudPESALivetest;
         WkFlwIntegration: Codeunit WorkflowIntegration;

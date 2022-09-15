@@ -7,7 +7,7 @@ Page 50889 "MC Group List-Members"
     PageType = List;
     UsageCategory = Lists;
     ApplicationArea = All;
-    SourceTable = "Members Register";
+    SourceTable = Customer;
     SourceTableView = where("Customer Posting Group" = const('MICRO'),
                             "Group Account" = filter(true));
 
@@ -1162,7 +1162,7 @@ Page 50889 "MC Group List-Members"
     }
 
     var
-        Cust: Record "Members Register";
+        Cust: Record Customer;
         GeneralSetup: Record "Sacco General Set-Up";
         Gnljnline: Record "Gen. Journal Line";
         TotalRecovered: Decimal;
@@ -1188,7 +1188,7 @@ Page 50889 "MC Group List-Members"
 
     procedure GetSelectionFilter(): Code[80]
     var
-        Cust: Record "Members Register";
+        Cust: Record Customer;
         FirstCust: Code[30];
         LastCust: Code[30];
         SelectionFilter: Code[250];
@@ -1235,7 +1235,7 @@ Page 50889 "MC Group List-Members"
     end;
 
 
-    procedure SetSelection(var Cust: Record "Members Register")
+    procedure SetSelection(var Cust: Record Customer)
     begin
         //CurrPage.SETSELECTIONFILTER(Cust);
     end;

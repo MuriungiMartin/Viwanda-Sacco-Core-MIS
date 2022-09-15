@@ -254,7 +254,7 @@ Report 50405 "Loans Commission Report"
         CreditComSign3: label 'Signature..................................';
         Comment: label '....................';
         RPeriod: Decimal;
-        Cust: Record "Members Register";
+        Cust: Record Customer;
         EmpCode: Code[30];
         Intcount: Integer;
         Company: Record "Company Information";

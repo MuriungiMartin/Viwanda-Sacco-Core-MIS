@@ -14,7 +14,7 @@ Report 50026 "Member Bio/Economic Data"
 
     dataset
     {
-        dataitem("Members Register"; "Members Register")
+        dataitem(Customer; Customer)
         {
             CalcFields = "Current Shares";
             PrintOnlyIfDetail = false;
@@ -53,106 +53,106 @@ Report 50026 "Member Bio/Economic Data"
             column(UserId; UserId)
             {
             }
-            column(PersonalNo_MembersRegister; "Members Register"."Payroll No")
+            column(PersonalNo_MembersRegister; Customer."Payroll No")
             {
             }
-            column(IDNo_MembersRegister; "Members Register"."ID No.")
+            column(IDNo_MembersRegister; Customer."ID No.")
             {
             }
-            column(MobilePhoneNo_MembersRegister; "Members Register"."Mobile Phone No")
+            column(MobilePhoneNo_MembersRegister; Customer."Mobile Phone No")
             {
             }
-            column(No_MembersRegister; "Members Register"."No.")
+            column(No_MembersRegister; Customer."No.")
             {
             }
-            column(Name_MembersRegister; "Members Register".Name)
+            column(Name_MembersRegister; Customer.Name)
             {
             }
-            column(Status_MembersRegister; "Members Register".Status)
+            column(Status_MembersRegister; Customer.Status)
             {
             }
-            column(GlobalDimension2Code_MembersRegister; "Members Register"."Global Dimension 2 Code")
+            column(GlobalDimension2Code_MembersRegister; Customer."Global Dimension 2 Code")
             {
             }
-            column(EmployerCode_MembersRegister; "Members Register"."Employer Code")
+            column(EmployerCode_MembersRegister; Customer."Employer Code")
             {
             }
-            column(DateofBirth_MembersRegister; "Members Register"."Date of Birth")
+            column(DateofBirth_MembersRegister; Customer."Date of Birth")
             {
             }
-            column(EMail_MembersRegister; "Members Register"."E-Mail")
+            column(EMail_MembersRegister; Customer."E-Mail")
             {
             }
-            column(EmailIndemnified_MembersRegister; "Members Register"."Email Indemnified")
+            column(EmailIndemnified_MembersRegister; Customer."Email Indemnified")
             {
             }
-            column(MembersResidence_MembersRegister; "Members Register"."Member's Residence")
+            column(MembersResidence_MembersRegister; Customer."Member's Residence")
             {
             }
-            column(CountryRegionCode_MembersRegister; "Members Register"."Country/Region Code")
+            column(CountryRegionCode_MembersRegister; Customer."Country/Region Code")
             {
             }
-            column(Address_MembersRegister; "Members Register".Address)
+            column(Address_MembersRegister; Customer.Address)
             {
             }
-            column(Pin_MembersRegister; "Members Register".Pin)
+            column(Pin_MembersRegister; Customer.Pin)
             {
             }
-            column(MaritalStatus_MembersRegister; "Members Register"."Marital Status")
+            column(MaritalStatus_MembersRegister; Customer."Marital Status")
             {
             }
             column(NoofNextofKin_MembersRegister; NOKDetails)
             {
             }
-            column(BusinessName_MembersRegister; "Members Register"."Business Name")
+            column(BusinessName_MembersRegister; Customer."Business Name")
             {
             }
-            column(Gender_MembersRegister; "Members Register".Gender)
+            column(Gender_MembersRegister; Customer.Gender)
             {
             }
-            column(NatureOfBusiness_MembersRegister; "Members Register"."Nature Of Business")
+            column(NatureOfBusiness_MembersRegister; Customer."Nature Of Business")
             {
             }
             column(EntryNo; EntryNo)
             {
             }
-            column(ExpectedMonthlyIncome_MembersRegister; "Members Register"."Expected Monthly Income")
+            column(ExpectedMonthlyIncome_MembersRegister; Customer."Expected Monthly Income")
             {
             }
-            column(ExpectedMonthlyIncomeAmount_MembersRegister; "Members Register"."Expected Monthly Income Amount")
+            column(ExpectedMonthlyIncomeAmount_MembersRegister; Customer."Expected Monthly Income Amount")
             {
             }
-            column(PositionHeld_MembersRegister; "Members Register"."Position Held")
+            column(PositionHeld_MembersRegister; Customer."Position Held")
             {
             }
-            column(DateofEmployment_MembersRegister; "Members Register"."Date of Employment")
+            column(DateofEmployment_MembersRegister; Customer."Date of Employment")
             {
             }
-            column(TermsOfEmployment_MembersRegister; "Members Register"."Terms Of Employment")
+            column(TermsOfEmployment_MembersRegister; Customer."Terms Of Employment")
             {
             }
-            column(EmployerName_MembersRegister; "Members Register"."Employer Name")
+            column(EmployerName_MembersRegister; Customer."Employer Name")
             {
             }
-            column(EmployerAddress_MembersRegister; "Members Register"."Employer Address")
+            column(EmployerAddress_MembersRegister; Customer."Employer Address")
             {
             }
-            column(YearofCommence_MembersRegister; "Members Register"."Year of Commence")
+            column(YearofCommence_MembersRegister; Customer."Year of Commence")
             {
             }
-            column(PhysicalBusinessLocation_MembersRegister; "Members Register"."Physical Business Location")
+            column(PhysicalBusinessLocation_MembersRegister; Customer."Physical Business Location")
             {
             }
-            column(Industry_MembersRegister; "Members Register".Industry)
+            column(Industry_MembersRegister; Customer.Industry)
             {
             }
-            column(RegistrationDate_MembersRegister; "Members Register"."Registration Date")
+            column(RegistrationDate_MembersRegister; Customer."Registration Date")
             {
             }
-            column(CreatedBy_MembersRegister; "Members Register"."Created By")
+            column(CreatedBy_MembersRegister; Customer."Created By")
             {
             }
-            column(CertificateNo_MembersRegister; "Members Register"."Certificate No")
+            column(CertificateNo_MembersRegister; Customer."Certificate No")
             {
             }
             dataitem("Members Next of Kin"; "Members Next of Kin")
@@ -168,7 +168,7 @@ Report 50026 "Member Bio/Economic Data"
                 EntryNo := EntryNo + 1;
                 NOKDetails := '';
                 ObjNOK.Reset;
-                ObjNOK.SetRange(ObjNOK."Member No", "Members Register"."No.");
+                ObjNOK.SetRange(ObjNOK."Member No", Customer."No.");
                 if ObjNOK.FindSet then begin
                     repeat
                         NOKDetails := NOKDetails + ObjNOK.Name + ' | ';
@@ -244,7 +244,7 @@ Report 50026 "Member Bio/Economic Data"
         ApprovalSetup: Record "Table Permission Buffer";
         LocationFilter: Code[20];
         TotalApproved: Decimal;
-        cust: Record "Members Register";
+        cust: Record Customer;
         BOSABal: Decimal;
         SuperBal: Decimal;
         LAppl: Record "Loans Register";
@@ -272,8 +272,8 @@ Report 50026 "Member Bio/Economic Data"
         Date________________________Caption_Control1102755005Lbl: label 'Date..............';
         GenSetUp: Record "Sacco General Set-Up";
         LoanApp: Record "Loans Register";
-        CustRec: Record "Members Register";
-        CustRecord: Record "Members Register";
+        CustRec: Record Customer;
+        CustRecord: Record Customer;
         TShares: Decimal;
         TLoans: Decimal;
         LoanShareRatio: Decimal;

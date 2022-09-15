@@ -201,7 +201,7 @@ Report 50254 "Loan Defaulters List"
         LoanApp: Record "HR Transport Requisition Pass";
         PendingApp: Decimal;
         ApprovedApp: Decimal;
-        Cust: Record "Members Register";
+        Cust: Record Customer;
         ShowSec: Boolean;
         TLAppB: Decimal;
         TChequeB: Decimal;

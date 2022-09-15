@@ -5,7 +5,7 @@ Report 50942 "Update Member Risk Rating"
 
     dataset
     {
-        dataitem("Members Register"; "Members Register")
+        dataitem(Customer; Customer)
         {
             RequestFilterFields = "No.";
             column(ReportForNavId_1; 1)

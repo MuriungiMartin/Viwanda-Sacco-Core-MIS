@@ -14,7 +14,7 @@ Report 50396 "Member Contacts"
 
     dataset
     {
-        dataitem("Members Register"; "Members Register")
+        dataitem(Customer; Customer)
         {
             DataItemTableView = where("Customer Posting Group" = filter('MEMBER'));
             PrintOnlyIfDetail = false;
@@ -47,19 +47,19 @@ Report 50396 "Member Contacts"
             column(UserId; UserId)
             {
             }
-            column(No; "Members Register"."No.")
+            column(No; Customer."No.")
             {
             }
-            column(Name; "Members Register".Name)
+            column(Name; Customer.Name)
             {
             }
-            column(Personal_No; "Members Register"."Payroll No")
+            column(Personal_No; Customer."Payroll No")
             {
             }
-            column(Phone_No; "Members Register"."Phone No.")
+            column(Phone_No; Customer."Phone No.")
             {
             }
-            column(E_mail; "Members Register"."E-Mail")
+            column(E_mail; Customer."E-Mail")
             {
             }
             trigger OnAfterGetRecord();
@@ -199,7 +199,7 @@ Report 50396 "Member Contacts"
         ApprovalSetup: Record "Table Permission Buffer";
         LocationFilter: Code[20];
         TotalApproved: Decimal;
-        cust: Record "Members Register";
+        cust: Record Customer;
         BOSABal: Decimal;
         SuperBal: Decimal;
         LAppl: Record "HR Transport Requisition Pass";
@@ -227,8 +227,8 @@ Report 50396 "Member Contacts"
         Date________________________Caption_Control1102755005Lbl: label 'Date........................';
         GenSetUp: Record "HR Leave Planner Lines";
         LoanApp: Record "HR Transport Requisition Pass";
-        CustRec: Record "Members Register";
-        CustRecord: Record "Members Register";
+        CustRec: Record Customer;
+        CustRecord: Record Customer;
         TShares: Decimal;
         TLoans: Decimal;
         LoanShareRatio: Decimal;

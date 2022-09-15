@@ -14,7 +14,7 @@ Report 50865 "Member Junior SAvings Report"
 
     dataset
     {
-        dataitem("Members Register"; "Members Register")
+        dataitem(Customer; Customer)
         {
             DataItemTableView = where("Junior Savings" = filter(<> 0));
             PrintOnlyIfDetail = false;
@@ -53,43 +53,43 @@ Report 50865 "Member Junior SAvings Report"
             column(UserId; UserId)
             {
             }
-            column(PersonalNo_MembersRegister; "Members Register"."Payroll No")
+            column(PersonalNo_MembersRegister; Customer."Payroll No")
             {
             }
-            column(IDNo_MembersRegister; "Members Register"."ID No.")
+            column(IDNo_MembersRegister; Customer."ID No.")
             {
             }
-            column(MobilePhoneNo_MembersRegister; "Members Register"."Mobile Phone No")
+            column(MobilePhoneNo_MembersRegister; Customer."Mobile Phone No")
             {
             }
-            column(No_MembersRegister; "Members Register"."No.")
+            column(No_MembersRegister; Customer."No.")
             {
             }
-            column(Name_MembersRegister; "Members Register".Name)
+            column(Name_MembersRegister; Customer.Name)
             {
             }
-            column(Status_MembersRegister; "Members Register".Status)
+            column(Status_MembersRegister; Customer.Status)
             {
             }
-            column(s; "Members Register"."Current Shares")
+            column(s; Customer."Current Shares")
             {
             }
-            column(JuniorSavings_MembersRegister; "Members Register"."Junior Savings")
+            column(JuniorSavings_MembersRegister; Customer."Junior Savings")
             {
             }
-            column(SafariSavings_MembersRegister; "Members Register"."Safari Savings")
+            column(SafariSavings_MembersRegister; Customer."Safari Savings")
             {
             }
-            column(SilverSavings_MembersRegister; "Members Register"."Silver Savings")
+            column(SilverSavings_MembersRegister; Customer."Silver Savings")
             {
             }
-            column(GlobalDimension2Code_MembersRegister; "Members Register"."Global Dimension 2 Code")
+            column(GlobalDimension2Code_MembersRegister; Customer."Global Dimension 2 Code")
             {
             }
-            column(EmployerCode_MembersRegister; "Members Register"."Employer Code")
+            column(EmployerCode_MembersRegister; Customer."Employer Code")
             {
             }
-            column(DepositsAccountNo_MembersRegister; "Members Register"."Deposits Account No")
+            column(DepositsAccountNo_MembersRegister; Customer."Deposits Account No")
             {
             }
             column(EntryNo; EntryNo)
@@ -98,8 +98,8 @@ Report 50865 "Member Junior SAvings Report"
             trigger OnAfterGetRecord();
             begin
                 EntryNo := EntryNo + 1;
-                /*"Members Register".SETFILTER("Members Register"."Date Filter",DateFilter);
-				"Members Register".CALCFIELDS("Members Register"."Current Shares");
+                /*Customer.SETFILTER(Customer."Date Filter",DateFilter);
+				Customer.CALCFIELDS(Customer."Current Shares");
 				*/
 
             end;
@@ -161,8 +161,8 @@ Report 50865 "Member Junior SAvings Report"
             "COMPY INFOR".CalcFields("COMPY INFOR".Picture);
             Name := "COMPY INFOR".Name;
         end;
-        /*IF "Members Register".GETFILTER("Members Register"."Date Filter") <> '' THEN
-		DateFilter:='..'+ FORMAT(CALCDATE('-1D',"Members Register".GETRANGEMIN("Members Register"."Date Filter")));
+        /*IF Customer.GETFILTER(Customer."Date Filter") <> '' THEN
+		DateFilter:='..'+ FORMAT(CALCDATE('-1D',Customer.GETRANGEMIN(Customer."Date Filter")));
 		*/
         ;
         ReportsForNavPre;
@@ -176,7 +176,7 @@ Report 50865 "Member Junior SAvings Report"
         ApprovalSetup: Record "Table Permission Buffer";
         LocationFilter: Code[20];
         TotalApproved: Decimal;
-        cust: Record "Members Register";
+        cust: Record Customer;
         BOSABal: Decimal;
         SuperBal: Decimal;
         LAppl: Record "Loans Register";
@@ -204,8 +204,8 @@ Report 50865 "Member Junior SAvings Report"
         Date________________________Caption_Control1102755005Lbl: label 'Date..............';
         GenSetUp: Record "Sacco General Set-Up";
         LoanApp: Record "Loans Register";
-        CustRec: Record "Members Register";
-        CustRecord: Record "Members Register";
+        CustRec: Record Customer;
+        CustRecord: Record Customer;
         TShares: Decimal;
         TLoans: Decimal;
         LoanShareRatio: Decimal;

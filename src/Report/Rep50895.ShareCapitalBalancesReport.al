@@ -7,7 +7,7 @@ Report 50895 "Share Capital Balances Report."
 
     dataset
     {
-        dataitem("Members Register"; Customer)
+        dataitem(Customer; Customer)
         {
             PrintOnlyIfDetail = false;
             RequestFilterFields = "No.", Status, "Employer Code", "Payroll No", "Shares Retained";
@@ -41,31 +41,31 @@ Report 50895 "Share Capital Balances Report."
             column(UserId; UserId)
             {
             }
-            column(PersonalNo_MembersRegister; "Members Register"."Payroll No")
+            column(PersonalNo_MembersRegister; Customer."Payroll No")
             {
             }
-            column(IDNo_MembersRegister; "Members Register"."ID No.")
+            column(IDNo_MembersRegister; Customer."ID No.")
             {
             }
-            column(MobilePhoneNo_MembersRegister; "Members Register"."Mobile Phone No")
+            column(MobilePhoneNo_MembersRegister; Customer."Mobile Phone No")
             {
             }
-            column(No_MembersRegister; "Members Register"."No.")
+            column(No_MembersRegister; Customer."No.")
             {
             }
-            column(Name_MembersRegister; "Members Register".Name)
+            column(Name_MembersRegister; Customer.Name)
             {
             }
-            column(Status_MembersRegister; "Members Register".Status)
+            column(Status_MembersRegister; Customer.Status)
             {
             }
-            column(SharesRetained_MembersRegister; "Members Register"."Shares Retained")
+            column(SharesRetained_MembersRegister; Customer."Shares Retained")
             {
             }
-            column(GlobalDimension2Code_MembersRegister; "Members Register"."Global Dimension 2 Code")
+            column(GlobalDimension2Code_MembersRegister; Customer."Global Dimension 2 Code")
             {
             }
-            column(EmployerCode_MembersRegister; "Members Register"."Employer Code")
+            column(EmployerCode_MembersRegister; Customer."Employer Code")
             {
             }
             column(EntryNo; EntryNo)

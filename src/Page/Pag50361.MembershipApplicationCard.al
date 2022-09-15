@@ -1962,7 +1962,7 @@ Page 50361 "Membership Application Card"
 
     var
         StatusPermissions: Record "Status Change Permision";
-        ObjCust: Record "Members Register";
+        ObjCust: Record Customer;
         ObjAccounts: Record Vendor;
         VarAcctNo: Code[20];
         ObjNextOfKinApp: Record "Member App Nominee";
@@ -2147,7 +2147,7 @@ Page 50361 "Membership Application Card"
         RefereeEditable: Boolean;
         MonthlyIncomeEditable: Boolean;
         ObjAccountAgents: Record "Account Agent Details";
-        ObjMembers: Record "Members Register";
+        ObjMembers: Record Customer;
         ObjBOSAAccount: Record "BOSA Accounts No Buffer";
         StyleText: Text[20];
         CoveragePercentStyle: Text;

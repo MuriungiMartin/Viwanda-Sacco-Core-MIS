@@ -14,7 +14,7 @@ Table 50966 "Interest Due Ledger Entry"
         field(3; "Customer No."; Code[20])
         {
             Caption = 'Customer No.';
-            TableRelation = "Members Register"."No.";
+            TableRelation = Customer."No.";
         }
         field(4; "Posting Date"; Date)
         {

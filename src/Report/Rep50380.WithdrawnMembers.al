@@ -7,7 +7,7 @@ Report 50380 "Withdrawn Members"
 
     dataset
     {
-        dataitem("Members Register"; Customer)
+        dataitem(Customer; Customer)
         {
             DataItemTableView = sorting("No.");//where(Status=filter("9"|"6"));
             PrintOnlyIfDetail = false;
@@ -36,22 +36,22 @@ Report 50380 "Withdrawn Members"
             column(UserId; UserId)
             {
             }
-            column(No; "Members Register"."No.")
+            column(No; Customer."No.")
             {
             }
-            column(Name; "Members Register".Name)
+            column(Name; Customer.Name)
             {
             }
-            column(Employer_Name; "Members Register"."Employer Name")
+            column(Employer_Name; Customer."Employer Name")
             {
             }
-            column(Withdrawal_Date; "Members Register"."Withdrawal Date")
+            column(Withdrawal_Date; Customer."Withdrawal Date")
             {
             }
-            column(Status; "Members Register".Status)
+            column(Status; Customer.Status)
             {
             }
-            column(Reason_for_Withdrawal; "Members Register"."Resons for Status Change")
+            column(Reason_for_Withdrawal; Customer."Resons for Status Change")
             {
             }
             trigger OnAfterGetRecord();

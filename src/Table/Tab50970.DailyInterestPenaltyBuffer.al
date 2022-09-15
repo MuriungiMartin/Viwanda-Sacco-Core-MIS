@@ -19,7 +19,7 @@ Table 50970 "Daily Interest/Penalty Buffer"
         field(3; "Account No."; Code[20])
         {
             Caption = 'Customer No.';
-            TableRelation = if ("Account Type" = filter("BOSA Account")) "Members Register"."No."
+            TableRelation = if ("Account Type" = filter("BOSA Account")) Customer."No."
             else
             if ("Account Type" = filter("FOSA Account")) Vendor."No.";
         }

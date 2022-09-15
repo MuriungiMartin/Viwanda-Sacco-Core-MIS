@@ -47,7 +47,7 @@ Report 50135 "Process Standing Order Ver1"
         ObjMemberCells: Record "Phone Number Buffer";
         ObjGenSetup: Record "Sacco General Set-Up";
         ObjExcessRuleProducts: Record "Excess Repayment Rules Product";
-        ObjMember: Record "Members Register";
+        ObjMember: Record Customer;
         Name: Decimal;
         SFactory: Codeunit "SURESTEP Factory";
         ObjLoanSchedule: Record "Loan Repayment Schedule";

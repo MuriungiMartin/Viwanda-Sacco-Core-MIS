@@ -59,6 +59,6 @@ Page 50059 "Member Credit Score"
     var
         VarMemberCreditScore: Decimal;
         VarMemberCreditScoreDescription: Text;
-        ObjMembers: Record "Members Register";
+        ObjMembers: Record Customer;
 }
 

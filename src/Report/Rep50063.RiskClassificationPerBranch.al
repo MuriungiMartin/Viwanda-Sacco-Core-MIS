@@ -190,7 +190,7 @@ Report 50063 "Risk Classification Per Branch"
         FORM_4CaptionLbl: label 'FORM 4';
         SASRA_2_004CaptionLbl: label 'SASRA 2/004';
         R__46_CaptionLbl: label 'R.(46)';
-        ObjMembers: Record "Members Register";
+        ObjMembers: Record Customer;
         VarEntryNo: Integer;
         ObjDetailedVendLedger: Record "Detailed Vendor Ledg. Entry";
         VarReportDate: Date;

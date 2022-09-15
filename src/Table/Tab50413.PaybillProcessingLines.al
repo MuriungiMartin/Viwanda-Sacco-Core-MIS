@@ -168,7 +168,7 @@ Table 50413 "Paybill Processing Lines"
     }
 
     var
-        memb: Record "Members Register";
+        memb: Record Customer;
         loans: Record "Loans Register";
 }
 

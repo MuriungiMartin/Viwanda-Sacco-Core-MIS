@@ -73,7 +73,7 @@ Report 50968 "Daily Loan Porfolio Process"
         VarAvailableOtherFOSAAccounts: Decimal;
         VarAmouttoRecover: Decimal;
         VarDebtCollectorFee: Decimal;
-        ObjCust: Record "Members Register";
+        ObjCust: Record Customer;
         VarAmountInArrears: Decimal;
         ObjSurestep: Codeunit "SURESTEP Factory";
         ObjDemands: Record "Default Notices Register";

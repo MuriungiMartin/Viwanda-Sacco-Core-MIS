@@ -5,35 +5,35 @@ Report 50886 "Member Account Statement(Ver1)"
 
     dataset
     {
-        dataitem("Members Register"; Customer)
+        dataitem(Customer; Customer)
         {
             RequestFilterFields = "No.", "Loan Product Filter", "Outstanding Balance", "Date Filter";
             column(UserId; UserId)
             {
             }
-            column(PayrollStaffNo_Members; "Members Register"."Payroll No")
+            column(PayrollStaffNo_Members; Customer."Payroll No")
             {
             }
-            column(No_Members; "Members Register"."No.")
+            column(No_Members; Customer."No.")
             {
             }
-            column(Name_Members; "Members Register".Name)
+            column(Name_Members; Customer.Name)
             {
             }
-            column(EmployerCode_Members; "Members Register"."Employer Code")
+            column(EmployerCode_Members; Customer."Employer Code")
             {
             }
             column(EmployerName; EmployerName)
             {
             }
 
-            column(Shares_Retained; "Members Register"."Shares Retained")
+            column(Shares_Retained; Customer."Shares Retained")
             {
             }
-            column(IDNo_Members; "Members Register"."ID No.")
+            column(IDNo_Members; Customer."ID No.")
             {
             }
-            column(GlobalDimension2Code_Members; "Members Register"."Global Dimension 2 Code")
+            column(GlobalDimension2Code_Members; Customer."Global Dimension 2 Code")
             {
             }
             column(Company_Name; Company.Name)
@@ -571,7 +571,7 @@ Report 50886 "Member Account Statement(Ver1)"
                 }
                 trigger OnPreDataItem();
                 begin
-                    Loans.SetFilter(Loans."Date filter", "Members Register".GetFilter("Members Register"."Date Filter"));
+                    Loans.SetFilter(Loans."Date filter", Customer.GetFilter(Customer."Date Filter"));
                 end;
 
                 trigger OnAfterGetRecord();
@@ -619,14 +619,14 @@ Report 50886 "Member Account Statement(Ver1)"
             }
             trigger OnPreDataItem();
             begin
-                if "Members Register".GetFilter("Members Register"."Date Filter") <> '' then
-                    DateFilterBF := '..' + Format(CalcDate('-1D', "Members Register".GetRangeMin("Members Register"."Date Filter")));
+                if Customer.GetFilter(Customer."Date Filter") <> '' then
+                    DateFilterBF := '..' + Format(CalcDate('-1D', Customer.GetRangeMin(Customer."Date Filter")));
             end;
 
             trigger OnAfterGetRecord();
             begin
                 SaccoEmp.Reset;
-                SaccoEmp.SetRange(SaccoEmp.Code, "Members Register"."Employer Code");
+                SaccoEmp.SetRange(SaccoEmp.Code, Customer."Employer Code");
                 if SaccoEmp.Find('-') then
                     EmployerName := SaccoEmp.Description;
                 SharesBF := 0;
@@ -705,7 +705,7 @@ Report 50886 "Member Account Statement(Ver1)"
         CLosingBalance: Decimal;
         OpenBalanceXmas: Decimal;
         CLosingBalanceXmas: Decimal;
-        Cust: Record "Members Register";
+        Cust: Record Customer;
         OpeningBal: Decimal;
         ClosingBal: Decimal;
         FirstRec: Boolean;

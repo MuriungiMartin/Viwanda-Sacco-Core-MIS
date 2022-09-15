@@ -63,7 +63,7 @@ Table 50421 "Member Acc. Signatories Change"
         }
         field(14; "Member No."; Code[30])
         {
-            TableRelation = "Members Register"."No.";
+            TableRelation = Customer."No.";
 
             trigger OnValidate()
             begin
@@ -75,7 +75,7 @@ Table 50421 "Member Acc. Signatories Change"
                     "Date Of Birth" := CUST."Date of Birth";
                     "ID No." := CUST."ID No.";
                     "Email Address" := CUST."E-Mail";
-                    Picture := CUST.Picture;
+                    Picture := Cust.Piccture;
                     Signature := CUST.Signature
                 end;
             end;
@@ -154,6 +154,6 @@ Table 50421 "Member Acc. Signatories Change"
     }
 
     var
-        CUST: Record "Members Register";
+        CUST: Record Customer;
 }
 

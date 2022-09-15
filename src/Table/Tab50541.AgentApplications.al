@@ -212,6 +212,6 @@ Table 50541 "Agent Applications"
         NoSeriesMgt: Codeunit NoSeriesManagement;
         WithdrawLimit: Record "Agent Withdrawal Limits";
         Vend: Record Vendor;
-        Member: Record "Members Register";
+        Member: Record Customer;
 }
 

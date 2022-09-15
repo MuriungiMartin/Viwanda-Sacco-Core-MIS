@@ -186,7 +186,7 @@ Table 50389 "ReceiptsProcessing_H-Checkoff"
     var
         NoSetup: Record "Sacco No. Series";
         NoSeriesMgt: Codeunit NoSeriesManagement;
-        cust: Record "Members Register";
+        cust: Record Customer;
         "GL Account": Record "G/L Account";
         BANKACC: Record "Bank Account";
 }

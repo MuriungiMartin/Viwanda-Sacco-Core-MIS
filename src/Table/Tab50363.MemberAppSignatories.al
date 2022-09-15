@@ -32,7 +32,7 @@ Table 50363 "Member App Signatories"
                     "Email Address" := Cust."E-Mail";
                     "Date Of Birth" := Cust."Date of Birth";
                     "Staff/Payroll" := Cust."Payroll No";
-                    Picture := Cust.Picture;
+                    Picture := Cust.Piccture;
                     Signature := Cust.Signature;
                     "Mobile No." := Cust."Mobile Phone No";
                     "BOSA No." := Cust."No.";
@@ -61,7 +61,7 @@ Table 50363 "Member App Signatories"
         }
         field(12; "BOSA No."; Code[30])
         {
-            TableRelation = "Members Register";
+            TableRelation = Customer;
 
             trigger OnValidate()
             begin
@@ -72,7 +72,7 @@ Table 50363 "Member App Signatories"
                     "ID No." := ObjCust."ID No.";
                     "Email Address" := ObjCust."E-Mail";
                     "Date Of Birth" := ObjCust."Date of Birth";
-                    Picture := ObjCust.Picture;
+                    Picture := ObjCust.Piccture;
                     Signature := ObjCust.Signature;
                     "Mobile No." := ObjCust."Mobile Phone No";
                     Modify;
@@ -136,8 +136,8 @@ Table 50363 "Member App Signatories"
     end;
 
     var
-        Cust: Record "Members Register";
-        ObjCust: Record "Members Register";
+        Cust: Record Customer;
+        ObjCust: Record Customer;
         NoSeries: Record "Sacco No. Series";
         NoSeriesMgt: Codeunit NoSeriesManagement;
 }

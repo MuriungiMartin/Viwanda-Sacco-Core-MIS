@@ -7,14 +7,14 @@ XmlPort 50057 "Import Insider Details"
     {
         textelement(root)
         {
-            tableelement("Members Register"; "Members Register")
+            tableelement(Customer; Customer)
             {
                 AutoUpdate = true;
                 XmlName = 'table';
-                fieldelement(A; "Members Register"."No.")
+                fieldelement(A; Customer."No.")
                 {
                 }
-                fieldelement(B; "Members Register"."Insider Status")
+                fieldelement(B; Customer."Insider Status")
                 {
                 }
             }

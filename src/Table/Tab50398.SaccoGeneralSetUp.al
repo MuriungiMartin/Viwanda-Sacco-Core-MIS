@@ -773,7 +773,7 @@ Table 50398 "Sacco General Set-Up"
         }
         field(226; "Total Membership"; Integer)
         {
-            CalcFormula = count("Members Register" where("Customer Type" = filter(Member)));
+            CalcFormula = count(Customer where("Customer Type" = filter(Member)));
             FieldClass = FlowField;
         }
         field(227; "ATM Destruction Period"; DateFormula)

@@ -6,7 +6,7 @@ Report 50504 "Members Loans Guarantors"
 
     dataset
     {
-        dataitem("Members Register"; Customer)
+        dataitem(Customer; Customer)
         {
             RequestFilterFields = "No.", Name;
             column(FORMAT_TODAY_0_4_; Format(Today, 0, 4))
@@ -39,19 +39,19 @@ Report 50504 "Members Loans Guarantors"
             column(UserId; UserId)
             {
             }
-            column(No_Members; "Members Register"."No.")
+            column(No_Members; Customer."No.")
             {
             }
-            column(Name_Members; "Members Register".Name)
+            column(Name_Members; Customer.Name)
             {
             }
-            column(PhoneNo_Members; "Members Register"."Phone No.")
+            column(PhoneNo_Members; Customer."Phone No.")
             {
             }
-            column(OutstandingBalance_Members; "Members Register"."Outstanding Balance")
+            column(OutstandingBalance_Members; Customer."Outstanding Balance")
             {
             }
-            column(CurrentShares_MembersRegister; "Members Register"."Current Shares")
+            column(CurrentShares_MembersRegister; Customer."Current Shares")
             {
             }
             column(FNo; FNo)

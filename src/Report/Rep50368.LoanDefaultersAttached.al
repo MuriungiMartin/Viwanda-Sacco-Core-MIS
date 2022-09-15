@@ -111,7 +111,7 @@ Report 50368 "Loan Defaulters Attached"
 
     var
         RPeriod: Decimal;
-        Cust: Record "Members Register";
+        Cust: Record Customer;
         EmpCode: Code[30];
         Intcount: Integer;
         Month: Code[10];

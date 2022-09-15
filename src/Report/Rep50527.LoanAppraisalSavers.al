@@ -879,7 +879,7 @@ Report 50527 "Loan Appraisal-Savers"
                             DEpMultiplier := LoanType."Shares Multiplier" * (Cshares + ShareCap)
                         end else
                             if "1st Time Loanee" = true then begin
-                               // DEpMultiplier := LoanType."Deposit Multiplier 1st Loan" * (Cshares + ShareCap);
+                                // DEpMultiplier := LoanType."Deposit Multiplier 1st Loan" * (Cshares + ShareCap);
                             end;
                         BridgedRepayment := 0;
                         TotalRepayments := 0;
@@ -1445,10 +1445,10 @@ Report 50527 "Loan Appraisal-Savers"
     end;
 
     var
-        CustRec: Record "Members Register";
+        CustRec: Record Customer;
         GenSetUp: Record "Sacco General Set-Up";
-        Cust: Record "Members Register";
-        CustRecord: Record "Members Register";
+        Cust: Record Customer;
+        CustRecord: Record Customer;
         TShares: Decimal;
         TLoans: Decimal;
         LoanApp: Record "Loans Register";
@@ -1678,11 +1678,11 @@ Report 50527 "Loan Appraisal-Savers"
         ToDateS: Text[100];
         DivTotal: Decimal;
         CDeposits: Decimal;
-        CustDiv: Record "Members Register";
+        CustDiv: Record Customer;
         DivProg: Record "Dividends Progression";
         CDiv: Decimal;
         BDate: Date;
-        CustR: Record "Members Register";
+        CustR: Record Customer;
         BasicPay: Decimal;
         HouseAllowance: Decimal;
         TransportAll: Decimal;

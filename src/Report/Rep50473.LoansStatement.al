@@ -6,15 +6,15 @@ Report 50473 "Loans Statement"
 
     dataset
     {
-        dataitem("Members Register"; "Members Register")
+        dataitem(Customer; Customer)
         {
             DataItemTableView = sorting("No.") where("Customer Type" = const(FOSA));
             RequestFilterFields = "No.", "Loan Product Filter", "Outstanding Balance";
 
-            column(No; "Members Register"."No.")
+            column(No; Customer."No.")
             {
             }
-            column(Name; "Members Register".Name)
+            column(Name; Customer.Name)
             {
             }
             dataitem("Loans Register"; "Loans Register")

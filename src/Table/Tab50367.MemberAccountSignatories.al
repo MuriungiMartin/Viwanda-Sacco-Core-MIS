@@ -63,9 +63,9 @@ Table 50367 "Member Account Signatories"
         }
         field(14; "Member No."; Code[30])
         {
-            TableRelation = "Members Register"."No."; //where("Group Account" = filter(false),
-                                                      // "Global Dimension 1 Code" = filter('MICRO'),
-                                                      // Field69159 = field("Account No"));
+            TableRelation = Customer."No."; //where("Group Account" = filter(false),
+                                            // "Global Dimension 1 Code" = filter('MICRO'),
+                                            // Field69159 = field("Account No"));
 
             trigger OnValidate()
             begin
@@ -77,7 +77,7 @@ Table 50367 "Member Account Signatories"
                     "Date Of Birth" := CUST."Date of Birth";
                     "ID No." := CUST."ID No.";
                     "Email Address" := CUST."E-Mail";
-                    Picture := CUST.Picture;
+                    Picture := Cust.Piccture;
                     Signature := CUST.Signature
                 end;
             end;
@@ -163,6 +163,6 @@ Table 50367 "Member Account Signatories"
     end;
 
     var
-        CUST: Record "Members Register";
+        CUST: Record Customer;
 }
 

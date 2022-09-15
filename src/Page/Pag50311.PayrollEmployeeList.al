@@ -501,7 +501,7 @@ Page 50311 "Payroll Employee List."
         ObjPayrollEmployeesIV: Record "Payroll Employee.";
         VarPeriodYear: Integer;
         VarMonthlyDepositsContribution: Decimal;
-        ObjCust: Record "Members Register";
+        ObjCust: Record Customer;
         ObjLoansII: Record "Loans Register";
         VarMonthlyInstalments: Decimal;
         ObjLoanSchedule: Record "Loan Repayment Schedule";
@@ -669,7 +669,7 @@ Page 50311 "Payroll Employee List."
 
     local procedure FnRunInsertMonthlyDepositContribution(VarMemberNo: Code[30]; VarPayrollNo: Code[30])
     var
-        ObjCust: Record "Members Register";
+        ObjCust: Record Customer;
         VarOpenPeriod: Date;
         VarPeriodMonth: Integer;
         VarPeriodYear: Integer;

@@ -19,18 +19,18 @@ Table 50506 "Member's Parishes"
         }
         field(4; "No of Members"; Integer)
         {
-            CalcFormula = count("Members Register" where("Members Parish" = field(Code)));
+            CalcFormula = count(Customer where("Members Parish" = field(Code)));
             FieldClass = FlowField;
         }
         field(5; "Male Members"; Integer)
         {
-            CalcFormula = count("Members Register" where("Members Parish" = field(Code),
+            CalcFormula = count(Customer where("Members Parish" = field(Code),
                                                           Gender = filter(" ")));
             FieldClass = FlowField;
         }
         field(6; "Female Members"; Integer)
         {
-            CalcFormula = count("Members Register" where("Members Parish" = field(Code),
+            CalcFormula = count(Customer where("Members Parish" = field(Code),
                                                           Gender = filter(Male)));
             FieldClass = FlowField;
         }

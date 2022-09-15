@@ -214,7 +214,7 @@ Report 50425 "Dividend Paid"
         TProcesinFee: Decimal;
         TExciseDuty: Decimal;
         TNetDiv: Decimal;
-        Cust: Record "Members Register";
+        Cust: Record Customer;
         MNo: Code[40];
         LCount: Integer;
 

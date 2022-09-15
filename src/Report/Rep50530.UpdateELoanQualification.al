@@ -131,7 +131,7 @@ Report 50530 "Update E-Loan Qualification"
     end;
 
     var
-        Cust: Record "Members Register";
+        Cust: Record Customer;
         DepositShareBal: Decimal;
         LoansRec: Record "Loans Register";
         Defaulter: Boolean;

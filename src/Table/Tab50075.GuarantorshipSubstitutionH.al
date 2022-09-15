@@ -27,7 +27,7 @@ Table 50075 "Guarantorship Substitution H"
         }
         field(3; "Loanee Member No"; Code[20])
         {
-            TableRelation = "Members Register"."No.";
+            TableRelation = Customer."No.";
 
             trigger OnValidate()
             begin
@@ -167,7 +167,7 @@ Table 50075 "Guarantorship Substitution H"
     var
         SalesSetup: Record "Sacco No. Series";
         NoSeriesMgt: Codeunit NoSeriesManagement;
-        Cust: Record "Members Register";
+        Cust: Record Customer;
         GuarantorshipLine: Record "Guarantorship Substitution L";
         LoanRec: Record "Loans Register";
         LoanGuarantors: Record "Loans Guarantee Details";

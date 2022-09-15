@@ -199,7 +199,7 @@ Page 50857 "Loans List-MICRO(Approved)"
         ScheduleCode: Code[20];
         PreviewShedule: Record "HR Leave Family Employees";
         PeriodInterval: Code[10];
-        CustomerRecord: Record "Members Register";
+        CustomerRecord: Record Customer;
         Gnljnline: Record "Gen. Journal Line";
         Jnlinepost: Codeunit "Gen. Jnl.-Post Line";
         CumInterest: Decimal;
@@ -208,9 +208,9 @@ Page 50857 "Loans List-MICRO(Approved)"
         GenBatch: Record "Gen. Journal Batch";
         GnljnlineCopy: Record "Gen. Journal Line";
         NewLNApplicNo: Code[10];
-        Cust: Record "Members Register";
+        Cust: Record Customer;
         TestAmt: Decimal;
-        CustRec: Record "Members Register";
+        CustRec: Record Customer;
         CustPostingGroup: Record "Customer Posting Group";
         GenSetUp: Record "Sales & Receivables Setup";
         PCharges: Record "HR Interview Evalution Rating";
@@ -241,7 +241,7 @@ Page 50857 "Loans List-MICRO(Approved)"
         BOSAInt: Decimal;
         TopUpComm: Decimal;
         TotalTopupComm: Decimal;
-        CustE: Record "Members Register";
+        CustE: Record Customer;
         DocN: Text[50];
         DocM: Text[100];
         DNar: Text[250];

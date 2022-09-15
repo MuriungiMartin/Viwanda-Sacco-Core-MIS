@@ -29,7 +29,7 @@ Table 50942 "House Groups Registration"
         }
         field(5; "Group Leader"; Code[20])
         {
-            TableRelation = "Members Register"."No.";
+            TableRelation = Customer."No.";
 
             trigger OnValidate()
             begin
@@ -45,7 +45,7 @@ Table 50942 "House Groups Registration"
         }
         field(7; "Assistant group Leader"; Code[20])
         {
-            TableRelation = "Members Register"."No.";
+            TableRelation = Customer."No.";
 
             trigger OnValidate()
             begin
@@ -108,7 +108,7 @@ Table 50942 "House Groups Registration"
         }
         field(19; "No of Members"; Integer)
         {
-            CalcFormula = count("Members Register" where("Member House Group" = field("House Group Code")));
+            CalcFormula = count(Customer where("Member House Group" = field("House Group Code")));
             FieldClass = FlowField;
         }
         field(20; "Credit Officer"; Code[20])
@@ -193,6 +193,6 @@ Table 50942 "House Groups Registration"
     var
         SalesSetup: Record "Sacco No. Series";
         NoSeriesMgt: Codeunit NoSeriesManagement;
-        ObjCust: Record "Members Register";
+        ObjCust: Record Customer;
 }
 

@@ -303,7 +303,7 @@ Table 50319 "Payroll Employee Transactions."
         Loans: Record "Loans Register";
         HR: Record "Payroll Employee.";
         SCARD: Record "Payroll Employee.";
-        MEMB: Record "Members Register";
+        MEMB: Record Customer;
         objPeriod: Record "Payroll Calender.";
         CurrentYr: Integer;
         Transcode: Record "Payroll Transaction Code.";

@@ -687,7 +687,7 @@ Page 50669 "Online Account Application"
         Acc: Record Vendor;
         UsersID: Record User;
         Nok: Record "FOSA Account App Kin Details";
-        Cust: Record "Members Register";
+        Cust: Record Customer;
         NOKBOSA: Record "FOSA Account NOK Details";
         BranchC: Code[20];
         DimensionV: Record "Dimension Value";
@@ -724,7 +724,7 @@ Page 50669 "Online Account Application"
         ContactPPhoneEditable: Boolean;
         Accountype: Boolean;
         Approvalusers: Record "Status Change Permision";
-        Member: Record "Members Register";
+        Member: Record Customer;
         IncrementNoF: Code[20];
         SMSMessage: Record "SMS Messages";
         iEntryNo: Integer;

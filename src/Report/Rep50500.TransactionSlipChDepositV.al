@@ -324,7 +324,7 @@ Report 50500 "Transaction Slip - ChDeposit V"
         STODeductedAmount: Decimal;
         NoticeAmount: Decimal;
         AccountNotices: Record "Account Notices";
-        Cust: Record "Members Register";
+        Cust: Record Customer;
         AccountHolders: Record Vendor;
         ChargesOnFD: Decimal;
         TotalGuaranted: Decimal;

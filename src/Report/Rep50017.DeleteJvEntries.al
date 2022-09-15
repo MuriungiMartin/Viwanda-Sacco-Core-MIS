@@ -100,7 +100,7 @@ Report 50017 "Delete Jv Entries"
         ObjFAPostingG: Record "FA Posting Group";
         ObjAccounts: Record Vendor;
         ObjApprovalUser: Record "User Setup";
-        ObjMember: Record "Members Register";
+        ObjMember: Record Customer;
         SFactory: Codeunit "SURESTEP Factory";
         ObjCountyr: Record "Country/Region";
 

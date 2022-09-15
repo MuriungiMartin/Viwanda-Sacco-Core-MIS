@@ -4,57 +4,57 @@ Table 50029 "Member Summary By Branch"
 
     fields
     {
-        field(1;"Branch Code";Code[50])
+        field(1; "Branch Code"; Code[50])
         {
         }
-        field(2;"Active Members";Integer)
+        field(2; "Active Members"; Integer)
         {
-            CalcFormula = count("Members Register" where ("Global Dimension 2 Code"=field("Branch Code"),
-                                                          Status=filter(Active),
-                                                          "Registration Date"=field("Registration Date Filter")));
+            CalcFormula = count(Customer where("Global Dimension 2 Code" = field("Branch Code"),
+                                                          Status = filter(Active),
+                                                          "Registration Date" = field("Registration Date Filter")));
             Editable = false;
             FieldClass = FlowField;
         }
-        field(3;"Awaiting Exit Members";Integer)
+        field(3; "Awaiting Exit Members"; Integer)
         {
-            CalcFormula = count("Members Register" where ("Global Dimension 2 Code"=field("Branch Code"),
-                                                          Status=filter("Awaiting Exit"),
-                                                          "Registration Date"=field("Registration Date Filter")));
+            CalcFormula = count(Customer where("Global Dimension 2 Code" = field("Branch Code"),
+                                                          Status = filter("Awaiting Exit"),
+                                                          "Registration Date" = field("Registration Date Filter")));
             Editable = false;
             FieldClass = FlowField;
         }
-        field(4;"Exited Members";Integer)
+        field(4; "Exited Members"; Integer)
         {
-            CalcFormula = count("Members Register" where ("Global Dimension 2 Code"=field("Branch Code"),
-                                                          Status=filter(Exited),
-                                                          "Registration Date"=field("Registration Date Filter")));
+            CalcFormula = count(Customer where("Global Dimension 2 Code" = field("Branch Code"),
+                                                          Status = filter(Exited),
+                                                          "Registration Date" = field("Registration Date Filter")));
             Editable = false;
             FieldClass = FlowField;
         }
-        field(5;"Dormant Members";Integer)
+        field(5; "Dormant Members"; Integer)
         {
-            CalcFormula = count("Members Register" where ("Global Dimension 2 Code"=field("Branch Code"),
-                                                          Status=filter(Dormant),
-                                                          "Registration Date"=field("Registration Date Filter")));
+            CalcFormula = count(Customer where("Global Dimension 2 Code" = field("Branch Code"),
+                                                          Status = filter(Dormant),
+                                                          "Registration Date" = field("Registration Date Filter")));
             Editable = false;
             FieldClass = FlowField;
         }
-        field(6;"Deceased Members";Integer)
+        field(6; "Deceased Members"; Integer)
         {
-            CalcFormula = count("Members Register" where ("Global Dimension 2 Code"=field("Branch Code"),
-                                                          Status=filter(Deceased),
-                                                          "Registration Date"=field("Registration Date Filter")));
+            CalcFormula = count(Customer where("Global Dimension 2 Code" = field("Branch Code"),
+                                                          Status = filter(Deceased),
+                                                          "Registration Date" = field("Registration Date Filter")));
             Editable = false;
             FieldClass = FlowField;
         }
-        field(7;"Total Members";Integer)
+        field(7; "Total Members"; Integer)
         {
-            CalcFormula = count("Members Register" where ("Global Dimension 2 Code"=field("Branch Code"),
-                                                          "Registration Date"=field("Registration Date Filter")));
+            CalcFormula = count(Customer where("Global Dimension 2 Code" = field("Branch Code"),
+                                                          "Registration Date" = field("Registration Date Filter")));
             Editable = false;
             FieldClass = FlowField;
         }
-        field(8;"Registration Date Filter";Date)
+        field(8; "Registration Date Filter"; Date)
         {
             FieldClass = FlowFilter;
         }
@@ -62,7 +62,7 @@ Table 50029 "Member Summary By Branch"
 
     keys
     {
-        key(Key1;"Branch Code")
+        key(Key1; "Branch Code")
         {
             Clustered = true;
         }

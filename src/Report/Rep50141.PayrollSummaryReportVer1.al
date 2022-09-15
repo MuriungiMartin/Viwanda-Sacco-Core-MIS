@@ -427,7 +427,7 @@ Report 50141 "Payroll Summary Report Ver1"
         VarCount: Integer;
         VarDepositsBal: Decimal;
         VarShareCapitalBal: Decimal;
-        ObjCust: Record "Members Register";
+        ObjCust: Record Customer;
         ObjEmployeePeriodTransactions: Record "prPeriod Transactions.";
         VarPayrollPeriod: Date;
         NetPay: Decimal;

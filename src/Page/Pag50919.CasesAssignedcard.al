@@ -495,7 +495,7 @@ Page 50919 "Cases Assigned card"
     var
         iEntryNo: Integer;
         SMSMessages: Record "SMS Messages";
-        Cust: Record "Members Register";
+        Cust: Record Customer;
     begin
 
         //SMS MESSAGE
@@ -530,7 +530,7 @@ Page 50919 "Cases Assigned card"
     var
         iEntryNo: Integer;
         SMSMessages: Record "SMS Messages";
-        cust: Record "Members Register";
+        cust: Record Customer;
     begin
 
         //SMS MESSAGE
@@ -627,7 +627,7 @@ Page 50919 "Cases Assigned card"
     local procedure Emailcustomer()
     var
         CustomerEmailtext: Text;
-        memb: Record "Members Register";
+        memb: Record Customer;
         CustRecipient: List of [Text];
     begin
         if memb.Get("Member No.") then begin

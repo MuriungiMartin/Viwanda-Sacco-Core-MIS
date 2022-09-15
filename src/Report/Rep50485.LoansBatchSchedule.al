@@ -396,7 +396,7 @@ Report 50485 "Loans Batch Schedule"
         TRequestedAmount: Decimal;
         TApprovedAmount: Decimal;
         LoanApp: Record "Loans Register";
-        Cust: Record "Members Register";
+        Cust: Record Customer;
         Stations: Record Stations;
         StationDesc: Text[150];
         Employer: Record "Sacco Employers";

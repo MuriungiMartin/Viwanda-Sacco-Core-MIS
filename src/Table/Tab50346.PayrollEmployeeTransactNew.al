@@ -261,6 +261,6 @@ Table 50346 "Payroll Employee Transact New"
         Loans: Record "Loans Register";
         HR: Record "Payroll Employee.";
         SCARD: Record "Payroll Employee.";
-        MEMB: Record "Members Register";
+        MEMB: Record Customer;
 }
 

@@ -195,7 +195,7 @@ Report 50516 "BOSA Receipt Slip XX"
     end;
 
     var
-        Cust: Record "Members Register";
+        Cust: Record Customer;
         Comms: Decimal;
         CashPayType: Record "HR Leave Family Employees";
         companyInfo: Record "Company Information";

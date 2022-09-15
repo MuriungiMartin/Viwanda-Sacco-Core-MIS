@@ -257,7 +257,7 @@ Report 50403 "Deposit Concentration"
         Less100thousandCount: Integer;
         Greaterthousand: Decimal;
         GreaterthousandCount: Integer;
-        Cust: Record "Members Register";
+        Cust: Record Customer;
         FromDate: Date;
         ToDate: Date;
         "10perInt": Integer;

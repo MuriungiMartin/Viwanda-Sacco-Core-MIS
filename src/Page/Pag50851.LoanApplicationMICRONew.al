@@ -794,7 +794,7 @@ Page 50851 "Loan Application MICRO(New)"
         PreviewShedule: Record "Loan Repayment Schedule";
         PeriodInterval: Code[10];
         LnLoans: Record "Loans Register";
-        CustomerRecord: Record "Members Register";
+        CustomerRecord: Record Customer;
         Gnljnline: Record "Gen. Journal Line";
         Jnlinepost: Codeunit "Gen. Jnl.-Post Line";
         CumInterest: Decimal;
@@ -804,7 +804,7 @@ Page 50851 "Loan Application MICRO(New)"
         LineNo: Integer;
         GnljnlineCopy: Record "Gen. Journal Line";
         NewLNApplicNo: Code[10];
-        Cust: Record "Members Register";
+        Cust: Record Customer;
         LoanApp: Record "Loans Register";
         TestAmt: Decimal;
         CustRec: Record "Loans Register";
@@ -843,7 +843,7 @@ Page 50851 "Loan Application MICRO(New)"
         DActivity: Code[20];
         DBranch: Code[20];
         TotalTopupComm: Decimal;
-        CustE: Record "Members Register";
+        CustE: Record Customer;
         DocN: Text[50];
         DocM: Text[100];
         DNar: Text[250];
@@ -889,7 +889,7 @@ Page 50851 "Loan Application MICRO(New)"
         RepayFrequencyEditable: Boolean;
         ModeofDisburesmentEdit: Boolean;
         DisbursementDateEditable: Boolean;
-        Memb: Record "Members Register";
+        Memb: Record Customer;
         LoanSecurities: Record "Loans Guarantee Details";
         Text002: label 'Please Insert Securities Details';
         LnSecurities: Record "Loans Guarantee Details";
@@ -1048,7 +1048,7 @@ Page 50851 "Loan Application MICRO(New)"
         FileName: Text[100];
         Attachment: Text[250];
         CompanyInfo: Record "Company Information";
-        Cust: Record "Members Register";
+        Cust: Record Customer;
         Email: Text[50];
         Recipient: list of [Text];
     begin
@@ -1076,7 +1076,7 @@ Page 50851 "Loan Application MICRO(New)"
 
     local procedure FnSendGuarantorAppSMS(LoanNo: Code[20])
     var
-        Cust: Record "Members Register";
+        Cust: Record Customer;
         Sms: Record "SMS Messages";
     begin
         LGuarantors.Reset;

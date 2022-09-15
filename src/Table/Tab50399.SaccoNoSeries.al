@@ -638,7 +638,7 @@ Table 50399 "Sacco No. Series"
 
     var
         LoanApps: Record "Loans Register";
-        CustMemb: Record "Members Register";
+        CustMemb: Record Customer;
         CustMembApp: Record "Membership Applications";
         AccClosure: Record "Membership Exist";
 

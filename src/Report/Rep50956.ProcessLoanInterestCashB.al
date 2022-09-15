@@ -143,7 +143,7 @@ Report 50956 "Process Loan Interest:Cash B."
         PDate: Date;
         LoanType: Record "Loan Products Setup";
         PostDate: Date;
-        Cust: Record "Members Register";
+        Cust: Record Customer;
         LineNo: Integer;
         DocNo: Code[20];
         EndDate: Date;

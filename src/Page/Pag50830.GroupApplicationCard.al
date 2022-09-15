@@ -848,7 +848,7 @@ Page 50830 "Group Application Card"
 
     var
         StatusPermissions: Record "Status Change Permision";
-        Cust: Record "Members Register";
+        Cust: Record Customer;
         Accounts: Record Vendor;
         AcctNo: Code[20];
         NextOfKinApp: Record "Members Next of Kin";
@@ -919,7 +919,7 @@ Page 50830 "Group Application Card"
         text003: label 'No of Signatories cannot be less/More than %1';
         GetAccountType: Record "Account Types-Saving Products";
         Text004: label 'You MUST specify the next of kin Benevolent';
-        CustMember: Record "Members Register";
+        CustMember: Record Customer;
         "BenvNo.": Code[10];
         BankAEditable: Boolean;
         MemEditable: Boolean;
@@ -927,7 +927,7 @@ Page 50830 "Group Application Card"
         BankNEditable: Boolean;
         InserFEditable: Boolean;
         FosAEditable: Boolean;
-        Memb: Record "Members Register";
+        Memb: Record Customer;
         BosaAccNoVisible: Boolean;
         FosaAccNoVisible: Boolean;
         MemCatVisible: Boolean;
@@ -942,7 +942,7 @@ Page 50830 "Group Application Card"
         DeptVisible: Boolean;
         SecVisible: Boolean;
         OccpVisible: Boolean;
-        MembCust: Record "Members Register";
+        MembCust: Record Customer;
         GroupAccEditable: Boolean;
         AccTypeEditable: Boolean;
         AccountSignatoriesApp: Record "Member Account Signatories";

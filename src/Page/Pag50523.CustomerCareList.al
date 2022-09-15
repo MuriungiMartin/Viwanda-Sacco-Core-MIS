@@ -6,7 +6,7 @@ Page 50523 "Customer Care List"
     PageType = List;
     UsageCategory = Lists;
     ApplicationArea = All;
-    SourceTable = "Members Register";
+    SourceTable = Customer;
 
     layout
     {

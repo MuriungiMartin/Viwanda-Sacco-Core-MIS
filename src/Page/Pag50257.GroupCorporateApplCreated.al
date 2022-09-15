@@ -319,7 +319,7 @@ Page 50257 "Group/Corporate Appl. Created"
                                     ObjCust.Status := ObjCust.Status::Active;
                                     ObjCust."Employer Code" := "Employer Code";
                                     ObjCust."Date of Birth" := "Date of Birth";
-                                    ObjCust.Picture := Picture;
+                                    ObjCust.Piccture := Picture;
                                     ObjCust.Signature := Signature;
                                     ObjCust."Station/Department" := "Station/Department";
                                     ObjCust."E-Mail" := "E-Mail (Personal)";
@@ -420,7 +420,7 @@ Page 50257 "Group/Corporate Appl. Created"
                                     ObjCust."Customer Type" := ObjCust."customer type"::Member;
                                     ObjCust.Gender := Gender;
 
-                                    ObjCust.Picture := Picture;
+                                    ObjCust.Piccture := Picture;
                                     ObjCust.Signature := Signature;
 
                                     ObjCust."Monthly Contribution" := "Monthly Contribution";
@@ -837,7 +837,7 @@ Page 50257 "Group/Corporate Appl. Created"
         WelcomeMessage: label '<p style="font-family:Verdana,Arial;font-size:10pt">Dear<b> %1,</b></p><p style="font-family:Verdana,Arial;font-size:9pt">Welcome to Nafaka Sacco</p><p style="font-family:Verdana,Arial;font-size:9pt">This is to confirm that your membership Application has been received and Undergoing Approval</p><p style="font-family:Verdana,Arial;font-size:9pt"> </b></p><br>Regards<p>%3</p><p><b>NAFAKA SACCO LTD</b></p>';
         RegistrationMessage: label '<p style="font-family:Verdana,Arial;font-size:10pt">Dear<b> %1,</b></p><p style="font-family:Verdana,Arial;font-size:9pt">Welcome to  Nafaka Sacco</p><p style="font-family:Verdana,Arial;font-size:9pt">This is to confirm that your membership registration has been successfully processed</p><p style="font-family:Verdana,Arial;font-size:9pt">Your membership number is <b>%2</b></p><br>Regards<p>%3</p><p><b>NAFAKA SACCO LTD</b></p>';
         StatusPermissions: Record "Status Change Permision";
-        Cust: Record "Members Register";
+        Cust: Record Customer;
         Accounts: Record Vendor;
         AcctNo: Code[20];
         NextOfKinApp: Record "Member App Nominee";
@@ -987,11 +987,11 @@ Page 50257 "Group/Corporate Appl. Created"
         PhysicalAddressEditable: Boolean;
         MonthlyIncomeEditable: Boolean;
         ObjAccountAgents: Record "Account Agent Details";
-        ObjMembers: Record "Members Register";
+        ObjMembers: Record Customer;
         ObjBOSAAccount: Record "BOSA Accounts No Buffer";
         CompInfo: Record "Company Information";
         ObjProductsApp: Record "Membership Reg. Products Appli";
-        ObjCust: Record "Members Register";
+        ObjCust: Record Customer;
         ObjSaccosetup: Record "Sacco General Set-Up";
         ObjMemberNoseries: Record "Member Accounts No Series";
         VarNewMembNo: Code[30];

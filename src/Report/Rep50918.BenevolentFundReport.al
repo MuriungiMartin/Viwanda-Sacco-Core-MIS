@@ -14,7 +14,7 @@ Report 50918 "Benevolent Fund Report."
 
     dataset
     {
-        dataitem("Members Register"; "Members Register")
+        dataitem(Customer; Customer)
         {
             DataItemTableView = where("Benevolent Fund" = filter(<> 0));
             PrintOnlyIfDetail = false;
@@ -53,34 +53,34 @@ Report 50918 "Benevolent Fund Report."
             column(UserId; UserId)
             {
             }
-            column(PersonalNo_MembersRegister; "Members Register"."Payroll No")
+            column(PersonalNo_MembersRegister; Customer."Payroll No")
             {
             }
-            column(IDNo_MembersRegister; "Members Register"."ID No.")
+            column(IDNo_MembersRegister; Customer."ID No.")
             {
             }
-            column(No_MembersRegister; "Members Register"."No.")
+            column(No_MembersRegister; Customer."No.")
             {
             }
-            column(Name_MembersRegister; "Members Register".Name)
+            column(Name_MembersRegister; Customer.Name)
             {
             }
-            column(MobilePhoneNo_MembersRegister; "Members Register"."Mobile Phone No")
+            column(MobilePhoneNo_MembersRegister; Customer."Mobile Phone No")
             {
             }
-            column(Status_MembersRegister; "Members Register".Status)
+            column(Status_MembersRegister; Customer.Status)
             {
             }
-            column(SharesRetained_MembersRegister; "Members Register"."Shares Retained")
+            column(SharesRetained_MembersRegister; Customer."Shares Retained")
             {
             }
-            column(GlobalDimension2Code_MembersRegister; "Members Register"."Global Dimension 2 Code")
+            column(GlobalDimension2Code_MembersRegister; Customer."Global Dimension 2 Code")
             {
             }
-            column(EmployerCode_MembersRegister; "Members Register"."Employer Code")
+            column(EmployerCode_MembersRegister; Customer."Employer Code")
             {
             }
-            column(BenevolentFund_MembersRegister; "Members Register"."Benevolent Fund")
+            column(BenevolentFund_MembersRegister; Customer."Benevolent Fund")
             {
             }
             column(EntryNo; EntryNo)
@@ -159,7 +159,7 @@ Report 50918 "Benevolent Fund Report."
         ApprovalSetup: Record "Table Permission Buffer";
         LocationFilter: Code[20];
         TotalApproved: Decimal;
-        cust: Record "Members Register";
+        cust: Record Customer;
         BOSABal: Decimal;
         SuperBal: Decimal;
         LAppl: Record "Loans Register";
@@ -187,8 +187,8 @@ Report 50918 "Benevolent Fund Report."
         Date________________________Caption_Control1102755005Lbl: label 'Date..............';
         GenSetUp: Record "Sacco General Set-Up";
         LoanApp: Record "Loans Register";
-        CustRec: Record "Members Register";
-        CustRecord: Record "Members Register";
+        CustRec: Record Customer;
+        CustRecord: Record Customer;
         TShares: Decimal;
         TLoans: Decimal;
         LoanShareRatio: Decimal;

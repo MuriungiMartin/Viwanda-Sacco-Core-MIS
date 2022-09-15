@@ -48,7 +48,7 @@ Codeunit 50039 "CloudPESALivetest2"
         Loans: Integer;
         LoansRegister: Record "Loans Register";
         LoanProductsSetup: Record "Loan Products Setup";
-        Members: Record "Members Register";
+        Members: Record Customer;
         dateExpression: Text[20];
         DetailedVendorLedgerEntry: Record "Detailed Vendor Ledg. Entry";
         dashboardDataFilter: Date;
@@ -4500,7 +4500,7 @@ Codeunit 50039 "CloudPESALivetest2"
         docNo: Code[50];
         NotificationDate: Date;
         EloanAmt: Decimal;
-        ObjMember: Record "Members Register";
+        ObjMember: Record Customer;
         varMemberNo: Code[50];
     begin
         GenSetUp.Reset;
@@ -4807,7 +4807,7 @@ Codeunit 50039 "CloudPESALivetest2"
         loanNotificationDate: Date;
         amtsecondnotice: Decimal;
         amtcompare: Decimal;
-        memb: Record "Members Register";
+        memb: Record Customer;
         Loanbal: Decimal;
         repayamt: Decimal;
         amtloan: Decimal;

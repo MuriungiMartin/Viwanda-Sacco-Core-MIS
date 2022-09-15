@@ -253,7 +253,7 @@ Report 50982 "Balance Interest"
         PDate: Date;
         LoanType: Record "Loan Products Setup";
         PostDate: Date;
-        Cust: Record "Members Register";
+        Cust: Record Customer;
         LineNo: Integer;
         DocNo: Code[20];
         GenJournalLine: Record "Gen. Journal Line";

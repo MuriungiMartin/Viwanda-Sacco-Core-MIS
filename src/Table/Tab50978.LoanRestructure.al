@@ -19,7 +19,7 @@ Table 50978 "Loan Restructure"
         }
         field(2; "Member No"; Code[30])
         {
-            TableRelation = "Members Register"."No.";
+            TableRelation = Customer."No.";
 
             trigger OnValidate()
             begin
@@ -199,7 +199,7 @@ Table 50978 "Loan Restructure"
     end;
 
     var
-        ObjCust: Record "Members Register";
+        ObjCust: Record Customer;
         ObjLoans: Record "Loans Register";
         SalesSetup: Record "Sacco No. Series";
         NoSeriesMgt: Codeunit NoSeriesManagement;

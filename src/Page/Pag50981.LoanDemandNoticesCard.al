@@ -215,7 +215,7 @@ Page 50981 "Loan Demand Notices Card"
                         SMTPSetup: Record "SMTP Mail Setup";
                         SMTPMail: Codeunit "SMTP Mail";
                         VarMemberEmail: Text[50];
-                        ObjMember: Record "Members Register";
+                        ObjMember: Record Customer;
                         Attachment: Text[250];
                         ObjLoanType: Record "Loan Products Setup";
                         VarProductDescription: Code[50];
@@ -281,7 +281,7 @@ Page 50981 "Loan Demand Notices Card"
                         SMTPSetup: Record "SMTP Mail Setup";
                         SMTPMail: Codeunit "SMTP Mail";
                         VarMemberEmail: Text[50];
-                        ObjMember: Record "Members Register";
+                        ObjMember: Record Customer;
                         Attachment: Text[250];
                         ObjLoanType: Record "Loan Products Setup";
                         VarProductDescription: Code[50];
@@ -340,7 +340,7 @@ Page 50981 "Loan Demand Notices Card"
                         SMTPSetup: Record "SMTP Mail Setup";
                         SMTPMail: Codeunit "SMTP Mail";
                         VarMemberEmail: Text[50];
-                        ObjMember: Record "Members Register";
+                        ObjMember: Record Customer;
                         Attachment: Text[250];
                         ObjLoanType: Record "Loan Products Setup";
                         VarProductDescription: Code[50];
@@ -561,7 +561,7 @@ Page 50981 "Loan Demand Notices Card"
         SMTPSetup: Record "SMTP Mail Setup";
         SMTPMail: Codeunit "SMTP Mail";
         VarMemberEmail: Text[50];
-        ObjMember: Record "Members Register";
+        ObjMember: Record Customer;
         Attachment: Text[250];
         ObjLoanType: Record "Loan Products Setup";
         VarProductDescription: Code[50];
@@ -623,7 +623,7 @@ Page 50981 "Loan Demand Notices Card"
         SMTPSetup: Record "SMTP Mail Setup";
         SMTPMail: Codeunit "SMTP Mail";
         VarMemberEmail: Text[50];
-        ObjMember: Record "Members Register";
+        ObjMember: Record Customer;
         Attachment: Text[250];
         ObjLoanType: Record "Loan Products Setup";
         VarProductDescription: Code[50];
@@ -672,7 +672,7 @@ Page 50981 "Loan Demand Notices Card"
         SMTPSetup: Record "SMTP Mail Setup";
         SMTPMail: Codeunit "SMTP Mail";
         VarMemberEmail: Text[50];
-        ObjMember: Record "Members Register";
+        ObjMember: Record Customer;
         Attachment: Text[250];
         ObjLoanType: Record "Loan Products Setup";
         VarProductDescription: Code[50];
@@ -718,7 +718,7 @@ Page 50981 "Loan Demand Notices Card"
         SMTPSetup: Record "SMTP Mail Setup";
         SMTPMail: Codeunit "SMTP Mail";
         VarMemberEmail: Text[50];
-        ObjMember: Record "Members Register";
+        ObjMember: Record Customer;
         Attachment: Text[250];
         ObjLoanType: Record "Loan Products Setup";
         VarProductDescription: Code[50];
@@ -761,7 +761,7 @@ Page 50981 "Loan Demand Notices Card"
         SMTPSetup: Record "SMTP Mail Setup";
         SMTPMail: Codeunit "SMTP Mail";
         VarMemberEmail: Text[50];
-        ObjMember: Record "Members Register";
+        ObjMember: Record Customer;
         Attachment: Text[250];
         ObjLoanType: Record "Loan Products Setup";
         VarProductDescription: Code[50];

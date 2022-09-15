@@ -226,7 +226,7 @@ Report 50850 "Micro Finance Schedule"
         ToustLoan: Decimal;
         Tsavings: Decimal;
         GrpName: Text[100];
-        Grps: Record "Members Register";
+        Grps: Record Customer;
         Loans: Record "Loans Register";
         Outbal: Decimal;
         OutInt: Decimal;

@@ -19,7 +19,7 @@ Codeunit 50028 "CloudPESA Banks Transaction"
         Loans: Integer;
         LoansRegister: Record "Loans Register";
         LoanProductsSetup: Record "Loan Products Setup";
-        Members: Record "Members Register";
+        Members: Record Customer;
         dateExpression: Text[20];
         DetailedVendorLedgerEntry: Record "Detailed Vendor Ledg. Entry";
         dashboardDataFilter: Date;
@@ -873,7 +873,7 @@ Codeunit 50028 "CloudPESA Banks Transaction"
 
     procedure fnSetMemberPhoto()
     var
-        MemberApp: Record "Members Register";
+        MemberApp: Record Customer;
     begin
         MembApp.Get(MembApp."No.");
         MembApp.Picture.ImportFile('E:\IPRS\PHotos\' + MembApp."ID No." + '.jpg', 'Demo image for item ');

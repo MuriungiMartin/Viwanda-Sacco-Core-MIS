@@ -1303,7 +1303,7 @@ Page 50439 "Cashier Transactions Card"
         STODeductedAmount: Decimal;
         NoticeAmount: Decimal;
         AccountNotices: Record "Account Notices";
-        Cust: Record "Members Register";
+        Cust: Record Customer;
         AccountHolders: Record Vendor;
         ChargesOnFD: Decimal;
         TotalGuaranted: Decimal;
@@ -1311,7 +1311,7 @@ Page 50439 "Cashier Transactions Card"
         chqtransactions: Record Transactions;
         Trans: Record Transactions;
         TotalUnprocessed: Decimal;
-        CustAcc: Record "Members Register";
+        CustAcc: Record Customer;
         AmtAfterWithdrawal: Decimal;
         TransactionsRec: Record Transactions;
         LoansTotal: Decimal;
@@ -4570,7 +4570,7 @@ Page 50439 "Cashier Transactions Card"
         varMultipleLoan: Decimal;
         varLRepayment: Decimal;
         PRpayment: Decimal;
-        ObjMember: Record "Members Register";
+        ObjMember: Record Customer;
     begin
         if RunningBalance > 0 then begin
             GenSetup.Get();
@@ -4613,7 +4613,7 @@ Page 50439 "Cashier Transactions Card"
         varMultipleLoan: Decimal;
         varLRepayment: Decimal;
         PRpayment: Decimal;
-        ObjMember: Record "Members Register";
+        ObjMember: Record Customer;
         SharesCap: Decimal;
         DIFF: Decimal;
     begin
@@ -4668,7 +4668,7 @@ Page 50439 "Cashier Transactions Card"
         varMultipleLoan: Decimal;
         varLRepayment: Decimal;
         PRpayment: Decimal;
-        ObjMember: Record "Members Register";
+        ObjMember: Record Customer;
         SharesCap: Decimal;
         DIFF: Decimal;
     begin
@@ -4711,7 +4711,7 @@ Page 50439 "Cashier Transactions Card"
         varMultipleLoan: Decimal;
         varLRepayment: Decimal;
         PRpayment: Decimal;
-        ObjMember: Record "Members Register";
+        ObjMember: Record Customer;
     begin
         GenSetup.Get();
         if RunningBalance > 0 then begin
@@ -4749,7 +4749,7 @@ Page 50439 "Cashier Transactions Card"
         varMultipleLoan: Decimal;
         varLRepayment: Decimal;
         PRpayment: Decimal;
-        ObjMember: Record "Members Register";
+        ObjMember: Record Customer;
     begin
         if RunningBalance > 0 then begin
             GenSetup.Get();
@@ -4788,7 +4788,7 @@ Page 50439 "Cashier Transactions Card"
         varMultipleLoan: Decimal;
         varLRepayment: Decimal;
         PRpayment: Decimal;
-        ObjMember: Record "Members Register";
+        ObjMember: Record Customer;
     begin
         ObjMember.Reset;
         ObjMember.SetRange(ObjMember."No.", ObjRcptBuffer."Member No");
@@ -4819,7 +4819,7 @@ Page 50439 "Cashier Transactions Card"
         varMultipleLoan: Decimal;
         varLRepayment: Decimal;
         PRpayment: Decimal;
-        ObjMember: Record "Members Register";
+        ObjMember: Record Customer;
         SharesCap: Decimal;
         DIFF: Decimal;
         TransType: Option " ","Registration Fee","Share Capital","Interest Paid","Loan Repayment","Deposit Contribution","Insurance Contribution","Benevolent Fund",Loan,"Unallocated Funds",Dividend,"FOSA Account";
@@ -4867,7 +4867,7 @@ Page 50439 "Cashier Transactions Card"
         varMultipleLoan: Decimal;
         varLRepayment: Decimal;
         PRpayment: Decimal;
-        ObjMember: Record "Members Register";
+        ObjMember: Record Customer;
         SharesCap: Decimal;
         DIFF: Decimal;
         TransType: Option " ","Registration Fee","Share Capital","Interest Paid","Loan Repayment","Deposit Contribution","Insurance Contribution","Benevolent Fund",Loan,"Unallocated Funds",Dividend,"FOSA Account";

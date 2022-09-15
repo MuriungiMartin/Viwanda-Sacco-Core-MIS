@@ -35,7 +35,7 @@ Report 50878 "Fixed Asset Depreciation Ver1"
     }
 
     var
-        ObjCust: Record "Members Register";
+        ObjCust: Record Customer;
         SFactory: Codeunit "SURESTEP Factory";
 }
 

@@ -5,7 +5,7 @@ Report 50075 "Process Periodic Interest"
 
     dataset
     {
-        dataitem(Memba; "Members Register")
+        dataitem(Memba; Customer)
         {
             CalcFields = "Silver Savings", "Safari Savings", "Junior Savings";
             column(ReportForNavId_1; 1)

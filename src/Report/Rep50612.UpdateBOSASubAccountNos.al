@@ -6,7 +6,7 @@ Report 50612 "Update BOSA Sub Account Nos"
 
     dataset
     {
-        dataitem("Members Register"; "Members Register")
+        dataitem(Customer; Customer)
         {
             DataItemTableView = where("No." = filter('00003'));
 
@@ -71,50 +71,50 @@ Report 50612 "Update BOSA Sub Account Nos"
 				*/
                 /*
 				ObjVendor.INIT;
-				ObjVendor."No.":='1001-001-'+"Members Register"."No.";
-				ObjVendor.Name:="Members Register".Name;
-				ObjVendor."BOSA Account No":="Members Register"."No.";
-				ObjVendor."Phone No.":="Members Register"."Phone No.";
-				ObjVendor."Mobile Phone No":="Members Register"."Mobile Phone No";
-				ObjVendor."Global Dimension 1 Code":="Members Register"."Global Dimension 1 Code";
-				ObjVendor."Global Dimension 2 Code":="Members Register"."Global Dimension 2 Code";
+				ObjVendor."No.":='1001-001-'+Customer."No.";
+				ObjVendor.Name:=Customer.Name;
+				ObjVendor."BOSA Account No":=Customer."No.";
+				ObjVendor."Phone No.":=Customer."Phone No.";
+				ObjVendor."Mobile Phone No":=Customer."Mobile Phone No";
+				ObjVendor."Global Dimension 1 Code":=Customer."Global Dimension 1 Code";
+				ObjVendor."Global Dimension 2 Code":=Customer."Global Dimension 2 Code";
 				ObjVendor."Creditor Type":=ObjVendor."Creditor Type"::"FOSA Account";
 				ObjVendor."Vendor Posting Group":='DEPOSITS';
 				ObjVendor."Account Type":='DEPOSIT';
 				ObjVendor.INSERT;
 				ObjVendor.INIT;
-				ObjVendor."No.":='1001-002-'+"Members Register"."No.";
-				ObjVendor.Name:="Members Register".Name;
-				ObjVendor."BOSA Account No":="Members Register"."No.";
-				ObjVendor."Phone No.":="Members Register"."Phone No.";
-				ObjVendor."Mobile Phone No":="Members Register"."Mobile Phone No";
-				ObjVendor."Global Dimension 1 Code":="Members Register"."Global Dimension 1 Code";
-				ObjVendor."Global Dimension 2 Code":="Members Register"."Global Dimension 2 Code";
+				ObjVendor."No.":='1001-002-'+Customer."No.";
+				ObjVendor.Name:=Customer.Name;
+				ObjVendor."BOSA Account No":=Customer."No.";
+				ObjVendor."Phone No.":=Customer."Phone No.";
+				ObjVendor."Mobile Phone No":=Customer."Mobile Phone No";
+				ObjVendor."Global Dimension 1 Code":=Customer."Global Dimension 1 Code";
+				ObjVendor."Global Dimension 2 Code":=Customer."Global Dimension 2 Code";
 				ObjVendor."Creditor Type":=ObjVendor."Creditor Type"::"FOSA Account";
 				ObjVendor."Vendor Posting Group":='SHARECAP';
 				ObjVendor."Account Type":='SHARECAP';
 				ObjVendor.INSERT;
 				ObjVendor.INIT;
-				ObjVendor."No.":='1001-003-'+"Members Register"."No.";
-				ObjVendor.Name:="Members Register".Name;
-				ObjVendor."BOSA Account No":="Members Register"."No.";
-				ObjVendor."Phone No.":="Members Register"."Phone No.";
-				ObjVendor."Mobile Phone No":="Members Register"."Mobile Phone No";
-				ObjVendor."Global Dimension 1 Code":="Members Register"."Global Dimension 1 Code";
-				ObjVendor."Global Dimension 2 Code":="Members Register"."Global Dimension 2 Code";
+				ObjVendor."No.":='1001-003-'+Customer."No.";
+				ObjVendor.Name:=Customer.Name;
+				ObjVendor."BOSA Account No":=Customer."No.";
+				ObjVendor."Phone No.":=Customer."Phone No.";
+				ObjVendor."Mobile Phone No":=Customer."Mobile Phone No";
+				ObjVendor."Global Dimension 1 Code":=Customer."Global Dimension 1 Code";
+				ObjVendor."Global Dimension 2 Code":=Customer."Global Dimension 2 Code";
 				ObjVendor."Creditor Type":=ObjVendor."Creditor Type"::"FOSA Account";
 				ObjVendor."Vendor Posting Group":='BENFUND';
 				ObjVendor."Account Type":='BENFUND';
 				ObjVendor.INSERT;*/
                 /*
 				ObjVendor.INIT;
-				ObjVendor."No.":='1001-005-'+"Members Register"."No.";
-				ObjVendor.Name:="Members Register".Name;
-				ObjVendor."BOSA Account No":="Members Register"."No.";
-				ObjVendor."Phone No.":="Members Register"."Phone No.";
-				ObjVendor."Mobile Phone No":="Members Register"."Mobile Phone No";
-				ObjVendor."Global Dimension 1 Code":="Members Register"."Global Dimension 1 Code";
-				ObjVendor."Global Dimension 2 Code":="Members Register"."Global Dimension 2 Code";
+				ObjVendor."No.":='1001-005-'+Customer."No.";
+				ObjVendor.Name:=Customer.Name;
+				ObjVendor."BOSA Account No":=Customer."No.";
+				ObjVendor."Phone No.":=Customer."Phone No.";
+				ObjVendor."Mobile Phone No":=Customer."Mobile Phone No";
+				ObjVendor."Global Dimension 1 Code":=Customer."Global Dimension 1 Code";
+				ObjVendor."Global Dimension 2 Code":=Customer."Global Dimension 2 Code";
 				ObjVendor."Creditor Type":=ObjVendor."Creditor Type"::"FOSA Account";
 				ObjVendor."Vendor Posting Group":='SILVER';
 				ObjVendor."Account Type":='SILVER';
@@ -178,7 +178,7 @@ Report 50612 "Update BOSA Sub Account Nos"
     var
         BOSAAcc: Record Vendor;
         ObjVendor: Record Vendor;
-        MembersRegister: Record "Members Register";
+        MembersRegister: Record Customer;
 
     var
 }

@@ -206,7 +206,7 @@ Page 50341 "Pension Processing Header"
         DActivityBOSA: Code[20];
         DBranchBOSA: Code[20];
         ReptProcHeader: Record "Checkoff Header-Distributed";
-        Cust: Record "Members Register";
+        Cust: Record Customer;
         salarybuffer: Record "Pension Processing Lines";
         SalHeader: Record "Pension Processing Headerr";
         Sto: Record "Standing Orders";

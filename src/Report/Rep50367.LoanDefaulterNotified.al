@@ -115,7 +115,7 @@ Report 50367 "Loan Defaulter Notified"
 
     var
         RPeriod: Decimal;
-        Cust: Record "Members Register";
+        Cust: Record Customer;
         EmpCode: Code[30];
         Intcount: Integer;
         Month: Code[10];

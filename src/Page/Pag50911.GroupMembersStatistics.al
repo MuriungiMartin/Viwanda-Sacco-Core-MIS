@@ -2,7 +2,7 @@
 Page 50911 "Group Members Statistics"
 {
     PageType = ListPart;
-    SourceTable = "Members Register";
+    SourceTable = Customer;
 
     layout
     {

@@ -234,7 +234,7 @@ Page 50999 "House Group Registration Card"
 
     var
         ObjCellGroups: Record "Member House Groups";
-        ObjCust: Record "Members Register";
+        ObjCust: Record Customer;
         DocumentType: Option Quote,"Order",Invoice,"Credit Memo","Blanket Order","Return Order"," ","Purchase Requisition",RFQ,"Store Requisition","Payment Voucher",MembershipApplication,LoanApplication,LoanDisbursement,ProductApplication,StandingOrder,MembershipWithdrawal,ATMCard,GuarantorRecovery,ChangeRequest,TreasuryTransactions,FundsTransfer,SaccoTransfers,ChequeDiscounting,ImprestRequisition,ImprestSurrender,LeaveApplication,BulkWithdrawal,PackageLodging,PackageRetrieval,HouseChange,CRMTraining,PettyCash,StaffClaims,MemberAgentNOKChange,HouseRegistration,LoanPayOff;
         EnableCreateHouse: Boolean;
         OpenApprovalEntriesExist: Boolean;

@@ -15,7 +15,7 @@ Table 50903 "Share Capital Sell"
         }
         field(4; "Buyer Member No"; Code[30])
         {
-            TableRelation = "Members Register"."No.";
+            TableRelation = Customer."No.";
 
             trigger OnValidate()
             begin
@@ -77,7 +77,7 @@ Table 50903 "Share Capital Sell"
     }
 
     var
-        ObjCust: Record "Members Register";
+        ObjCust: Record Customer;
         ObjVendors: Record Vendor;
         AvailableBal: Decimal;
         ObjAccTypes: Record "Account Types-Saving Products";

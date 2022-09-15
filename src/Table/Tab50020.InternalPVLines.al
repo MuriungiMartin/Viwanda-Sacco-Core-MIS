@@ -45,7 +45,7 @@ Table 50020 "Internal PV Lines"
             else
             if ("Account Type" = const(Employee)) Employee
             else
-            if ("Account Type" = const(Member)) "Members Register";
+            if ("Account Type" = const(Member)) Customer;
 
             trigger OnValidate()
             begin
@@ -190,7 +190,7 @@ Table 50020 "Internal PV Lines"
         ObjVend: Record Vendor;
         ObjGL: Record "G/L Account";
         ObjBank: Record "Bank Account";
-        ObjMember: Record "Members Register";
+        ObjMember: Record Customer;
         ObjFA: Record "Fixed Asset";
 }
 

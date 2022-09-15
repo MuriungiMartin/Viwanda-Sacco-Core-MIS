@@ -20,7 +20,7 @@ Codeunit 50121 "Recover Dividend Loans"
         LineNo: Integer;
         Gnljnline: Record "Gen. Journal Line";
         PostingDate: Date;
-        Cust: Record "Members Register";
+        Cust: Record Customer;
 
     local procedure FnRunOutstandingLoanBalance()
     var

@@ -287,7 +287,7 @@ Report 50432 "Cashier Reports"
     end;
 
     var
-        Cust: Record "Members Register";
+        Cust: Record Customer;
         Bank: Record "Bank Account";
         Vend: Record Vendor;
         Names: Text[50];

@@ -19,7 +19,7 @@ Table 50424 "Member Sweeping Instructions"
         }
         field(2; "Member No"; Code[30])
         {
-            TableRelation = "Members Register"."No.";
+            TableRelation = Customer."No.";
 
             trigger OnValidate()
             begin
@@ -167,7 +167,7 @@ Table 50424 "Member Sweeping Instructions"
     var
         SalesSetup: Record "Sacco No. Series";
         NoSeriesMgt: Codeunit NoSeriesManagement;
-        ObjMember: Record "Members Register";
+        ObjMember: Record Customer;
         ObjAccounts: Record Vendor;
         ObjAccountType: Record "Account Types-Saving Products";
 }

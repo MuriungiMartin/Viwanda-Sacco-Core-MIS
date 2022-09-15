@@ -246,7 +246,7 @@ Report 50606 "Insider Loans Board"
         OUTSTANDINGAMOUNT: Decimal;
         PERFORMANCE: Text;
         SN: Integer;
-        MembersRegister: Record "Members Register";
+        MembersRegister: Record Customer;
 
     var
 }

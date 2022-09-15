@@ -11,7 +11,7 @@ Table 50475 "HISA Allocation"
         field(2; "Member No"; Code[20])
         {
             NotBlank = true;
-            TableRelation = "Members Register"."No.";
+            TableRelation = Customer."No.";
         }
         field(3; "Transaction Type"; Option)
         {
@@ -197,7 +197,7 @@ Table 50475 "HISA Allocation"
 
     var
         Loans: Record "Loans Register";
-        Cust: Record "Members Register";
+        Cust: Record Customer;
         RECEIPTs: Record "Receipt Allocation";
         Comm: Decimal;
         bv: Integer;

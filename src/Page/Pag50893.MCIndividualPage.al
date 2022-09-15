@@ -9,7 +9,7 @@ Page 50893 "MC Individual Page"
     PageType = Card;
     PromotedActionCategories = 'New,Process,Reports,Approval,Budgetary Control,Cancellation,Category7_caption,Category8_caption,Category9_caption,Category10_caption';
     RefreshOnActivate = true;
-    SourceTable = "Members Register";
+    SourceTable = Customer;
     SourceTableView = where("Global Dimension 1 Code" = const('MICRO'),
                             "Group Account" = const(false));
 
@@ -158,7 +158,7 @@ Page 50893 "MC Individual Page"
                     Caption = 'Date of Birth';
                     Editable = true;
                 }
-                field(Picture; Picture)
+                field(Picture; Piccture)
                 {
                     ApplicationArea = Basic;
                 }
@@ -1258,7 +1258,7 @@ Page 50893 "MC Individual Page"
         GLPosting: Codeunit "Gen. Jnl.-Post Line";
         StatusPermissions: Record "Status Change Permision";
         Vend: Record Vendor;
-        Cust: Record "Members Register";
+        Cust: Record Customer;
         LineNo: Integer;
         UsersID: Record User;
         GeneralSetup: Record "Sacco General Set-Up";

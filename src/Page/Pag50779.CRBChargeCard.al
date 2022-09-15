@@ -348,7 +348,7 @@ Page 50779 "CRB Charge Card"
         CanCancelApprovalForRecord: Boolean;
         ApprovalsMgmt: Codeunit "Approvals Mgmt.";
         EnabledApprovalWorkflowsExist: Boolean;
-        ObjCust: Record "Members Register";
+        ObjCust: Record Customer;
         MemberNoEditable: Boolean;
         FOSAAccountEditable: Boolean;
         ReasonforChangeEditable: Boolean;

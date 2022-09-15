@@ -59,7 +59,7 @@ Table 50432 "Product App Signatories"
         }
         field(13; "BOSA No."; Code[30])
         {
-            TableRelation = "Members Register"."No.";
+            TableRelation = Customer."No.";
 
             trigger OnValidate()
             begin
@@ -121,6 +121,6 @@ Table 50432 "Product App Signatories"
     var
         NoSeries: Record "Sacco No. Series";
         NoSeriesMgt: Codeunit NoSeriesManagement;
-        ObjCust: Record "Members Register";
+        ObjCust: Record Customer;
 }
 
