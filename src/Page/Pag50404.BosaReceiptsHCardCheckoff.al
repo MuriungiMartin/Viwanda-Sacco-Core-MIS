@@ -190,6 +190,28 @@ Page 50404 "Bosa Receipts H Card-Checkoff"
                    END;
                    */
 
+                    //Post Control Account------------------------------------------
+
+                    LineN := LineN + 10000;
+
+                    Gnljnline.Init;
+                    Gnljnline."Journal Template Name" := 'GENERAL';
+                    Gnljnline."Journal Batch Name" := 'CHECKOFF';
+                    Gnljnline."Line No." := LineN;
+                    Gnljnline."Account Type" := "Account Type";
+                    Gnljnline."Account No." := "Account No";
+                    Gnljnline.Validate(Gnljnline."Account No.");
+                    Gnljnline."Document No." := "Document No";
+                    Gnljnline."Posting Date" := "Posting date";
+                    Gnljnline.Description := 'checkoff  ' + Format("Posting date") + No;
+                    Gnljnline.Amount := Amount;
+                    Gnljnline.Validate(Gnljnline.Amount);
+                    if Gnljnline.Amount <> 0 then
+                        Gnljnline.Insert;
+
+
+                    //End Post Control Account---------------------------------------
+
                     //------------------------------------Recover,Registration Fee, Insurance and Interest-------------------------------Viwanda
                     //Insurance
 
