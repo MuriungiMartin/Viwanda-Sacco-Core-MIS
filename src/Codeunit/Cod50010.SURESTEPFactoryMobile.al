@@ -49,8 +49,8 @@ Codeunit 50010 "SURESTEP FactoryMobile"
         ObjBanks: Record "Bank Account";
         ObjLoanProductSetup: Record "Loan Products Setup";
         ObjProductCharges: Record "Loan Product Charges";
-        ObjMembers: Record "Members Register";
-        ObjMembers2: Record "Members Register";
+        ObjMembers: Record Customer;
+        ObjMembers2: Record Customer;
         ObjGenSetUp: Record "Sacco General Set-Up";
         ObjCompInfo: Record "Company Information";
         BAND1: Decimal;
@@ -263,7 +263,7 @@ Codeunit 50010 "SURESTEP FactoryMobile"
 
     procedure FnGetMemberBranch(MemberNo: Code[100]) MemberBranch: Code[100]
     var
-        ObjMemberLocal: Record "Members Register";
+        ObjMemberLocal: Record Customer;
     begin
         ObjMemberLocal.Reset;
         ObjMemberLocal.SetRange(ObjMemberLocal."No.", MemberNo);
@@ -275,7 +275,7 @@ Codeunit 50010 "SURESTEP FactoryMobile"
 
     local procedure FnReturnRetirementDate(MemberNo: Code[50]): Date
     var
-        ObjMembers: Record "Members Register";
+        ObjMembers: Record Customer;
     begin
         ObjGenSetUp.Get();
         ObjMembers.Reset;
@@ -310,7 +310,7 @@ Codeunit 50010 "SURESTEP FactoryMobile"
 
     procedure FnGetFosaAccount(MemberNo: Code[50]) FosaAccount: Code[50]
     var
-        ObjMembers: Record "Members Register";
+        ObjMembers: Record Customer;
     begin
         ObjMembers.Reset;
         ObjMembers.SetRange(ObjMembers."No.", MemberNo);
@@ -390,7 +390,7 @@ Codeunit 50010 "SURESTEP FactoryMobile"
         loanTypes: Record "Loan Products Setup";
         ObjLoanX: Record "Loans Register";
         LoansRec: Record "Loans Register";
-        Cust: Record "Members Register";
+        Cust: Record Customer;
     begin
         loanTypes.Reset;
         loanTypes.SetRange(loanTypes.Code, 'BLOAN');

@@ -3,7 +3,7 @@ Page 50963 "Cell Group Members Subpage"
 {
     Editable = false;
     PageType = ListPart;
-    SourceTable = "Members Register";
+    SourceTable = Customer;
 
     layout
     {

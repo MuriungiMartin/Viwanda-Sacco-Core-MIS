@@ -151,7 +151,7 @@ Report 50925 "Loan Demand Notice"
                 column(AmountinArrears_LoansREC; ROUND(LoansREC."Amount in Arrears", 1, '>'))
                 {
                 }
-                dataitem(Customer; "Members Register")
+                dataitem(Customer; Customer)
                 {
                     DataItemLink = "No." = field("Client Code");
                     RequestFilterFields = "No.";
@@ -507,7 +507,7 @@ Report 50925 "Loan Demand Notice"
         LBalance: Decimal;
         PersonalNo: Code[50];
         GAddress: Text[250];
-        Cust: Record "Members Register";
+        Cust: Record Customer;
         TotalRec: Decimal;
         NoGuarantors: Integer;
         AmountT: Decimal;
@@ -524,7 +524,7 @@ Report 50925 "Loan Demand Notice"
         SendSMS: Boolean;
         SMSMessage: Record "SMS Messages";
         iEntryNo: Integer;
-        Cust1: Record "Members Register";
+        Cust1: Record Customer;
         CompanyInformation: Record "Company Information";
         ObjCollateral: Record "Loan Collateral Details";
         ObjGuarantor: Record "Loans Guarantee Details";

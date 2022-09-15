@@ -643,7 +643,7 @@ Page 50482 "Checkoff Processing Header-D"
         DActivityBOSA: Code[20];
         DBranchBOSA: Code[20];
         ReptProcHeader: Record "Checkoff Header-Distributed";
-        Cust: Record "Members Register";
+        Cust: Record Customer;
         MembPostGroup: Record "Customer Posting Group";
         Loantable: Record "Loans Register";
         LRepayment: Decimal;
@@ -661,7 +661,7 @@ Page 50482 "Checkoff Processing Header-D"
         DIFF: Decimal;
         DIFFPAID: Decimal;
         genstup: Record "Sacco General Set-Up";
-        Memb: Record "Members Register";
+        Memb: Record Customer;
         INSURANCE: Decimal;
         GenBatches: Record "Gen. Journal Batch";
         Datefilter: Text[50];
@@ -679,7 +679,7 @@ Page 50482 "Checkoff Processing Header-D"
         Counter: Integer;
         Percentage: Integer;
         Gensetup: Record "General Ledger Setup";
-        MembersR: Record "Members Register";
+        MembersR: Record Customer;
         Savaccount: Code[20];
 
     local procedure FnGetLoanNumber(MemberNo: Code[40]; "Loan Product Code": Code[100]): Code[100]

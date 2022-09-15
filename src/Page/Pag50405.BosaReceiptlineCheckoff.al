@@ -45,6 +45,7 @@ Page 50405 "Bosa Receipt line-Checkoff"
                 field(Amount; Amount)
                 {
                     ApplicationArea = Basic;
+                    Visible = false;
                 }
                 field("Staff Not Found"; "Staff Not Found")
                 {

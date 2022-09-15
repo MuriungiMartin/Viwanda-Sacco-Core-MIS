@@ -14,7 +14,7 @@ Report 50379 "Dividend Processing-Flat Rate"
 
     dataset
     {
-        dataitem("Members Register"; "Members Register")
+        dataitem(Customer; Customer)
         {
             DataItemTableView = sorting("No.");
             RequestFilterFields = "No.", Status, "Customer Type";
@@ -31,13 +31,13 @@ Report 50379 "Dividend Processing-Flat Rate"
             column(UserId; UserId)
             {
             }
-            column(Members__No__; "Members Register"."No.")
+            column(Members__No__; Customer."No.")
             {
             }
-            column(Members_Name; "Members Register".Name)
+            column(Members_Name; Customer.Name)
             {
             }
-            column(Members__Current_Shares_; "Members Register"."Current Shares")
+            column(Members__Current_Shares_; Customer."Current Shares")
             {
             }
             column(CustomerCaption; CustomerCaptionLbl)
@@ -65,7 +65,7 @@ Report 50379 "Dividend Processing-Flat Rate"
 
             trigger OnAfterGetRecord();
             var
-                ObjMembers: Record "Members Register";
+                ObjMembers: Record Customer;
                 DivOnRetainedShares: Decimal;
             begin
             end;
@@ -138,7 +138,7 @@ Report 50379 "Dividend Processing-Flat Rate"
 
     trigger OnPreReport()
     var
-        ObjMembers: Record "Members Register";
+        ObjMembers: Record Customer;
         DivOnRetainedShares: Decimal;
         GrossLessCommisionAndTax: Decimal;
         DividedendCapitalized: Decimal;
@@ -224,7 +224,7 @@ Report 50379 "Dividend Processing-Flat Rate"
         CurrReport_PAGENOCaptionLbl: label 'Page';
         LastFieldNo: Integer;
         FooterPrinted: Boolean;
-        Cust: Record "Members Register";
+        Cust: Record Customer;
         StartDate: Date;
         DateFilter: Text[100];
         FromDate: Date;
@@ -234,7 +234,7 @@ Report 50379 "Dividend Processing-Flat Rate"
         DivTotal: Decimal;
         GenSetUp: Record "Sacco General Set-Up";
         CDeposits: Decimal;
-        CustDiv: Record "Members Register";
+        CustDiv: Record Customer;
         DivProg: Record "Dividends Progression";
         CDiv: Decimal;
         BDate: Date;
@@ -390,7 +390,7 @@ Report 50379 "Dividend Processing-Flat Rate"
         exit(FosaAcc);
     end;
 
-    local procedure FnInsertMemberDividendsOrDepositInterest(ObjMember: Record "Members Register"; TotalDividendsOnSharecapital: Decimal; Narrative: Text; BalAccount: Code[50])
+    local procedure FnInsertMemberDividendsOrDepositInterest(ObjMember: Record Customer; TotalDividendsOnSharecapital: Decimal; Narrative: Text; BalAccount: Code[50])
     begin
         LineNo := LineNo + 1;
         GenJournalLine.Init;
@@ -417,7 +417,7 @@ Report 50379 "Dividend Processing-Flat Rate"
             GenJournalLine.Insert;
     end;
 
-    local procedure FnTransferGrossDividendsToFOSA(ObjMember: Record "Members Register")
+    local procedure FnTransferGrossDividendsToFOSA(ObjMember: Record Customer)
     begin
         //CREDIT FOSA WITH GROSS DIVIDENDS
         LineNo := LineNo + 1;
@@ -462,7 +462,7 @@ Report 50379 "Dividend Processing-Flat Rate"
             GenJournalLine.Insert;
     end;
 
-    local procedure FnRecoverCapitalizedAmount(ObjMember: Record "Members Register")
+    local procedure FnRecoverCapitalizedAmount(ObjMember: Record Customer)
     begin
         //CREDIT MEMBER SHARECAPITAL FROM FOSA
         LineNo := LineNo + 1;
@@ -507,7 +507,7 @@ Report 50379 "Dividend Processing-Flat Rate"
             GenJournalLine.Insert;
     end;
 
-    local procedure FnRecoverTaxWithHeldBySACCO(ObjMember: Record "Members Register")
+    local procedure FnRecoverTaxWithHeldBySACCO(ObjMember: Record Customer)
     begin
         LineNo := LineNo + 1;
         GenJournalLine.Init;
@@ -533,7 +533,7 @@ Report 50379 "Dividend Processing-Flat Rate"
             GenJournalLine.Insert;
     end;
 
-    local procedure FnRecoverSaccoCommission(ObjMember: Record "Members Register")
+    local procedure FnRecoverSaccoCommission(ObjMember: Record Customer)
     begin
         LineNo := LineNo + 1;
         GenJournalLine.Init;
@@ -582,7 +582,7 @@ Report 50379 "Dividend Processing-Flat Rate"
             GenJournalLine.Insert;
     end;
 
-    local procedure FnSaveDividendAwarded(ObjMember: Record "Members Register")
+    local procedure FnSaveDividendAwarded(ObjMember: Record Customer)
     var
         ObjDividendAwarded: Record "Dividends Paid";
     begin

@@ -6,7 +6,7 @@ Report 50488 "Members List 2"
 
     dataset
     {
-        dataitem("Members Register"; "Members Register")
+        dataitem(Customer; Customer)
         {
             RequestFilterFields = "No.", "Employer Code", Gender, "Registration Date", Status, "Current Shares", "Shares Retained";
 
@@ -35,65 +35,65 @@ Report 50488 "Members List 2"
             column(UserId; UserId)
             {
             }
-            column(Personal_No; "Members Register"."Payroll No")
+            column(Personal_No; Customer."Payroll No")
             {
             }
-            column(Registration_Date; Format("Members Register"."Registration Date"))
+            column(Registration_Date; Format(Customer."Registration Date"))
             {
             }
-            column(Share_Capital; "Members Register"."Shares Retained")
+            column(Share_Capital; Customer."Shares Retained")
             {
             }
-            column(Deposits; "Members Register"."Monthly Contribution")
+            column(Deposits; Customer."Monthly Contribution")
             {
                 AutoCalcField = true;
             }
-            column(EMail_MembersRegister; "Members Register"."E-Mail")
+            column(EMail_MembersRegister; Customer."E-Mail")
             {
             }
-            column(No_MembersRegister; "Members Register"."No.")
+            column(No_MembersRegister; Customer."No.")
             {
             }
-            column(Name_MembersRegister; "Members Register".Name)
+            column(Name_MembersRegister; Customer.Name)
             {
             }
-            column(Address_MembersRegister; "Members Register".Address)
+            column(Address_MembersRegister; Customer.Address)
             {
             }
-            column(PhoneNo_MembersRegister; "Members Register"."Phone No.")
+            column(PhoneNo_MembersRegister; Customer."Phone No.")
             {
             }
-            column(RiskFund_MembersRegister; "Members Register"."Risk Fund")
+            column(RiskFund_MembersRegister; Customer."Risk Fund")
             {
             }
-            column(FOSAAccountNo_MembersRegister; "Members Register"."FOSA Account No.")
+            column(FOSAAccountNo_MembersRegister; Customer."FOSA Account No.")
             {
             }
-            column(SharesRetained_MembersRegister; "Members Register"."Shares Retained")
+            column(SharesRetained_MembersRegister; Customer."Shares Retained")
             {
             }
-            column(CurrentShares_MembersRegister; "Members Register"."Current Shares")
+            column(CurrentShares_MembersRegister; Customer."Current Shares")
             {
             }
-            column(Status_MembersRegister; "Members Register".Status)
+            column(Status_MembersRegister; Customer.Status)
             {
             }
-            column(DividendAmount_MembersRegister; "Members Register"."Dividend Amount")
+            column(DividendAmount_MembersRegister; Customer."Dividend Amount")
             {
             }
-            column(FOSAShares_MembersRegister; "Members Register"."FOSA Shares")
+            column(FOSAShares_MembersRegister; Customer."FOSA Shares")
             {
             }
-            column(mobile_number; "Members Register"."Mobile Phone No")
+            column(mobile_number; Customer."Mobile Phone No")
             {
             }
-            column(id; "Members Register"."ID No.")
+            column(id; Customer."ID No.")
             {
             }
-            column(branch; "Members Register"."Global Dimension 2 Code")
+            column(branch; Customer."Global Dimension 2 Code")
             {
             }
-            column(category; "Members Register"."Account Category")
+            column(category; Customer."Account Category")
             {
             }
             trigger OnPreDataItem();

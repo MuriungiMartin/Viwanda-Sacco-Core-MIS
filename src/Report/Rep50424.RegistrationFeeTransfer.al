@@ -14,7 +14,7 @@ Report 50424 "Registration Fee Transfer"
 
     dataset
     {
-        dataitem(Customer; "Members Register")
+        dataitem(Customer; Customer)
         {
             DataItemTableView = where("Customer Posting Group" = const('BOSA'));
             PrintOnlyIfDetail = false;
@@ -200,7 +200,7 @@ Report 50424 "Registration Fee Transfer"
         PDate: Date;
         LoanType: Record "Loan Products Setup";
         PostDate: Date;
-        Cust: Record "Members Register";
+        Cust: Record Customer;
         datefilter: Date;
         RunBal: Decimal;
         LineN: Integer;

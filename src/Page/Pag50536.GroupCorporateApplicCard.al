@@ -646,7 +646,7 @@ Page 50536 "Group/Corporate Applic Card"
                                     ObjCust.Status := ObjCust.Status::Active;
                                     ObjCust."Employer Code" := "Employer Code";
                                     ObjCust."Date of Birth" := "Date of Birth";
-                                    ObjCust.Picture := Picture;
+                                    ObjCust.Piccture := Picture;
                                     ObjCust.Signature := Signature;
                                     ObjCust."Station/Department" := "Station/Department";
                                     ObjCust."E-Mail" := "E-Mail (Personal)";
@@ -708,7 +708,7 @@ Page 50536 "Group/Corporate Applic Card"
                                     ObjCust."Customer Type" := ObjCust."customer type"::Member;
                                     ObjCust.Gender := Gender;
 
-                                    ObjCust.Picture := Picture;
+                                    ObjCust.Piccture := Picture;
                                     ObjCust.Signature := Signature;
 
                                     ObjCust."Monthly Contribution" := "Monthly Contribution";
@@ -1120,7 +1120,7 @@ Page 50536 "Group/Corporate Applic Card"
 
     var
         StatusPermissions: Record "Status Change Permision";
-        Cust: Record "Members Register";
+        Cust: Record Customer;
         Accounts: Record Vendor;
         AcctNo: Code[20];
         NextOfKinApp: Record "Member App Nominee";
@@ -1274,11 +1274,11 @@ Page 50536 "Group/Corporate Applic Card"
         MonthlyIncomeEditable: Boolean;
         WkFlwIntegration: codeunit WorkflowIntegration;
         ObjAccountAgents: Record "Account Agent Details";
-        ObjMembers: Record "Members Register";
+        ObjMembers: Record Customer;
         ObjBOSAAccount: Record "BOSA Accounts No Buffer";
         CompInfo: Record "Company Information";
         ObjProductsApp: Record "Membership Reg. Products Appli";
-        ObjCust: Record "Members Register";
+        ObjCust: Record Customer;
         ObjSaccosetup: Record "Sacco General Set-Up";
         ObjMemberNoseries: Record "Member Accounts No Series";
         VarNewMembNo: Code[30];

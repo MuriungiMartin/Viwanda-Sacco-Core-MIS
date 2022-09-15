@@ -4,10 +4,10 @@ Table 50580 "Inhouse Cheque Clearing Buffer"
 
     fields
     {
-        field(1;"No.";Code[10])
+        field(1; "No."; Code[10])
         {
         }
-        field(2;"Transaction No";Code[20])
+        field(2; "Transaction No"; Code[20])
         {
 
             trigger OnValidate()
@@ -59,10 +59,10 @@ Table 50580 "Inhouse Cheque Clearing Buffer"
                 //  END;
             end;
         }
-        field(3;"Account No";Code[50])
+        field(3; "Account No"; Code[50])
         {
         }
-        field(4;"Account Name";Code[100])
+        field(4; "Account Name"; Code[100])
         {
 
             trigger OnValidate()
@@ -75,7 +75,7 @@ Table 50580 "Inhouse Cheque Clearing Buffer"
 
             end;
         }
-        field(5;"Transaction Type";Code[20])
+        field(5; "Transaction Type"; Code[20])
         {
 
             trigger OnValidate()
@@ -112,16 +112,16 @@ Table 50580 "Inhouse Cheque Clearing Buffer"
                 // END;
             end;
         }
-        field(6;Amount;Decimal)
+        field(6; Amount; Decimal)
         {
         }
-        field(7;"Cheque No";Code[50])
+        field(7; "Cheque No"; Code[50])
         {
         }
-        field(8;"Expected Maturity Date";Date)
+        field(8; "Expected Maturity Date"; Date)
         {
         }
-        field(9;"Cheque Clearing Status";Option)
+        field(9; "Cheque Clearing Status"; Option)
         {
             OptionCaption = ' ,Cleared,Bounced';
             OptionMembers = " ",Cleared,Bounced;
@@ -130,7 +130,7 @@ Table 50580 "Inhouse Cheque Clearing Buffer"
 
     keys
     {
-        key(Key1;"No.","Transaction No")
+        key(Key1; "No.", "Transaction No")
         {
             Clustered = true;
             SumIndexFields = Amount;
@@ -144,22 +144,22 @@ Table 50580 "Inhouse Cheque Clearing Buffer"
     trigger OnDelete()
     begin
         if "Transaction No" <> '' then begin
-        Bosa.Reset;
-        if Bosa.Get("No.") then begin
-        if (Bosa.Posted) or (Bosa.Approved) then
-        Error('Cannot delete approved or posted batch');
-        end;
+            Bosa.Reset;
+            if Bosa.Get("No.") then begin
+                if (Bosa.Posted) or (Bosa.Approved) then
+                    Error('Cannot delete approved or posted batch');
+            end;
         end;
     end;
 
     trigger OnModify()
     begin
         if "Transaction No" <> '' then begin
-        Bosa.Reset;
-        if Bosa.Get("No.") then begin
-        if (Bosa.Posted) or (Bosa.Approved) then
-        Error('Cannot modify approved or posted batch');
-        end;
+            Bosa.Reset;
+            if Bosa.Get("No.") then begin
+                if (Bosa.Posted) or (Bosa.Approved) then
+                    Error('Cannot modify approved or posted batch');
+            end;
         end;
     end;
 
@@ -167,18 +167,18 @@ Table 50580 "Inhouse Cheque Clearing Buffer"
     begin
         Bosa.Reset;
         if Bosa.Get("No.") then begin
-        if (Bosa.Posted) or (Bosa.Approved) then
-        Error('Cannot rename approved or posted batch');
+            if (Bosa.Posted) or (Bosa.Approved) then
+                Error('Cannot rename approved or posted batch');
         end;
     end;
 
     var
-        Cust: Record "Members Register";
+        Cust: Record Customer;
         Vend: Record Vendor;
         Bank: Record "Bank Account";
         Bosa: Record "BOSA Transfers";
         "G/L": Record "G/L Account";
-        memb: Record "Members Register";
+        memb: Record Customer;
         Accounttype: Record "Account Types-Saving Products";
 }
 

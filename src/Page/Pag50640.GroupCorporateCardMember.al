@@ -5,7 +5,7 @@ Page 50640 "Group/Corporate Card-Member"
     Editable = false;
     PageType = Card;
     PromotedActionCategories = 'New,Process,Reports,Approval,Budgetary Control,Cancellation,Category7_caption,Category8_caption,Category9_caption,Category10_caption';
-    SourceTable = "Members Register";
+    SourceTable = Customer;
     SourceTableView = where("Account Category" = filter(Corporate | Group));
 
     layout
@@ -98,7 +98,7 @@ Page 50640 "Group/Corporate Card-Member"
                     ApplicationArea = Basic;
                     ShowMandatory = true;
                 }
-                field(Picture; Picture)
+                field(Picture; Piccture)
                 {
                     ApplicationArea = Basic;
                     ShowMandatory = true;
@@ -1061,7 +1061,7 @@ Page 50640 "Group/Corporate Card-Member"
         StatusPermissions: Record "Status Change Permision";
         Charges: Record Charges;
         Vend: Record Vendor;
-        Cust: Record "Members Register";
+        Cust: Record Customer;
         LineNo: Integer;
         UsersID: Record User;
         GeneralSetup: Record "Sacco General Set-Up";

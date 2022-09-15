@@ -235,7 +235,7 @@ Report 50857 "Recover Loan Repayment Pension"
         GeneralJnl: Record "Gen. Journal Line";
         BosaSetUp: Record "Sacco General Set-Up";
         RunBal: Decimal;
-        Cust: Record "Members Register";
+        Cust: Record Customer;
         LOustanding: Decimal;
         LineNo: Integer;
 

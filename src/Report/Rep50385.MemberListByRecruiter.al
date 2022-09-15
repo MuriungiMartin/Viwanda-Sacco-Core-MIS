@@ -14,7 +14,7 @@ Report 50385 "Member List By Recruiter"
 
     dataset
     {
-        dataitem("Members Register"; "Members Register")
+        dataitem(Customer; Customer)
         {
             DataItemTableView = sorting("Introduced By") where("Customer Posting Group" = filter('BOSA'));
             PrintOnlyIfDetail = false;
@@ -50,25 +50,25 @@ Report 50385 "Member List By Recruiter"
             column(S_No; intcount)
             {
             }
-            column(Registration_Date; "Members Register"."Registration Date")
+            column(Registration_Date; Customer."Registration Date")
             {
             }
-            column(Personal_No; "Members Register"."Payroll No")
+            column(Personal_No; Customer."Payroll No")
             {
             }
-            column(Name; "Members Register".Name)
+            column(Name; Customer.Name)
             {
             }
-            column(Employer_Code; "Members Register"."Employer Code")
+            column(Employer_Code; Customer."Employer Code")
             {
             }
-            column(Employer_Name; "Members Register"."Employer Name")
+            column(Employer_Name; Customer."Employer Name")
             {
             }
-            column(Department; "Members Register"."Station/Department")
+            column(Department; Customer."Station/Department")
             {
             }
-            column(Recruited_By; "Members Register"."Recruited By")
+            column(Recruited_By; Customer."Recruited By")
             {
             }
             column(Verified_By__________________________________________________Caption; Verified_By__________________________________________________CaptionLbl)
@@ -140,10 +140,10 @@ Report 50385 "Member List By Recruiter"
             column(CreditComSign3; CreditComSign3)
             {
             }
-            column(COMPPIC; "Members Register".Picture)
+            column(COMPPIC; Customer.Piccture)
             {
             }
-            column(NAME1; "Members Register".Name)
+            column(NAME1; Customer.Name)
             {
             }
             trigger OnAfterGetRecord();
@@ -220,7 +220,7 @@ Report 50385 "Member List By Recruiter"
         ApprovalSetup: Record "Table Permission Buffer";
         LocationFilter: Code[20];
         TotalApproved: Decimal;
-        cust: Record "Members Register";
+        cust: Record Customer;
         BOSABal: Decimal;
         SuperBal: Decimal;
         LAppl: Record "HR Transport Requisition Pass";
@@ -248,8 +248,8 @@ Report 50385 "Member List By Recruiter"
         Date________________________Caption_Control1102755005Lbl: label 'Date..............';
         GenSetUp: Record "HR Leave Planner Lines";
         LoanApp: Record "HR Transport Requisition Pass";
-        CustRec: Record "Members Register";
-        CustRecord: Record "Members Register";
+        CustRec: Record Customer;
+        CustRecord: Record Customer;
         TShares: Decimal;
         TLoans: Decimal;
         LoanShareRatio: Decimal;

@@ -225,7 +225,7 @@ Page 50335 "Fixed Deposit Acc. List"
     }
 
     var
-        Cust: Record "Members Register";
+        Cust: Record Customer;
         Vend: Record Vendor;
 }
 

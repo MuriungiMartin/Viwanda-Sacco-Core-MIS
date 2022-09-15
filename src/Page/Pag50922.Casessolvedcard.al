@@ -226,7 +226,7 @@ Page 50922 "Cases solved card"
     var
         iEntryNo: Integer;
         SMSMessages: Record "SMS Messages";
-        Cust: Record "Members Register";
+        Cust: Record Customer;
     begin
 
         //SMS MESSAGE
@@ -261,7 +261,7 @@ Page 50922 "Cases solved card"
     var
         iEntryNo: Integer;
         SMSMessages: Record "SMS Messages";
-        cust: Record "Members Register";
+        cust: Record Customer;
     begin
 
         //SMS MESSAGE

@@ -61,7 +61,7 @@ Table 50434 "FOSA Account Sign. Details"
         }
         field(14; "Member No."; Code[30])
         {
-            TableRelation = "Members Register"."No.";
+            TableRelation = Customer."No.";
 
             trigger OnValidate()
             begin
@@ -75,7 +75,7 @@ Table 50434 "FOSA Account Sign. Details"
                     "ID No." := ObjMembers."ID No.";
                     "Email Address" := ObjMembers."E-Mail";
                     Signature := ObjMembers.Signature;
-                    Picture := ObjMembers.Picture;
+                    Picture := ObjMembers.Piccture;
                 end;
             end;
         }
@@ -173,8 +173,8 @@ Table 50434 "FOSA Account Sign. Details"
     end;
 
     var
-        CUST: Record "Members Register";
-        ObjMembers: Record "Members Register";
+        CUST: Record Customer;
+        ObjMembers: Record Customer;
         NoSeries: Record "Sacco No. Series";
         NoSeriesMgt: Codeunit NoSeriesManagement;
 }

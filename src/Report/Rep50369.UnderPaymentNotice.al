@@ -35,7 +35,7 @@ Report 50369 "UnderPayment Notice"
             column(LBalance1; LBalance1)
             {
             }
-            dataitem(Customer; "Members Register")
+            dataitem(Customer; Customer)
             {
                 DataItemLink = "No." = field("Client Code");
                 RequestFilterFields = "No.";
@@ -495,7 +495,7 @@ Report 50369 "UnderPayment Notice"
         LBalance: Decimal;
         PersonalNo: Code[50];
         GAddress: Text[250];
-        Cust: Record "Members Register";
+        Cust: Record Customer;
         TotalRec: Decimal;
         NoGuarantors: Integer;
         AmountT: Decimal;

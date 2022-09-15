@@ -929,7 +929,7 @@ Page 50339 "Membership App card 2"
                                         //PictureExists:=Picture.HASVALUE;
                                         //SignatureExists:=Signature.HASVALUE;
                                         //IF (PictureExists=TRUE) AND (SignatureExists=TRUE) THEN BEGIN
-                                        Cust.Picture := Picture;
+                                        Cust.Piccture := Picture;
                                         Cust.Signature := Signature;
                                         //END ELSE
                                         //ERROR('Kindly upload a Picture and signature');
@@ -1280,7 +1280,7 @@ Page 50339 "Membership App card 2"
 
     var
         StatusPermissions: Record "Status Change Permision";
-        Cust: Record "Members Register";
+        Cust: Record Customer;
         Accounts: Record Vendor;
         AcctNo: Code[20];
         NextOfKinApp: Record "Member App Nominee";

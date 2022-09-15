@@ -5,7 +5,7 @@ Report 50969 "Monthly Expected TurnOver(Y)"
 
     dataset
     {
-        dataitem("Members Register"; "Members Register")
+        dataitem(Customer; Customer)
         {
             RequestFilterFields = "No.", "Insider Status";
             column(ReportForNavId_1; 1)

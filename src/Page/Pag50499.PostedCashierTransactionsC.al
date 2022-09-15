@@ -516,7 +516,7 @@ Page 50499 "Posted Cashier Transactions C"
         STODeductedAmount: Decimal;
         NoticeAmount: Decimal;
         AccountNotices: Record "Account Notices";
-        Cust: Record "Members Register";
+        Cust: Record Customer;
         AccountHolders: Record Vendor;
         ChargesOnFD: Decimal;
         TotalGuaranted: Decimal;
@@ -524,7 +524,7 @@ Page 50499 "Posted Cashier Transactions C"
         chqtransactions: Record Transactions;
         Trans: Record Transactions;
         TotalUnprocessed: Decimal;
-        CustAcc: Record "Members Register";
+        CustAcc: Record Customer;
         AmtAfterWithdrawal: Decimal;
         TransactionsRec: Record Transactions;
         LoansTotal: Decimal;

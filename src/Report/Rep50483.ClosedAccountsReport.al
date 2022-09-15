@@ -77,17 +77,17 @@ Report 50483 "Closed Accounts Report"
             column(ExitType_MembershipExist; "Membership Exist"."Exit Type")
             {
             }
-            dataitem("Members Register"; "Members Register")
+            dataitem(Customer; Customer)
             {
                 DataItemLink = "No." = field("Member No.");
 
-                column(CurrentShares_MembersRegister; "Members Register"."Current Shares")
+                column(CurrentShares_MembersRegister; Customer."Current Shares")
                 {
                 }
-                column(CurrentSavings_MembersRegister; "Members Register"."Current Savings")
+                column(CurrentSavings_MembersRegister; Customer."Current Savings")
                 {
                 }
-                column(SharesRetained_MembersRegister; "Members Register"."Shares Retained")
+                column(SharesRetained_MembersRegister; Customer."Shares Retained")
                 {
                 }
             }

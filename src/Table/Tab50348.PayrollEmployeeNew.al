@@ -376,7 +376,7 @@ Table 50348 "Payroll Employee New"
         }
         field(93; "Sacco Membership No."; Code[20])
         {
-            TableRelation = "Members Register"."No.";
+            TableRelation = Customer."No.";
         }
         field(94; "Insurance Premium"; Decimal)
         {

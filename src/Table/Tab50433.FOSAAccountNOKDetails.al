@@ -54,7 +54,7 @@ Table 50433 "FOSA Account NOK Details"
         }
         field(18; "Member No"; Code[10])
         {
-            TableRelation = "Members Register"."No.";
+            TableRelation = Customer."No.";
         }
     }
 

@@ -1227,7 +1227,7 @@ Table 50160 "HR Employees"
         }
         field(50002; "Bosa Member account"; Code[20])
         {
-            TableRelation = "Members Register";
+            TableRelation = Customer;
         }
         field(50003; "Sacco Paying Bank Code"; Code[20])
         {

@@ -67,7 +67,7 @@ Codeunit 50120 "PortalIntegration"
     end;
 
     var
-        objMember: Record "Members Register";
+        objMember: Record Customer;
         Vendor: Record Vendor;
         VendorLedgEntry: Record "Vendor Ledger Entry";
         FILESPATH: label 'D:\Kentours Revised\KENTOURS\Kentours\Kentours\Downloads\';
@@ -104,7 +104,7 @@ Codeunit 50120 "PortalIntegration"
         Loanperiod: Integer;
         LastFieldNo: Integer;
         FooterPrinted: Boolean;
-        Cust: Record "Members Register";
+        Cust: Record Customer;
         StartDate: Date;
         DateFilter: Text[100];
         FromDate: Date;
@@ -113,11 +113,11 @@ Codeunit 50120 "PortalIntegration"
         ToDateS: Text[100];
         DivTotal: Decimal;
         CDeposits: Decimal;
-        CustDiv: Record "Members Register";
+        CustDiv: Record Customer;
         DivProg: Record "Dividends Progression";
         CDiv: Decimal;
         BDate: Date;
-        CustR: Record "Members Register";
+        CustR: Record Customer;
         CapDiv: Decimal;
         DivCapTotal: Decimal;
         RunningPeriod: Code[10];

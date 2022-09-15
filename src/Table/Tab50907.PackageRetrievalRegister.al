@@ -158,7 +158,7 @@ Table 50907 "Package Retrieval Register"
         }
         field(51516152; "Member No"; Code[20])
         {
-            TableRelation = "Members Register"."No.";
+            TableRelation = Customer."No.";
 
             trigger OnValidate()
             begin
@@ -267,7 +267,7 @@ Table 50907 "Package Retrieval Register"
         ObjPackageTypes: Record "Package Types";
         AvailableBal: Decimal;
         LodgeFee: Decimal;
-        ObjCust: Record "Members Register";
+        ObjCust: Record Customer;
         ObjGenSetup: Record "Sacco General Set-Up";
 }
 

@@ -11,7 +11,7 @@ Table 50964 "CRB Notice Register"
         field(2; "Member No"; Code[20])
         {
             Editable = false;
-            TableRelation = "Members Register"."No.";
+            TableRelation = Customer."No.";
 
             trigger OnValidate()
             begin
@@ -125,7 +125,7 @@ Table 50964 "CRB Notice Register"
     }
 
     var
-        ObjCust: Record "Members Register";
+        ObjCust: Record Customer;
         ObjLoanType: Record "Loan Products Setup";
 }
 

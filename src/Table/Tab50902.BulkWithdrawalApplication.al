@@ -24,7 +24,7 @@ Table 50902 "Bulk Withdrawal Application"
         }
         field(4; "Member No"; Code[20])
         {
-            TableRelation = "Members Register"."No.";
+            TableRelation = Customer."No.";
 
             trigger OnValidate()
             begin
@@ -212,8 +212,8 @@ Table 50902 "Bulk Withdrawal Application"
     end;
 
     var
-        Cust: Record "Members Register";
-        CustM: Record "Members Register";
+        Cust: Record Customer;
+        CustM: Record Customer;
         Account: Record Vendor;
         AccountTypes: Record "Account Types-Saving Products";
         ATMApp: Record "ATM Card Applications";

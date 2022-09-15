@@ -1631,10 +1631,10 @@ Report 50883 "Loan Appraisal-Micro."
     end;
 
     var
-        CustRec: Record "Members Register";
+        CustRec: Record Customer;
         GenSetUp: Record "Sacco General Set-Up";
-        Cust: Record "Members Register";
-        CustRecord: Record "Members Register";
+        Cust: Record Customer;
+        CustRecord: Record Customer;
         TShares: Decimal;
         TLoans: Decimal;
         LoanApp: Record "Loans Register";
@@ -1864,11 +1864,11 @@ Report 50883 "Loan Appraisal-Micro."
         ToDateS: Text[100];
         DivTotal: Decimal;
         CDeposits: Decimal;
-        CustDiv: Record "Members Register";
+        CustDiv: Record Customer;
         DivProg: Record "Dividends Progression";
         CDiv: Decimal;
         BDate: Date;
-        CustR: Record "Members Register";
+        CustR: Record Customer;
         BasicPay: Decimal;
         HouseAllowance: Decimal;
         TransportAll: Decimal;

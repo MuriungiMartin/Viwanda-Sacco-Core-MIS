@@ -29,7 +29,7 @@ Table 50896 "Micro_Fin_Schedule"
         }
         field(4; "Account Number"; Code[20])
         {
-            TableRelation = "Members Register" where("Customer Posting Group" = filter('MICRO'));
+            TableRelation = Customer where("Customer Posting Group" = filter('MICRO'));
 
             trigger OnValidate()
             begin
@@ -367,7 +367,7 @@ Table 50896 "Micro_Fin_Schedule"
         RunningBAL: Decimal;
         LoanApp: Record "Loans Register";
         Trans: Record Micro_Fin_Transactions;
-        Member: Record "Members Register";
+        Member: Record Customer;
         GetLoans: Record "Loans Register";
         GenlSetUp: Record "Sacco General Set-Up";
         Text001: label 'Monthly contribution cannot be less than minimum contributions of  Kshs%1';

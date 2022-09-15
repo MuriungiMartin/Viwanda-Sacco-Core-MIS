@@ -2350,7 +2350,7 @@ Page 50436 "Member Account Card View"
                         Cust.Status := Cust.Status::Active;
                         Cust."Employer Code" := "Employer Code";
                         Cust."Date of Birth" := "Date of Birth";
-                        //Cust.Picture:=Picture;
+                        //Cust.Piccture:=Picture;
                         //Cust.Signature:=Signature;
                         //Cust."Station/Department":="Station/Department";
                         Cust."E-Mail" := "E-Mail";
@@ -2431,7 +2431,7 @@ Page 50436 "Member Account Card View"
                         //PictureExists:=Picture.HASVALUE;
                         //SignatureExists:=Signature.HASVALUE;
                         //IF (PictureExists=TRUE) AND (SignatureExists=TRUE) THEN BEGIN
-                        //Cust.Picture:=Picture;
+                        //Cust.Piccture:=Picture;
                         //Cust.Signature:=Signature;
                         //END ELSE
                         //ERROR('Kindly upload a Picture and signature');
@@ -2684,7 +2684,7 @@ Page 50436 "Member Account Card View"
         InterestBuffer: Record "Interest Buffer";
         FDType: Record "Fixed Deposit Type";
         Vend: Record Vendor;
-        Cust: Record "Members Register";
+        Cust: Record Customer;
         LineNo: Integer;
         UsersID: Record User;
         DActivity: Code[20];

@@ -18,7 +18,7 @@ Table 50711 "Loan Rescheduling"
         }
         field(2; "Member No"; Code[20])
         {
-            TableRelation = "Members Register"."No.";
+            TableRelation = Customer."No.";
 
             trigger OnValidate()
             begin
@@ -211,7 +211,7 @@ Table 50711 "Loan Rescheduling"
     end;
 
     var
-        Cust: Record "Members Register";
+        Cust: Record Customer;
         LoansRec: Record "Loans Register";
         SalesSetup: Record "Sacco No. Series";
         NoSeriesMgt: Codeunit NoSeriesManagement;

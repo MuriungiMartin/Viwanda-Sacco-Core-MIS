@@ -14,7 +14,7 @@ Report 50641 "Update Member Risk Rate"
 
     dataset
     {
-        dataitem("Members Register"; "Members Register")
+        dataitem(Customer; Customer)
         {
             CalcFields = "Has ATM Card";
             RequestFilterFields = "No.";
@@ -33,7 +33,7 @@ Report 50641 "Update Member Risk Rate"
                     "Cards Type Taken" := 'ATM Debit'
                 else
                     "Cards Type Taken" := 'None';
-                "Members Register"."Accounts Type Taken" := '';
+                Customer."Accounts Type Taken" := '';
                 "Others(Channels)" := 'Others';
                 Modify;
             end;

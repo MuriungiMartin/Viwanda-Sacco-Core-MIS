@@ -14,7 +14,7 @@ Report 50389 "Risk Mgnt Report"
 
     dataset
     {
-        dataitem("Members Register"; "Members Register")
+        dataitem(Customer; Customer)
         {
             DataItemTableView = sorting("No.") where(Status = filter(Active | Dormant));
             PrintOnlyIfDetail = false;
@@ -46,28 +46,28 @@ Report 50389 "Risk Mgnt Report"
             column(UserId; UserId)
             {
             }
-            column(No; "Members Register"."No.")
+            column(No; Customer."No.")
             {
             }
-            column(Name; "Members Register".Name)
+            column(Name; Customer.Name)
             {
             }
-            column(Employer_Code; "Members Register"."Employer Code")
+            column(Employer_Code; Customer."Employer Code")
             {
             }
-            column(Employer_Name; "Members Register"."Employer Name")
+            column(Employer_Name; Customer."Employer Name")
             {
             }
-            column(Withdrawal_Date; "Members Register"."Withdrawal Date")
+            column(Withdrawal_Date; Customer."Withdrawal Date")
             {
             }
-            column(Status; "Members Register".Status)
+            column(Status; Customer.Status)
             {
             }
-            column(Reason_For_Withdrawal; "Members Register"."Resons for Status Change")
+            column(Reason_For_Withdrawal; Customer."Resons for Status Change")
             {
             }
-            column(Position; "Members Register"."Status - Withdrawal App.")
+            column(Position; Customer."Status - Withdrawal App.")
             {
             }
             column(Verified_By__________________________________________________Caption; Verified_By__________________________________________________CaptionLbl)
@@ -139,10 +139,10 @@ Report 50389 "Risk Mgnt Report"
             column(CreditComSign3; CreditComSign3)
             {
             }
-            column(COMPPIC; "Members Register".Picture)
+            column(COMPPIC; Customer.Piccture)
             {
             }
-            column(NAME1; "Members Register".Name)
+            column(NAME1; Customer.Name)
             {
             }
             trigger OnAfterGetRecord();
@@ -282,7 +282,7 @@ Report 50389 "Risk Mgnt Report"
         ApprovalSetup: Record "Table Permission Buffer";
         LocationFilter: Code[20];
         TotalApproved: Decimal;
-        cust: Record "Members Register";
+        cust: Record Customer;
         BOSABal: Decimal;
         SuperBal: Decimal;
         LAppl: Record "HR Transport Requisition Pass";
@@ -310,8 +310,8 @@ Report 50389 "Risk Mgnt Report"
         Date________________________Caption_Control1102755005Lbl: label 'Date........................';
         GenSetUp: Record "HR Leave Planner Lines";
         LoanApp: Record "HR Transport Requisition Pass";
-        CustRec: Record "Members Register";
-        CustRecord: Record "Members Register";
+        CustRec: Record Customer;
+        CustRecord: Record Customer;
         TShares: Decimal;
         TLoans: Decimal;
         LoanShareRatio: Decimal;

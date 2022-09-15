@@ -5,7 +5,7 @@ Report 50967 "Member Monthly Processes"
 
     dataset
     {
-        dataitem("Members Register"; "Members Register")
+        dataitem(Customer; Customer)
         {
             column(ReportForNavId_1; 1)
             {
@@ -40,12 +40,12 @@ Report 50967 "Member Monthly Processes"
             trigger OnPreDataItem()
             begin
                 VarDateFilter := '..' + Format(WorkDate);
-                "Members Register".CalcFields("Members Register"."Deposits Contributed", "Members Register"."Deposit Contributed Historical",
-                "Members Register"."Deposits Penalty Exists");
-                "Members Register".SetFilter("Members Register"."Date Filter", VarDateFilter);
-                "Members Register".SetFilter("Members Register"."Monthly Contribution", '>%1',
-                ("Members Register"."Deposits Contributed" + "Members Register"."Deposit Contributed Historical"));
-                //"Members Register".SETFILTER()"Members Register"."FOSA Balances",'>%1',10);
+                Customer.CalcFields(Customer."Deposits Contributed", Customer."Deposit Contributed Historical",
+                Customer."Deposits Penalty Exists");
+                Customer.SetFilter(Customer."Date Filter", VarDateFilter);
+                Customer.SetFilter(Customer."Monthly Contribution", '>%1',
+                (Customer."Deposits Contributed" + Customer."Deposit Contributed Historical"));
+                //Customer.SETFILTER()Customer."FOSA Balances",'>%1',10);
 
                 SFactory.FnRunProcessRefereeComissions;
             end;
@@ -75,7 +75,7 @@ Report 50967 "Member Monthly Processes"
 
     local procedure FnRunTransferAdditionalSharestoShareCapital()
     var
-        ObjMember: Record "Members Register";
+        ObjMember: Record Customer;
         VarRunningBal: Decimal;
         ObjAccount: Record Vendor;
         AmountToDeduct: Decimal;

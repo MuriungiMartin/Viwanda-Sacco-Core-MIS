@@ -103,6 +103,6 @@ Page 50539 "Products Signatories"
     var
         MemberApp: Record "Membership Applications";
         ReltnShipTypeEditable: Boolean;
-        CUST: Record "Members Register";
+        CUST: Record Customer;
 }
 

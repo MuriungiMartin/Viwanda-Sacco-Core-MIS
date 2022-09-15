@@ -938,7 +938,7 @@ Report 50881 "Check of Distribution"
         GLAcc: Record "G/L Account";
         Currency: Record Currency;
         Cust: Record Customer;
-        Memb: Record "Members Register";
+        Memb: Record Customer;
         Vend: Record Vendor;
         BankAccPostingGr: Record "Bank Account Posting Group";
         BankAcc: Record "Bank Account";

@@ -219,7 +219,7 @@ Report 50656 "Account Frequency Report"
     var
         Company: Record "Company Information";
         ObjGLAccounts: Record "G/L Account";
-        ObjMember: Record "Members Register";
+        ObjMember: Record Customer;
         ObjAccounts: Record Vendor;
         VarGLName: Text;
         VarMemberName: Text;

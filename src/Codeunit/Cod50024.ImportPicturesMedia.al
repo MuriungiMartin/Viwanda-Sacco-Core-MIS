@@ -49,7 +49,7 @@ Codeunit 50024 "Import Pictures Media"
         CameraAvailable: Boolean;
         DeleteExportEnabled: Boolean;
         HideActions: Boolean;
-        ObjMember: Record "Members Register";
+        ObjMember: Record Customer;
         FILE_PATH: label 'D:\Softwares\ksacco\Photo\';
         FILE_PATH_S: label 'D:\Softwares\ksacco\Sign\';
         ObjAccountAgents: Record "Account Agent Details";

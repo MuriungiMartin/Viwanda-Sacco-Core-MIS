@@ -879,7 +879,7 @@ Page 50159 "Posted Loan Recovery Header"
         ScheduleCode: Code[20];
         PreviewShedule: Record "Loan Repayment Schedule";
         PeriodInterval: Code[10];
-        CustomerRecord: Record "Members Register";
+        CustomerRecord: Record Customer;
         Gnljnline: Record "Gen. Journal Line";
         Jnlinepost: Codeunit "Gen. Jnl.-Post Line";
         CumInterest: Decimal;
@@ -888,10 +888,10 @@ Page 50159 "Posted Loan Recovery Header"
         GenBatch: Record "Gen. Journal Batch";
         GnljnlineCopy: Record "Gen. Journal Line";
         NewLNApplicNo: Code[10];
-        Cust: Record "Members Register";
+        Cust: Record Customer;
         LoanApp: Record "Loans Register";
         TestAmt: Decimal;
-        CustRec: Record "Members Register";
+        CustRec: Record Customer;
         CustPostingGroup: Record "Customer Posting Group";
         GenSetUp: Record "Sacco General Set-Up";
         PCharges: Record "Loan Product Charges";
@@ -924,7 +924,7 @@ Page 50159 "Posted Loan Recovery Header"
         BOSAInt: Decimal;
         TopUpComm: Decimal;
         TotalTopupComm: Decimal;
-        CustE: Record "Members Register";
+        CustE: Record Customer;
         DocN: Text[50];
         DocM: Text[100];
         DNar: Text[250];
@@ -1034,7 +1034,7 @@ Page 50159 "Posted Loan Recovery Header"
         LastNoUsed: Code[20];
         ObjLoanType: Record "Loan Products Setup";
         VarAmounttoDeduct: Decimal;
-        ObjCust: Record "Members Register";
+        ObjCust: Record Customer;
         ObjLoanGuarantors: Record "Loan Member Loans";
         ObjLoanGuarantorsII: Record "Loan Member Loans";
         ObjLoanGuarantorsIII: Record "Loan Member Loans";
@@ -2051,7 +2051,7 @@ Page 50159 "Posted Loan Recovery Header"
     //     ObjBOSARefundLedger: Record "BOSA Account Refund Ledger";
     //     EntryNo: Integer;
     //     VarGuarantorName: Text[100];
-    //     ObjMember: Record "Members Register";
+    //     ObjMember: Record Customer;
     // begin
     //     if ObjMember.Get("Member No") then begin
     //         if "Refund  BOSA Deposit" = true then begin

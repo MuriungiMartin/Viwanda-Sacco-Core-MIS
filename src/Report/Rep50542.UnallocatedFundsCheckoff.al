@@ -128,7 +128,7 @@ Report 50542 "Unallocated Funds Checkoff"
         CLosingBalance: Decimal;
         OpenBalanceXmas: Decimal;
         CLosingBalanceXmas: Decimal;
-        Cust: Record "Members Register";
+        Cust: Record Customer;
         OpeningBal: Decimal;
         ClosingBal: Decimal;
         FirstRec: Boolean;

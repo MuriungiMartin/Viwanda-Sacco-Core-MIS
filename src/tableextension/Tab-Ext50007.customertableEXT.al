@@ -70,7 +70,7 @@ tableextension 50007 "customertableEXT" extends Customer
         field(53913; Gender; Option)
         {
             DataClassification = ToBeClassified;
-            OptionMembers = Male,Female;
+            OptionMembers = " ",Male,Female;
         }
         field(53914; "Date Of Birth"; Date)
         {
@@ -1268,7 +1268,7 @@ tableextension 50007 "customertableEXT" extends Customer
         }
         field(69054; "Last Share Certificate No"; Integer)
         {
-            CalcFormula = max("Members Register"."Share Certificate No");
+            CalcFormula = max(Customer."Share Certificate No");
             FieldClass = FlowField;
         }
         field(69055; "No Of Days"; Integer)
@@ -1276,10 +1276,10 @@ tableextension 50007 "customertableEXT" extends Customer
         }
         field(69056; "Application No."; Code[20])
         {
-            CalcFormula = lookup("Members Register"."No." where("No." = field("No.")));
+            CalcFormula = lookup(Customer."No." where("No." = field("No.")));
             Editable = true;
             FieldClass = FlowField;
-            TableRelation = "Members Register"."No.";
+            TableRelation = Customer."No.";
         }
         field(69057; "Member Category"; Option)
         {
@@ -1916,7 +1916,7 @@ tableextension 50007 "customertableEXT" extends Customer
         }
         field(69189; "Referee Member No"; Code[10])
         {
-            TableRelation = "Members Register"."No.";
+            TableRelation = Customer."No.";
 
             trigger OnValidate()
             begin
@@ -2568,7 +2568,7 @@ tableextension 50007 "customertableEXT" extends Customer
 
     var
         myInt: Integer;
-        MembersRec: Record "Members Register";
+        MembersRec: Record Customer;
         Text000: label 'You cannot delete %1 %2 because there is at least one outstanding Sales %3 for this customer.';
         Text002: label 'Do you wish to create a contact for %1 %2?';
         SalesSetup: Record "Sacco No. Series";
@@ -2609,7 +2609,7 @@ tableextension 50007 "customertableEXT" extends Customer
         GenSetUp: Record "Sacco General Set-Up";
         MinShares: Decimal;
         MovementTracker: Record "Movement Tracker";
-        Cust: Record "Members Register";
+        Cust: Record Customer;
         Vend: Record Vendor;
         CustFosa: Code[20];
         Vend2: Record Vendor;

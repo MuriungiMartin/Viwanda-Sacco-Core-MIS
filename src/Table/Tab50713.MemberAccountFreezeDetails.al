@@ -19,7 +19,7 @@ Table 50713 "Member Account Freeze Details"
         }
         field(2; "Member No"; Code[30])
         {
-            TableRelation = "Members Register"."No.";
+            TableRelation = Customer."No.";
 
             trigger OnValidate()
             begin
@@ -158,7 +158,7 @@ Table 50713 "Member Account Freeze Details"
     var
         NoSetup: Record "Sacco No. Series";
         NoSeriesMgt: Codeunit NoSeriesManagement;
-        ObjCust: Record "Members Register";
+        ObjCust: Record Customer;
         ObjAccount: Record Vendor;
         SFactory: Codeunit "SURESTEP Factory";
         ObjFreeze: Record "Member Account Freeze Details";

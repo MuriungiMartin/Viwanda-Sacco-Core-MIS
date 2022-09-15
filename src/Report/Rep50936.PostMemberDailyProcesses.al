@@ -5,7 +5,7 @@ Report 50936 "Post Member Daily Processes"
 
     dataset
     {
-        dataitem("Members Register"; "Members Register")
+        dataitem(Customer; Customer)
         {
             DataItemTableView = where(Status = filter(<> Exited | Deceased), Blocked = filter(" "));
             RequestFilterFields = "No.";
@@ -97,7 +97,7 @@ Report 50936 "Post Member Daily Processes"
         VarCurrYearBeginDate: Date;
         VarCurrYear: Integer;
         VarBenfundCurrYearCredits: Decimal;
-        ObjMemberIV: Record "Members Register";
+        ObjMemberIV: Record Customer;
         ObjMemberBenfundHistorical: Record "Member Historical Ledger Entry";
         VarBenfundCurrYearCreditsHistorical: Decimal;
         ObjAccounts: Record Vendor;
@@ -106,7 +106,7 @@ Report 50936 "Post Member Daily Processes"
     var
         VarRegistrationFeeVariance: Decimal;
         ObjGensetup: Record "Sacco General Set-Up";
-        ObjMember: Record "Members Register";
+        ObjMember: Record Customer;
         VarTaxonFee: Decimal;
         VarRegistrationFeeSeparate: Decimal;
         VarTaxOnFeeSeprate: Decimal;
@@ -254,7 +254,7 @@ Report 50936 "Post Member Daily Processes"
 
     local procedure FnRunCreateAccounts()
     var
-        ObjMember: Record "Members Register";
+        ObjMember: Record Customer;
         ObjAccounts: Record Vendor;
     begin
         //===================================================================Create Share Capital Account
@@ -339,7 +339,7 @@ Report 50936 "Post Member Daily Processes"
 
     local procedure FnRunTransferFOSAShares()
     var
-        ObjMember: Record "Members Register";
+        ObjMember: Record Customer;
         VarRunningBal: Decimal;
         ObjAccount: Record Vendor;
         AmountToDeduct: Decimal;
@@ -433,7 +433,7 @@ Report 50936 "Post Member Daily Processes"
 
     local procedure FnRunTransferFOSASharestoShareCapital()
     var
-        ObjMember: Record "Members Register";
+        ObjMember: Record Customer;
         VarRunningBal: Decimal;
         ObjAccount: Record Vendor;
         AmountToDeduct: Decimal;
@@ -500,7 +500,7 @@ Report 50936 "Post Member Daily Processes"
     var
         VarAge: Integer;
         VarAge2: Integer;
-        ObjMember: Record "Members Register";
+        ObjMember: Record Customer;
     begin
         ObjMember.Reset;
         ObjMember.SetRange(ObjMember."No.", VarMemberNo);
@@ -508,14 +508,14 @@ Report 50936 "Post Member Daily Processes"
         if ObjMember.FindSet then begin
             VarAge := WorkDate - ObjMember."Date of Birth"; //Returns number of days old
             VarAge2 := ROUND((VarAge / 365.2364), 1, '<');  //Returns number of years old as Decimal - Takes into Account Leap Years
-            ObjMember.Age := VarAge2;
+            ObjMember.Age := format(VarAge2);
             ObjMember.Modify;
         end;
     end;
 
     local procedure FnRunTransferShareCapitalVariance()
     var
-        ObjMember: Record "Members Register";
+        ObjMember: Record Customer;
     begin
         ObjGensetup.Get;
         BATCH_TEMPLATE := 'GENERAL';
@@ -569,7 +569,7 @@ Report 50936 "Post Member Daily Processes"
 
     local procedure FnRunTransferBenevolentFund()
     var
-        ObjMember: Record "Members Register";
+        ObjMember: Record Customer;
     begin
         ObjGensetup.Get;
         BATCH_TEMPLATE := 'GENERAL';

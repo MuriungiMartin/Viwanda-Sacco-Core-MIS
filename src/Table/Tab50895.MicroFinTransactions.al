@@ -24,7 +24,7 @@ Table 50895 "Micro_Fin_Transactions"
         field(5; "Group Code"; Code[20])
         {
             Editable = true;
-            TableRelation = "Members Register"."No." where("Group Account" = filter(true));
+            TableRelation = Customer."No." where("Group Account" = filter(true));
 
             trigger OnValidate()
             begin
@@ -283,7 +283,7 @@ Table 50895 "Micro_Fin_Transactions"
     end;
 
     var
-        GroupMembers: Record "Members Register";
+        GroupMembers: Record Customer;
         LoanApplic: Record "Loans Register";
         noseriesmgt: Codeunit NoSeriesManagement;
         SalesSetup: Record "Sacco No. Series";
@@ -291,6 +291,6 @@ Table 50895 "Micro_Fin_Transactions"
         BANKACC: Record "Bank Account";
         VEND: Record Vendor;
         OfficeGroup: Record "User Setup";
-        Member: Record "Members Register";
+        Member: Record Customer;
 }
 

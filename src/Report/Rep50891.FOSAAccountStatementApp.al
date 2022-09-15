@@ -569,7 +569,7 @@ Report 50891 "FOSA Account Statement (App)"
         TotalCredits: Decimal;
         Totals: Decimal;
         CompanyNamee: Code[50];
-        Cust: Record "Members Register";
+        Cust: Record Customer;
         Employer: Record "Sacco Employers";
         Company: Record "Company Information";
         FromDate: Date;

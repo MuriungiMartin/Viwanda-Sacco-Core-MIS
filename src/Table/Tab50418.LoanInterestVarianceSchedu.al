@@ -9,7 +9,7 @@ Table 50418 "Loan Interest Variance Schedu"
         }
         field(2; "Member No."; Code[20])
         {
-            TableRelation = "Members Register"."No.";
+            TableRelation = Customer."No.";
         }
         field(3; "Loan Category"; Code[20])
         {

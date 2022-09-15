@@ -7,7 +7,7 @@ Report 50378 "Dividend Processing-Prorated"
 
     dataset
     {
-        dataitem(Customer; "Members Register")
+        dataitem(Customer; Customer)
         {
             DataItemTableView = sorting("No.");
             RequestFilterFields = "No.", Status;
@@ -561,7 +561,7 @@ Report 50378 "Dividend Processing-Prorated"
         CurrReport_PAGENOCaptionLbl: label 'Page';
         LastFieldNo: Integer;
         FooterPrinted: Boolean;
-        Cust: Record "Members Register";
+        Cust: Record Customer;
         StartDate: Date;
         DateFilter: Text[100];
         FromDate: Date;
@@ -571,12 +571,12 @@ Report 50378 "Dividend Processing-Prorated"
         DivTotal: Decimal;
         GenSetUp: Record "Sacco General Set-Up";
         CDeposits: Decimal;
-        CustDiv: Record "Members Register";
+        CustDiv: Record Customer;
         DivProg: Record "Dividends Progression";
         CDiv: Decimal;
         CInterest: Decimal;
         BDate: Date;
-        CustR: Record "Members Register";
+        CustR: Record Customer;
         IntRebTotal: Decimal;
         CIntReb: Decimal;
         LineNo: Integer;
@@ -596,7 +596,7 @@ Report 50378 "Dividend Processing-Prorated"
     var
         ObjLoans: Record "Loans Register";
         VarAmountinArrears: Decimal;
-        ObjMember: Record "Members Register";
+        ObjMember: Record Customer;
         VarRuningBal: Decimal;
         VarAmountRecovered: Decimal;
     begin
@@ -643,7 +643,7 @@ Report 50378 "Dividend Processing-Prorated"
 
     local procedure FnRecoverCapitalizedAmount(MemberNo: Code[30])
     var
-        ObjMember: Record "Members Register";
+        ObjMember: Record Customer;
         VarExpectedCapitalizedAmount: Decimal;
         VarActualCapitalizedAmount: Decimal;
         VarDepositDifference: Decimal;

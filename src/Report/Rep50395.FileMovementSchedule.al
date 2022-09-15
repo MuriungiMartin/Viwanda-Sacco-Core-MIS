@@ -14,7 +14,7 @@ Report 50395 "File Movement Schedule"
 
     dataset
     {
-        dataitem("Members Register"; "Members Register")
+        dataitem(Customer; Customer)
         {
             DataItemTableView = where("File MVT Time" = filter(<> ''));
             PrintOnlyIfDetail = false;
@@ -47,37 +47,37 @@ Report 50395 "File Movement Schedule"
             column(UserId; UserId)
             {
             }
-            column(No; "Members Register"."No.")
+            column(No; Customer."No.")
             {
             }
-            column(Name; "Members Register".Name)
+            column(Name; Customer.Name)
             {
             }
-            column(File_Movement_Remarks; "Members Register"."File Movement Remarks")
+            column(File_Movement_Remarks; Customer."File Movement Remarks")
             {
             }
-            column(Current_File_Location; "Members Register"."Current file location")
+            column(Current_File_Location; Customer."Current file location")
             {
             }
-            column(Move_To; "Members Register"."Move to")
+            column(Move_To; Customer."Move to")
             {
             }
-            column(File_Mvt_User_ID; "Members Register"."File MVT User ID")
+            column(File_Mvt_User_ID; Customer."File MVT User ID")
             {
             }
-            column(File_Mvt_Date; "Members Register"."File MVT Date")
+            column(File_Mvt_Date; Customer."File MVT Date")
             {
             }
-            column(File_Mvt_Time; "Members Register"."File MVT Time")
+            column(File_Mvt_Time; Customer."File MVT Time")
             {
             }
-            column(File_Received; "Members Register"."file Received")
+            column(File_Received; Customer."file Received")
             {
             }
-            column(File_Previous_Location; "Members Register"."File Previous Location")
+            column(File_Previous_Location; Customer."File Previous Location")
             {
             }
-            column(User; "Members Register".User)
+            column(User; Customer.User)
             {
             }
             trigger OnAfterGetRecord();

@@ -84,7 +84,7 @@ Report 50490 "Validate Salary Data"
 
     var
         Vendor: Record Vendor;
-        Cust: Record "Members Register";
+        Cust: Record Customer;
 
 
     var

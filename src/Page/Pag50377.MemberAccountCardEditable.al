@@ -8,7 +8,7 @@ Page 50377 "Member Account Card - Editable"
     PageType = Card;
     PromotedActionCategories = 'New,Process,Reports,Approval,Budgetary Control,Cancellation,Category7_caption,Category8_caption,Category9_caption,Category10_caption';
     RefreshOnActivate = true;
-    SourceTable = "Members Register";
+    SourceTable = Customer;
     SourceTableView = sorting("Employer Code")
                       where("Customer Type" = const(Member));
 
@@ -173,7 +173,7 @@ Page 50377 "Member Account Card - Editable"
                     Caption = 'Company Registration Date';
                     Editable = true;
                 }
-                field(Picture; Picture)
+                field(Picture; Piccture)
                 {
                     ApplicationArea = Basic;
                 }
@@ -1522,7 +1522,7 @@ Page 50377 "Member Account Card - Editable"
         StatusPermissions: Record "Status Change Permision";
         Charges: Record Charges;
         Vend: Record Vendor;
-        Cust: Record "Members Register";
+        Cust: Record Customer;
         LineNo: Integer;
         UsersID: Record User;
         GeneralSetup: Record "Sacco General Set-Up";

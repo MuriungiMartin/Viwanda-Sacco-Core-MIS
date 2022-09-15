@@ -274,7 +274,7 @@ Report 50431 "Treasury Book"
         StartBalanceLCY: Decimal;
         BankAccLedgEntryExists: Boolean;
         PrintReversedEntries: Boolean;
-        Cust: Record "Members Register";
+        Cust: Record Customer;
         Bank: Record "Bank Account";
         Vend: Record Vendor;
         Names: Text[50];

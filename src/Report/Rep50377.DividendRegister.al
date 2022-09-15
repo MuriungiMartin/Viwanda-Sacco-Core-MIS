@@ -6,7 +6,7 @@ Report 50377 "Dividend Register"
 
     dataset
     {
-        dataitem(Customer; "Members Register")
+        dataitem(Customer; Customer)
         {
             DataItemTableView = sorting("No.");
             RequestFilterFields = Status, "Date Filter", "Employer Code", "Dividend Amount", "Mode of Dividend Payment", "Dividends Capitalised %", "Customer Type", "Net Dividend Payable";

@@ -128,6 +128,6 @@ Page 50545 "Account Agent App List"
     var
         MemberApp: Record "Membership Applications";
         ReltnShipTypeEditable: Boolean;
-        CUST: Record "Members Register";
+        CUST: Record Customer;
 }
 

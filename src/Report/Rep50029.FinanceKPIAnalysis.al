@@ -262,7 +262,7 @@ Report 50029 "Finance KPI Analysis"
         VarInsiderDepositsStaff: Decimal;
         VarInsiderDepositsBoard: Decimal;
         ObjLoans: Record "Loans Register";
-        ObjMembers: Record "Members Register";
+        ObjMembers: Record Customer;
         VarDeliquentLoansOver1Year: Decimal;
         ObjLoanPortfolioProvision: Record "Loan Portfolio Provision";
 

@@ -14,7 +14,7 @@ Report 50421 "Generate Dividend FlatRate"
 
     dataset
     {
-        dataitem(Customer; "Members Register")
+        dataitem(Customer; Customer)
         {
             DataItemTableView = sorting("No.");
             RequestFilterFields = "No.", "Date Filter", "Employer Code";
@@ -700,7 +700,7 @@ Report 50421 "Generate Dividend FlatRate"
         Company: Record "Company Information";
         LastFieldNo: Integer;
         FooterPrinted: Boolean;
-        Cust: Record "Members Register";
+        Cust: Record Customer;
         StartDate: Date;
         DateFilter: Text[100];
         FromDate: Date;
@@ -710,7 +710,7 @@ Report 50421 "Generate Dividend FlatRate"
         DivTotal: Decimal;
         GenSetUp: Record "Sacco General Set-Up";
         CDeposits: Decimal;
-        CustDiv: Record "Members Register";
+        CustDiv: Record Customer;
         DivProg: Record "Dividends Progression";
         CDiv: Decimal;
         BDate: Date;

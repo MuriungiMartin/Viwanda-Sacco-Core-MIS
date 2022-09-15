@@ -7,7 +7,7 @@ Report 50484 "Member Loans Guaranteed"
 
     dataset
     {
-        dataitem("Members Register"; "Members Register")
+        dataitem(Customer; Customer)
         {
             DataItemTableView = sorting("No.");
             RequestFilterFields = "No.";
@@ -22,16 +22,16 @@ Report 50484 "Member Loans Guaranteed"
             column(UserId; UserId)
             {
             }
-            column(Members__No__; "Members Register"."No.")
+            column(Members__No__; Customer."No.")
             {
             }
-            column(Members_Name; "Members Register".Name)
+            column(Members_Name; Customer.Name)
             {
             }
-            column(Members__Payroll_Staff_No_; "Members Register"."Payroll No")
+            column(Members__Payroll_Staff_No_; Customer."Payroll No")
             {
             }
-            column(Members__Current_Shares_; "Members Register"."Current Shares")
+            column(Members__Current_Shares_; Customer."Current Shares")
             {
             }
             column(Loan_GuaranteedCaption; Loan_GuaranteedCaptionLbl)
@@ -82,7 +82,7 @@ Report 50484 "Member Loans Guaranteed"
             column(MNo_Caption; MNo_CaptionLbl)
             {
             }
-            column(Members_FOSA_Account; "Members Register"."FOSA Account No.")
+            column(Members_FOSA_Account; Customer."FOSA Account No.")
             {
             }
             dataitem("Loans Guarantee Details"; "Loans Guarantee Details")
@@ -173,7 +173,7 @@ Report 50484 "Member Loans Guaranteed"
                         Shares := 0;
                         if Loans.Get("Loan  No.") then begin
                             Loans.CalcFields(Loans."Outstanding Balance");
-                            if Cust.Get("Members Register"."No.") then begin
+                            if Cust.Get(Customer."No.") then begin
                                 Cust.CalcFields(Cust."Current Shares");
                                 Shares := Cust."Current Shares";
                             end;
@@ -186,7 +186,7 @@ Report 50484 "Member Loans Guaranteed"
                     Shares := 0;
                     if Loans.Get("Loan No") then begin
                         Loans.CalcFields(Loans."Outstanding Balance");
-                        if Cust.Get("Members Register"."No.") then begin
+                        if Cust.Get(Customer."No.") then begin
                             Cust.CalcFields(Cust."Current Shares");
                             Shares := Cust."Current Shares";
                         end;
@@ -243,9 +243,9 @@ Report 50484 "Member Loans Guaranteed"
 
     var
         Loans: Record "Loans Register";
-        Cust: Record "Members Register";
+        Cust: Record Customer;
         Shares: Decimal;
-        Cust2: Record "Members Register";
+        Cust2: Record Customer;
         LoanGaurantors: Record "Loans Guarantee Details";
         LCount: Integer;
         A: Decimal;

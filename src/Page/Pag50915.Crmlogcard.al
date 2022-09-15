@@ -906,7 +906,7 @@ Page 50915 "Crm log card"
     end;
 
     var
-        Cust: Record "Members Register";
+        Cust: Record Customer;
         PvApp: Record "Member Ledger Entry";
         CustCare: Record "General Equiries.";
         CQuery: Record "General Equiries.";

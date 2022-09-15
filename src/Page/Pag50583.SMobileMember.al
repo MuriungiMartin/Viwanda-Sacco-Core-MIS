@@ -4,7 +4,7 @@ Page 50583 "S-Mobile Member"
     PageType = List;
     UsageCategory = Lists;
     ApplicationArea = All;
-    SourceTable = "Members Register";
+    SourceTable = Customer;
 
     layout
     {

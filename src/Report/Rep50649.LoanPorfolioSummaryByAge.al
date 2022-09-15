@@ -281,13 +281,13 @@ Report 50649 "Loan Porfolio Summary By Age"
         "Var>75OutstandingBal": Decimal;
         "Var>75Performing": Decimal;
         "Var>75NonPerforming": Decimal;
-        ObjMembers: Record "Members Register";
+        ObjMembers: Record Customer;
         CurrReport_PAGENOCaptionLbl: label 'Page';
         RISK_CLASSIFICATION_OF_ASSETS_AND_PROVISIONINGCaptionLbl: label 'RISK CLASSIFICATION OF ASSETS AND PROVISIONING';
         FORM_4CaptionLbl: label 'FORM 4';
         SASRA_2_004CaptionLbl: label 'SASRA 2/004';
         R__46_CaptionLbl: label 'R.(46)';
-        ObjMemberII: Record "Members Register";
+        ObjMemberII: Record Customer;
         VarAge: Integer;
         VarAge2: Integer;
         ObjLoanPorfolioProvision: Record "Loan Portfolio Provision";

@@ -296,7 +296,7 @@ Report 50856 "Recover Loan Repayment FOSA Ac"
         GeneralJnl: Record "Gen. Journal Line";
         BosaSetUp: Record "Sacco General Set-Up";
         RunBal: Decimal;
-        Cust: Record "Members Register";
+        Cust: Record Customer;
         LOustanding: Decimal;
         LineNo: Integer;
         RepaymentPeriod: Date;

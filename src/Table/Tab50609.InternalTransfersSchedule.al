@@ -18,7 +18,7 @@ Table 50609 "Internal Transfers Schedule"
             else
             if ("Destination Account Type" = const("G/L Account")) "G/L Account"."No."
             else
-            if ("Destination Account Type" = const("Loan Account")) "Members Register"."No."
+            if ("Destination Account Type" = const("Loan Account")) Customer."No."
             else
             if ("Destination Account Type" = const(Supplier)) Vendor."No." where(Blocked = filter(<> Payment | All),
                                                                                                                                                                                  "Creditor Type" = filter(Supplier));
@@ -188,12 +188,12 @@ Table 50609 "Internal Transfers Schedule"
     end;
 
     var
-        Cust: Record "Members Register";
+        Cust: Record Customer;
         Vend: Record Vendor;
         Bank: Record "Bank Account";
         Bosa: Record "BOSA Transfers";
         "G/L": Record "G/L Account";
-        memb: Record "Members Register";
+        memb: Record Customer;
         Loans: Record "Loans Register";
         ReceiptAll: Record "Sacco Transfers Schedule";
 }

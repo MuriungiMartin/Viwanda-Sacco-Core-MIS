@@ -522,7 +522,7 @@ Page 50918 "Cases Card"
         AssignedReas: Record "Cases Management";
         lineno: Integer;
         SMSMessages: Record "SMS Messages";
-        Cust: Record "Members Register";
+        Cust: Record Customer;
         GenSetUp: Record "Sacco General Set-Up";
         notifymail: Codeunit "SMTP Mail";
         Asmember: Boolean;
@@ -687,7 +687,7 @@ Page 50918 "Cases Card"
     local procedure Emailcustomer()
     var
         CustomerEmailtext: Text;
-        memb: Record "Members Register";
+        memb: Record Customer;
     begin
         if memb.Get("Member No") then begin
             CustomerEmailtext := memb."E-Mail (Personal)";

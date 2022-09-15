@@ -59,7 +59,7 @@ Table 50980 "Collateral Movement  Register"
         field(5; "Member No."; Code[20])
         {
             Editable = false;
-            TableRelation = "Members Register"."No.";
+            TableRelation = Customer."No.";
         }
         field(6; "Member Name"; Code[50])
         {
@@ -342,7 +342,7 @@ Table 50980 "Collateral Movement  Register"
         ObjAccTypes: Record "Account Types-Saving Products";
         AvailableBal: Decimal;
         LodgeFee: Decimal;
-        ObjCust: Record "Members Register";
+        ObjCust: Record Customer;
         ObjGenSetup: Record "Sacco General Set-Up";
         ObjCollateralRegister: Record "Loan Collateral Register";
         ObjActiontypes: Record "Collateral Movement Actions";

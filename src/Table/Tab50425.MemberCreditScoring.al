@@ -9,7 +9,7 @@ Table 50425 "Member Credit Scoring"
         }
         field(2; "Member No"; Code[30])
         {
-            TableRelation = "Members Register"."No.";
+            TableRelation = Customer."No.";
         }
         field(3; "Member Name"; Code[100])
         {

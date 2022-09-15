@@ -891,11 +891,11 @@ Page 50674 "Posted Cashier Transactions V1"
         StandingOrders: Record "Standing Orders";
         Charges: Record Charges;
         AccountNotices: Record "Account Notices";
-        Cust: Record "Members Register";
+        Cust: Record Customer;
         AccountHolders: Record Vendor;
         chqtransactions: Record Transactions;
         Trans: Record Transactions;
-        CustAcc: Record "Members Register";
+        CustAcc: Record Customer;
         TransactionsRec: Record Transactions;
         DenominationsRec: Record Denominations;
         TillNo: Code[20];
@@ -980,7 +980,7 @@ Page 50674 "Posted Cashier Transactions V1"
         VarTotalLoanDue: Decimal;
         ObjPenaltyArrears: Record "Deposit Arrears Penalty Buffer";
         VarHasDepositArrears: Boolean;
-        ObjCust: Record "Members Register";
+        ObjCust: Record Customer;
         VarDepositBal: Decimal;
         VarShowDepositArrearsPage: Boolean;
         VarReceiptBankEditable: Boolean;
@@ -1438,7 +1438,7 @@ Page 50674 "Posted Cashier Transactions V1"
         varMultipleLoan: Decimal;
         varLRepayment: Decimal;
         PRpayment: Decimal;
-        ObjMember: Record "Members Register";
+        ObjMember: Record Customer;
         VarRegistrationFeeDiff: Decimal;
         VarTaxOnRegistrationFeeDiff: Decimal;
     begin
@@ -1501,7 +1501,7 @@ Page 50674 "Posted Cashier Transactions V1"
         varMultipleLoan: Decimal;
         varLRepayment: Decimal;
         PRpayment: Decimal;
-        ObjMember: Record "Members Register";
+        ObjMember: Record Customer;
         SharesCap: Decimal;
         DIFF: Decimal;
     begin
@@ -1556,7 +1556,7 @@ Page 50674 "Posted Cashier Transactions V1"
         varMultipleLoan: Decimal;
         varLRepayment: Decimal;
         PRpayment: Decimal;
-        ObjMember: Record "Members Register";
+        ObjMember: Record Customer;
         SharesCap: Decimal;
         DIFF: Decimal;
     begin
@@ -1598,7 +1598,7 @@ Page 50674 "Posted Cashier Transactions V1"
         varMultipleLoan: Decimal;
         varLRepayment: Decimal;
         PRpayment: Decimal;
-        ObjMember: Record "Members Register";
+        ObjMember: Record Customer;
     begin
         GenSetup.Get();
         if RunningBalance > 0 then begin
@@ -1636,7 +1636,7 @@ Page 50674 "Posted Cashier Transactions V1"
         varMultipleLoan: Decimal;
         varLRepayment: Decimal;
         PRpayment: Decimal;
-        ObjMember: Record "Members Register";
+        ObjMember: Record Customer;
         ObjDetailedVendorLedger: Record "Detailed Vendor Ledg. Entry";
         VarCurrYear: Integer;
         VarCurrYearBeginDate: Date;
@@ -1698,7 +1698,7 @@ Page 50674 "Posted Cashier Transactions V1"
         varMultipleLoan: Decimal;
         varLRepayment: Decimal;
         PRpayment: Decimal;
-        ObjMember: Record "Members Register";
+        ObjMember: Record Customer;
     begin
         ObjMember.Reset;
         ObjMember.SetRange(ObjMember."No.", ObjRcptBuffer."Member No");
@@ -1729,7 +1729,7 @@ Page 50674 "Posted Cashier Transactions V1"
         varMultipleLoan: Decimal;
         varLRepayment: Decimal;
         PRpayment: Decimal;
-        ObjMember: Record "Members Register";
+        ObjMember: Record Customer;
         SharesCap: Decimal;
         DIFF: Decimal;
         TransType: Option " ","Registration Fee","Share Capital","Interest Paid","Loan Repayment","Deposit Contribution","Insurance Contribution","Benevolent Fund",Loan,"Unallocated Funds",Dividend,"FOSA Account";
@@ -1777,7 +1777,7 @@ Page 50674 "Posted Cashier Transactions V1"
         varMultipleLoan: Decimal;
         varLRepayment: Decimal;
         PRpayment: Decimal;
-        ObjMember: Record "Members Register";
+        ObjMember: Record Customer;
         SharesCap: Decimal;
         DIFF: Decimal;
         TransType: Option " ","Registration Fee","Share Capital","Interest Paid","Loan Repayment","Deposit Contribution","Insurance Contribution","Benevolent Fund",Loan,"Unallocated Funds",Dividend,"FOSA Account";

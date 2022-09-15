@@ -332,7 +332,7 @@ Page 50656 "Posted Finance UpLoads Header"
         DActivityBOSA: Code[20];
         DBranchBOSA: Code[20];
         ReptProcHeader: Record "Checkoff Header-Distributed";
-        Cust: Record "Members Register";
+        Cust: Record Customer;
         salarybuffer: Record "Salary Processing Lines";
         SalHeader: Record "Salary Processing Headerr";
         Sto: Record "Standing Orders";

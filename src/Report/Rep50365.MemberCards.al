@@ -15,7 +15,7 @@ Report 50365 "Member Cards"
 
     dataset
     {
-        dataitem("Members Register"; "Members Register")
+        dataitem(Customer; Customer)
         {
             DataItemTableView = sorting("No.");
             RequestFilterFields = "No.", Name;
@@ -123,7 +123,7 @@ Report 50365 "Member Cards"
             begin
                 RecordNo := RecordNo + 1;
                 ColumnNo := ColumnNo + 1;
-                //FormatAddr.Customer(CustAddr[ColumnNo],"Members Register");
+                //FormatAddr.Customer(CustAddr[ColumnNo],Customer);
                 //FormatAddr.
                 if RecordNo = NoOfRecords then begin
                     for i := ColumnNo + 1 to NoOfColumns do
@@ -221,7 +221,7 @@ Report 50365 "Member Cards"
         Counter: Integer;
         RecPerPageNum: Integer;
         FormatAddr: Codeunit "Format Address";
-        Cust: Record "Members Register";
+        Cust: Record Customer;
 
     procedure InitializeRequest(SetLabelFormat: Option)
     begin

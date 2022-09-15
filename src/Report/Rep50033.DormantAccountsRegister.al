@@ -203,7 +203,7 @@ Report 50033 "Dormant Accounts Register"
         VarCount: Integer;
         VarDepositsBal: Decimal;
         VarShareCapitalBal: Decimal;
-        ObjCust: Record "Members Register";
+        ObjCust: Record Customer;
         VarDormancyDateTxt: Text;
         ObjDetailedVendLedg: Record "Detailed Vendor Ledg. Entry";
 

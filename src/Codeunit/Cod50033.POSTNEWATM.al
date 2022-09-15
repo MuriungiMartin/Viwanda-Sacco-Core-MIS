@@ -64,7 +64,7 @@ Codeunit 50033 "POST NEW  ATM"
         DrTax: Text;
         SaccoGen: Record "Sacco General Set-Up";
         DrVendor: Text;
-        Members: Record "Members Register";
+        Members: Record Customer;
         CloudPesa: Codeunit CloudPESALivetest;
         VarLocationlength: Integer;
     begin

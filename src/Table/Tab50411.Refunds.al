@@ -115,7 +115,7 @@ Table 50411 "Refunds"
     }
 
     var
-        Cust: Record "Members Register";
+        Cust: Record Customer;
         Loans: Record "Loans Register";
 }
 

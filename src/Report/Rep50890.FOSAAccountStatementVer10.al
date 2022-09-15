@@ -568,7 +568,7 @@ Report 50890 "FOSA Account Statement Ver.1.0"
         TotalCredits: Decimal;
         Totals: Decimal;
         CompanyNamee: Code[50];
-        Cust: Record "Members Register";
+        Cust: Record Customer;
         Employer: Record "Sacco Employers";
         Company: Record "Company Information";
         FromDate: Date;

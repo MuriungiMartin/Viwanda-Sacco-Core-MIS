@@ -14,7 +14,7 @@ Report 50414 "Member List"
 
     dataset
     {
-        dataitem("Members Register"; "Members Register")
+        dataitem(Customer; Customer)
         {
             DataItemTableView = sorting("No.") where("Customer Type" = filter(Member));
             RequestFilterFields = "No.", "Date Filter";
@@ -46,46 +46,46 @@ Report 50414 "Member List"
             column(UserId; UserId)
             {
             }
-            column(No; "Members Register"."No.")
+            column(No; Customer."No.")
             {
             }
-            column(Name; "Members Register".Name)
+            column(Name; Customer.Name)
             {
             }
-            column(Personal_No; "Members Register"."Payroll No")
+            column(Personal_No; Customer."Payroll No")
             {
             }
-            column(Status; "Members Register".Status)
+            column(Status; Customer.Status)
             {
             }
-            column(Registration_Date; "Members Register"."Registration Date")
+            column(Registration_Date; Customer."Registration Date")
             {
             }
-            column(Entrance_Fee; "Members Register"."Registration Fee")
+            column(Entrance_Fee; Customer."Registration Fee")
             {
             }
-            column(Share_Capital; "Members Register"."Shares Retained")
+            column(Share_Capital; Customer."Shares Retained")
             {
             }
-            column(Deposits; "Members Register"."Monthly Contribution")
+            column(Deposits; Customer."Monthly Contribution")
             {
                 AutoCalcField = true;
             }
-            column(Welfare; "Members Register"."Welfare Contribution")
+            column(Welfare; Customer."Welfare Contribution")
             {
             }
-            column(Dividend_Amount; "Members Register"."Dividend Amount")
+            column(Dividend_Amount; Customer."Dividend Amount")
             {
             }
             trigger OnAfterGetRecord();
             begin
                 /*
 				BaldateTXT:='01/01/10..'+FORMAT(Baldate);
-				"Members Register".RESET;
-				"Members Register".SETRANGE("Members Register"."No.","No.");
-				"Members Register".SETFILTER("Members Register"."Date Filter",BaldateTXT);
-				IF "Members Register".FIND('-') THEN BEGIN
-				"Members Register".CALCFIELDS("Members Register"."Current Shares","Members Register"."Shares Retained","Members Register"."Insurance Fund");
+				Customer.RESET;
+				Customer.SETRANGE(Customer."No.","No.");
+				Customer.SETFILTER(Customer."Date Filter",BaldateTXT);
+				IF Customer.FIND('-') THEN BEGIN
+				Customer.CALCFIELDS(Customer."Current Shares",Customer."Shares Retained",Customer."Insurance Fund");
 				  END;
 				//DivBal:= "Dividend Amount" *-1;
 				Balance6:=Balance6 + "Dividend Amount";

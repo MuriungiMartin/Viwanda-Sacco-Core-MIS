@@ -270,7 +270,7 @@ Report 50464 "Post Monthly Interest"
         Company: Record "Company Information";
         GenBatches: Record "Gen. Journal Batch";
         LoanType: Record "Loan Products Setup";
-        Cust: Record "Members Register";
+        Cust: Record Customer;
         GenJournalLine: Record "Gen. Journal Line";
         GLPosting: Codeunit "Gen. Jnl.-Post Line";
         Account: Record Vendor;

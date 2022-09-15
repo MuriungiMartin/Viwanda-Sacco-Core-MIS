@@ -14,7 +14,7 @@ Report 50241 "Dividends Progressionslip"
 
     dataset
     {
-        dataitem("Members Register"; "Members Register")
+        dataitem(Customer; Customer)
         {
             DataItemTableView = sorting("No.") where("Customer Type" = const(Member));
             RequestFilterFields = "No.";
@@ -31,16 +31,16 @@ Report 50241 "Dividends Progressionslip"
             column(UserId; UserId)
             {
             }
-            column(Members__No__; "Members Register"."No.")
+            column(Members__No__; Customer."No.")
             {
             }
-            column(Members__Payroll_Staff_No_; "Members Register"."Payroll No")
+            column(Members__Payroll_Staff_No_; Customer."Payroll No")
             {
             }
-            column(Members_Name; "Members Register".Name)
+            column(Members_Name; Customer.Name)
             {
             }
-            column(IDNo_MembersRegister; "Members Register"."ID No.")
+            column(IDNo_MembersRegister; Customer."ID No.")
             {
             }
             column(Dividends_ProgressionCaption; Dividends_ProgressionCaptionLbl)

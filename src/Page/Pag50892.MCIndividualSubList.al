@@ -7,7 +7,7 @@ Page 50892 "MC Individual Sub-List"
     PageType = List;
     UsageCategory = Lists;
     ApplicationArea = All;
-    SourceTable = "Members Register";
+    SourceTable = Customer;
     SourceTableView = where("Group Account" = filter(false));
 
     layout
@@ -1165,7 +1165,7 @@ Page 50892 "MC Individual Sub-List"
     }
 
     var
-        Cust: Record "Members Register";
+        Cust: Record Customer;
         GeneralSetup: Record "Sacco General Set-Up";
         Gnljnline: Record "Gen. Journal Line";
         TotalRecovered: Decimal;
@@ -1191,7 +1191,7 @@ Page 50892 "MC Individual Sub-List"
 
     procedure GetSelectionFilter(): Code[80]
     var
-        Cust: Record "Members Register";
+        Cust: Record Customer;
         FirstCust: Code[30];
         LastCust: Code[30];
         SelectionFilter: Code[250];
@@ -1238,7 +1238,7 @@ Page 50892 "MC Individual Sub-List"
     end;
 
 
-    procedure SetSelection(var Cust: Record "Members Register")
+    procedure SetSelection(var Cust: Record Customer)
     begin
         //CurrPage.SETSELECTIONFILTER(Cust);
     end;

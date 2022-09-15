@@ -14,7 +14,7 @@ Report 50418 "Generate Dividend Prorated"
 
     dataset
     {
-        dataitem(Customer; "Members Register")
+        dataitem(Customer; Customer)
         {
             DataItemTableView = sorting("No.") where("Customer Type" = const(Member));
             RequestFilterFields = "No.";
@@ -776,7 +776,7 @@ Report 50418 "Generate Dividend Prorated"
         Company: Record "Company Information";
         LastFieldNo: Integer;
         FooterPrinted: Boolean;
-        Cust: Record "Members Register";
+        Cust: Record Customer;
         StartDate: Date;
         DateFilter: Text[100];
         FromDate: Date;
@@ -790,7 +790,7 @@ Report 50418 "Generate Dividend Prorated"
         DivProg: Record "Dividends Progression";
         CDiv: Decimal;
         BDate: Date;
-        CustR: Record "Members Register";
+        CustR: Record Customer;
         IntRebTotal: Decimal;
         CIntReb: Decimal;
         LineNo: Integer;

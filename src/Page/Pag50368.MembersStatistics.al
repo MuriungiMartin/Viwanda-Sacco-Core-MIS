@@ -156,7 +156,7 @@ Page 50368 "Members Statistics"
 
                 trigger OnAction()
                 var
-                    ObjCust: Record "Members Register";
+                    ObjCust: Record Customer;
                 begin
                     ObjCust.Reset;
                     ObjCust.SetRange(ObjCust."No.", "No.");
@@ -174,7 +174,7 @@ Page 50368 "Members Statistics"
 
                 trigger OnAction()
                 var
-                    ObjCust: Record "Members Register";
+                    ObjCust: Record Customer;
                 begin
                     ObjCust.Reset;
                     ObjCust.SetRange(ObjCust."No.", "No.");
@@ -232,7 +232,7 @@ Page 50368 "Members Statistics"
         InterestDue: Decimal;
         SFactory: Codeunit "SURESTEP Factory";
         ObjLoans: Record "Loans Register";
-        ObjCust: Record "Members Register";
+        ObjCust: Record Customer;
 
     local procedure SetFieldStyle()
     begin

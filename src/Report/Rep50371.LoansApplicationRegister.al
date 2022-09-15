@@ -478,7 +478,7 @@ Report 50371 "Loans Application Register"
         ApprovalSetup: Codeunit "Approvals Mgmt.";
         LocationFilter: Code[20];
         TotalApproved: Decimal;
-        cust: Record "Members Register";
+        cust: Record Customer;
         BOSABal: Decimal;
         SuperBal: Decimal;
         LAppl: Record "Loans Register";
@@ -492,8 +492,8 @@ Report 50371 "Loans Application Register"
         VALREPAY: Record "Member Ledger Entry";
         GenSetUp: Record "Sacco General Set-Up";
         LoanApp: Record "Loans Register";
-        CustRec: Record "Members Register";
-        CustRecord: Record "Members Register";
+        CustRec: Record Customer;
+        CustRecord: Record Customer;
         TShares: Decimal;
         TLoans: Decimal;
         LoanShareRatio: Decimal;

@@ -198,7 +198,7 @@ Page 50840 "MC Individual Application Card"
                 field("Group Account No"; "Group Account No")
                 {
                     ApplicationArea = Basic;
-                    TableRelation = "Members Register" where("Group Account" = filter(true),
+                    TableRelation = Customer where("Group Account" = filter(true),
                                                               "Customer Posting Group" = filter('MICRO'));
                 }
                 field("Group Account Name"; "Group Account Name")
@@ -474,7 +474,7 @@ Page 50840 "MC Individual Application Card"
                             Cust.Gender := Gender;
 
                             //CALCFIELDS(Signature,Picture);
-                            Cust.Picture := Picture;
+                            Cust.Piccture := Picture;
                             Cust.Signature := Signature;
                             Cust."Monthly Contribution" := "Monthly Contribution";
                             Cust."Account Category" := "Account Category";
@@ -608,7 +608,7 @@ Page 50840 "MC Individual Application Card"
 
     var
         StatusPermissions: Record "Status Change Permision";
-        Cust: Record "Members Register";
+        Cust: Record Customer;
         Accounts: Record Vendor;
         NextOfKinApp: Record "Members Next of Kin";
         NextofKinFOSA: Record "FOSA Account NOK Details";
@@ -678,7 +678,7 @@ Page 50840 "MC Individual Application Card"
         text003: label 'You must specify Signatories for this type of membership';
         GetAccountType: Record "Account Types-Saving Products";
         Text004: label 'You MUST specify the next of kin Benevolent';
-        CustMember: Record "Members Register";
+        CustMember: Record Customer;
         "BenvNo.": Code[10];
         BankAEditable: Boolean;
         MemEditable: Boolean;
@@ -701,7 +701,7 @@ Page 50840 "MC Individual Application Card"
         DeptVisible: Boolean;
         SecVisible: Boolean;
         OccpVisible: Boolean;
-        MembCust: Record "Members Register";
+        MembCust: Record Customer;
         AccountSignatoriesApp: Record "Product App Signatories";
         SMSMessage: Record "SMS Messages";
         iEntryNo: Integer;

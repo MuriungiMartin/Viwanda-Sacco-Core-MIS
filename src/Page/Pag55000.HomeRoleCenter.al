@@ -1584,10 +1584,19 @@ page 55000 "Home Role Center" // default role center change to comapny name
             {
                 AccessByPermission = TableData "Checkoff Header-Distributed" = IMD;
                 ApplicationArea = Basic, Suite;
-                Caption = 'Process Checkoff Distributed';
-                RunObject = Page "Checkoff Processing Header-D";
+                Caption = 'Process Block Checkoff';
+                RunObject = Page "Bosa Receipts H List-Checkoff";
                 RunPageMode = Create;
-                ToolTip = 'Create new distributed checkoff';
+                ToolTip = 'Create new Block checkoff';
+            }
+            action("Posted checkoff")
+            {
+                AccessByPermission = TableData "Checkoff Header-Distributed" = IMD;
+                ApplicationArea = Basic, Suite;
+                Caption = 'Posted Block Checkoff';
+                RunObject = Page "Posted Bosa Rcpt List-Checkof";
+                RunPageMode = Create;
+                ToolTip = 'See Posted Block checkoff';
             }
             action("Process Interest")
             {

@@ -244,7 +244,7 @@ Page 50514 "Product Details Editable"
     }
 
     var
-        Cust: Record "Members Register";
+        Cust: Record Customer;
         Vend: Record Vendor;
 }
 

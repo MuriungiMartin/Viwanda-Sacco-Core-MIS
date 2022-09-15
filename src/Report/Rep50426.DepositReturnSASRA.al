@@ -271,7 +271,7 @@ Report 50426 "Deposit Return SASRA"
         "10000 t0 300000-a/c": Decimal;
         "300000 to 100000-a/c": Decimal;
         "over 1000000-a/c": Decimal;
-        cust: Record "Members Register";
+        cust: Record Customer;
         SHARES: Decimal;
         BAL1: Decimal;
         BAL2: Decimal;

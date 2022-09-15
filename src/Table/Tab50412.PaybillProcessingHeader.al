@@ -187,7 +187,7 @@ Table 50412 "Paybill Processing Header"
     var
         NoSetup: Record "Sacco No. Series";
         NoSeriesMgt: Codeunit NoSeriesManagement;
-        cust: Record "Members Register";
+        cust: Record Customer;
         "GL Account": Record "G/L Account";
         BANKACC: Record "Bank Account";
 }

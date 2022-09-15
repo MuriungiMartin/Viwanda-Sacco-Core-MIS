@@ -126,7 +126,7 @@ Table 50473 "Cheque Clearing Header"
     var
         NoSetup: Record "Sacco No. Series";
         NoSeriesMgt: Codeunit NoSeriesManagement;
-        cust: Record "Members Register";
+        cust: Record Customer;
         "GL Account": Record "G/L Account";
         BANKACC: Record "Bank Account";
         ObjCashierTrans: Record Transactions;

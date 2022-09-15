@@ -367,7 +367,7 @@ Page 50404 "Bosa Receipts H Card-Checkoff"
                         until RcptBufLines.Next() = 0;
                     end;
                     //-----------------------------------------End Loan Repayments-----------------------------------Viwanda
-
+                    RunBal := 0;
                     //--------------------------------------------Benevolent fund------------------------------------Viwanda
                     genstup.Get();
                     RcptBufLines.Reset;
@@ -421,12 +421,55 @@ Page 50404 "Bosa Receipts H Card-Checkoff"
                     RunBal := 0;
 
                     //------------------------------------------Sacco Deposits---------------------------------------Viwanda
+                    //Share Capital contribution
+                    genstup.Get();
                     RcptBufLines.Reset;
                     RcptBufLines.SetRange(RcptBufLines."Receipt Header No", No);
                     RcptBufLines.SetRange(RcptBufLines.Posted, false);
                     if RcptBufLines.Find('-') then begin
                         repeat
                             RunBal := RcptBufLines."Sacco Shares";
+                            Cust.Reset;
+                            Cust.SetRange(Cust."No.", RcptBufLines."Member No");
+                            Cust.SetAutoCalcFields(Cust."Shares Retained");
+                            if Cust.Find('-') then begin
+                                if Cust."Shares Retained" < genstup."Retained Shares" then begin
+                                    if RunBal > 0 then begin
+                                        LineN := LineN + 10000;
+
+                                        Gnljnline.Init;
+                                        Gnljnline."Journal Template Name" := 'GENERAL';
+                                        Gnljnline."Journal Batch Name" := No;
+                                        Gnljnline."Line No." := LineN;
+                                        Gnljnline."Account Type" := Gnljnline."account type"::Customer;
+                                        Gnljnline."Account No." := RcptBufLines."Member No";
+                                        Gnljnline.Validate(Gnljnline."Account No.");
+                                        Gnljnline."Document No." := "Document No";
+                                        Gnljnline."Posting Date" := "Posting date";
+                                        Gnljnline.Description := Remarks;
+                                        if RunBal > Cust."Monthly Contribution" then
+                                            Gnljnline.Amount := Cust."Monthly Contribution" * -1
+                                        else
+                                            Gnljnline.Amount := RunBal * -1;
+                                        Gnljnline.Validate(Gnljnline.Amount);
+                                        Gnljnline."Transaction Type" := Gnljnline."transaction type"::"Deposit Contribution";
+                                        if Gnljnline.Amount <> 0 then
+                                            Gnljnline.Insert;
+                                        RunBal := RunBal - (Gnljnline.Amount * -1);
+                                    end;
+
+                                end;
+                            end;
+
+                        until RcptBufLines.next = 0;
+                    end;
+
+                    //Deposits Contribution
+                    RcptBufLines.Reset;
+                    RcptBufLines.SetRange(RcptBufLines."Receipt Header No", No);
+                    RcptBufLines.SetRange(RcptBufLines.Posted, false);
+                    if RcptBufLines.Find('-') then begin
+                        repeat
                             if RunBal > 0 then begin
                                 LineN := LineN + 10000;
 
@@ -453,7 +496,7 @@ Page 50404 "Bosa Receipts H Card-Checkoff"
                     //-------------------------------------End  Sacco Deposits---------------------------------------Viwanda
 
                     //----------------------------------------Loan Processing fee------------------------------------Viwanda
-
+                    RunBal := 0;
                     RcptBufLines.Reset;
                     RcptBufLines.SetRange(RcptBufLines."Receipt Header No", No);
                     RcptBufLines.SetRange(RcptBufLines.Posted, false);

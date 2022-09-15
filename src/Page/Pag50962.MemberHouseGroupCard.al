@@ -167,6 +167,6 @@ Page 50962 "Member House Group Card"
 
     var
         ObjCellGroups: Record "Member House Groups";
-        ObjCust: Record "Members Register";
+        ObjCust: Record Customer;
 }
 

@@ -612,7 +612,7 @@ Page 50899 "Micro_Fin_Transactions"
         DocumentType: Option Quote,"Order",Invoice,"Credit Memo","Blanket Order","Return Order","None",JV,"Member Closure","Account Opening",Batches,"Payment Voucher","Petty Cash",Requisition,Loan,Interbank,Imprest,Checkoff,"FOSA Account Opening",StandingOrder,HRJob,HRLeave,"HRTransport Request",HRTraining,"HREmp Requsition",MicroTrans;
         DistributedAmt: Decimal;
         MicrSchedule: Record Micro_Fin_Schedule;
-        CustMember: Record "Members Register";
+        CustMember: Record Customer;
         GensetUp: Record "Sacco General Set-Up";
         ChangeStatus: Boolean;
         DepDifference: Decimal;
@@ -630,7 +630,7 @@ Page 50899 "Micro_Fin_Transactions"
         Text008: label 'The transaction No. -%1 is already posted';
         Text009: label 'This Till is No. %1 not assigned to this Specific User. Please contact your system administrator';
         ReceiptAllocations: Record "Receipt Allocation";
-        Cust: Record "Members Register";
+        Cust: Record Customer;
         LoanApp: Record "Loans Register";
         LOustanding: Decimal;
 }

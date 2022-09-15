@@ -33,7 +33,7 @@ Codeunit 50022 "AgencyCode"
         miniBalance: Decimal;
         Loans: Integer;
         LoanProductsSetup: Record "Loan Products Setup";
-        Members: Record "Members Register";
+        Members: Record Customer;
         dateExpression: Text[20];
         DetailedVendorLedgerEntry: Record "Detailed Vendor Ledg. Entry";
         dashboardDataFilter: Date;

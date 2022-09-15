@@ -70,7 +70,7 @@ Table 50608 "Internal Transfers"
             else
             if ("Source Account Type" = filter("G/L Account")) "G/L Account"."No."
             else
-            if ("Source Account Type" = filter("Loan Account")) "Members Register"."No."
+            if ("Source Account Type" = filter("Loan Account")) Customer."No."
             else
             if ("Source Account Type" = filter(Supplier)) Vendor."No." where("Creditor Type" = filter(Supplier),
                                                                                                                                                                                                         Blocked = filter(<> Payment | All));
@@ -188,7 +188,7 @@ Table 50608 "Internal Transfers"
         }
         field(51516064; "Member No"; Code[20])
         {
-            TableRelation = "Members Register"."No.";
+            TableRelation = Customer."No.";
 
             trigger OnValidate()
             begin
@@ -268,9 +268,9 @@ Table 50608 "Internal Transfers"
         Cust: Record Customer;
         Bank: Record "Bank Account";
         Vend: Record Vendor;
-        memb: Record "Members Register";
+        memb: Record Customer;
         "G/L": Record "G/L Account";
-        ObjCust: Record "Members Register";
+        ObjCust: Record Customer;
         SFactory: Codeunit "SURESTEP Factory";
         VarAvailableBal: Decimal;
         VarShareCapitalFeeTax: Decimal;

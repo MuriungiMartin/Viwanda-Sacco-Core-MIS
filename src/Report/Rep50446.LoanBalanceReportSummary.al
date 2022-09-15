@@ -327,7 +327,7 @@ Report 50446 "Loan Balance -Report Summary"
         Loans: Record "Loans Register";
         Company: Record "Company Information";
         RPeriod: Decimal;
-        Cust: Record "Members Register";
+        Cust: Record Customer;
         EmpCode: Code[30];
         Intcount: Integer;
         LoanType: Record "Loan Products Setup";

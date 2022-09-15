@@ -336,7 +336,7 @@ Page 50435 "Member Accounts List"
     end;
 
     var
-        Cust: Record "Members Register";
+        Cust: Record Customer;
         Vend: Record Vendor;
         CoveragePercentStyle: Text;
         MinimumBalance: Decimal;

@@ -541,7 +541,7 @@ Page 50924 "Lead card"
     end;
 
     var
-        Cust: Record "Members Register";
+        Cust: Record Customer;
         PvApp: Record "Member Ledger Entry";
         CustCare: Record "General Equiries.";
         CQuery: Record "General Equiries.";

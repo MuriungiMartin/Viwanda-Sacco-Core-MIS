@@ -13,7 +13,7 @@ Table 50010 "Mpesa Allocation"
         field(2; "Member No"; Code[20])
         {
             NotBlank = true;
-            TableRelation = "Members Register"."No.";
+            TableRelation = Customer."No.";
         }
         field(3; "Transaction Type"; Option)
         {
@@ -198,10 +198,10 @@ Table 50010 "Mpesa Allocation"
 
     var
         Loans: Record "Loans Register";
-        Cust: Record "Members Register";
+        Cust: Record Customer;
         PTEN: Text;
         DataSheet: Record "Data Sheet Main";
-        Customer: Record "Members Register";
+        Customer: Record Customer;
         LoansR: Record "Loans Register";
         GenSetup: Record "Sacco General Set-Up";
 }

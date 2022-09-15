@@ -14,7 +14,7 @@ Report 50383 "New Member List"
 
     dataset
     {
-        dataitem("Members Register"; "Members Register")
+        dataitem(Customer; Customer)
         {
             DataItemTableView = sorting("No.") where(Status = filter(Active), Name = filter(<> ''));
             PrintOnlyIfDetail = false;
@@ -47,25 +47,25 @@ Report 50383 "New Member List"
             column(UserId; UserId)
             {
             }
-            column(Application_No; "Members Register"."Application No.")
+            column(Application_No; Customer."Application No.")
             {
             }
-            column(Name; "Members Register".Name)
+            column(Name; Customer.Name)
             {
             }
-            column(Registration_Date; "Members Register"."Registration Date")
+            column(Registration_Date; Customer."Registration Date")
             {
             }
-            column(Phone_No; "Members Register"."Phone No.")
+            column(Phone_No; Customer."Phone No.")
             {
             }
-            column(Agency_Name; "Members Register"."Employer Name")
+            column(Agency_Name; Customer."Employer Name")
             {
             }
-            column(Personal_No; "Members Register"."Payroll No")
+            column(Personal_No; Customer."Payroll No")
             {
             }
-            column(ID_No; "Members Register"."ID No.")
+            column(ID_No; Customer."ID No.")
             {
             }
             column(Verified_By__________________________________________________Caption; Verified_By__________________________________________________CaptionLbl)
@@ -137,15 +137,15 @@ Report 50383 "New Member List"
             column(CreditComSign3; CreditComSign3)
             {
             }
-            column(COMPPIC; "Members Register".Picture)
+            column(COMPPIC; Customer.Piccture)
             {
             }
-            column(NAME1; "Members Register".Name)
+            column(NAME1; Customer.Name)
             {
             }
             trigger OnAfterGetRecord();
             begin
-                CShares := CShares + "Members Register"."Current Shares";
+                CShares := CShares + Customer."Current Shares";
             end;
 
         }

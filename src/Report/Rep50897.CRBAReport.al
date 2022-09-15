@@ -285,7 +285,7 @@ Report 50897 "CRBA Report"
     end;
 
     var
-        Cust: Record "Members Register";
+        Cust: Record Customer;
         CRBA: Record "CRBA Datas";
         MyString: Text;
         String1: Text;

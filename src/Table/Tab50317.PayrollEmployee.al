@@ -382,7 +382,7 @@ Table 50317 "Payroll Employee."
         }
         field(95; "Payroll No"; Code[20])
         {
-            TableRelation = "Members Register"."No.";
+            TableRelation = Customer."No.";
 
             trigger OnValidate()
             begin
@@ -994,14 +994,14 @@ Table 50317 "Payroll Employee."
         ObjPayrollEmployeeTransII: Record "Payroll Employee Transactions.";
         VarPeriodMonth: Integer;
         VarPeriodYear: Integer;
-        ObjCust: Record "Members Register";
+        ObjCust: Record Customer;
         ObjAccounts: Record Vendor;
         SalesSetup: Record "Sacco No. Series";
         NoSeriesMgt: Codeunit NoSeriesManagement;
 
     local procedure FnRunGetLeaveAllowanceAmount(VarMemberNo: Code[30]; VarPayrollNo: Code[30])
     var
-        ObjCust: Record "Members Register";
+        ObjCust: Record Customer;
         VarOpenPeriod: Date;
         VarPeriodMonth: Integer;
         VarPeriodYear: Integer;
@@ -1053,7 +1053,7 @@ Table 50317 "Payroll Employee."
 
     local procedure FnRunGetActingAllowanceAmount(VarMemberNo: Code[30]; VarPayrollNo: Code[30])
     var
-        ObjCust: Record "Members Register";
+        ObjCust: Record Customer;
         VarOpenPeriod: Date;
         VarPeriodMonth: Integer;
         VarPeriodYear: Integer;
@@ -1105,7 +1105,7 @@ Table 50317 "Payroll Employee."
 
     local procedure FnRunGetHouseAllowanceAmount(VarMemberNo: Code[30]; VarPayrollNo: Code[30])
     var
-        ObjCust: Record "Members Register";
+        ObjCust: Record Customer;
         VarOpenPeriod: Date;
         VarPeriodMonth: Integer;
         VarPeriodYear: Integer;
@@ -1160,7 +1160,7 @@ Table 50317 "Payroll Employee."
 
     local procedure FnRunGetPensionAmount(VarMemberNo: Code[30]; VarPayrollNo: Code[30])
     var
-        ObjCust: Record "Members Register";
+        ObjCust: Record Customer;
         VarOpenPeriod: Date;
         VarPeriodMonth: Integer;
         VarPeriodYear: Integer;
@@ -1208,7 +1208,7 @@ Table 50317 "Payroll Employee."
 
     local procedure FnRunGetBonusAmount(VarMemberNo: Code[30]; VarPayrollNo: Code[30])
     var
-        ObjCust: Record "Members Register";
+        ObjCust: Record Customer;
         VarOpenPeriod: Date;
         VarPeriodMonth: Integer;
         VarPeriodYear: Integer;
@@ -1264,7 +1264,7 @@ Table 50317 "Payroll Employee."
 
     local procedure FnRunGetVoluntaryPensionAmount(VarMemberNo: Code[30]; VarPayrollNo: Code[30])
     var
-        ObjCust: Record "Members Register";
+        ObjCust: Record Customer;
         VarOpenPeriod: Date;
         VarPeriodMonth: Integer;
         VarPeriodYear: Integer;
@@ -1315,7 +1315,7 @@ Table 50317 "Payroll Employee."
 
     local procedure FnRunGetSalaryArrearsAmount(VarMemberNo: Code[30]; VarPayrollNo: Code[30])
     var
-        ObjCust: Record "Members Register";
+        ObjCust: Record Customer;
         VarOpenPeriod: Date;
         VarPeriodMonth: Integer;
         VarPeriodYear: Integer;
@@ -1364,7 +1364,7 @@ Table 50317 "Payroll Employee."
 
     local procedure FnRunGetEOYAmount(VarMemberNo: Code[30]; VarPayrollNo: Code[30])
     var
-        ObjCust: Record "Members Register";
+        ObjCust: Record Customer;
         VarOpenPeriod: Date;
         VarPeriodMonth: Integer;
         VarPeriodYear: Integer;
@@ -1413,7 +1413,7 @@ Table 50317 "Payroll Employee."
 
     local procedure FnRunGetMileageAllowanceAmount(VarMemberNo: Code[30]; VarPayrollNo: Code[30])
     var
-        ObjCust: Record "Members Register";
+        ObjCust: Record Customer;
         VarOpenPeriod: Date;
         VarPeriodMonth: Integer;
         VarPeriodYear: Integer;
@@ -1462,7 +1462,7 @@ Table 50317 "Payroll Employee."
 
     local procedure FnRunGetOtherTaxableBenefitsAmount(VarMemberNo: Code[30]; VarPayrollNo: Code[30])
     var
-        ObjCust: Record "Members Register";
+        ObjCust: Record Customer;
         VarOpenPeriod: Date;
         VarPeriodMonth: Integer;
         VarPeriodYear: Integer;
@@ -1511,7 +1511,7 @@ Table 50317 "Payroll Employee."
 
     local procedure FnRunGetOtherNonTaxableBenefitsAmount(VarMemberNo: Code[30]; VarPayrollNo: Code[30])
     var
-        ObjCust: Record "Members Register";
+        ObjCust: Record Customer;
         VarOpenPeriod: Date;
         VarPeriodMonth: Integer;
         VarPeriodYear: Integer;
@@ -1560,7 +1560,7 @@ Table 50317 "Payroll Employee."
 
     local procedure FnRunGetSalaryAdvanceAmount(VarMemberNo: Code[30]; VarPayrollNo: Code[30])
     var
-        ObjCust: Record "Members Register";
+        ObjCust: Record Customer;
         VarOpenPeriod: Date;
         VarPeriodMonth: Integer;
         VarPeriodYear: Integer;
@@ -1609,7 +1609,7 @@ Table 50317 "Payroll Employee."
 
     local procedure FnRunGetHelbLoanAmount(VarMemberNo: Code[30]; VarPayrollNo: Code[30])
     var
-        ObjCust: Record "Members Register";
+        ObjCust: Record Customer;
         VarOpenPeriod: Date;
         VarPeriodMonth: Integer;
         VarPeriodYear: Integer;
@@ -1658,7 +1658,7 @@ Table 50317 "Payroll Employee."
 
     local procedure FnRunGetHousingLevyAmount(VarMemberNo: Code[30]; VarPayrollNo: Code[30])
     var
-        ObjCust: Record "Members Register";
+        ObjCust: Record Customer;
         VarOpenPeriod: Date;
         VarPeriodMonth: Integer;
         VarPeriodYear: Integer;

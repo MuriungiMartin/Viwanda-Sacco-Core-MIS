@@ -19,7 +19,7 @@ Table 50649 "Piggy Bank Issuance"
         }
         field(2; "Member Account No"; Code[30])
         {
-            TableRelation = "Members Register"."No.";
+            TableRelation = Customer."No.";
 
             trigger OnValidate()
             begin
@@ -111,7 +111,7 @@ Table 50649 "Piggy Bank Issuance"
     var
         NoSetup: Record "Sacco No. Series";
         NoSeriesMgt: Codeunit NoSeriesManagement;
-        ObjCust: Record "Members Register";
+        ObjCust: Record Customer;
         ObjAccount: Record Vendor;
         ObjPiggyBank: Record "Piggy Bank Issuance";
 }

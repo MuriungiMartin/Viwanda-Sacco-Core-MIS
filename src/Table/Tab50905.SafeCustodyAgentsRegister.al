@@ -21,7 +21,7 @@ Table 50905 "Safe Custody Agents Register"
         }
         field(3; "Agent Member No"; Code[50])
         {
-            TableRelation = "Members Register"."No.";
+            TableRelation = Customer."No.";
 
             trigger OnValidate()
             begin
@@ -32,7 +32,7 @@ Table 50905 "Safe Custody Agents Register"
                     "Agent Postal Address" := ObjCust.Address;
                     "Agent Postal Code" := ObjCust."Post Code";
                     "Agent Physical Address" := ObjCust."Member's Residence";
-                    Picture := ObjCust.Picture;
+                    Picture := ObjCust.Piccture;
                     Signature := ObjCust.Signature;
                 end;
             end;
@@ -136,6 +136,6 @@ Table 50905 "Safe Custody Agents Register"
     var
         SalesSetup: Record "Sacco No. Series";
         NoSeriesMgt: Codeunit NoSeriesManagement;
-        ObjCust: Record "Members Register";
+        ObjCust: Record Customer;
 }
 

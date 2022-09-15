@@ -19,9 +19,10 @@ codeunit 50130 "PostingCodeunit"
     begin
         with GenJournalLine do
             case "Account Type" of
-                "Account Type"::Member: begin
-                    OnBeforePostMember();
-                    PostMemb(GenJournalLine, Balancing);
+                "Account Type"::Member:
+                    begin
+                        OnBeforePostMember();
+                        PostMemb(GenJournalLine, Balancing);
                     end;
             end;
     end;
@@ -30,7 +31,7 @@ codeunit 50130 "PostingCodeunit"
     local procedure PostMemb(var GenJournalLine: Record "Gen. Journal Line"; Balancing: Boolean)
     var
         LineFeeNoteOnReportHist: Record "Line Fee Note on Report Hist.";
-        Memb: Record "Members Register";
+        Memb: Record Customer;
         MembPostingGr: Record "Customer Posting Group";
         MembLedgEntry: Record "Member Ledger Entry";
         CVLedgEntryBuf: Record "CV Ledger Entry Buffer";
@@ -361,7 +362,7 @@ codeunit 50130 "PostingCodeunit"
         MembLedgEntry."Transaction No." := NextEntryNo;
     end;
 
-    local procedure ApplyMembLedgEntry(var NewCVLedgEntryBuf: Record "CV Ledger Entry Buffer"; var DtldCVLedgEntryBuf: Record "Detailed CV Ledg. Entry Buffer"; GenJournalLine: Record "Gen. Journal Line"; Memb: Record "Members Register")
+    local procedure ApplyMembLedgEntry(var NewCVLedgEntryBuf: Record "CV Ledger Entry Buffer"; var DtldCVLedgEntryBuf: Record "Detailed CV Ledg. Entry Buffer"; GenJournalLine: Record "Gen. Journal Line"; Memb: Record Customer)
     var
         OldMembLedgEntry: Record "Member Ledger Entry";
         OldCVLedgEntryBuf: Record "CV Ledger Entry Buffer";
@@ -411,7 +412,7 @@ codeunit 50130 "PostingCodeunit"
     END;
 
 
-    local procedure PrepareTempMembLedgEntry(GenJournalLine: Record "Gen. Journal Line"; var NewCVLedgEntryBuf: Record "CV Ledger Entry Buffer"; var TempOldMembLedgEntry: Record "Member Ledger Entry" temporary; Memb: Record "Members Register"; var ApplyingDate: Date): Boolean
+    local procedure PrepareTempMembLedgEntry(GenJournalLine: Record "Gen. Journal Line"; var NewCVLedgEntryBuf: Record "CV Ledger Entry Buffer"; var TempOldMembLedgEntry: Record "Member Ledger Entry" temporary; Memb: Record Customer; var ApplyingDate: Date): Boolean
     var
         OldMembLedgEntry: Record "Member Ledger Entry";
         SalesSetup: Record "Sales & Receivables Setup";
@@ -482,7 +483,7 @@ codeunit 50130 "PostingCodeunit"
 
 
     var
-        cust: Record "Members Register";
+        cust: Record Customer;
         TransferCustomFields: Codeunit "Transfer Custom Fields";
         UnrealizedRemainingAmountInvestor: Decimal;
         CheckUnrealizedMemb: Boolean;

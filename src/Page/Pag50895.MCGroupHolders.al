@@ -5,7 +5,7 @@ Page 50895 "MC Group Holders"
     Editable = false;
     ModifyAllowed = false;
     PageType = Card;
-    SourceTable = "Members Register";
+    SourceTable = Customer;
     SourceTableView = where("Customer Posting Group" = const('MICRO'),
                             "Group Account" = filter(true));
 

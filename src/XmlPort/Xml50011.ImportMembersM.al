@@ -7,121 +7,121 @@ XmlPort 50011 "Import MembersM"
     {
         textelement(root)
         {
-            tableelement("Members Register"; "Members Register")
+            tableelement(Customer; Customer)
             {
                 XmlName = 'Member';
-                fieldelement(A; "Members Register"."No.")
+                fieldelement(A; Customer."No.")
                 {
                 }
-                fieldelement(B; "Members Register".Name)
+                fieldelement(B; Customer.Name)
                 {
                 }
-                fieldelement(C; "Members Register".Address)
+                fieldelement(C; Customer.Address)
                 {
                 }
-                fieldelement(D; "Members Register"."Address 2")
+                fieldelement(D; Customer."Address 2")
                 {
                 }
-                fieldelement(E; "Members Register".City)
+                fieldelement(E; Customer.City)
                 {
                 }
-                fieldelement(F; "Members Register"."Phone No.")
+                fieldelement(F; Customer."Phone No.")
                 {
                 }
-                fieldelement(G; "Members Register"."Global Dimension 1 Code")
+                fieldelement(G; Customer."Global Dimension 1 Code")
                 {
                 }
-                fieldelement(H; "Members Register"."Global Dimension 2 Code")
+                fieldelement(H; Customer."Global Dimension 2 Code")
                 {
                 }
-                fieldelement(I; "Members Register"."Customer Posting Group")
+                fieldelement(I; Customer."Customer Posting Group")
                 {
                 }
-                fieldelement(J; "Members Register"."Post Code")
+                fieldelement(J; Customer."Post Code")
                 {
                 }
-                fieldelement(K; "Members Register"."E-Mail")
+                fieldelement(K; Customer."E-Mail")
                 {
                 }
-                fieldelement(L; "Members Register"."Customer Type")
+                fieldelement(L; Customer."Customer Type")
                 {
                 }
-                fieldelement(M; "Members Register"."Registration Date")
+                fieldelement(M; Customer."Registration Date")
                 {
                 }
-                fieldelement(N; "Members Register".Status)
+                fieldelement(N; Customer.Status)
                 {
                 }
-                fieldelement(O; "Members Register"."FOSA Account No.")
+                fieldelement(O; Customer."FOSA Account No.")
                 {
                 }
-                fieldelement(P; "Members Register"."Employer Code")
+                fieldelement(P; Customer."Employer Code")
                 {
                 }
-                fieldelement(Q; "Members Register"."Date of Birth")
+                fieldelement(Q; Customer."Date of Birth")
                 {
                 }
-                fieldelement(R; "Members Register"."Station/Department")
+                fieldelement(R; Customer."Station/Department")
                 {
                 }
-                fieldelement(S; "Members Register"."Home Address")
+                fieldelement(S; Customer."Home Address")
                 {
                 }
-                fieldelement(T; "Members Register".Location)
+                fieldelement(T; Customer.Location)
                 {
                 }
-                fieldelement(U; "Members Register"."Sub-Location")
+                fieldelement(U; Customer."Sub-Location")
                 {
                 }
-                fieldelement(V; "Members Register".District)
+                fieldelement(V; Customer.District)
                 {
                 }
-                fieldelement(W; "Members Register"."Payroll No")
+                fieldelement(W; Customer."Payroll No")
                 {
                 }
-                fieldelement(X; "Members Register"."ID No.")
+                fieldelement(X; Customer."ID No.")
                 {
                 }
-                fieldelement(Y; "Members Register"."Mobile Phone No")
+                fieldelement(Y; Customer."Mobile Phone No")
                 {
                 }
-                fieldelement(Z; "Members Register"."Marital Status")
+                fieldelement(Z; Customer."Marital Status")
                 {
                 }
-                fieldelement(AA; "Members Register".Gender)
+                fieldelement(AA; Customer.Gender)
                 {
                 }
-                fieldelement(BB; "Members Register".rejoined)
+                fieldelement(BB; Customer.rejoined)
                 {
                 }
-                fieldelement(CC; "Members Register"."Introduced By")
+                fieldelement(CC; Customer."Introduced By")
                 {
                 }
-                fieldelement(DD; "Members Register"."Rejoining Date")
+                fieldelement(DD; Customer."Rejoining Date")
                 {
                 }
-                fieldelement(DE; "Members Register".Staff)
+                fieldelement(DE; Customer.Staff)
                 {
                 }
-                fieldelement(CC; "Members Register"."Member Category")
+                fieldelement(CC; Customer."Member Category")
                 {
                 }
-                fieldelement(DD; "Members Register"."Terms Of Employment")
+                fieldelement(DD; Customer."Terms Of Employment")
                 {
                 }
-                fieldelement(EE; "Members Register"."Nominee Envelope No.")
+                fieldelement(EE; Customer."Nominee Envelope No.")
                 {
                 }
-                fieldelement(FF; "Members Register".Disabled)
+                fieldelement(FF; Customer.Disabled)
                 {
                 }
-                fieldelement(SS; "Members Register"."Death date")
+                fieldelement(SS; Customer."Death date")
                 {
                 }
-                fieldelement(THT; "Members Register".BoostedDate)
+                fieldelement(THT; Customer.BoostedDate)
                 {
                 }
-                fieldelement(UJ; "Members Register".BoostedAmount)
+                fieldelement(UJ; Customer.BoostedAmount)
                 {
                 }
             }

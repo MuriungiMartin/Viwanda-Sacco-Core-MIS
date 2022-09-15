@@ -6,7 +6,7 @@ Report 50505 "Accrue Risk Fund"
 
     dataset
     {
-        dataitem("Members Register"; "Members Register")
+        dataitem(Customer; Customer)
         {
 
             column(FORMAT_TODAY_0_4_; Format(Today, 0, 4))
@@ -54,7 +54,7 @@ Report 50505 "Accrue Risk Fund"
                 GenJournalLine."Journal Batch Name" := 'RiskDue';
                 GenJournalLine."Line No." := LineNo;
                 GenJournalLine."Account Type" := GenJournalLine."account type"::Member;
-                GenJournalLine."Account No." := "Members Register"."No.";
+                GenJournalLine."Account No." := Customer."No.";
                 GenJournalLine."Transaction Type" := GenJournalLine."transaction type"::" ";
                 GenJournalLine.Validate(GenJournalLine."Account No.");
                 GenJournalLine."Document No." := DocNo;
@@ -62,13 +62,13 @@ Report 50505 "Accrue Risk Fund"
                 GenJournalLine.Description := DocNo + ' ' + 'Risk Fund charged';
                 GenJournalLine.Amount := GenSetup."Risk Fund Amount";
                 GenJournalLine.Validate(GenJournalLine.Amount);
-                if MemberPostingG.Get("Members Register"."Customer Posting Group") then begin
+                if MemberPostingG.Get(Customer."Customer Posting Group") then begin
                     GenJournalLine."Bal. Account Type" := GenJournalLine."bal. account type"::"G/L Account";
                     GenJournalLine."Bal. Account No." := MemberPostingG."Risk Fund Charged Account";
                 end;
                 GenJournalLine.Validate(GenJournalLine."Bal. Account No.");
                 GenJournalLine."Shortcut Dimension 1 Code" := 'BOSA';
-                GenJournalLine."Shortcut Dimension 2 Code" := "Members Register"."Global Dimension 2 Code";
+                GenJournalLine."Shortcut Dimension 2 Code" := Customer."Global Dimension 2 Code";
                 GenJournalLine.Validate(GenJournalLine."Shortcut Dimension 1 Code");
                 GenJournalLine.Validate(GenJournalLine."Shortcut Dimension 2 Code");
                 GenJournalLine."Loan No" := loanapp."Loan  No.";
@@ -164,7 +164,7 @@ Report 50505 "Accrue Risk Fund"
         PDate: Date;
         LoanType: Record "Loan Products Setup";
         PostDate: Date;
-        Cust: Record "Members Register";
+        Cust: Record Customer;
         LineNo: Integer;
         DocNo: Code[20];
         GenJournalLine: Record "Gen. Journal Line";

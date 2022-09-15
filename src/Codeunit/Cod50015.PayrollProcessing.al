@@ -133,7 +133,7 @@ Codeunit 50015 "Payroll Processing"
         prEmployerDeductions: Record "Payroll Employer Deductions.";
         JournalPostingType: Option " ","G/L Account",Customer,Vendor,Member;
         JournalAcc: Code[20];
-        Customer: Record "Members Register";
+        Customer: Record Customer;
         JournalPostAs: Option " ",Debit,Credit;
         IsCashBenefit: Decimal;
         Teltax: Decimal;

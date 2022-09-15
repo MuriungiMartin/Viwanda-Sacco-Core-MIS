@@ -14,7 +14,7 @@ Report 50382 "Members With No Shares"
 
     dataset
     {
-        dataitem("Members Register"; "Members Register")
+        dataitem(Customer; Customer)
         {
             DataItemTableView = sorting("No.") where("Outstanding Balance" = filter(> 0), "Current Shares" = filter(0));
             PrintOnlyIfDetail = false;
@@ -46,22 +46,22 @@ Report 50382 "Members With No Shares"
             column(UserId; UserId)
             {
             }
-            column(No; "Members Register"."No.")
+            column(No; Customer."No.")
             {
             }
-            column(Name; "Members Register".Name)
+            column(Name; Customer.Name)
             {
             }
-            column(Agency_Code; "Members Register"."Employer Code")
+            column(Agency_Code; Customer."Employer Code")
             {
             }
-            column(Agency_Name; "Members Register"."Employer Name")
+            column(Agency_Name; Customer."Employer Name")
             {
             }
-            column(Outstanding_Balance; "Members Register"."Outstanding Balance")
+            column(Outstanding_Balance; Customer."Outstanding Balance")
             {
             }
-            column(Current_Shares; "Members Register"."Current Shares")
+            column(Current_Shares; Customer."Current Shares")
             {
             }
             column(Verified_By__________________________________________________Caption; Verified_By__________________________________________________CaptionLbl)
@@ -133,10 +133,10 @@ Report 50382 "Members With No Shares"
             column(CreditComSign3; CreditComSign3)
             {
             }
-            column(COMPPIC; "Members Register".Picture)
+            column(COMPPIC; Customer.Piccture)
             {
             }
-            column(NAME1; "Members Register".Name)
+            column(NAME1; Customer.Name)
             {
             }
             trigger OnAfterGetRecord();
@@ -276,7 +276,7 @@ Report 50382 "Members With No Shares"
         ApprovalSetup: Record "Table Permission Buffer";
         LocationFilter: Code[20];
         TotalApproved: Decimal;
-        cust: Record "Members Register";
+        cust: Record Customer;
         BOSABal: Decimal;
         SuperBal: Decimal;
         LAppl: Record "HR Transport Requisition Pass";
@@ -304,8 +304,8 @@ Report 50382 "Members With No Shares"
         Date________________________Caption_Control1102755005Lbl: label 'Date........................';
         GenSetUp: Record "HR Leave Planner Lines";
         LoanApp: Record "HR Transport Requisition Pass";
-        CustRec: Record "Members Register";
-        CustRecord: Record "Members Register";
+        CustRec: Record Customer;
+        CustRecord: Record Customer;
         TShares: Decimal;
         TLoans: Decimal;
         LoanShareRatio: Decimal;

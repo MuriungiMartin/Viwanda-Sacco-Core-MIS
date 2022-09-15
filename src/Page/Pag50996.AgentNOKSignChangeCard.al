@@ -303,7 +303,7 @@ Page 50996 "Agent/NOK/Sign. Change Card"
         CanCancelApprovalForRecord: Boolean;
         ApprovalsMgmt: Codeunit "Approvals Mgmt.";
         EnabledApprovalWorkflowsExist: Boolean;
-        ObjCust: Record "Members Register";
+        ObjCust: Record Customer;
         MemberNoEditable: Boolean;
         AccountNoEditable: Boolean;
         ChangeTypeEditable: Boolean;

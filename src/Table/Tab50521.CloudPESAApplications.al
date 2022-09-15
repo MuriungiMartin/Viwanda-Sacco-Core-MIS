@@ -20,7 +20,7 @@ Table 50521 "CloudPESA Applications"
         field(2; "Account No"; Code[30])
         {
             Editable = true;
-            TableRelation = "Members Register"."No.";
+            TableRelation = Customer."No.";
 
             trigger OnValidate()
             begin
@@ -131,6 +131,6 @@ Table 50521 "CloudPESA Applications"
     var
         SaccoNoSeries: Record "Sacco No. Series";
         NoSeriesMgt: Codeunit NoSeriesManagement;
-        Accounts: Record "Members Register";
+        Accounts: Record Customer;
 }
 

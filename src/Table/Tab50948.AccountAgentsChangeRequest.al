@@ -42,12 +42,12 @@ Table 50948 "Account Agents Change Request"
         }
         field(12; "BOSA No."; Code[30])
         {
-            TableRelation = "Members Register";
+            TableRelation = Customer;
 
             trigger OnValidate()
             begin
                 if ObjCust.Get("BOSA No.") then begin
-                    Picture := ObjCust.Picture;
+                    Picture := ObjCust.Piccture;
                     Signature := ObjCust.Signature;
                     Names := ObjCust.Name;
                     "ID No." := ObjCust."ID No.";
@@ -98,6 +98,6 @@ Table 50948 "Account Agents Change Request"
     }
 
     var
-        ObjCust: Record "Members Register";
+        ObjCust: Record Customer;
 }
 

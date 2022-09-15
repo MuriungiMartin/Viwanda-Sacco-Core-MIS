@@ -167,7 +167,7 @@ Report 50673 "LoanCategoryReport"
     }
 
     var
-        cust: Record "Members Register";
+        cust: Record Customer;
         Category: Text;
         "loans reg": Record "Loans Register";
         SMSMessage: Record "SMS Messages";

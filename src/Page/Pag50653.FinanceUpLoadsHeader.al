@@ -463,7 +463,7 @@ Page 50653 "Finance UpLoads Header"
     local procedure FnDividendInterestPostings()
     var
         WithholdingTaxAmount: Decimal;
-        ObjMember: Record "Members Register";
+        ObjMember: Record Customer;
         RecommendedShareCapital: Decimal;
         AmountToCapitalize: Decimal;
         NetDividend: Decimal;

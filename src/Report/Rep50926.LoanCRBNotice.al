@@ -160,7 +160,7 @@ Report 50926 "Loan CRB Notice"
                 column(VarDemandDate; Format(VarDemandDate, 0, '<Day,2> <Month Text,3> <Year4>'))
                 {
                 }
-                dataitem(Customer; "Members Register")
+                dataitem(Customer; Customer)
                 {
                     DataItemLink = "No." = field("Client Code");
                     RequestFilterFields = "No.";
@@ -513,7 +513,7 @@ Report 50926 "Loan CRB Notice"
         LBalance: Decimal;
         PersonalNo: Code[50];
         GAddress: Text[250];
-        Cust: Record "Members Register";
+        Cust: Record Customer;
         TotalRec: Decimal;
         NoGuarantors: Integer;
         AmountT: Decimal;
@@ -530,7 +530,7 @@ Report 50926 "Loan CRB Notice"
         SendSMS: Boolean;
         SMSMessage: Record "SMS Messages";
         iEntryNo: Integer;
-        Cust1: Record "Members Register";
+        Cust1: Record Customer;
         CompanyInformation: Record "Company Information";
         ObjCollateral: Record "Loan Collateral Details";
         ObjGuarantor: Record "Loans Guarantee Details";

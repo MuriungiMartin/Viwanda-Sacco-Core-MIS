@@ -241,7 +241,7 @@ Page 50557 "Membership App Unemployed"
                             Cust."Marital Status" := "Marital Status";
                             Cust."Customer Type" := Cust."customer type"::Member;
                             Cust.Gender := Gender;
-                            Cust.Picture := Picture;
+                            Cust.Piccture := Picture;
                             Cust.Signature := Signature;
                             Cust."Monthly Contribution" := "Monthly Contribution";
                             Cust."Contact Person" := "Contact Person";
@@ -399,7 +399,7 @@ Page 50557 "Membership App Unemployed"
 
     var
         StatusPermissions: Record "Status Change Permision";
-        Cust: Record "Members Register";
+        Cust: Record Customer;
         Accounts: Record Vendor;
         AcctNo: Code[20];
         NextOfKinApp: Record "Member App Nominee";

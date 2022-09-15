@@ -1037,7 +1037,7 @@ Table 50430 "FOSA Account Applicat. Details"
             begin
 
                 if Cust.Get("BOSA Account No") then begin
-                    //Cust.CALCFIELDS(Cust.Picture,Cust.Signature);
+                    //Cust.CALCFIELDS(Cust.Piccture,Cust.Signature);
                     Name := Cust.Name;
                     "Search Name" := Cust."Search Name";
                     Address := Cust.Address;

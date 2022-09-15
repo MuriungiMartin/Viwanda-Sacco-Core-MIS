@@ -43,7 +43,7 @@ Table 50366 "Members Next of Kin"
         }
         field(10; "Account No"; Code[30])
         {
-            TableRelation = "Members Register"."No.";
+            TableRelation = Customer."No.";
         }
         field(11; "ID No."; Code[40])
         {
@@ -94,7 +94,7 @@ Table 50366 "Members Next of Kin"
         }
         field(25; "Member No"; Code[20])
         {
-            TableRelation = "Members Register"."No.";
+            TableRelation = Customer."No.";
 
             trigger OnValidate()
             begin
@@ -125,6 +125,6 @@ Table 50366 "Members Next of Kin"
     }
 
     var
-        ObjCust: Record "Members Register";
+        ObjCust: Record Customer;
 }
 

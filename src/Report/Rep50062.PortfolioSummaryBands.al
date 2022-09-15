@@ -169,7 +169,7 @@ Report 50062 "Portfolio Summary Bands"
         FORM_4CaptionLbl: label 'FORM 4';
         SASRA_2_004CaptionLbl: label 'SASRA 2/004';
         R__46_CaptionLbl: label 'R.(46)';
-        ObjMembers: Record "Members Register";
+        ObjMembers: Record Customer;
         VarEntryNo: Integer;
         ObjDetailedVendLedger: Record "Detailed Vendor Ledg. Entry";
         VarReportDate: Date;

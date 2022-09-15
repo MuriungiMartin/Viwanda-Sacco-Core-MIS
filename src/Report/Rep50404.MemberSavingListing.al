@@ -7,7 +7,7 @@ Report 50404 "Member Saving Listing"
 
     dataset
     {
-        dataitem("Members Register"; Customer)
+        dataitem(Customer; Customer)
         {
             CalcFields = "Current Shares", "Registration Fee", "Principal Balance", "Shares Retained";
             DataItemTableView = sorting("No.") where("Customer Type" = const(Member));
@@ -40,37 +40,37 @@ Report 50404 "Member Saving Listing"
             column(RNo; RNo)
             {
             }
-            column(No; "Members Register"."No.")
+            column(No; Customer."No.")
             {
             }
-            column(Name; "Members Register".Name)
+            column(Name; Customer.Name)
             {
             }
-            column(Staff_No; "Members Register"."Payroll No")
+            column(Staff_No; Customer."Payroll No")
             {
             }
-            column(Status; "Members Register".Status)
+            column(Status; Customer.Status)
             {
             }
-            column(Registration_date; "Members Register"."Registration Date")
+            column(Registration_date; Customer."Registration Date")
             {
             }
-            column(Entrance_Fee; "Members Register"."Registration Fee")
+            column(Entrance_Fee; Customer."Registration Fee")
             {
             }
-            column(Share_Capital; "Members Register"."Shares Retained")
+            column(Share_Capital; Customer."Shares Retained")
             {
             }
-            column(Welfare; "Members Register"."Welfare Contribution")
+            column(Welfare; Customer."Welfare Contribution")
             {
             }
-            column(Deposits; "Members Register"."Monthly Contribution")
+            column(Deposits; Customer."Monthly Contribution")
             {
             }
-            column(Outstanding_Bal; "Members Register"."Outstanding Balance")
+            column(Outstanding_Bal; Customer."Outstanding Balance")
             {
             }
-            column(Dividend; "Members Register"."Dividend Amount")
+            column(Dividend; Customer."Dividend Amount")
             {
             }
             column(Balance1; Balance1)
@@ -91,7 +91,7 @@ Report 50404 "Member Saving Listing"
             column(Balance6; Balance6)
             {
             }
-            column(Principle_Balance; "Members Register"."Principal Balance")
+            column(Principle_Balance; Customer."Principal Balance")
             {
             }
             column(Verified_By__________________________________________________Caption; Verified_By__________________________________________________CaptionLbl)
@@ -163,10 +163,10 @@ Report 50404 "Member Saving Listing"
             column(CreditComSign3; CreditComSign3)
             {
             }
-            column(COMPPIC; "Members Register".Piccture)
+            column(COMPPIC; Customer.Piccture)
             {
             }
-            column(NAME1; "Members Register".Name)
+            column(NAME1; Customer.Name)
             {
             }
             trigger OnPreDataItem();

@@ -105,28 +105,28 @@ Report 50945 "House Group Statement Process"
             column(VarExitLoans; VarExitLoans)
             {
             }
-            dataitem("Members Register"; "Members Register")
+            dataitem(Customer; Customer)
             {
                 DataItemLink = "Member House Group" = field("Cell Group Code");
                 column(ReportForNavId_3474; 3474)
                 {
                 }
-                column(TotalLoansOutstanding_MembersRegister; "Members Register"."Total Loans Outstanding")
+                column(TotalLoansOutstanding_MembersRegister; Customer."Total Loans Outstanding")
                 {
                 }
-                column(CurrentShares_MembersRegister; "Members Register"."Current Shares")
+                column(CurrentShares_MembersRegister; Customer."Current Shares")
                 {
                 }
-                column(SharesRetained_MembersRegister; "Members Register"."Shares Retained")
+                column(SharesRetained_MembersRegister; Customer."Shares Retained")
                 {
                 }
-                column(No_MembersRegister; "Members Register"."No.")
+                column(No_MembersRegister; Customer."No.")
                 {
                 }
-                column(Name_MembersRegister; "Members Register".Name)
+                column(Name_MembersRegister; Customer.Name)
                 {
                 }
-                column(Status_MembersRegister; "Members Register".Status)
+                column(Status_MembersRegister; Customer.Status)
                 {
                 }
                 column(VarCollateralSecurity; VarCollateralSecurity)
@@ -138,7 +138,7 @@ Report 50945 "House Group Statement Process"
                 column(VarTotalArrears; VarTotalArrears * -1)
                 {
                 }
-                column(HouseGroupStatus_MembersRegister; "Members Register"."House Group Status")
+                column(HouseGroupStatus_MembersRegister; Customer."House Group Status")
                 {
                 }
                 column(VarMemberGuarantorshipLiability; VarMemberGuarantorshipLiability)
@@ -162,7 +162,7 @@ Report 50945 "House Group Statement Process"
                     VarTotalArrears := 0;
 
                     ObjLoanCollateral.Reset;
-                    ObjLoanCollateral.SetRange(ObjLoanCollateral."Member No", "Members Register"."No.");
+                    ObjLoanCollateral.SetRange(ObjLoanCollateral."Member No", Customer."No.");
                     if ObjLoanCollateral.FindSet then begin
                         repeat
 
@@ -238,7 +238,7 @@ Report 50945 "House Group Statement Process"
                     end;
                     VarTotalArrears := VarTotalArrears + VarArrears;
 
-                    VarMemberGuarantorshipLiability := Sfactory.FnGetMemberLiability("Members Register"."No.");
+                    VarMemberGuarantorshipLiability := Sfactory.FnGetMemberLiability(Customer."No.");
 
 
                     //-------------------Deposit Arrears Computation------------------------------------
@@ -388,7 +388,7 @@ Report 50945 "House Group Statement Process"
         VarLoanRisk: Decimal;
         VarNoGroupMembers: Integer;
         VarGroupNetWorth: Decimal;
-        ObjCust: Record "Members Register";
+        ObjCust: Record Customer;
         VarLastMonth: Date;
         ObjRepaymentSch: Record "Loan Repayment Schedule";
         VarArrears: Decimal;

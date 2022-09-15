@@ -194,7 +194,7 @@ Page 50408 "Membership Exit List"
 
     var
         Closure: Integer;
-        cust: Record "Members Register";
+        cust: Record Customer;
         UBFRefund: Decimal;
         Generalsetup: Record "Sacco General Set-Up";
         Totalavailable: Decimal;
@@ -235,7 +235,7 @@ Page 50408 "Membership Exit List"
         Doc_Type: Option Quote,"Order",Invoice,"Credit Memo","Blanket Order","Return Order"," ","Purchase Requisition",RFQ,"Store Requisition","Payment Voucher",MembershipApplication,LoanApplication,LoanDisbursement,ProductApplication,StandingOrder,MembershipWithdrawal,ATMCard,GuarantorRecovery,ChangeRequest,TreasuryTransactions,FundsTransfer,SaccoTransfers,ChequeDiscounting,ImprestRequisition,ImprestSurrender,LeaveApplication,BulkWithdrawal,PackageLodging,PackageRetrieval;
         PTEN: Text;
         DataSheet: Record "Data Sheet Main";
-        Customer: Record "Members Register";
+        Customer: Record Customer;
         GenSetUp: Record "Sacco General Set-Up";
         compinfo: Record "Company Information";
         SMSMessage: Record "SMS Messages";
@@ -252,9 +252,9 @@ Page 50408 "Membership Exit List"
         JVBalAccountNo: Code[20];
         TransferFee: Decimal;
         AvailableBal: Decimal;
-        ObjMember: Record "Members Register";
+        ObjMember: Record Customer;
         VarMemberAvailableAmount: Decimal;
-        ObjCust: Record "Members Register";
+        ObjCust: Record Customer;
         ObjGensetup: Record "Sacco General Set-Up";
         VarWithdrawalFee: Decimal;
         VarTaxonWithdrawalFee: Decimal;
@@ -473,7 +473,7 @@ Page 50408 "Membership Exit List"
     local procedure FnRunPostNormalExitApplication(VarMemberNo: Code[30])
     var
         ObjGensetup: Record "Sacco General Set-Up";
-        ObjMember: Record "Members Register";
+        ObjMember: Record Customer;
         VarRunningBal: Decimal;
         ObjLoans: Record "Loans Register";
         ObjLoansII: Record "Loans Register";
@@ -627,7 +627,7 @@ Page 50408 "Membership Exit List"
     local procedure FnRunPostExitDeceasedApplication(VarMemberNo: Code[30])
     var
         ObjGensetup: Record "Sacco General Set-Up";
-        ObjMember: Record "Members Register";
+        ObjMember: Record Customer;
         VarRunningBal: Decimal;
         ObjLoans: Record "Loans Register";
         ObjLoansII: Record "Loans Register";

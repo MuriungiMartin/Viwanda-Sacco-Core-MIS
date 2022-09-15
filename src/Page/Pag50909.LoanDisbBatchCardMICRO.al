@@ -344,7 +344,7 @@ Page 50909 "Loan Disb Batch Card(MICRO)"
         ScheduleCode: Code[20];
         PreviewShedule: Record "Loan Repayment Schedule";
         PeriodInterval: Code[10];
-        CustomerRecord: Record "Members Register";
+        CustomerRecord: Record Customer;
         Gnljnline: Record "Gen. Journal Line";
         Jnlinepost: Codeunit "Gen. Jnl.-Post Line";
         CumInterest: Decimal;
@@ -354,10 +354,10 @@ Page 50909 "Loan Disb Batch Card(MICRO)"
         LineNo: Integer;
         GnljnlineCopy: Record "Gen. Journal Line";
         NewLNApplicNo: Code[10];
-        Cust: Record "Members Register";
+        Cust: Record Customer;
         LoanApp: Record "Loans Register";
         TestAmt: Decimal;
-        CustRec: Record "Members Register";
+        CustRec: Record Customer;
         CustPostingGroup: Record "Customer Posting Group";
         GenSetUp: Record "Sacco General Set-Up";
         PCharges: Record "Loan Product Charges";
@@ -394,7 +394,7 @@ Page 50909 "Loan Disb Batch Card(MICRO)"
         DBranch: Code[20];
         UsersID: Record User;
         TotalTopupComm: Decimal;
-        CustE: Record "Members Register";
+        CustE: Record Customer;
         DocN: Text[50];
         DocM: Text[100];
         DNar: Text[250];
@@ -480,7 +480,7 @@ Page 50909 "Loan Disb Batch Card(MICRO)"
         InsuranceAcc: Code[20];
         PTEN: Code[20];
         LoanTypes: Record "Loan Products Setup";
-        Customer: Record "Members Register";
+        Customer: Record Customer;
         DataSheet: Record "Data Sheet Main";
         SMSAcc: Code[10];
         SMSFee: Decimal;

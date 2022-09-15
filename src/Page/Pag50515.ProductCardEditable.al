@@ -1857,7 +1857,7 @@ Page 50515 "Product Card Editable"
         InterestBuffer: Record "Interest Buffer";
         FDType: Record "Fixed Deposit Type";
         Vend: Record Vendor;
-        Cust: Record "Members Register";
+        Cust: Record Customer;
         LineNo: Integer;
         UsersID: Record User;
         DActivity: Code[20];

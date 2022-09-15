@@ -223,9 +223,9 @@ Report 50056 "Insider Lending & Saving Sum."
         FORM_4CaptionLbl: label 'FORM 4';
         SASRA_2_004CaptionLbl: label 'SASRA 2/004';
         R__46_CaptionLbl: label 'R.(46)';
-        ObjMembers: Record "Members Register";
+        ObjMembers: Record Customer;
         VarEntryNo: Integer;
-        ObjCust: Record "Members Register";
+        ObjCust: Record Customer;
         VarBoardTotalLoans: Decimal;
         VarBoardDeposit: Decimal;
         VarBoardShareCapital: Decimal;

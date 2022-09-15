@@ -86,7 +86,7 @@ Report 50061 "Get Member Liability"
         VarMemberAnountGuaranteed: Decimal;
         VarApportionedLiability: Decimal;
         VarLoanOutstandingBal: Decimal;
-        ObjMembers: Record "Members Register";
+        ObjMembers: Record Customer;
     begin
         ObjMembers.Reset;
         ObjMembers.SetRange(ObjMembers."No.", MemberNo);
