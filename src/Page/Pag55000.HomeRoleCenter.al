@@ -278,6 +278,7 @@ page 55000 "Home Role Center" // default role center change to comapny name
                 Image = Vendor;
                 RunObject = Page "Vendor List";
                 ToolTip = 'View or edit detailed information for the FOSA Savings Accounts.';
+                Visible = false;
             }
             action(FOSAAccountsBalance)
             {
@@ -287,6 +288,7 @@ page 55000 "Home Role Center" // default role center change to comapny name
                 RunObject = Page "Vendor List";
                 RunPageView = WHERE("Balance (LCY)" = FILTER(<> 0));
                 ToolTip = 'View a summary of the bank account balance in different periods.';
+                Visible = false;
             }
             action(OutstandingLoans)
             {
@@ -818,6 +820,7 @@ page 55000 "Home Role Center" // default role center change to comapny name
                 Caption = 'Saving Products Management';
                 Image = Bank;
                 ToolTip = 'Manage Saving Accounts Eg. FOSA Savings and Fixed Deposits';
+                Visible = false;
                 action("Account Applications")
                 {
                     ApplicationArea = basic, suite;
@@ -834,6 +837,7 @@ page 55000 "Home Role Center" // default role center change to comapny name
                     Image = Customer;
                     RunObject = page "Member Accounts List";
                     ToolTip = 'Open Members'' FOSA Accounts';
+                    Visible = false;
 
                 }
                 group("Fixed Deposits Mgmt ")
@@ -998,6 +1002,7 @@ page 55000 "Home Role Center" // default role center change to comapny name
                     Caption = 'FOSA Loan Management';
                     Image = CreditCard;
                     ToolTip = 'FOSA Loans'' Management Module';
+                    Visible = false;
 
                     action("New FOSA Loans")
                     {
@@ -1061,6 +1066,7 @@ page 55000 "Home Role Center" // default role center change to comapny name
                 group(Collateralmgmt)
                 {
                     Caption = 'Collateral Management';
+                    Visible = false;
                     action(Collateralreg)
                     {
                         Caption = 'Loan Collateral Register';
@@ -1306,6 +1312,7 @@ page 55000 "Home Role Center" // default role center change to comapny name
 
             group("Banking Services")
             {
+                Visible = false;
                 action("Cashier Transactions")
                 {
                     Caption = 'cashier transactions';
@@ -1394,6 +1401,7 @@ page 55000 "Home Role Center" // default role center change to comapny name
             Group(SaccoPayroll)
             {
                 Caption = 'Payroll Management';
+                Visible = false;
                 group(payrollEmployees)
                 {
                     Caption = 'Payroll Employees';

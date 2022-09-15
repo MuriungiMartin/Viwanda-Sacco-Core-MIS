@@ -54,18 +54,18 @@ Page 50849 "Membership Cue"
                     DrillDownPageId = "Members List";
 
                 }
-                field("Group Accounts"; "Group Accounts")
-                {
-                    ApplicationArea = Basic;
-                    DrillDownPageId = "Members List";
+                //     field("Group Accounts"; "Group Accounts")
+                //     {
+                //         ApplicationArea = Basic;
+                //         DrillDownPageId = "Members List";
 
-                }
-                field("Joint Accounts"; "Joint Accounts")
-                {
-                    ApplicationArea = Basic;
-                    DrillDownPageId = "Members List";
+                //     }
+                //     field("Joint Accounts"; "Joint Accounts")
+                //     {
+                //         ApplicationArea = Basic;
+                //         DrillDownPageId = "Members List";
 
-                }
+                //     }
             }
             cuegroup("Account Categories")
             {
@@ -84,12 +84,12 @@ Page 50849 "Membership Cue"
 
 
                 }
-                field("Junior Members"; "Junior Members")
-                {
-                    ApplicationArea = Basic;
-                    Image = Library;
-                    DrillDownPageId = "Members List";
-                }
+                // field("Junior Members"; "Junior Members")
+                // {
+                //     ApplicationArea = Basic;
+                //     Image = Library;
+                //     DrillDownPageId = "Members List";
+                // }
             }
             cuegroup(Loans)
             {
@@ -108,63 +108,63 @@ Page 50849 "Membership Cue"
                     Image = "None";
                     LookupPageID = "Loans  List All";
                 }
-                field("Business Loan"; "Business Loan")
-                {
-                    ApplicationArea = Basic;
-                    Caption = 'Instant Laons';
-                    DrillDownPageID = "Loans  List All";
-                    Image = "None";
-                    LookupPageID = "Loans  List All";
-                }
-                field("Jijenge Loan"; "Jijenge Loan")
-                {
-                    ApplicationArea = Basic;
-                    Caption = 'Maono Shamba Loans';
-                    DrillDownPageID = "Loans  List All";
-                    Image = "None";
-                    LookupPageID = "Loans  List All";
-                }
-                field("School Fees Loan"; "School Fees Loan")
-                {
-                    ApplicationArea = Basic;
-                    DrillDownPageID = "Loans  List All";
-                    Image = "None";
-                    LookupPageID = "Loans  List All";
-                }
-                field("Corporate Loan"; "Corporate Loan")
-                {
-                    ApplicationArea = Basic;
-                    Caption = 'Super School Fees Loan';
-                }
-                field("Personal Loan"; "Personal Loan")
-                {
-                    ApplicationArea = Basic;
-                    Caption = 'Super Plus Loan';
-                    DrillDownPageID = "Loans  List All";
-                    Image = "None";
-                    LookupPageID = "Loans  List All";
-                }
-                field("Asset Finance"; "Asset Finance")
-                {
-                    ApplicationArea = Basic;
-                    Caption = 'Top Up Loan';
-                    DrillDownPageID = "Loans  List All";
-                    Image = "None";
-                    LookupPageID = "Loans  List All";
-                }
-                field("Community Development Loan"; "Community Development Loan")
-                {
-                    ApplicationArea = Basic;
-                    Caption = 'Vision Advance Loan';
-                }
-                field("Ufalme Project Loan"; "Ufalme Project Loan")
-                {
-                    ApplicationArea = Basic;
-                    Caption = 'Top Up Loan 1';
-                    DrillDownPageID = "Loans  List All";
-                    Image = "None";
-                    LookupPageID = "Loans  List All";
-                }
+                // field("Business Loan"; "Business Loan")
+                // {
+                //     ApplicationArea = Basic;
+                //     Caption = 'Instant Laons';
+                //     DrillDownPageID = "Loans  List All";
+                //     Image = "None";
+                //     LookupPageID = "Loans  List All";
+                // }
+                // field("Jijenge Loan"; "Jijenge Loan")
+                // {
+                //     ApplicationArea = Basic;
+                //     Caption = 'Maono Shamba Loans';
+                //     DrillDownPageID = "Loans  List All";
+                //     Image = "None";
+                //     LookupPageID = "Loans  List All";
+                // }
+                // field("School Fees Loan"; "School Fees Loan")
+                // {
+                //     ApplicationArea = Basic;
+                //     DrillDownPageID = "Loans  List All";
+                //     Image = "None";
+                //     LookupPageID = "Loans  List All";
+                // }
+                // field("Corporate Loan"; "Corporate Loan")
+                // {
+                //     ApplicationArea = Basic;
+                //     Caption = 'Super School Fees Loan';
+                // }
+                // field("Personal Loan"; "Personal Loan")
+                // {
+                //     ApplicationArea = Basic;
+                //     Caption = 'Super Plus Loan';
+                //     DrillDownPageID = "Loans  List All";
+                //     Image = "None";
+                //     LookupPageID = "Loans  List All";
+                // }
+                // field("Asset Finance"; "Asset Finance")
+                // {
+                //     ApplicationArea = Basic;
+                //     Caption = 'Top Up Loan';
+                //     DrillDownPageID = "Loans  List All";
+                //     Image = "None";
+                //     LookupPageID = "Loans  List All";
+                // }
+                // field("Community Development Loan"; "Community Development Loan")
+                // {
+                //     ApplicationArea = Basic;
+                //     Caption = 'Vision Advance Loan';
+                // }
+                // field("Ufalme Project Loan"; "Ufalme Project Loan")
+                // {
+                //     ApplicationArea = Basic;
+                //     Caption = 'Top Up Loan 1';
+                //     DrillDownPageID = "Loans  List All";
+                //     Image = "None";
+                //     LookupPageID = "Loans  List All";
+                // }
 
             }
             cuegroup(Approvals)
@@ -181,20 +181,20 @@ Page 50849 "Membership Cue"
                     DrillDownPageID = "Requests to Approve";
                 }
             }
-            cuegroup(Leave)
-            {
-                Caption = 'Leave';
-                field("Leave Pending"; "Leave Pending")
-                {
-                    ApplicationArea = Basic;
-                    DrillDownPageID = "HR Leave Applications List";
-                }
-                field("Leave Approved"; "Leave Approved")
-                {
-                    ApplicationArea = Basic;
-                    DrillDownPageID = "HR Leave Applications List";
-                }
-            }
+            // cuegroup(Leave)
+            // {
+            //     Caption = 'Leave';
+            //     field("Leave Pending"; "Leave Pending")
+            //     {
+            //         ApplicationArea = Basic;
+            //         DrillDownPageID = "HR Leave Applications List";
+            //     }
+            //     field("Leave Approved"; "Leave Approved")
+            //     {
+            //         ApplicationArea = Basic;
+            //         DrillDownPageID = "HR Leave Applications List";
+            //     }
+            // }
             cuegroup("Pending Documents")
             {
                 Caption = 'Pending Documents';
