@@ -13,9 +13,6 @@ XmlPort 50002 "Import Checkoff Block"
                 fieldelement(Header_No; "ReceiptsProcessing_L-Checkoff"."Receipt Header No")
                 {
                 }
-                fieldelement(Entry_No; "ReceiptsProcessing_L-Checkoff"."Receipt Line No")
-                {
-                }
                 fieldelement(Member_No; "ReceiptsProcessing_L-Checkoff"."Member No")
                 {
                 }
@@ -31,6 +28,11 @@ XmlPort 50002 "Import Checkoff Block"
 
                 }
                 fieldelement(TotalInterest; "ReceiptsProcessing_L-Checkoff"."Sacco Total Interest")
+
+                {
+
+                }
+                fieldelement(Benevolent; "ReceiptsProcessing_L-Checkoff"."Saccco Benevolent")
 
                 {
 
