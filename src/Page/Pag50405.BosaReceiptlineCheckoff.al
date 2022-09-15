@@ -3,6 +3,8 @@ Page 50405 "Bosa Receipt line-Checkoff"
 {
     PageType = ListPart;
     SourceTable = "ReceiptsProcessing_L-Checkoff";
+    ApplicationArea = all;
+    UsageCategory = Lists;
 
     layout
     {
@@ -10,6 +12,11 @@ Page 50405 "Bosa Receipt line-Checkoff"
         {
             repeater(Group)
             {
+
+                field("Receipt Header No"; "Receipt Header No")
+                {
+                    ApplicationArea = Basic;
+                }
                 field("Receipt Line No"; "Receipt Line No")
                 {
                     ApplicationArea = Basic;

@@ -3143,7 +3143,10 @@ Table 50371 "Loans Register"
         }
         field(69227; "Outstanding Insurance"; Decimal)
         {
-            FieldClass = Normal;
+            FieldClass = FlowField;
+            CalcFormula = sum("Cust. Ledger Entry"."Transaction Amount" where("Customer No." = field("Client Code"),
+            "Transaction Type" = filter("Loan Insurance Charged" | "Loan Insurance Paid"),
+            "Posting Date" = field("Date Filter")));
         }
         field(69228; "Salary Total Income"; Decimal)
         {

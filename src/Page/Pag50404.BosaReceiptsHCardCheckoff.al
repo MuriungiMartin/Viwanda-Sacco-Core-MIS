@@ -4,7 +4,6 @@ Page 50404 "Bosa Receipts H Card-Checkoff"
     DeleteAllowed = false;
     PageType = Card;
     SourceTable = "ReceiptsProcessing_H-Checkoff";
-    SourceTableView = where(Posted = const(false));
 
     layout
     {
@@ -114,6 +113,20 @@ Page 50404 "Bosa Receipts H Card-Checkoff"
                         ReceiptsProcessingLines.Modify;
                         //UNTIL Cust.NEXT=0;
                     end;
+                    RcptBufLines.Reset;
+                    RcptBufLines.SetRange(RcptBufLines."Receipt Header No", No);
+                    if RcptBufLines.Find('-') then begin
+                        repeat
+                            "Scheduled Amount" := RcptBufLines."Saccco Benevolent" +
+                            RcptBufLines."Sacco Appl Fee" +
+                            RcptBufLines."Sacco Shares" +
+                            RcptBufLines."Sacco Total Interest" +
+                            RcptBufLines."Sacco Total Loan";
+                        until
+                        RcptBufLines.Next() = 0;
+                        Modify();
+                        Message('Validation complete');
+                    end;
 
                 end;
             }
@@ -143,25 +156,25 @@ Page 50404 "Bosa Receipts H Card-Checkoff"
 
                     PDate := "Posting date";
                     DocNo := "Document No";
-                    GenBatches.Reset;
-                    GenBatches.SetRange(GenBatches."Journal Template Name", 'GENERAL');
-                    GenBatches.SetRange(GenBatches.Name, No);
-                    if GenBatches.Find('-') = false then begin
-                        GenBatches.Init;
-                        GenBatches."Journal Template Name" := 'GENERAL';
-                        GenBatches.Name := No;
-                        GenBatches.Description := 'cHECK OFF PROCESS';
-                        GenBatches.Validate(GenBatches."Journal Template Name");
-                        GenBatches.Validate(GenBatches.Name);
-                        GenBatches.Insert;
-                    end;
+                    // GenBatches.Reset;
+                    // GenBatches.SetRange(GenBatches."Journal Template Name", 'GENERAL');
+                    // GenBatches.SetRange(GenBatches.Name, No);
+                    // if GenBatches.Find('-') = false then begin
+                    //     GenBatches.Init;
+                    //     GenBatches."Journal Template Name" := 'GENERAL';
+                    //     GenBatches.Name := No;
+                    //     GenBatches.Description := 'cHECK OFF PROCESS';
+                    //     GenBatches.Validate(GenBatches."Journal Template Name");
+                    //     GenBatches.Validate(GenBatches.Name);
+                    //     GenBatches.Insert;
+                    // end;
 
 
 
                     //Delete journal
                     Gnljnline.Reset;
                     Gnljnline.SetRange("Journal Template Name", 'GENERAL');
-                    Gnljnline.SetRange("Journal Batch Name", No);
+                    Gnljnline.SetRange("Journal Batch Name", 'CHECKOFF');
                     Gnljnline.DeleteAll;
                     //End of deletion
 
@@ -200,7 +213,7 @@ Page 50404 "Bosa Receipts H Card-Checkoff"
 
                                             Gnljnline.Init;
                                             Gnljnline."Journal Template Name" := 'GENERAL';
-                                            Gnljnline."Journal Batch Name" := No;
+                                            Gnljnline."Journal Batch Name" := 'CHECKOFF';
                                             Gnljnline."Line No." := LineN;
                                             Gnljnline."Account Type" := Gnljnline."bal. account type"::Customer;
                                             Gnljnline."Account No." := LoanApp."Client Code";
@@ -243,7 +256,7 @@ Page 50404 "Bosa Receipts H Card-Checkoff"
 
                                         Gnljnline.Init;
                                         Gnljnline."Journal Template Name" := 'GENERAL';
-                                        Gnljnline."Journal Batch Name" := No;
+                                        Gnljnline."Journal Batch Name" := 'CHECKOFF';
                                         Gnljnline."Line No." := LineN;
                                         Gnljnline."Account Type" := Gnljnline."bal. account type"::Customer;
                                         Gnljnline."Account No." := LoanApp."Client Code";
@@ -285,7 +298,7 @@ Page 50404 "Bosa Receipts H Card-Checkoff"
 
                                         Gnljnline.Init;
                                         Gnljnline."Journal Template Name" := 'GENERAL';
-                                        Gnljnline."Journal Batch Name" := No;
+                                        Gnljnline."Journal Batch Name" := 'CHECKOFF';
                                         Gnljnline."Line No." := LineN;
                                         Gnljnline."Account Type" := Gnljnline."bal. account type"::Customer;
                                         Gnljnline."Account No." := LoanApp."Client Code";
@@ -335,7 +348,7 @@ Page 50404 "Bosa Receipts H Card-Checkoff"
                                         LineN := LineN + 10000;
                                         Gnljnline.Init;
                                         Gnljnline."Journal Template Name" := 'GENERAL';
-                                        Gnljnline."Journal Batch Name" := No;
+                                        Gnljnline."Journal Batch Name" := 'CHECKOFF';
                                         Gnljnline."Line No." := LineN;
                                         Gnljnline."Account Type" := Gnljnline."bal. account type"::Customer;
                                         Gnljnline."Account No." := LoanApp."Client Code";
@@ -392,7 +405,7 @@ Page 50404 "Bosa Receipts H Card-Checkoff"
                                         LineN := LineN + 10000;
                                         Gnljnline.Init;
                                         Gnljnline."Journal Template Name" := 'GENERAL';
-                                        Gnljnline."Journal Batch Name" := No;
+                                        Gnljnline."Journal Batch Name" := 'CHECKOFF';
                                         Gnljnline."Line No." := LineN;
                                         Gnljnline."Account Type" := Gnljnline."account type"::Customer;
                                         Gnljnline."Account No." := RcptBufLines."Member No";
@@ -439,7 +452,7 @@ Page 50404 "Bosa Receipts H Card-Checkoff"
 
                                         Gnljnline.Init;
                                         Gnljnline."Journal Template Name" := 'GENERAL';
-                                        Gnljnline."Journal Batch Name" := No;
+                                        Gnljnline."Journal Batch Name" := 'CHECKOFF';
                                         Gnljnline."Line No." := LineN;
                                         Gnljnline."Account Type" := Gnljnline."account type"::Customer;
                                         Gnljnline."Account No." := RcptBufLines."Member No";
@@ -475,7 +488,7 @@ Page 50404 "Bosa Receipts H Card-Checkoff"
 
                                 Gnljnline.Init;
                                 Gnljnline."Journal Template Name" := 'GENERAL';
-                                Gnljnline."Journal Batch Name" := No;
+                                Gnljnline."Journal Batch Name" := 'CHECKOFF';
                                 Gnljnline."Line No." := LineN;
                                 Gnljnline."Account Type" := Gnljnline."account type"::Customer;
                                 Gnljnline."Account No." := RcptBufLines."Member No";
@@ -514,7 +527,7 @@ Page 50404 "Bosa Receipts H Card-Checkoff"
 
                                         Gnljnline.Init;
                                         Gnljnline."Journal Template Name" := 'GENERAL';
-                                        Gnljnline."Journal Batch Name" := No;
+                                        Gnljnline."Journal Batch Name" := 'CHECKOFF';
                                         Gnljnline."Line No." := LineN;
                                         Gnljnline."Account Type" := Gnljnline."account type"::Customer;
                                         Gnljnline."Account No." := LoanApp."Client Code";

@@ -7,7 +7,8 @@ Page 50403 "Bosa Receipts H List-Checkoff"
     UsageCategory = Lists;
     ApplicationArea = All;
     SourceTable = "ReceiptsProcessing_H-Checkoff";
-    SourceTableView = where(Posted = filter(false));
+    SourceTableView = where(No = filter(<> ''), Posted = filter
+    (false));
 
     layout
     {

@@ -43,7 +43,7 @@ codeunit 50130 "PostingCodeunit"
     begin
         with GenJournalLine do begin
             Memb.Get("Account No.");
-            Memb.CheckBlockedMembOnJnls(Memb, "Document Type", true);
+            // Memb.CheckBlockedMembOnJnls(Memb, "Document Type", true);
 
             if "Posting Group" = '' then begin
                 Memb.TestField("Customer Posting Group");
