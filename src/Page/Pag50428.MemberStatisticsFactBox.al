@@ -97,9 +97,9 @@ Page 50428 "Member Statistics FactBox"
                     ApplicationArea = Basic;
                 }
 
-                field("Out. Loan Processing fee"; "Out. Loan Processing fee")
+                field("Out. Loan Application fee"; "Out. Loan Application fee")
                 {
-                    Caption = 'Out. Loan Processing fee';
+                    Caption = 'Out. Loan Application fee';
                 }
                 field(VarMemberLiability; VarMemberLiability)
                 {

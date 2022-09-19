@@ -162,9 +162,9 @@ Table 50407 "BOSA TransferS Schedule"
                     Description := 'Shares Contribution';
                 // if "Transaction Type" = "transaction type"::"Appraisal Fee" then
                 //     Description := 'Appraisal Fee';
-                if "Transaction Type" = "transaction type"::"Loan Processing Fee Paid" then
+                if "Transaction Type" = "transaction type"::"Loan Application Fee Paid" then
                     Description := 'Loan Processing Fee Paid';
-                if "Transaction Type" = "Transaction Type"::"Loan Processing Fee charged" then
+                if "Transaction Type" = "Transaction Type"::"Loan Application Fee charged" then
                     Description := 'Loan Processing Fee charged';
                 if "Transaction Type" = "transaction type"::"Unallocated Funds" then
                     Description := 'Unallocated Funds';

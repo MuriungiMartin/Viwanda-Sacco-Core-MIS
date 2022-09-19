@@ -6053,6 +6053,8 @@ Codeunit 50007 "SURESTEP Factory"
         ScheduleEntryNo: Integer;
         ScheduleEntryNoTemp: Integer;
         LoanProductsSetup: Record "Loan Products Setup";
+        VarApplicationFee: Decimal;
+
     begin
         //======================================================================================Normal Repayment Schedule
         ObjLoans.Reset;
@@ -6147,8 +6149,19 @@ Codeunit 50007 "SURESTEP Factory"
                             ObjProductCharge.SetRange(ObjProductCharge."Product Code", ObjLoans."Loan Product Type");
                             ObjProductCharge.SetRange(ObjProductCharge."Loan Charge Type", ObjProductCharge."loan charge type"::"Loan Insurance");
                             if ObjProductCharge.FindSet then begin
-                                VarLInsurance := ObjLoans."Approved Amount" * (ObjProductCharge.Percentage / 100);
+                                if ObjProductCharge."Use Perc" then begin
+                                    VarLInsurance := ObjLoans."Approved Amount" * (ObjProductCharge.Percentage / 100);
+                                end else
+                                    VarLInsurance := ObjProductCharge.Amount;
                             end;
+
+                            ObjProductCharge.Reset;
+                            ObjProductCharge.SetRange(ObjProductCharge."Product Code", ObjLoans."Loan Product Type");
+                            ObjProductCharge.SetRange(ObjProductCharge."Loan Charge Type", ObjProductCharge."loan charge type"::"Loan Insurance");
+                            if ObjProductCharge.FindSet then begin
+                                VarApplicationFee := ObjLoans."Approved Amount" * (ObjProductCharge.Percentage / 100);
+                            end else
+                                VarApplicationFee := ObjLoans."Application Fee";
                         end;
 
                         //=======================================================================================Strainght Line
@@ -6168,10 +6181,19 @@ Codeunit 50007 "SURESTEP Factory"
                             ObjProductCharge.SetRange(ObjProductCharge."Product Code", ObjLoans."Loan Product Type");
                             ObjProductCharge.SetRange(ObjProductCharge."Loan Charge Type", ObjProductCharge."loan charge type"::"Loan Insurance");
                             if ObjProductCharge.FindSet then begin
-                                VarLInsurance := ObjLoans."Approved Amount" * (ObjProductCharge.Percentage / 100);
-                                if ObjLoans."Corporate Loan" = true then
-                                    VarLInsurance := 0;
+                                if ObjProductCharge."Use Perc" then begin
+                                    VarLInsurance := ObjLoans."Approved Amount" * (ObjProductCharge.Percentage / 100);
+                                end else
+                                    VarLInsurance := ObjProductCharge.Amount;
                             end;
+
+                            ObjProductCharge.Reset;
+                            ObjProductCharge.SetRange(ObjProductCharge."Product Code", ObjLoans."Loan Product Type");
+                            ObjProductCharge.SetRange(ObjProductCharge."Loan Charge Type", ObjProductCharge."loan charge type"::"Loan Application Fee");
+                            if ObjProductCharge.FindSet then begin
+                                VarApplicationFee := ObjLoans."Approved Amount" * (ObjProductCharge.Percentage / 100);
+                            end else
+                                VarApplicationFee := ObjLoans."Application Fee";
                         end;
 
                         //=======================================================================================Reducing Balance
@@ -6185,8 +6207,20 @@ Codeunit 50007 "SURESTEP Factory"
                             ObjProductCharge.SetRange(ObjProductCharge."Product Code", ObjLoans."Loan Product Type");
                             ObjProductCharge.SetRange(ObjProductCharge."Loan Charge Type", ObjProductCharge."loan charge type"::"Loan Insurance");
                             if ObjProductCharge.FindSet then begin
-                                VarLInsurance := ObjLoans."Approved Amount" * (ObjProductCharge.Percentage / 100);
+                                if ObjProductCharge."Use Perc" then begin
+                                    VarLInsurance := ObjLoans."Approved Amount" * (ObjProductCharge.Percentage / 100);
+                                end else
+                                    VarLInsurance := ObjProductCharge.Amount;
                             end;
+
+                            ObjProductCharge.Reset;
+                            ObjProductCharge.SetRange(ObjProductCharge."Product Code", ObjLoans."Loan Product Type");
+                            ObjProductCharge.SetRange(ObjProductCharge."Loan Charge Type", ObjProductCharge."loan charge type"::"Loan Application Fee");
+                            if ObjProductCharge.FindSet then begin
+                                VarApplicationFee := ObjLoans."Approved Amount" * (ObjProductCharge.Percentage / 100);
+                            end else
+                                VarApplicationFee := ObjLoans."Application Fee";
+
                         end;
 
                         //=======================================================================================Constant
@@ -6205,6 +6239,7 @@ Codeunit 50007 "SURESTEP Factory"
                             if ObjProductCharge.FindSet then begin
                                 VarLInsurance := ObjLoans."Approved Amount" * (ObjProductCharge.Percentage / 100);
                             end;
+
                         end;
 
                         VarLPrincipal := ROUND(VarLPrincipal, 100, '>');
@@ -6228,6 +6263,10 @@ Codeunit 50007 "SURESTEP Factory"
                         if LoanProductsSetup."Charge Interest Upfront" then VarLInterest := 0;
 
                         //======================================================================================Insert Repayment Schedule Table
+                        if VarInstalNo <> 1 then begin
+                            VarLInsurance := 0;
+                            VarApplicationFee := 0;
+                        end;
                         ObjRepaymentschedule.Init;
                         ObjRepaymentschedule."Entry No" := ScheduleEntryNo;
                         ObjRepaymentschedule."Repayment Code" := VarRepayCode;
@@ -6236,8 +6275,9 @@ Codeunit 50007 "SURESTEP Factory"
                         ObjRepaymentschedule."Instalment No" := VarInstalNo;
                         ObjRepaymentschedule."Repayment Date" := VarRunDate;//CALCDATE('CM',RunDate);
                         ObjRepaymentschedule."Member No." := ObjLoans."Client Code";
+                        ObjRepaymentschedule."Application Fee" := VarApplicationFee;
                         ObjRepaymentschedule."Loan Category" := ObjLoans."Loan Product Type";
-                        ObjRepaymentschedule."Monthly Repayment" := VarLInterest + VarLPrincipal + VarLInsurance;
+                        ObjRepaymentschedule."Monthly Repayment" := VarLInterest + VarLPrincipal + VarLInsurance + VarApplicationFee;
                         ObjRepaymentschedule."Monthly Interest" := VarLInterest;
                         ObjRepaymentschedule."Principal Repayment" := VarLPrincipal;
                         ObjRepaymentschedule."Monthly Insurance" := VarLInsurance;

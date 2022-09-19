@@ -232,16 +232,15 @@ Report 50400 "Loans Defaulter Aging - SASRA"
                 if Loans.Find('-') then begin
                     Loans.CalcFields(Loans."Outstanding Balance", Loans."Scheduled Principal to Date", Loans."Principal Paid", Loans."Schedule Repayments");
                     LBal := Loans."Outstanding Balance";
-                    //ScheduledLoanBal:=Loans."Schedule Repayments";
                     LSchedule.Reset;
                     LSchedule.SetRange(LSchedule."Loan No.", Loans."Loan  No.");
                     LSchedule.SetFilter(LSchedule."Repayment Date", DateFilter);
                     if LSchedule.FindLast then begin
                         ExpectedBalance := LSchedule."Loan Balance";
+                        varRepayment := LSchedule."Principal Repayment";
+
                     end;
                     Arrears := LBal - ExpectedBalance;
-                    //
-                    // MESSAGE(FORMAT(ExpectedBalance));
                 end;
                 if "Loans Register"."Repayment Start Date" > AsAt then
                     Arrears := 0;
@@ -253,18 +252,10 @@ Report 50400 "Loans Defaulter Aging - SASRA"
                     Arrears := Arrears;
                 "Amount in Arrears" := Arrears;
                 Modify;
-                if Loans."Loan Principle Repayment" > 0 then
-                    "No.ofMonthsinArrears" := ROUND((Arrears / Loans."Loan Principle Repayment") * 30, 1, '>');
-                //MESSAGE('%1',"No.ofMonthsinArrears");
-                if Loans."Loan Product Type" = 'FIXED ADV' then
-                    "No.ofMonthsinArrears" := 0;
-                if Loans."Loan Product Type" = 'MSADV' then begin
-                    Numberofdays := AsAt - "Loans Register"."Loan Disbursement Date";
-                    if Numberofdays <= 60 then
-                        "No.ofMonthsinArrears" := 0;
-                    Arrears := 0;
-                    "Amount in Arrears" := Arrears;
-                    Modify;
+                if Loans."Loan Principle Repayment" > 0 then begin
+                    "No.ofMonthsinArrears" := ROUND((Arrears / varRepayment
+
+                    ) * 30, 1, '>');
                 end;
                 if ("No.ofMonthsinArrears" = 0) then begin
                     "Loans Register"."Loans Category" := "Loans Register"."loans category"::Perfoming
@@ -354,6 +345,7 @@ Report 50400 "Loans Defaulter Aging - SASRA"
     end;
 
     var
+        varRepayment: Decimal;
         "1Month": Decimal;
         "2Month": Decimal;
         "3Month": Decimal;

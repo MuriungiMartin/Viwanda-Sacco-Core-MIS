@@ -123,6 +123,10 @@ Table 50375 "Loan Repayment Schedule"
         field(65; ToDelete; Boolean)
         {
         }
+        field(66; "Application Fee"; Decimal)
+        {
+
+        }
     }
 
     keys

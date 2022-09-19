@@ -1848,7 +1848,7 @@ Page 50396 "Loan Disburesment Batch Card"
                         GenJournalLine."Account Type"::"G/L Account", LoanType."Loan Insurance Accounts", "Posting Date", (PChargeAmount) * -1, 'BOSA', LoanApps."Loan  No.",
                         'Insurance Charged' + '_' + LoanApps."Loan  No.", LoanApps."Loan  No.", GenJournalLine."Application Source"::" ");
                     end;
-                    if PCharges."Loan Charge Type" = PCharges."Loan Charge Type"::"Loan Processing Fee" then begin
+                    if PCharges."Loan Charge Type" = PCharges."loan charge type"::"Loan Application Fee" then begin
                         IF PCharges."Use Perc" = TRUE THEN
                             PChargeAmount := (LoanApps."Approved Amount" * PCharges.Percentage / 100);
 
@@ -1861,7 +1861,7 @@ Page 50396 "Loan Disburesment Batch Card"
                         //----------------------Credit processing fee Payable Account a/c-----------------------------------------------------
                         LineNo := LineNo + 10000;
                         SFactory.FnCreateGnlJournalLine(BATCH_TEMPLATE, BATCH_NAME, DOCUMENT_NO, LineNo, GenJournalLine."Transaction Type"::" ",
-                        GenJournalLine."Account Type"::"G/L Account", LoanType."Loan Insurance Accounts", "Posting Date", (PChargeAmount) * -1, 'BOSA', LoanApps."Loan  No.",
+                        GenJournalLine."Account Type"::"G/L Account", LoanType."Loan ApplFee Accounts", "Posting Date", (PChargeAmount) * -1, 'BOSA', LoanApps."Loan  No.",
                         'processing fee Charged' + '_' + LoanApps."Loan  No.", LoanApps."Loan  No.", GenJournalLine."Application Source"::" ");
 
                     end;

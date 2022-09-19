@@ -52,8 +52,16 @@ Table 50383 "Loan Product Charges"
         }
         field(10; "Loan Charge Type"; Option)
         {
-            OptionCaption = ' ,Loan Insurance,Loan Processing Fee,Loan Appraisal Fee,Loan Form Fees';
-            OptionMembers = " ","Loan Insurance","Loan Processing Fee","Loan Appraisal Fee","Loan Form Fees";
+            OptionCaption = ' ,Loan Insurance,Loan Application Fee,Loan Appraisal Fee,Loan Form Fees';
+            OptionMembers = " ","Loan Insurance","Loan Application Fee","Loan Appraisal Fee","Loan Form Fees";
+        }
+        field(11; "Development Application Fee"; Decimal)
+        {
+
+        }
+        field(12; "Emergency Application Fee"; Decimal)
+        {
+
         }
     }
 

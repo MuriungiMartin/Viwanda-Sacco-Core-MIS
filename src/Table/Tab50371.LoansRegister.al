@@ -3767,13 +3767,17 @@ Table 50371 "Loans Register"
         {
             TableRelation = "Loan Products Setup".Code;
         }
-        field(51516294; "Outstanding Processing Fee"; Decimal)
+        field(51516294; "Out. Loan Application fee"; Decimal)
         {
             FieldClass = FlowField;
-            CalcFormula = sum("Cust. Ledger Entry"."Transaction Amount" where("Transaction Type" = filter("Loan Processing Fee Charged" | "Loan Processing Fee Paid"), "Loan No" = field("Loan  No."),
+            CalcFormula = sum("Cust. Ledger Entry"."Transaction Amount" where("Transaction Type" = filter("Loan Application Fee Charged" | "Loan Application Fee Paid"), "Loan No" = field("Loan  No."),
             "Posting Date" = field("Date filter")));
         }
-        field(51516295; "Due Loans"; Boolean)
+        field(51516295; "Application Fee"; Decimal)
+        {
+
+        }
+        field(51516296; "Due Loans"; Boolean)
         {
 
         }

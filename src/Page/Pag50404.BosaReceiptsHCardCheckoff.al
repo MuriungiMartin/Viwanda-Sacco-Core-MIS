@@ -539,8 +539,8 @@ Page 50404 "Bosa Receipts H Card-Checkoff"
                         repeat
                             LoanApp.Reset();
                             LoanApp.SetRange(LoanApp."Client Code", RcptBufLines."Member No");
-                            LoanApp.SetAutoCalcFields(loanapp."Outstanding Processing Fee");
-                            LoanApp.SetFilter(LoanApp."Outstanding Processing Fee", '>%1', 0);
+                            LoanApp.SetAutoCalcFields(loanapp."Out. Loan Application fee");
+                            LoanApp.SetFilter(LoanApp."Out. Loan Application fee", '>%1', 0);
                             if LoanApp.FindSet then begin
                                 repeat
                                     RunBal := RcptBufLines."Sacco Appl Fee";
@@ -559,7 +559,7 @@ Page 50404 "Bosa Receipts H Card-Checkoff"
                                         Gnljnline.Description := Remarks;
                                         Gnljnline.Amount := RcptBufLines."Sacco Appl Fee" * -1;
                                         Gnljnline.Validate(Gnljnline.Amount);
-                                        Gnljnline."Transaction Type" := Gnljnline."transaction type"::"Loan Processing Fee Paid";
+                                        Gnljnline."Transaction Type" := Gnljnline."transaction type"::"Loan Application Fee Paid";
                                         if Gnljnline.Amount <> 0 then
                                             Gnljnline.Insert;
                                         RunBal := RunBal - (Gnljnline.Amount * -1);
