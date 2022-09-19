@@ -79,11 +79,11 @@ enum 51001 TransactionTypesEnum
     value(24; "Insurance Retension")
     {
     }
-    value(25; "Loan Processing Fee charged")
+    value(25; "Loan Application Fee charged")
     {
 
     }
-    value(26; "Loan Processing Fee Paid")
+    value(26; "Loan Application Fee Paid")
     {
 
     }

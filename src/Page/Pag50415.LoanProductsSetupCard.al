@@ -82,12 +82,12 @@ Page 50415 "Loan Products Setup Card"
                 {
                     ApplicationArea = Basic;
                 }
-                field("Deposits Multiplier (KIE)";"Deposits Multiplier (KIE)")
+                field("Deposits Multiplier (KIE)"; "Deposits Multiplier (KIE)")
                 {
                     ApplicationArea = Basic;
                     Caption = 'Deposits Multiplier';
                 }
-                field("Deposit Multiplier(IND)";"Deposit Multiplier(IND)")
+                field("Deposit Multiplier(IND)"; "Deposit Multiplier(IND)")
                 {
                     ApplicationArea = Basic;
                 }
@@ -298,10 +298,19 @@ Page 50415 "Loan Products Setup Card"
                 {
                     ApplicationArea = Basic;
                 }
+                field("Loan ApplFee Accounts"; "Loan ApplFee Accounts")
+                {
+
+                }
+                field("Receivable ApplFee Accounts"; "Receivable ApplFee Accounts")
+                {
+
+                }
             }
             group("Loan Numbering")
             {
                 Caption = 'Loan Numbering';
+                Visible = false;
                 field("Loan No(HQ)"; "Loan No(HQ)")
                 {
                     ApplicationArea = Basic;

@@ -78,7 +78,7 @@ codeunit 50163 "PostCustomerExtension"
         end;
 
         //-----------------------------------Loan Processing Fee-----------------------------------------------------------
-        if (GenJournalLine."Transaction Type" = GenJournalLine."transaction type"::"Loan Processing Fee charged") then begin
+        if (GenJournalLine."Transaction Type" = GenJournalLine."transaction type"::"Loan Application Fee charged") then begin
             if GenJournalLine."Loan No" = '' then
                 Error('Loan No must be specified for Loan, Repayment,Loan Insurance or processing fee transactions :- %1', GenJournalLine."Account No.");
 
@@ -87,7 +87,7 @@ codeunit 50163 "PostCustomerExtension"
             LoanApp.SetRange(LoanApp."Loan  No.", GenJournalLine."Loan No");
             if LoanApp.Find('-') then begin
                 if LoanTypes.Get(LoanApp."Loan Product Type") then begin
-                    LoanTypes.TestField(LoanTypes."Loan ProcFee Accounts");
+                    LoanTypes.TestField(LoanTypes."Loan ApplFee Accounts");
                     if cust.get(GenJournalLine."Account No.") then
                         if Cust.ISNormalMember = true then
                             if GenJournalLine."Transaction Type" = GenJournalLine."Transaction Type"::" " then
@@ -98,7 +98,7 @@ codeunit 50163 "PostCustomerExtension"
                         CustPostingGroupBuffer.Reset();
                         CustPostingGroupBuffer.SetRange(Code, TransactionTypestable."Posting Group Code");
                         if CustPostingGroupBuffer.FindFirst() then begin
-                            CustPostingGroupBuffer."Receivables Account" := LoanTypes."Loan ProcFee Accounts";
+                            CustPostingGroupBuffer."Receivables Account" := LoanTypes."Loan ApplFee Accounts";
                             CustPostingGroupBuffer.Modify();
                             GenJournalLine."Posting Group" := CustPostingGroupBuffer.code;
                             GenJournalLine.Modify();
@@ -110,7 +110,7 @@ codeunit 50163 "PostCustomerExtension"
             end;
         end;
 
-        if (GenJournalLine."Transaction Type" = GenJournalLine."transaction type"::"Loan Processing Fee Paid") then begin
+        if (GenJournalLine."Transaction Type" = GenJournalLine."transaction type"::"Loan Application Fee Paid") then begin
             if GenJournalLine."Loan No" = '' then
                 Error('Loan No must be specified for Loan, Repayment or processingn fee transactions :- %1', GenJournalLine."Account No.");
 
@@ -119,7 +119,7 @@ codeunit 50163 "PostCustomerExtension"
             LoanApp.SetRange(LoanApp."Loan  No.", GenJournalLine."Loan No");
             if LoanApp.Find('-') then begin
                 if LoanTypes.Get(LoanApp."Loan Product Type") then begin
-                    LoanTypes.TestField(LoanTypes."Receivable ProcFee Accounts");
+                    LoanTypes.TestField(LoanTypes."Receivable ApplFee Accounts");
                     if cust.get(GenJournalLine."Account No.") then
                         if Cust.ISNormalMember = true then
                             if GenJournalLine."Transaction Type" = GenJournalLine."Transaction Type"::" " then
@@ -130,7 +130,7 @@ codeunit 50163 "PostCustomerExtension"
                         CustPostingGroupBuffer.Reset();
                         CustPostingGroupBuffer.SetRange(Code, TransactionTypestable."Posting Group Code");
                         if CustPostingGroupBuffer.FindFirst() then begin
-                            CustPostingGroupBuffer."Receivables Account" := LoanTypes."Receivable ProcFee Accounts";
+                            CustPostingGroupBuffer."Receivables Account" := LoanTypes."Receivable ApplFee Accounts";
                             CustPostingGroupBuffer.Modify();
                             GenJournalLine."Posting Group" := CustPostingGroupBuffer.code;
                             GenJournalLine.Modify();
