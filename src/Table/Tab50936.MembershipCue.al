@@ -295,7 +295,20 @@ Table 50936 "Membership Cue"
         {
 
         }
-        
+        field(65; "Loans due In a Month"; Integer)
+        {
+            FieldClass = FlowField;
+            CalcFormula = count("Loans Register" where("Due Loans" = filter(true)));
+
+
+        }
+        field(66; "Date Filter"; Date)
+        {
+            FieldClass = FlowFilter;
+
+
+        }
+
     }
 
     keys

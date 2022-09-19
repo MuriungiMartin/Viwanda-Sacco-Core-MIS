@@ -166,6 +166,15 @@ Page 50409 "Membership Exit Card"
                 {
                     ApplicationArea = Basic;
                 }
+                field("Notice Date"; "Notice Date")
+                {
+                    ApplicationArea = Basic;
+                }
+                field("Muturity Date"; "Muturity Date")
+                {
+                    ApplicationArea = Basic;
+                }
+
             }
             group("Share Capital Transfer Details")
             {

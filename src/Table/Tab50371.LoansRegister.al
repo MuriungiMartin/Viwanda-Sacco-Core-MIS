@@ -3777,6 +3777,11 @@ Table 50371 "Loans Register"
         {
 
         }
+        field(51516296; "Due Loans"; Boolean)
+        {
+
+        }
+
     }
 
     keys

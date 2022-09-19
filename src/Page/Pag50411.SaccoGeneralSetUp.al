@@ -266,6 +266,16 @@ Page 50411 "Sacco General Set-Up"
                 {
                     ApplicationArea = Basic;
                 }
+                  field("Withdrwal Notice Period";"Withdrwal Notice Period")
+                {
+                    ApplicationArea = Basic;
+                }
+                field("Withdrawal Interest Penalty";"Withdrawal Interest Penalty")
+                {
+                    ApplicationArea = Basic;
+
+                }
+
             }
             group("Fees & Commissions")
             {
