@@ -3773,6 +3773,11 @@ Table 50371 "Loans Register"
             CalcFormula = sum("Cust. Ledger Entry"."Transaction Amount" where("Transaction Type" = filter("Loan Processing Fee Charged" | "Loan Processing Fee Paid"), "Loan No" = field("Loan  No."),
             "Posting Date" = field("Date filter")));
         }
+        field(51516295; "Due Loans"; Boolean)
+        {
+
+        }
+
     }
 
     keys

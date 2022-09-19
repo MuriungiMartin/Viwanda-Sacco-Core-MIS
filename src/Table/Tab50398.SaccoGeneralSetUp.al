@@ -882,6 +882,16 @@ Table 50398 "Sacco General Set-Up"
             DataClassification = ToBeClassified;
             // TableRelation = "G/L Account"."No.";
         }
+        field(256; "Withdrwal Notice Period"; DateFormula)
+        {
+
+        }
+        field(257; "Withdrawal Interest Penalty"; Decimal)
+        {
+
+        }
+
+
 
     }
 

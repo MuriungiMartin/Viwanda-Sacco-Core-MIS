@@ -108,6 +108,11 @@ Page 50849 "Membership Cue"
                     Image = "None";
                     LookupPageID = "Loans  List All";
                 }
+                field("Loans due In a Month"; "Loans due In a Month")
+                {
+                    ApplicationArea = Basic;
+                }
+
                 // field("Business Loan"; "Business Loan")
                 // {
                 //     ApplicationArea = Basic;
@@ -229,6 +234,8 @@ Page 50849 "Membership Cue"
             "User ID" := UserId;
             Insert;
         end;
+
     end;
+
 }
 

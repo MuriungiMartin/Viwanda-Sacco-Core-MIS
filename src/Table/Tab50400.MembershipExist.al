@@ -281,6 +281,29 @@ Table 50400 "Membership Exist"
             OptionCaption = 'Full Member Exit, BOSA Account Clousre';
             OptionMembers = "Full Member Exit"," BOSA Account Clousre";
         }
+        field(46; "Notice Date"; Date)
+        {
+           trigger OnValidate()
+          
+           begin
+            GenSetup.Get();
+            "Muturity Date" := CalcDate(GenSetup."Withdrwal Notice Period", "Notice Date");
+            Modify();
+
+            
+           end;
+           
+
+        }
+        
+        field(47; "Muturity Date"; Date)
+        {
+
+        }
+          field(48; "Charge Penalty"; Boolean)
+        {
+
+        }
     }
 
     keys
@@ -313,7 +336,7 @@ Table 50400 "Membership Exist"
         NoSeriesMgt: Codeunit NoSeriesManagement;
         Cust: Record Customer;
         Loans: Record "Loans Register";
-        MemLed: Record "Member Ledger Entry";
+        MemLed: Record "Cust. Ledger Entry";
         IntTotal: Decimal;
         LoanTotal: Decimal;
         GenSetup: Record "Sacco General Set-Up";

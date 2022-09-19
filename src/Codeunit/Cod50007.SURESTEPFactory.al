@@ -13562,5 +13562,20 @@ Codeunit 50007 "SURESTEP Factory"
             end;
         end;
     end;
+
+    // progress Dialog
+    procedure fnCreateProgressDialog(TheRec: RecordRef)
+
+    var
+        PDialog: Dialog;
+        TheCount: Integer;
+        CurrentCount: Integer;
+        TheTextToUpdate: Label 'Processing #1#######################\Customer No #2##################';
+    begin
+        
+
+    end;
+
+
 }
 
