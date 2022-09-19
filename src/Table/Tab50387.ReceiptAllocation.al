@@ -2,8 +2,8 @@
 Table 50387 "Receipt Allocation"
 {
 
-DrillDownPageId="Receipt Allocation-BOSA";
-LookupPageId="Receipt Allocation-BOSA";
+    DrillDownPageId = "Receipt Allocation-BOSA";
+    LookupPageId = "Receipt Allocation-BOSA";
 
     fields
     {
@@ -16,10 +16,8 @@ LookupPageId="Receipt Allocation-BOSA";
             NotBlank = true;
             TableRelation = Customer."No.";
         }
-        field(3; "Transaction Type"; Option)
+        field(3; "Transaction Type"; enum TransactionTypesEnum)
         {
-            OptionCaption = ' ,Registration Fee,Share Capital,Interest Paid,Loan Repayment,Deposit Contribution,Insurance Contribution,Benevolent Fund,Loan,Unallocated Funds,Dividend,FOSA Account,Loan Insurance Charged,Loan Insurance Paid,Recovery Account,FOSA Shares,Additional Shares,Interest Due,Loan Penalty Charged,Loan Penalty Paid,Junior Savings,Safari Savings,Silver Savings';
-            OptionMembers = " ","Registration Fee","Share Capital","Interest Paid","Loan Repayment","Deposit Contribution","Insurance Contribution","Benevolent Fund",Loan,"Unallocated Funds",Dividend,"FOSA Account","Loan Insurance Charged","Loan Insurance Paid","Recovery Account","FOSA Shares","Additional Shares","Interest Due","Loan Penalty Charged","Loan Penalty Paid","Junior Savings","Safari Savings","Silver Savings";
 
             trigger OnValidate()
             begin

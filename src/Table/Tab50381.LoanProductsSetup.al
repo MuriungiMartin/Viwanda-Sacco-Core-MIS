@@ -437,6 +437,28 @@ Table 50381 "Loan Products Setup"
         {
             DataClassification = ToBeClassified;
         }
+        field(51516064; "Loan ProcFee Accounts"; Code[20])
+        {
+            TableRelation = "G/L Account";
+            Caption = 'Loan Processing Fee Acounts';
+
+            trigger OnValidate()
+            begin
+                TestNoEntriesExist(FieldCaption(Code), Code);
+                TestNoEntriesExist(FieldCaption("Loan Interest Account"), "Loan Interest Account")
+            end;
+        }
+        field(51516065; "Receivable ProcFee Accounts"; Code[20])
+        {
+            TableRelation = "G/L Account";
+            Caption = 'Receivable Processing fee accounts';
+
+            trigger OnValidate()
+            begin
+                TestNoEntriesExist(FieldCaption(Code), Code);
+                TestNoEntriesExist(FieldCaption("Receivable Interest Account"), "Receivable Interest Account")
+            end;
+        }
 
     }
 

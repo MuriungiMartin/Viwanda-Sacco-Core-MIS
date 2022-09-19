@@ -140,21 +140,18 @@ Table 50407 "BOSA TransferS Schedule"
         field(10; "Destination Bank Name"; Text[30])
         {
         }
-        field(11; "Transaction Type"; Option)
+        field(11; "Transaction Type"; enum TransactionTypesEnum)
         {
-            OptionCaption = ' ,Registration Fee,Loan,Repayment,Withdrawal,Interest Due,Interest Paid,Benevolent Fund,Normal Shares,Penalty Charged,Application Fee,Appraisal Fee,Investment,Unallocated Funds,Shares Capital,Loan Adjustment,Dividend,Withholding Tax,Administration Fee,Insurance Contribution,Prepayment,Withdrawable Deposits,Xmas Contribution,Penalty Paid,Dev Shares,Co-op Shares,Welfare Contribution 2,Loan Penalty,Loan Guard,Lukenya,Konza,Juja,Housing Water,Housing Title,Housing Main,M Pesa Charge ,Insurance Charge,Insurance Paid,FOSA Account,Partial Disbursement,Loan Due,FOSA Shares,Loan Form Fee,PassBook Fee';
-            OptionMembers = " ","Registration Fee",Loan,Repayment,Withdrawal,"Interest Due","Interest Paid","Benevolent Fund","Deposit Contribution","Penalty Charged","Application Fee","Appraisal Fee",Investment,"Unallocated Funds","Shares Capital","Loan Adjustment",Dividend,"Withholding Tax","Administration Fee","Insurance Contribution",Prepayment,"Withdrawable Deposits","Xmas Contribution","Penalty Paid","Dev Shares","Co-op Shares","Welfare Contribution 2","Loan Penalty","Loan Guard",Lukenya,Konza,Juja,"Housing Water","Housing Title","Housing Main","M Pesa Charge ","Insurance Charge","Insurance Paid","FOSA Account","Partial Disbursement","Loan Due","FOSA Shares","Loan Form Fee","PassBook Fee";
-
             trigger OnValidate()
             begin
                 if "Transaction Type" = "transaction type"::"Registration Fee" then
                     Description := 'Registration Fee';
                 if "Transaction Type" = "transaction type"::Loan then
                     Description := 'Loan';
-                if "Transaction Type" = "transaction type"::Repayment then
+                if "Transaction Type" = "transaction type"::"Loan Repayment" then
                     Description := 'Loan Repayment';
-                if "Transaction Type" = "transaction type"::Withdrawal then
-                    Description := 'Withdrawal';
+                // if "Transaction Type" = "transaction type"::Withdrawal then
+                //     Description := 'Withdrawal';
                 if "Transaction Type" = "transaction type"::"Interest Due" then
                     Description := 'Interest Due';
                 if "Transaction Type" = "transaction type"::"Interest Paid" then
@@ -163,10 +160,12 @@ Table 50407 "BOSA TransferS Schedule"
                     Description := 'ABF Fund';
                 if "Transaction Type" = "transaction type"::"Deposit Contribution" then
                     Description := 'Shares Contribution';
-                if "Transaction Type" = "transaction type"::"Appraisal Fee" then
-                    Description := 'Appraisal Fee';
-                if "Transaction Type" = "transaction type"::"Application Fee" then
-                    Description := 'Application Fee';
+                // if "Transaction Type" = "transaction type"::"Appraisal Fee" then
+                //     Description := 'Appraisal Fee';
+                if "Transaction Type" = "transaction type"::"Loan Processing Fee Paid" then
+                    Description := 'Loan Processing Fee Paid';
+                if "Transaction Type" = "Transaction Type"::"Loan Processing Fee charged" then
+                    Description := 'Loan Processing Fee charged';
                 if "Transaction Type" = "transaction type"::"Unallocated Funds" then
                     Description := 'Unallocated Funds';
 
@@ -197,10 +196,8 @@ Table 50407 "BOSA TransferS Schedule"
         field(14; Description; Text[100])
         {
         }
-        field(15; "Destination Type"; Option)
+        field(15; "Destination Type"; enum TransactionTypesEnum)
         {
-            OptionCaption = ' ,Registration Fee,Loan,Repayment,Withdrawal,Interest Due,Interest Paid,Benevolent Fund,Normal Shares,Penalty Charged,Application Fee,Appraisal Fee,Investment,Unallocated Funds,Shares Capital,Loan Adjustment,Dividend,Withholding Tax,Administration Fee,Insurance Contribution,Prepayment,Withdrawable Deposits,Xmas Contribution,Penalty Paid,Dev Shares,Co-op Shares,Welfare Contribution 2,Loan Penalty,Loan Guard,Lukenya,Konza,Juja,Housing Water,Housing Title,Housing Main,M Pesa Charge ,Insurance Charge,Insurance Paid,FOSA Account,Partial Disbursement,Loan Due,FOSA Shares,Loan Form Fee,PassBook Fee';
-            OptionMembers = " ","Registration Fee",Loan,Repayment,Withdrawal,"Interest Due","Interest Paid","Benevolent Fund","Deposit Contribution","Penalty Charged","Application Fee","Appraisal Fee",Investment,"Unallocated Funds","Shares Capital","Loan Adjustment",Dividend,"Withholding Tax","Administration Fee","Insurance Contribution",Prepayment,"Withdrawable Deposits","Xmas Contribution","Penalty Paid","Dev Shares","Co-op Shares","Welfare Contribution 2","Loan Penalty","Loan Guard",Lukenya,Konza,Juja,"Housing Water","Housing Title","Housing Main","M Pesa Charge ","Insurance Charge","Insurance Paid","FOSA Account","Partial Disbursement","Loan Due","FOSA Shares","Loan Form Fee","PassBook Fee";
         }
     }
 

@@ -77,6 +77,72 @@ codeunit 50163 "PostCustomerExtension"
             end;
         end;
 
+        //-----------------------------------Loan Processing Fee-----------------------------------------------------------
+        if (GenJournalLine."Transaction Type" = GenJournalLine."transaction type"::"Loan Processing Fee charged") then begin
+            if GenJournalLine."Loan No" = '' then
+                Error('Loan No must be specified for Loan, Repayment,Loan Insurance or processing fee transactions :- %1', GenJournalLine."Account No.");
+
+            LoanApp.Reset;
+            LoanApp.SetCurrentkey(LoanApp."Loan  No.");
+            LoanApp.SetRange(LoanApp."Loan  No.", GenJournalLine."Loan No");
+            if LoanApp.Find('-') then begin
+                if LoanTypes.Get(LoanApp."Loan Product Type") then begin
+                    LoanTypes.TestField(LoanTypes."Loan ProcFee Accounts");
+                    if cust.get(GenJournalLine."Account No.") then
+                        if Cust.ISNormalMember = true then
+                            if GenJournalLine."Transaction Type" = GenJournalLine."Transaction Type"::" " then
+                                Error('Cannot post with missing transaction type.');
+                    TransactionTypestable.reset;
+                    TransactionTypestable.SetRange(TransactionTypestable."Transaction Type", GenJournalLine."Transaction Type");
+                    if TransactionTypestable.Find('-') then begin
+                        CustPostingGroupBuffer.Reset();
+                        CustPostingGroupBuffer.SetRange(Code, TransactionTypestable."Posting Group Code");
+                        if CustPostingGroupBuffer.FindFirst() then begin
+                            CustPostingGroupBuffer."Receivables Account" := LoanTypes."Loan ProcFee Accounts";
+                            CustPostingGroupBuffer.Modify();
+                            GenJournalLine."Posting Group" := CustPostingGroupBuffer.code;
+                            GenJournalLine.Modify();
+                        end;
+                    end else
+                        Error('The transaction setup for transaction %1 is missing', GenJournalLine."Transaction Type");
+
+                end;
+            end;
+        end;
+
+        if (GenJournalLine."Transaction Type" = GenJournalLine."transaction type"::"Loan Processing Fee Paid") then begin
+            if GenJournalLine."Loan No" = '' then
+                Error('Loan No must be specified for Loan, Repayment or processingn fee transactions :- %1', GenJournalLine."Account No.");
+
+            LoanApp.Reset;
+            LoanApp.SetCurrentkey(LoanApp."Loan  No.");
+            LoanApp.SetRange(LoanApp."Loan  No.", GenJournalLine."Loan No");
+            if LoanApp.Find('-') then begin
+                if LoanTypes.Get(LoanApp."Loan Product Type") then begin
+                    LoanTypes.TestField(LoanTypes."Receivable ProcFee Accounts");
+                    if cust.get(GenJournalLine."Account No.") then
+                        if Cust.ISNormalMember = true then
+                            if GenJournalLine."Transaction Type" = GenJournalLine."Transaction Type"::" " then
+                                Error('Cannot post with missing transaction type.');
+                    TransactionTypestable.reset;
+                    TransactionTypestable.SetRange(TransactionTypestable."Transaction Type", GenJournalLine."Transaction Type");
+                    if TransactionTypestable.Find('-') then begin
+                        CustPostingGroupBuffer.Reset();
+                        CustPostingGroupBuffer.SetRange(Code, TransactionTypestable."Posting Group Code");
+                        if CustPostingGroupBuffer.FindFirst() then begin
+                            CustPostingGroupBuffer."Receivables Account" := LoanTypes."Receivable ProcFee Accounts";
+                            CustPostingGroupBuffer.Modify();
+                            GenJournalLine."Posting Group" := CustPostingGroupBuffer.code;
+                            GenJournalLine.Modify();
+                        end;
+                    end else
+                        Error('The transaction setup for transaction %1 is missing', GenJournalLine."Transaction Type");
+
+                end;
+            end;
+        end;
+        //-----------------------------------end Loan Processing fee-------------------------------------------------------
+
 
         if (GenJournalLine."Transaction Type" = GenJournalLine."transaction type"::"Interest Due") then begin
             if GenJournalLine."Loan No" = '' then

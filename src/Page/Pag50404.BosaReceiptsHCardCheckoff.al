@@ -213,7 +213,7 @@ Page 50404 "Bosa Receipts H Card-Checkoff"
                     //End Post Control Account---------------------------------------
 
                     //------------------------------------Recover,Registration Fee, Insurance and Interest-------------------------------Viwanda
-                    //Insurance
+
 
                     //Registration Fee
                     genstup.Get();
@@ -228,38 +228,38 @@ Page 50404 "Bosa Receipts H Card-Checkoff"
                             Cust.SetRange(Cust."No.", RcptBufLines."Member No");
                             Cust.SetAutoCalcFields(Cust."Registration Fee Paid");
                             if CUst.FindSet() then begin
-                                repeat
-                                    if RunBal > 0 then begin
-                                        if Cust."Registration Fee Paid" < genstup."Registration Fee" then begin
-                                            LineN := LineN + 10000;
+                                if RunBal > 0 then begin
+                                    genstup.Get();
+                                    if Cust."Registration Fee Paid" < genstup."BOSA Registration Fee Amount" then begin
 
-                                            Gnljnline.Init;
-                                            Gnljnline."Journal Template Name" := 'GENERAL';
-                                            Gnljnline."Journal Batch Name" := 'CHECKOFF';
-                                            Gnljnline."Line No." := LineN;
-                                            Gnljnline."Account Type" := Gnljnline."bal. account type"::Customer;
-                                            Gnljnline."Account No." := LoanApp."Client Code";
-                                            Gnljnline.Validate(Gnljnline."Account No.");
-                                            Gnljnline."Document No." := "Document No";
-                                            Gnljnline."Posting Date" := "Posting date";
-                                            Gnljnline.Description := 'Registration fee  ' + Remarks;
-                                            if RunBal > (genstup."Registration Fee" - Cust."Registration Fee Paid") then
-                                                Gnljnline.Amount := -ROUND((genstup."Registration Fee" - Cust."Registration Fee Paid"), 1, '>')
-                                            else
-                                                Gnljnline.Amount := -Round(runbal, 1, '>');
-                                            Gnljnline.Validate(Gnljnline.Amount);
-                                            Gnljnline."Transaction Type" := Gnljnline."transaction type"::"Registration Fee";
-                                            Gnljnline."Loan No" := LoanApp."Loan  No.";
-                                            if Gnljnline.Amount <> 0 then
-                                                Gnljnline.Insert;
-                                            RunBal := RunBal + (Gnljnline.Amount);
-                                        end;
+                                        LineN := LineN + 10000;
+
+                                        Gnljnline.Init;
+                                        Gnljnline."Journal Template Name" := 'GENERAL';
+                                        Gnljnline."Journal Batch Name" := 'CHECKOFF';
+                                        Gnljnline."Line No." := LineN;
+                                        Gnljnline."Account Type" := Gnljnline."bal. account type"::Customer;
+                                        Gnljnline."Account No." := LoanApp."Client Code";
+                                        Gnljnline.Validate(Gnljnline."Account No.");
+                                        Gnljnline."Document No." := "Document No";
+                                        Gnljnline."Posting Date" := "Posting date";
+                                        Gnljnline.Description := 'Registration fee  ' + Remarks;
+                                        if RunBal > (genstup."BOSA Registration Fee Amount" - Cust."Registration Fee Paid") then
+                                            Gnljnline.Amount := -ROUND((genstup."BOSA Registration Fee Amount" - Cust."Registration Fee Paid"), 1, '>')
+                                        else
+                                            Gnljnline.Amount := -Round(runbal, 1, '>');
+                                        Gnljnline.Validate(Gnljnline.Amount);
+                                        Gnljnline."Transaction Type" := Gnljnline."transaction type"::"Registration Fee";
+                                        if Gnljnline.Amount <> 0 then
+                                            Gnljnline.Insert;
+                                        RunBal := RunBal + (Gnljnline.Amount);
                                     end;
-                                until Cust.Next() = 0;
+                                end;
                             end;
                         until RcptBufLines.Next = 0;
                     end;
 
+                    //Insurance
                     genstup.Get();
                     RcptBufLines.Reset;
                     RcptBufLines.SetRange(RcptBufLines."Receipt Header No", No);
@@ -487,7 +487,7 @@ Page 50404 "Bosa Receipts H Card-Checkoff"
                                         else
                                             Gnljnline.Amount := RunBal * -1;
                                         Gnljnline.Validate(Gnljnline.Amount);
-                                        Gnljnline."Transaction Type" := Gnljnline."transaction type"::"Deposit Contribution";
+                                        Gnljnline."Transaction Type" := Gnljnline."transaction type"::"Share Capital";
                                         if Gnljnline.Amount <> 0 then
                                             Gnljnline.Insert;
                                         RunBal := RunBal - (Gnljnline.Amount * -1);

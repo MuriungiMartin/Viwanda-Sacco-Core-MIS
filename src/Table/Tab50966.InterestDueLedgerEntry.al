@@ -464,10 +464,8 @@ Table 50966 "Interest Due Ledger Entry"
         {
             Caption = 'Prepayment';
         }
-        field(68000; "Transaction Type"; Option)
+        field(68000; "Transaction Type"; Enum TransactionTypesEnum)
         {
-            OptionCaption = ' ,Registration Fee,Share Capital,Interest Paid,Loan Repayment,Deposit Contribution,Insurance Contribution,Benevolent Fund,Loan,Unallocated Funds,Dividend,FOSA Account,Loan Insurance Charged,Loan Insurance Paid,Recovery Account,FOSA Shares,Additional Shares,Interest Due,Loan Penalty Charged,Loan Penalty Paid';
-            OptionMembers = " ","Registration Fee","Share Capital","Interest Paid","Loan Repayment","Deposit Contribution","Insurance Contribution","Benevolent Fund",Loan,"Unallocated Funds",Dividend,"FOSA Account","Loan Insurance Charged","Loan Insurance Paid","Recovery Account","FOSA Shares","Additional Shares","Interest Due","Loan Penalty Charged","Loan Penalty Paid";
         }
         field(68001; "Loan No"; Code[20])
         {

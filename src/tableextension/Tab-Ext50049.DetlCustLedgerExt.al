@@ -3,10 +3,8 @@ tableextension 50049 "DetlCustLedgerExt" extends "Detailed Cust. Ledg. Entry"
     fields
     {
         // Add changes to table fields here
-                field(68000; "Transaction Type"; Option)
+        field(68000; "Transaction Type"; enum TransactionTypesEnum)
         {
-            OptionCaption = ' ,Registration Fee,Share Capital,Interest Paid,Loan Repayment,Deposit Contribution,Insurance Contribution,Benevolent Fund,Loan,Unallocated Funds,Dividend,FOSA Account,Loan Insurance Charged,Loan Insurance Paid,Recovery Account,FOSA Shares,Additional Shares,Interest Due,Loan Penalty Charged,Loan Penalty Paid,Junior Savings,Safari Savings,Silver Savings';
-            OptionMembers = " ","Registration Fee","Share Capital","Interest Paid","Loan Repayment","Deposit Contribution","Insurance Contribution","Benevolent Fund",Loan,"Unallocated Funds",Dividend,"FOSA Account","Loan Insurance Charged","Loan Insurance Paid","Recovery Account","FOSA Shares","Additional Shares","Interest Due","Loan Penalty Charged","Loan Penalty Paid","Junior Savings","Safari Savings","Silver Savings";
         }
         field(68001; "Loan No"; Code[20])
         {
@@ -97,7 +95,7 @@ tableextension 50049 "DetlCustLedgerExt" extends "Detailed Cust. Ledg. Entry"
         {
         }
     }
-    
+
     var
         myInt: Integer;
 }

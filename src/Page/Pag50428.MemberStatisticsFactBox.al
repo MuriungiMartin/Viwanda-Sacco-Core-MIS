@@ -11,6 +11,22 @@ Page 50428 "Member Statistics FactBox"
     {
         area(content)
         {
+            // usercontrol(Mpesa; MpesaAddin)
+            // {
+
+            //     ApplicationArea = all;
+
+            //     trigger ControlReady()
+            //     var
+            //         myInt: Integer;
+            //     begin
+            //         //Message('ready to execute javascript');
+            //         myInt := 0704536696;
+            //         CurrPage.Mpesa.pay(myInt);
+
+            //     end;
+
+            // }
             field("No."; "No.")
             {
                 ApplicationArea = Basic;
@@ -36,6 +52,10 @@ Page 50428 "Member Statistics FactBox"
             group("Member Details FactBox")
             {
                 Caption = 'Member Details FactBox';
+                field("Registration Fee Paid"; "Registration Fee Paid")
+                {
+
+                }
                 field("Current Shares"; "Current Shares")
                 {
                     ApplicationArea = Basic;
@@ -54,18 +74,6 @@ Page 50428 "Member Statistics FactBox"
                 {
                     ApplicationArea = Basic;
                 }
-                field("Junior Savings"; "Junior Savings")
-                {
-                    ApplicationArea = Basic;
-                }
-                field("Silver Savings"; "Silver Savings")
-                {
-                    ApplicationArea = Basic;
-                }
-                field("Safari Savings"; "Safari Savings")
-                {
-                    ApplicationArea = Basic;
-                }
                 field("Outstanding Balance"; "Outstanding Balance")
                 {
                     ApplicationArea = Basic;
@@ -76,6 +84,10 @@ Page 50428 "Member Statistics FactBox"
                 {
                     ApplicationArea = Basic;
                 }
+                field("Out. Loan Insurance fee"; "Out. Loan Insurance fee")
+                {
+
+                }
                 field("Development Loan"; "Development Loan")
                 {
                     ApplicationArea = Basic;
@@ -84,37 +96,10 @@ Page 50428 "Member Statistics FactBox"
                 {
                     ApplicationArea = Basic;
                 }
-                field("Instant Loan"; "Instant Loan")
+
+                field("Out. Loan Processing fee"; "Out. Loan Processing fee")
                 {
-                    ApplicationArea = Basic;
-                }
-                field("Maono Shamba Loan"; "Maono Shamba Loan")
-                {
-                    ApplicationArea = Basic;
-                }
-                field("School Fees Loan"; "School Fees Loan")
-                {
-                    ApplicationArea = Basic;
-                }
-                field("Super Plus Loan"; "Super Plus Loan")
-                {
-                    ApplicationArea = Basic;
-                }
-                field("Super School Fees Laon"; "Super School Fees Laon")
-                {
-                    ApplicationArea = Basic;
-                }
-                field("Top Loan"; "Top Loan")
-                {
-                    ApplicationArea = Basic;
-                }
-                field("Top Loan 1"; "Top Loan 1")
-                {
-                    ApplicationArea = Basic;
-                }
-                field("Vs Member Loan"; "Vs Member Loan")
-                {
-                    ApplicationArea = Basic;
+                    Caption = 'Out. Loan Processing fee';
                 }
                 field(VarMemberLiability; VarMemberLiability)
                 {
@@ -301,9 +286,9 @@ Page 50428 "Member Statistics FactBox"
                         PeriodStart := 0D;
                     end;
                 else begin
-                        PeriodEnd := PeriodStart - 1;
-                        PeriodStart := CalcDate('-' + Format(AgingPeriod), PeriodStart);
-                    end;
+                    PeriodEnd := PeriodStart - 1;
+                    PeriodStart := CalcDate('-' + Format(AgingPeriod), PeriodStart);
+                end;
             end;
             CalculateAgingForPeriod(PeriodStart, PeriodEnd, I);
         end;

@@ -2533,6 +2533,20 @@ tableextension 50007 "customertableEXT" extends Customer
         {
 
         }
+        field(69299; "Out. Loan Processing fee"; Decimal)
+        {
+            FieldClass = FlowField;
+            CalcFormula = sum("Cust. Ledger Entry"."Transaction Amount" where("Transaction Type" = filter("Loan Processing Fee Charged" | "Loan Processing Fee Paid"), "Customer No." = field("No."),
+            "Posting Date" = field("Date filter")));
+
+        }
+        field(69300; "Out. Loan Insurance fee"; Decimal)
+        {
+            FieldClass = FlowField;
+            CalcFormula = sum("Cust. Ledger Entry"."Transaction Amount" where("Transaction Type" = filter("Loan Insurance Charged" | "Loan Insurance Paid"), "Customer No." = field("No."),
+            "Posting Date" = field("Date filter")));
+
+        }
 
 
     }
