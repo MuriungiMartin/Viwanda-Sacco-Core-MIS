@@ -6,7 +6,7 @@ Page 50564 "Loans Application Card(Posted)"
     PageType = Card;
     ShowFilter = false;
     SourceTable = "Loans Register";
-
+    Editable = true;
     layout
     {
         area(content)
@@ -286,7 +286,7 @@ Page 50564 "Loans Application Card(Posted)"
                     field("Expected Date of Completion"; "Expected Date of Completion")
                     {
                         ApplicationArea = Basic;
-                        Editable = false;
+                        Editable = true;
                     }
                     field("External EFT"; "External EFT")
                     {

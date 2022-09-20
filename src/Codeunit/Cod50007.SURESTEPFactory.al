@@ -352,15 +352,36 @@ Codeunit 50007 "SURESTEP Factory"
     procedure FnGetChargeFee(ProductCode: Code[50]; InsuredAmount: Decimal; ChargeType: Code[100]) FCharged: Decimal
     begin
         if ObjLoanProductSetup.Get(ProductCode) then begin
-            ObjProductCharges.Reset;
-            ObjProductCharges.SetRange(ObjProductCharges."Product Code", ProductCode);
-            ObjProductCharges.SetRange(ObjProductCharges.Code, ChargeType);
-            if ObjProductCharges.Find('-') then begin
-                if ObjProductCharges."Use Perc" = true then begin
-                    FCharged := InsuredAmount * (ObjProductCharges.Percentage / 100);
-                end
-                else
-                    FCharged := ObjProductCharges.Amount;
+            if ObjProductCharges."Loan Charge Type" = ObjProductCharges."Loan Charge Type"::"Loan Application Fee" then begin
+                ;
+                ObjProductCharges.Reset;
+                ObjProductCharges.SetRange(ObjProductCharges."Product Code", ProductCode);
+                ObjProductCharges.SetRange(ObjProductCharges.Code, ChargeType);
+                if ObjProductCharges.Find('-') then begin
+                    if ObjProductCharges."Use Perc" = true then begin
+                        FCharged := InsuredAmount * (ObjProductCharges.Percentage / 100);
+                    end
+                    else begin
+                        if ProductCode = 'DL' then
+                            FCharged := ObjProductCharges."Development Application Fee"
+                        else
+                            if ProductCode = 'EM' then
+                                FCharged := ObjProductCharges."Emergency Application Fee";
+                    end;
+                end;
+            end;
+            if ObjProductCharges."Loan Charge Type" = ObjProductCharges."Loan Charge Type"::"Loan Insurance" then begin
+                ;
+                ObjProductCharges.Reset;
+                ObjProductCharges.SetRange(ObjProductCharges."Product Code", ProductCode);
+                ObjProductCharges.SetRange(ObjProductCharges.Code, ChargeType);
+                if ObjProductCharges.Find('-') then begin
+                    if ObjProductCharges."Use Perc" = true then begin
+                        FCharged := InsuredAmount * (ObjProductCharges.Percentage / 100);
+                    end
+                    else
+                        FCharged := ObjProductCharges.Amount;
+                end;
             end;
         end;
         exit(FCharged);
@@ -13612,7 +13633,7 @@ Codeunit 50007 "SURESTEP Factory"
         CurrentCount: Integer;
         TheTextToUpdate: Label 'Processing #1#######################\Customer No #2##################';
     begin
-        
+
 
     end;
 

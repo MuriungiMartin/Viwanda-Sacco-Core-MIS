@@ -58,7 +58,7 @@ Report 50355 "Loan Appraisal Ver1"
             column(AccruedInt; VarAccruedInt)
             {
             }
-            column(ProcessingFee; VarProcessingFee)
+            column(ProcessingFee; VarAplicationFee)
             {
             }
             column(LoanFormFee; VarLoanFormFee)
@@ -1072,22 +1072,22 @@ Report 50355 "Loan Appraisal Ver1"
                     //POPULATE ALL CHARGES & GLs FROM PRODUCT SETUPS---------------------------------------------------------------------------------//
                     VarLoanInsurance := 0;
                     VarLoanInsurance := SFactory.FnGetChargeFee("Loan Product Type", "Approved Amount", 'LINSURANCE');
-                    VarProcessingFee := SFactory.FnGetChargeFee("Loan Product Type", "Approved Amount", 'LPF');
+                    VarAplicationFee := SFactory.FnGetChargeFee("Loan Product Type", "Approved Amount", 'LPF');
                     VarLoanFormFee := SFactory.FnGetChargeFee("Loan Product Type", "Approved Amount", 'BOSA TRANSFER');
                     VarLAppraisalFee := SFactory.FnGetChargeFee("Loan Product Type", "Approved Amount", 'LAPPRAISAL');
                     VarLoanTransferFee := SFactory.FnGetTransferFee("Mode of Disbursement");
                     // VarBridgeLevy:=ROUND(ObjLoanApp."Offset Commission",1,'>');
                     VarSMSFee := ObjGenSetUp."SMS Fee Amount";
-                    Upfronts := VarLoanInsurance + VarProcessingFee + VarLoanFormFee + VarLAppraisalFee + VarLoanTransferFee + VarShareBoostComm + VarExciseDutyShareBoostComm + "Loans Register"."Boosted Amount" +
-                    "Loans Register"."Boosted Amount Interest" + "Loans Register"."Boosting Commision" + VarTotalBridgeAmount + "Loans Register"."Interest Upfront";
+                    // Upfronts := VarLoanInsurance + VarAplicationFee + VarLoanFormFee + VarLAppraisalFee + VarLoanTransferFee + VarShareBoostComm + VarExciseDutyShareBoostComm + "Loans Register"."Boosted Amount" +
+                    // "Loans Register"."Boosted Amount Interest" + "Loans Register"."Boosting Commision" + VarTotalBridgeAmount + "Loans Register"."Interest Upfront";
                     //END------------------------------------------------------------------------------------------------------------//
                     "Loan SMS Fee" := VarSMSFee;
                     Modify;
-                    VarNetdisbursed := "Approved Amount" - Upfronts;
+                    VarNetdisbursed := "Approved Amount";//- Upfronts;
                 end;
                 "Capitalized Charges" := VarTscInt + VarLAppraisalFee + VarAccruedInt + VarSaccoInt;
                 "Loan Disbursed Amount" := VarNetdisbursed;
-                VarUpfronts := Upfronts;
+                //VarUpfronts := Upfronts;
                 "Total Offset Amount" := VarTotalBridgeAmount;
                 "Loan Insurance Charged" := VarLoanInsurance;
                 "Loan Insurance" := VarLoanInsurance;
@@ -1492,7 +1492,7 @@ Report 50355 "Loan Appraisal Ver1"
         VarLAppraisalFeeAccount: Code[20];
         VarTscInt: Decimal;
         VarAccruedInt: Decimal;
-        VarProcessingFee: Decimal;
+        VarAplicationFee: Decimal;
         VarLoanFormFee: Decimal;
         VarSaccoInt: Decimal;
         VarArmotizationFactor: Decimal;

@@ -39,13 +39,14 @@ report 50983 DueLoans
                 myInt: Integer;
             begin
                 "Due Loans" := false;
-                "Loans Register".Reset();
-
-                "Loans Register".SetFilter("Loans Register"."Expected Date of Completion", dfilter);
-                if "Loans Register".Find('-') then begin
-                    "Loans Register"."Due Loans" := true;
+                loanapp.Reset();
+                loanapp.SetRange(loanapp."Loan  No.", "Loans Register"."Loan  No.");
+                loanapp.SetFilter(loanapp."Expected Date of Completion", dfilter);
+                if loanapp.Find('-') then begin
+                    loanapp."Due Loans" := true;
                 end;
-                "Loans Register".Modify();
+                loanapp.Modify();
+                loanapp.FilterGroup
 
             end;
         }
@@ -92,7 +93,7 @@ report 50983 DueLoans
     //     layout(CustomLayout)
     //     {
     //         Type = RDLC;
-    //         LayoutFile = 'mylayout.rdl';
+    //         LayoutFile = 'mylayout.rdlc';
     //     }
     // }
 
@@ -100,6 +101,7 @@ report 50983 DueLoans
         myInt: Integer;
         dfilter: text;
         Due: Boolean;
+        loanapp: Record "Loans Register";
 
 
 
