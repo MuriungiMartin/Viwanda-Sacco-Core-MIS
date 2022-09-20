@@ -50,7 +50,7 @@ Report 50868 "Loans Balances Report"
             column(Company_Email; Company."E-Mail")
             {
             }
-            // column(CurrReport_PAGENO; Format(ReportForNav.PageNo))
+            // column(CurrReport_PAGENO; CurrReport.PageNo())
             // {
             // }
             column(UserId; UserId)
@@ -360,7 +360,7 @@ Report 50868 "Loans Balances Report"
         }
         trigger OnOpenPage()
         begin
-            // ReportForNavOpenDesigner := false;
+            ////:= false;
         end;
     }
 
@@ -369,14 +369,14 @@ Report 50868 "Loans Balances Report"
         Company.Get();
         Company.CalcFields(Company.Picture);
         ;
-        // ReportsForNavInit;
+        // 
 
     end;
 
     trigger OnPostReport()
     begin
         ;
-        //ReportForNav.Post;
+        //
     end;
 
     trigger OnPreReport()
@@ -386,7 +386,7 @@ Report 50868 "Loans Balances Report"
             Name := "COMPY INFOR".Name;
         end;
         ;
-        // ReportsForNavPre;
+        // 
     end;
 
     var

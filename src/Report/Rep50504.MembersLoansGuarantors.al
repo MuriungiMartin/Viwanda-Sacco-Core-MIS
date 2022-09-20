@@ -148,7 +148,7 @@ Report 50504 "Members Loans Guarantors"
         }
         trigger OnOpenPage()
         begin
-            // ReportForNavOpenDesigner := false;
+            ////:= false;
 
         end;
     }

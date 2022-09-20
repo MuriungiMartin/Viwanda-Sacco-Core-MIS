@@ -2,7 +2,7 @@
 
 Report 50477 "Loans Repayment Schedule"
 {
-    RDLCLayout = 'Layouts/LoansRepaymentSchedule.rdlc';
+    RDLCLayout = 'Layouts/LoansRepaymentSchedule.rdl';
     DefaultLayout = RDLC;
 
     dataset

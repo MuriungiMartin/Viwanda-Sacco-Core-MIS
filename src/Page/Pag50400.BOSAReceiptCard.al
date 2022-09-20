@@ -167,11 +167,13 @@ Page 50400 "BOSA Receipt Card"
                         RunBal := 0;
                         RunBal := Amount;
                         RunBal := FnRunEntranceFee(Rec, RunBal);
-                        RunBal := FnRunShareCapital(Rec, RunBal);
+                        RunBal := FnRunLoanInsurance(Rec, RunBal);
+                        RunBal := FnRunLoanApplicationFee(rec, RunBal);
                         RunBal := FnRunInterest(Rec, RunBal);
                         RunBal := FnRunPrinciple(Rec, RunBal);
+                        RunBal := FnRunShareCapital(Rec, RunBal);
                         RunBal := FnRunDepositContribution(Rec, RunBal);
-                        RunBal := FnRunInsuranceContribution(Rec, RunBal);
+                        // RunBal := FnRunInsuranceContribution(Rec, RunBal);
                         RunBal := FnRunBenevolentFund(Rec, RunBal);
 
                         if RunBal > 0 then begin
@@ -180,12 +182,12 @@ Page 50400 "BOSA Receipt Card"
                             case "Excess Transaction Type" of
                                 "excess transaction type"::"Deposit Contribution":
                                     FnRunDepositContributionFromExcess(Rec, RunBal);
-                                "excess transaction type"::"Safari Saving":
-                                    FnRunSavingsProductExcess(Rec, RunBal, 'SAVINGS');
-                                "excess transaction type"::"Silver Savings":
-                                    FnRunSavingsProductExcess(Rec, RunBal, 'GOLDSAVE');
-                                "excess transaction type"::"Junior Savings":
-                                    FnRunSavingsProductExcess(Rec, RunBal, 'NFK-JUNIOR');
+                            // "excess transaction type"::"Safari Saving":
+                            //     FnRunSavingsProductExcess(Rec, RunBal, 'SAVINGS');
+                            // "excess transaction type"::"Silver Savings":
+                            //     FnRunSavingsProductExcess(Rec, RunBal, 'GOLDSAVE');
+                            // "excess transaction type"::"Junior Savings":
+                            //     FnRunSavingsProductExcess(Rec, RunBal, 'NFK-JUNIOR');
                             end;
                             //RunBal:=FnRunUnallocatedAmount(Rec,RunBal);
                         end;
@@ -207,6 +209,7 @@ Page 50400 "BOSA Receipt Card"
                 Promoted = true;
                 PromotedCategory = Process;
                 PromotedOnly = true;
+                ShortcutKey = 'F11';
 
                 trigger OnAction()
                 begin
@@ -482,6 +485,86 @@ Page 50400 "BOSA Receipt Card"
         end;
     end;
 
+    local procedure FnRunLoanInsurance(ObjRcptBuffer: Record "Receipts & Payments"; RunningBalance: Decimal): Decimal
+    var
+        AmountToDeduct: Decimal;
+        ObjReceiptTransactions: Record "Receipt Allocation";
+    begin
+        if RunningBalance > 0 then begin
+            LoanApp.Reset;
+            LoanApp.SetCurrentkey(Source, "Issued Date", "Loan Product Type", "Client Code", "Staff No", "Employer Code");
+            LoanApp.SetRange(LoanApp."Client Code", ObjRcptBuffer."Account No.");
+            LoanApp.SetFilter(LoanApp."Date filter", Datefilter);
+            LoanApp.SetAutoCalcFields(LoanApp."Outstanding Insurance");
+            if LoanApp.Find('-') then begin
+                repeat
+                    LoanApp.CALCFIELDS(LoanApp."Outstanding Insurance");
+                    if LoanApp."Outstanding Insurance" > 0 then begin
+                        if RunningBalance > 0 then begin
+                            AmountToDeduct := 0;
+                            AmountToDeduct := ROUND(LoanApp."Outstanding Insurance", 0.05, '>');
+                            if RunningBalance <= AmountToDeduct then
+                                AmountToDeduct := RunningBalance;
+                            ObjReceiptTransactions.Init;
+                            ObjReceiptTransactions."Document No" := ObjRcptBuffer."Transaction No.";
+                            ObjReceiptTransactions."Account Type" := ObjReceiptTransactions."account type"::Customer;
+                            ObjReceiptTransactions."Member No" := ObjRcptBuffer."Account No.";
+                            ObjReceiptTransactions."Loan No." := LoanApp."Loan  No.";
+                            ObjReceiptTransactions."Transaction Type" := ObjReceiptTransactions."transaction type"::"Loan Insurance Paid";
+                            ObjReceiptTransactions."Global Dimension 1 Code" := 'BOSA';
+                            ObjReceiptTransactions."Global Dimension 2 Code" := SURESTEPFactory.FnGetMemberBranch(ObjRcptBuffer."Account No.");
+                            ObjReceiptTransactions.Amount := AmountToDeduct;
+                            if ObjReceiptTransactions.Amount > 0 then
+                                ObjReceiptTransactions.Insert(true);
+                            RunningBalance := RunningBalance - Abs(ObjReceiptTransactions.Amount);
+                        end;
+                    end;
+                until LoanApp.Next = 0;
+            end;
+            exit(RunningBalance);
+        end;
+    end;
+
+    protected procedure FnRunLoanApplicationFee(ObjRcptBuffer: Record "Receipts & Payments"; RunningBalance: Decimal): Decimal
+    var
+        AmountToDeduct: Decimal;
+        ObjReceiptTransactions: Record "Receipt Allocation";
+    begin
+        if RunningBalance > 0 then begin
+            LoanApp.Reset;
+            LoanApp.SetCurrentkey(Source, "Issued Date", "Loan Product Type", "Client Code", "Staff No", "Employer Code");
+            LoanApp.SetRange(LoanApp."Client Code", ObjRcptBuffer."Account No.");
+            LoanApp.SetFilter(LoanApp."Date filter", Datefilter);
+            LoanApp.SetAutoCalcFields(LoanApp."Out. Loan Application fee");
+            if LoanApp.Find('-') then begin
+                repeat
+                    LoanApp.CALCFIELDS(LoanApp."Out. Loan Application fee");
+                    if LoanApp."Out. Loan Application fee" > 0 then begin
+                        if RunningBalance > 0 then begin
+                            AmountToDeduct := 0;
+                            AmountToDeduct := ROUND(LoanApp."Out. Loan Application fee", 0.05, '>');
+                            if RunningBalance <= AmountToDeduct then
+                                AmountToDeduct := RunningBalance;
+                            ObjReceiptTransactions.Init;
+                            ObjReceiptTransactions."Document No" := ObjRcptBuffer."Transaction No.";
+                            ObjReceiptTransactions."Account Type" := ObjReceiptTransactions."account type"::Customer;
+                            ObjReceiptTransactions."Member No" := ObjRcptBuffer."Account No.";
+                            ObjReceiptTransactions."Loan No." := LoanApp."Loan  No.";
+                            ObjReceiptTransactions."Transaction Type" := ObjReceiptTransactions."transaction type"::"Loan Application Fee Paid";
+                            ObjReceiptTransactions."Global Dimension 1 Code" := 'BOSA';
+                            ObjReceiptTransactions."Global Dimension 2 Code" := SURESTEPFactory.FnGetMemberBranch(ObjRcptBuffer."Account No.");
+                            ObjReceiptTransactions.Amount := AmountToDeduct;
+                            if ObjReceiptTransactions.Amount > 0 then
+                                ObjReceiptTransactions.Insert(true);
+                            RunningBalance := RunningBalance - Abs(ObjReceiptTransactions.Amount);
+                        end;
+                    end;
+                until LoanApp.Next = 0;
+            end;
+            exit(RunningBalance);
+        end;
+    end;
+
     local procedure FnRunPrinciple(ObjRcptBuffer: Record "Receipts & Payments"; RunningBalance: Decimal): Decimal
     var
         AmountToDeduct: Decimal;
@@ -490,6 +573,7 @@ Page 50400 "BOSA Receipt Card"
         varMultipleLoan: Decimal;
         varLRepayment: Decimal;
         PRpayment: Decimal;
+        LSchedule: Record "Loan Repayment Schedule";
     begin
         if RunningBalance > 0 then begin
             varTotalRepay := 0;
@@ -510,8 +594,12 @@ Page 50400 "BOSA Receipt Card"
                             PRpayment := 0;
                             PRpayment := LoanApp."Oustanding Interest to Date";
                             varLRepayment := LoanApp.Repayment - PRpayment;
-                            if LoanApp."Loan Product Type" = 'GUR' then
-                                varLRepayment := LoanApp.Repayment;
+                            LSchedule.Reset();
+                            LSchedule.SetRange(LSchedule."Loan No.", LoanApp."Loan  No.");
+                            LSchedule.SetFilter(LSchedule."Repayment Date", '>=%1', Today);
+                            if LSchedule.Find('+') then begin
+                                varLRepayment := LSchedule."Principal Repayment";
+                            end;
                             if varLRepayment > 0 then begin
                                 if varLRepayment > LoanApp."Outstanding Balance" then
                                     varLRepayment := LoanApp."Outstanding Balance";
@@ -557,10 +645,10 @@ Page 50400 "BOSA Receipt Card"
             GenSetup.Get();
             ObjMember.Reset;
             ObjMember.SetRange(ObjMember."No.", ObjRcptBuffer."Account No.");
-            ObjMember.SetFilter(ObjMember."Registration Date", '>%1', 20171017D); //To Ensure deduction is for New Members Only
+            ObjMember.SetFilter(ObjMember."Registration Date", '>%1', GenSetup."Go Live Date"); //To Ensure deduction is for New Members Only
             if ObjMember.Find('-') then begin
                 ObjMember.CalcFields(ObjMember."Registration Fee Paid");
-                if Abs(ObjMember."Registration Fee Paid") < 500 then begin
+                if Abs(ObjMember."Registration Fee Paid") < GenSetup."BOSA Registration Fee Amount" then begin
                     if ObjMember."Registration Date" <> 0D then begin
 
                         AmountToDeduct := 0;
@@ -614,8 +702,6 @@ Page 50400 "BOSA Receipt Card"
                         if RunningBalance > 0 then begin
                             AmountToDeduct := 0;
                             AmountToDeduct := DIFF;
-                            /*IF DIFF > 10000 THEN
-                              AmountToDeduct:=10000;*/
                             if RunningBalance <= AmountToDeduct then
                                 AmountToDeduct := RunningBalance;
 
@@ -736,7 +822,7 @@ Page 50400 "BOSA Receipt Card"
                 if ObjMember."Registration Date" <> 0D then begin
 
                     AmountToDeduct := 0;
-                    AmountToDeduct := GenSetup."Risk Fund Amount";
+                    AmountToDeduct := GenSetup."Benevolent Fund Contribution";
                     if RunningBalance <= AmountToDeduct then
                         AmountToDeduct := RunningBalance;
                     ObjReceiptTransactions.Init;
@@ -797,7 +883,7 @@ Page 50400 "BOSA Receipt Card"
         ObjMember: Record Customer;
         SharesCap: Decimal;
         DIFF: Decimal;
-        TransType: Option " ","Registration Fee","Share Capital","Interest Paid","Loan Repayment","Deposit Contribution","Insurance Contribution","Benevolent Fund",Loan,"Unallocated Funds",Dividend,"FOSA Account";
+        TransType: Enum TransactionTypesEnum;
     begin
 
         ObjMember.Reset;
