@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns:cl="http://schemas.microsoft.com/sqlserver/reporting/2010/01/componentdefinition" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/reportdefinition">
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
@@ -11,114 +11,6 @@
       <rd:DataSourceID>ae3d42ae-1eb4-4aec-9af4-ee2e3e0a0702</rd:DataSourceID>
     </DataSource>
   </DataSources>
-  <DataSets>
-    <DataSet Name="DataSet_Result">
-      <Query>
-        <DataSourceName>DataSource</DataSourceName>
-        <CommandText />
-      </Query>
-      <Fields>
-        <Field Name="FORMAT_TODAY_0_4_">
-          <DataField>FORMAT_TODAY_0_4_</DataField>
-        </Field>
-        <Field Name="COMPANYNAME">
-          <DataField>COMPANYNAME</DataField>
-        </Field>
-        <Field Name="Company_Address">
-          <DataField>Company_Address</DataField>
-        </Field>
-        <Field Name="Company_Address2">
-          <DataField>Company_Address2</DataField>
-        </Field>
-        <Field Name="Company_PhoneNo">
-          <DataField>Company_PhoneNo</DataField>
-        </Field>
-        <Field Name="Company_Email">
-          <DataField>Company_Email</DataField>
-        </Field>
-        <Field Name="Company_Picture">
-          <DataField>Company_Picture</DataField>
-        </Field>
-        <Field Name="CurrReport_PAGENO">
-          <DataField>CurrReport_PAGENO</DataField>
-        </Field>
-        <Field Name="USERID">
-          <DataField>USERID</DataField>
-        </Field>
-        <Field Name="No">
-          <DataField>No</DataField>
-        </Field>
-        <Field Name="Name">
-          <DataField>Name</DataField>
-        </Field>
-        <Field Name="ID_No">
-          <DataField>ID_No</DataField>
-        </Field>
-        <Field Name="Employer">
-          <DataField>Employer</DataField>
-        </Field>
-        <Field Name="Gross_Dividend">
-          <DataField>Gross_Dividend</DataField>
-        </Field>
-        <Field Name="Gross_DividendFormat">
-          <DataField>Gross_DividendFormat</DataField>
-        </Field>
-        <Field Name="ProcessingFee">
-          <DataField>ProcessingFee</DataField>
-        </Field>
-        <Field Name="ProcessingFeeFormat">
-          <DataField>ProcessingFeeFormat</DataField>
-        </Field>
-        <Field Name="W_Tax">
-          <DataField>W_Tax</DataField>
-        </Field>
-        <Field Name="W_TaxFormat">
-          <DataField>W_TaxFormat</DataField>
-        </Field>
-        <Field Name="Net_Dividend">
-          <DataField>Net_Dividend</DataField>
-        </Field>
-        <Field Name="Net_DividendFormat">
-          <DataField>Net_DividendFormat</DataField>
-        </Field>
-        <Field Name="FOSA_No">
-          <DataField>FOSA_No</DataField>
-        </Field>
-        <Field Name="TGrossDiv">
-          <DataField>TGrossDiv</DataField>
-        </Field>
-        <Field Name="TGrossDivFormat">
-          <DataField>TGrossDivFormat</DataField>
-        </Field>
-        <Field Name="TW_Tax">
-          <DataField>TW_Tax</DataField>
-        </Field>
-        <Field Name="TW_TaxFormat">
-          <DataField>TW_TaxFormat</DataField>
-        </Field>
-        <Field Name="TProcesinFee">
-          <DataField>TProcesinFee</DataField>
-        </Field>
-        <Field Name="TProcesinFeeFormat">
-          <DataField>TProcesinFeeFormat</DataField>
-        </Field>
-        <Field Name="TNetDiv">
-          <DataField>TNetDiv</DataField>
-        </Field>
-        <Field Name="TNetDivFormat">
-          <DataField>TNetDivFormat</DataField>
-        </Field>
-        <Field Name="LCount">
-          <DataField>LCount</DataField>
-        </Field>
-      </Fields>
-      <rd:DataSetInfo>
-        <rd:DataSetName>DataSet</rd:DataSetName>
-        <rd:SchemaPath>Report.xsd</rd:SchemaPath>
-        <rd:TableName>Result</rd:TableName>
-      </rd:DataSetInfo>
-    </DataSet>
-  </DataSets>
   <ReportSections>
     <ReportSection>
       <Body>
@@ -1762,4 +1654,137 @@ End Function
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
   <rd:ReportID>c05e80d7-6d3c-4983-9a52-ac972f643632</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="ReportForNavId_4645">
+          <DataField>ReportForNavId_4645</DataField>
+        </Field>
+        <Field Name="FORMAT_TODAY_0_4_">
+          <DataField>FORMAT_TODAY_0_4_</DataField>
+        </Field>
+        <Field Name="COMPANYNAME">
+          <DataField>COMPANYNAME</DataField>
+        </Field>
+        <Field Name="Company_Address">
+          <DataField>Company_Address</DataField>
+        </Field>
+        <Field Name="Company_Address2">
+          <DataField>Company_Address2</DataField>
+        </Field>
+        <Field Name="Company_PhoneNo">
+          <DataField>Company_PhoneNo</DataField>
+        </Field>
+        <Field Name="Company_Email">
+          <DataField>Company_Email</DataField>
+        </Field>
+        <Field Name="Company_Picture">
+          <DataField>Company_Picture</DataField>
+        </Field>
+        <Field Name="CurrReport_PAGENO">
+          <DataField>CurrReport_PAGENO</DataField>
+        </Field>
+        <Field Name="UserId">
+          <DataField>UserId</DataField>
+        </Field>
+        <Field Name="No">
+          <DataField>No</DataField>
+        </Field>
+        <Field Name="Name">
+          <DataField>Name</DataField>
+        </Field>
+        <Field Name="ID_No">
+          <DataField>ID_No</DataField>
+        </Field>
+        <Field Name="Employer">
+          <DataField>Employer</DataField>
+        </Field>
+        <Field Name="Gross_Dividend">
+          <DataField>Gross_Dividend</DataField>
+        </Field>
+        <Field Name="Gross_DividendFormat">
+          <DataField>Gross_DividendFormat</DataField>
+        </Field>
+        <Field Name="ProcessingFee">
+          <DataField>ProcessingFee</DataField>
+        </Field>
+        <Field Name="ProcessingFeeFormat">
+          <DataField>ProcessingFeeFormat</DataField>
+        </Field>
+        <Field Name="W_Tax">
+          <DataField>W_Tax</DataField>
+        </Field>
+        <Field Name="W_TaxFormat">
+          <DataField>W_TaxFormat</DataField>
+        </Field>
+        <Field Name="Net_Dividend">
+          <DataField>Net_Dividend</DataField>
+        </Field>
+        <Field Name="Net_DividendFormat">
+          <DataField>Net_DividendFormat</DataField>
+        </Field>
+        <Field Name="ReportForNavId_1000000010">
+          <DataField>ReportForNavId_1000000010</DataField>
+        </Field>
+        <Field Name="FOSA_No">
+          <DataField>FOSA_No</DataField>
+        </Field>
+        <Field Name="TGrossDiv">
+          <DataField>TGrossDiv</DataField>
+        </Field>
+        <Field Name="TGrossDivFormat">
+          <DataField>TGrossDivFormat</DataField>
+        </Field>
+        <Field Name="TW_Tax">
+          <DataField>TW_Tax</DataField>
+        </Field>
+        <Field Name="TW_TaxFormat">
+          <DataField>TW_TaxFormat</DataField>
+        </Field>
+        <Field Name="TProcesinFee">
+          <DataField>TProcesinFee</DataField>
+        </Field>
+        <Field Name="TProcesinFeeFormat">
+          <DataField>TProcesinFeeFormat</DataField>
+        </Field>
+        <Field Name="TNetDiv">
+          <DataField>TNetDiv</DataField>
+        </Field>
+        <Field Name="TNetDivFormat">
+          <DataField>TNetDivFormat</DataField>
+        </Field>
+        <Field Name="LCount">
+          <DataField>LCount</DataField>
+        </Field>
+        <Field Name="Gross_Dividend2">
+          <DataField>Gross_Dividend2</DataField>
+        </Field>
+        <Field Name="Gross_Dividend2Format">
+          <DataField>Gross_Dividend2Format</DataField>
+        </Field>
+        <Field Name="ProcessingFee2">
+          <DataField>ProcessingFee2</DataField>
+        </Field>
+        <Field Name="ProcessingFee2Format">
+          <DataField>ProcessingFee2Format</DataField>
+        </Field>
+        <Field Name="W_Tax2">
+          <DataField>W_Tax2</DataField>
+        </Field>
+        <Field Name="W_Tax2Format">
+          <DataField>W_Tax2Format</DataField>
+        </Field>
+        <Field Name="Net_Dividend2">
+          <DataField>Net_Dividend2</DataField>
+        </Field>
+        <Field Name="Net_Dividend2Format">
+          <DataField>Net_Dividend2Format</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
 </Report>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
@@ -11,264 +11,6 @@
       <rd:DataSourceID>fbdb48e2-14c0-4923-881f-92c69a5ed7a0</rd:DataSourceID>
     </DataSource>
   </DataSources>
-  <DataSets>
-    <DataSet Name="DataSet_Result">
-      <Query>
-        <DataSourceName>DataSource</DataSourceName>
-        <CommandText />
-      </Query>
-      <Fields>
-        <Field Name="FORMAT_TODAY_0_4_">
-          <DataField>FORMAT_TODAY_0_4_</DataField>
-        </Field>
-        <Field Name="COMPANYNAME">
-          <DataField>COMPANYNAME</DataField>
-        </Field>
-        <Field Name="Company_Name">
-          <DataField>Company_Name</DataField>
-        </Field>
-        <Field Name="Company_Address">
-          <DataField>Company_Address</DataField>
-        </Field>
-        <Field Name="Company_Address_2">
-          <DataField>Company_Address_2</DataField>
-        </Field>
-        <Field Name="Company_Phone_No">
-          <DataField>Company_Phone_No</DataField>
-        </Field>
-        <Field Name="Company_Fax_No">
-          <DataField>Company_Fax_No</DataField>
-        </Field>
-        <Field Name="Company_Picture">
-          <DataField>Company_Picture</DataField>
-        </Field>
-        <Field Name="Company_Email">
-          <DataField>Company_Email</DataField>
-        </Field>
-        <Field Name="CurrReport_PAGENO">
-          <DataField>CurrReport_PAGENO</DataField>
-        </Field>
-        <Field Name="USERID">
-          <DataField>USERID</DataField>
-        </Field>
-        <Field Name="VarCount">
-          <DataField>VarCount</DataField>
-        </Field>
-        <Field Name="LoanNo_LoansGuaranteeDetails">
-          <DataField>LoanNo_LoansGuaranteeDetails</DataField>
-        </Field>
-        <Field Name="MemberNo_LoansGuaranteeDetails">
-          <DataField>MemberNo_LoansGuaranteeDetails</DataField>
-        </Field>
-        <Field Name="Name_LoansGuaranteeDetails">
-          <DataField>Name_LoansGuaranteeDetails</DataField>
-        </Field>
-        <Field Name="LoanBalance_LoansGuaranteeDetails">
-          <DataField>LoanBalance_LoansGuaranteeDetails</DataField>
-        </Field>
-        <Field Name="LoanBalance_LoansGuaranteeDetailsFormat">
-          <DataField>LoanBalance_LoansGuaranteeDetailsFormat</DataField>
-        </Field>
-        <Field Name="Shares_LoansGuaranteeDetails">
-          <DataField>Shares_LoansGuaranteeDetails</DataField>
-        </Field>
-        <Field Name="Shares_LoansGuaranteeDetailsFormat">
-          <DataField>Shares_LoansGuaranteeDetailsFormat</DataField>
-        </Field>
-        <Field Name="NoOfLoansGuaranteed_LoansGuaranteeDetails">
-          <DataField>NoOfLoansGuaranteed_LoansGuaranteeDetails</DataField>
-        </Field>
-        <Field Name="Substituted_LoansGuaranteeDetails">
-          <DataField>Substituted_LoansGuaranteeDetails</DataField>
-        </Field>
-        <Field Name="Date_LoansGuaranteeDetails">
-          <DataField>Date_LoansGuaranteeDetails</DataField>
-        </Field>
-        <Field Name="SharesRecovery_LoansGuaranteeDetails">
-          <DataField>SharesRecovery_LoansGuaranteeDetails</DataField>
-        </Field>
-        <Field Name="NewUpload_LoansGuaranteeDetails">
-          <DataField>NewUpload_LoansGuaranteeDetails</DataField>
-        </Field>
-        <Field Name="AmontGuaranteed_LoansGuaranteeDetails">
-          <DataField>AmontGuaranteed_LoansGuaranteeDetails</DataField>
-        </Field>
-        <Field Name="AmontGuaranteed_LoansGuaranteeDetailsFormat">
-          <DataField>AmontGuaranteed_LoansGuaranteeDetailsFormat</DataField>
-        </Field>
-        <Field Name="StaffPayrollNo_LoansGuaranteeDetails">
-          <DataField>StaffPayrollNo_LoansGuaranteeDetails</DataField>
-        </Field>
-        <Field Name="AccountNo_LoansGuaranteeDetails">
-          <DataField>AccountNo_LoansGuaranteeDetails</DataField>
-        </Field>
-        <Field Name="SelfGuarantee_LoansGuaranteeDetails">
-          <DataField>SelfGuarantee_LoansGuaranteeDetails</DataField>
-        </Field>
-        <Field Name="IDNo_LoansGuaranteeDetails">
-          <DataField>IDNo_LoansGuaranteeDetails</DataField>
-        </Field>
-        <Field Name="OutstandingBalance_LoansGuaranteeDetails">
-          <DataField>OutstandingBalance_LoansGuaranteeDetails</DataField>
-        </Field>
-        <Field Name="OutstandingBalance_LoansGuaranteeDetailsFormat">
-          <DataField>OutstandingBalance_LoansGuaranteeDetailsFormat</DataField>
-        </Field>
-        <Field Name="TotalLoansGuaranteed_LoansGuaranteeDetails">
-          <DataField>TotalLoansGuaranteed_LoansGuaranteeDetails</DataField>
-        </Field>
-        <Field Name="TotalLoansGuaranteed_LoansGuaranteeDetailsFormat">
-          <DataField>TotalLoansGuaranteed_LoansGuaranteeDetailsFormat</DataField>
-        </Field>
-        <Field Name="LoansOutstanding_LoansGuaranteeDetails">
-          <DataField>LoansOutstanding_LoansGuaranteeDetails</DataField>
-        </Field>
-        <Field Name="LoansOutstanding_LoansGuaranteeDetailsFormat">
-          <DataField>LoansOutstanding_LoansGuaranteeDetailsFormat</DataField>
-        </Field>
-        <Field Name="GuarantorOutstanding_LoansGuaranteeDetails">
-          <DataField>GuarantorOutstanding_LoansGuaranteeDetails</DataField>
-        </Field>
-        <Field Name="GuarantorOutstanding_LoansGuaranteeDetailsFormat">
-          <DataField>GuarantorOutstanding_LoansGuaranteeDetailsFormat</DataField>
-        </Field>
-        <Field Name="EmployerCode_LoansGuaranteeDetails">
-          <DataField>EmployerCode_LoansGuaranteeDetails</DataField>
-        </Field>
-        <Field Name="EmployerName_LoansGuaranteeDetails">
-          <DataField>EmployerName_LoansGuaranteeDetails</DataField>
-        </Field>
-        <Field Name="SubstitutedGuarantor_LoansGuaranteeDetails">
-          <DataField>SubstitutedGuarantor_LoansGuaranteeDetails</DataField>
-        </Field>
-        <Field Name="LoaneesNo_LoansGuaranteeDetails">
-          <DataField>LoaneesNo_LoansGuaranteeDetails</DataField>
-        </Field>
-        <Field Name="LoaneesName_LoansGuaranteeDetails">
-          <DataField>LoaneesName_LoansGuaranteeDetails</DataField>
-        </Field>
-        <Field Name="LoanProduct_LoansGuaranteeDetails">
-          <DataField>LoanProduct_LoansGuaranteeDetails</DataField>
-        </Field>
-        <Field Name="EntryNo_LoansGuaranteeDetails">
-          <DataField>EntryNo_LoansGuaranteeDetails</DataField>
-        </Field>
-        <Field Name="LoanApplicationDate_LoansGuaranteeDetails">
-          <DataField>LoanApplicationDate_LoansGuaranteeDetails</DataField>
-        </Field>
-        <Field Name="FreeShares_LoansGuaranteeDetails">
-          <DataField>FreeShares_LoansGuaranteeDetails</DataField>
-        </Field>
-        <Field Name="FreeShares_LoansGuaranteeDetailsFormat">
-          <DataField>FreeShares_LoansGuaranteeDetailsFormat</DataField>
-        </Field>
-        <Field Name="LineNo_LoansGuaranteeDetails">
-          <DataField>LineNo_LoansGuaranteeDetails</DataField>
-        </Field>
-        <Field Name="MemberCell_LoansGuaranteeDetails">
-          <DataField>MemberCell_LoansGuaranteeDetails</DataField>
-        </Field>
-        <Field Name="Sharecapital_LoansGuaranteeDetails">
-          <DataField>Sharecapital_LoansGuaranteeDetails</DataField>
-        </Field>
-        <Field Name="Sharecapital_LoansGuaranteeDetailsFormat">
-          <DataField>Sharecapital_LoansGuaranteeDetailsFormat</DataField>
-        </Field>
-        <Field Name="TotalLoanGuaranteed_LoansGuaranteeDetails">
-          <DataField>TotalLoanGuaranteed_LoansGuaranteeDetails</DataField>
-        </Field>
-        <Field Name="TotalLoanGuaranteed_LoansGuaranteeDetailsFormat">
-          <DataField>TotalLoanGuaranteed_LoansGuaranteeDetailsFormat</DataField>
-        </Field>
-        <Field Name="Totals_LoansGuaranteeDetails">
-          <DataField>Totals_LoansGuaranteeDetails</DataField>
-        </Field>
-        <Field Name="Totals_LoansGuaranteeDetailsFormat">
-          <DataField>Totals_LoansGuaranteeDetailsFormat</DataField>
-        </Field>
-        <Field Name="Shares3_LoansGuaranteeDetails">
-          <DataField>Shares3_LoansGuaranteeDetails</DataField>
-        </Field>
-        <Field Name="Shares3_LoansGuaranteeDetailsFormat">
-          <DataField>Shares3_LoansGuaranteeDetailsFormat</DataField>
-        </Field>
-        <Field Name="Depositsvariance_LoansGuaranteeDetails">
-          <DataField>Depositsvariance_LoansGuaranteeDetails</DataField>
-        </Field>
-        <Field Name="Depositsvariance_LoansGuaranteeDetailsFormat">
-          <DataField>Depositsvariance_LoansGuaranteeDetailsFormat</DataField>
-        </Field>
-        <Field Name="DefaulterLoanInstallments_LoansGuaranteeDetails">
-          <DataField>DefaulterLoanInstallments_LoansGuaranteeDetails</DataField>
-        </Field>
-        <Field Name="DefaulterLoanRepayment_LoansGuaranteeDetails">
-          <DataField>DefaulterLoanRepayment_LoansGuaranteeDetails</DataField>
-        </Field>
-        <Field Name="DefaulterLoanRepayment_LoansGuaranteeDetailsFormat">
-          <DataField>DefaulterLoanRepayment_LoansGuaranteeDetailsFormat</DataField>
-        </Field>
-        <Field Name="ExemptDefaulterLoan_LoansGuaranteeDetails">
-          <DataField>ExemptDefaulterLoan_LoansGuaranteeDetails</DataField>
-        </Field>
-        <Field Name="AdditionalDefaulterAmount_LoansGuaranteeDetails">
-          <DataField>AdditionalDefaulterAmount_LoansGuaranteeDetails</DataField>
-        </Field>
-        <Field Name="AdditionalDefaulterAmount_LoansGuaranteeDetailsFormat">
-          <DataField>AdditionalDefaulterAmount_LoansGuaranteeDetailsFormat</DataField>
-        </Field>
-        <Field Name="TotalGuaranteed_LoansGuaranteeDetails">
-          <DataField>TotalGuaranteed_LoansGuaranteeDetails</DataField>
-        </Field>
-        <Field Name="TotalGuaranteed_LoansGuaranteeDetailsFormat">
-          <DataField>TotalGuaranteed_LoansGuaranteeDetailsFormat</DataField>
-        </Field>
-        <Field Name="TotalCommittedShares_LoansGuaranteeDetails">
-          <DataField>TotalCommittedShares_LoansGuaranteeDetails</DataField>
-        </Field>
-        <Field Name="TotalCommittedShares_LoansGuaranteeDetailsFormat">
-          <DataField>TotalCommittedShares_LoansGuaranteeDetailsFormat</DataField>
-        </Field>
-        <Field Name="OustandingInterest_LoansGuaranteeDetails">
-          <DataField>OustandingInterest_LoansGuaranteeDetails</DataField>
-        </Field>
-        <Field Name="OustandingInterest_LoansGuaranteeDetailsFormat">
-          <DataField>OustandingInterest_LoansGuaranteeDetailsFormat</DataField>
-        </Field>
-        <Field Name="LoanRiskAmount_LoansGuaranteeDetails">
-          <DataField>LoanRiskAmount_LoansGuaranteeDetails</DataField>
-        </Field>
-        <Field Name="LoanRiskAmount_LoansGuaranteeDetailsFormat">
-          <DataField>LoanRiskAmount_LoansGuaranteeDetailsFormat</DataField>
-        </Field>
-        <Field Name="TotalLoanRisk_LoansGuaranteeDetails">
-          <DataField>TotalLoanRisk_LoansGuaranteeDetails</DataField>
-        </Field>
-        <Field Name="TotalLoanRisk_LoansGuaranteeDetailsFormat">
-          <DataField>TotalLoanRisk_LoansGuaranteeDetailsFormat</DataField>
-        </Field>
-        <Field Name="TotalAmountGuaranteed_LoansGuaranteeDetails">
-          <DataField>TotalAmountGuaranteed_LoansGuaranteeDetails</DataField>
-        </Field>
-        <Field Name="TotalAmountGuaranteed_LoansGuaranteeDetailsFormat">
-          <DataField>TotalAmountGuaranteed_LoansGuaranteeDetailsFormat</DataField>
-        </Field>
-        <Field Name="ApprovalToken_LoansGuaranteeDetails">
-          <DataField>ApprovalToken_LoansGuaranteeDetails</DataField>
-        </Field>
-        <Field Name="AcceptanceStatus_LoansGuaranteeDetails">
-          <DataField>AcceptanceStatus_LoansGuaranteeDetails</DataField>
-        </Field>
-        <Field Name="DateAccepted_LoansGuaranteeDetails">
-          <DataField>DateAccepted_LoansGuaranteeDetails</DataField>
-        </Field>
-      </Fields>
-      <rd:DataSetInfo>
-        <rd:DataSetName>DataSet</rd:DataSetName>
-        <rd:SchemaPath>Report.xsd</rd:SchemaPath>
-        <rd:TableName>Result</rd:TableName>
-      </rd:DataSetInfo>
-    </DataSet>
-  </DataSets>
   <ReportSections>
     <ReportSection>
       <Body>
@@ -1888,12 +1630,6 @@
       </Page>
     </ReportSection>
   </ReportSections>
-  <ReportParametersLayout>
-    <GridLayoutDefinition>
-      <NumberOfColumns>4</NumberOfColumns>
-      <NumberOfRows>2</NumberOfRows>
-    </GridLayoutDefinition>
-  </ReportParametersLayout>
   <Code>Public Function BlankZero(ByVal Value As Decimal)
     if Value = 0 then
         Return ""
@@ -1933,4 +1669,254 @@ End Function
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportUnitType>Inch</rd:ReportUnitType>
   <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="FORMAT_TODAY_0_4_">
+          <DataField>FORMAT_TODAY_0_4_</DataField>
+        </Field>
+        <Field Name="COMPANYNAME">
+          <DataField>COMPANYNAME</DataField>
+        </Field>
+        <Field Name="Company_Name">
+          <DataField>Company_Name</DataField>
+        </Field>
+        <Field Name="Company_Address">
+          <DataField>Company_Address</DataField>
+        </Field>
+        <Field Name="Company_Address_2">
+          <DataField>Company_Address_2</DataField>
+        </Field>
+        <Field Name="Company_Phone_No">
+          <DataField>Company_Phone_No</DataField>
+        </Field>
+        <Field Name="Company_Fax_No">
+          <DataField>Company_Fax_No</DataField>
+        </Field>
+        <Field Name="Company_Picture">
+          <DataField>Company_Picture</DataField>
+        </Field>
+        <Field Name="Company_Email">
+          <DataField>Company_Email</DataField>
+        </Field>
+        <Field Name="UserId">
+          <DataField>UserId</DataField>
+        </Field>
+        <Field Name="VarCount">
+          <DataField>VarCount</DataField>
+        </Field>
+        <Field Name="LoanNo_LoansGuaranteeDetails">
+          <DataField>LoanNo_LoansGuaranteeDetails</DataField>
+        </Field>
+        <Field Name="MemberNo_LoansGuaranteeDetails">
+          <DataField>MemberNo_LoansGuaranteeDetails</DataField>
+        </Field>
+        <Field Name="Name_LoansGuaranteeDetails">
+          <DataField>Name_LoansGuaranteeDetails</DataField>
+        </Field>
+        <Field Name="LoanBalance_LoansGuaranteeDetails">
+          <DataField>LoanBalance_LoansGuaranteeDetails</DataField>
+        </Field>
+        <Field Name="LoanBalance_LoansGuaranteeDetailsFormat">
+          <DataField>LoanBalance_LoansGuaranteeDetailsFormat</DataField>
+        </Field>
+        <Field Name="Shares_LoansGuaranteeDetails">
+          <DataField>Shares_LoansGuaranteeDetails</DataField>
+        </Field>
+        <Field Name="Shares_LoansGuaranteeDetailsFormat">
+          <DataField>Shares_LoansGuaranteeDetailsFormat</DataField>
+        </Field>
+        <Field Name="NoOfLoansGuaranteed_LoansGuaranteeDetails">
+          <DataField>NoOfLoansGuaranteed_LoansGuaranteeDetails</DataField>
+        </Field>
+        <Field Name="Substituted_LoansGuaranteeDetails">
+          <DataField>Substituted_LoansGuaranteeDetails</DataField>
+        </Field>
+        <Field Name="Date_LoansGuaranteeDetails">
+          <DataField>Date_LoansGuaranteeDetails</DataField>
+        </Field>
+        <Field Name="SharesRecovery_LoansGuaranteeDetails">
+          <DataField>SharesRecovery_LoansGuaranteeDetails</DataField>
+        </Field>
+        <Field Name="NewUpload_LoansGuaranteeDetails">
+          <DataField>NewUpload_LoansGuaranteeDetails</DataField>
+        </Field>
+        <Field Name="AmontGuaranteed_LoansGuaranteeDetails">
+          <DataField>AmontGuaranteed_LoansGuaranteeDetails</DataField>
+        </Field>
+        <Field Name="AmontGuaranteed_LoansGuaranteeDetailsFormat">
+          <DataField>AmontGuaranteed_LoansGuaranteeDetailsFormat</DataField>
+        </Field>
+        <Field Name="StaffPayrollNo_LoansGuaranteeDetails">
+          <DataField>StaffPayrollNo_LoansGuaranteeDetails</DataField>
+        </Field>
+        <Field Name="AccountNo_LoansGuaranteeDetails">
+          <DataField>AccountNo_LoansGuaranteeDetails</DataField>
+        </Field>
+        <Field Name="SelfGuarantee_LoansGuaranteeDetails">
+          <DataField>SelfGuarantee_LoansGuaranteeDetails</DataField>
+        </Field>
+        <Field Name="IDNo_LoansGuaranteeDetails">
+          <DataField>IDNo_LoansGuaranteeDetails</DataField>
+        </Field>
+        <Field Name="OutstandingBalance_LoansGuaranteeDetails">
+          <DataField>OutstandingBalance_LoansGuaranteeDetails</DataField>
+        </Field>
+        <Field Name="OutstandingBalance_LoansGuaranteeDetailsFormat">
+          <DataField>OutstandingBalance_LoansGuaranteeDetailsFormat</DataField>
+        </Field>
+        <Field Name="TotalLoansGuaranteed_LoansGuaranteeDetails">
+          <DataField>TotalLoansGuaranteed_LoansGuaranteeDetails</DataField>
+        </Field>
+        <Field Name="TotalLoansGuaranteed_LoansGuaranteeDetailsFormat">
+          <DataField>TotalLoansGuaranteed_LoansGuaranteeDetailsFormat</DataField>
+        </Field>
+        <Field Name="LoansOutstanding_LoansGuaranteeDetails">
+          <DataField>LoansOutstanding_LoansGuaranteeDetails</DataField>
+        </Field>
+        <Field Name="LoansOutstanding_LoansGuaranteeDetailsFormat">
+          <DataField>LoansOutstanding_LoansGuaranteeDetailsFormat</DataField>
+        </Field>
+        <Field Name="GuarantorOutstanding_LoansGuaranteeDetails">
+          <DataField>GuarantorOutstanding_LoansGuaranteeDetails</DataField>
+        </Field>
+        <Field Name="GuarantorOutstanding_LoansGuaranteeDetailsFormat">
+          <DataField>GuarantorOutstanding_LoansGuaranteeDetailsFormat</DataField>
+        </Field>
+        <Field Name="EmployerCode_LoansGuaranteeDetails">
+          <DataField>EmployerCode_LoansGuaranteeDetails</DataField>
+        </Field>
+        <Field Name="EmployerName_LoansGuaranteeDetails">
+          <DataField>EmployerName_LoansGuaranteeDetails</DataField>
+        </Field>
+        <Field Name="SubstitutedGuarantor_LoansGuaranteeDetails">
+          <DataField>SubstitutedGuarantor_LoansGuaranteeDetails</DataField>
+        </Field>
+        <Field Name="LoaneesNo_LoansGuaranteeDetails">
+          <DataField>LoaneesNo_LoansGuaranteeDetails</DataField>
+        </Field>
+        <Field Name="LoaneesName_LoansGuaranteeDetails">
+          <DataField>LoaneesName_LoansGuaranteeDetails</DataField>
+        </Field>
+        <Field Name="LoanProduct_LoansGuaranteeDetails">
+          <DataField>LoanProduct_LoansGuaranteeDetails</DataField>
+        </Field>
+        <Field Name="EntryNo_LoansGuaranteeDetails">
+          <DataField>EntryNo_LoansGuaranteeDetails</DataField>
+        </Field>
+        <Field Name="LoanApplicationDate_LoansGuaranteeDetails">
+          <DataField>LoanApplicationDate_LoansGuaranteeDetails</DataField>
+        </Field>
+        <Field Name="FreeShares_LoansGuaranteeDetails">
+          <DataField>FreeShares_LoansGuaranteeDetails</DataField>
+        </Field>
+        <Field Name="FreeShares_LoansGuaranteeDetailsFormat">
+          <DataField>FreeShares_LoansGuaranteeDetailsFormat</DataField>
+        </Field>
+        <Field Name="LineNo_LoansGuaranteeDetails">
+          <DataField>LineNo_LoansGuaranteeDetails</DataField>
+        </Field>
+        <Field Name="MemberCell_LoansGuaranteeDetails">
+          <DataField>MemberCell_LoansGuaranteeDetails</DataField>
+        </Field>
+        <Field Name="Sharecapital_LoansGuaranteeDetails">
+          <DataField>Sharecapital_LoansGuaranteeDetails</DataField>
+        </Field>
+        <Field Name="Sharecapital_LoansGuaranteeDetailsFormat">
+          <DataField>Sharecapital_LoansGuaranteeDetailsFormat</DataField>
+        </Field>
+        <Field Name="TotalLoanGuaranteed_LoansGuaranteeDetails">
+          <DataField>TotalLoanGuaranteed_LoansGuaranteeDetails</DataField>
+        </Field>
+        <Field Name="TotalLoanGuaranteed_LoansGuaranteeDetailsFormat">
+          <DataField>TotalLoanGuaranteed_LoansGuaranteeDetailsFormat</DataField>
+        </Field>
+        <Field Name="Totals_LoansGuaranteeDetails">
+          <DataField>Totals_LoansGuaranteeDetails</DataField>
+        </Field>
+        <Field Name="Totals_LoansGuaranteeDetailsFormat">
+          <DataField>Totals_LoansGuaranteeDetailsFormat</DataField>
+        </Field>
+        <Field Name="Shares3_LoansGuaranteeDetails">
+          <DataField>Shares3_LoansGuaranteeDetails</DataField>
+        </Field>
+        <Field Name="Shares3_LoansGuaranteeDetailsFormat">
+          <DataField>Shares3_LoansGuaranteeDetailsFormat</DataField>
+        </Field>
+        <Field Name="Depositsvariance_LoansGuaranteeDetails">
+          <DataField>Depositsvariance_LoansGuaranteeDetails</DataField>
+        </Field>
+        <Field Name="Depositsvariance_LoansGuaranteeDetailsFormat">
+          <DataField>Depositsvariance_LoansGuaranteeDetailsFormat</DataField>
+        </Field>
+        <Field Name="DefaulterLoanInstallments_LoansGuaranteeDetails">
+          <DataField>DefaulterLoanInstallments_LoansGuaranteeDetails</DataField>
+        </Field>
+        <Field Name="DefaulterLoanRepayment_LoansGuaranteeDetails">
+          <DataField>DefaulterLoanRepayment_LoansGuaranteeDetails</DataField>
+        </Field>
+        <Field Name="DefaulterLoanRepayment_LoansGuaranteeDetailsFormat">
+          <DataField>DefaulterLoanRepayment_LoansGuaranteeDetailsFormat</DataField>
+        </Field>
+        <Field Name="ExemptDefaulterLoan_LoansGuaranteeDetails">
+          <DataField>ExemptDefaulterLoan_LoansGuaranteeDetails</DataField>
+        </Field>
+        <Field Name="AdditionalDefaulterAmount_LoansGuaranteeDetails">
+          <DataField>AdditionalDefaulterAmount_LoansGuaranteeDetails</DataField>
+        </Field>
+        <Field Name="AdditionalDefaulterAmount_LoansGuaranteeDetailsFormat">
+          <DataField>AdditionalDefaulterAmount_LoansGuaranteeDetailsFormat</DataField>
+        </Field>
+        <Field Name="TotalGuaranteed_LoansGuaranteeDetails">
+          <DataField>TotalGuaranteed_LoansGuaranteeDetails</DataField>
+        </Field>
+        <Field Name="TotalGuaranteed_LoansGuaranteeDetailsFormat">
+          <DataField>TotalGuaranteed_LoansGuaranteeDetailsFormat</DataField>
+        </Field>
+        <Field Name="TotalCommittedShares_LoansGuaranteeDetails">
+          <DataField>TotalCommittedShares_LoansGuaranteeDetails</DataField>
+        </Field>
+        <Field Name="TotalCommittedShares_LoansGuaranteeDetailsFormat">
+          <DataField>TotalCommittedShares_LoansGuaranteeDetailsFormat</DataField>
+        </Field>
+        <Field Name="OustandingInterest_LoansGuaranteeDetails">
+          <DataField>OustandingInterest_LoansGuaranteeDetails</DataField>
+        </Field>
+        <Field Name="OustandingInterest_LoansGuaranteeDetailsFormat">
+          <DataField>OustandingInterest_LoansGuaranteeDetailsFormat</DataField>
+        </Field>
+        <Field Name="LoanRiskAmount_LoansGuaranteeDetails">
+          <DataField>LoanRiskAmount_LoansGuaranteeDetails</DataField>
+        </Field>
+        <Field Name="LoanRiskAmount_LoansGuaranteeDetailsFormat">
+          <DataField>LoanRiskAmount_LoansGuaranteeDetailsFormat</DataField>
+        </Field>
+        <Field Name="TotalLoanRisk_LoansGuaranteeDetails">
+          <DataField>TotalLoanRisk_LoansGuaranteeDetails</DataField>
+        </Field>
+        <Field Name="TotalLoanRisk_LoansGuaranteeDetailsFormat">
+          <DataField>TotalLoanRisk_LoansGuaranteeDetailsFormat</DataField>
+        </Field>
+        <Field Name="TotalAmountGuaranteed_LoansGuaranteeDetails">
+          <DataField>TotalAmountGuaranteed_LoansGuaranteeDetails</DataField>
+        </Field>
+        <Field Name="TotalAmountGuaranteed_LoansGuaranteeDetailsFormat">
+          <DataField>TotalAmountGuaranteed_LoansGuaranteeDetailsFormat</DataField>
+        </Field>
+        <Field Name="ApprovalToken_LoansGuaranteeDetails">
+          <DataField>ApprovalToken_LoansGuaranteeDetails</DataField>
+        </Field>
+        <Field Name="AcceptanceStatus_LoansGuaranteeDetails">
+          <DataField>AcceptanceStatus_LoansGuaranteeDetails</DataField>
+        </Field>
+        <Field Name="DateAccepted_LoansGuaranteeDetails">
+          <DataField>DateAccepted_LoansGuaranteeDetails</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
 </Report>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns:cl="http://schemas.microsoft.com/sqlserver/reporting/2010/01/componentdefinition" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/reportdefinition">
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
@@ -11,291 +11,6 @@
       <rd:DataSourceID>8b76812e-7735-40c8-b1ca-1e173850bed3</rd:DataSourceID>
     </DataSource>
   </DataSources>
-  <DataSets>
-    <DataSet Name="DataSet_Result">
-      <Query>
-        <DataSourceName>DataSource</DataSourceName>
-        <CommandText />
-      </Query>
-      <Fields>
-        <Field Name="FORMAT_TODAY_0_4_">
-          <DataField>FORMAT_TODAY_0_4_</DataField>
-        </Field>
-        <Field Name="STRSUBSTNO_Text000_BankAccDateFilter_">
-          <DataField>STRSUBSTNO_Text000_BankAccDateFilter_</DataField>
-        </Field>
-        <Field Name="CurrReport_PAGENO">
-          <DataField>CurrReport_PAGENO</DataField>
-        </Field>
-        <Field Name="COMPANYNAME">
-          <DataField>COMPANYNAME</DataField>
-        </Field>
-        <Field Name="USERID">
-          <DataField>USERID</DataField>
-        </Field>
-        <Field Name="STRSUBSTNO___1___2___Bank_Account__TABLECAPTION_BankAccFilter_">
-          <DataField>STRSUBSTNO___1___2___Bank_Account__TABLECAPTION_BankAccFilter_</DataField>
-        </Field>
-        <Field Name="Bank_Account__No__">
-          <DataField>Bank_Account__No__</DataField>
-        </Field>
-        <Field Name="Bank_Account_Name">
-          <DataField>Bank_Account_Name</DataField>
-        </Field>
-        <Field Name="Bank_Account__Currency_Code_">
-          <DataField>Bank_Account__Currency_Code_</DataField>
-        </Field>
-        <Field Name="StartBalance">
-          <DataField>StartBalance</DataField>
-        </Field>
-        <Field Name="StartBalanceFormat">
-          <DataField>StartBalanceFormat</DataField>
-        </Field>
-        <Field Name="Cashier_ReportCaption">
-          <DataField>Cashier_ReportCaption</DataField>
-        </Field>
-        <Field Name="CurrReport_PAGENOCaption">
-          <DataField>CurrReport_PAGENOCaption</DataField>
-        </Field>
-        <Field Name="Bank_Account_Ledger_Entry__Posting_Date_Caption">
-          <DataField>Bank_Account_Ledger_Entry__Posting_Date_Caption</DataField>
-        </Field>
-        <Field Name="Bank_Account_Ledger_Entry__Document_No__Caption">
-          <DataField>Bank_Account_Ledger_Entry__Document_No__Caption</DataField>
-        </Field>
-        <Field Name="Bank_Account_Ledger_Entry_DescriptionCaption">
-          <DataField>Bank_Account_Ledger_Entry_DescriptionCaption</DataField>
-        </Field>
-        <Field Name="BankAccBalance_StartBalance_tellerIssuesCaption">
-          <DataField>BankAccBalance_StartBalance_tellerIssuesCaption</DataField>
-        </Field>
-        <Field Name="Bank_Account_Ledger_Entry__Entry_No__Caption">
-          <DataField>Bank_Account_Ledger_Entry__Entry_No__Caption</DataField>
-        </Field>
-        <Field Name="Account_NameCaption">
-          <DataField>Account_NameCaption</DataField>
-        </Field>
-        <Field Name="Bank_Account_Ledger_Entry__Debit_Amount_Caption">
-          <DataField>Bank_Account_Ledger_Entry__Debit_Amount_Caption</DataField>
-        </Field>
-        <Field Name="Bank_Account_Ledger_Entry__Credit_Amount_Caption">
-          <DataField>Bank_Account_Ledger_Entry__Credit_Amount_Caption</DataField>
-        </Field>
-        <Field Name="Account_No_Caption">
-          <DataField>Account_No_Caption</DataField>
-        </Field>
-        <Field Name="Bank_Account__Currency_Code_Caption">
-          <DataField>Bank_Account__Currency_Code_Caption</DataField>
-        </Field>
-        <Field Name="Teller__Sign_Date_Caption">
-          <DataField>Teller__Sign_Date_Caption</DataField>
-        </Field>
-        <Field Name="EmptyStringCaption">
-          <DataField>EmptyStringCaption</DataField>
-        </Field>
-        <Field Name="Accountant_Manager__Sign_Date_Caption">
-          <DataField>Accountant_Manager__Sign_Date_Caption</DataField>
-        </Field>
-        <Field Name="EmptyStringCaption_Control1102760026">
-          <DataField>EmptyStringCaption_Control1102760026</DataField>
-        </Field>
-        <Field Name="Bank_Account_Date_Filter">
-          <DataField>Bank_Account_Date_Filter</DataField>
-        </Field>
-        <Field Name="Bank_Account_Global_Dimension_2_Filter">
-          <DataField>Bank_Account_Global_Dimension_2_Filter</DataField>
-        </Field>
-        <Field Name="Bank_Account_Global_Dimension_1_Filter">
-          <DataField>Bank_Account_Global_Dimension_1_Filter</DataField>
-        </Field>
-        <Field Name="Balance_At_date">
-          <DataField>Balance_At_date</DataField>
-        </Field>
-        <Field Name="Balance_At_dateFormat">
-          <DataField>Balance_At_dateFormat</DataField>
-        </Field>
-        <Field Name="Bank_Account_Cashier_ID">
-          <DataField>Bank_Account_Cashier_ID</DataField>
-        </Field>
-        <Field Name="StartBalance____Bank_Account_Ledger_Entry__Amount">
-          <DataField>StartBalance____Bank_Account_Ledger_Entry__Amount</DataField>
-        </Field>
-        <Field Name="StartBalance____Bank_Account_Ledger_Entry__AmountFormat">
-          <DataField>StartBalance____Bank_Account_Ledger_Entry__AmountFormat</DataField>
-        </Field>
-        <Field Name="Bank_Account_Ledger_Entry__Posting_Date_">
-          <DataField>Bank_Account_Ledger_Entry__Posting_Date_</DataField>
-        </Field>
-        <Field Name="Bank_Account_Ledger_Entry__Document_No__">
-          <DataField>Bank_Account_Ledger_Entry__Document_No__</DataField>
-        </Field>
-        <Field Name="Bank_Account_Ledger_Entry_Description">
-          <DataField>Bank_Account_Ledger_Entry_Description</DataField>
-        </Field>
-        <Field Name="BankAccBalance_StartBalance_tellerIssues">
-          <DataField>BankAccBalance_StartBalance_tellerIssues</DataField>
-        </Field>
-        <Field Name="BankAccBalance_StartBalance_tellerIssuesFormat">
-          <DataField>BankAccBalance_StartBalance_tellerIssuesFormat</DataField>
-        </Field>
-        <Field Name="Bank_Account_Ledger_Entry__Entry_No__">
-          <DataField>Bank_Account_Ledger_Entry__Entry_No__</DataField>
-        </Field>
-        <Field Name="Bank_Account_Ledger_Entry_Amount">
-          <DataField>Bank_Account_Ledger_Entry_Amount</DataField>
-        </Field>
-        <Field Name="Bank_Account_Ledger_Entry_AmountFormat">
-          <DataField>Bank_Account_Ledger_Entry_AmountFormat</DataField>
-        </Field>
-        <Field Name="Names_Control1102760001">
-          <DataField>Names_Control1102760001</DataField>
-        </Field>
-        <Field Name="Bank_Account_Ledger_Entry__Debit_Amount_">
-          <DataField>Bank_Account_Ledger_Entry__Debit_Amount_</DataField>
-        </Field>
-        <Field Name="Bank_Account_Ledger_Entry__Debit_Amount_Format">
-          <DataField>Bank_Account_Ledger_Entry__Debit_Amount_Format</DataField>
-        </Field>
-        <Field Name="Bank_Account_Ledger_Entry__Credit_Amount_">
-          <DataField>Bank_Account_Ledger_Entry__Credit_Amount_</DataField>
-        </Field>
-        <Field Name="Bank_Account_Ledger_Entry__Credit_Amount_Format">
-          <DataField>Bank_Account_Ledger_Entry__Credit_Amount_Format</DataField>
-        </Field>
-        <Field Name="Bank_Account_Ledger_Entry__Bank_Account_Ledger_Entry___Bal__Account_No__">
-          <DataField>Bank_Account_Ledger_Entry__Bank_Account_Ledger_Entry___Bal__Account_No__</DataField>
-        </Field>
-        <Field Name="StartBalance____Bank_Account_Ledger_Entry__Amount_Control47">
-          <DataField>StartBalance____Bank_Account_Ledger_Entry__Amount_Control47</DataField>
-        </Field>
-        <Field Name="StartBalance____Bank_Account_Ledger_Entry__Amount_Control47Format">
-          <DataField>StartBalance____Bank_Account_Ledger_Entry__Amount_Control47Format</DataField>
-        </Field>
-        <Field Name="ContinuedCaption">
-          <DataField>ContinuedCaption</DataField>
-        </Field>
-        <Field Name="ContinuedCaption_Control46">
-          <DataField>ContinuedCaption_Control46</DataField>
-        </Field>
-        <Field Name="Bank_Account_Ledger_Entry_Bank_Account_No_">
-          <DataField>Bank_Account_Ledger_Entry_Bank_Account_No_</DataField>
-        </Field>
-        <Field Name="Bank_Account_Ledger_Entry_Global_Dimension_2_Code">
-          <DataField>Bank_Account_Ledger_Entry_Global_Dimension_2_Code</DataField>
-        </Field>
-        <Field Name="Bank_Account_Ledger_Entry_Global_Dimension_1_Code">
-          <DataField>Bank_Account_Ledger_Entry_Global_Dimension_1_Code</DataField>
-        </Field>
-        <Field Name="SN">
-          <DataField>SN</DataField>
-        </Field>
-        <Field Name="Bank_Account__Name">
-          <DataField>Bank_Account__Name</DataField>
-        </Field>
-        <Field Name="Bank_Account_Ledger_Entry__Amount">
-          <DataField>Bank_Account_Ledger_Entry__Amount</DataField>
-        </Field>
-        <Field Name="Bank_Account_Ledger_Entry__AmountFormat">
-          <DataField>Bank_Account_Ledger_Entry__AmountFormat</DataField>
-        </Field>
-        <Field Name="StartBalance____Bank_Account_Ledger_Entry__Amount_tellerIssues">
-          <DataField>StartBalance____Bank_Account_Ledger_Entry__Amount_tellerIssues</DataField>
-        </Field>
-        <Field Name="StartBalance____Bank_Account_Ledger_Entry__Amount_tellerIssuesFormat">
-          <DataField>StartBalance____Bank_Account_Ledger_Entry__Amount_tellerIssuesFormat</DataField>
-        </Field>
-        <Field Name="TDebit">
-          <DataField>TDebit</DataField>
-        </Field>
-        <Field Name="TDebitFormat">
-          <DataField>TDebitFormat</DataField>
-        </Field>
-        <Field Name="TCredit">
-          <DataField>TCredit</DataField>
-        </Field>
-        <Field Name="TCreditFormat">
-          <DataField>TCreditFormat</DataField>
-        </Field>
-        <Field Name="Integer_Number">
-          <DataField>Integer_Number</DataField>
-        </Field>
-        <Field Name="Transactions_No">
-          <DataField>Transactions_No</DataField>
-        </Field>
-        <Field Name="Transactions__Account_No_">
-          <DataField>Transactions__Account_No_</DataField>
-        </Field>
-        <Field Name="Transactions__Account_Name_">
-          <DataField>Transactions__Account_Name_</DataField>
-        </Field>
-        <Field Name="Transactions__Cheque_Type_">
-          <DataField>Transactions__Cheque_Type_</DataField>
-        </Field>
-        <Field Name="Transactions__Cheque_No_">
-          <DataField>Transactions__Cheque_No_</DataField>
-        </Field>
-        <Field Name="Transactions__Cheque_Date_">
-          <DataField>Transactions__Cheque_Date_</DataField>
-        </Field>
-        <Field Name="Transactions_Amount">
-          <DataField>Transactions_Amount</DataField>
-        </Field>
-        <Field Name="Transactions_AmountFormat">
-          <DataField>Transactions_AmountFormat</DataField>
-        </Field>
-        <Field Name="Transactions__Expected_Maturity_Date_">
-          <DataField>Transactions__Expected_Maturity_Date_</DataField>
-        </Field>
-        <Field Name="Transactions_Amount_Control1102755015">
-          <DataField>Transactions_Amount_Control1102755015</DataField>
-        </Field>
-        <Field Name="Transactions_Amount_Control1102755015Format">
-          <DataField>Transactions_Amount_Control1102755015Format</DataField>
-        </Field>
-        <Field Name="Transactions__Cheque_Date_Caption">
-          <DataField>Transactions__Cheque_Date_Caption</DataField>
-        </Field>
-        <Field Name="Transactions__Cheque_No_Caption">
-          <DataField>Transactions__Cheque_No_Caption</DataField>
-        </Field>
-        <Field Name="Transactions__Cheque_Type_Caption">
-          <DataField>Transactions__Cheque_Type_Caption</DataField>
-        </Field>
-        <Field Name="Transactions__Account_Name_Caption">
-          <DataField>Transactions__Account_Name_Caption</DataField>
-        </Field>
-        <Field Name="Transactions__Account_No_Caption">
-          <DataField>Transactions__Account_No_Caption</DataField>
-        </Field>
-        <Field Name="Transactions_NoCaption">
-          <DataField>Transactions_NoCaption</DataField>
-        </Field>
-        <Field Name="CHEQUE_DEPOSITSCaption">
-          <DataField>CHEQUE_DEPOSITSCaption</DataField>
-        </Field>
-        <Field Name="Transactions_AmountCaption">
-          <DataField>Transactions_AmountCaption</DataField>
-        </Field>
-        <Field Name="Maturity_DateCaption">
-          <DataField>Maturity_DateCaption</DataField>
-        </Field>
-        <Field Name="Total_Cheque_DepositsCaption">
-          <DataField>Total_Cheque_DepositsCaption</DataField>
-        </Field>
-        <Field Name="Transactions_Transaction_Date">
-          <DataField>Transactions_Transaction_Date</DataField>
-        </Field>
-        <Field Name="Transactions_Cashier">
-          <DataField>Transactions_Cashier</DataField>
-        </Field>
-      </Fields>
-      <rd:DataSetInfo>
-        <rd:DataSetName>DataSet</rd:DataSetName>
-        <rd:SchemaPath>Report.xsd</rd:SchemaPath>
-        <rd:TableName>Result</rd:TableName>
-      </rd:DataSetInfo>
-    </DataSet>
-  </DataSets>
   <ReportSections>
     <ReportSection>
       <Body>
@@ -3128,4 +2843,308 @@ End Function
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
   <rd:ReportID>4d8ca276-9d43-44d2-83c8-502b187926e3</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="ReportForNavId_4558">
+          <DataField>ReportForNavId_4558</DataField>
+        </Field>
+        <Field Name="FORMAT_TODAY_0_4_">
+          <DataField>FORMAT_TODAY_0_4_</DataField>
+        </Field>
+        <Field Name="STRSUBSTNO_Text000_BankAccDateFilter_">
+          <DataField>STRSUBSTNO_Text000_BankAccDateFilter_</DataField>
+        </Field>
+        <Field Name="CurrReport_PAGENO">
+          <DataField>CurrReport_PAGENO</DataField>
+        </Field>
+        <Field Name="COMPANYNAME">
+          <DataField>COMPANYNAME</DataField>
+        </Field>
+        <Field Name="UserId">
+          <DataField>UserId</DataField>
+        </Field>
+        <Field Name="STRSUBSTNO___1___2___Bank_Account__TABLECAPTION_BankAccFilter_">
+          <DataField>STRSUBSTNO___1___2___Bank_Account__TABLECAPTION_BankAccFilter_</DataField>
+        </Field>
+        <Field Name="Bank_Account__No__">
+          <DataField>Bank_Account__No__</DataField>
+        </Field>
+        <Field Name="Bank_Account_Name">
+          <DataField>Bank_Account_Name</DataField>
+        </Field>
+        <Field Name="Bank_Account__Currency_Code_">
+          <DataField>Bank_Account__Currency_Code_</DataField>
+        </Field>
+        <Field Name="StartBalance">
+          <DataField>StartBalance</DataField>
+        </Field>
+        <Field Name="StartBalanceFormat">
+          <DataField>StartBalanceFormat</DataField>
+        </Field>
+        <Field Name="Cashier_ReportCaption">
+          <DataField>Cashier_ReportCaption</DataField>
+        </Field>
+        <Field Name="CurrReport_PAGENOCaption">
+          <DataField>CurrReport_PAGENOCaption</DataField>
+        </Field>
+        <Field Name="Bank_Account_Ledger_Entry__Posting_Date_Caption">
+          <DataField>Bank_Account_Ledger_Entry__Posting_Date_Caption</DataField>
+        </Field>
+        <Field Name="Bank_Account_Ledger_Entry__Document_No__Caption">
+          <DataField>Bank_Account_Ledger_Entry__Document_No__Caption</DataField>
+        </Field>
+        <Field Name="Bank_Account_Ledger_Entry_DescriptionCaption">
+          <DataField>Bank_Account_Ledger_Entry_DescriptionCaption</DataField>
+        </Field>
+        <Field Name="BankAccBalance_StartBalance_tellerIssuesCaption">
+          <DataField>BankAccBalance_StartBalance_tellerIssuesCaption</DataField>
+        </Field>
+        <Field Name="Bank_Account_Ledger_Entry__Entry_No__Caption">
+          <DataField>Bank_Account_Ledger_Entry__Entry_No__Caption</DataField>
+        </Field>
+        <Field Name="Account_NameCaption">
+          <DataField>Account_NameCaption</DataField>
+        </Field>
+        <Field Name="Bank_Account_Ledger_Entry__Debit_Amount_Caption">
+          <DataField>Bank_Account_Ledger_Entry__Debit_Amount_Caption</DataField>
+        </Field>
+        <Field Name="Bank_Account_Ledger_Entry__Credit_Amount_Caption">
+          <DataField>Bank_Account_Ledger_Entry__Credit_Amount_Caption</DataField>
+        </Field>
+        <Field Name="Account_No_Caption">
+          <DataField>Account_No_Caption</DataField>
+        </Field>
+        <Field Name="Bank_Account__Currency_Code_Caption">
+          <DataField>Bank_Account__Currency_Code_Caption</DataField>
+        </Field>
+        <Field Name="Teller__Sign_Date_Caption">
+          <DataField>Teller__Sign_Date_Caption</DataField>
+        </Field>
+        <Field Name="EmptyStringCaption">
+          <DataField>EmptyStringCaption</DataField>
+        </Field>
+        <Field Name="Accountant_Manager__Sign_Date_Caption">
+          <DataField>Accountant_Manager__Sign_Date_Caption</DataField>
+        </Field>
+        <Field Name="EmptyStringCaption_Control1102760026">
+          <DataField>EmptyStringCaption_Control1102760026</DataField>
+        </Field>
+        <Field Name="Bank_Account_Date_Filter">
+          <DataField>Bank_Account_Date_Filter</DataField>
+        </Field>
+        <Field Name="Bank_Account_Global_Dimension_2_Filter">
+          <DataField>Bank_Account_Global_Dimension_2_Filter</DataField>
+        </Field>
+        <Field Name="Bank_Account_Global_Dimension_1_Filter">
+          <DataField>Bank_Account_Global_Dimension_1_Filter</DataField>
+        </Field>
+        <Field Name="Balance_At_date">
+          <DataField>Balance_At_date</DataField>
+        </Field>
+        <Field Name="Balance_At_dateFormat">
+          <DataField>Balance_At_dateFormat</DataField>
+        </Field>
+        <Field Name="Bank_Account_Cashier_ID">
+          <DataField>Bank_Account_Cashier_ID</DataField>
+        </Field>
+        <Field Name="ReportForNavId_4920">
+          <DataField>ReportForNavId_4920</DataField>
+        </Field>
+        <Field Name="StartBalance____Bank_Account_Ledger_Entry__Amount">
+          <DataField>StartBalance____Bank_Account_Ledger_Entry__Amount</DataField>
+        </Field>
+        <Field Name="StartBalance____Bank_Account_Ledger_Entry__AmountFormat">
+          <DataField>StartBalance____Bank_Account_Ledger_Entry__AmountFormat</DataField>
+        </Field>
+        <Field Name="Bank_Account_Ledger_Entry__Posting_Date_">
+          <DataField>Bank_Account_Ledger_Entry__Posting_Date_</DataField>
+        </Field>
+        <Field Name="Bank_Account_Ledger_Entry__Document_No__">
+          <DataField>Bank_Account_Ledger_Entry__Document_No__</DataField>
+        </Field>
+        <Field Name="Bank_Account_Ledger_Entry_Description">
+          <DataField>Bank_Account_Ledger_Entry_Description</DataField>
+        </Field>
+        <Field Name="BankAccBalance_StartBalance_tellerIssues">
+          <DataField>BankAccBalance_StartBalance_tellerIssues</DataField>
+        </Field>
+        <Field Name="BankAccBalance_StartBalance_tellerIssuesFormat">
+          <DataField>BankAccBalance_StartBalance_tellerIssuesFormat</DataField>
+        </Field>
+        <Field Name="Bank_Account_Ledger_Entry__Entry_No__">
+          <DataField>Bank_Account_Ledger_Entry__Entry_No__</DataField>
+        </Field>
+        <Field Name="Bank_Account_Ledger_Entry_Amount">
+          <DataField>Bank_Account_Ledger_Entry_Amount</DataField>
+        </Field>
+        <Field Name="Bank_Account_Ledger_Entry_AmountFormat">
+          <DataField>Bank_Account_Ledger_Entry_AmountFormat</DataField>
+        </Field>
+        <Field Name="Names_Control1102760001">
+          <DataField>Names_Control1102760001</DataField>
+        </Field>
+        <Field Name="Bank_Account_Ledger_Entry__Debit_Amount_">
+          <DataField>Bank_Account_Ledger_Entry__Debit_Amount_</DataField>
+        </Field>
+        <Field Name="Bank_Account_Ledger_Entry__Debit_Amount_Format">
+          <DataField>Bank_Account_Ledger_Entry__Debit_Amount_Format</DataField>
+        </Field>
+        <Field Name="Bank_Account_Ledger_Entry__Credit_Amount_">
+          <DataField>Bank_Account_Ledger_Entry__Credit_Amount_</DataField>
+        </Field>
+        <Field Name="Bank_Account_Ledger_Entry__Credit_Amount_Format">
+          <DataField>Bank_Account_Ledger_Entry__Credit_Amount_Format</DataField>
+        </Field>
+        <Field Name="Bank_Account_Ledger_Entry__Bank_Account_Ledger_Entry___Bal__Account_No__">
+          <DataField>Bank_Account_Ledger_Entry__Bank_Account_Ledger_Entry___Bal__Account_No__</DataField>
+        </Field>
+        <Field Name="StartBalance____Bank_Account_Ledger_Entry__Amount_Control47">
+          <DataField>StartBalance____Bank_Account_Ledger_Entry__Amount_Control47</DataField>
+        </Field>
+        <Field Name="StartBalance____Bank_Account_Ledger_Entry__Amount_Control47Format">
+          <DataField>StartBalance____Bank_Account_Ledger_Entry__Amount_Control47Format</DataField>
+        </Field>
+        <Field Name="ContinuedCaption">
+          <DataField>ContinuedCaption</DataField>
+        </Field>
+        <Field Name="ContinuedCaption_Control46">
+          <DataField>ContinuedCaption_Control46</DataField>
+        </Field>
+        <Field Name="Bank_Account_Ledger_Entry_Bank_Account_No_">
+          <DataField>Bank_Account_Ledger_Entry_Bank_Account_No_</DataField>
+        </Field>
+        <Field Name="Bank_Account_Ledger_Entry_Global_Dimension_2_Code">
+          <DataField>Bank_Account_Ledger_Entry_Global_Dimension_2_Code</DataField>
+        </Field>
+        <Field Name="Bank_Account_Ledger_Entry_Global_Dimension_1_Code">
+          <DataField>Bank_Account_Ledger_Entry_Global_Dimension_1_Code</DataField>
+        </Field>
+        <Field Name="SN">
+          <DataField>SN</DataField>
+        </Field>
+        <Field Name="Users">
+          <DataField>Users</DataField>
+        </Field>
+        <Field Name="ReportForNavId_5444">
+          <DataField>ReportForNavId_5444</DataField>
+        </Field>
+        <Field Name="Bank_Account__Name">
+          <DataField>Bank_Account__Name</DataField>
+        </Field>
+        <Field Name="Bank_Account_Ledger_Entry__Amount">
+          <DataField>Bank_Account_Ledger_Entry__Amount</DataField>
+        </Field>
+        <Field Name="Bank_Account_Ledger_Entry__AmountFormat">
+          <DataField>Bank_Account_Ledger_Entry__AmountFormat</DataField>
+        </Field>
+        <Field Name="StartBalance____Bank_Account_Ledger_Entry__Amount_tellerIssues">
+          <DataField>StartBalance____Bank_Account_Ledger_Entry__Amount_tellerIssues</DataField>
+        </Field>
+        <Field Name="StartBalance____Bank_Account_Ledger_Entry__Amount_tellerIssuesFormat">
+          <DataField>StartBalance____Bank_Account_Ledger_Entry__Amount_tellerIssuesFormat</DataField>
+        </Field>
+        <Field Name="TDebit">
+          <DataField>TDebit</DataField>
+        </Field>
+        <Field Name="TDebitFormat">
+          <DataField>TDebitFormat</DataField>
+        </Field>
+        <Field Name="TCredit">
+          <DataField>TCredit</DataField>
+        </Field>
+        <Field Name="TCreditFormat">
+          <DataField>TCreditFormat</DataField>
+        </Field>
+        <Field Name="Integer_Number">
+          <DataField>Integer_Number</DataField>
+        </Field>
+        <Field Name="ReportForNavId_5806">
+          <DataField>ReportForNavId_5806</DataField>
+        </Field>
+        <Field Name="Transactions_No">
+          <DataField>Transactions_No</DataField>
+        </Field>
+        <Field Name="Transactions__Account_No_">
+          <DataField>Transactions__Account_No_</DataField>
+        </Field>
+        <Field Name="Transactions__Account_Name_">
+          <DataField>Transactions__Account_Name_</DataField>
+        </Field>
+        <Field Name="Transactions__Cheque_Type_">
+          <DataField>Transactions__Cheque_Type_</DataField>
+        </Field>
+        <Field Name="Transactions__Cheque_No_">
+          <DataField>Transactions__Cheque_No_</DataField>
+        </Field>
+        <Field Name="ABCTransactionType_Transactions">
+          <DataField>ABCTransactionType_Transactions</DataField>
+        </Field>
+        <Field Name="ABCDepositer_Transactions">
+          <DataField>ABCDepositer_Transactions</DataField>
+        </Field>
+        <Field Name="ABCDepositerID_Transactions">
+          <DataField>ABCDepositerID_Transactions</DataField>
+        </Field>
+        <Field Name="Transactions__Cheque_Date_">
+          <DataField>Transactions__Cheque_Date_</DataField>
+        </Field>
+        <Field Name="Transactions_Amount">
+          <DataField>Transactions_Amount</DataField>
+        </Field>
+        <Field Name="Transactions_AmountFormat">
+          <DataField>Transactions_AmountFormat</DataField>
+        </Field>
+        <Field Name="Transactions__Expected_Maturity_Date_">
+          <DataField>Transactions__Expected_Maturity_Date_</DataField>
+        </Field>
+        <Field Name="Transactions_Amount_Control1102755015">
+          <DataField>Transactions_Amount_Control1102755015</DataField>
+        </Field>
+        <Field Name="Transactions_Amount_Control1102755015Format">
+          <DataField>Transactions_Amount_Control1102755015Format</DataField>
+        </Field>
+        <Field Name="Transactions__Cheque_Date_Caption">
+          <DataField>Transactions__Cheque_Date_Caption</DataField>
+        </Field>
+        <Field Name="Transactions__Cheque_No_Caption">
+          <DataField>Transactions__Cheque_No_Caption</DataField>
+        </Field>
+        <Field Name="Transactions__Cheque_Type_Caption">
+          <DataField>Transactions__Cheque_Type_Caption</DataField>
+        </Field>
+        <Field Name="Transactions__Account_Name_Caption">
+          <DataField>Transactions__Account_Name_Caption</DataField>
+        </Field>
+        <Field Name="Transactions__Account_No_Caption">
+          <DataField>Transactions__Account_No_Caption</DataField>
+        </Field>
+        <Field Name="Transactions_NoCaption">
+          <DataField>Transactions_NoCaption</DataField>
+        </Field>
+        <Field Name="CHEQUE_DEPOSITSCaption">
+          <DataField>CHEQUE_DEPOSITSCaption</DataField>
+        </Field>
+        <Field Name="Transactions_AmountCaption">
+          <DataField>Transactions_AmountCaption</DataField>
+        </Field>
+        <Field Name="Maturity_DateCaption">
+          <DataField>Maturity_DateCaption</DataField>
+        </Field>
+        <Field Name="Total_Cheque_DepositsCaption">
+          <DataField>Total_Cheque_DepositsCaption</DataField>
+        </Field>
+        <Field Name="Transactions_Transaction_Date">
+          <DataField>Transactions_Transaction_Date</DataField>
+        </Field>
+        <Field Name="Transactions_Cashier">
+          <DataField>Transactions_Cashier</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
 </Report>

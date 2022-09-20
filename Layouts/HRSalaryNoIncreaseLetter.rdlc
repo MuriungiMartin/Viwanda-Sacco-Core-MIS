@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/reportdefinition">
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
@@ -11,60 +11,6 @@
       <rd:DataSourceID>c7007cd3-e637-4e91-895e-aef9f6966f1d</rd:DataSourceID>
     </DataSource>
   </DataSources>
-  <DataSets>
-    <DataSet Name="DataSet_Result">
-      <Query>
-        <DataSourceName>DataSource</DataSourceName>
-        <CommandText />
-      </Query>
-      <Fields>
-        <Field Name="CompanyEMail_HREmployees">
-          <DataField>CompanyEMail_HREmployees</DataField>
-        </Field>
-        <Field Name="Title_HREmployees">
-          <DataField>Title_HREmployees</DataField>
-        </Field>
-        <Field Name="No_HREmployees">
-          <DataField>No_HREmployees</DataField>
-        </Field>
-        <Field Name="FirstName_HREmployees">
-          <DataField>FirstName_HREmployees</DataField>
-        </Field>
-        <Field Name="MiddleName_HREmployees">
-          <DataField>MiddleName_HREmployees</DataField>
-        </Field>
-        <Field Name="LastName_HREmployees">
-          <DataField>LastName_HREmployees</DataField>
-        </Field>
-        <Field Name="Designation_HREmployees">
-          <DataField>Designation_HREmployees</DataField>
-        </Field>
-        <Field Name="SearchName_HREmployees">
-          <DataField>SearchName_HREmployees</DataField>
-        </Field>
-        <Field Name="PostalAddress_HREmployees">
-          <DataField>PostalAddress_HREmployees</DataField>
-        </Field>
-        <Field Name="ResidentialAddress_HREmployees">
-          <DataField>ResidentialAddress_HREmployees</DataField>
-        </Field>
-        <Field Name="City_HREmployees">
-          <DataField>City_HREmployees</DataField>
-        </Field>
-        <Field Name="PostCode_HREmployees">
-          <DataField>PostCode_HREmployees</DataField>
-        </Field>
-        <Field Name="County_HREmployees">
-          <DataField>County_HREmployees</DataField>
-        </Field>
-      </Fields>
-      <rd:DataSetInfo>
-        <rd:DataSetName>DataSet</rd:DataSetName>
-        <rd:SchemaPath>Report.xsd</rd:SchemaPath>
-        <rd:TableName>Result</rd:TableName>
-      </rd:DataSetInfo>
-    </DataSet>
-  </DataSets>
   <ReportSections>
     <ReportSection>
       <Body>
@@ -492,4 +438,56 @@ End Function
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportUnitType>Inch</rd:ReportUnitType>
   <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="ReportForNavId_1102755000">
+          <DataField>ReportForNavId_1102755000</DataField>
+        </Field>
+        <Field Name="CompanyEMail_HREmployees">
+          <DataField>CompanyEMail_HREmployees</DataField>
+        </Field>
+        <Field Name="Title_HREmployees">
+          <DataField>Title_HREmployees</DataField>
+        </Field>
+        <Field Name="No_HREmployees">
+          <DataField>No_HREmployees</DataField>
+        </Field>
+        <Field Name="FirstName_HREmployees">
+          <DataField>FirstName_HREmployees</DataField>
+        </Field>
+        <Field Name="MiddleName_HREmployees">
+          <DataField>MiddleName_HREmployees</DataField>
+        </Field>
+        <Field Name="LastName_HREmployees">
+          <DataField>LastName_HREmployees</DataField>
+        </Field>
+        <Field Name="Designation_HREmployees">
+          <DataField>Designation_HREmployees</DataField>
+        </Field>
+        <Field Name="SearchName_HREmployees">
+          <DataField>SearchName_HREmployees</DataField>
+        </Field>
+        <Field Name="PostalAddress_HREmployees">
+          <DataField>PostalAddress_HREmployees</DataField>
+        </Field>
+        <Field Name="ResidentialAddress_HREmployees">
+          <DataField>ResidentialAddress_HREmployees</DataField>
+        </Field>
+        <Field Name="City_HREmployees">
+          <DataField>City_HREmployees</DataField>
+        </Field>
+        <Field Name="PostCode_HREmployees">
+          <DataField>PostCode_HREmployees</DataField>
+        </Field>
+        <Field Name="County_HREmployees">
+          <DataField>County_HREmployees</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
 </Report>

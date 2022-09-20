@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
@@ -11,378 +11,6 @@
       <rd:DataSourceID>3450a53f-2ed8-4362-a1e8-a40b23695f5e</rd:DataSourceID>
     </DataSource>
   </DataSources>
-  <DataSets>
-    <DataSet Name="DataSet_Result">
-      <Query>
-        <DataSourceName>DataSource</DataSourceName>
-        <CommandText />
-      </Query>
-      <Fields>
-        <Field Name="USERID">
-          <DataField>USERID</DataField>
-        </Field>
-        <Field Name="PayrollStaffNo_Members">
-          <DataField>PayrollStaffNo_Members</DataField>
-        </Field>
-        <Field Name="No_Members">
-          <DataField>No_Members</DataField>
-        </Field>
-        <Field Name="Name_Members">
-          <DataField>Name_Members</DataField>
-        </Field>
-        <Field Name="EmployerCode_Members">
-          <DataField>EmployerCode_Members</DataField>
-        </Field>
-        <Field Name="EmployerName">
-          <DataField>EmployerName</DataField>
-        </Field>
-        <Field Name="Address_MembersRegister">
-          <DataField>Address_MembersRegister</DataField>
-        </Field>
-        <Field Name="City_MembersRegister">
-          <DataField>City_MembersRegister</DataField>
-        </Field>
-        <Field Name="DateFilter_MembersRegister">
-          <DataField>DateFilter_MembersRegister</DataField>
-        </Field>
-        <Field Name="PageNo_Members">
-          <DataField>PageNo_Members</DataField>
-        </Field>
-        <Field Name="Shares_Retained">
-          <DataField>Shares_Retained</DataField>
-        </Field>
-        <Field Name="Shares_RetainedFormat">
-          <DataField>Shares_RetainedFormat</DataField>
-        </Field>
-        <Field Name="IDNo_Members">
-          <DataField>IDNo_Members</DataField>
-        </Field>
-        <Field Name="GlobalDimension2Code_Members">
-          <DataField>GlobalDimension2Code_Members</DataField>
-        </Field>
-        <Field Name="FromDate">
-          <DataField>FromDate</DataField>
-        </Field>
-        <Field Name="ToDate">
-          <DataField>ToDate</DataField>
-        </Field>
-        <Field Name="GeneratedOn">
-          <DataField>GeneratedOn</DataField>
-        </Field>
-        <Field Name="MemberAddress">
-          <DataField>MemberAddress</DataField>
-        </Field>
-        <Field Name="Company_Name">
-          <DataField>Company_Name</DataField>
-        </Field>
-        <Field Name="Company_Address">
-          <DataField>Company_Address</DataField>
-        </Field>
-        <Field Name="Company_Address_2">
-          <DataField>Company_Address_2</DataField>
-        </Field>
-        <Field Name="Company_Phone_No">
-          <DataField>Company_Phone_No</DataField>
-        </Field>
-        <Field Name="Company_Fax_No">
-          <DataField>Company_Fax_No</DataField>
-        </Field>
-        <Field Name="Company_Picture">
-          <DataField>Company_Picture</DataField>
-        </Field>
-        <Field Name="Company_Email">
-          <DataField>Company_Email</DataField>
-        </Field>
-        <Field Name="AccountType_MemberAccounts">
-          <DataField>AccountType_MemberAccounts</DataField>
-        </Field>
-        <Field Name="No_MemberAccounts">
-          <DataField>No_MemberAccounts</DataField>
-        </Field>
-        <Field Name="AccountTypeName_MemberAccounts">
-          <DataField>AccountTypeName_MemberAccounts</DataField>
-        </Field>
-        <Field Name="BalanceBF">
-          <DataField>BalanceBF</DataField>
-        </Field>
-        <Field Name="BalanceBFFormat">
-          <DataField>BalanceBFFormat</DataField>
-        </Field>
-        <Field Name="Name_MemberAccounts">
-          <DataField>Name_MemberAccounts</DataField>
-        </Field>
-        <Field Name="AccountNo_MemberHistoricalLedgerEntry">
-          <DataField>AccountNo_MemberHistoricalLedgerEntry</DataField>
-        </Field>
-        <Field Name="PostingDate_MemberHistoricalLedgerEntry">
-          <DataField>PostingDate_MemberHistoricalLedgerEntry</DataField>
-        </Field>
-        <Field Name="DocumentNo_MemberHistoricalLedgerEntry">
-          <DataField>DocumentNo_MemberHistoricalLedgerEntry</DataField>
-        </Field>
-        <Field Name="Description_MemberHistoricalLedgerEntry">
-          <DataField>Description_MemberHistoricalLedgerEntry</DataField>
-        </Field>
-        <Field Name="Amount_MemberHistoricalLedgerEntry">
-          <DataField>Amount_MemberHistoricalLedgerEntry</DataField>
-        </Field>
-        <Field Name="Amount_MemberHistoricalLedgerEntryFormat">
-          <DataField>Amount_MemberHistoricalLedgerEntryFormat</DataField>
-        </Field>
-        <Field Name="DebitAmount_MemberHistoricalLedgerEntry">
-          <DataField>DebitAmount_MemberHistoricalLedgerEntry</DataField>
-        </Field>
-        <Field Name="DebitAmount_MemberHistoricalLedgerEntryFormat">
-          <DataField>DebitAmount_MemberHistoricalLedgerEntryFormat</DataField>
-        </Field>
-        <Field Name="CreditAmount_MemberHistoricalLedgerEntry">
-          <DataField>CreditAmount_MemberHistoricalLedgerEntry</DataField>
-        </Field>
-        <Field Name="CreditAmount_MemberHistoricalLedgerEntryFormat">
-          <DataField>CreditAmount_MemberHistoricalLedgerEntryFormat</DataField>
-        </Field>
-        <Field Name="ExternalDocumentNo_MemberHistoricalLedgerEntry">
-          <DataField>ExternalDocumentNo_MemberHistoricalLedgerEntry</DataField>
-        </Field>
-        <Field Name="RunningBalanceHistorical">
-          <DataField>RunningBalanceHistorical</DataField>
-        </Field>
-        <Field Name="RunningBalanceHistoricalFormat">
-          <DataField>RunningBalanceHistoricalFormat</DataField>
-        </Field>
-        <Field Name="CreatedOn_MemberHistoricalLedgerEntry">
-          <DataField>CreatedOn_MemberHistoricalLedgerEntry</DataField>
-        </Field>
-        <Field Name="VendorNo_LedgerEntries">
-          <DataField>VendorNo_LedgerEntries</DataField>
-        </Field>
-        <Field Name="PostingDate_LedgerEntries">
-          <DataField>PostingDate_LedgerEntries</DataField>
-        </Field>
-        <Field Name="DocumentNo_LedgerEntries">
-          <DataField>DocumentNo_LedgerEntries</DataField>
-        </Field>
-        <Field Name="Description_LedgerEntries">
-          <DataField>Description_LedgerEntries</DataField>
-        </Field>
-        <Field Name="Amount_LedgerEntries">
-          <DataField>Amount_LedgerEntries</DataField>
-        </Field>
-        <Field Name="Amount_LedgerEntriesFormat">
-          <DataField>Amount_LedgerEntriesFormat</DataField>
-        </Field>
-        <Field Name="DebitAmount_LedgerEntries">
-          <DataField>DebitAmount_LedgerEntries</DataField>
-        </Field>
-        <Field Name="DebitAmount_LedgerEntriesFormat">
-          <DataField>DebitAmount_LedgerEntriesFormat</DataField>
-        </Field>
-        <Field Name="CreditAmount_LedgerEntries">
-          <DataField>CreditAmount_LedgerEntries</DataField>
-        </Field>
-        <Field Name="CreditAmount_LedgerEntriesFormat">
-          <DataField>CreditAmount_LedgerEntriesFormat</DataField>
-        </Field>
-        <Field Name="ExternalDocumentNo_LedgerEntries">
-          <DataField>ExternalDocumentNo_LedgerEntries</DataField>
-        </Field>
-        <Field Name="RunningBalance">
-          <DataField>RunningBalance</DataField>
-        </Field>
-        <Field Name="RunningBalanceFormat">
-          <DataField>RunningBalanceFormat</DataField>
-        </Field>
-        <Field Name="ChequeMaturityDate_LedgerEntries">
-          <DataField>ChequeMaturityDate_LedgerEntries</DataField>
-        </Field>
-        <Field Name="PrincipleBF">
-          <DataField>PrincipleBF</DataField>
-        </Field>
-        <Field Name="PrincipleBFFormat">
-          <DataField>PrincipleBFFormat</DataField>
-        </Field>
-        <Field Name="LoanNumber">
-          <DataField>LoanNumber</DataField>
-        </Field>
-        <Field Name="RequestedAmount">
-          <DataField>RequestedAmount</DataField>
-        </Field>
-        <Field Name="RequestedAmountFormat">
-          <DataField>RequestedAmountFormat</DataField>
-        </Field>
-        <Field Name="Interest">
-          <DataField>Interest</DataField>
-        </Field>
-        <Field Name="InterestFormat">
-          <DataField>InterestFormat</DataField>
-        </Field>
-        <Field Name="Installments">
-          <DataField>Installments</DataField>
-        </Field>
-        <Field Name="LoanPrincipleRepayment">
-          <DataField>LoanPrincipleRepayment</DataField>
-        </Field>
-        <Field Name="LoanPrincipleRepaymentFormat">
-          <DataField>LoanPrincipleRepaymentFormat</DataField>
-        </Field>
-        <Field Name="ApprovedAmount_Loans">
-          <DataField>ApprovedAmount_Loans</DataField>
-        </Field>
-        <Field Name="ApprovedAmount_LoansFormat">
-          <DataField>ApprovedAmount_LoansFormat</DataField>
-        </Field>
-        <Field Name="LoanProductTypeName_Loans">
-          <DataField>LoanProductTypeName_Loans</DataField>
-        </Field>
-        <Field Name="Repayment_Loans">
-          <DataField>Repayment_Loans</DataField>
-        </Field>
-        <Field Name="Repayment_LoansFormat">
-          <DataField>Repayment_LoansFormat</DataField>
-        </Field>
-        <Field Name="ModeofDisbursement_Loans">
-          <DataField>ModeofDisbursement_Loans</DataField>
-        </Field>
-        <Field Name="OutstandingBalance_Loans">
-          <DataField>OutstandingBalance_Loans</DataField>
-        </Field>
-        <Field Name="OutstandingBalance_LoansFormat">
-          <DataField>OutstandingBalance_LoansFormat</DataField>
-        </Field>
-        <Field Name="OustandingInterest_Loans">
-          <DataField>OustandingInterest_Loans</DataField>
-        </Field>
-        <Field Name="OustandingInterest_LoansFormat">
-          <DataField>OustandingInterest_LoansFormat</DataField>
-        </Field>
-        <Field Name="LoansBalanceBF">
-          <DataField>LoansBalanceBF</DataField>
-        </Field>
-        <Field Name="LoansBalanceBFFormat">
-          <DataField>LoansBalanceBFFormat</DataField>
-        </Field>
-        <Field Name="ClientName_Loans">
-          <DataField>ClientName_Loans</DataField>
-        </Field>
-        <Field Name="PostingDate_MemberLoansHistoricalLedger">
-          <DataField>PostingDate_MemberLoansHistoricalLedger</DataField>
-        </Field>
-        <Field Name="DocumentNo_MemberLoansHistoricalLedger">
-          <DataField>DocumentNo_MemberLoansHistoricalLedger</DataField>
-        </Field>
-        <Field Name="Description_MemberLoansHistoricalLedger">
-          <DataField>Description_MemberLoansHistoricalLedger</DataField>
-        </Field>
-        <Field Name="DebitAmount_MemberLoansHistoricalLedger">
-          <DataField>DebitAmount_MemberLoansHistoricalLedger</DataField>
-        </Field>
-        <Field Name="DebitAmount_MemberLoansHistoricalLedgerFormat">
-          <DataField>DebitAmount_MemberLoansHistoricalLedgerFormat</DataField>
-        </Field>
-        <Field Name="CreditAmount_MemberLoansHistoricalLedger">
-          <DataField>CreditAmount_MemberLoansHistoricalLedger</DataField>
-        </Field>
-        <Field Name="CreditAmount_MemberLoansHistoricalLedgerFormat">
-          <DataField>CreditAmount_MemberLoansHistoricalLedgerFormat</DataField>
-        </Field>
-        <Field Name="Amount_MemberLoansHistoricalLedger">
-          <DataField>Amount_MemberLoansHistoricalLedger</DataField>
-        </Field>
-        <Field Name="Amount_MemberLoansHistoricalLedgerFormat">
-          <DataField>Amount_MemberLoansHistoricalLedgerFormat</DataField>
-        </Field>
-        <Field Name="TransactionType_MemberLoansHistoricalLedger">
-          <DataField>TransactionType_MemberLoansHistoricalLedger</DataField>
-        </Field>
-        <Field Name="ExternalDocumentNo_MemberLoansHistoricalLedger">
-          <DataField>ExternalDocumentNo_MemberLoansHistoricalLedger</DataField>
-        </Field>
-        <Field Name="CreatedOn_MemberLoansHistoricalLedger">
-          <DataField>CreatedOn_MemberLoansHistoricalLedger</DataField>
-        </Field>
-        <Field Name="LoansRunningBalanceHistorical">
-          <DataField>LoansRunningBalanceHistorical</DataField>
-        </Field>
-        <Field Name="LoansRunningBalanceHistoricalFormat">
-          <DataField>LoansRunningBalanceHistoricalFormat</DataField>
-        </Field>
-        <Field Name="PostingDate_loan">
-          <DataField>PostingDate_loan</DataField>
-        </Field>
-        <Field Name="DocumentNo_loan">
-          <DataField>DocumentNo_loan</DataField>
-        </Field>
-        <Field Name="Description_loan">
-          <DataField>Description_loan</DataField>
-        </Field>
-        <Field Name="DebitAmount_Loan">
-          <DataField>DebitAmount_Loan</DataField>
-        </Field>
-        <Field Name="DebitAmount_LoanFormat">
-          <DataField>DebitAmount_LoanFormat</DataField>
-        </Field>
-        <Field Name="CreditAmount_Loan">
-          <DataField>CreditAmount_Loan</DataField>
-        </Field>
-        <Field Name="CreditAmount_LoanFormat">
-          <DataField>CreditAmount_LoanFormat</DataField>
-        </Field>
-        <Field Name="Amount_Loan">
-          <DataField>Amount_Loan</DataField>
-        </Field>
-        <Field Name="Amount_LoanFormat">
-          <DataField>Amount_LoanFormat</DataField>
-        </Field>
-        <Field Name="openBalance_loan">
-          <DataField>openBalance_loan</DataField>
-        </Field>
-        <Field Name="openBalance_loanFormat">
-          <DataField>openBalance_loanFormat</DataField>
-        </Field>
-        <Field Name="CLosingBalance_loan">
-          <DataField>CLosingBalance_loan</DataField>
-        </Field>
-        <Field Name="CLosingBalance_loanFormat">
-          <DataField>CLosingBalance_loanFormat</DataField>
-        </Field>
-        <Field Name="TransactionType_loan">
-          <DataField>TransactionType_loan</DataField>
-        </Field>
-        <Field Name="LoanNo">
-          <DataField>LoanNo</DataField>
-        </Field>
-        <Field Name="PrincipleBF_loans">
-          <DataField>PrincipleBF_loans</DataField>
-        </Field>
-        <Field Name="PrincipleBF_loansFormat">
-          <DataField>PrincipleBF_loansFormat</DataField>
-        </Field>
-        <Field Name="Loan_Description">
-          <DataField>Loan_Description</DataField>
-        </Field>
-        <Field Name="User7">
-          <DataField>User7</DataField>
-        </Field>
-        <Field Name="LoansRunningBalance">
-          <DataField>LoansRunningBalance</DataField>
-        </Field>
-        <Field Name="LoansRunningBalanceFormat">
-          <DataField>LoansRunningBalanceFormat</DataField>
-        </Field>
-        <Field Name="CreatedOn_loan">
-          <DataField>CreatedOn_loan</DataField>
-        </Field>
-        <Field Name="PostingDateSortingLoan">
-          <DataField>PostingDateSortingLoan</DataField>
-        </Field>
-      </Fields>
-      <rd:DataSetInfo>
-        <rd:DataSetName>DataSet</rd:DataSetName>
-        <rd:SchemaPath>Report.xsd</rd:SchemaPath>
-        <rd:TableName>Result</rd:TableName>
-      </rd:DataSetInfo>
-    </DataSet>
-  </DataSets>
   <ReportSections>
     <ReportSection>
       <Body>
@@ -4496,12 +4124,6 @@
       </Page>
     </ReportSection>
   </ReportSections>
-  <ReportParametersLayout>
-    <GridLayoutDefinition>
-      <NumberOfColumns>4</NumberOfColumns>
-      <NumberOfRows>2</NumberOfRows>
-    </GridLayoutDefinition>
-  </ReportParametersLayout>
   <Code>Public Function BlankZero(ByVal Value As Decimal)
     if Value = 0 then
         Return ""
@@ -4541,4 +4163,392 @@ End Function
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportUnitType>Inch</rd:ReportUnitType>
   <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="ReportForNavId_1102755000">
+          <DataField>ReportForNavId_1102755000</DataField>
+        </Field>
+        <Field Name="UserId">
+          <DataField>UserId</DataField>
+        </Field>
+        <Field Name="PayrollStaffNo_Members">
+          <DataField>PayrollStaffNo_Members</DataField>
+        </Field>
+        <Field Name="No_Members">
+          <DataField>No_Members</DataField>
+        </Field>
+        <Field Name="Name_Members">
+          <DataField>Name_Members</DataField>
+        </Field>
+        <Field Name="EmployerCode_Members">
+          <DataField>EmployerCode_Members</DataField>
+        </Field>
+        <Field Name="EmployerName">
+          <DataField>EmployerName</DataField>
+        </Field>
+        <Field Name="Address_MembersRegister">
+          <DataField>Address_MembersRegister</DataField>
+        </Field>
+        <Field Name="City_MembersRegister">
+          <DataField>City_MembersRegister</DataField>
+        </Field>
+        <Field Name="DateFilter_MembersRegister">
+          <DataField>DateFilter_MembersRegister</DataField>
+        </Field>
+        <Field Name="PageNo_Members">
+          <DataField>PageNo_Members</DataField>
+        </Field>
+        <Field Name="Shares_Retained">
+          <DataField>Shares_Retained</DataField>
+        </Field>
+        <Field Name="Shares_RetainedFormat">
+          <DataField>Shares_RetainedFormat</DataField>
+        </Field>
+        <Field Name="IDNo_Members">
+          <DataField>IDNo_Members</DataField>
+        </Field>
+        <Field Name="GlobalDimension2Code_Members">
+          <DataField>GlobalDimension2Code_Members</DataField>
+        </Field>
+        <Field Name="FromDate">
+          <DataField>FromDate</DataField>
+        </Field>
+        <Field Name="ToDate">
+          <DataField>ToDate</DataField>
+        </Field>
+        <Field Name="GeneratedOn">
+          <DataField>GeneratedOn</DataField>
+        </Field>
+        <Field Name="MemberAddress">
+          <DataField>MemberAddress</DataField>
+        </Field>
+        <Field Name="Company_Name">
+          <DataField>Company_Name</DataField>
+        </Field>
+        <Field Name="Company_Address">
+          <DataField>Company_Address</DataField>
+        </Field>
+        <Field Name="Company_Address_2">
+          <DataField>Company_Address_2</DataField>
+        </Field>
+        <Field Name="Company_Phone_No">
+          <DataField>Company_Phone_No</DataField>
+        </Field>
+        <Field Name="Company_Fax_No">
+          <DataField>Company_Fax_No</DataField>
+        </Field>
+        <Field Name="Company_Picture">
+          <DataField>Company_Picture</DataField>
+        </Field>
+        <Field Name="Company_Email">
+          <DataField>Company_Email</DataField>
+        </Field>
+        <Field Name="ReportForNavId_38">
+          <DataField>ReportForNavId_38</DataField>
+        </Field>
+        <Field Name="AccountType_MemberAccounts">
+          <DataField>AccountType_MemberAccounts</DataField>
+        </Field>
+        <Field Name="No_MemberAccounts">
+          <DataField>No_MemberAccounts</DataField>
+        </Field>
+        <Field Name="AccountTypeName_MemberAccounts">
+          <DataField>AccountTypeName_MemberAccounts</DataField>
+        </Field>
+        <Field Name="BalanceBF">
+          <DataField>BalanceBF</DataField>
+        </Field>
+        <Field Name="BalanceBFFormat">
+          <DataField>BalanceBFFormat</DataField>
+        </Field>
+        <Field Name="Name_MemberAccounts">
+          <DataField>Name_MemberAccounts</DataField>
+        </Field>
+        <Field Name="ReportForNavId_19">
+          <DataField>ReportForNavId_19</DataField>
+        </Field>
+        <Field Name="AccountNo_MemberHistoricalLedgerEntry">
+          <DataField>AccountNo_MemberHistoricalLedgerEntry</DataField>
+        </Field>
+        <Field Name="PostingDate_MemberHistoricalLedgerEntry">
+          <DataField>PostingDate_MemberHistoricalLedgerEntry</DataField>
+        </Field>
+        <Field Name="DocumentNo_MemberHistoricalLedgerEntry">
+          <DataField>DocumentNo_MemberHistoricalLedgerEntry</DataField>
+        </Field>
+        <Field Name="Description_MemberHistoricalLedgerEntry">
+          <DataField>Description_MemberHistoricalLedgerEntry</DataField>
+        </Field>
+        <Field Name="Amount_MemberHistoricalLedgerEntry">
+          <DataField>Amount_MemberHistoricalLedgerEntry</DataField>
+        </Field>
+        <Field Name="Amount_MemberHistoricalLedgerEntryFormat">
+          <DataField>Amount_MemberHistoricalLedgerEntryFormat</DataField>
+        </Field>
+        <Field Name="DebitAmount_MemberHistoricalLedgerEntry">
+          <DataField>DebitAmount_MemberHistoricalLedgerEntry</DataField>
+        </Field>
+        <Field Name="DebitAmount_MemberHistoricalLedgerEntryFormat">
+          <DataField>DebitAmount_MemberHistoricalLedgerEntryFormat</DataField>
+        </Field>
+        <Field Name="CreditAmount_MemberHistoricalLedgerEntry">
+          <DataField>CreditAmount_MemberHistoricalLedgerEntry</DataField>
+        </Field>
+        <Field Name="CreditAmount_MemberHistoricalLedgerEntryFormat">
+          <DataField>CreditAmount_MemberHistoricalLedgerEntryFormat</DataField>
+        </Field>
+        <Field Name="ExternalDocumentNo_MemberHistoricalLedgerEntry">
+          <DataField>ExternalDocumentNo_MemberHistoricalLedgerEntry</DataField>
+        </Field>
+        <Field Name="RunningBalanceHistorical">
+          <DataField>RunningBalanceHistorical</DataField>
+        </Field>
+        <Field Name="RunningBalanceHistoricalFormat">
+          <DataField>RunningBalanceHistoricalFormat</DataField>
+        </Field>
+        <Field Name="CreatedOn_MemberHistoricalLedgerEntry">
+          <DataField>CreatedOn_MemberHistoricalLedgerEntry</DataField>
+        </Field>
+        <Field Name="ReportForNavId_1000000009">
+          <DataField>ReportForNavId_1000000009</DataField>
+        </Field>
+        <Field Name="VendorNo_LedgerEntries">
+          <DataField>VendorNo_LedgerEntries</DataField>
+        </Field>
+        <Field Name="PostingDate_LedgerEntries">
+          <DataField>PostingDate_LedgerEntries</DataField>
+        </Field>
+        <Field Name="DocumentNo_LedgerEntries">
+          <DataField>DocumentNo_LedgerEntries</DataField>
+        </Field>
+        <Field Name="Description_LedgerEntries">
+          <DataField>Description_LedgerEntries</DataField>
+        </Field>
+        <Field Name="Amount_LedgerEntries">
+          <DataField>Amount_LedgerEntries</DataField>
+        </Field>
+        <Field Name="Amount_LedgerEntriesFormat">
+          <DataField>Amount_LedgerEntriesFormat</DataField>
+        </Field>
+        <Field Name="DebitAmount_LedgerEntries">
+          <DataField>DebitAmount_LedgerEntries</DataField>
+        </Field>
+        <Field Name="DebitAmount_LedgerEntriesFormat">
+          <DataField>DebitAmount_LedgerEntriesFormat</DataField>
+        </Field>
+        <Field Name="CreditAmount_LedgerEntries">
+          <DataField>CreditAmount_LedgerEntries</DataField>
+        </Field>
+        <Field Name="CreditAmount_LedgerEntriesFormat">
+          <DataField>CreditAmount_LedgerEntriesFormat</DataField>
+        </Field>
+        <Field Name="ExternalDocumentNo_LedgerEntries">
+          <DataField>ExternalDocumentNo_LedgerEntries</DataField>
+        </Field>
+        <Field Name="RunningBalance">
+          <DataField>RunningBalance</DataField>
+        </Field>
+        <Field Name="RunningBalanceFormat">
+          <DataField>RunningBalanceFormat</DataField>
+        </Field>
+        <Field Name="ChequeMaturityDate_LedgerEntries">
+          <DataField>ChequeMaturityDate_LedgerEntries</DataField>
+        </Field>
+        <Field Name="ReportForNavId_1102755024">
+          <DataField>ReportForNavId_1102755024</DataField>
+        </Field>
+        <Field Name="PrincipleBF">
+          <DataField>PrincipleBF</DataField>
+        </Field>
+        <Field Name="PrincipleBFFormat">
+          <DataField>PrincipleBFFormat</DataField>
+        </Field>
+        <Field Name="LoanNumber">
+          <DataField>LoanNumber</DataField>
+        </Field>
+        <Field Name="RequestedAmount">
+          <DataField>RequestedAmount</DataField>
+        </Field>
+        <Field Name="RequestedAmountFormat">
+          <DataField>RequestedAmountFormat</DataField>
+        </Field>
+        <Field Name="Interest">
+          <DataField>Interest</DataField>
+        </Field>
+        <Field Name="InterestFormat">
+          <DataField>InterestFormat</DataField>
+        </Field>
+        <Field Name="Installments">
+          <DataField>Installments</DataField>
+        </Field>
+        <Field Name="LoanPrincipleRepayment">
+          <DataField>LoanPrincipleRepayment</DataField>
+        </Field>
+        <Field Name="LoanPrincipleRepaymentFormat">
+          <DataField>LoanPrincipleRepaymentFormat</DataField>
+        </Field>
+        <Field Name="ApprovedAmount_Loans">
+          <DataField>ApprovedAmount_Loans</DataField>
+        </Field>
+        <Field Name="ApprovedAmount_LoansFormat">
+          <DataField>ApprovedAmount_LoansFormat</DataField>
+        </Field>
+        <Field Name="LoanProductTypeName_Loans">
+          <DataField>LoanProductTypeName_Loans</DataField>
+        </Field>
+        <Field Name="Repayment_Loans">
+          <DataField>Repayment_Loans</DataField>
+        </Field>
+        <Field Name="Repayment_LoansFormat">
+          <DataField>Repayment_LoansFormat</DataField>
+        </Field>
+        <Field Name="ModeofDisbursement_Loans">
+          <DataField>ModeofDisbursement_Loans</DataField>
+        </Field>
+        <Field Name="OutstandingBalance_Loans">
+          <DataField>OutstandingBalance_Loans</DataField>
+        </Field>
+        <Field Name="OutstandingBalance_LoansFormat">
+          <DataField>OutstandingBalance_LoansFormat</DataField>
+        </Field>
+        <Field Name="OustandingInterest_Loans">
+          <DataField>OustandingInterest_Loans</DataField>
+        </Field>
+        <Field Name="OustandingInterest_LoansFormat">
+          <DataField>OustandingInterest_LoansFormat</DataField>
+        </Field>
+        <Field Name="LoansBalanceBF">
+          <DataField>LoansBalanceBF</DataField>
+        </Field>
+        <Field Name="LoansBalanceBFFormat">
+          <DataField>LoansBalanceBFFormat</DataField>
+        </Field>
+        <Field Name="ClientName_Loans">
+          <DataField>ClientName_Loans</DataField>
+        </Field>
+        <Field Name="ReportForNavId_30">
+          <DataField>ReportForNavId_30</DataField>
+        </Field>
+        <Field Name="PostingDate_MemberLoansHistoricalLedger">
+          <DataField>PostingDate_MemberLoansHistoricalLedger</DataField>
+        </Field>
+        <Field Name="DocumentNo_MemberLoansHistoricalLedger">
+          <DataField>DocumentNo_MemberLoansHistoricalLedger</DataField>
+        </Field>
+        <Field Name="Description_MemberLoansHistoricalLedger">
+          <DataField>Description_MemberLoansHistoricalLedger</DataField>
+        </Field>
+        <Field Name="DebitAmount_MemberLoansHistoricalLedger">
+          <DataField>DebitAmount_MemberLoansHistoricalLedger</DataField>
+        </Field>
+        <Field Name="DebitAmount_MemberLoansHistoricalLedgerFormat">
+          <DataField>DebitAmount_MemberLoansHistoricalLedgerFormat</DataField>
+        </Field>
+        <Field Name="CreditAmount_MemberLoansHistoricalLedger">
+          <DataField>CreditAmount_MemberLoansHistoricalLedger</DataField>
+        </Field>
+        <Field Name="CreditAmount_MemberLoansHistoricalLedgerFormat">
+          <DataField>CreditAmount_MemberLoansHistoricalLedgerFormat</DataField>
+        </Field>
+        <Field Name="Amount_MemberLoansHistoricalLedger">
+          <DataField>Amount_MemberLoansHistoricalLedger</DataField>
+        </Field>
+        <Field Name="Amount_MemberLoansHistoricalLedgerFormat">
+          <DataField>Amount_MemberLoansHistoricalLedgerFormat</DataField>
+        </Field>
+        <Field Name="TransactionType_MemberLoansHistoricalLedger">
+          <DataField>TransactionType_MemberLoansHistoricalLedger</DataField>
+        </Field>
+        <Field Name="ExternalDocumentNo_MemberLoansHistoricalLedger">
+          <DataField>ExternalDocumentNo_MemberLoansHistoricalLedger</DataField>
+        </Field>
+        <Field Name="CreatedOn_MemberLoansHistoricalLedger">
+          <DataField>CreatedOn_MemberLoansHistoricalLedger</DataField>
+        </Field>
+        <Field Name="LoansRunningBalanceHistorical">
+          <DataField>LoansRunningBalanceHistorical</DataField>
+        </Field>
+        <Field Name="LoansRunningBalanceHistoricalFormat">
+          <DataField>LoansRunningBalanceHistoricalFormat</DataField>
+        </Field>
+        <Field Name="ReportForNavId_1102755031">
+          <DataField>ReportForNavId_1102755031</DataField>
+        </Field>
+        <Field Name="PostingDate_loan">
+          <DataField>PostingDate_loan</DataField>
+        </Field>
+        <Field Name="DocumentNo_loan">
+          <DataField>DocumentNo_loan</DataField>
+        </Field>
+        <Field Name="Description_loan">
+          <DataField>Description_loan</DataField>
+        </Field>
+        <Field Name="DebitAmount_Loan">
+          <DataField>DebitAmount_Loan</DataField>
+        </Field>
+        <Field Name="DebitAmount_LoanFormat">
+          <DataField>DebitAmount_LoanFormat</DataField>
+        </Field>
+        <Field Name="CreditAmount_Loan">
+          <DataField>CreditAmount_Loan</DataField>
+        </Field>
+        <Field Name="CreditAmount_LoanFormat">
+          <DataField>CreditAmount_LoanFormat</DataField>
+        </Field>
+        <Field Name="Amount_Loan">
+          <DataField>Amount_Loan</DataField>
+        </Field>
+        <Field Name="Amount_LoanFormat">
+          <DataField>Amount_LoanFormat</DataField>
+        </Field>
+        <Field Name="openBalance_loan">
+          <DataField>openBalance_loan</DataField>
+        </Field>
+        <Field Name="openBalance_loanFormat">
+          <DataField>openBalance_loanFormat</DataField>
+        </Field>
+        <Field Name="CLosingBalance_loan">
+          <DataField>CLosingBalance_loan</DataField>
+        </Field>
+        <Field Name="CLosingBalance_loanFormat">
+          <DataField>CLosingBalance_loanFormat</DataField>
+        </Field>
+        <Field Name="TransactionType_loan">
+          <DataField>TransactionType_loan</DataField>
+        </Field>
+        <Field Name="LoanNo">
+          <DataField>LoanNo</DataField>
+        </Field>
+        <Field Name="PrincipleBF_loans">
+          <DataField>PrincipleBF_loans</DataField>
+        </Field>
+        <Field Name="PrincipleBF_loansFormat">
+          <DataField>PrincipleBF_loansFormat</DataField>
+        </Field>
+        <Field Name="Loan_Description">
+          <DataField>Loan_Description</DataField>
+        </Field>
+        <Field Name="User7">
+          <DataField>User7</DataField>
+        </Field>
+        <Field Name="LoansRunningBalance">
+          <DataField>LoansRunningBalance</DataField>
+        </Field>
+        <Field Name="LoansRunningBalanceFormat">
+          <DataField>LoansRunningBalanceFormat</DataField>
+        </Field>
+        <Field Name="CreatedOn_loan">
+          <DataField>CreatedOn_loan</DataField>
+        </Field>
+        <Field Name="PostingDateSortingLoan">
+          <DataField>PostingDateSortingLoan</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
 </Report>

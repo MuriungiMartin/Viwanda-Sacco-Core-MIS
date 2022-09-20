@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns:cl="http://schemas.microsoft.com/sqlserver/reporting/2010/01/componentdefinition" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/reportdefinition">
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
@@ -11,66 +11,6 @@
       <rd:DataSourceID>1b4e08e9-c05f-4a25-a96d-4cdc604ae0b2</rd:DataSourceID>
     </DataSource>
   </DataSources>
-  <DataSets>
-    <DataSet Name="DataSet_Result">
-      <Query>
-        <DataSourceName>DataSource</DataSourceName>
-        <CommandText />
-      </Query>
-      <Fields>
-        <Field Name="FORMAT_TODAY_0_4_">
-          <DataField>FORMAT_TODAY_0_4_</DataField>
-        </Field>
-        <Field Name="COMPANYNAME">
-          <DataField>COMPANYNAME</DataField>
-        </Field>
-        <Field Name="CurrReport_PAGENO">
-          <DataField>CurrReport_PAGENO</DataField>
-        </Field>
-        <Field Name="USERID">
-          <DataField>USERID</DataField>
-        </Field>
-        <Field Name="Vendor__No__">
-          <DataField>Vendor__No__</DataField>
-        </Field>
-        <Field Name="Vendor_Name">
-          <DataField>Vendor_Name</DataField>
-        </Field>
-        <Field Name="Vendor__Account_Type_">
-          <DataField>Vendor__Account_Type_</DataField>
-        </Field>
-        <Field Name="Vendor_Status">
-          <DataField>Vendor_Status</DataField>
-        </Field>
-        <Field Name="Vendor__Balance__LCY__">
-          <DataField>Vendor__Balance__LCY__</DataField>
-        </Field>
-        <Field Name="Vendor__ID_No__">
-          <DataField>Vendor__ID_No__</DataField>
-        </Field>
-        <Field Name="Rno">
-          <DataField>Rno</DataField>
-        </Field>
-        <Field Name="Vendor__Staff_No_">
-          <DataField>Vendor__Staff_No_</DataField>
-        </Field>
-        <Field Name="Vendor__Balance__LCY___Control1102760019">
-          <DataField>Vendor__Balance__LCY___Control1102760019</DataField>
-        </Field>
-        <Field Name="Accounts_BalancesCaption">
-          <DataField>Accounts_BalancesCaption</DataField>
-        </Field>
-        <Field Name="CurrReport_PAGENOCaption">
-          <DataField>CurrReport_PAGENOCaption</DataField>
-        </Field>
-      </Fields>
-      <rd:DataSetInfo>
-        <rd:DataSetName>DataSet</rd:DataSetName>
-        <rd:SchemaPath>Report.xsd</rd:SchemaPath>
-        <rd:TableName>Result</rd:TableName>
-      </rd:DataSetInfo>
-    </DataSet>
-  </DataSets>
   <ReportSections>
     <ReportSection>
       <Body>
@@ -1093,4 +1033,62 @@ End Function
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
   <rd:ReportID>f5dd55b9-e3d1-46f2-8ce7-4ea081e8b2fb</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="ReportForNavId_3182">
+          <DataField>ReportForNavId_3182</DataField>
+        </Field>
+        <Field Name="FORMAT_TODAY_0_4_">
+          <DataField>FORMAT_TODAY_0_4_</DataField>
+        </Field>
+        <Field Name="COMPANYNAME">
+          <DataField>COMPANYNAME</DataField>
+        </Field>
+        <Field Name="CurrReport_PAGENO">
+          <DataField>CurrReport_PAGENO</DataField>
+        </Field>
+        <Field Name="UserId">
+          <DataField>UserId</DataField>
+        </Field>
+        <Field Name="Vendor__No__">
+          <DataField>Vendor__No__</DataField>
+        </Field>
+        <Field Name="Vendor_Name">
+          <DataField>Vendor_Name</DataField>
+        </Field>
+        <Field Name="Vendor__Account_Type_">
+          <DataField>Vendor__Account_Type_</DataField>
+        </Field>
+        <Field Name="Vendor_Status">
+          <DataField>Vendor_Status</DataField>
+        </Field>
+        <Field Name="Vendor__Balance__LCY__">
+          <DataField>Vendor__Balance__LCY__</DataField>
+        </Field>
+        <Field Name="Vendor__ID_No__">
+          <DataField>Vendor__ID_No__</DataField>
+        </Field>
+        <Field Name="Rno">
+          <DataField>Rno</DataField>
+        </Field>
+        <Field Name="Vendor__Staff_No_">
+          <DataField>Vendor__Staff_No_</DataField>
+        </Field>
+        <Field Name="Vendor__Balance__LCY___Control1102760019">
+          <DataField>Vendor__Balance__LCY___Control1102760019</DataField>
+        </Field>
+        <Field Name="Accounts_BalancesCaption">
+          <DataField>Accounts_BalancesCaption</DataField>
+        </Field>
+        <Field Name="CurrReport_PAGENOCaption">
+          <DataField>CurrReport_PAGENOCaption</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
 </Report>

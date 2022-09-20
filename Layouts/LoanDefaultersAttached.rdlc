@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns:cl="http://schemas.microsoft.com/sqlserver/reporting/2010/01/componentdefinition" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/reportdefinition">
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
@@ -11,75 +11,6 @@
       <rd:DataSourceID>11face24-45e6-4a57-8cb6-ca96f548c203</rd:DataSourceID>
     </DataSource>
   </DataSources>
-  <DataSets>
-    <DataSet Name="DataSet_Result">
-      <Query>
-        <DataSourceName>DataSource</DataSourceName>
-        <CommandText />
-      </Query>
-      <Fields>
-        <Field Name="Loan_No">
-          <DataField>Loan_No</DataField>
-        </Field>
-        <Field Name="Member_No">
-          <DataField>Member_No</DataField>
-        </Field>
-        <Field Name="ClientName_Loans">
-          <DataField>ClientName_Loans</DataField>
-        </Field>
-        <Field Name="Personal_No">
-          <DataField>Personal_No</DataField>
-        </Field>
-        <Field Name="Employer_Name">
-          <DataField>Employer_Name</DataField>
-        </Field>
-        <Field Name="Loan_Type">
-          <DataField>Loan_Type</DataField>
-        </Field>
-        <Field Name="Approved_Amount">
-          <DataField>Approved_Amount</DataField>
-        </Field>
-        <Field Name="Approved_AmountFormat">
-          <DataField>Approved_AmountFormat</DataField>
-        </Field>
-        <Field Name="Outstanding_Bal">
-          <DataField>Outstanding_Bal</DataField>
-        </Field>
-        <Field Name="Outstanding_BalFormat">
-          <DataField>Outstanding_BalFormat</DataField>
-        </Field>
-        <Field Name="Issued_Date">
-          <DataField>Issued_Date</DataField>
-        </Field>
-        <Field Name="Interest_Due">
-          <DataField>Interest_Due</DataField>
-        </Field>
-        <Field Name="Interest_DueFormat">
-          <DataField>Interest_DueFormat</DataField>
-        </Field>
-        <Field Name="Penalty_Charged">
-          <DataField>Penalty_Charged</DataField>
-        </Field>
-        <Field Name="Penalty_ChargedFormat">
-          <DataField>Penalty_ChargedFormat</DataField>
-        </Field>
-        <Field Name="Total_Liability">
-          <DataField>Total_Liability</DataField>
-        </Field>
-        <Field Name="Total_LiabilityFormat">
-          <DataField>Total_LiabilityFormat</DataField>
-        </Field>
-        <Field Name="Remarks">
-          <DataField>Remarks</DataField>
-        </Field>
-      </Fields>
-      <rd:DataSetInfo>
-        <rd:DataSetName>DataSet</rd:DataSetName>
-        <rd:SchemaPath>Report.xsd</rd:SchemaPath>
-        <rd:TableName>Result</rd:TableName>
-      </rd:DataSetInfo>
-    </DataSet>
-  </DataSets>
   <ReportSections>
     <ReportSection>
       <Body>
@@ -3613,4 +3544,68 @@ p+sUKU7X6Tpdv+f6/w8AAffuevIM2ScAAAAASUVORK5CYII=</ImageData>
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
   <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="Loan_No">
+          <DataField>Loan_No</DataField>
+        </Field>
+        <Field Name="Member_No">
+          <DataField>Member_No</DataField>
+        </Field>
+        <Field Name="ClientName_Loans">
+          <DataField>ClientName_Loans</DataField>
+        </Field>
+        <Field Name="Personal_No">
+          <DataField>Personal_No</DataField>
+        </Field>
+        <Field Name="Employer_Name">
+          <DataField>Employer_Name</DataField>
+        </Field>
+        <Field Name="Loan_Type">
+          <DataField>Loan_Type</DataField>
+        </Field>
+        <Field Name="Approved_Amount">
+          <DataField>Approved_Amount</DataField>
+        </Field>
+        <Field Name="Approved_AmountFormat">
+          <DataField>Approved_AmountFormat</DataField>
+        </Field>
+        <Field Name="Outstanding_Bal">
+          <DataField>Outstanding_Bal</DataField>
+        </Field>
+        <Field Name="Outstanding_BalFormat">
+          <DataField>Outstanding_BalFormat</DataField>
+        </Field>
+        <Field Name="Issued_Date">
+          <DataField>Issued_Date</DataField>
+        </Field>
+        <Field Name="Interest_Due">
+          <DataField>Interest_Due</DataField>
+        </Field>
+        <Field Name="Interest_DueFormat">
+          <DataField>Interest_DueFormat</DataField>
+        </Field>
+        <Field Name="Penalty_Charged">
+          <DataField>Penalty_Charged</DataField>
+        </Field>
+        <Field Name="Penalty_ChargedFormat">
+          <DataField>Penalty_ChargedFormat</DataField>
+        </Field>
+        <Field Name="Total_Liability">
+          <DataField>Total_Liability</DataField>
+        </Field>
+        <Field Name="Total_LiabilityFormat">
+          <DataField>Total_LiabilityFormat</DataField>
+        </Field>
+        <Field Name="Remarks">
+          <DataField>Remarks</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
 </Report>

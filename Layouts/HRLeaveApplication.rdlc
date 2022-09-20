@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns:cl="http://schemas.microsoft.com/sqlserver/reporting/2010/01/componentdefinition" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/reportdefinition">
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
@@ -11,102 +11,6 @@
       <rd:DataSourceID>58f654fd-ec79-4477-ad82-b2b3f58ba95e</rd:DataSourceID>
     </DataSource>
   </DataSources>
-  <DataSets>
-    <DataSet Name="DataSet_Result">
-      <Query>
-        <DataSourceName>DataSource</DataSourceName>
-        <CommandText />
-      </Query>
-      <Fields>
-        <Field Name="CI_Picture">
-          <DataField>CI_Picture</DataField>
-        </Field>
-        <Field Name="CI_Address">
-          <DataField>CI_Address</DataField>
-        </Field>
-        <Field Name="CI__Address_2______CI__Post_Code_">
-          <DataField>CI__Address_2______CI__Post_Code_</DataField>
-        </Field>
-        <Field Name="CI_City">
-          <DataField>CI_City</DataField>
-        </Field>
-        <Field Name="CI_PhoneNo">
-          <DataField>CI_PhoneNo</DataField>
-        </Field>
-        <Field Name="COMPANYNAME">
-          <DataField>COMPANYNAME</DataField>
-        </Field>
-        <Field Name="EmployeeNo_HRLeaveApplication">
-          <DataField>EmployeeNo_HRLeaveApplication</DataField>
-        </Field>
-        <Field Name="Empname">
-          <DataField>Empname</DataField>
-        </Field>
-        <Field Name="DaysApplied_HRLeaveApplication">
-          <DataField>DaysApplied_HRLeaveApplication</DataField>
-        </Field>
-        <Field Name="DaysApplied_HRLeaveApplicationFormat">
-          <DataField>DaysApplied_HRLeaveApplicationFormat</DataField>
-        </Field>
-        <Field Name="ApplicationCode_HRLeaveApplication">
-          <DataField>ApplicationCode_HRLeaveApplication</DataField>
-        </Field>
-        <Field Name="RequestLeaveAllowance_HRLeaveApplication">
-          <DataField>RequestLeaveAllowance_HRLeaveApplication</DataField>
-        </Field>
-        <Field Name="LeaveAllowanceAmount_HRLeaveApplication">
-          <DataField>LeaveAllowanceAmount_HRLeaveApplication</DataField>
-        </Field>
-        <Field Name="LeaveAllowanceAmount_HRLeaveApplicationFormat">
-          <DataField>LeaveAllowanceAmount_HRLeaveApplicationFormat</DataField>
-        </Field>
-        <Field Name="NumberofPreviousAttempts_HRLeaveApplication">
-          <DataField>NumberofPreviousAttempts_HRLeaveApplication</DataField>
-        </Field>
-        <Field Name="DetailsofExamination_HRLeaveApplication">
-          <DataField>DetailsofExamination_HRLeaveApplication</DataField>
-        </Field>
-        <Field Name="DateofExam_HRLeavseApplication">
-          <DataField>DateofExam_HRLeavseApplication</DataField>
-        </Field>
-        <Field Name="Reliever_HRLeaveApplication">
-          <DataField>Reliever_HRLeaveApplication</DataField>
-        </Field>
-        <Field Name="RelieverName_HRLeaveApplication">
-          <DataField>RelieverName_HRLeaveApplication</DataField>
-        </Field>
-        <Field Name="StartDate_HRLeaveApplication">
-          <DataField>StartDate_HRLeaveApplication</DataField>
-        </Field>
-        <Field Name="ReturnDate_HRLeaveApplication">
-          <DataField>ReturnDate_HRLeaveApplication</DataField>
-        </Field>
-        <Field Name="LeaveType_HRLeaveApplication">
-          <DataField>LeaveType_HRLeaveApplication</DataField>
-        </Field>
-        <Field Name="JobTittle_HRLeaveApplication">
-          <DataField>JobTittle_HRLeaveApplication</DataField>
-        </Field>
-        <Field Name="ApplicationDate_HRLeaveApplication">
-          <DataField>ApplicationDate_HRLeaveApplication</DataField>
-        </Field>
-        <Field Name="EmailAddress_HRLeaveApplication">
-          <DataField>EmailAddress_HRLeaveApplication</DataField>
-        </Field>
-        <Field Name="CellPhoneNumber_HRLeaveApplication">
-          <DataField>CellPhoneNumber_HRLeaveApplication</DataField>
-        </Field>
-        <Field Name="Approveddays_HRLeaveApplication">
-          <DataField>Approveddays_HRLeaveApplication</DataField>
-        </Field>
-      </Fields>
-      <rd:DataSetInfo>
-        <rd:DataSetName>DataSet</rd:DataSetName>
-        <rd:SchemaPath>Report.xsd</rd:SchemaPath>
-        <rd:TableName>Result</rd:TableName>
-      </rd:DataSetInfo>
-    </DataSet>
-  </DataSets>
   <ReportSections>
     <ReportSection>
       <Body>
@@ -4557,4 +4461,95 @@ End Function
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
   <rd:ReportID>a07a138d-9f15-488c-adf0-b9fd9d59cfcb</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="CI_Picture">
+          <DataField>CI_Picture</DataField>
+        </Field>
+        <Field Name="CI_Address">
+          <DataField>CI_Address</DataField>
+        </Field>
+        <Field Name="CI__Address_2______CI__Post_Code_">
+          <DataField>CI__Address_2______CI__Post_Code_</DataField>
+        </Field>
+        <Field Name="CI_City">
+          <DataField>CI_City</DataField>
+        </Field>
+        <Field Name="CI_PhoneNo">
+          <DataField>CI_PhoneNo</DataField>
+        </Field>
+        <Field Name="COMPANYNAME">
+          <DataField>COMPANYNAME</DataField>
+        </Field>
+        <Field Name="EmployeeNo_HRLeaveApplication">
+          <DataField>EmployeeNo_HRLeaveApplication</DataField>
+        </Field>
+        <Field Name="Empname">
+          <DataField>Empname</DataField>
+        </Field>
+        <Field Name="DaysApplied_HRLeaveApplication">
+          <DataField>DaysApplied_HRLeaveApplication</DataField>
+        </Field>
+        <Field Name="DaysApplied_HRLeaveApplicationFormat">
+          <DataField>DaysApplied_HRLeaveApplicationFormat</DataField>
+        </Field>
+        <Field Name="ApplicationCode_HRLeaveApplication">
+          <DataField>ApplicationCode_HRLeaveApplication</DataField>
+        </Field>
+        <Field Name="RequestLeaveAllowance_HRLeaveApplication">
+          <DataField>RequestLeaveAllowance_HRLeaveApplication</DataField>
+        </Field>
+        <Field Name="LeaveAllowanceAmount_HRLeaveApplication">
+          <DataField>LeaveAllowanceAmount_HRLeaveApplication</DataField>
+        </Field>
+        <Field Name="LeaveAllowanceAmount_HRLeaveApplicationFormat">
+          <DataField>LeaveAllowanceAmount_HRLeaveApplicationFormat</DataField>
+        </Field>
+        <Field Name="NumberofPreviousAttempts_HRLeaveApplication">
+          <DataField>NumberofPreviousAttempts_HRLeaveApplication</DataField>
+        </Field>
+        <Field Name="DetailsofExamination_HRLeaveApplication">
+          <DataField>DetailsofExamination_HRLeaveApplication</DataField>
+        </Field>
+        <Field Name="DateofExam_HRLeavseApplication">
+          <DataField>DateofExam_HRLeavseApplication</DataField>
+        </Field>
+        <Field Name="Reliever_HRLeaveApplication">
+          <DataField>Reliever_HRLeaveApplication</DataField>
+        </Field>
+        <Field Name="RelieverName_HRLeaveApplication">
+          <DataField>RelieverName_HRLeaveApplication</DataField>
+        </Field>
+        <Field Name="StartDate_HRLeaveApplication">
+          <DataField>StartDate_HRLeaveApplication</DataField>
+        </Field>
+        <Field Name="ReturnDate_HRLeaveApplication">
+          <DataField>ReturnDate_HRLeaveApplication</DataField>
+        </Field>
+        <Field Name="LeaveType_HRLeaveApplication">
+          <DataField>LeaveType_HRLeaveApplication</DataField>
+        </Field>
+        <Field Name="JobTittle_HRLeaveApplication">
+          <DataField>JobTittle_HRLeaveApplication</DataField>
+        </Field>
+        <Field Name="ApplicationDate_HRLeaveApplication">
+          <DataField>ApplicationDate_HRLeaveApplication</DataField>
+        </Field>
+        <Field Name="EmailAddress_HRLeaveApplication">
+          <DataField>EmailAddress_HRLeaveApplication</DataField>
+        </Field>
+        <Field Name="CellPhoneNumber_HRLeaveApplication">
+          <DataField>CellPhoneNumber_HRLeaveApplication</DataField>
+        </Field>
+        <Field Name="Approveddays_HRLeaveApplication">
+          <DataField>Approveddays_HRLeaveApplication</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
 </Report>

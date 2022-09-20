@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns:cl="http://schemas.microsoft.com/sqlserver/reporting/2010/01/componentdefinition" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/reportdefinition">
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
@@ -11,87 +11,6 @@
       <rd:DataSourceID>3450a53f-2ed8-4362-a1e8-a40b23695f5e</rd:DataSourceID>
     </DataSource>
   </DataSources>
-  <DataSets>
-    <DataSet Name="DataSet_Result">
-      <Query>
-        <DataSourceName>DataSource</DataSourceName>
-        <CommandText />
-      </Query>
-      <Fields>
-        <Field Name="USERID">
-          <DataField>USERID</DataField>
-        </Field>
-        <Field Name="Company_Name">
-          <DataField>Company_Name</DataField>
-        </Field>
-        <Field Name="Company_Address">
-          <DataField>Company_Address</DataField>
-        </Field>
-        <Field Name="Company_Address_2">
-          <DataField>Company_Address_2</DataField>
-        </Field>
-        <Field Name="Company_Phone_No">
-          <DataField>Company_Phone_No</DataField>
-        </Field>
-        <Field Name="Company_Fax_No">
-          <DataField>Company_Fax_No</DataField>
-        </Field>
-        <Field Name="Company_Picture">
-          <DataField>Company_Picture</DataField>
-        </Field>
-        <Field Name="Company_Email">
-          <DataField>Company_Email</DataField>
-        </Field>
-        <Field Name="Amount_CheckoffHeaderDistributed">
-          <DataField>Amount_CheckoffHeaderDistributed</DataField>
-        </Field>
-        <Field Name="Amount_CheckoffHeaderDistributedFormat">
-          <DataField>Amount_CheckoffHeaderDistributedFormat</DataField>
-        </Field>
-        <Field Name="No_CheckoffHeaderDistributed">
-          <DataField>No_CheckoffHeaderDistributed</DataField>
-        </Field>
-        <Field Name="Remarks_CheckoffHeaderDistributed">
-          <DataField>Remarks_CheckoffHeaderDistributed</DataField>
-        </Field>
-        <Field Name="Postingdate_CheckoffHeaderDistributed">
-          <DataField>Postingdate_CheckoffHeaderDistributed</DataField>
-        </Field>
-        <Field Name="DocumentNo_CheckoffHeaderDistributed">
-          <DataField>DocumentNo_CheckoffHeaderDistributed</DataField>
-        </Field>
-        <Field Name="MemberNo_ChecKoffLines">
-          <DataField>MemberNo_ChecKoffLines</DataField>
-        </Field>
-        <Field Name="Reference_ChecKoffLines">
-          <DataField>Reference_ChecKoffLines</DataField>
-        </Field>
-        <Field Name="LoanType_ChecKoffLines">
-          <DataField>LoanType_ChecKoffLines</DataField>
-        </Field>
-        <Field Name="LoanNo_ChecKoffLines">
-          <DataField>LoanNo_ChecKoffLines</DataField>
-        </Field>
-        <Field Name="StaffPayrollNo_ChecKoffLines">
-          <DataField>StaffPayrollNo_ChecKoffLines</DataField>
-        </Field>
-        <Field Name="Name_ChecKoffLines">
-          <DataField>Name_ChecKoffLines</DataField>
-        </Field>
-        <Field Name="Amount_ChecKoffLines">
-          <DataField>Amount_ChecKoffLines</DataField>
-        </Field>
-        <Field Name="Amount_ChecKoffLinesFormat">
-          <DataField>Amount_ChecKoffLinesFormat</DataField>
-        </Field>
-      </Fields>
-      <rd:DataSetInfo>
-        <rd:DataSetName>DataSet</rd:DataSetName>
-        <rd:SchemaPath>Report.xsd</rd:SchemaPath>
-        <rd:TableName>Result</rd:TableName>
-      </rd:DataSetInfo>
-    </DataSet>
-  </DataSets>
   <ReportSections>
     <ReportSection>
       <Body>
@@ -2381,4 +2300,92 @@ End Function
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportUnitType>Inch</rd:ReportUnitType>
   <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="UserId">
+          <DataField>UserId</DataField>
+        </Field>
+        <Field Name="Company_Name">
+          <DataField>Company_Name</DataField>
+        </Field>
+        <Field Name="Company_Address">
+          <DataField>Company_Address</DataField>
+        </Field>
+        <Field Name="Company_Address_2">
+          <DataField>Company_Address_2</DataField>
+        </Field>
+        <Field Name="Company_Phone_No">
+          <DataField>Company_Phone_No</DataField>
+        </Field>
+        <Field Name="Company_Fax_No">
+          <DataField>Company_Fax_No</DataField>
+        </Field>
+        <Field Name="Company_Picture">
+          <DataField>Company_Picture</DataField>
+        </Field>
+        <Field Name="Company_Email">
+          <DataField>Company_Email</DataField>
+        </Field>
+        <Field Name="Amount_CheckoffHeaderDistributed">
+          <DataField>Amount_CheckoffHeaderDistributed</DataField>
+        </Field>
+        <Field Name="Amount_CheckoffHeaderDistributedFormat">
+          <DataField>Amount_CheckoffHeaderDistributedFormat</DataField>
+        </Field>
+        <Field Name="No_CheckoffHeaderDistributed">
+          <DataField>No_CheckoffHeaderDistributed</DataField>
+        </Field>
+        <Field Name="Remarks_CheckoffHeaderDistributed">
+          <DataField>Remarks_CheckoffHeaderDistributed</DataField>
+        </Field>
+        <Field Name="Postingdate_CheckoffHeaderDistributed">
+          <DataField>Postingdate_CheckoffHeaderDistributed</DataField>
+        </Field>
+        <Field Name="DocumentNo_CheckoffHeaderDistributed">
+          <DataField>DocumentNo_CheckoffHeaderDistributed</DataField>
+        </Field>
+        <Field Name="MemberNo_ChecKoffLines">
+          <DataField>MemberNo_ChecKoffLines</DataField>
+        </Field>
+        <Field Name="MemberNo_ChecKoffLinesFormat">
+          <DataField>MemberNo_ChecKoffLinesFormat</DataField>
+        </Field>
+        <Field Name="Reference_ChecKoffLines">
+          <DataField>Reference_ChecKoffLines</DataField>
+        </Field>
+        <Field Name="Reference_ChecKoffLinesFormat">
+          <DataField>Reference_ChecKoffLinesFormat</DataField>
+        </Field>
+        <Field Name="LoanType_ChecKoffLines">
+          <DataField>LoanType_ChecKoffLines</DataField>
+        </Field>
+        <Field Name="LoanType_ChecKoffLinesFormat">
+          <DataField>LoanType_ChecKoffLinesFormat</DataField>
+        </Field>
+        <Field Name="LoanNo_ChecKoffLines">
+          <DataField>LoanNo_ChecKoffLines</DataField>
+        </Field>
+        <Field Name="LoanNo_ChecKoffLinesFormat">
+          <DataField>LoanNo_ChecKoffLinesFormat</DataField>
+        </Field>
+        <Field Name="StaffPayrollNo_ChecKoffLines">
+          <DataField>StaffPayrollNo_ChecKoffLines</DataField>
+        </Field>
+        <Field Name="Name_ChecKoffLines">
+          <DataField>Name_ChecKoffLines</DataField>
+        </Field>
+        <Field Name="Name_ChecKoffLinesFormat">
+          <DataField>Name_ChecKoffLinesFormat</DataField>
+        </Field>
+        <Field Name="Amount_ChecKoffLines">
+          <DataField>Amount_ChecKoffLines</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
 </Report>

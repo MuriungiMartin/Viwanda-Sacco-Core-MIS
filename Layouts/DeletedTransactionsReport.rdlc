@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
@@ -11,75 +11,6 @@
       <rd:DataSourceID>fc0f0104-e1f6-48ef-8db7-02fe3dc2c032</rd:DataSourceID>
     </DataSource>
   </DataSources>
-  <DataSets>
-    <DataSet Name="DataSet_Result">
-      <Query>
-        <DataSourceName>DataSource</DataSourceName>
-        <CommandText />
-      </Query>
-      <Fields>
-        <Field Name="Company_Name">
-          <DataField>Company_Name</DataField>
-        </Field>
-        <Field Name="Company_Address">
-          <DataField>Company_Address</DataField>
-        </Field>
-        <Field Name="Company_City">
-          <DataField>Company_City</DataField>
-        </Field>
-        <Field Name="Company_Picture">
-          <DataField>Company_Picture</DataField>
-        </Field>
-        <Field Name="Company_Email">
-          <DataField>Company_Email</DataField>
-        </Field>
-        <Field Name="Company_Address_2">
-          <DataField>Company_Address_2</DataField>
-        </Field>
-        <Field Name="Company_Phone_No">
-          <DataField>Company_Phone_No</DataField>
-        </Field>
-        <Field Name="Company_Fax_No">
-          <DataField>Company_Fax_No</DataField>
-        </Field>
-        <Field Name="SN">
-          <DataField>SN</DataField>
-        </Field>
-        <Field Name="PrimaryKey_ChangeLogEntry">
-          <DataField>PrimaryKey_ChangeLogEntry</DataField>
-        </Field>
-        <Field Name="PrimaryKeyField1No_ChangeLogEntry">
-          <DataField>PrimaryKeyField1No_ChangeLogEntry</DataField>
-        </Field>
-        <Field Name="DateandTime_ChangeLogEntry">
-          <DataField>DateandTime_ChangeLogEntry</DataField>
-        </Field>
-        <Field Name="OldValue_ChangeLogEntry">
-          <DataField>OldValue_ChangeLogEntry</DataField>
-        </Field>
-        <Field Name="FieldCaption_ChangeLogEntry">
-          <DataField>FieldCaption_ChangeLogEntry</DataField>
-        </Field>
-        <Field Name="PrimaryKeyField2No_ChangeLogEntry">
-          <DataField>PrimaryKeyField2No_ChangeLogEntry</DataField>
-        </Field>
-        <Field Name="UserID_ChangeLogEntry">
-          <DataField>UserID_ChangeLogEntry</DataField>
-        </Field>
-        <Field Name="PrimaryKeyField1Value_ChangeLogEntry">
-          <DataField>PrimaryKeyField1Value_ChangeLogEntry</DataField>
-        </Field>
-        <Field Name="PrimaryKeyField2Value_ChangeLogEntry">
-          <DataField>PrimaryKeyField2Value_ChangeLogEntry</DataField>
-        </Field>
-      </Fields>
-      <rd:DataSetInfo>
-        <rd:DataSetName>DataSet</rd:DataSetName>
-        <rd:SchemaPath>Report.xsd</rd:SchemaPath>
-        <rd:TableName>Result</rd:TableName>
-      </rd:DataSetInfo>
-    </DataSet>
-  </DataSets>
   <ReportSections>
     <ReportSection>
       <Body>
@@ -794,12 +725,6 @@
       </Page>
     </ReportSection>
   </ReportSections>
-  <ReportParametersLayout>
-    <GridLayoutDefinition>
-      <NumberOfColumns>4</NumberOfColumns>
-      <NumberOfRows>2</NumberOfRows>
-    </GridLayoutDefinition>
-  </ReportParametersLayout>
   <Code>Public Function BlankZero(ByVal Value As Decimal)
     if Value = 0 then
         Return ""
@@ -839,4 +764,71 @@ End Function
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportUnitType>Inch</rd:ReportUnitType>
   <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="ReportForNavId_1">
+          <DataField>ReportForNavId_1</DataField>
+        </Field>
+        <Field Name="Company_Name">
+          <DataField>Company_Name</DataField>
+        </Field>
+        <Field Name="Company_Address">
+          <DataField>Company_Address</DataField>
+        </Field>
+        <Field Name="Company_City">
+          <DataField>Company_City</DataField>
+        </Field>
+        <Field Name="Company_Picture">
+          <DataField>Company_Picture</DataField>
+        </Field>
+        <Field Name="Company_Email">
+          <DataField>Company_Email</DataField>
+        </Field>
+        <Field Name="Company_Address_2">
+          <DataField>Company_Address_2</DataField>
+        </Field>
+        <Field Name="Company_Phone_No">
+          <DataField>Company_Phone_No</DataField>
+        </Field>
+        <Field Name="Company_Fax_No">
+          <DataField>Company_Fax_No</DataField>
+        </Field>
+        <Field Name="SN">
+          <DataField>SN</DataField>
+        </Field>
+        <Field Name="PrimaryKey_ChangeLogEntry">
+          <DataField>PrimaryKey_ChangeLogEntry</DataField>
+        </Field>
+        <Field Name="PrimaryKeyField1No_ChangeLogEntry">
+          <DataField>PrimaryKeyField1No_ChangeLogEntry</DataField>
+        </Field>
+        <Field Name="DateandTime_ChangeLogEntry">
+          <DataField>DateandTime_ChangeLogEntry</DataField>
+        </Field>
+        <Field Name="OldValue_ChangeLogEntry">
+          <DataField>OldValue_ChangeLogEntry</DataField>
+        </Field>
+        <Field Name="FieldCaption_ChangeLogEntry">
+          <DataField>FieldCaption_ChangeLogEntry</DataField>
+        </Field>
+        <Field Name="PrimaryKeyField2No_ChangeLogEntry">
+          <DataField>PrimaryKeyField2No_ChangeLogEntry</DataField>
+        </Field>
+        <Field Name="UserID_ChangeLogEntry">
+          <DataField>UserID_ChangeLogEntry</DataField>
+        </Field>
+        <Field Name="PrimaryKeyField1Value_ChangeLogEntry">
+          <DataField>PrimaryKeyField1Value_ChangeLogEntry</DataField>
+        </Field>
+        <Field Name="PrimaryKeyField2Value_ChangeLogEntry">
+          <DataField>PrimaryKeyField2Value_ChangeLogEntry</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
 </Report>

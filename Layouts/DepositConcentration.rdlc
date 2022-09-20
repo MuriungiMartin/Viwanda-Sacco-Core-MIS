@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns:cl="http://schemas.microsoft.com/sqlserver/reporting/2010/01/componentdefinition" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/reportdefinition">
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
@@ -11,141 +11,6 @@
       <rd:DataSourceID>acf99521-d515-418b-a2eb-d615fd529420</rd:DataSourceID>
     </DataSource>
   </DataSources>
-  <DataSets>
-    <DataSet Name="DataSet_Result">
-      <Query>
-        <DataSourceName>DataSource</DataSourceName>
-        <CommandText />
-      </Query>
-      <Fields>
-        <Field Name="LessTenthousand">
-          <DataField>LessTenthousand</DataField>
-        </Field>
-        <Field Name="LessTenthousandFormat">
-          <DataField>LessTenthousandFormat</DataField>
-        </Field>
-        <Field Name="LessTenthousandCount">
-          <DataField>LessTenthousandCount</DataField>
-        </Field>
-        <Field Name="Less20thousand">
-          <DataField>Less20thousand</DataField>
-        </Field>
-        <Field Name="Less20thousandFormat">
-          <DataField>Less20thousandFormat</DataField>
-        </Field>
-        <Field Name="Less20thousandCount">
-          <DataField>Less20thousandCount</DataField>
-        </Field>
-        <Field Name="Less50thousand">
-          <DataField>Less50thousand</DataField>
-        </Field>
-        <Field Name="Less50thousandFormat">
-          <DataField>Less50thousandFormat</DataField>
-        </Field>
-        <Field Name="Less50thousandCount">
-          <DataField>Less50thousandCount</DataField>
-        </Field>
-        <Field Name="Less100thousand">
-          <DataField>Less100thousand</DataField>
-        </Field>
-        <Field Name="Less100thousandFormat">
-          <DataField>Less100thousandFormat</DataField>
-        </Field>
-        <Field Name="Less100thousandCount">
-          <DataField>Less100thousandCount</DataField>
-        </Field>
-        <Field Name="Greaterthousand">
-          <DataField>Greaterthousand</DataField>
-        </Field>
-        <Field Name="GreaterthousandFormat">
-          <DataField>GreaterthousandFormat</DataField>
-        </Field>
-        <Field Name="GreaterthousandCount">
-          <DataField>GreaterthousandCount</DataField>
-        </Field>
-        <Field Name="int_10">
-          <DataField>int_10</DataField>
-        </Field>
-        <Field Name="Int_20">
-          <DataField>Int_20</DataField>
-        </Field>
-        <Field Name="int_50">
-          <DataField>int_50</DataField>
-        </Field>
-        <Field Name="int_100">
-          <DataField>int_100</DataField>
-        </Field>
-        <Field Name="GreaterperInt">
-          <DataField>GreaterperInt</DataField>
-        </Field>
-        <Field Name="dec_10">
-          <DataField>dec_10</DataField>
-        </Field>
-        <Field Name="dec_10Format">
-          <DataField>dec_10Format</DataField>
-        </Field>
-        <Field Name="dec_20">
-          <DataField>dec_20</DataField>
-        </Field>
-        <Field Name="dec_20Format">
-          <DataField>dec_20Format</DataField>
-        </Field>
-        <Field Name="dec_50">
-          <DataField>dec_50</DataField>
-        </Field>
-        <Field Name="dec_50Format">
-          <DataField>dec_50Format</DataField>
-        </Field>
-        <Field Name="dec_100">
-          <DataField>dec_100</DataField>
-        </Field>
-        <Field Name="dec_100Format">
-          <DataField>dec_100Format</DataField>
-        </Field>
-        <Field Name="GreaterperDec">
-          <DataField>GreaterperDec</DataField>
-        </Field>
-        <Field Name="GreaterperDecFormat">
-          <DataField>GreaterperDecFormat</DataField>
-        </Field>
-        <Field Name="TotalInt">
-          <DataField>TotalInt</DataField>
-        </Field>
-        <Field Name="TotalDec">
-          <DataField>TotalDec</DataField>
-        </Field>
-        <Field Name="TotalDecFormat">
-          <DataField>TotalDecFormat</DataField>
-        </Field>
-        <Field Name="Company_Address">
-          <DataField>Company_Address</DataField>
-        </Field>
-        <Field Name="Company_Address2">
-          <DataField>Company_Address2</DataField>
-        </Field>
-        <Field Name="Company_PhoneNo">
-          <DataField>Company_PhoneNo</DataField>
-        </Field>
-        <Field Name="Company_Email">
-          <DataField>Company_Email</DataField>
-        </Field>
-        <Field Name="Company_Picture">
-          <DataField>Company_Picture</DataField>
-        </Field>
-        <Field Name="CurrReport_PAGENO">
-          <DataField>CurrReport_PAGENO</DataField>
-        </Field>
-        <Field Name="USERID">
-          <DataField>USERID</DataField>
-        </Field>
-      </Fields>
-      <rd:DataSetInfo>
-        <rd:DataSetName>DataSet</rd:DataSetName>
-        <rd:SchemaPath>Report.xsd</rd:SchemaPath>
-        <rd:TableName>Result</rd:TableName>
-      </rd:DataSetInfo>
-    </DataSet>
-  </DataSets>
   <ReportSections>
     <ReportSection>
       <Body>
@@ -1607,4 +1472,137 @@ End Function
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportUnitType>Inch</rd:ReportUnitType>
   <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="ReportForNavId_1000000000">
+          <DataField>ReportForNavId_1000000000</DataField>
+        </Field>
+        <Field Name="LessTenthousand">
+          <DataField>LessTenthousand</DataField>
+        </Field>
+        <Field Name="LessTenthousandFormat">
+          <DataField>LessTenthousandFormat</DataField>
+        </Field>
+        <Field Name="LessTenthousandCount">
+          <DataField>LessTenthousandCount</DataField>
+        </Field>
+        <Field Name="Less20thousand">
+          <DataField>Less20thousand</DataField>
+        </Field>
+        <Field Name="Less20thousandFormat">
+          <DataField>Less20thousandFormat</DataField>
+        </Field>
+        <Field Name="Less20thousandCount">
+          <DataField>Less20thousandCount</DataField>
+        </Field>
+        <Field Name="Less50thousand">
+          <DataField>Less50thousand</DataField>
+        </Field>
+        <Field Name="Less50thousandFormat">
+          <DataField>Less50thousandFormat</DataField>
+        </Field>
+        <Field Name="Less50thousandCount">
+          <DataField>Less50thousandCount</DataField>
+        </Field>
+        <Field Name="Less100thousand">
+          <DataField>Less100thousand</DataField>
+        </Field>
+        <Field Name="Less100thousandFormat">
+          <DataField>Less100thousandFormat</DataField>
+        </Field>
+        <Field Name="Less100thousandCount">
+          <DataField>Less100thousandCount</DataField>
+        </Field>
+        <Field Name="Greaterthousand">
+          <DataField>Greaterthousand</DataField>
+        </Field>
+        <Field Name="GreaterthousandFormat">
+          <DataField>GreaterthousandFormat</DataField>
+        </Field>
+        <Field Name="GreaterthousandCount">
+          <DataField>GreaterthousandCount</DataField>
+        </Field>
+        <Field Name="int_10">
+          <DataField>int_10</DataField>
+        </Field>
+        <Field Name="Int_20">
+          <DataField>Int_20</DataField>
+        </Field>
+        <Field Name="int_50">
+          <DataField>int_50</DataField>
+        </Field>
+        <Field Name="int_100">
+          <DataField>int_100</DataField>
+        </Field>
+        <Field Name="GreaterperInt">
+          <DataField>GreaterperInt</DataField>
+        </Field>
+        <Field Name="dec_10">
+          <DataField>dec_10</DataField>
+        </Field>
+        <Field Name="dec_10Format">
+          <DataField>dec_10Format</DataField>
+        </Field>
+        <Field Name="dec_20">
+          <DataField>dec_20</DataField>
+        </Field>
+        <Field Name="dec_20Format">
+          <DataField>dec_20Format</DataField>
+        </Field>
+        <Field Name="dec_50">
+          <DataField>dec_50</DataField>
+        </Field>
+        <Field Name="dec_50Format">
+          <DataField>dec_50Format</DataField>
+        </Field>
+        <Field Name="dec_100">
+          <DataField>dec_100</DataField>
+        </Field>
+        <Field Name="dec_100Format">
+          <DataField>dec_100Format</DataField>
+        </Field>
+        <Field Name="GreaterperDec">
+          <DataField>GreaterperDec</DataField>
+        </Field>
+        <Field Name="GreaterperDecFormat">
+          <DataField>GreaterperDecFormat</DataField>
+        </Field>
+        <Field Name="TotalInt">
+          <DataField>TotalInt</DataField>
+        </Field>
+        <Field Name="TotalDec">
+          <DataField>TotalDec</DataField>
+        </Field>
+        <Field Name="TotalDecFormat">
+          <DataField>TotalDecFormat</DataField>
+        </Field>
+        <Field Name="Company_Address">
+          <DataField>Company_Address</DataField>
+        </Field>
+        <Field Name="Company_Address2">
+          <DataField>Company_Address2</DataField>
+        </Field>
+        <Field Name="Company_PhoneNo">
+          <DataField>Company_PhoneNo</DataField>
+        </Field>
+        <Field Name="Company_Email">
+          <DataField>Company_Email</DataField>
+        </Field>
+        <Field Name="Company_Picture">
+          <DataField>Company_Picture</DataField>
+        </Field>
+        <Field Name="CurrReport_PAGENO">
+          <DataField>CurrReport_PAGENO</DataField>
+        </Field>
+        <Field Name="UserId">
+          <DataField>UserId</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
 </Report>

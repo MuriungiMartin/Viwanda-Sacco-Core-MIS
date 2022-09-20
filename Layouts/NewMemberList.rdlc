@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns:cl="http://schemas.microsoft.com/sqlserver/reporting/2010/01/componentdefinition" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/reportdefinition">
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
@@ -11,144 +11,6 @@
       <rd:DataSourceID>ae3d42ae-1eb4-4aec-9af4-ee2e3e0a0702</rd:DataSourceID>
     </DataSource>
   </DataSources>
-  <DataSets>
-    <DataSet Name="DataSet_Result">
-      <Query>
-        <DataSourceName>DataSource</DataSourceName>
-        <CommandText />
-      </Query>
-      <Fields>
-        <Field Name="FORMAT_TODAY_0_4_">
-          <DataField>FORMAT_TODAY_0_4_</DataField>
-        </Field>
-        <Field Name="COMPANYNAME">
-          <DataField>COMPANYNAME</DataField>
-        </Field>
-        <Field Name="Company_Address">
-          <DataField>Company_Address</DataField>
-        </Field>
-        <Field Name="Company_Address2">
-          <DataField>Company_Address2</DataField>
-        </Field>
-        <Field Name="Company_PhoneNo">
-          <DataField>Company_PhoneNo</DataField>
-        </Field>
-        <Field Name="Company_Email">
-          <DataField>Company_Email</DataField>
-        </Field>
-        <Field Name="Company_Picture">
-          <DataField>Company_Picture</DataField>
-        </Field>
-        <Field Name="CurrReport_PAGENO">
-          <DataField>CurrReport_PAGENO</DataField>
-        </Field>
-        <Field Name="USERID">
-          <DataField>USERID</DataField>
-        </Field>
-        <Field Name="Application_No">
-          <DataField>Application_No</DataField>
-        </Field>
-        <Field Name="Name">
-          <DataField>Name</DataField>
-        </Field>
-        <Field Name="Registration_Date">
-          <DataField>Registration_Date</DataField>
-        </Field>
-        <Field Name="Phone_No">
-          <DataField>Phone_No</DataField>
-        </Field>
-        <Field Name="Agency_Name">
-          <DataField>Agency_Name</DataField>
-        </Field>
-        <Field Name="Personal_No">
-          <DataField>Personal_No</DataField>
-        </Field>
-        <Field Name="ID_No">
-          <DataField>ID_No</DataField>
-        </Field>
-        <Field Name="Verified_By__________________________________________________Caption">
-          <DataField>Verified_By__________________________________________________Caption</DataField>
-        </Field>
-        <Field Name="Confirmed_By__________________________________________________Caption">
-          <DataField>Confirmed_By__________________________________________________Caption</DataField>
-        </Field>
-        <Field Name="Sign________________________Caption">
-          <DataField>Sign________________________Caption</DataField>
-        </Field>
-        <Field Name="Sign________________________Caption_Control1102755003">
-          <DataField>Sign________________________Caption_Control1102755003</DataField>
-        </Field>
-        <Field Name="Date________________________Caption">
-          <DataField>Date________________________Caption</DataField>
-        </Field>
-        <Field Name="Date________________________Caption_Control1102755005">
-          <DataField>Date________________________Caption_Control1102755005</DataField>
-        </Field>
-        <Field Name="NameCreditOff">
-          <DataField>NameCreditOff</DataField>
-        </Field>
-        <Field Name="NameCreditDate">
-          <DataField>NameCreditDate</DataField>
-        </Field>
-        <Field Name="NameCreditSign">
-          <DataField>NameCreditSign</DataField>
-        </Field>
-        <Field Name="NameCreditMNG">
-          <DataField>NameCreditMNG</DataField>
-        </Field>
-        <Field Name="NameCreditMNGDate">
-          <DataField>NameCreditMNGDate</DataField>
-        </Field>
-        <Field Name="NameCreditMNGSign">
-          <DataField>NameCreditMNGSign</DataField>
-        </Field>
-        <Field Name="NameCEO">
-          <DataField>NameCEO</DataField>
-        </Field>
-        <Field Name="NameCEOSign">
-          <DataField>NameCEOSign</DataField>
-        </Field>
-        <Field Name="NameCEODate">
-          <DataField>NameCEODate</DataField>
-        </Field>
-        <Field Name="CreditCom1">
-          <DataField>CreditCom1</DataField>
-        </Field>
-        <Field Name="CreditCom1Date">
-          <DataField>CreditCom1Date</DataField>
-        </Field>
-        <Field Name="CreditCom2">
-          <DataField>CreditCom2</DataField>
-        </Field>
-        <Field Name="CreditCom2Sign">
-          <DataField>CreditCom2Sign</DataField>
-        </Field>
-        <Field Name="CreditCom2Date">
-          <DataField>CreditCom2Date</DataField>
-        </Field>
-        <Field Name="CreditCom3">
-          <DataField>CreditCom3</DataField>
-        </Field>
-        <Field Name="CreditComDate3">
-          <DataField>CreditComDate3</DataField>
-        </Field>
-        <Field Name="CreditComSign3">
-          <DataField>CreditComSign3</DataField>
-        </Field>
-        <Field Name="COMPPIC">
-          <DataField>COMPPIC</DataField>
-        </Field>
-        <Field Name="NAME1">
-          <DataField>NAME1</DataField>
-        </Field>
-      </Fields>
-      <rd:DataSetInfo>
-        <rd:DataSetName>DataSet</rd:DataSetName>
-        <rd:SchemaPath>Report.xsd</rd:SchemaPath>
-        <rd:TableName>Result</rd:TableName>
-      </rd:DataSetInfo>
-    </DataSet>
-  </DataSets>
   <ReportSections>
     <ReportSection>
       <Body>
@@ -1024,4 +886,140 @@ End Function
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
   <rd:ReportID>c05e80d7-6d3c-4983-9a52-ac972f643632</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="ReportForNavId_4645">
+          <DataField>ReportForNavId_4645</DataField>
+        </Field>
+        <Field Name="FORMAT_TODAY_0_4_">
+          <DataField>FORMAT_TODAY_0_4_</DataField>
+        </Field>
+        <Field Name="COMPANYNAME">
+          <DataField>COMPANYNAME</DataField>
+        </Field>
+        <Field Name="Company_Address">
+          <DataField>Company_Address</DataField>
+        </Field>
+        <Field Name="Company_Address2">
+          <DataField>Company_Address2</DataField>
+        </Field>
+        <Field Name="Company_PhoneNo">
+          <DataField>Company_PhoneNo</DataField>
+        </Field>
+        <Field Name="Company_Email">
+          <DataField>Company_Email</DataField>
+        </Field>
+        <Field Name="Company_Picture">
+          <DataField>Company_Picture</DataField>
+        </Field>
+        <Field Name="CurrReport_PAGENO">
+          <DataField>CurrReport_PAGENO</DataField>
+        </Field>
+        <Field Name="UserId">
+          <DataField>UserId</DataField>
+        </Field>
+        <Field Name="Application_No">
+          <DataField>Application_No</DataField>
+        </Field>
+        <Field Name="Name">
+          <DataField>Name</DataField>
+        </Field>
+        <Field Name="Registration_Date">
+          <DataField>Registration_Date</DataField>
+        </Field>
+        <Field Name="Phone_No">
+          <DataField>Phone_No</DataField>
+        </Field>
+        <Field Name="Agency_Name">
+          <DataField>Agency_Name</DataField>
+        </Field>
+        <Field Name="Personal_No">
+          <DataField>Personal_No</DataField>
+        </Field>
+        <Field Name="ID_No">
+          <DataField>ID_No</DataField>
+        </Field>
+        <Field Name="Verified_By__________________________________________________Caption">
+          <DataField>Verified_By__________________________________________________Caption</DataField>
+        </Field>
+        <Field Name="Confirmed_By__________________________________________________Caption">
+          <DataField>Confirmed_By__________________________________________________Caption</DataField>
+        </Field>
+        <Field Name="Sign________________________Caption">
+          <DataField>Sign________________________Caption</DataField>
+        </Field>
+        <Field Name="Sign________________________Caption_Control1102755003">
+          <DataField>Sign________________________Caption_Control1102755003</DataField>
+        </Field>
+        <Field Name="Date________________________Caption">
+          <DataField>Date________________________Caption</DataField>
+        </Field>
+        <Field Name="Date________________________Caption_Control1102755005">
+          <DataField>Date________________________Caption_Control1102755005</DataField>
+        </Field>
+        <Field Name="NameCreditOff">
+          <DataField>NameCreditOff</DataField>
+        </Field>
+        <Field Name="NameCreditDate">
+          <DataField>NameCreditDate</DataField>
+        </Field>
+        <Field Name="NameCreditSign">
+          <DataField>NameCreditSign</DataField>
+        </Field>
+        <Field Name="NameCreditMNG">
+          <DataField>NameCreditMNG</DataField>
+        </Field>
+        <Field Name="NameCreditMNGDate">
+          <DataField>NameCreditMNGDate</DataField>
+        </Field>
+        <Field Name="NameCreditMNGSign">
+          <DataField>NameCreditMNGSign</DataField>
+        </Field>
+        <Field Name="NameCEO">
+          <DataField>NameCEO</DataField>
+        </Field>
+        <Field Name="NameCEOSign">
+          <DataField>NameCEOSign</DataField>
+        </Field>
+        <Field Name="NameCEODate">
+          <DataField>NameCEODate</DataField>
+        </Field>
+        <Field Name="CreditCom1">
+          <DataField>CreditCom1</DataField>
+        </Field>
+        <Field Name="CreditCom1Date">
+          <DataField>CreditCom1Date</DataField>
+        </Field>
+        <Field Name="CreditCom2">
+          <DataField>CreditCom2</DataField>
+        </Field>
+        <Field Name="CreditCom2Sign">
+          <DataField>CreditCom2Sign</DataField>
+        </Field>
+        <Field Name="CreditCom2Date">
+          <DataField>CreditCom2Date</DataField>
+        </Field>
+        <Field Name="CreditCom3">
+          <DataField>CreditCom3</DataField>
+        </Field>
+        <Field Name="CreditComDate3">
+          <DataField>CreditComDate3</DataField>
+        </Field>
+        <Field Name="CreditComSign3">
+          <DataField>CreditComSign3</DataField>
+        </Field>
+        <Field Name="COMPPIC">
+          <DataField>COMPPIC</DataField>
+        </Field>
+        <Field Name="NAME1">
+          <DataField>NAME1</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
 </Report>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/reportdefinition">
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
@@ -11,102 +11,6 @@
       <rd:DataSourceID>dec8084b-2a17-4cf5-b2c3-705fe208db34</rd:DataSourceID>
     </DataSource>
   </DataSources>
-  <DataSets>
-    <DataSet Name="DataSet_Result">
-      <Query>
-        <DataSourceName>DataSource</DataSourceName>
-        <CommandText />
-      </Query>
-      <Fields>
-        <Field Name="CourseTitle_HRTrainingApplications">
-          <DataField>CourseTitle_HRTrainingApplications</DataField>
-        </Field>
-        <Field Name="FromDate_HRTrainingApplications">
-          <DataField>FromDate_HRTrainingApplications</DataField>
-        </Field>
-        <Field Name="ToDate_HRTrainingApplications">
-          <DataField>ToDate_HRTrainingApplications</DataField>
-        </Field>
-        <Field Name="DurationUnits_HRTrainingApplications">
-          <DataField>DurationUnits_HRTrainingApplications</DataField>
-        </Field>
-        <Field Name="Duration_HRTrainingApplications">
-          <DataField>Duration_HRTrainingApplications</DataField>
-        </Field>
-        <Field Name="Duration_HRTrainingApplicationsFormat">
-          <DataField>Duration_HRTrainingApplicationsFormat</DataField>
-        </Field>
-        <Field Name="CostOfTraining_HRTrainingApplications">
-          <DataField>CostOfTraining_HRTrainingApplications</DataField>
-        </Field>
-        <Field Name="CostOfTraining_HRTrainingApplicationsFormat">
-          <DataField>CostOfTraining_HRTrainingApplicationsFormat</DataField>
-        </Field>
-        <Field Name="Location_HRTrainingApplications">
-          <DataField>Location_HRTrainingApplications</DataField>
-        </Field>
-        <Field Name="ApplicationNo_HRTrainingApplications">
-          <DataField>ApplicationNo_HRTrainingApplications</DataField>
-        </Field>
-        <Field Name="EmployeeNo_HRTrainingApplications">
-          <DataField>EmployeeNo_HRTrainingApplications</DataField>
-        </Field>
-        <Field Name="EmployeeName_HRTrainingApplications">
-          <DataField>EmployeeName_HRTrainingApplications</DataField>
-        </Field>
-        <Field Name="ApplicationDate_HRTrainingApplications">
-          <DataField>ApplicationDate_HRTrainingApplications</DataField>
-        </Field>
-        <Field Name="EmployeeDepartment_HRTrainingApplications">
-          <DataField>EmployeeDepartment_HRTrainingApplications</DataField>
-        </Field>
-        <Field Name="Description_HRTrainingApplications">
-          <DataField>Description_HRTrainingApplications</DataField>
-        </Field>
-        <Field Name="PurposeofTraining_HRTrainingApplications">
-          <DataField>PurposeofTraining_HRTrainingApplications</DataField>
-        </Field>
-        <Field Name="CI_Name">
-          <DataField>CI_Name</DataField>
-        </Field>
-        <Field Name="CI_Address">
-          <DataField>CI_Address</DataField>
-        </Field>
-        <Field Name="CI_Address2">
-          <DataField>CI_Address2</DataField>
-        </Field>
-        <Field Name="CI_PhoneNo">
-          <DataField>CI_PhoneNo</DataField>
-        </Field>
-        <Field Name="CI_Picture">
-          <DataField>CI_Picture</DataField>
-        </Field>
-        <Field Name="CI_City">
-          <DataField>CI_City</DataField>
-        </Field>
-        <Field Name="UserID_ApprovalCommentLine">
-          <DataField>UserID_ApprovalCommentLine</DataField>
-        </Field>
-        <Field Name="Comment_ApprovalCommentLine">
-          <DataField>Comment_ApprovalCommentLine</DataField>
-        </Field>
-        <Field Name="SenderID_ApprovalEntry">
-          <DataField>SenderID_ApprovalEntry</DataField>
-        </Field>
-        <Field Name="ApproverID_ApprovalEntry">
-          <DataField>ApproverID_ApprovalEntry</DataField>
-        </Field>
-        <Field Name="DateTimeSentforApproval_ApprovalEntry">
-          <DataField>DateTimeSentforApproval_ApprovalEntry</DataField>
-        </Field>
-      </Fields>
-      <rd:DataSetInfo>
-        <rd:DataSetName>DataSet</rd:DataSetName>
-        <rd:SchemaPath>Report.xsd</rd:SchemaPath>
-        <rd:TableName>Result</rd:TableName>
-      </rd:DataSetInfo>
-    </DataSet>
-  </DataSets>
   <ReportSections>
     <ReportSection>
       <Body>
@@ -3115,4 +3019,107 @@ End Function
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
   <rd:ReportID>f1e4c3f7-545b-4d91-83b7-0d1ee6ded51c</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="ReportForNavId_6373">
+          <DataField>ReportForNavId_6373</DataField>
+        </Field>
+        <Field Name="CourseTitle_HRTrainingApplications">
+          <DataField>CourseTitle_HRTrainingApplications</DataField>
+        </Field>
+        <Field Name="FromDate_HRTrainingApplications">
+          <DataField>FromDate_HRTrainingApplications</DataField>
+        </Field>
+        <Field Name="ToDate_HRTrainingApplications">
+          <DataField>ToDate_HRTrainingApplications</DataField>
+        </Field>
+        <Field Name="DurationUnits_HRTrainingApplications">
+          <DataField>DurationUnits_HRTrainingApplications</DataField>
+        </Field>
+        <Field Name="Duration_HRTrainingApplications">
+          <DataField>Duration_HRTrainingApplications</DataField>
+        </Field>
+        <Field Name="Duration_HRTrainingApplicationsFormat">
+          <DataField>Duration_HRTrainingApplicationsFormat</DataField>
+        </Field>
+        <Field Name="CostOfTraining_HRTrainingApplications">
+          <DataField>CostOfTraining_HRTrainingApplications</DataField>
+        </Field>
+        <Field Name="CostOfTraining_HRTrainingApplicationsFormat">
+          <DataField>CostOfTraining_HRTrainingApplicationsFormat</DataField>
+        </Field>
+        <Field Name="Location_HRTrainingApplications">
+          <DataField>Location_HRTrainingApplications</DataField>
+        </Field>
+        <Field Name="ApplicationNo_HRTrainingApplications">
+          <DataField>ApplicationNo_HRTrainingApplications</DataField>
+        </Field>
+        <Field Name="EmployeeNo_HRTrainingApplications">
+          <DataField>EmployeeNo_HRTrainingApplications</DataField>
+        </Field>
+        <Field Name="EmployeeName_HRTrainingApplications">
+          <DataField>EmployeeName_HRTrainingApplications</DataField>
+        </Field>
+        <Field Name="ApplicationDate_HRTrainingApplications">
+          <DataField>ApplicationDate_HRTrainingApplications</DataField>
+        </Field>
+        <Field Name="EmployeeDepartment_HRTrainingApplications">
+          <DataField>EmployeeDepartment_HRTrainingApplications</DataField>
+        </Field>
+        <Field Name="Description_HRTrainingApplications">
+          <DataField>Description_HRTrainingApplications</DataField>
+        </Field>
+        <Field Name="PurposeofTraining_HRTrainingApplications">
+          <DataField>PurposeofTraining_HRTrainingApplications</DataField>
+        </Field>
+        <Field Name="CI_Name">
+          <DataField>CI_Name</DataField>
+        </Field>
+        <Field Name="CI_Address">
+          <DataField>CI_Address</DataField>
+        </Field>
+        <Field Name="CI_Address2">
+          <DataField>CI_Address2</DataField>
+        </Field>
+        <Field Name="CI_PhoneNo">
+          <DataField>CI_PhoneNo</DataField>
+        </Field>
+        <Field Name="CI_Picture">
+          <DataField>CI_Picture</DataField>
+        </Field>
+        <Field Name="CI_City">
+          <DataField>CI_City</DataField>
+        </Field>
+        <Field Name="ReportForNavId_8731">
+          <DataField>ReportForNavId_8731</DataField>
+        </Field>
+        <Field Name="UserID_ApprovalCommentLine">
+          <DataField>UserID_ApprovalCommentLine</DataField>
+        </Field>
+        <Field Name="Comment_ApprovalCommentLine">
+          <DataField>Comment_ApprovalCommentLine</DataField>
+        </Field>
+        <Field Name="ReportForNavId_1171">
+          <DataField>ReportForNavId_1171</DataField>
+        </Field>
+        <Field Name="SenderID_ApprovalEntry">
+          <DataField>SenderID_ApprovalEntry</DataField>
+        </Field>
+        <Field Name="ApproverID_ApprovalEntry">
+          <DataField>ApproverID_ApprovalEntry</DataField>
+        </Field>
+        <Field Name="DateTimeSentforApproval_ApprovalEntry">
+          <DataField>DateTimeSentforApproval_ApprovalEntry</DataField>
+        </Field>
+        <Field Name="ReportForNavId_7968">
+          <DataField>ReportForNavId_7968</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
 </Report>

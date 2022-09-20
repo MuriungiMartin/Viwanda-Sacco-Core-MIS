@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
@@ -11,81 +11,6 @@
       <rd:DataSourceID>2989a104-50a0-4161-8263-040cd369d35e</rd:DataSourceID>
     </DataSource>
   </DataSources>
-  <DataSets>
-    <DataSet Name="DataSet_Result">
-      <Query>
-        <DataSourceName>DataSource</DataSourceName>
-        <CommandText />
-      </Query>
-      <Fields>
-        <Field Name="No_HREmployees">
-          <DataField>No_HREmployees</DataField>
-        </Field>
-        <Field Name="FirstName_HREmployees">
-          <DataField>FirstName_HREmployees</DataField>
-        </Field>
-        <Field Name="MiddleName_HREmployees">
-          <DataField>MiddleName_HREmployees</DataField>
-        </Field>
-        <Field Name="LastName_HREmployees">
-          <DataField>LastName_HREmployees</DataField>
-        </Field>
-        <Field Name="LeaveType_HREmployees">
-          <DataField>LeaveType_HREmployees</DataField>
-        </Field>
-        <Field Name="LeaveBalance_HREmployees">
-          <DataField>LeaveBalance_HREmployees</DataField>
-        </Field>
-        <Field Name="LeaveBalance_HREmployeesFormat">
-          <DataField>LeaveBalance_HREmployeesFormat</DataField>
-        </Field>
-        <Field Name="TotalLeaveTaken_HREmployees">
-          <DataField>TotalLeaveTaken_HREmployees</DataField>
-        </Field>
-        <Field Name="TotalLeaveTaken_HREmployeesFormat">
-          <DataField>TotalLeaveTaken_HREmployeesFormat</DataField>
-        </Field>
-        <Field Name="TotalLeaveDays_HREmployees">
-          <DataField>TotalLeaveDays_HREmployees</DataField>
-        </Field>
-        <Field Name="TotalLeaveDays_HREmployeesFormat">
-          <DataField>TotalLeaveDays_HREmployeesFormat</DataField>
-        </Field>
-        <Field Name="ReimbursedLeaveDays_HREmployees">
-          <DataField>ReimbursedLeaveDays_HREmployees</DataField>
-        </Field>
-        <Field Name="ReimbursedLeaveDays_HREmployeesFormat">
-          <DataField>ReimbursedLeaveDays_HREmployeesFormat</DataField>
-        </Field>
-        <Field Name="AllocatedLeaveDays_HREmployees">
-          <DataField>AllocatedLeaveDays_HREmployees</DataField>
-        </Field>
-        <Field Name="AllocatedLeaveDays_HREmployeesFormat">
-          <DataField>AllocatedLeaveDays_HREmployeesFormat</DataField>
-        </Field>
-        <Field Name="ComapnyName">
-          <DataField>ComapnyName</DataField>
-        </Field>
-        <Field Name="CompanyAddress">
-          <DataField>CompanyAddress</DataField>
-        </Field>
-        <Field Name="CompanyPicture">
-          <DataField>CompanyPicture</DataField>
-        </Field>
-        <Field Name="LeaveBalance">
-          <DataField>LeaveBalance</DataField>
-        </Field>
-        <Field Name="LeaveBalanceFormat">
-          <DataField>LeaveBalanceFormat</DataField>
-        </Field>
-      </Fields>
-      <rd:DataSetInfo>
-        <rd:DataSetName>DataSet</rd:DataSetName>
-        <rd:SchemaPath>Report.xsd</rd:SchemaPath>
-        <rd:TableName>Result</rd:TableName>
-      </rd:DataSetInfo>
-    </DataSet>
-  </DataSets>
   <ReportSections>
     <ReportSection>
       <Body>
@@ -885,12 +810,6 @@
       </Page>
     </ReportSection>
   </ReportSections>
-  <ReportParametersLayout>
-    <GridLayoutDefinition>
-      <NumberOfColumns>4</NumberOfColumns>
-      <NumberOfRows>2</NumberOfRows>
-    </GridLayoutDefinition>
-  </ReportParametersLayout>
   <Code>Public Function BlankZero(ByVal Value As Decimal)
     if Value = 0 then
         Return ""
@@ -930,4 +849,77 @@ End Function
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
   <rd:ReportID>1f0a852f-27d4-4e50-8fb8-1d43650fdcfe</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="ReportForNavId_3725">
+          <DataField>ReportForNavId_3725</DataField>
+        </Field>
+        <Field Name="No_HREmployees">
+          <DataField>No_HREmployees</DataField>
+        </Field>
+        <Field Name="FirstName_HREmployees">
+          <DataField>FirstName_HREmployees</DataField>
+        </Field>
+        <Field Name="MiddleName_HREmployees">
+          <DataField>MiddleName_HREmployees</DataField>
+        </Field>
+        <Field Name="LastName_HREmployees">
+          <DataField>LastName_HREmployees</DataField>
+        </Field>
+        <Field Name="LeaveType_HREmployees">
+          <DataField>LeaveType_HREmployees</DataField>
+        </Field>
+        <Field Name="LeaveBalance_HREmployees">
+          <DataField>LeaveBalance_HREmployees</DataField>
+        </Field>
+        <Field Name="LeaveBalance_HREmployeesFormat">
+          <DataField>LeaveBalance_HREmployeesFormat</DataField>
+        </Field>
+        <Field Name="TotalLeaveTaken_HREmployees">
+          <DataField>TotalLeaveTaken_HREmployees</DataField>
+        </Field>
+        <Field Name="TotalLeaveTaken_HREmployeesFormat">
+          <DataField>TotalLeaveTaken_HREmployeesFormat</DataField>
+        </Field>
+        <Field Name="TotalLeaveDays_HREmployees">
+          <DataField>TotalLeaveDays_HREmployees</DataField>
+        </Field>
+        <Field Name="TotalLeaveDays_HREmployeesFormat">
+          <DataField>TotalLeaveDays_HREmployeesFormat</DataField>
+        </Field>
+        <Field Name="ReimbursedLeaveDays_HREmployees">
+          <DataField>ReimbursedLeaveDays_HREmployees</DataField>
+        </Field>
+        <Field Name="ReimbursedLeaveDays_HREmployeesFormat">
+          <DataField>ReimbursedLeaveDays_HREmployeesFormat</DataField>
+        </Field>
+        <Field Name="AllocatedLeaveDays_HREmployees">
+          <DataField>AllocatedLeaveDays_HREmployees</DataField>
+        </Field>
+        <Field Name="AllocatedLeaveDays_HREmployeesFormat">
+          <DataField>AllocatedLeaveDays_HREmployeesFormat</DataField>
+        </Field>
+        <Field Name="ComapnyName">
+          <DataField>ComapnyName</DataField>
+        </Field>
+        <Field Name="CompanyAddress">
+          <DataField>CompanyAddress</DataField>
+        </Field>
+        <Field Name="CompanyPicture">
+          <DataField>CompanyPicture</DataField>
+        </Field>
+        <Field Name="LeaveBalance">
+          <DataField>LeaveBalance</DataField>
+        </Field>
+        <Field Name="LeaveBalanceFormat">
+          <DataField>LeaveBalanceFormat</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
 </Report>

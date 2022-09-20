@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns:cl="http://schemas.microsoft.com/sqlserver/reporting/2010/01/componentdefinition" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/reportdefinition">
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
@@ -11,51 +11,6 @@
       <rd:DataSourceID>71ea91dd-2010-429d-8164-9bc74519c47e</rd:DataSourceID>
     </DataSource>
   </DataSources>
-  <DataSets>
-    <DataSet Name="DataSet_Result">
-      <Query>
-        <DataSourceName>DataSource</DataSourceName>
-        <CommandText />
-      </Query>
-      <Fields>
-        <Field Name="Description_MemberLedgerEntry">
-          <DataField>Description_MemberLedgerEntry</DataField>
-        </Field>
-        <Field Name="DocumentNo_MemberLedgerEntry">
-          <DataField>DocumentNo_MemberLedgerEntry</DataField>
-        </Field>
-        <Field Name="CustomerNo_MemberLedgerEntry">
-          <DataField>CustomerNo_MemberLedgerEntry</DataField>
-        </Field>
-        <Field Name="TransactionType_MemberLedgerEntry">
-          <DataField>TransactionType_MemberLedgerEntry</DataField>
-        </Field>
-        <Field Name="Amount_MemberLedgerEntry">
-          <DataField>Amount_MemberLedgerEntry</DataField>
-        </Field>
-        <Field Name="Amount_MemberLedgerEntryFormat">
-          <DataField>Amount_MemberLedgerEntryFormat</DataField>
-        </Field>
-        <Field Name="Amounts">
-          <DataField>Amounts</DataField>
-        </Field>
-        <Field Name="AmountsFormat">
-          <DataField>AmountsFormat</DataField>
-        </Field>
-        <Field Name="entry">
-          <DataField>entry</DataField>
-        </Field>
-        <Field Name="EntryNo_MemberLedgerEntry">
-          <DataField>EntryNo_MemberLedgerEntry</DataField>
-        </Field>
-      </Fields>
-      <rd:DataSetInfo>
-        <rd:DataSetName>DataSet</rd:DataSetName>
-        <rd:SchemaPath>Report.xsd</rd:SchemaPath>
-        <rd:TableName>Result</rd:TableName>
-      </rd:DataSetInfo>
-    </DataSet>
-  </DataSets>
   <ReportSections>
     <ReportSection>
       <Body>
@@ -501,4 +456,47 @@ End Function
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportUnitType>Inch</rd:ReportUnitType>
   <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="ReportForNavId_1000000000">
+          <DataField>ReportForNavId_1000000000</DataField>
+        </Field>
+        <Field Name="Description_MemberLedgerEntry">
+          <DataField>Description_MemberLedgerEntry</DataField>
+        </Field>
+        <Field Name="DocumentNo_MemberLedgerEntry">
+          <DataField>DocumentNo_MemberLedgerEntry</DataField>
+        </Field>
+        <Field Name="CustomerNo_MemberLedgerEntry">
+          <DataField>CustomerNo_MemberLedgerEntry</DataField>
+        </Field>
+        <Field Name="TransactionType_MemberLedgerEntry">
+          <DataField>TransactionType_MemberLedgerEntry</DataField>
+        </Field>
+        <Field Name="Amount_MemberLedgerEntry">
+          <DataField>Amount_MemberLedgerEntry</DataField>
+        </Field>
+        <Field Name="Amount_MemberLedgerEntryFormat">
+          <DataField>Amount_MemberLedgerEntryFormat</DataField>
+        </Field>
+        <Field Name="Amounts">
+          <DataField>Amounts</DataField>
+        </Field>
+        <Field Name="AmountsFormat">
+          <DataField>AmountsFormat</DataField>
+        </Field>
+        <Field Name="entry">
+          <DataField>entry</DataField>
+        </Field>
+        <Field Name="EntryNo_MemberLedgerEntry">
+          <DataField>EntryNo_MemberLedgerEntry</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
 </Report>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
@@ -11,102 +11,6 @@
       <rd:DataSourceID>3d171f70-353e-433b-9723-d162b852728b</rd:DataSourceID>
     </DataSource>
   </DataSources>
-  <DataSets>
-    <DataSet Name="DataSet_Result">
-      <Query>
-        <DataSourceName>DataSource</DataSourceName>
-        <CommandText />
-      </Query>
-      <Fields>
-        <Field Name="No_PurchaseHeader">
-          <DataField>No_PurchaseHeader</DataField>
-        </Field>
-        <Field Name="ExpectedReceiptDate_PurchaseHeader">
-          <DataField>ExpectedReceiptDate_PurchaseHeader</DataField>
-        </Field>
-        <Field Name="DocumentDate_PurchaseHeader">
-          <DataField>DocumentDate_PurchaseHeader</DataField>
-        </Field>
-        <Field Name="CompanyINfoName">
-          <DataField>CompanyINfoName</DataField>
-        </Field>
-        <Field Name="CompanyINfoAdd">
-          <DataField>CompanyINfoAdd</DataField>
-        </Field>
-        <Field Name="CompanyINfoPicture">
-          <DataField>CompanyINfoPicture</DataField>
-        </Field>
-        <Field Name="ShortcutDimension1Code_PurchaseHeader">
-          <DataField>ShortcutDimension1Code_PurchaseHeader</DataField>
-        </Field>
-        <Field Name="ShortcutDimension2Code_PurchaseHeader">
-          <DataField>ShortcutDimension2Code_PurchaseHeader</DataField>
-        </Field>
-        <Field Name="LocationCode_PurchaseHeader">
-          <DataField>LocationCode_PurchaseHeader</DataField>
-        </Field>
-        <Field Name="dim1name">
-          <DataField>dim1name</DataField>
-        </Field>
-        <Field Name="dim2name">
-          <DataField>dim2name</DataField>
-        </Field>
-        <Field Name="Type_PurchaseLine">
-          <DataField>Type_PurchaseLine</DataField>
-        </Field>
-        <Field Name="No_PurchaseLine">
-          <DataField>No_PurchaseLine</DataField>
-        </Field>
-        <Field Name="Description_PurchaseLine">
-          <DataField>Description_PurchaseLine</DataField>
-        </Field>
-        <Field Name="Description2_PurchaseLine">
-          <DataField>Description2_PurchaseLine</DataField>
-        </Field>
-        <Field Name="UnitofMeasure_PurchaseLine">
-          <DataField>UnitofMeasure_PurchaseLine</DataField>
-        </Field>
-        <Field Name="Quantity_PurchaseLine">
-          <DataField>Quantity_PurchaseLine</DataField>
-        </Field>
-        <Field Name="Quantity_PurchaseLineFormat">
-          <DataField>Quantity_PurchaseLineFormat</DataField>
-        </Field>
-        <Field Name="ExpectedReceiptDate_PurchaseLine">
-          <DataField>ExpectedReceiptDate_PurchaseLine</DataField>
-        </Field>
-        <Field Name="sno">
-          <DataField>sno</DataField>
-        </Field>
-        <Field Name="inventory">
-          <DataField>inventory</DataField>
-        </Field>
-        <Field Name="inventoryFormat">
-          <DataField>inventoryFormat</DataField>
-        </Field>
-        <Field Name="SequenceNo_ApprovalEntry">
-          <DataField>SequenceNo_ApprovalEntry</DataField>
-        </Field>
-        <Field Name="SenderID_ApprovalEntry">
-          <DataField>SenderID_ApprovalEntry</DataField>
-        </Field>
-        <Field Name="ApproverID_ApprovalEntry">
-          <DataField>ApproverID_ApprovalEntry</DataField>
-        </Field>
-        <Field Name="DateTimeSentforApproval_ApprovalEntry">
-          <DataField>DateTimeSentforApproval_ApprovalEntry</DataField>
-        </Field>
-        <Field Name="LastDateTimeModified_ApprovalEntry">
-          <DataField>LastDateTimeModified_ApprovalEntry</DataField>
-        </Field>
-      </Fields>
-      <rd:DataSetInfo>
-        <rd:DataSetName>DataSet</rd:DataSetName>
-        <rd:SchemaPath>Report.xsd</rd:SchemaPath>
-        <rd:TableName>Result</rd:TableName>
-      </rd:DataSetInfo>
-    </DataSet>
-  </DataSets>
   <ReportSections>
     <ReportSection>
       <Body>
@@ -2273,12 +2177,6 @@
       </Page>
     </ReportSection>
   </ReportSections>
-  <ReportParametersLayout>
-    <GridLayoutDefinition>
-      <NumberOfColumns>4</NumberOfColumns>
-      <NumberOfRows>2</NumberOfRows>
-    </GridLayoutDefinition>
-  </ReportParametersLayout>
   <Code>Public Function BlankZero(ByVal Value As Decimal)
     if Value = 0 then
         Return ""
@@ -2318,4 +2216,104 @@ End Function
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
   <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="ReportForNavId_1102755000">
+          <DataField>ReportForNavId_1102755000</DataField>
+        </Field>
+        <Field Name="No_PurchaseHeader">
+          <DataField>No_PurchaseHeader</DataField>
+        </Field>
+        <Field Name="ExpectedReceiptDate_PurchaseHeader">
+          <DataField>ExpectedReceiptDate_PurchaseHeader</DataField>
+        </Field>
+        <Field Name="DocumentDate_PurchaseHeader">
+          <DataField>DocumentDate_PurchaseHeader</DataField>
+        </Field>
+        <Field Name="CompanyINfoName">
+          <DataField>CompanyINfoName</DataField>
+        </Field>
+        <Field Name="CompanyINfoAdd">
+          <DataField>CompanyINfoAdd</DataField>
+        </Field>
+        <Field Name="CompanyINfoPicture">
+          <DataField>CompanyINfoPicture</DataField>
+        </Field>
+        <Field Name="ShortcutDimension1Code_PurchaseHeader">
+          <DataField>ShortcutDimension1Code_PurchaseHeader</DataField>
+        </Field>
+        <Field Name="ShortcutDimension2Code_PurchaseHeader">
+          <DataField>ShortcutDimension2Code_PurchaseHeader</DataField>
+        </Field>
+        <Field Name="LocationCode_PurchaseHeader">
+          <DataField>LocationCode_PurchaseHeader</DataField>
+        </Field>
+        <Field Name="dim1name">
+          <DataField>dim1name</DataField>
+        </Field>
+        <Field Name="dim2name">
+          <DataField>dim2name</DataField>
+        </Field>
+        <Field Name="ReportForNavId_1102755001">
+          <DataField>ReportForNavId_1102755001</DataField>
+        </Field>
+        <Field Name="Type_PurchaseLine">
+          <DataField>Type_PurchaseLine</DataField>
+        </Field>
+        <Field Name="No_PurchaseLine">
+          <DataField>No_PurchaseLine</DataField>
+        </Field>
+        <Field Name="Description_PurchaseLine">
+          <DataField>Description_PurchaseLine</DataField>
+        </Field>
+        <Field Name="Description2_PurchaseLine">
+          <DataField>Description2_PurchaseLine</DataField>
+        </Field>
+        <Field Name="UnitofMeasure_PurchaseLine">
+          <DataField>UnitofMeasure_PurchaseLine</DataField>
+        </Field>
+        <Field Name="Quantity_PurchaseLine">
+          <DataField>Quantity_PurchaseLine</DataField>
+        </Field>
+        <Field Name="Quantity_PurchaseLineFormat">
+          <DataField>Quantity_PurchaseLineFormat</DataField>
+        </Field>
+        <Field Name="ExpectedReceiptDate_PurchaseLine">
+          <DataField>ExpectedReceiptDate_PurchaseLine</DataField>
+        </Field>
+        <Field Name="sno">
+          <DataField>sno</DataField>
+        </Field>
+        <Field Name="inventory">
+          <DataField>inventory</DataField>
+        </Field>
+        <Field Name="inventoryFormat">
+          <DataField>inventoryFormat</DataField>
+        </Field>
+        <Field Name="ReportForNavId_1102755002">
+          <DataField>ReportForNavId_1102755002</DataField>
+        </Field>
+        <Field Name="SequenceNo_ApprovalEntry">
+          <DataField>SequenceNo_ApprovalEntry</DataField>
+        </Field>
+        <Field Name="SenderID_ApprovalEntry">
+          <DataField>SenderID_ApprovalEntry</DataField>
+        </Field>
+        <Field Name="ApproverID_ApprovalEntry">
+          <DataField>ApproverID_ApprovalEntry</DataField>
+        </Field>
+        <Field Name="DateTimeSentforApproval_ApprovalEntry">
+          <DataField>DateTimeSentforApproval_ApprovalEntry</DataField>
+        </Field>
+        <Field Name="LastDateTimeModified_ApprovalEntry">
+          <DataField>LastDateTimeModified_ApprovalEntry</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
 </Report>

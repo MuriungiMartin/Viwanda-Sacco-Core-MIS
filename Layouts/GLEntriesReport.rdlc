@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
@@ -11,81 +11,6 @@
       <rd:DataSourceID>1450faba-eddd-4435-a980-885d419afba3</rd:DataSourceID>
     </DataSource>
   </DataSources>
-  <DataSets>
-    <DataSet Name="DataSet_Result">
-      <Query>
-        <DataSourceName>DataSource</DataSourceName>
-        <CommandText />
-      </Query>
-      <Fields>
-        <Field Name="Name">
-          <DataField>Name</DataField>
-        </Field>
-        <Field Name="Address">
-          <DataField>Address</DataField>
-        </Field>
-        <Field Name="Picture">
-          <DataField>Picture</DataField>
-        </Field>
-        <Field Name="CreditAmount_GLEntry">
-          <DataField>CreditAmount_GLEntry</DataField>
-        </Field>
-        <Field Name="CreditAmount_GLEntryFormat">
-          <DataField>CreditAmount_GLEntryFormat</DataField>
-        </Field>
-        <Field Name="DebitAmount_GLEntry">
-          <DataField>DebitAmount_GLEntry</DataField>
-        </Field>
-        <Field Name="DebitAmount_GLEntryFormat">
-          <DataField>DebitAmount_GLEntryFormat</DataField>
-        </Field>
-        <Field Name="Description_GLEntry">
-          <DataField>Description_GLEntry</DataField>
-        </Field>
-        <Field Name="PostingDate_GLEntry">
-          <DataField>PostingDate_GLEntry</DataField>
-        </Field>
-        <Field Name="GLAccountName_GLEntry">
-          <DataField>GLAccountName_GLEntry</DataField>
-        </Field>
-        <Field Name="GLAccountNo_GLEntry">
-          <DataField>GLAccountNo_GLEntry</DataField>
-        </Field>
-        <Field Name="SourceType_GLEntry">
-          <DataField>SourceType_GLEntry</DataField>
-        </Field>
-        <Field Name="UserID_GLEntry">
-          <DataField>UserID_GLEntry</DataField>
-        </Field>
-        <Field Name="SourceCode_GLEntry">
-          <DataField>SourceCode_GLEntry</DataField>
-        </Field>
-        <Field Name="SourceNo_GLEntry">
-          <DataField>SourceNo_GLEntry</DataField>
-        </Field>
-        <Field Name="CreatedTime">
-          <DataField>CreatedTime</DataField>
-        </Field>
-        <Field Name="Contacts">
-          <DataField>Contacts</DataField>
-        </Field>
-        <Field Name="ComputerName">
-          <DataField>ComputerName</DataField>
-        </Field>
-        <Field Name="USERID">
-          <DataField>USERID</DataField>
-        </Field>
-        <Field Name="DocumentNo_GLEntry">
-          <DataField>DocumentNo_GLEntry</DataField>
-        </Field>
-      </Fields>
-      <rd:DataSetInfo>
-        <rd:DataSetName>DataSet</rd:DataSetName>
-        <rd:SchemaPath>Report.xsd</rd:SchemaPath>
-        <rd:TableName>Result</rd:TableName>
-      </rd:DataSetInfo>
-    </DataSet>
-  </DataSets>
   <ReportSections>
     <ReportSection>
       <Body>
@@ -2200,12 +2125,6 @@
       </Page>
     </ReportSection>
   </ReportSections>
-  <ReportParametersLayout>
-    <GridLayoutDefinition>
-      <NumberOfColumns>4</NumberOfColumns>
-      <NumberOfRows>2</NumberOfRows>
-    </GridLayoutDefinition>
-  </ReportParametersLayout>
   <Code>Public Function BlankZero(ByVal Value As Decimal)
     if Value = 0 then
         Return ""
@@ -2245,4 +2164,77 @@ End Function
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportUnitType>Inch</rd:ReportUnitType>
   <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="ReportForNavId_1000000000">
+          <DataField>ReportForNavId_1000000000</DataField>
+        </Field>
+        <Field Name="Name">
+          <DataField>Name</DataField>
+        </Field>
+        <Field Name="Address">
+          <DataField>Address</DataField>
+        </Field>
+        <Field Name="Picture">
+          <DataField>Picture</DataField>
+        </Field>
+        <Field Name="CreditAmount_GLEntry">
+          <DataField>CreditAmount_GLEntry</DataField>
+        </Field>
+        <Field Name="CreditAmount_GLEntryFormat">
+          <DataField>CreditAmount_GLEntryFormat</DataField>
+        </Field>
+        <Field Name="DebitAmount_GLEntry">
+          <DataField>DebitAmount_GLEntry</DataField>
+        </Field>
+        <Field Name="DebitAmount_GLEntryFormat">
+          <DataField>DebitAmount_GLEntryFormat</DataField>
+        </Field>
+        <Field Name="Description_GLEntry">
+          <DataField>Description_GLEntry</DataField>
+        </Field>
+        <Field Name="PostingDate_GLEntry">
+          <DataField>PostingDate_GLEntry</DataField>
+        </Field>
+        <Field Name="GLAccountName_GLEntry">
+          <DataField>GLAccountName_GLEntry</DataField>
+        </Field>
+        <Field Name="GLAccountNo_GLEntry">
+          <DataField>GLAccountNo_GLEntry</DataField>
+        </Field>
+        <Field Name="SourceType_GLEntry">
+          <DataField>SourceType_GLEntry</DataField>
+        </Field>
+        <Field Name="UserID_GLEntry">
+          <DataField>UserID_GLEntry</DataField>
+        </Field>
+        <Field Name="SourceCode_GLEntry">
+          <DataField>SourceCode_GLEntry</DataField>
+        </Field>
+        <Field Name="SourceNo_GLEntry">
+          <DataField>SourceNo_GLEntry</DataField>
+        </Field>
+        <Field Name="CreatedTime">
+          <DataField>CreatedTime</DataField>
+        </Field>
+        <Field Name="Contacts">
+          <DataField>Contacts</DataField>
+        </Field>
+        <Field Name="ComputerName">
+          <DataField>ComputerName</DataField>
+        </Field>
+        <Field Name="UserId">
+          <DataField>UserId</DataField>
+        </Field>
+        <Field Name="DocumentNo_GLEntry">
+          <DataField>DocumentNo_GLEntry</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
 </Report>

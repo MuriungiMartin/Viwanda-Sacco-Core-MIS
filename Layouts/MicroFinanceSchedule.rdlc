@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns:cl="http://schemas.microsoft.com/sqlserver/reporting/2010/01/componentdefinition" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/reportdefinition">
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
@@ -11,114 +11,6 @@
       <rd:DataSourceID>9451aca6-5b2c-4bd2-8f0f-c40d3ef3aa32</rd:DataSourceID>
     </DataSource>
   </DataSources>
-  <DataSets>
-    <DataSet Name="DataSet_Result">
-      <Query>
-        <DataSourceName>DataSource</DataSourceName>
-        <CommandText />
-      </Query>
-      <Fields>
-        <Field Name="GroupName_MicroFinTransactions">
-          <DataField>GroupName_MicroFinTransactions</DataField>
-        </Field>
-        <Field Name="GroupCode_MicroFinTransactions">
-          <DataField>GroupCode_MicroFinTransactions</DataField>
-        </Field>
-        <Field Name="MicroOfficer_MicroFinTransactions">
-          <DataField>MicroOfficer_MicroFinTransactions</DataField>
-        </Field>
-        <Field Name="GroupMeetingDay_MicroFinTransactions">
-          <DataField>GroupMeetingDay_MicroFinTransactions</DataField>
-        </Field>
-        <Field Name="Account_No">
-          <DataField>Account_No</DataField>
-        </Field>
-        <Field Name="Account_Name">
-          <DataField>Account_Name</DataField>
-        </Field>
-        <Field Name="Loan_No">
-          <DataField>Loan_No</DataField>
-        </Field>
-        <Field Name="Expected_Principle">
-          <DataField>Expected_Principle</DataField>
-        </Field>
-        <Field Name="Expected_PrincipleFormat">
-          <DataField>Expected_PrincipleFormat</DataField>
-        </Field>
-        <Field Name="Expected_Interest">
-          <DataField>Expected_Interest</DataField>
-        </Field>
-        <Field Name="Expected_InterestFormat">
-          <DataField>Expected_InterestFormat</DataField>
-        </Field>
-        <Field Name="Savings">
-          <DataField>Savings</DataField>
-        </Field>
-        <Field Name="SavingsFormat">
-          <DataField>SavingsFormat</DataField>
-        </Field>
-        <Field Name="Loan_Balance">
-          <DataField>Loan_Balance</DataField>
-        </Field>
-        <Field Name="Loan_BalanceFormat">
-          <DataField>Loan_BalanceFormat</DataField>
-        </Field>
-        <Field Name="Group_Name">
-          <DataField>Group_Name</DataField>
-        </Field>
-        <Field Name="Group_Code">
-          <DataField>Group_Code</DataField>
-        </Field>
-        <Field Name="Company_Name">
-          <DataField>Company_Name</DataField>
-        </Field>
-        <Field Name="Company_Picture">
-          <DataField>Company_Picture</DataField>
-        </Field>
-        <Field Name="Company_Address">
-          <DataField>Company_Address</DataField>
-        </Field>
-        <Field Name="Company_phone">
-          <DataField>Company_phone</DataField>
-        </Field>
-        <Field Name="FORMAT_TODAY_0_4_">
-          <DataField>FORMAT_TODAY_0_4_</DataField>
-        </Field>
-        <Field Name="CurrReport_PAGENO">
-          <DataField>CurrReport_PAGENO</DataField>
-        </Field>
-        <Field Name="USERID">
-          <DataField>USERID</DataField>
-        </Field>
-        <Field Name="CEEPOfficer">
-          <DataField>CEEPOfficer</DataField>
-        </Field>
-        <Field Name="MeetingDate">
-          <DataField>MeetingDate</DataField>
-        </Field>
-        <Field Name="ReceiptNo">
-          <DataField>ReceiptNo</DataField>
-        </Field>
-        <Field Name="DepositsContribution_MicroFinSchedule">
-          <DataField>DepositsContribution_MicroFinSchedule</DataField>
-        </Field>
-        <Field Name="DepositsContribution_MicroFinScheduleFormat">
-          <DataField>DepositsContribution_MicroFinScheduleFormat</DataField>
-        </Field>
-        <Field Name="AmountReceived_MicroFinSchedule">
-          <DataField>AmountReceived_MicroFinSchedule</DataField>
-        </Field>
-        <Field Name="AmountReceived_MicroFinScheduleFormat">
-          <DataField>AmountReceived_MicroFinScheduleFormat</DataField>
-        </Field>
-      </Fields>
-      <rd:DataSetInfo>
-        <rd:DataSetName>DataSet</rd:DataSetName>
-        <rd:SchemaPath>Report.xsd</rd:SchemaPath>
-        <rd:TableName>Result</rd:TableName>
-      </rd:DataSetInfo>
-    </DataSet>
-  </DataSets>
   <ReportSections>
     <ReportSection>
       <Body>
@@ -1822,4 +1714,113 @@ End Function
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportUnitType>Inch</rd:ReportUnitType>
   <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="ReportForNavId_1000000005">
+          <DataField>ReportForNavId_1000000005</DataField>
+        </Field>
+        <Field Name="GroupName_MicroFinTransactions">
+          <DataField>GroupName_MicroFinTransactions</DataField>
+        </Field>
+        <Field Name="GroupCode_MicroFinTransactions">
+          <DataField>GroupCode_MicroFinTransactions</DataField>
+        </Field>
+        <Field Name="MicroOfficer_MicroFinTransactions">
+          <DataField>MicroOfficer_MicroFinTransactions</DataField>
+        </Field>
+        <Field Name="GroupMeetingDay_MicroFinTransactions">
+          <DataField>GroupMeetingDay_MicroFinTransactions</DataField>
+        </Field>
+        <Field Name="ReportForNavId_1102755000">
+          <DataField>ReportForNavId_1102755000</DataField>
+        </Field>
+        <Field Name="Account_No">
+          <DataField>Account_No</DataField>
+        </Field>
+        <Field Name="Account_Name">
+          <DataField>Account_Name</DataField>
+        </Field>
+        <Field Name="Loan_No">
+          <DataField>Loan_No</DataField>
+        </Field>
+        <Field Name="Expected_Principle">
+          <DataField>Expected_Principle</DataField>
+        </Field>
+        <Field Name="Expected_PrincipleFormat">
+          <DataField>Expected_PrincipleFormat</DataField>
+        </Field>
+        <Field Name="Expected_Interest">
+          <DataField>Expected_Interest</DataField>
+        </Field>
+        <Field Name="Expected_InterestFormat">
+          <DataField>Expected_InterestFormat</DataField>
+        </Field>
+        <Field Name="Savings">
+          <DataField>Savings</DataField>
+        </Field>
+        <Field Name="SavingsFormat">
+          <DataField>SavingsFormat</DataField>
+        </Field>
+        <Field Name="Loan_Balance">
+          <DataField>Loan_Balance</DataField>
+        </Field>
+        <Field Name="Loan_BalanceFormat">
+          <DataField>Loan_BalanceFormat</DataField>
+        </Field>
+        <Field Name="Group_Name">
+          <DataField>Group_Name</DataField>
+        </Field>
+        <Field Name="Group_Code">
+          <DataField>Group_Code</DataField>
+        </Field>
+        <Field Name="Company_Name">
+          <DataField>Company_Name</DataField>
+        </Field>
+        <Field Name="Company_Picture">
+          <DataField>Company_Picture</DataField>
+        </Field>
+        <Field Name="Company_Address">
+          <DataField>Company_Address</DataField>
+        </Field>
+        <Field Name="Company_phone">
+          <DataField>Company_phone</DataField>
+        </Field>
+        <Field Name="FORMAT_TODAY_0_4_">
+          <DataField>FORMAT_TODAY_0_4_</DataField>
+        </Field>
+        <Field Name="CurrReport_PAGENO">
+          <DataField>CurrReport_PAGENO</DataField>
+        </Field>
+        <Field Name="UserId">
+          <DataField>UserId</DataField>
+        </Field>
+        <Field Name="CEEPOfficer">
+          <DataField>CEEPOfficer</DataField>
+        </Field>
+        <Field Name="MeetingDate">
+          <DataField>MeetingDate</DataField>
+        </Field>
+        <Field Name="ReceiptNo">
+          <DataField>ReceiptNo</DataField>
+        </Field>
+        <Field Name="DepositsContribution_MicroFinSchedule">
+          <DataField>DepositsContribution_MicroFinSchedule</DataField>
+        </Field>
+        <Field Name="DepositsContribution_MicroFinScheduleFormat">
+          <DataField>DepositsContribution_MicroFinScheduleFormat</DataField>
+        </Field>
+        <Field Name="AmountReceived_MicroFinSchedule">
+          <DataField>AmountReceived_MicroFinSchedule</DataField>
+        </Field>
+        <Field Name="AmountReceived_MicroFinScheduleFormat">
+          <DataField>AmountReceived_MicroFinScheduleFormat</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
 </Report>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns:cl="http://schemas.microsoft.com/sqlserver/reporting/2010/01/componentdefinition" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/reportdefinition">
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
@@ -11,129 +11,6 @@
       <rd:DataSourceID>b80dda31-bcf4-4f8a-93c4-1139884145a0</rd:DataSourceID>
     </DataSource>
   </DataSources>
-  <DataSets>
-    <DataSet Name="DataSet_Result">
-      <Query>
-        <DataSourceName>DataSource</DataSourceName>
-        <CommandText />
-      </Query>
-      <Fields>
-        <Field Name="USERID">
-          <DataField>USERID</DataField>
-        </Field>
-        <Field Name="TODAY">
-          <DataField>TODAY</DataField>
-        </Field>
-        <Field Name="PeriodName">
-          <DataField>PeriodName</DataField>
-        </Field>
-        <Field Name="CurrReport_PAGENO">
-          <DataField>CurrReport_PAGENO</DataField>
-        </Field>
-        <Field Name="companyinfo_Picture">
-          <DataField>companyinfo_Picture</DataField>
-        </Field>
-        <Field Name="prSalary_Card__prSalary_Card___Employee_Code_">
-          <DataField>prSalary_Card__prSalary_Card___Employee_Code_</DataField>
-        </Field>
-        <Field Name="EmployeeName">
-          <DataField>EmployeeName</DataField>
-        </Field>
-        <Field Name="PinNumber">
-          <DataField>PinNumber</DataField>
-        </Field>
-        <Field Name="PayeAmount">
-          <DataField>PayeAmount</DataField>
-        </Field>
-        <Field Name="PayeAmountFormat">
-          <DataField>PayeAmountFormat</DataField>
-        </Field>
-        <Field Name="TaxablePay">
-          <DataField>TaxablePay</DataField>
-        </Field>
-        <Field Name="TaxablePayFormat">
-          <DataField>TaxablePayFormat</DataField>
-        </Field>
-        <Field Name="TotTaxablePay">
-          <DataField>TotTaxablePay</DataField>
-        </Field>
-        <Field Name="TotTaxablePayFormat">
-          <DataField>TotTaxablePayFormat</DataField>
-        </Field>
-        <Field Name="CompName">
-          <DataField>CompName</DataField>
-        </Field>
-        <Field Name="IDS_NUMBER">
-          <DataField>IDS_NUMBER</DataField>
-        </Field>
-        <Field Name="Addr1">
-          <DataField>Addr1</DataField>
-        </Field>
-        <Field Name="Addr2">
-          <DataField>Addr2</DataField>
-        </Field>
-        <Field Name="Email">
-          <DataField>Email</DataField>
-        </Field>
-        <Field Name="TotPayeAmount">
-          <DataField>TotPayeAmount</DataField>
-        </Field>
-        <Field Name="TotPayeAmountFormat">
-          <DataField>TotPayeAmountFormat</DataField>
-        </Field>
-        <Field Name="User_Name_Caption">
-          <DataField>User_Name_Caption</DataField>
-        </Field>
-        <Field Name="Print_Date_Caption">
-          <DataField>Print_Date_Caption</DataField>
-        </Field>
-        <Field Name="P_A_Y_E_ScheduleCaption">
-          <DataField>P_A_Y_E_ScheduleCaption</DataField>
-        </Field>
-        <Field Name="Period_Caption">
-          <DataField>Period_Caption</DataField>
-        </Field>
-        <Field Name="Page_No_Caption">
-          <DataField>Page_No_Caption</DataField>
-        </Field>
-        <Field Name="No_Caption">
-          <DataField>No_Caption</DataField>
-        </Field>
-        <Field Name="Employee_NameCaption">
-          <DataField>Employee_NameCaption</DataField>
-        </Field>
-        <Field Name="PIN_Number_Caption">
-          <DataField>PIN_Number_Caption</DataField>
-        </Field>
-        <Field Name="Paye_Amount_Caption">
-          <DataField>Paye_Amount_Caption</DataField>
-        </Field>
-        <Field Name="Taxable_Pay_Caption">
-          <DataField>Taxable_Pay_Caption</DataField>
-        </Field>
-        <Field Name="Prepared_by_______________________________________Date_________________Caption">
-          <DataField>Prepared_by_______________________________________Date_________________Caption</DataField>
-        </Field>
-        <Field Name="Checked_by________________________________________Date_________________Caption">
-          <DataField>Checked_by________________________________________Date_________________Caption</DataField>
-        </Field>
-        <Field Name="Totals_Caption">
-          <DataField>Totals_Caption</DataField>
-        </Field>
-        <Field Name="Authorized_by____________________________________Date_________________Caption">
-          <DataField>Authorized_by____________________________________Date_________________Caption</DataField>
-        </Field>
-        <Field Name="Approved_by______________________________________Date_________________Caption">
-          <DataField>Approved_by______________________________________Date_________________Caption</DataField>
-        </Field>
-      </Fields>
-      <rd:DataSetInfo>
-        <rd:DataSetName>DataSet</rd:DataSetName>
-        <rd:SchemaPath>Report.xsd</rd:SchemaPath>
-        <rd:TableName>Result</rd:TableName>
-      </rd:DataSetInfo>
-    </DataSet>
-  </DataSets>
   <ReportSections>
     <ReportSection>
       <Body>
@@ -2214,4 +2091,125 @@ End Function
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
   <rd:ReportID>927bec95-ddde-4957-bf8b-cf86af273039</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="ReportForNavId_6207">
+          <DataField>ReportForNavId_6207</DataField>
+        </Field>
+        <Field Name="UserId">
+          <DataField>UserId</DataField>
+        </Field>
+        <Field Name="Today">
+          <DataField>Today</DataField>
+        </Field>
+        <Field Name="PeriodName">
+          <DataField>PeriodName</DataField>
+        </Field>
+        <Field Name="CurrReport_PAGENO">
+          <DataField>CurrReport_PAGENO</DataField>
+        </Field>
+        <Field Name="companyinfo_Picture">
+          <DataField>companyinfo_Picture</DataField>
+        </Field>
+        <Field Name="prSalary_Card__prSalary_Card___Employee_Code_">
+          <DataField>prSalary_Card__prSalary_Card___Employee_Code_</DataField>
+        </Field>
+        <Field Name="EmployeeName">
+          <DataField>EmployeeName</DataField>
+        </Field>
+        <Field Name="PinNumber">
+          <DataField>PinNumber</DataField>
+        </Field>
+        <Field Name="PayeAmount">
+          <DataField>PayeAmount</DataField>
+        </Field>
+        <Field Name="PayeAmountFormat">
+          <DataField>PayeAmountFormat</DataField>
+        </Field>
+        <Field Name="TaxablePay">
+          <DataField>TaxablePay</DataField>
+        </Field>
+        <Field Name="TaxablePayFormat">
+          <DataField>TaxablePayFormat</DataField>
+        </Field>
+        <Field Name="TotTaxablePay">
+          <DataField>TotTaxablePay</DataField>
+        </Field>
+        <Field Name="TotTaxablePayFormat">
+          <DataField>TotTaxablePayFormat</DataField>
+        </Field>
+        <Field Name="CompName">
+          <DataField>CompName</DataField>
+        </Field>
+        <Field Name="IDS_NUMBER">
+          <DataField>IDS_NUMBER</DataField>
+        </Field>
+        <Field Name="Addr1">
+          <DataField>Addr1</DataField>
+        </Field>
+        <Field Name="Addr2">
+          <DataField>Addr2</DataField>
+        </Field>
+        <Field Name="Email">
+          <DataField>Email</DataField>
+        </Field>
+        <Field Name="TotPayeAmount">
+          <DataField>TotPayeAmount</DataField>
+        </Field>
+        <Field Name="TotPayeAmountFormat">
+          <DataField>TotPayeAmountFormat</DataField>
+        </Field>
+        <Field Name="User_Name_Caption">
+          <DataField>User_Name_Caption</DataField>
+        </Field>
+        <Field Name="Print_Date_Caption">
+          <DataField>Print_Date_Caption</DataField>
+        </Field>
+        <Field Name="P_A_Y_E_ScheduleCaption">
+          <DataField>P_A_Y_E_ScheduleCaption</DataField>
+        </Field>
+        <Field Name="Period_Caption">
+          <DataField>Period_Caption</DataField>
+        </Field>
+        <Field Name="Page_No_Caption">
+          <DataField>Page_No_Caption</DataField>
+        </Field>
+        <Field Name="No_Caption">
+          <DataField>No_Caption</DataField>
+        </Field>
+        <Field Name="Employee_NameCaption">
+          <DataField>Employee_NameCaption</DataField>
+        </Field>
+        <Field Name="PIN_Number_Caption">
+          <DataField>PIN_Number_Caption</DataField>
+        </Field>
+        <Field Name="Paye_Amount_Caption">
+          <DataField>Paye_Amount_Caption</DataField>
+        </Field>
+        <Field Name="Taxable_Pay_Caption">
+          <DataField>Taxable_Pay_Caption</DataField>
+        </Field>
+        <Field Name="Prepared_by_______________________________________Date_________________Caption">
+          <DataField>Prepared_by_______________________________________Date_________________Caption</DataField>
+        </Field>
+        <Field Name="Checked_by________________________________________Date_________________Caption">
+          <DataField>Checked_by________________________________________Date_________________Caption</DataField>
+        </Field>
+        <Field Name="Totals_Caption">
+          <DataField>Totals_Caption</DataField>
+        </Field>
+        <Field Name="Authorized_by____________________________________Date_________________Caption">
+          <DataField>Authorized_by____________________________________Date_________________Caption</DataField>
+        </Field>
+        <Field Name="Approved_by______________________________________Date_________________Caption">
+          <DataField>Approved_by______________________________________Date_________________Caption</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
 </Report>

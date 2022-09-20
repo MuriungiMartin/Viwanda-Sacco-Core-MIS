@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/reportdefinition">
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
@@ -11,102 +11,6 @@
       <rd:DataSourceID>62753b81-d407-45e4-bb5c-79b2e292908e</rd:DataSourceID>
     </DataSource>
   </DataSources>
-  <DataSets>
-    <DataSet Name="DataSet_Result">
-      <Query>
-        <DataSourceName>DataSource</DataSourceName>
-        <CommandText />
-      </Query>
-      <Fields>
-        <Field Name="USERID">
-          <DataField>USERID</DataField>
-        </Field>
-        <Field Name="TODAY">
-          <DataField>TODAY</DataField>
-        </Field>
-        <Field Name="PeriodName">
-          <DataField>PeriodName</DataField>
-        </Field>
-        <Field Name="CurrReport_PAGENO">
-          <DataField>CurrReport_PAGENO</DataField>
-        </Field>
-        <Field Name="companyinfo_Picture">
-          <DataField>companyinfo_Picture</DataField>
-        </Field>
-        <Field Name="prSalary_Card__prSalary_Card___Employee_Code_">
-          <DataField>prSalary_Card__prSalary_Card___Employee_Code_</DataField>
-        </Field>
-        <Field Name="BasicPay">
-          <DataField>BasicPay</DataField>
-        </Field>
-        <Field Name="BasicPayFormat">
-          <DataField>BasicPayFormat</DataField>
-        </Field>
-        <Field Name="GrossPay">
-          <DataField>GrossPay</DataField>
-        </Field>
-        <Field Name="GrossPayFormat">
-          <DataField>GrossPayFormat</DataField>
-        </Field>
-        <Field Name="EmployeeName">
-          <DataField>EmployeeName</DataField>
-        </Field>
-        <Field Name="TotGrossPay">
-          <DataField>TotGrossPay</DataField>
-        </Field>
-        <Field Name="TotGrossPayFormat">
-          <DataField>TotGrossPayFormat</DataField>
-        </Field>
-        <Field Name="TotBasicPay">
-          <DataField>TotBasicPay</DataField>
-        </Field>
-        <Field Name="TotBasicPayFormat">
-          <DataField>TotBasicPayFormat</DataField>
-        </Field>
-        <Field Name="Basic_Pay_ListingCaption">
-          <DataField>Basic_Pay_ListingCaption</DataField>
-        </Field>
-        <Field Name="Basic_Pay_Caption">
-          <DataField>Basic_Pay_Caption</DataField>
-        </Field>
-        <Field Name="Gross_Pay_Caption">
-          <DataField>Gross_Pay_Caption</DataField>
-        </Field>
-        <Field Name="User_Name_Caption">
-          <DataField>User_Name_Caption</DataField>
-        </Field>
-        <Field Name="Print_Date_Caption">
-          <DataField>Print_Date_Caption</DataField>
-        </Field>
-        <Field Name="Period_Caption">
-          <DataField>Period_Caption</DataField>
-        </Field>
-        <Field Name="Page_No_Caption">
-          <DataField>Page_No_Caption</DataField>
-        </Field>
-        <Field Name="Prepared_by_______________________________________Date_________________Caption">
-          <DataField>Prepared_by_______________________________________Date_________________Caption</DataField>
-        </Field>
-        <Field Name="Checked_by________________________________________Date_________________Caption">
-          <DataField>Checked_by________________________________________Date_________________Caption</DataField>
-        </Field>
-        <Field Name="Authorized_by____________________________________Date_________________Caption">
-          <DataField>Authorized_by____________________________________Date_________________Caption</DataField>
-        </Field>
-        <Field Name="Approved_by______________________________________Date_________________Caption">
-          <DataField>Approved_by______________________________________Date_________________Caption</DataField>
-        </Field>
-        <Field Name="Totals_Caption">
-          <DataField>Totals_Caption</DataField>
-        </Field>
-      </Fields>
-      <rd:DataSetInfo>
-        <rd:DataSetName>DataSet</rd:DataSetName>
-        <rd:SchemaPath>Report.xsd</rd:SchemaPath>
-        <rd:TableName>Result</rd:TableName>
-      </rd:DataSetInfo>
-    </DataSet>
-  </DataSets>
   <ReportSections>
     <ReportSection>
       <Body>
@@ -1685,4 +1589,98 @@ End Function
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportUnitType>Invalid</rd:ReportUnitType>
   <rd:ReportID>5ab37d97-5a47-43b3-9aaf-b902febe87dd</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="ReportForNavId_6207">
+          <DataField>ReportForNavId_6207</DataField>
+        </Field>
+        <Field Name="UserId">
+          <DataField>UserId</DataField>
+        </Field>
+        <Field Name="Today">
+          <DataField>Today</DataField>
+        </Field>
+        <Field Name="PeriodName">
+          <DataField>PeriodName</DataField>
+        </Field>
+        <Field Name="CurrReport_PAGENO">
+          <DataField>CurrReport_PAGENO</DataField>
+        </Field>
+        <Field Name="companyinfo_Picture">
+          <DataField>companyinfo_Picture</DataField>
+        </Field>
+        <Field Name="prSalary_Card__prSalary_Card___Employee_Code_">
+          <DataField>prSalary_Card__prSalary_Card___Employee_Code_</DataField>
+        </Field>
+        <Field Name="BasicPay">
+          <DataField>BasicPay</DataField>
+        </Field>
+        <Field Name="BasicPayFormat">
+          <DataField>BasicPayFormat</DataField>
+        </Field>
+        <Field Name="GrossPay">
+          <DataField>GrossPay</DataField>
+        </Field>
+        <Field Name="GrossPayFormat">
+          <DataField>GrossPayFormat</DataField>
+        </Field>
+        <Field Name="EmployeeName">
+          <DataField>EmployeeName</DataField>
+        </Field>
+        <Field Name="TotGrossPay">
+          <DataField>TotGrossPay</DataField>
+        </Field>
+        <Field Name="TotGrossPayFormat">
+          <DataField>TotGrossPayFormat</DataField>
+        </Field>
+        <Field Name="TotBasicPay">
+          <DataField>TotBasicPay</DataField>
+        </Field>
+        <Field Name="TotBasicPayFormat">
+          <DataField>TotBasicPayFormat</DataField>
+        </Field>
+        <Field Name="Basic_Pay_ListingCaption">
+          <DataField>Basic_Pay_ListingCaption</DataField>
+        </Field>
+        <Field Name="Basic_Pay_Caption">
+          <DataField>Basic_Pay_Caption</DataField>
+        </Field>
+        <Field Name="Gross_Pay_Caption">
+          <DataField>Gross_Pay_Caption</DataField>
+        </Field>
+        <Field Name="User_Name_Caption">
+          <DataField>User_Name_Caption</DataField>
+        </Field>
+        <Field Name="Print_Date_Caption">
+          <DataField>Print_Date_Caption</DataField>
+        </Field>
+        <Field Name="Period_Caption">
+          <DataField>Period_Caption</DataField>
+        </Field>
+        <Field Name="Page_No_Caption">
+          <DataField>Page_No_Caption</DataField>
+        </Field>
+        <Field Name="Prepared_by_______________________________________Date_________________Caption">
+          <DataField>Prepared_by_______________________________________Date_________________Caption</DataField>
+        </Field>
+        <Field Name="Checked_by________________________________________Date_________________Caption">
+          <DataField>Checked_by________________________________________Date_________________Caption</DataField>
+        </Field>
+        <Field Name="Authorized_by____________________________________Date_________________Caption">
+          <DataField>Authorized_by____________________________________Date_________________Caption</DataField>
+        </Field>
+        <Field Name="Approved_by______________________________________Date_________________Caption">
+          <DataField>Approved_by______________________________________Date_________________Caption</DataField>
+        </Field>
+        <Field Name="Totals_Caption">
+          <DataField>Totals_Caption</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
 </Report>

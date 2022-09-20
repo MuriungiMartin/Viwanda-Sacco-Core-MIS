@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/reportdefinition">
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
@@ -11,54 +11,6 @@
       <rd:DataSourceID>cd606b77-37f1-48a7-8a16-94d8de485684</rd:DataSourceID>
     </DataSource>
   </DataSources>
-  <DataSets>
-    <DataSet Name="DataSet_Result">
-      <Query>
-        <DataSourceName>DataSource</DataSourceName>
-        <CommandText />
-      </Query>
-      <Fields>
-        <Field Name="JobDescription_HRJobs">
-          <DataField>JobDescription_HRJobs</DataField>
-        </Field>
-        <Field Name="CI_Name">
-          <DataField>CI_Name</DataField>
-        </Field>
-        <Field Name="CI_Address">
-          <DataField>CI_Address</DataField>
-        </Field>
-        <Field Name="CI_Address2">
-          <DataField>CI_Address2</DataField>
-        </Field>
-        <Field Name="CI_City">
-          <DataField>CI_City</DataField>
-        </Field>
-        <Field Name="CI_PhoneNo">
-          <DataField>CI_PhoneNo</DataField>
-        </Field>
-        <Field Name="CI_Picture">
-          <DataField>CI_Picture</DataField>
-        </Field>
-        <Field Name="JobID_HRJobResponsiblities">
-          <DataField>JobID_HRJobResponsiblities</DataField>
-        </Field>
-        <Field Name="ResponsibilityDescription_HRJobResponsiblities">
-          <DataField>ResponsibilityDescription_HRJobResponsiblities</DataField>
-        </Field>
-        <Field Name="Remarks_HRJobResponsiblities">
-          <DataField>Remarks_HRJobResponsiblities</DataField>
-        </Field>
-        <Field Name="ResponsibilityCode_HRJobResponsiblities">
-          <DataField>ResponsibilityCode_HRJobResponsiblities</DataField>
-        </Field>
-      </Fields>
-      <rd:DataSetInfo>
-        <rd:DataSetName>DataSet</rd:DataSetName>
-        <rd:SchemaPath>Report.xsd</rd:SchemaPath>
-        <rd:TableName>Result</rd:TableName>
-      </rd:DataSetInfo>
-    </DataSet>
-  </DataSets>
   <ReportSections>
     <ReportSection>
       <Body>
@@ -957,4 +909,53 @@ End Function
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
   <rd:ReportID>6d3a9cae-3936-4750-a187-0a132834771c</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="ReportForNavId_9002">
+          <DataField>ReportForNavId_9002</DataField>
+        </Field>
+        <Field Name="JobDescription_HRJobs">
+          <DataField>JobDescription_HRJobs</DataField>
+        </Field>
+        <Field Name="CI_Name">
+          <DataField>CI_Name</DataField>
+        </Field>
+        <Field Name="CI_Address">
+          <DataField>CI_Address</DataField>
+        </Field>
+        <Field Name="CI_Address2">
+          <DataField>CI_Address2</DataField>
+        </Field>
+        <Field Name="CI_City">
+          <DataField>CI_City</DataField>
+        </Field>
+        <Field Name="CI_PhoneNo">
+          <DataField>CI_PhoneNo</DataField>
+        </Field>
+        <Field Name="CI_Picture">
+          <DataField>CI_Picture</DataField>
+        </Field>
+        <Field Name="ReportForNavId_3841">
+          <DataField>ReportForNavId_3841</DataField>
+        </Field>
+        <Field Name="JobID_HRJobResponsiblities">
+          <DataField>JobID_HRJobResponsiblities</DataField>
+        </Field>
+        <Field Name="ResponsibilityDescription_HRJobResponsiblities">
+          <DataField>ResponsibilityDescription_HRJobResponsiblities</DataField>
+        </Field>
+        <Field Name="Remarks_HRJobResponsiblities">
+          <DataField>Remarks_HRJobResponsiblities</DataField>
+        </Field>
+        <Field Name="ResponsibilityCode_HRJobResponsiblities">
+          <DataField>ResponsibilityCode_HRJobResponsiblities</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
 </Report>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
@@ -11,99 +11,6 @@
       <rd:DataSourceID>fc0f0104-e1f6-48ef-8db7-02fe3dc2c032</rd:DataSourceID>
     </DataSource>
   </DataSources>
-  <DataSets>
-    <DataSet Name="DataSet_Result">
-      <Query>
-        <DataSourceName>DataSource</DataSourceName>
-        <CommandText />
-      </Query>
-      <Fields>
-        <Field Name="CurrentShares_MembersRegister">
-          <DataField>CurrentShares_MembersRegister</DataField>
-        </Field>
-        <Field Name="CurrentShares_MembersRegisterFormat">
-          <DataField>CurrentShares_MembersRegisterFormat</DataField>
-        </Field>
-        <Field Name="OutstandingBalance_MembersRegister">
-          <DataField>OutstandingBalance_MembersRegister</DataField>
-        </Field>
-        <Field Name="OutstandingBalance_MembersRegisterFormat">
-          <DataField>OutstandingBalance_MembersRegisterFormat</DataField>
-        </Field>
-        <Field Name="FOSAShares_MembersRegister">
-          <DataField>FOSAShares_MembersRegister</DataField>
-        </Field>
-        <Field Name="FOSAShares_MembersRegisterFormat">
-          <DataField>FOSAShares_MembersRegisterFormat</DataField>
-        </Field>
-        <Field Name="BenevolentFund_MembersRegister">
-          <DataField>BenevolentFund_MembersRegister</DataField>
-        </Field>
-        <Field Name="BenevolentFund_MembersRegisterFormat">
-          <DataField>BenevolentFund_MembersRegisterFormat</DataField>
-        </Field>
-        <Field Name="FOSASharesAccountNo_MembersRegister">
-          <DataField>FOSASharesAccountNo_MembersRegister</DataField>
-        </Field>
-        <Field Name="TLoansGuaranteed_MembersRegister">
-          <DataField>TLoansGuaranteed_MembersRegister</DataField>
-        </Field>
-        <Field Name="TLoansGuaranteed_MembersRegisterFormat">
-          <DataField>TLoansGuaranteed_MembersRegisterFormat</DataField>
-        </Field>
-        <Field Name="Dormancy_MembersRegister">
-          <DataField>Dormancy_MembersRegister</DataField>
-        </Field>
-        <Field Name="Name_MembersRegister">
-          <DataField>Name_MembersRegister</DataField>
-        </Field>
-        <Field Name="No_MembersRegister">
-          <DataField>No_MembersRegister</DataField>
-        </Field>
-        <Field Name="Company_Name">
-          <DataField>Company_Name</DataField>
-        </Field>
-        <Field Name="Company_Address">
-          <DataField>Company_Address</DataField>
-        </Field>
-        <Field Name="Company_City">
-          <DataField>Company_City</DataField>
-        </Field>
-        <Field Name="Company_Picture">
-          <DataField>Company_Picture</DataField>
-        </Field>
-        <Field Name="Company_Email">
-          <DataField>Company_Email</DataField>
-        </Field>
-        <Field Name="Company_Address_2">
-          <DataField>Company_Address_2</DataField>
-        </Field>
-        <Field Name="Company_Phone_No">
-          <DataField>Company_Phone_No</DataField>
-        </Field>
-        <Field Name="Company_Fax_No">
-          <DataField>Company_Fax_No</DataField>
-        </Field>
-        <Field Name="SN">
-          <DataField>SN</DataField>
-        </Field>
-        <Field Name="WithdrawalDate_MembersRegister">
-          <DataField>WithdrawalDate_MembersRegister</DataField>
-        </Field>
-        <Field Name="WithdrawalApplicationDate_MembersRegister">
-          <DataField>WithdrawalApplicationDate_MembersRegister</DataField>
-        </Field>
-        <Field Name="ReasonForMembershipWithdraw_MembersRegister">
-          <DataField>ReasonForMembershipWithdraw_MembersRegister</DataField>
-        </Field>
-      </Fields>
-      <rd:DataSetInfo>
-        <rd:DataSetName>DataSet</rd:DataSetName>
-        <rd:SchemaPath>Report.xsd</rd:SchemaPath>
-        <rd:TableName>Result</rd:TableName>
-      </rd:DataSetInfo>
-    </DataSet>
-  </DataSets>
   <ReportSections>
     <ReportSection>
       <Body>
@@ -1304,12 +1211,6 @@
       </Page>
     </ReportSection>
   </ReportSections>
-  <ReportParametersLayout>
-    <GridLayoutDefinition>
-      <NumberOfColumns>4</NumberOfColumns>
-      <NumberOfRows>2</NumberOfRows>
-    </GridLayoutDefinition>
-  </ReportParametersLayout>
   <Code>Public Function BlankZero(ByVal Value As Decimal)
     if Value = 0 then
         Return ""
@@ -1349,4 +1250,95 @@ End Function
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportUnitType>Inch</rd:ReportUnitType>
   <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="ReportForNavId_1">
+          <DataField>ReportForNavId_1</DataField>
+        </Field>
+        <Field Name="CurrentShares_MembersRegister">
+          <DataField>CurrentShares_MembersRegister</DataField>
+        </Field>
+        <Field Name="CurrentShares_MembersRegisterFormat">
+          <DataField>CurrentShares_MembersRegisterFormat</DataField>
+        </Field>
+        <Field Name="OutstandingBalance_MembersRegister">
+          <DataField>OutstandingBalance_MembersRegister</DataField>
+        </Field>
+        <Field Name="OutstandingBalance_MembersRegisterFormat">
+          <DataField>OutstandingBalance_MembersRegisterFormat</DataField>
+        </Field>
+        <Field Name="FOSAShares_MembersRegister">
+          <DataField>FOSAShares_MembersRegister</DataField>
+        </Field>
+        <Field Name="FOSAShares_MembersRegisterFormat">
+          <DataField>FOSAShares_MembersRegisterFormat</DataField>
+        </Field>
+        <Field Name="BenevolentFund_MembersRegister">
+          <DataField>BenevolentFund_MembersRegister</DataField>
+        </Field>
+        <Field Name="BenevolentFund_MembersRegisterFormat">
+          <DataField>BenevolentFund_MembersRegisterFormat</DataField>
+        </Field>
+        <Field Name="FOSASharesAccountNo_MembersRegister">
+          <DataField>FOSASharesAccountNo_MembersRegister</DataField>
+        </Field>
+        <Field Name="TLoansGuaranteed_MembersRegister">
+          <DataField>TLoansGuaranteed_MembersRegister</DataField>
+        </Field>
+        <Field Name="TLoansGuaranteed_MembersRegisterFormat">
+          <DataField>TLoansGuaranteed_MembersRegisterFormat</DataField>
+        </Field>
+        <Field Name="Dormancy_MembersRegister">
+          <DataField>Dormancy_MembersRegister</DataField>
+        </Field>
+        <Field Name="Name_MembersRegister">
+          <DataField>Name_MembersRegister</DataField>
+        </Field>
+        <Field Name="No_MembersRegister">
+          <DataField>No_MembersRegister</DataField>
+        </Field>
+        <Field Name="Company_Name">
+          <DataField>Company_Name</DataField>
+        </Field>
+        <Field Name="Company_Address">
+          <DataField>Company_Address</DataField>
+        </Field>
+        <Field Name="Company_City">
+          <DataField>Company_City</DataField>
+        </Field>
+        <Field Name="Company_Picture">
+          <DataField>Company_Picture</DataField>
+        </Field>
+        <Field Name="Company_Email">
+          <DataField>Company_Email</DataField>
+        </Field>
+        <Field Name="Company_Address_2">
+          <DataField>Company_Address_2</DataField>
+        </Field>
+        <Field Name="Company_Phone_No">
+          <DataField>Company_Phone_No</DataField>
+        </Field>
+        <Field Name="Company_Fax_No">
+          <DataField>Company_Fax_No</DataField>
+        </Field>
+        <Field Name="SN">
+          <DataField>SN</DataField>
+        </Field>
+        <Field Name="WithdrawalDate_MembersRegister">
+          <DataField>WithdrawalDate_MembersRegister</DataField>
+        </Field>
+        <Field Name="WithdrawalApplicationDate_MembersRegister">
+          <DataField>WithdrawalApplicationDate_MembersRegister</DataField>
+        </Field>
+        <Field Name="ReasonForMembershipWithdraw_MembersRegister">
+          <DataField>ReasonForMembershipWithdraw_MembersRegister</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
 </Report>

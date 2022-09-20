@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns:cl="http://schemas.microsoft.com/sqlserver/reporting/2010/01/componentdefinition" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/reportdefinition">
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
@@ -11,93 +11,6 @@
       <rd:DataSourceID>eee1793a-8776-4c0f-8529-5298f4b99fd8</rd:DataSourceID>
     </DataSource>
   </DataSources>
-  <DataSets>
-    <DataSet Name="DataSet_Result">
-      <Query>
-        <DataSourceName>DataSource</DataSourceName>
-        <CommandText />
-      </Query>
-      <Fields>
-        <Field Name="FORMAT_TODAY_0_4_">
-          <DataField>FORMAT_TODAY_0_4_</DataField>
-        </Field>
-        <Field Name="COMPANYNAME">
-          <DataField>COMPANYNAME</DataField>
-        </Field>
-        <Field Name="Company_Name">
-          <DataField>Company_Name</DataField>
-        </Field>
-        <Field Name="Company_Address">
-          <DataField>Company_Address</DataField>
-        </Field>
-        <Field Name="Company_Address_2">
-          <DataField>Company_Address_2</DataField>
-        </Field>
-        <Field Name="Company_Phone_No">
-          <DataField>Company_Phone_No</DataField>
-        </Field>
-        <Field Name="Company_Fax_No">
-          <DataField>Company_Fax_No</DataField>
-        </Field>
-        <Field Name="Company_Picture">
-          <DataField>Company_Picture</DataField>
-        </Field>
-        <Field Name="Company_Email">
-          <DataField>Company_Email</DataField>
-        </Field>
-        <Field Name="CurrReport_PAGENO">
-          <DataField>CurrReport_PAGENO</DataField>
-        </Field>
-        <Field Name="USERID">
-          <DataField>USERID</DataField>
-        </Field>
-        <Field Name="No_MembershipApplications">
-          <DataField>No_MembershipApplications</DataField>
-        </Field>
-        <Field Name="Name_MembershipApplications">
-          <DataField>Name_MembershipApplications</DataField>
-        </Field>
-        <Field Name="Address_MembershipApplications">
-          <DataField>Address_MembershipApplications</DataField>
-        </Field>
-        <Field Name="PhoneNo_MembershipApplications">
-          <DataField>PhoneNo_MembershipApplications</DataField>
-        </Field>
-        <Field Name="RegistrationDate_MembershipApplications">
-          <DataField>RegistrationDate_MembershipApplications</DataField>
-        </Field>
-        <Field Name="EmployerCode_MembershipApplications">
-          <DataField>EmployerCode_MembershipApplications</DataField>
-        </Field>
-        <Field Name="DateofBirth_MembershipApplications">
-          <DataField>DateofBirth_MembershipApplications</DataField>
-        </Field>
-        <Field Name="EMailPersonal_MembershipApplications">
-          <DataField>EMailPersonal_MembershipApplications</DataField>
-        </Field>
-        <Field Name="PersonalNo_MembershipApplications">
-          <DataField>PersonalNo_MembershipApplications</DataField>
-        </Field>
-        <Field Name="IDNo_MembershipApplications">
-          <DataField>IDNo_MembershipApplications</DataField>
-        </Field>
-        <Field Name="MobilePhoneNo_MembershipApplications">
-          <DataField>MobilePhoneNo_MembershipApplications</DataField>
-        </Field>
-        <Field Name="Gender_MembershipApplications">
-          <DataField>Gender_MembershipApplications</DataField>
-        </Field>
-        <Field Name="EmployerName_MembershipApplications">
-          <DataField>EmployerName_MembershipApplications</DataField>
-        </Field>
-      </Fields>
-      <rd:DataSetInfo>
-        <rd:DataSetName>DataSet</rd:DataSetName>
-        <rd:SchemaPath>Report.xsd</rd:SchemaPath>
-        <rd:TableName>Result</rd:TableName>
-      </rd:DataSetInfo>
-    </DataSet>
-  </DataSets>
   <ReportSections>
     <ReportSection>
       <Body>
@@ -1285,4 +1198,83 @@ End Function
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportUnitType>Inch</rd:ReportUnitType>
   <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="FORMAT_TODAY_0_4_">
+          <DataField>FORMAT_TODAY_0_4_</DataField>
+        </Field>
+        <Field Name="COMPANYNAME">
+          <DataField>COMPANYNAME</DataField>
+        </Field>
+        <Field Name="Company_Name">
+          <DataField>Company_Name</DataField>
+        </Field>
+        <Field Name="Company_Address">
+          <DataField>Company_Address</DataField>
+        </Field>
+        <Field Name="Company_Address_2">
+          <DataField>Company_Address_2</DataField>
+        </Field>
+        <Field Name="Company_Phone_No">
+          <DataField>Company_Phone_No</DataField>
+        </Field>
+        <Field Name="Company_Fax_No">
+          <DataField>Company_Fax_No</DataField>
+        </Field>
+        <Field Name="Company_Picture">
+          <DataField>Company_Picture</DataField>
+        </Field>
+        <Field Name="Company_Email">
+          <DataField>Company_Email</DataField>
+        </Field>
+        <Field Name="UserId">
+          <DataField>UserId</DataField>
+        </Field>
+        <Field Name="No_MembershipApplications">
+          <DataField>No_MembershipApplications</DataField>
+        </Field>
+        <Field Name="Name_MembershipApplications">
+          <DataField>Name_MembershipApplications</DataField>
+        </Field>
+        <Field Name="Address_MembershipApplications">
+          <DataField>Address_MembershipApplications</DataField>
+        </Field>
+        <Field Name="PhoneNo_MembershipApplications">
+          <DataField>PhoneNo_MembershipApplications</DataField>
+        </Field>
+        <Field Name="RegistrationDate_MembershipApplications">
+          <DataField>RegistrationDate_MembershipApplications</DataField>
+        </Field>
+        <Field Name="EmployerCode_MembershipApplications">
+          <DataField>EmployerCode_MembershipApplications</DataField>
+        </Field>
+        <Field Name="DateofBirth_MembershipApplications">
+          <DataField>DateofBirth_MembershipApplications</DataField>
+        </Field>
+        <Field Name="EMailPersonal_MembershipApplications">
+          <DataField>EMailPersonal_MembershipApplications</DataField>
+        </Field>
+        <Field Name="PersonalNo_MembershipApplications">
+          <DataField>PersonalNo_MembershipApplications</DataField>
+        </Field>
+        <Field Name="IDNo_MembershipApplications">
+          <DataField>IDNo_MembershipApplications</DataField>
+        </Field>
+        <Field Name="MobilePhoneNo_MembershipApplications">
+          <DataField>MobilePhoneNo_MembershipApplications</DataField>
+        </Field>
+        <Field Name="Gender_MembershipApplications">
+          <DataField>Gender_MembershipApplications</DataField>
+        </Field>
+        <Field Name="EmployerName_MembershipApplications">
+          <DataField>EmployerName_MembershipApplications</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
 </Report>

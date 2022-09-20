@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
@@ -11,195 +11,6 @@
       <rd:DataSourceID>fbdb48e2-14c0-4923-881f-92c69a5ed7a0</rd:DataSourceID>
     </DataSource>
   </DataSources>
-  <DataSets>
-    <DataSet Name="DataSet_Result">
-      <Query>
-        <DataSourceName>DataSource</DataSourceName>
-        <CommandText />
-      </Query>
-      <Fields>
-        <Field Name="FORMAT_TODAY_0_4_">
-          <DataField>FORMAT_TODAY_0_4_</DataField>
-        </Field>
-        <Field Name="COMPANYNAME">
-          <DataField>COMPANYNAME</DataField>
-        </Field>
-        <Field Name="Company_Name">
-          <DataField>Company_Name</DataField>
-        </Field>
-        <Field Name="Company_Address">
-          <DataField>Company_Address</DataField>
-        </Field>
-        <Field Name="Company_Address_2">
-          <DataField>Company_Address_2</DataField>
-        </Field>
-        <Field Name="Company_Phone_No">
-          <DataField>Company_Phone_No</DataField>
-        </Field>
-        <Field Name="Company_Fax_No">
-          <DataField>Company_Fax_No</DataField>
-        </Field>
-        <Field Name="Company_Picture">
-          <DataField>Company_Picture</DataField>
-        </Field>
-        <Field Name="Company_Email">
-          <DataField>Company_Email</DataField>
-        </Field>
-        <Field Name="CurrReport_PAGENO">
-          <DataField>CurrReport_PAGENO</DataField>
-        </Field>
-        <Field Name="USERID">
-          <DataField>USERID</DataField>
-        </Field>
-        <Field Name="No_Members">
-          <DataField>No_Members</DataField>
-        </Field>
-        <Field Name="RNo">
-          <DataField>RNo</DataField>
-        </Field>
-        <Field Name="AvailableSH">
-          <DataField>AvailableSH</DataField>
-        </Field>
-        <Field Name="AvailableSHFormat">
-          <DataField>AvailableSHFormat</DataField>
-        </Field>
-        <Field Name="Name_Members">
-          <DataField>Name_Members</DataField>
-        </Field>
-        <Field Name="PhoneNo_Members">
-          <DataField>PhoneNo_Members</DataField>
-        </Field>
-        <Field Name="OutstandingBalance_Members">
-          <DataField>OutstandingBalance_Members</DataField>
-        </Field>
-        <Field Name="OutstandingBalance_MembersFormat">
-          <DataField>OutstandingBalance_MembersFormat</DataField>
-        </Field>
-        <Field Name="PayrollNo_MembersRegister">
-          <DataField>PayrollNo_MembersRegister</DataField>
-        </Field>
-        <Field Name="CurrentShares_MembersRegister">
-          <DataField>CurrentShares_MembersRegister</DataField>
-        </Field>
-        <Field Name="CurrentShares_MembersRegisterFormat">
-          <DataField>CurrentShares_MembersRegisterFormat</DataField>
-        </Field>
-        <Field Name="AmontGuaranteed_LoanGuarantors">
-          <DataField>AmontGuaranteed_LoanGuarantors</DataField>
-        </Field>
-        <Field Name="AmontGuaranteed_LoanGuarantorsFormat">
-          <DataField>AmontGuaranteed_LoanGuarantorsFormat</DataField>
-        </Field>
-        <Field Name="NoOfLoansGuaranteed_LoanGuarantors">
-          <DataField>NoOfLoansGuaranteed_LoanGuarantors</DataField>
-        </Field>
-        <Field Name="Name_LoanGuarantors">
-          <DataField>Name_LoanGuarantors</DataField>
-        </Field>
-        <Field Name="MemberNo_LoanGuarantors">
-          <DataField>MemberNo_LoanGuarantors</DataField>
-        </Field>
-        <Field Name="LoanNo_LoanGuarantors">
-          <DataField>LoanNo_LoanGuarantors</DataField>
-        </Field>
-        <Field Name="LoanProduct_BOSALoansGuarantors">
-          <DataField>LoanProduct_BOSALoansGuarantors</DataField>
-        </Field>
-        <Field Name="ProductDescription">
-          <DataField>ProductDescription</DataField>
-        </Field>
-        <Field Name="No">
-          <DataField>No</DataField>
-        </Field>
-        <Field Name="OutstandingBalance_LoanGuarantors">
-          <DataField>OutstandingBalance_LoanGuarantors</DataField>
-        </Field>
-        <Field Name="OutstandingBalance_LoanGuarantorsFormat">
-          <DataField>OutstandingBalance_LoanGuarantorsFormat</DataField>
-        </Field>
-        <Field Name="OutstandingBAlSt">
-          <DataField>OutstandingBAlSt</DataField>
-        </Field>
-        <Field Name="OutstandingBAlStFormat">
-          <DataField>OutstandingBAlStFormat</DataField>
-        </Field>
-        <Field Name="OutStandingBal">
-          <DataField>OutStandingBal</DataField>
-        </Field>
-        <Field Name="OutStandingBalFormat">
-          <DataField>OutStandingBalFormat</DataField>
-        </Field>
-        <Field Name="TotalOutstandingBal">
-          <DataField>TotalOutstandingBal</DataField>
-        </Field>
-        <Field Name="TotalOutstandingBalFormat">
-          <DataField>TotalOutstandingBalFormat</DataField>
-        </Field>
-        <Field Name="FNo">
-          <DataField>FNo</DataField>
-        </Field>
-        <Field Name="AmountGuar">
-          <DataField>AmountGuar</DataField>
-        </Field>
-        <Field Name="AmountGuarFormat">
-          <DataField>AmountGuarFormat</DataField>
-        </Field>
-        <Field Name="LoaneesName_LoanGuarantors">
-          <DataField>LoaneesName_LoanGuarantors</DataField>
-        </Field>
-        <Field Name="LoaneesNo_LoanGuarantors">
-          <DataField>LoaneesNo_LoanGuarantors</DataField>
-        </Field>
-        <Field Name="SubNo">
-          <DataField>SubNo</DataField>
-        </Field>
-        <Field Name="SubName">
-          <DataField>SubName</DataField>
-        </Field>
-        <Field Name="SubNameFormat">
-          <DataField>SubNameFormat</DataField>
-        </Field>
-        <Field Name="VarCurrLiability">
-          <DataField>VarCurrLiability</DataField>
-        </Field>
-        <Field Name="VarCurrLiabilityFormat">
-          <DataField>VarCurrLiabilityFormat</DataField>
-        </Field>
-        <Field Name="Client_Code">
-          <DataField>Client_Code</DataField>
-        </Field>
-        <Field Name="Client_Name">
-          <DataField>Client_Name</DataField>
-        </Field>
-        <Field Name="EmployerCode_Loans">
-          <DataField>EmployerCode_Loans</DataField>
-        </Field>
-        <Field Name="ApplicationDate_LoansRegister">
-          <DataField>ApplicationDate_LoansRegister</DataField>
-        </Field>
-        <Field Name="OutstandingBalance_Loans">
-          <DataField>OutstandingBalance_Loans</DataField>
-        </Field>
-        <Field Name="OutstandingBalance_LoansFormat">
-          <DataField>OutstandingBalance_LoansFormat</DataField>
-        </Field>
-        <Field Name="ApprovedAmount_LoansRegister">
-          <DataField>ApprovedAmount_LoansRegister</DataField>
-        </Field>
-        <Field Name="ApprovedAmount_LoansRegisterFormat">
-          <DataField>ApprovedAmount_LoansRegisterFormat</DataField>
-        </Field>
-        <Field Name="LoanDisbursementDate_LoansRegister">
-          <DataField>LoanDisbursementDate_LoansRegister</DataField>
-        </Field>
-      </Fields>
-      <rd:DataSetInfo>
-        <rd:DataSetName>DataSet</rd:DataSetName>
-        <rd:SchemaPath>Report.xsd</rd:SchemaPath>
-        <rd:TableName>Result</rd:TableName>
-      </rd:DataSetInfo>
-    </DataSet>
-  </DataSets>
   <ReportSections>
     <ReportSection>
       <Body>
@@ -1655,12 +1466,6 @@
       </Page>
     </ReportSection>
   </ReportSections>
-  <ReportParametersLayout>
-    <GridLayoutDefinition>
-      <NumberOfColumns>4</NumberOfColumns>
-      <NumberOfRows>2</NumberOfRows>
-    </GridLayoutDefinition>
-  </ReportParametersLayout>
   <Code>Public Function BlankZero(ByVal Value As Decimal)
     if Value = 0 then
         Return ""
@@ -1700,4 +1505,203 @@ End Function
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportUnitType>Inch</rd:ReportUnitType>
   <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="FORMAT_TODAY_0_4_">
+          <DataField>FORMAT_TODAY_0_4_</DataField>
+        </Field>
+        <Field Name="COMPANYNAME">
+          <DataField>COMPANYNAME</DataField>
+        </Field>
+        <Field Name="Company_Name">
+          <DataField>Company_Name</DataField>
+        </Field>
+        <Field Name="Company_Address">
+          <DataField>Company_Address</DataField>
+        </Field>
+        <Field Name="Company_Address_2">
+          <DataField>Company_Address_2</DataField>
+        </Field>
+        <Field Name="Company_Phone_No">
+          <DataField>Company_Phone_No</DataField>
+        </Field>
+        <Field Name="Company_Fax_No">
+          <DataField>Company_Fax_No</DataField>
+        </Field>
+        <Field Name="Company_Picture">
+          <DataField>Company_Picture</DataField>
+        </Field>
+        <Field Name="Company_Email">
+          <DataField>Company_Email</DataField>
+        </Field>
+        <Field Name="UserId">
+          <DataField>UserId</DataField>
+        </Field>
+        <Field Name="No_Members">
+          <DataField>No_Members</DataField>
+        </Field>
+        <Field Name="RNo">
+          <DataField>RNo</DataField>
+        </Field>
+        <Field Name="AvailableSH">
+          <DataField>AvailableSH</DataField>
+        </Field>
+        <Field Name="AvailableSHFormat">
+          <DataField>AvailableSHFormat</DataField>
+        </Field>
+        <Field Name="Name_Members">
+          <DataField>Name_Members</DataField>
+        </Field>
+        <Field Name="PhoneNo_Members">
+          <DataField>PhoneNo_Members</DataField>
+        </Field>
+        <Field Name="OutstandingBalance_Members">
+          <DataField>OutstandingBalance_Members</DataField>
+        </Field>
+        <Field Name="OutstandingBalance_MembersFormat">
+          <DataField>OutstandingBalance_MembersFormat</DataField>
+        </Field>
+        <Field Name="PayrollNo_MembersRegister">
+          <DataField>PayrollNo_MembersRegister</DataField>
+        </Field>
+        <Field Name="CurrentShares_MembersRegister">
+          <DataField>CurrentShares_MembersRegister</DataField>
+        </Field>
+        <Field Name="CurrentShares_MembersRegisterFormat">
+          <DataField>CurrentShares_MembersRegisterFormat</DataField>
+        </Field>
+        <Field Name="AmontGuaranteed_LoanGuarantors">
+          <DataField>AmontGuaranteed_LoanGuarantors</DataField>
+        </Field>
+        <Field Name="AmontGuaranteed_LoanGuarantorsFormat">
+          <DataField>AmontGuaranteed_LoanGuarantorsFormat</DataField>
+        </Field>
+        <Field Name="NoOfLoansGuaranteed_LoanGuarantors">
+          <DataField>NoOfLoansGuaranteed_LoanGuarantors</DataField>
+        </Field>
+        <Field Name="Name_LoanGuarantors">
+          <DataField>Name_LoanGuarantors</DataField>
+        </Field>
+        <Field Name="MemberNo_LoanGuarantors">
+          <DataField>MemberNo_LoanGuarantors</DataField>
+        </Field>
+        <Field Name="LoanNo_LoanGuarantors">
+          <DataField>LoanNo_LoanGuarantors</DataField>
+        </Field>
+        <Field Name="LoanProduct_BOSALoansGuarantors">
+          <DataField>LoanProduct_BOSALoansGuarantors</DataField>
+        </Field>
+        <Field Name="ProductDescription">
+          <DataField>ProductDescription</DataField>
+        </Field>
+        <Field Name="No">
+          <DataField>No</DataField>
+        </Field>
+        <Field Name="OutstandingBalance_LoanGuarantors">
+          <DataField>OutstandingBalance_LoanGuarantors</DataField>
+        </Field>
+        <Field Name="OutstandingBalance_LoanGuarantorsFormat">
+          <DataField>OutstandingBalance_LoanGuarantorsFormat</DataField>
+        </Field>
+        <Field Name="OutstandingBAlSt">
+          <DataField>OutstandingBAlSt</DataField>
+        </Field>
+        <Field Name="OutstandingBAlStFormat">
+          <DataField>OutstandingBAlStFormat</DataField>
+        </Field>
+        <Field Name="OutStandingBal">
+          <DataField>OutStandingBal</DataField>
+        </Field>
+        <Field Name="OutStandingBalFormat">
+          <DataField>OutStandingBalFormat</DataField>
+        </Field>
+        <Field Name="TotalOutstandingBal">
+          <DataField>TotalOutstandingBal</DataField>
+        </Field>
+        <Field Name="TotalOutstandingBalFormat">
+          <DataField>TotalOutstandingBalFormat</DataField>
+        </Field>
+        <Field Name="FNo">
+          <DataField>FNo</DataField>
+        </Field>
+        <Field Name="AmountGuar">
+          <DataField>AmountGuar</DataField>
+        </Field>
+        <Field Name="AmountGuarFormat">
+          <DataField>AmountGuarFormat</DataField>
+        </Field>
+        <Field Name="LoaneesName_LoanGuarantors">
+          <DataField>LoaneesName_LoanGuarantors</DataField>
+        </Field>
+        <Field Name="LoaneesNo_LoanGuarantors">
+          <DataField>LoaneesNo_LoanGuarantors</DataField>
+        </Field>
+        <Field Name="SubNo">
+          <DataField>SubNo</DataField>
+        </Field>
+        <Field Name="SubName">
+          <DataField>SubName</DataField>
+        </Field>
+        <Field Name="SubNameFormat">
+          <DataField>SubNameFormat</DataField>
+        </Field>
+        <Field Name="VarCurrLiability">
+          <DataField>VarCurrLiability</DataField>
+        </Field>
+        <Field Name="VarCurrLiabilityFormat">
+          <DataField>VarCurrLiabilityFormat</DataField>
+        </Field>
+        <Field Name="AvailableSH2">
+          <DataField>AvailableSH2</DataField>
+        </Field>
+        <Field Name="AvailableSH2Format">
+          <DataField>AvailableSH2Format</DataField>
+        </Field>
+        <Field Name="Client_Code">
+          <DataField>Client_Code</DataField>
+        </Field>
+        <Field Name="Client_Name">
+          <DataField>Client_Name</DataField>
+        </Field>
+        <Field Name="EmployerCode_Loans">
+          <DataField>EmployerCode_Loans</DataField>
+        </Field>
+        <Field Name="ApplicationDate_LoansRegister">
+          <DataField>ApplicationDate_LoansRegister</DataField>
+        </Field>
+        <Field Name="OutstandingBalance_Loans">
+          <DataField>OutstandingBalance_Loans</DataField>
+        </Field>
+        <Field Name="OutstandingBalance_LoansFormat">
+          <DataField>OutstandingBalance_LoansFormat</DataField>
+        </Field>
+        <Field Name="ApprovedAmount_LoansRegister">
+          <DataField>ApprovedAmount_LoansRegister</DataField>
+        </Field>
+        <Field Name="ApprovedAmount_LoansRegisterFormat">
+          <DataField>ApprovedAmount_LoansRegisterFormat</DataField>
+        </Field>
+        <Field Name="LoanDisbursementDate_LoansRegister">
+          <DataField>LoanDisbursementDate_LoansRegister</DataField>
+        </Field>
+        <Field Name="OutStandingBal2">
+          <DataField>OutStandingBal2</DataField>
+        </Field>
+        <Field Name="OutStandingBal2Format">
+          <DataField>OutStandingBal2Format</DataField>
+        </Field>
+        <Field Name="TotalOutstandingBal2">
+          <DataField>TotalOutstandingBal2</DataField>
+        </Field>
+        <Field Name="TotalOutstandingBal2Format">
+          <DataField>TotalOutstandingBal2Format</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
 </Report>

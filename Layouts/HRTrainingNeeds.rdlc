@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/reportdefinition">
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
@@ -11,87 +11,6 @@
       <rd:DataSourceID>ef062ba0-d4fc-4228-b89d-3af7b50abc93</rd:DataSourceID>
     </DataSource>
   </DataSources>
-  <DataSets>
-    <DataSet Name="DataSet_Result">
-      <Query>
-        <DataSourceName>DataSource</DataSourceName>
-        <CommandText />
-      </Query>
-      <Fields>
-        <Field Name="Location_HRTrainingNeeds">
-          <DataField>Location_HRTrainingNeeds</DataField>
-        </Field>
-        <Field Name="GlobalDimension2Code_HRTrainingNeeds">
-          <DataField>GlobalDimension2Code_HRTrainingNeeds</DataField>
-        </Field>
-        <Field Name="Closed_HRTrainingNeeds">
-          <DataField>Closed_HRTrainingNeeds</DataField>
-        </Field>
-        <Field Name="QualificationCode_HRTrainingNeeds">
-          <DataField>QualificationCode_HRTrainingNeeds</DataField>
-        </Field>
-        <Field Name="QualificationType_HRTrainingNeeds">
-          <DataField>QualificationType_HRTrainingNeeds</DataField>
-        </Field>
-        <Field Name="QualificationDescription_HRTrainingNeeds">
-          <DataField>QualificationDescription_HRTrainingNeeds</DataField>
-        </Field>
-        <Field Name="ProviderName_HRTrainingNeeds">
-          <DataField>ProviderName_HRTrainingNeeds</DataField>
-        </Field>
-        <Field Name="Code_HRTrainingNeeds">
-          <DataField>Code_HRTrainingNeeds</DataField>
-        </Field>
-        <Field Name="StartDate_HRTrainingNeeds">
-          <DataField>StartDate_HRTrainingNeeds</DataField>
-        </Field>
-        <Field Name="EndDate_HRTrainingNeeds">
-          <DataField>EndDate_HRTrainingNeeds</DataField>
-        </Field>
-        <Field Name="DurationUnits_HRTrainingNeeds">
-          <DataField>DurationUnits_HRTrainingNeeds</DataField>
-        </Field>
-        <Field Name="Duration_HRTrainingNeeds">
-          <DataField>Duration_HRTrainingNeeds</DataField>
-        </Field>
-        <Field Name="Duration_HRTrainingNeedsFormat">
-          <DataField>Duration_HRTrainingNeedsFormat</DataField>
-        </Field>
-        <Field Name="CostOfTraining_HRTrainingNeeds">
-          <DataField>CostOfTraining_HRTrainingNeeds</DataField>
-        </Field>
-        <Field Name="CostOfTraining_HRTrainingNeedsFormat">
-          <DataField>CostOfTraining_HRTrainingNeedsFormat</DataField>
-        </Field>
-        <Field Name="Description_HRTrainingNeeds">
-          <DataField>Description_HRTrainingNeeds</DataField>
-        </Field>
-        <Field Name="CI_Name">
-          <DataField>CI_Name</DataField>
-        </Field>
-        <Field Name="CI_Address">
-          <DataField>CI_Address</DataField>
-        </Field>
-        <Field Name="CI_Address2">
-          <DataField>CI_Address2</DataField>
-        </Field>
-        <Field Name="CI_PhoneNo">
-          <DataField>CI_PhoneNo</DataField>
-        </Field>
-        <Field Name="CI_Picture">
-          <DataField>CI_Picture</DataField>
-        </Field>
-        <Field Name="CI_City">
-          <DataField>CI_City</DataField>
-        </Field>
-      </Fields>
-      <rd:DataSetInfo>
-        <rd:DataSetName>DataSet</rd:DataSetName>
-        <rd:SchemaPath>Report.xsd</rd:SchemaPath>
-        <rd:TableName>Result</rd:TableName>
-      </rd:DataSetInfo>
-    </DataSet>
-  </DataSets>
   <ReportSections>
     <ReportSection>
       <Body>
@@ -2207,4 +2126,83 @@ End Function
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
   <rd:ReportID>e6cfd6e8-e1d1-4e8c-97a0-142919980df9</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="ReportForNavId_1905">
+          <DataField>ReportForNavId_1905</DataField>
+        </Field>
+        <Field Name="Location_HRTrainingNeeds">
+          <DataField>Location_HRTrainingNeeds</DataField>
+        </Field>
+        <Field Name="GlobalDimension2Code_HRTrainingNeeds">
+          <DataField>GlobalDimension2Code_HRTrainingNeeds</DataField>
+        </Field>
+        <Field Name="Closed_HRTrainingNeeds">
+          <DataField>Closed_HRTrainingNeeds</DataField>
+        </Field>
+        <Field Name="QualificationCode_HRTrainingNeeds">
+          <DataField>QualificationCode_HRTrainingNeeds</DataField>
+        </Field>
+        <Field Name="QualificationType_HRTrainingNeeds">
+          <DataField>QualificationType_HRTrainingNeeds</DataField>
+        </Field>
+        <Field Name="QualificationDescription_HRTrainingNeeds">
+          <DataField>QualificationDescription_HRTrainingNeeds</DataField>
+        </Field>
+        <Field Name="ProviderName_HRTrainingNeeds">
+          <DataField>ProviderName_HRTrainingNeeds</DataField>
+        </Field>
+        <Field Name="Code_HRTrainingNeeds">
+          <DataField>Code_HRTrainingNeeds</DataField>
+        </Field>
+        <Field Name="StartDate_HRTrainingNeeds">
+          <DataField>StartDate_HRTrainingNeeds</DataField>
+        </Field>
+        <Field Name="EndDate_HRTrainingNeeds">
+          <DataField>EndDate_HRTrainingNeeds</DataField>
+        </Field>
+        <Field Name="DurationUnits_HRTrainingNeeds">
+          <DataField>DurationUnits_HRTrainingNeeds</DataField>
+        </Field>
+        <Field Name="Duration_HRTrainingNeeds">
+          <DataField>Duration_HRTrainingNeeds</DataField>
+        </Field>
+        <Field Name="Duration_HRTrainingNeedsFormat">
+          <DataField>Duration_HRTrainingNeedsFormat</DataField>
+        </Field>
+        <Field Name="CostOfTraining_HRTrainingNeeds">
+          <DataField>CostOfTraining_HRTrainingNeeds</DataField>
+        </Field>
+        <Field Name="CostOfTraining_HRTrainingNeedsFormat">
+          <DataField>CostOfTraining_HRTrainingNeedsFormat</DataField>
+        </Field>
+        <Field Name="Description_HRTrainingNeeds">
+          <DataField>Description_HRTrainingNeeds</DataField>
+        </Field>
+        <Field Name="CI_Name">
+          <DataField>CI_Name</DataField>
+        </Field>
+        <Field Name="CI_Address">
+          <DataField>CI_Address</DataField>
+        </Field>
+        <Field Name="CI_Address2">
+          <DataField>CI_Address2</DataField>
+        </Field>
+        <Field Name="CI_PhoneNo">
+          <DataField>CI_PhoneNo</DataField>
+        </Field>
+        <Field Name="CI_Picture">
+          <DataField>CI_Picture</DataField>
+        </Field>
+        <Field Name="CI_City">
+          <DataField>CI_City</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
 </Report>

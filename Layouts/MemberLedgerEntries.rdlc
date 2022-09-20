@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
@@ -11,90 +11,6 @@
       <rd:DataSourceID>8f02f5c2-9d73-4f03-94ea-34e1d9520cdb</rd:DataSourceID>
     </DataSource>
   </DataSources>
-  <DataSets>
-    <DataSet Name="DataSet_Result">
-      <Query>
-        <DataSourceName>DataSource</DataSourceName>
-        <CommandText />
-      </Query>
-      <Fields>
-        <Field Name="Amount_MemberLedgerEntry">
-          <DataField>Amount_MemberLedgerEntry</DataField>
-        </Field>
-        <Field Name="Amount_MemberLedgerEntryFormat">
-          <DataField>Amount_MemberLedgerEntryFormat</DataField>
-        </Field>
-        <Field Name="UserID_MemberLedgerEntry">
-          <DataField>UserID_MemberLedgerEntry</DataField>
-        </Field>
-        <Field Name="TransactionType_MemberLedgerEntry">
-          <DataField>TransactionType_MemberLedgerEntry</DataField>
-        </Field>
-        <Field Name="LoanNo_MemberLedgerEntry">
-          <DataField>LoanNo_MemberLedgerEntry</DataField>
-        </Field>
-        <Field Name="EntryNo_MemberLedgerEntry">
-          <DataField>EntryNo_MemberLedgerEntry</DataField>
-        </Field>
-        <Field Name="CustomerNo_MemberLedgerEntry">
-          <DataField>CustomerNo_MemberLedgerEntry</DataField>
-        </Field>
-        <Field Name="PostingDate_MemberLedgerEntry">
-          <DataField>PostingDate_MemberLedgerEntry</DataField>
-        </Field>
-        <Field Name="DocumentType_MemberLedgerEntry">
-          <DataField>DocumentType_MemberLedgerEntry</DataField>
-        </Field>
-        <Field Name="DocumentNo_MemberLedgerEntry">
-          <DataField>DocumentNo_MemberLedgerEntry</DataField>
-        </Field>
-        <Field Name="Description_MemberLedgerEntry">
-          <DataField>Description_MemberLedgerEntry</DataField>
-        </Field>
-        <Field Name="Reversed_MemberLedgerEntry">
-          <DataField>Reversed_MemberLedgerEntry</DataField>
-        </Field>
-        <Field Name="DebitAmount_MemberLedgerEntry">
-          <DataField>DebitAmount_MemberLedgerEntry</DataField>
-        </Field>
-        <Field Name="DebitAmount_MemberLedgerEntryFormat">
-          <DataField>DebitAmount_MemberLedgerEntryFormat</DataField>
-        </Field>
-        <Field Name="CreditAmount_MemberLedgerEntry">
-          <DataField>CreditAmount_MemberLedgerEntry</DataField>
-        </Field>
-        <Field Name="CreditAmount_MemberLedgerEntryFormat">
-          <DataField>CreditAmount_MemberLedgerEntryFormat</DataField>
-        </Field>
-        <Field Name="Company_Name">
-          <DataField>Company_Name</DataField>
-        </Field>
-        <Field Name="Company_Address">
-          <DataField>Company_Address</DataField>
-        </Field>
-        <Field Name="Company_Address_2">
-          <DataField>Company_Address_2</DataField>
-        </Field>
-        <Field Name="Company_Phone_No">
-          <DataField>Company_Phone_No</DataField>
-        </Field>
-        <Field Name="Company_Fax_No">
-          <DataField>Company_Fax_No</DataField>
-        </Field>
-        <Field Name="Company_Picture">
-          <DataField>Company_Picture</DataField>
-        </Field>
-        <Field Name="Company_Email">
-          <DataField>Company_Email</DataField>
-        </Field>
-      </Fields>
-      <rd:DataSetInfo>
-        <rd:DataSetName>DataSet</rd:DataSetName>
-        <rd:SchemaPath>Report.xsd</rd:SchemaPath>
-        <rd:TableName>Result</rd:TableName>
-      </rd:DataSetInfo>
-    </DataSet>
-  </DataSets>
   <ReportSections>
     <ReportSection>
       <Body>
@@ -1724,12 +1640,6 @@
       </Page>
     </ReportSection>
   </ReportSections>
-  <ReportParametersLayout>
-    <GridLayoutDefinition>
-      <NumberOfColumns>4</NumberOfColumns>
-      <NumberOfRows>2</NumberOfRows>
-    </GridLayoutDefinition>
-  </ReportParametersLayout>
   <Code>Public Function BlankZero(ByVal Value As Decimal)
     if Value = 0 then
         Return ""
@@ -1769,4 +1679,86 @@ End Function
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportUnitType>Inch</rd:ReportUnitType>
   <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="ReportForNavId_1">
+          <DataField>ReportForNavId_1</DataField>
+        </Field>
+        <Field Name="Amount_MemberLedgerEntry">
+          <DataField>Amount_MemberLedgerEntry</DataField>
+        </Field>
+        <Field Name="Amount_MemberLedgerEntryFormat">
+          <DataField>Amount_MemberLedgerEntryFormat</DataField>
+        </Field>
+        <Field Name="UserID_MemberLedgerEntry">
+          <DataField>UserID_MemberLedgerEntry</DataField>
+        </Field>
+        <Field Name="TransactionType_MemberLedgerEntry">
+          <DataField>TransactionType_MemberLedgerEntry</DataField>
+        </Field>
+        <Field Name="LoanNo_MemberLedgerEntry">
+          <DataField>LoanNo_MemberLedgerEntry</DataField>
+        </Field>
+        <Field Name="EntryNo_MemberLedgerEntry">
+          <DataField>EntryNo_MemberLedgerEntry</DataField>
+        </Field>
+        <Field Name="CustomerNo_MemberLedgerEntry">
+          <DataField>CustomerNo_MemberLedgerEntry</DataField>
+        </Field>
+        <Field Name="PostingDate_MemberLedgerEntry">
+          <DataField>PostingDate_MemberLedgerEntry</DataField>
+        </Field>
+        <Field Name="DocumentType_MemberLedgerEntry">
+          <DataField>DocumentType_MemberLedgerEntry</DataField>
+        </Field>
+        <Field Name="DocumentNo_MemberLedgerEntry">
+          <DataField>DocumentNo_MemberLedgerEntry</DataField>
+        </Field>
+        <Field Name="Description_MemberLedgerEntry">
+          <DataField>Description_MemberLedgerEntry</DataField>
+        </Field>
+        <Field Name="Reversed_MemberLedgerEntry">
+          <DataField>Reversed_MemberLedgerEntry</DataField>
+        </Field>
+        <Field Name="DebitAmount_MemberLedgerEntry">
+          <DataField>DebitAmount_MemberLedgerEntry</DataField>
+        </Field>
+        <Field Name="DebitAmount_MemberLedgerEntryFormat">
+          <DataField>DebitAmount_MemberLedgerEntryFormat</DataField>
+        </Field>
+        <Field Name="CreditAmount_MemberLedgerEntry">
+          <DataField>CreditAmount_MemberLedgerEntry</DataField>
+        </Field>
+        <Field Name="CreditAmount_MemberLedgerEntryFormat">
+          <DataField>CreditAmount_MemberLedgerEntryFormat</DataField>
+        </Field>
+        <Field Name="Company_Name">
+          <DataField>Company_Name</DataField>
+        </Field>
+        <Field Name="Company_Address">
+          <DataField>Company_Address</DataField>
+        </Field>
+        <Field Name="Company_Address_2">
+          <DataField>Company_Address_2</DataField>
+        </Field>
+        <Field Name="Company_Phone_No">
+          <DataField>Company_Phone_No</DataField>
+        </Field>
+        <Field Name="Company_Fax_No">
+          <DataField>Company_Fax_No</DataField>
+        </Field>
+        <Field Name="Company_Picture">
+          <DataField>Company_Picture</DataField>
+        </Field>
+        <Field Name="Company_Email">
+          <DataField>Company_Email</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
 </Report>

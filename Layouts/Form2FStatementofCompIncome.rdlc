@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
@@ -11,261 +11,6 @@
       <rd:DataSourceID>fd152336-9930-4258-9a7c-7c110e49a786</rd:DataSourceID>
     </DataSource>
   </DataSources>
-  <DataSets>
-    <DataSet Name="DataSet_Result">
-      <Query>
-        <DataSourceName>DataSource</DataSourceName>
-        <CommandText />
-      </Query>
-      <Fields>
-        <Field Name="AsAt">
-          <DataField>AsAt</DataField>
-        </Field>
-        <Field Name="Date">
-          <DataField>Date</DataField>
-        </Field>
-        <Field Name="FinancialYear">
-          <DataField>FinancialYear</DataField>
-        </Field>
-        <Field Name="Name">
-          <DataField>Name</DataField>
-        </Field>
-        <Field Name="InterestonLoanPortfolio">
-          <DataField>InterestonLoanPortfolio</DataField>
-        </Field>
-        <Field Name="InterestonLoanPortfolioFormat">
-          <DataField>InterestonLoanPortfolioFormat</DataField>
-        </Field>
-        <Field Name="FeesCommissiononLoanPortfolio">
-          <DataField>FeesCommissiononLoanPortfolio</DataField>
-        </Field>
-        <Field Name="FeesCommissiononLoanPortfolioFormat">
-          <DataField>FeesCommissiononLoanPortfolioFormat</DataField>
-        </Field>
-        <Field Name="GovernmentSecurities">
-          <DataField>GovernmentSecurities</DataField>
-        </Field>
-        <Field Name="GovernmentSecuritiesFormat">
-          <DataField>GovernmentSecuritiesFormat</DataField>
-        </Field>
-        <Field Name="InvestmentinCompaniesshares">
-          <DataField>InvestmentinCompaniesshares</DataField>
-        </Field>
-        <Field Name="InvestmentinCompaniessharesFormat">
-          <DataField>InvestmentinCompaniessharesFormat</DataField>
-        </Field>
-        <Field Name="EquityInvestmentsinsubsidiaries">
-          <DataField>EquityInvestmentsinsubsidiaries</DataField>
-        </Field>
-        <Field Name="EquityInvestmentsinsubsidiariesFormat">
-          <DataField>EquityInvestmentsinsubsidiariesFormat</DataField>
-        </Field>
-        <Field Name="Derivatives">
-          <DataField>Derivatives</DataField>
-        </Field>
-        <Field Name="DerivativesFormat">
-          <DataField>DerivativesFormat</DataField>
-        </Field>
-        <Field Name="CollectiveinvestmentSchemes">
-          <DataField>CollectiveinvestmentSchemes</DataField>
-        </Field>
-        <Field Name="CollectiveinvestmentSchemesFormat">
-          <DataField>CollectiveinvestmentSchemesFormat</DataField>
-        </Field>
-        <Field Name="CommercialPapers">
-          <DataField>CommercialPapers</DataField>
-        </Field>
-        <Field Name="CommercialPapersFormat">
-          <DataField>CommercialPapersFormat</DataField>
-        </Field>
-        <Field Name="PlacementinBanks">
-          <DataField>PlacementinBanks</DataField>
-        </Field>
-        <Field Name="PlacementinBanksFormat">
-          <DataField>PlacementinBanksFormat</DataField>
-        </Field>
-        <Field Name="nterestExpenseonDeposits">
-          <DataField>nterestExpenseonDeposits</DataField>
-        </Field>
-        <Field Name="nterestExpenseonDepositsFormat">
-          <DataField>nterestExpenseonDepositsFormat</DataField>
-        </Field>
-        <Field Name="CostofExternalBorrowings">
-          <DataField>CostofExternalBorrowings</DataField>
-        </Field>
-        <Field Name="CostofExternalBorrowingsFormat">
-          <DataField>CostofExternalBorrowingsFormat</DataField>
-        </Field>
-        <Field Name="DividendExpenses">
-          <DataField>DividendExpenses</DataField>
-        </Field>
-        <Field Name="DividendExpensesFormat">
-          <DataField>DividendExpensesFormat</DataField>
-        </Field>
-        <Field Name="OtherFinancialExpense">
-          <DataField>OtherFinancialExpense</DataField>
-        </Field>
-        <Field Name="OtherFinancialExpenseFormat">
-          <DataField>OtherFinancialExpenseFormat</DataField>
-        </Field>
-        <Field Name="FeesCommissionExpense">
-          <DataField>FeesCommissionExpense</DataField>
-        </Field>
-        <Field Name="FeesCommissionExpenseFormat">
-          <DataField>FeesCommissionExpenseFormat</DataField>
-        </Field>
-        <Field Name="OtherExpense">
-          <DataField>OtherExpense</DataField>
-        </Field>
-        <Field Name="OtherExpenseFormat">
-          <DataField>OtherExpenseFormat</DataField>
-        </Field>
-        <Field Name="ProvisionforLoanLosses">
-          <DataField>ProvisionforLoanLosses</DataField>
-        </Field>
-        <Field Name="ProvisionforLoanLossesFormat">
-          <DataField>ProvisionforLoanLossesFormat</DataField>
-        </Field>
-        <Field Name="ValueofLoansRecovered">
-          <DataField>ValueofLoansRecovered</DataField>
-        </Field>
-        <Field Name="ValueofLoansRecoveredFormat">
-          <DataField>ValueofLoansRecoveredFormat</DataField>
-        </Field>
-        <Field Name="PersonnelExpenses">
-          <DataField>PersonnelExpenses</DataField>
-        </Field>
-        <Field Name="PersonnelExpensesFormat">
-          <DataField>PersonnelExpensesFormat</DataField>
-        </Field>
-        <Field Name="GovernanceExpenses">
-          <DataField>GovernanceExpenses</DataField>
-        </Field>
-        <Field Name="GovernanceExpensesFormat">
-          <DataField>GovernanceExpensesFormat</DataField>
-        </Field>
-        <Field Name="MarketingExpenses">
-          <DataField>MarketingExpenses</DataField>
-        </Field>
-        <Field Name="MarketingExpensesFormat">
-          <DataField>MarketingExpensesFormat</DataField>
-        </Field>
-        <Field Name="DepreciationandAmortizationCharges">
-          <DataField>DepreciationandAmortizationCharges</DataField>
-        </Field>
-        <Field Name="DepreciationandAmortizationChargesFormat">
-          <DataField>DepreciationandAmortizationChargesFormat</DataField>
-        </Field>
-        <Field Name="AdministrativeExpenses">
-          <DataField>AdministrativeExpenses</DataField>
-        </Field>
-        <Field Name="AdministrativeExpensesFormat">
-          <DataField>AdministrativeExpensesFormat</DataField>
-        </Field>
-        <Field Name="NonOperatingIncome">
-          <DataField>NonOperatingIncome</DataField>
-        </Field>
-        <Field Name="NonOperatingIncomeFormat">
-          <DataField>NonOperatingIncomeFormat</DataField>
-        </Field>
-        <Field Name="NonOperatingExpense">
-          <DataField>NonOperatingExpense</DataField>
-        </Field>
-        <Field Name="NonOperatingExpenseFormat">
-          <DataField>NonOperatingExpenseFormat</DataField>
-        </Field>
-        <Field Name="Taxes">
-          <DataField>Taxes</DataField>
-        </Field>
-        <Field Name="TaxesFormat">
-          <DataField>TaxesFormat</DataField>
-        </Field>
-        <Field Name="Donations">
-          <DataField>Donations</DataField>
-        </Field>
-        <Field Name="DonationsFormat">
-          <DataField>DonationsFormat</DataField>
-        </Field>
-        <Field Name="FinancialIncomefromLoansPortfolio">
-          <DataField>FinancialIncomefromLoansPortfolio</DataField>
-        </Field>
-        <Field Name="FinancialIncomefromLoansPortfolioFormat">
-          <DataField>FinancialIncomefromLoansPortfolioFormat</DataField>
-        </Field>
-        <Field Name="FinancialExpense">
-          <DataField>FinancialExpense</DataField>
-        </Field>
-        <Field Name="FinancialExpenseFormat">
-          <DataField>FinancialExpenseFormat</DataField>
-        </Field>
-        <Field Name="NetFinancialIncomeLoss">
-          <DataField>NetFinancialIncomeLoss</DataField>
-        </Field>
-        <Field Name="NetFinancialIncomeLossFormat">
-          <DataField>NetFinancialIncomeLossFormat</DataField>
-        </Field>
-        <Field Name="NetNonOperatingIncomeExpense">
-          <DataField>NetNonOperatingIncomeExpense</DataField>
-        </Field>
-        <Field Name="NetNonOperatingIncomeExpenseFormat">
-          <DataField>NetNonOperatingIncomeExpenseFormat</DataField>
-        </Field>
-        <Field Name="FinancialIncomefromInvestments">
-          <DataField>FinancialIncomefromInvestments</DataField>
-        </Field>
-        <Field Name="FinancialIncomefromInvestmentsFormat">
-          <DataField>FinancialIncomefromInvestmentsFormat</DataField>
-        </Field>
-        <Field Name="AllowanceforLoanLoss">
-          <DataField>AllowanceforLoanLoss</DataField>
-        </Field>
-        <Field Name="AllowanceforLoanLossFormat">
-          <DataField>AllowanceforLoanLossFormat</DataField>
-        </Field>
-        <Field Name="OperatingExpenses">
-          <DataField>OperatingExpenses</DataField>
-        </Field>
-        <Field Name="OperatingExpensesFormat">
-          <DataField>OperatingExpensesFormat</DataField>
-        </Field>
-        <Field Name="NetOperatingIncome">
-          <DataField>NetOperatingIncome</DataField>
-        </Field>
-        <Field Name="NetOperatingIncomeFormat">
-          <DataField>NetOperatingIncomeFormat</DataField>
-        </Field>
-        <Field Name="NetIncomeBeforeTaxesandDonations">
-          <DataField>NetIncomeBeforeTaxesandDonations</DataField>
-        </Field>
-        <Field Name="NetIncomeBeforeTaxesandDonationsFormat">
-          <DataField>NetIncomeBeforeTaxesandDonationsFormat</DataField>
-        </Field>
-        <Field Name="NetIncomeAfterTaxesbeforeDonations">
-          <DataField>NetIncomeAfterTaxesbeforeDonations</DataField>
-        </Field>
-        <Field Name="NetIncomeAfterTaxesbeforeDonationsFormat">
-          <DataField>NetIncomeAfterTaxesbeforeDonationsFormat</DataField>
-        </Field>
-        <Field Name="NetIncomeAfterTaxesandDonations">
-          <DataField>NetIncomeAfterTaxesandDonations</DataField>
-        </Field>
-        <Field Name="NetIncomeAfterTaxesandDonationsFormat">
-          <DataField>NetIncomeAfterTaxesandDonationsFormat</DataField>
-        </Field>
-        <Field Name="FinancialIncome">
-          <DataField>FinancialIncome</DataField>
-        </Field>
-        <Field Name="FinancialIncomeFormat">
-          <DataField>FinancialIncomeFormat</DataField>
-        </Field>
-      </Fields>
-      <rd:DataSetInfo>
-        <rd:DataSetName>DataSet</rd:DataSetName>
-        <rd:SchemaPath>Report.xsd</rd:SchemaPath>
-        <rd:TableName>Result</rd:TableName>
-      </rd:DataSetInfo>
-    </DataSet>
-  </DataSets>
   <ReportSections>
     <ReportSection>
       <Body>
@@ -6905,12 +6650,6 @@
       </Page>
     </ReportSection>
   </ReportSections>
-  <ReportParametersLayout>
-    <GridLayoutDefinition>
-      <NumberOfColumns>4</NumberOfColumns>
-      <NumberOfRows>2</NumberOfRows>
-    </GridLayoutDefinition>
-  </ReportParametersLayout>
   <Code>Public Function BlankZero(ByVal Value As Decimal)
     if Value = 0 then
         Return ""
@@ -6950,4 +6689,257 @@ End Function
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportUnitType>Inch</rd:ReportUnitType>
   <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="ReportForNavId_1">
+          <DataField>ReportForNavId_1</DataField>
+        </Field>
+        <Field Name="AsAt">
+          <DataField>AsAt</DataField>
+        </Field>
+        <Field Name="Date">
+          <DataField>Date</DataField>
+        </Field>
+        <Field Name="FinancialYear">
+          <DataField>FinancialYear</DataField>
+        </Field>
+        <Field Name="Name">
+          <DataField>Name</DataField>
+        </Field>
+        <Field Name="InterestonLoanPortfolio">
+          <DataField>InterestonLoanPortfolio</DataField>
+        </Field>
+        <Field Name="InterestonLoanPortfolioFormat">
+          <DataField>InterestonLoanPortfolioFormat</DataField>
+        </Field>
+        <Field Name="FeesCommissiononLoanPortfolio">
+          <DataField>FeesCommissiononLoanPortfolio</DataField>
+        </Field>
+        <Field Name="FeesCommissiononLoanPortfolioFormat">
+          <DataField>FeesCommissiononLoanPortfolioFormat</DataField>
+        </Field>
+        <Field Name="GovernmentSecurities">
+          <DataField>GovernmentSecurities</DataField>
+        </Field>
+        <Field Name="GovernmentSecuritiesFormat">
+          <DataField>GovernmentSecuritiesFormat</DataField>
+        </Field>
+        <Field Name="InvestmentinCompaniesshares">
+          <DataField>InvestmentinCompaniesshares</DataField>
+        </Field>
+        <Field Name="InvestmentinCompaniessharesFormat">
+          <DataField>InvestmentinCompaniessharesFormat</DataField>
+        </Field>
+        <Field Name="EquityInvestmentsinsubsidiaries">
+          <DataField>EquityInvestmentsinsubsidiaries</DataField>
+        </Field>
+        <Field Name="EquityInvestmentsinsubsidiariesFormat">
+          <DataField>EquityInvestmentsinsubsidiariesFormat</DataField>
+        </Field>
+        <Field Name="Derivatives">
+          <DataField>Derivatives</DataField>
+        </Field>
+        <Field Name="DerivativesFormat">
+          <DataField>DerivativesFormat</DataField>
+        </Field>
+        <Field Name="CollectiveinvestmentSchemes">
+          <DataField>CollectiveinvestmentSchemes</DataField>
+        </Field>
+        <Field Name="CollectiveinvestmentSchemesFormat">
+          <DataField>CollectiveinvestmentSchemesFormat</DataField>
+        </Field>
+        <Field Name="CommercialPapers">
+          <DataField>CommercialPapers</DataField>
+        </Field>
+        <Field Name="CommercialPapersFormat">
+          <DataField>CommercialPapersFormat</DataField>
+        </Field>
+        <Field Name="PlacementinBanks">
+          <DataField>PlacementinBanks</DataField>
+        </Field>
+        <Field Name="PlacementinBanksFormat">
+          <DataField>PlacementinBanksFormat</DataField>
+        </Field>
+        <Field Name="nterestExpenseonDeposits">
+          <DataField>nterestExpenseonDeposits</DataField>
+        </Field>
+        <Field Name="nterestExpenseonDepositsFormat">
+          <DataField>nterestExpenseonDepositsFormat</DataField>
+        </Field>
+        <Field Name="CostofExternalBorrowings">
+          <DataField>CostofExternalBorrowings</DataField>
+        </Field>
+        <Field Name="CostofExternalBorrowingsFormat">
+          <DataField>CostofExternalBorrowingsFormat</DataField>
+        </Field>
+        <Field Name="DividendExpenses">
+          <DataField>DividendExpenses</DataField>
+        </Field>
+        <Field Name="DividendExpensesFormat">
+          <DataField>DividendExpensesFormat</DataField>
+        </Field>
+        <Field Name="OtherFinancialExpense">
+          <DataField>OtherFinancialExpense</DataField>
+        </Field>
+        <Field Name="OtherFinancialExpenseFormat">
+          <DataField>OtherFinancialExpenseFormat</DataField>
+        </Field>
+        <Field Name="FeesCommissionExpense">
+          <DataField>FeesCommissionExpense</DataField>
+        </Field>
+        <Field Name="FeesCommissionExpenseFormat">
+          <DataField>FeesCommissionExpenseFormat</DataField>
+        </Field>
+        <Field Name="OtherExpense">
+          <DataField>OtherExpense</DataField>
+        </Field>
+        <Field Name="OtherExpenseFormat">
+          <DataField>OtherExpenseFormat</DataField>
+        </Field>
+        <Field Name="ProvisionforLoanLosses">
+          <DataField>ProvisionforLoanLosses</DataField>
+        </Field>
+        <Field Name="ProvisionforLoanLossesFormat">
+          <DataField>ProvisionforLoanLossesFormat</DataField>
+        </Field>
+        <Field Name="ValueofLoansRecovered">
+          <DataField>ValueofLoansRecovered</DataField>
+        </Field>
+        <Field Name="ValueofLoansRecoveredFormat">
+          <DataField>ValueofLoansRecoveredFormat</DataField>
+        </Field>
+        <Field Name="PersonnelExpenses">
+          <DataField>PersonnelExpenses</DataField>
+        </Field>
+        <Field Name="PersonnelExpensesFormat">
+          <DataField>PersonnelExpensesFormat</DataField>
+        </Field>
+        <Field Name="GovernanceExpenses">
+          <DataField>GovernanceExpenses</DataField>
+        </Field>
+        <Field Name="GovernanceExpensesFormat">
+          <DataField>GovernanceExpensesFormat</DataField>
+        </Field>
+        <Field Name="MarketingExpenses">
+          <DataField>MarketingExpenses</DataField>
+        </Field>
+        <Field Name="MarketingExpensesFormat">
+          <DataField>MarketingExpensesFormat</DataField>
+        </Field>
+        <Field Name="DepreciationandAmortizationCharges">
+          <DataField>DepreciationandAmortizationCharges</DataField>
+        </Field>
+        <Field Name="DepreciationandAmortizationChargesFormat">
+          <DataField>DepreciationandAmortizationChargesFormat</DataField>
+        </Field>
+        <Field Name="AdministrativeExpenses">
+          <DataField>AdministrativeExpenses</DataField>
+        </Field>
+        <Field Name="AdministrativeExpensesFormat">
+          <DataField>AdministrativeExpensesFormat</DataField>
+        </Field>
+        <Field Name="NonOperatingIncome">
+          <DataField>NonOperatingIncome</DataField>
+        </Field>
+        <Field Name="NonOperatingIncomeFormat">
+          <DataField>NonOperatingIncomeFormat</DataField>
+        </Field>
+        <Field Name="NonOperatingExpense">
+          <DataField>NonOperatingExpense</DataField>
+        </Field>
+        <Field Name="NonOperatingExpenseFormat">
+          <DataField>NonOperatingExpenseFormat</DataField>
+        </Field>
+        <Field Name="Taxes">
+          <DataField>Taxes</DataField>
+        </Field>
+        <Field Name="TaxesFormat">
+          <DataField>TaxesFormat</DataField>
+        </Field>
+        <Field Name="Donations">
+          <DataField>Donations</DataField>
+        </Field>
+        <Field Name="DonationsFormat">
+          <DataField>DonationsFormat</DataField>
+        </Field>
+        <Field Name="FinancialIncomefromLoansPortfolio">
+          <DataField>FinancialIncomefromLoansPortfolio</DataField>
+        </Field>
+        <Field Name="FinancialIncomefromLoansPortfolioFormat">
+          <DataField>FinancialIncomefromLoansPortfolioFormat</DataField>
+        </Field>
+        <Field Name="FinancialExpense">
+          <DataField>FinancialExpense</DataField>
+        </Field>
+        <Field Name="FinancialExpenseFormat">
+          <DataField>FinancialExpenseFormat</DataField>
+        </Field>
+        <Field Name="NetFinancialIncomeLoss">
+          <DataField>NetFinancialIncomeLoss</DataField>
+        </Field>
+        <Field Name="NetFinancialIncomeLossFormat">
+          <DataField>NetFinancialIncomeLossFormat</DataField>
+        </Field>
+        <Field Name="NetNonOperatingIncomeExpense">
+          <DataField>NetNonOperatingIncomeExpense</DataField>
+        </Field>
+        <Field Name="NetNonOperatingIncomeExpenseFormat">
+          <DataField>NetNonOperatingIncomeExpenseFormat</DataField>
+        </Field>
+        <Field Name="FinancialIncomefromInvestments">
+          <DataField>FinancialIncomefromInvestments</DataField>
+        </Field>
+        <Field Name="FinancialIncomefromInvestmentsFormat">
+          <DataField>FinancialIncomefromInvestmentsFormat</DataField>
+        </Field>
+        <Field Name="AllowanceforLoanLoss">
+          <DataField>AllowanceforLoanLoss</DataField>
+        </Field>
+        <Field Name="AllowanceforLoanLossFormat">
+          <DataField>AllowanceforLoanLossFormat</DataField>
+        </Field>
+        <Field Name="OperatingExpenses">
+          <DataField>OperatingExpenses</DataField>
+        </Field>
+        <Field Name="OperatingExpensesFormat">
+          <DataField>OperatingExpensesFormat</DataField>
+        </Field>
+        <Field Name="NetOperatingIncome">
+          <DataField>NetOperatingIncome</DataField>
+        </Field>
+        <Field Name="NetOperatingIncomeFormat">
+          <DataField>NetOperatingIncomeFormat</DataField>
+        </Field>
+        <Field Name="NetIncomeBeforeTaxesandDonations">
+          <DataField>NetIncomeBeforeTaxesandDonations</DataField>
+        </Field>
+        <Field Name="NetIncomeBeforeTaxesandDonationsFormat">
+          <DataField>NetIncomeBeforeTaxesandDonationsFormat</DataField>
+        </Field>
+        <Field Name="NetIncomeAfterTaxesbeforeDonations">
+          <DataField>NetIncomeAfterTaxesbeforeDonations</DataField>
+        </Field>
+        <Field Name="NetIncomeAfterTaxesbeforeDonationsFormat">
+          <DataField>NetIncomeAfterTaxesbeforeDonationsFormat</DataField>
+        </Field>
+        <Field Name="NetIncomeAfterTaxesandDonations">
+          <DataField>NetIncomeAfterTaxesandDonations</DataField>
+        </Field>
+        <Field Name="NetIncomeAfterTaxesandDonationsFormat">
+          <DataField>NetIncomeAfterTaxesandDonationsFormat</DataField>
+        </Field>
+        <Field Name="FinancialIncome">
+          <DataField>FinancialIncome</DataField>
+        </Field>
+        <Field Name="FinancialIncomeFormat">
+          <DataField>FinancialIncomeFormat</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
 </Report>

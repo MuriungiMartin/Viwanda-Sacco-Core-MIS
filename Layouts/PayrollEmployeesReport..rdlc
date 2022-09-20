@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
@@ -11,75 +11,6 @@
       <rd:DataSourceID>0a752211-83c8-4d02-b4c9-f730cf2a6141</rd:DataSourceID>
     </DataSource>
   </DataSources>
-  <DataSets>
-    <DataSet Name="DataSet_Result">
-      <Query>
-        <DataSourceName>DataSource</DataSourceName>
-        <CommandText />
-      </Query>
-      <Fields>
-        <Field Name="No">
-          <DataField>No</DataField>
-        </Field>
-        <Field Name="Surname">
-          <DataField>Surname</DataField>
-        </Field>
-        <Field Name="FirstName">
-          <DataField>FirstName</DataField>
-        </Field>
-        <Field Name="LastName">
-          <DataField>LastName</DataField>
-        </Field>
-        <Field Name="DateofJoin">
-          <DataField>DateofJoin</DataField>
-        </Field>
-        <Field Name="Activity">
-          <DataField>Activity</DataField>
-        </Field>
-        <Field Name="Branch">
-          <DataField>Branch</DataField>
-        </Field>
-        <Field Name="IDNo">
-          <DataField>IDNo</DataField>
-        </Field>
-        <Field Name="PINNo">
-          <DataField>PINNo</DataField>
-        </Field>
-        <Field Name="NSSFNo">
-          <DataField>NSSFNo</DataField>
-        </Field>
-        <Field Name="NHIFNo">
-          <DataField>NHIFNo</DataField>
-        </Field>
-        <Field Name="CName">
-          <DataField>CName</DataField>
-        </Field>
-        <Field Name="CAddress">
-          <DataField>CAddress</DataField>
-        </Field>
-        <Field Name="CPic">
-          <DataField>CPic</DataField>
-        </Field>
-        <Field Name="Department_PayrollEmployee">
-          <DataField>Department_PayrollEmployee</DataField>
-        </Field>
-        <Field Name="BasicPay_PayrollEmployee">
-          <DataField>BasicPay_PayrollEmployee</DataField>
-        </Field>
-        <Field Name="BasicPay_PayrollEmployeeFormat">
-          <DataField>BasicPay_PayrollEmployeeFormat</DataField>
-        </Field>
-        <Field Name="DateExited_PayrollEmployee">
-          <DataField>DateExited_PayrollEmployee</DataField>
-        </Field>
-      </Fields>
-      <rd:DataSetInfo>
-        <rd:DataSetName>DataSet</rd:DataSetName>
-        <rd:SchemaPath>Report.xsd</rd:SchemaPath>
-        <rd:TableName>Result</rd:TableName>
-      </rd:DataSetInfo>
-    </DataSet>
-  </DataSets>
   <ReportSections>
     <ReportSection>
       <Body>
@@ -1679,12 +1610,6 @@
       </Page>
     </ReportSection>
   </ReportSections>
-  <ReportParametersLayout>
-    <GridLayoutDefinition>
-      <NumberOfColumns>4</NumberOfColumns>
-      <NumberOfRows>2</NumberOfRows>
-    </GridLayoutDefinition>
-  </ReportParametersLayout>
   <Code>Public Function BlankZero(ByVal Value As Decimal)
     if Value = 0 then
         Return ""
@@ -1724,4 +1649,71 @@ End Function
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
   <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="ReportForNavId_1">
+          <DataField>ReportForNavId_1</DataField>
+        </Field>
+        <Field Name="No">
+          <DataField>No</DataField>
+        </Field>
+        <Field Name="Surname">
+          <DataField>Surname</DataField>
+        </Field>
+        <Field Name="FirstName">
+          <DataField>FirstName</DataField>
+        </Field>
+        <Field Name="LastName">
+          <DataField>LastName</DataField>
+        </Field>
+        <Field Name="DateofJoin">
+          <DataField>DateofJoin</DataField>
+        </Field>
+        <Field Name="Activity">
+          <DataField>Activity</DataField>
+        </Field>
+        <Field Name="Branch">
+          <DataField>Branch</DataField>
+        </Field>
+        <Field Name="IDNo">
+          <DataField>IDNo</DataField>
+        </Field>
+        <Field Name="PINNo">
+          <DataField>PINNo</DataField>
+        </Field>
+        <Field Name="NSSFNo">
+          <DataField>NSSFNo</DataField>
+        </Field>
+        <Field Name="NHIFNo">
+          <DataField>NHIFNo</DataField>
+        </Field>
+        <Field Name="CName">
+          <DataField>CName</DataField>
+        </Field>
+        <Field Name="CAddress">
+          <DataField>CAddress</DataField>
+        </Field>
+        <Field Name="CPic">
+          <DataField>CPic</DataField>
+        </Field>
+        <Field Name="Department_PayrollEmployee">
+          <DataField>Department_PayrollEmployee</DataField>
+        </Field>
+        <Field Name="BasicPay_PayrollEmployee">
+          <DataField>BasicPay_PayrollEmployee</DataField>
+        </Field>
+        <Field Name="BasicPay_PayrollEmployeeFormat">
+          <DataField>BasicPay_PayrollEmployeeFormat</DataField>
+        </Field>
+        <Field Name="DateExited_PayrollEmployee">
+          <DataField>DateExited_PayrollEmployee</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
 </Report>

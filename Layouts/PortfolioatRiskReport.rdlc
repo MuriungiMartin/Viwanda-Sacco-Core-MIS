@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
@@ -11,114 +11,6 @@
       <rd:DataSourceID>fc0f0104-e1f6-48ef-8db7-02fe3dc2c032</rd:DataSourceID>
     </DataSource>
   </DataSources>
-  <DataSets>
-    <DataSet Name="DataSet_Result">
-      <Query>
-        <DataSourceName>DataSource</DataSourceName>
-        <CommandText />
-      </Query>
-      <Fields>
-        <Field Name="Company_Name">
-          <DataField>Company_Name</DataField>
-        </Field>
-        <Field Name="Company_Address">
-          <DataField>Company_Address</DataField>
-        </Field>
-        <Field Name="Company_City">
-          <DataField>Company_City</DataField>
-        </Field>
-        <Field Name="Company_Picture">
-          <DataField>Company_Picture</DataField>
-        </Field>
-        <Field Name="Company_Email">
-          <DataField>Company_Email</DataField>
-        </Field>
-        <Field Name="Company_Address_2">
-          <DataField>Company_Address_2</DataField>
-        </Field>
-        <Field Name="Company_Phone_No">
-          <DataField>Company_Phone_No</DataField>
-        </Field>
-        <Field Name="Company_Fax_No">
-          <DataField>Company_Fax_No</DataField>
-        </Field>
-        <Field Name="SN">
-          <DataField>SN</DataField>
-        </Field>
-        <Field Name="LoanNo_LoansRegister">
-          <DataField>LoanNo_LoansRegister</DataField>
-        </Field>
-        <Field Name="ClientName_LoansRegister">
-          <DataField>ClientName_LoansRegister</DataField>
-        </Field>
-        <Field Name="LoanProductTypeName_LoansRegister">
-          <DataField>LoanProductTypeName_LoansRegister</DataField>
-        </Field>
-        <Field Name="DaysInArrears_LoansRegister">
-          <DataField>DaysInArrears_LoansRegister</DataField>
-        </Field>
-        <Field Name="LoanDebtCollector_LoansRegister">
-          <DataField>LoanDebtCollector_LoansRegister</DataField>
-        </Field>
-        <Field Name="DebtCollectorName_LoansRegister">
-          <DataField>DebtCollectorName_LoansRegister</DataField>
-        </Field>
-        <Field Name="AmountinArrears_LoansRegister">
-          <DataField>AmountinArrears_LoansRegister</DataField>
-        </Field>
-        <Field Name="AmountinArrears_LoansRegisterFormat">
-          <DataField>AmountinArrears_LoansRegisterFormat</DataField>
-        </Field>
-        <Field Name="ClientCode_LoansRegister">
-          <DataField>ClientCode_LoansRegister</DataField>
-        </Field>
-        <Field Name="OutstandingBalance_LoansRegister">
-          <DataField>OutstandingBalance_LoansRegister</DataField>
-        </Field>
-        <Field Name="OutstandingBalance_LoansRegisterFormat">
-          <DataField>OutstandingBalance_LoansRegisterFormat</DataField>
-        </Field>
-        <Field Name="LoanRecoveryAccountFOSA_LoansRegister">
-          <DataField>LoanRecoveryAccountFOSA_LoansRegister</DataField>
-        </Field>
-        <Field Name="ApprovedAmount_LoansRegister">
-          <DataField>ApprovedAmount_LoansRegister</DataField>
-        </Field>
-        <Field Name="ApprovedAmount_LoansRegisterFormat">
-          <DataField>ApprovedAmount_LoansRegisterFormat</DataField>
-        </Field>
-        <Field Name="LoanReschedule_LoansRegister">
-          <DataField>LoanReschedule_LoansRegister</DataField>
-        </Field>
-        <Field Name="LastRepaymentDate_LoansRegister">
-          <DataField>LastRepaymentDate_LoansRegister</DataField>
-        </Field>
-        <Field Name="FollowUp">
-          <DataField>FollowUp</DataField>
-        </Field>
-        <Field Name="CollateralRegisteDoc_LoanCollateralDetails">
-          <DataField>CollateralRegisteDoc_LoanCollateralDetails</DataField>
-        </Field>
-        <Field Name="GuaranteeValue_LoanCollateralDetails">
-          <DataField>GuaranteeValue_LoanCollateralDetails</DataField>
-        </Field>
-        <Field Name="GuaranteeValue_LoanCollateralDetailsFormat">
-          <DataField>GuaranteeValue_LoanCollateralDetailsFormat</DataField>
-        </Field>
-        <Field Name="SecurityDetails_LoanCollateralDetails">
-          <DataField>SecurityDetails_LoanCollateralDetails</DataField>
-        </Field>
-        <Field Name="Code_LoanCollateralDetails">
-          <DataField>Code_LoanCollateralDetails</DataField>
-        </Field>
-      </Fields>
-      <rd:DataSetInfo>
-        <rd:DataSetName>DataSet</rd:DataSetName>
-        <rd:SchemaPath>Report.xsd</rd:SchemaPath>
-        <rd:TableName>Result</rd:TableName>
-      </rd:DataSetInfo>
-    </DataSet>
-  </DataSets>
   <ReportSections>
     <ReportSection>
       <Body>
@@ -2131,12 +2023,6 @@
       </Page>
     </ReportSection>
   </ReportSections>
-  <ReportParametersLayout>
-    <GridLayoutDefinition>
-      <NumberOfColumns>4</NumberOfColumns>
-      <NumberOfRows>2</NumberOfRows>
-    </GridLayoutDefinition>
-  </ReportParametersLayout>
   <Code>Public Function BlankZero(ByVal Value As Decimal)
     if Value = 0 then
         Return ""
@@ -2176,4 +2062,113 @@ End Function
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportUnitType>Inch</rd:ReportUnitType>
   <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="ReportForNavId_1">
+          <DataField>ReportForNavId_1</DataField>
+        </Field>
+        <Field Name="Company_Name">
+          <DataField>Company_Name</DataField>
+        </Field>
+        <Field Name="Company_Address">
+          <DataField>Company_Address</DataField>
+        </Field>
+        <Field Name="Company_City">
+          <DataField>Company_City</DataField>
+        </Field>
+        <Field Name="Company_Picture">
+          <DataField>Company_Picture</DataField>
+        </Field>
+        <Field Name="Company_Email">
+          <DataField>Company_Email</DataField>
+        </Field>
+        <Field Name="Company_Address_2">
+          <DataField>Company_Address_2</DataField>
+        </Field>
+        <Field Name="Company_Phone_No">
+          <DataField>Company_Phone_No</DataField>
+        </Field>
+        <Field Name="Company_Fax_No">
+          <DataField>Company_Fax_No</DataField>
+        </Field>
+        <Field Name="SN">
+          <DataField>SN</DataField>
+        </Field>
+        <Field Name="LoanNo_LoansRegister">
+          <DataField>LoanNo_LoansRegister</DataField>
+        </Field>
+        <Field Name="ClientName_LoansRegister">
+          <DataField>ClientName_LoansRegister</DataField>
+        </Field>
+        <Field Name="LoanProductTypeName_LoansRegister">
+          <DataField>LoanProductTypeName_LoansRegister</DataField>
+        </Field>
+        <Field Name="DaysInArrears_LoansRegister">
+          <DataField>DaysInArrears_LoansRegister</DataField>
+        </Field>
+        <Field Name="LoanDebtCollector_LoansRegister">
+          <DataField>LoanDebtCollector_LoansRegister</DataField>
+        </Field>
+        <Field Name="DebtCollectorName_LoansRegister">
+          <DataField>DebtCollectorName_LoansRegister</DataField>
+        </Field>
+        <Field Name="AmountinArrears_LoansRegister">
+          <DataField>AmountinArrears_LoansRegister</DataField>
+        </Field>
+        <Field Name="AmountinArrears_LoansRegisterFormat">
+          <DataField>AmountinArrears_LoansRegisterFormat</DataField>
+        </Field>
+        <Field Name="ClientCode_LoansRegister">
+          <DataField>ClientCode_LoansRegister</DataField>
+        </Field>
+        <Field Name="OutstandingBalance_LoansRegister">
+          <DataField>OutstandingBalance_LoansRegister</DataField>
+        </Field>
+        <Field Name="OutstandingBalance_LoansRegisterFormat">
+          <DataField>OutstandingBalance_LoansRegisterFormat</DataField>
+        </Field>
+        <Field Name="LoanRecoveryAccountFOSA_LoansRegister">
+          <DataField>LoanRecoveryAccountFOSA_LoansRegister</DataField>
+        </Field>
+        <Field Name="ApprovedAmount_LoansRegister">
+          <DataField>ApprovedAmount_LoansRegister</DataField>
+        </Field>
+        <Field Name="ApprovedAmount_LoansRegisterFormat">
+          <DataField>ApprovedAmount_LoansRegisterFormat</DataField>
+        </Field>
+        <Field Name="LoanReschedule_LoansRegister">
+          <DataField>LoanReschedule_LoansRegister</DataField>
+        </Field>
+        <Field Name="LastRepaymentDate_LoansRegister">
+          <DataField>LastRepaymentDate_LoansRegister</DataField>
+        </Field>
+        <Field Name="FollowUp">
+          <DataField>FollowUp</DataField>
+        </Field>
+        <Field Name="ReportForNavId_13">
+          <DataField>ReportForNavId_13</DataField>
+        </Field>
+        <Field Name="CollateralRegisteDoc_LoanCollateralDetails">
+          <DataField>CollateralRegisteDoc_LoanCollateralDetails</DataField>
+        </Field>
+        <Field Name="GuaranteeValue_LoanCollateralDetails">
+          <DataField>GuaranteeValue_LoanCollateralDetails</DataField>
+        </Field>
+        <Field Name="GuaranteeValue_LoanCollateralDetailsFormat">
+          <DataField>GuaranteeValue_LoanCollateralDetailsFormat</DataField>
+        </Field>
+        <Field Name="SecurityDetails_LoanCollateralDetails">
+          <DataField>SecurityDetails_LoanCollateralDetails</DataField>
+        </Field>
+        <Field Name="Code_LoanCollateralDetails">
+          <DataField>Code_LoanCollateralDetails</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
 </Report>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
@@ -10,67 +10,6 @@
       <rd:SecurityType>None</rd:SecurityType>
     </DataSource>
   </DataSources>
-  <DataSets>
-    <DataSet Name="DataSet_Result">
-      <Query>
-        <DataSourceName>DataSource</DataSourceName>
-        <CommandText />
-      </Query>
-      <Fields>
-        <Field Name="EntryNo_ChangeLogEntry">
-          <DataField>EntryNo_ChangeLogEntry</DataField>
-        </Field>
-        <Field Name="DateandTime_ChangeLogEntry">
-          <DataField>DateandTime_ChangeLogEntry</DataField>
-        </Field>
-        <Field Name="Time_ChangeLogEntry">
-          <DataField>Time_ChangeLogEntry</DataField>
-        </Field>
-        <Field Name="UserID_ChangeLogEntry">
-          <DataField>UserID_ChangeLogEntry</DataField>
-        </Field>
-        <Field Name="TableNo_ChangeLogEntry">
-          <DataField>TableNo_ChangeLogEntry</DataField>
-        </Field>
-        <Field Name="TableCaption_ChangeLogEntry">
-          <DataField>TableCaption_ChangeLogEntry</DataField>
-        </Field>
-        <Field Name="FieldNo_ChangeLogEntry">
-          <DataField>FieldNo_ChangeLogEntry</DataField>
-        </Field>
-        <Field Name="FieldCaption_ChangeLogEntry">
-          <DataField>FieldCaption_ChangeLogEntry</DataField>
-        </Field>
-        <Field Name="TypeofChange_ChangeLogEntry">
-          <DataField>TypeofChange_ChangeLogEntry</DataField>
-        </Field>
-        <Field Name="OldValue_ChangeLogEntry">
-          <DataField>OldValue_ChangeLogEntry</DataField>
-        </Field>
-        <Field Name="NewValue_ChangeLogEntry">
-          <DataField>NewValue_ChangeLogEntry</DataField>
-        </Field>
-        <Field Name="Company_Name">
-          <DataField>Company_Name</DataField>
-        </Field>
-        <Field Name="Company_Address">
-          <DataField>Company_Address</DataField>
-        </Field>
-        <Field Name="Company_City">
-          <DataField>Company_City</DataField>
-        </Field>
-        <Field Name="Company_Picture">
-          <DataField>Company_Picture</DataField>
-        </Field>
-        <Field Name="USERID">
-          <DataField>USERID</DataField>
-        </Field>
-        <Field Name="ComputerName">
-          <DataField>ComputerName</DataField>
-        </Field>
-      </Fields>
-    </DataSet>
-  </DataSets>
   <ReportSections>
     <ReportSection>
       <Body>
@@ -1741,4 +1680,68 @@ End Function
   <Language>=User!Language</Language>
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="ReportForNavId_1000000000">
+          <DataField>ReportForNavId_1000000000</DataField>
+        </Field>
+        <Field Name="EntryNo_ChangeLogEntry">
+          <DataField>EntryNo_ChangeLogEntry</DataField>
+        </Field>
+        <Field Name="DateandTime_ChangeLogEntry">
+          <DataField>DateandTime_ChangeLogEntry</DataField>
+        </Field>
+        <Field Name="Time_ChangeLogEntry">
+          <DataField>Time_ChangeLogEntry</DataField>
+        </Field>
+        <Field Name="UserID_ChangeLogEntry">
+          <DataField>UserID_ChangeLogEntry</DataField>
+        </Field>
+        <Field Name="TableNo_ChangeLogEntry">
+          <DataField>TableNo_ChangeLogEntry</DataField>
+        </Field>
+        <Field Name="TableCaption_ChangeLogEntry">
+          <DataField>TableCaption_ChangeLogEntry</DataField>
+        </Field>
+        <Field Name="FieldNo_ChangeLogEntry">
+          <DataField>FieldNo_ChangeLogEntry</DataField>
+        </Field>
+        <Field Name="FieldCaption_ChangeLogEntry">
+          <DataField>FieldCaption_ChangeLogEntry</DataField>
+        </Field>
+        <Field Name="TypeofChange_ChangeLogEntry">
+          <DataField>TypeofChange_ChangeLogEntry</DataField>
+        </Field>
+        <Field Name="OldValue_ChangeLogEntry">
+          <DataField>OldValue_ChangeLogEntry</DataField>
+        </Field>
+        <Field Name="NewValue_ChangeLogEntry">
+          <DataField>NewValue_ChangeLogEntry</DataField>
+        </Field>
+        <Field Name="Company_Name">
+          <DataField>Company_Name</DataField>
+        </Field>
+        <Field Name="Company_Address">
+          <DataField>Company_Address</DataField>
+        </Field>
+        <Field Name="Company_City">
+          <DataField>Company_City</DataField>
+        </Field>
+        <Field Name="Company_Picture">
+          <DataField>Company_Picture</DataField>
+        </Field>
+        <Field Name="UserId">
+          <DataField>UserId</DataField>
+        </Field>
+        <Field Name="ComputerName">
+          <DataField>ComputerName</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
 </Report>
