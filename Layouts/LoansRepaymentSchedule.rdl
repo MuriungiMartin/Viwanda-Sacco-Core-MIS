@@ -1,0 +1,275 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="Loans_Loans__Issued_Date_">
+          <DataField>Loans_Loans__Issued_Date_</DataField>
+        </Field>
+        <Field Name="Loans_Installments__Grace_Period___Principle__M__">
+          <DataField>Loans_Installments__Grace_Period___Principle__M__</DataField>
+        </Field>
+        <Field Name="Loans_Loans_Interest">
+          <DataField>Loans_Loans_Interest</DataField>
+        </Field>
+        <Field Name="Loans_Loans_InterestFormat">
+          <DataField>Loans_Loans_InterestFormat</DataField>
+        </Field>
+        <Field Name="EmployerName">
+          <DataField>EmployerName</DataField>
+        </Field>
+        <Field Name="Loans_Loans__Approved_Amount_">
+          <DataField>Loans_Loans__Approved_Amount_</DataField>
+        </Field>
+        <Field Name="Loans_Loans__Approved_Amount_Format">
+          <DataField>Loans_Loans__Approved_Amount_Format</DataField>
+        </Field>
+        <Field Name="Loans_Loans__Loan_Product_Type_Name_">
+          <DataField>Loans_Loans__Loan_Product_Type_Name_</DataField>
+        </Field>
+        <Field Name="Loans_Loans__Loan__No__">
+          <DataField>Loans_Loans__Loan__No__</DataField>
+        </Field>
+        <Field Name="Loans_Loans__Client_Name_">
+          <DataField>Loans_Loans__Client_Name_</DataField>
+        </Field>
+        <Field Name="Loans_Loans__Client_Code_">
+          <DataField>Loans_Loans__Client_Code_</DataField>
+        </Field>
+        <Field Name="Loans__Repayment_Method_">
+          <DataField>Loans__Repayment_Method_</DataField>
+        </Field>
+        <Field Name="Intallments__Months_Caption">
+          <DataField>Intallments__Months_Caption</DataField>
+        </Field>
+        <Field Name="Disbursment_DateCaption">
+          <DataField>Disbursment_DateCaption</DataField>
+        </Field>
+        <Field Name="Current_InterestCaption">
+          <DataField>Current_InterestCaption</DataField>
+        </Field>
+        <Field Name="Loan_AmountCaption">
+          <DataField>Loan_AmountCaption</DataField>
+        </Field>
+        <Field Name="Loan_ProductCaption">
+          <DataField>Loan_ProductCaption</DataField>
+        </Field>
+        <Field Name="Loan_No_CaptionLbl">
+          <DataField>Loan_No_CaptionLbl</DataField>
+        </Field>
+        <Field Name="Account_No_Caption">
+          <DataField>Account_No_Caption</DataField>
+        </Field>
+        <Field Name="EmployerCode_Loans">
+          <DataField>EmployerCode_Loans</DataField>
+        </Field>
+        <Field Name="Loans__Repayment_Method_Caption">
+          <DataField>Loans__Repayment_Method_Caption</DataField>
+        </Field>
+        <Field Name="Loans_NewRepaymentPeriod">
+          <DataField>Loans_NewRepaymentPeriod</DataField>
+        </Field>
+        <Field Name="INST">
+          <DataField>INST</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Name">
+          <DataField>CompanyInfo_Name</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Address">
+          <DataField>CompanyInfo_Address</DataField>
+        </Field>
+        <Field Name="CompanyInfo__Phone_No__">
+          <DataField>CompanyInfo__Phone_No__</DataField>
+        </Field>
+        <Field Name="CompanyInfo__E_Mail_">
+          <DataField>CompanyInfo__E_Mail_</DataField>
+        </Field>
+        <Field Name="CompanyInfo_City">
+          <DataField>CompanyInfo_City</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Picture">
+          <DataField>CompanyInfo_Picture</DataField>
+        </Field>
+        <Field Name="ROUND__Monthly_Repayment__10_____">
+          <DataField>ROUND__Monthly_Repayment__10_____</DataField>
+        </Field>
+        <Field Name="ROUND__Monthly_Repayment__10_____Format">
+          <DataField>ROUND__Monthly_Repayment__10_____Format</DataField>
+        </Field>
+        <Field Name="RepaymentDate_LoanRepaymentSchedule">
+          <DataField>RepaymentDate_LoanRepaymentSchedule</DataField>
+        </Field>
+        <Field Name="FORMAT__Repayment_Date__0_4_">
+          <DataField>FORMAT__Repayment_Date__0_4_</DataField>
+        </Field>
+        <Field Name="ROUND__Principal_Repayment__10_____">
+          <DataField>ROUND__Principal_Repayment__10_____</DataField>
+        </Field>
+        <Field Name="ROUND__Principal_Repayment__10_____Format">
+          <DataField>ROUND__Principal_Repayment__10_____Format</DataField>
+        </Field>
+        <Field Name="ROUND__Monthly_Interest__10_____">
+          <DataField>ROUND__Monthly_Interest__10_____</DataField>
+        </Field>
+        <Field Name="ROUND__Monthly_Interest__10_____Format">
+          <DataField>ROUND__Monthly_Interest__10_____Format</DataField>
+        </Field>
+        <Field Name="LoanBalance">
+          <DataField>LoanBalance</DataField>
+        </Field>
+        <Field Name="LoanBalanceFormat">
+          <DataField>LoanBalanceFormat</DataField>
+        </Field>
+        <Field Name="Loan_Balance">
+          <DataField>Loan_Balance</DataField>
+        </Field>
+        <Field Name="Loan_BalanceFormat">
+          <DataField>Loan_BalanceFormat</DataField>
+        </Field>
+        <Field Name="Monthly_Repayment2">
+          <DataField>Monthly_Repayment2</DataField>
+        </Field>
+        <Field Name="Monthly_Repayment2Format">
+          <DataField>Monthly_Repayment2Format</DataField>
+        </Field>
+        <Field Name="Loan_Repayment_Schedule__Repayment_Code_">
+          <DataField>Loan_Repayment_Schedule__Repayment_Code_</DataField>
+        </Field>
+        <Field Name="ROUND__Monthly_Repayment__10______Control1000000043">
+          <DataField>ROUND__Monthly_Repayment__10______Control1000000043</DataField>
+        </Field>
+        <Field Name="ROUND__Monthly_Repayment__10______Control1000000043Format">
+          <DataField>ROUND__Monthly_Repayment__10______Control1000000043Format</DataField>
+        </Field>
+        <Field Name="ROUND__Principal_Repayment__10______Control1000000014">
+          <DataField>ROUND__Principal_Repayment__10______Control1000000014</DataField>
+        </Field>
+        <Field Name="ROUND__Principal_Repayment__10______Control1000000014Format">
+          <DataField>ROUND__Principal_Repayment__10______Control1000000014Format</DataField>
+        </Field>
+        <Field Name="ROUND__Monthly_Interest__10______Control1000000015">
+          <DataField>ROUND__Monthly_Interest__10______Control1000000015</DataField>
+        </Field>
+        <Field Name="ROUND__Monthly_Interest__10______Control1000000015Format">
+          <DataField>ROUND__Monthly_Interest__10______Control1000000015Format</DataField>
+        </Field>
+        <Field Name="Monthly_RepaymentCaption">
+          <DataField>Monthly_RepaymentCaption</DataField>
+        </Field>
+        <Field Name="InterestCaption">
+          <DataField>InterestCaption</DataField>
+        </Field>
+        <Field Name="Principal_RepaymentCaption">
+          <DataField>Principal_RepaymentCaption</DataField>
+        </Field>
+        <Field Name="Due_DateCaption">
+          <DataField>Due_DateCaption</DataField>
+        </Field>
+        <Field Name="Loan_BalanceCaption">
+          <DataField>Loan_BalanceCaption</DataField>
+        </Field>
+        <Field Name="Loan_RepaymentCaption">
+          <DataField>Loan_RepaymentCaption</DataField>
+        </Field>
+        <Field Name="TotalCaption">
+          <DataField>TotalCaption</DataField>
+        </Field>
+        <Field Name="Loan_Repayment_Schedule_Loan_No_">
+          <DataField>Loan_Repayment_Schedule_Loan_No_</DataField>
+        </Field>
+        <Field Name="Loan_Repayment_Schedule_Member_No_">
+          <DataField>Loan_Repayment_Schedule_Member_No_</DataField>
+        </Field>
+        <Field Name="Loan_Repayment_Schedule_Repayment_Date">
+          <DataField>Loan_Repayment_Schedule_Repayment_Date</DataField>
+        </Field>
+        <Field Name="RepaymentCode">
+          <DataField>RepaymentCode</DataField>
+        </Field>
+        <Field Name="MonthlyInsurance_LoanRepaymentSchedule">
+          <DataField>MonthlyInsurance_LoanRepaymentSchedule</DataField>
+        </Field>
+        <Field Name="MonthlyInsurance_LoanRepaymentScheduleFormat">
+          <DataField>MonthlyInsurance_LoanRepaymentScheduleFormat</DataField>
+        </Field>
+        <Field Name="LoanBalance_LoanRepaymentSchedule">
+          <DataField>LoanBalance_LoanRepaymentSchedule</DataField>
+        </Field>
+        <Field Name="LoanBalance_LoanRepaymentScheduleFormat">
+          <DataField>LoanBalance_LoanRepaymentScheduleFormat</DataField>
+        </Field>
+        <Field Name="Monthly_Repayment">
+          <DataField>Monthly_Repayment</DataField>
+        </Field>
+        <Field Name="Monthly_RepaymentFormat">
+          <DataField>Monthly_RepaymentFormat</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>
