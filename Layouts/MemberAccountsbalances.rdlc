@@ -1,0 +1,3294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns:cl="http://schemas.microsoft.com/sqlserver/reporting/2010/01/componentdefinition" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/reportdefinition">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+      <rd:DataSourceID>ae3d42ae-1eb4-4aec-9af4-ee2e3e0a0702</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+      <Fields>
+        <Field Name="No_member">
+          <DataField>No_member</DataField>
+        </Field>
+        <Field Name="Name_member">
+          <DataField>Name_member</DataField>
+        </Field>
+        <Field Name="SearchName_member">
+          <DataField>SearchName_member</DataField>
+        </Field>
+        <Field Name="Name2_member">
+          <DataField>Name2_member</DataField>
+        </Field>
+        <Field Name="Address_member">
+          <DataField>Address_member</DataField>
+        </Field>
+        <Field Name="Address2_member">
+          <DataField>Address2_member</DataField>
+        </Field>
+        <Field Name="City_member">
+          <DataField>City_member</DataField>
+        </Field>
+        <Field Name="Contact_member">
+          <DataField>Contact_member</DataField>
+        </Field>
+        <Field Name="PhoneNo_member">
+          <DataField>PhoneNo_member</DataField>
+        </Field>
+        <Field Name="TelexNo_member">
+          <DataField>TelexNo_member</DataField>
+        </Field>
+        <Field Name="OurAccountNo_member">
+          <DataField>OurAccountNo_member</DataField>
+        </Field>
+        <Field Name="TerritoryCode_member">
+          <DataField>TerritoryCode_member</DataField>
+        </Field>
+        <Field Name="GlobalDimension1Code_member">
+          <DataField>GlobalDimension1Code_member</DataField>
+        </Field>
+        <Field Name="GlobalDimension2Code_member">
+          <DataField>GlobalDimension2Code_member</DataField>
+        </Field>
+        <Field Name="ChainName_member">
+          <DataField>ChainName_member</DataField>
+        </Field>
+        <Field Name="BudgetedAmount_member">
+          <DataField>BudgetedAmount_member</DataField>
+        </Field>
+        <Field Name="BudgetedAmount_memberFormat">
+          <DataField>BudgetedAmount_memberFormat</DataField>
+        </Field>
+        <Field Name="CreditLimitLCY_member">
+          <DataField>CreditLimitLCY_member</DataField>
+        </Field>
+        <Field Name="CreditLimitLCY_memberFormat">
+          <DataField>CreditLimitLCY_memberFormat</DataField>
+        </Field>
+        <Field Name="CustomerPostingGroup_member">
+          <DataField>CustomerPostingGroup_member</DataField>
+        </Field>
+        <Field Name="CurrencyCode_member">
+          <DataField>CurrencyCode_member</DataField>
+        </Field>
+        <Field Name="CustomerPriceGroup_member">
+          <DataField>CustomerPriceGroup_member</DataField>
+        </Field>
+        <Field Name="LanguageCode_member">
+          <DataField>LanguageCode_member</DataField>
+        </Field>
+        <Field Name="StatisticsGroup_member">
+          <DataField>StatisticsGroup_member</DataField>
+        </Field>
+        <Field Name="PaymentTermsCode_member">
+          <DataField>PaymentTermsCode_member</DataField>
+        </Field>
+        <Field Name="FinChargeTermsCode_member">
+          <DataField>FinChargeTermsCode_member</DataField>
+        </Field>
+        <Field Name="SalespersonCode_member">
+          <DataField>SalespersonCode_member</DataField>
+        </Field>
+        <Field Name="ShipmentMethodCode_member">
+          <DataField>ShipmentMethodCode_member</DataField>
+        </Field>
+        <Field Name="ShippingAgentCode_member">
+          <DataField>ShippingAgentCode_member</DataField>
+        </Field>
+        <Field Name="PlaceofExport_member">
+          <DataField>PlaceofExport_member</DataField>
+        </Field>
+        <Field Name="InvoiceDiscCode_member">
+          <DataField>InvoiceDiscCode_member</DataField>
+        </Field>
+        <Field Name="CustomerDiscGroup_member">
+          <DataField>CustomerDiscGroup_member</DataField>
+        </Field>
+        <Field Name="CountryRegionCode_member">
+          <DataField>CountryRegionCode_member</DataField>
+        </Field>
+        <Field Name="CollectionMethod_member">
+          <DataField>CollectionMethod_member</DataField>
+        </Field>
+        <Field Name="Amount_member">
+          <DataField>Amount_member</DataField>
+        </Field>
+        <Field Name="Amount_memberFormat">
+          <DataField>Amount_memberFormat</DataField>
+        </Field>
+        <Field Name="Comment_member">
+          <DataField>Comment_member</DataField>
+        </Field>
+        <Field Name="Blocked_member">
+          <DataField>Blocked_member</DataField>
+        </Field>
+        <Field Name="InvoiceCopies_member">
+          <DataField>InvoiceCopies_member</DataField>
+        </Field>
+        <Field Name="LastStatementNo_member">
+          <DataField>LastStatementNo_member</DataField>
+        </Field>
+        <Field Name="PrintStatements_member">
+          <DataField>PrintStatements_member</DataField>
+        </Field>
+        <Field Name="BilltoCustomerNo_member">
+          <DataField>BilltoCustomerNo_member</DataField>
+        </Field>
+        <Field Name="Priority_member">
+          <DataField>Priority_member</DataField>
+        </Field>
+        <Field Name="PaymentMethodCode_member">
+          <DataField>PaymentMethodCode_member</DataField>
+        </Field>
+        <Field Name="LastDateModified_member">
+          <DataField>LastDateModified_member</DataField>
+        </Field>
+        <Field Name="DateFilter_member">
+          <DataField>DateFilter_member</DataField>
+        </Field>
+        <Field Name="GlobalDimension1Filter_member">
+          <DataField>GlobalDimension1Filter_member</DataField>
+        </Field>
+        <Field Name="GlobalDimension2Filter_member">
+          <DataField>GlobalDimension2Filter_member</DataField>
+        </Field>
+        <Field Name="Balance_member">
+          <DataField>Balance_member</DataField>
+        </Field>
+        <Field Name="Balance_memberFormat">
+          <DataField>Balance_memberFormat</DataField>
+        </Field>
+        <Field Name="BalanceLCY_member">
+          <DataField>BalanceLCY_member</DataField>
+        </Field>
+        <Field Name="BalanceLCY_memberFormat">
+          <DataField>BalanceLCY_memberFormat</DataField>
+        </Field>
+        <Field Name="NetChange_member">
+          <DataField>NetChange_member</DataField>
+        </Field>
+        <Field Name="NetChange_memberFormat">
+          <DataField>NetChange_memberFormat</DataField>
+        </Field>
+        <Field Name="NetChangeLCY_member">
+          <DataField>NetChangeLCY_member</DataField>
+        </Field>
+        <Field Name="NetChangeLCY_memberFormat">
+          <DataField>NetChangeLCY_memberFormat</DataField>
+        </Field>
+        <Field Name="SalesLCY_member">
+          <DataField>SalesLCY_member</DataField>
+        </Field>
+        <Field Name="SalesLCY_memberFormat">
+          <DataField>SalesLCY_memberFormat</DataField>
+        </Field>
+        <Field Name="ProfitLCY_member">
+          <DataField>ProfitLCY_member</DataField>
+        </Field>
+        <Field Name="ProfitLCY_memberFormat">
+          <DataField>ProfitLCY_memberFormat</DataField>
+        </Field>
+        <Field Name="InvDiscountsLCY_member">
+          <DataField>InvDiscountsLCY_member</DataField>
+        </Field>
+        <Field Name="InvDiscountsLCY_memberFormat">
+          <DataField>InvDiscountsLCY_memberFormat</DataField>
+        </Field>
+        <Field Name="PmtDiscountsLCY_member">
+          <DataField>PmtDiscountsLCY_member</DataField>
+        </Field>
+        <Field Name="PmtDiscountsLCY_memberFormat">
+          <DataField>PmtDiscountsLCY_memberFormat</DataField>
+        </Field>
+        <Field Name="BalanceDue_member">
+          <DataField>BalanceDue_member</DataField>
+        </Field>
+        <Field Name="BalanceDue_memberFormat">
+          <DataField>BalanceDue_memberFormat</DataField>
+        </Field>
+        <Field Name="BalanceDueLCY_member">
+          <DataField>BalanceDueLCY_member</DataField>
+        </Field>
+        <Field Name="BalanceDueLCY_memberFormat">
+          <DataField>BalanceDueLCY_memberFormat</DataField>
+        </Field>
+        <Field Name="Payments_member">
+          <DataField>Payments_member</DataField>
+        </Field>
+        <Field Name="Payments_memberFormat">
+          <DataField>Payments_memberFormat</DataField>
+        </Field>
+        <Field Name="InvoiceAmounts_member">
+          <DataField>InvoiceAmounts_member</DataField>
+        </Field>
+        <Field Name="InvoiceAmounts_memberFormat">
+          <DataField>InvoiceAmounts_memberFormat</DataField>
+        </Field>
+        <Field Name="CrMemoAmounts_member">
+          <DataField>CrMemoAmounts_member</DataField>
+        </Field>
+        <Field Name="CrMemoAmounts_memberFormat">
+          <DataField>CrMemoAmounts_memberFormat</DataField>
+        </Field>
+        <Field Name="FinanceChargeMemoAmounts_member">
+          <DataField>FinanceChargeMemoAmounts_member</DataField>
+        </Field>
+        <Field Name="FinanceChargeMemoAmounts_memberFormat">
+          <DataField>FinanceChargeMemoAmounts_memberFormat</DataField>
+        </Field>
+        <Field Name="PaymentsLCY_member">
+          <DataField>PaymentsLCY_member</DataField>
+        </Field>
+        <Field Name="PaymentsLCY_memberFormat">
+          <DataField>PaymentsLCY_memberFormat</DataField>
+        </Field>
+        <Field Name="InvAmountsLCY_member">
+          <DataField>InvAmountsLCY_member</DataField>
+        </Field>
+        <Field Name="InvAmountsLCY_memberFormat">
+          <DataField>InvAmountsLCY_memberFormat</DataField>
+        </Field>
+        <Field Name="CrMemoAmountsLCY_member">
+          <DataField>CrMemoAmountsLCY_member</DataField>
+        </Field>
+        <Field Name="CrMemoAmountsLCY_memberFormat">
+          <DataField>CrMemoAmountsLCY_memberFormat</DataField>
+        </Field>
+        <Field Name="FinChargeMemoAmountsLCY_member">
+          <DataField>FinChargeMemoAmountsLCY_member</DataField>
+        </Field>
+        <Field Name="FinChargeMemoAmountsLCY_memberFormat">
+          <DataField>FinChargeMemoAmountsLCY_memberFormat</DataField>
+        </Field>
+        <Field Name="OutstandingOrders_member">
+          <DataField>OutstandingOrders_member</DataField>
+        </Field>
+        <Field Name="OutstandingOrders_memberFormat">
+          <DataField>OutstandingOrders_memberFormat</DataField>
+        </Field>
+        <Field Name="ShippedNotInvoiced_member">
+          <DataField>ShippedNotInvoiced_member</DataField>
+        </Field>
+        <Field Name="ShippedNotInvoiced_memberFormat">
+          <DataField>ShippedNotInvoiced_memberFormat</DataField>
+        </Field>
+        <Field Name="ApplicationMethod_member">
+          <DataField>ApplicationMethod_member</DataField>
+        </Field>
+        <Field Name="PricesIncludingVAT_member">
+          <DataField>PricesIncludingVAT_member</DataField>
+        </Field>
+        <Field Name="LocationCode_member">
+          <DataField>LocationCode_member</DataField>
+        </Field>
+        <Field Name="FaxNo_member">
+          <DataField>FaxNo_member</DataField>
+        </Field>
+        <Field Name="TelexAnswerBack_member">
+          <DataField>TelexAnswerBack_member</DataField>
+        </Field>
+        <Field Name="VATRegistrationNo_member">
+          <DataField>VATRegistrationNo_member</DataField>
+        </Field>
+        <Field Name="CombineShipments_member">
+          <DataField>CombineShipments_member</DataField>
+        </Field>
+        <Field Name="GenBusPostingGroup_member">
+          <DataField>GenBusPostingGroup_member</DataField>
+        </Field>
+        <Field Name="Picture_member">
+          <DataField>Picture_member</DataField>
+        </Field>
+        <Field Name="PostCode_member">
+          <DataField>PostCode_member</DataField>
+        </Field>
+        <Field Name="County_member">
+          <DataField>County_member</DataField>
+        </Field>
+        <Field Name="DebitAmount_member">
+          <DataField>DebitAmount_member</DataField>
+        </Field>
+        <Field Name="DebitAmount_memberFormat">
+          <DataField>DebitAmount_memberFormat</DataField>
+        </Field>
+        <Field Name="CreditAmount_member">
+          <DataField>CreditAmount_member</DataField>
+        </Field>
+        <Field Name="CreditAmount_memberFormat">
+          <DataField>CreditAmount_memberFormat</DataField>
+        </Field>
+        <Field Name="DebitAmountLCY_member">
+          <DataField>DebitAmountLCY_member</DataField>
+        </Field>
+        <Field Name="DebitAmountLCY_memberFormat">
+          <DataField>DebitAmountLCY_memberFormat</DataField>
+        </Field>
+        <Field Name="CreditAmountLCY_member">
+          <DataField>CreditAmountLCY_member</DataField>
+        </Field>
+        <Field Name="CreditAmountLCY_memberFormat">
+          <DataField>CreditAmountLCY_memberFormat</DataField>
+        </Field>
+        <Field Name="EMail_member">
+          <DataField>EMail_member</DataField>
+        </Field>
+        <Field Name="HomePage_member">
+          <DataField>HomePage_member</DataField>
+        </Field>
+        <Field Name="ReminderTermsCode_member">
+          <DataField>ReminderTermsCode_member</DataField>
+        </Field>
+        <Field Name="ReminderAmounts_member">
+          <DataField>ReminderAmounts_member</DataField>
+        </Field>
+        <Field Name="ReminderAmounts_memberFormat">
+          <DataField>ReminderAmounts_memberFormat</DataField>
+        </Field>
+        <Field Name="ReminderAmountsLCY_member">
+          <DataField>ReminderAmountsLCY_member</DataField>
+        </Field>
+        <Field Name="ReminderAmountsLCY_memberFormat">
+          <DataField>ReminderAmountsLCY_memberFormat</DataField>
+        </Field>
+        <Field Name="NoSeries_member">
+          <DataField>NoSeries_member</DataField>
+        </Field>
+        <Field Name="TaxAreaCode_member">
+          <DataField>TaxAreaCode_member</DataField>
+        </Field>
+        <Field Name="TaxLiable_member">
+          <DataField>TaxLiable_member</DataField>
+        </Field>
+        <Field Name="VATBusPostingGroup_member">
+          <DataField>VATBusPostingGroup_member</DataField>
+        </Field>
+        <Field Name="CurrencyFilter_member">
+          <DataField>CurrencyFilter_member</DataField>
+        </Field>
+        <Field Name="OutstandingOrdersLCY_member">
+          <DataField>OutstandingOrdersLCY_member</DataField>
+        </Field>
+        <Field Name="OutstandingOrdersLCY_memberFormat">
+          <DataField>OutstandingOrdersLCY_memberFormat</DataField>
+        </Field>
+        <Field Name="ShippedNotInvoicedLCY_member">
+          <DataField>ShippedNotInvoicedLCY_member</DataField>
+        </Field>
+        <Field Name="ShippedNotInvoicedLCY_memberFormat">
+          <DataField>ShippedNotInvoicedLCY_memberFormat</DataField>
+        </Field>
+        <Field Name="Reserve_member">
+          <DataField>Reserve_member</DataField>
+        </Field>
+        <Field Name="BlockPaymentTolerance_member">
+          <DataField>BlockPaymentTolerance_member</DataField>
+        </Field>
+        <Field Name="PmtDiscToleranceLCY_member">
+          <DataField>PmtDiscToleranceLCY_member</DataField>
+        </Field>
+        <Field Name="PmtDiscToleranceLCY_memberFormat">
+          <DataField>PmtDiscToleranceLCY_memberFormat</DataField>
+        </Field>
+        <Field Name="PmtToleranceLCY_member">
+          <DataField>PmtToleranceLCY_member</DataField>
+        </Field>
+        <Field Name="PmtToleranceLCY_memberFormat">
+          <DataField>PmtToleranceLCY_memberFormat</DataField>
+        </Field>
+        <Field Name="ICPartnerCode_member">
+          <DataField>ICPartnerCode_member</DataField>
+        </Field>
+        <Field Name="Refunds_member">
+          <DataField>Refunds_member</DataField>
+        </Field>
+        <Field Name="Refunds_memberFormat">
+          <DataField>Refunds_memberFormat</DataField>
+        </Field>
+        <Field Name="RefundsLCY_member">
+          <DataField>RefundsLCY_member</DataField>
+        </Field>
+        <Field Name="RefundsLCY_memberFormat">
+          <DataField>RefundsLCY_memberFormat</DataField>
+        </Field>
+        <Field Name="OtherAmounts_member">
+          <DataField>OtherAmounts_member</DataField>
+        </Field>
+        <Field Name="OtherAmounts_memberFormat">
+          <DataField>OtherAmounts_memberFormat</DataField>
+        </Field>
+        <Field Name="OtherAmountsLCY_member">
+          <DataField>OtherAmountsLCY_member</DataField>
+        </Field>
+        <Field Name="OtherAmountsLCY_memberFormat">
+          <DataField>OtherAmountsLCY_memberFormat</DataField>
+        </Field>
+        <Field Name="Prepayment_member">
+          <DataField>Prepayment_member</DataField>
+        </Field>
+        <Field Name="Prepayment_memberFormat">
+          <DataField>Prepayment_memberFormat</DataField>
+        </Field>
+        <Field Name="OutstandingInvoicesLCY_member">
+          <DataField>OutstandingInvoicesLCY_member</DataField>
+        </Field>
+        <Field Name="OutstandingInvoicesLCY_memberFormat">
+          <DataField>OutstandingInvoicesLCY_memberFormat</DataField>
+        </Field>
+        <Field Name="OutstandingInvoices_member">
+          <DataField>OutstandingInvoices_member</DataField>
+        </Field>
+        <Field Name="OutstandingInvoices_memberFormat">
+          <DataField>OutstandingInvoices_memberFormat</DataField>
+        </Field>
+        <Field Name="BilltoNoOfArchivedDoc_member">
+          <DataField>BilltoNoOfArchivedDoc_member</DataField>
+        </Field>
+        <Field Name="SelltoNoOfArchivedDoc_member">
+          <DataField>SelltoNoOfArchivedDoc_member</DataField>
+        </Field>
+        <Field Name="PrimaryContactNo_member">
+          <DataField>PrimaryContactNo_member</DataField>
+        </Field>
+        <Field Name="ResponsibilityCenter_member">
+          <DataField>ResponsibilityCenter_member</DataField>
+        </Field>
+        <Field Name="ShippingAdvice_member">
+          <DataField>ShippingAdvice_member</DataField>
+        </Field>
+        <Field Name="ShippingTime_member">
+          <DataField>ShippingTime_member</DataField>
+        </Field>
+        <Field Name="ShippingAgentServiceCode_member">
+          <DataField>ShippingAgentServiceCode_member</DataField>
+        </Field>
+        <Field Name="ServiceZoneCode_member">
+          <DataField>ServiceZoneCode_member</DataField>
+        </Field>
+        <Field Name="ContractGainLossAmount_member">
+          <DataField>ContractGainLossAmount_member</DataField>
+        </Field>
+        <Field Name="ContractGainLossAmount_memberFormat">
+          <DataField>ContractGainLossAmount_memberFormat</DataField>
+        </Field>
+        <Field Name="ShiptoFilter_member">
+          <DataField>ShiptoFilter_member</DataField>
+        </Field>
+        <Field Name="OutstandingServOrdersLCY_member">
+          <DataField>OutstandingServOrdersLCY_member</DataField>
+        </Field>
+        <Field Name="OutstandingServOrdersLCY_memberFormat">
+          <DataField>OutstandingServOrdersLCY_memberFormat</DataField>
+        </Field>
+        <Field Name="ServShippedNotInvoicedLCY_member">
+          <DataField>ServShippedNotInvoicedLCY_member</DataField>
+        </Field>
+        <Field Name="ServShippedNotInvoicedLCY_memberFormat">
+          <DataField>ServShippedNotInvoicedLCY_memberFormat</DataField>
+        </Field>
+        <Field Name="AllowLineDisc_member">
+          <DataField>AllowLineDisc_member</DataField>
+        </Field>
+        <Field Name="NoofApprovedLoans_member">
+          <DataField>NoofApprovedLoans_member</DataField>
+        </Field>
+        <Field Name="NoofIssuedLoans_member">
+          <DataField>NoofIssuedLoans_member</DataField>
+        </Field>
+        <Field Name="NoofRejectedLoans_member">
+          <DataField>NoofRejectedLoans_member</DataField>
+        </Field>
+        <Field Name="NoofInvoices_member">
+          <DataField>NoofInvoices_member</DataField>
+        </Field>
+        <Field Name="NoofMembersGuaranteed_member">
+          <DataField>NoofMembersGuaranteed_member</DataField>
+        </Field>
+        <Field Name="NoofCreditMemos_member">
+          <DataField>NoofCreditMemos_member</DataField>
+        </Field>
+        <Field Name="NoofPstdShipments_member">
+          <DataField>NoofPstdShipments_member</DataField>
+        </Field>
+        <Field Name="NoofPstdInvoices_member">
+          <DataField>NoofPstdInvoices_member</DataField>
+        </Field>
+        <Field Name="NoofPstdReturnReceipts_member">
+          <DataField>NoofPstdReturnReceipts_member</DataField>
+        </Field>
+        <Field Name="NoofPstdCreditMemos_member">
+          <DataField>NoofPstdCreditMemos_member</DataField>
+        </Field>
+        <Field Name="NoofShiptoAddresses_member">
+          <DataField>NoofShiptoAddresses_member</DataField>
+        </Field>
+        <Field Name="BillToNoofQuotes_member">
+          <DataField>BillToNoofQuotes_member</DataField>
+        </Field>
+        <Field Name="BillToNoofBlanketOrders_member">
+          <DataField>BillToNoofBlanketOrders_member</DataField>
+        </Field>
+        <Field Name="BillToNoofOrders_member">
+          <DataField>BillToNoofOrders_member</DataField>
+        </Field>
+        <Field Name="BillToNoofInvoices_member">
+          <DataField>BillToNoofInvoices_member</DataField>
+        </Field>
+        <Field Name="BillToNoofReturnOrders_member">
+          <DataField>BillToNoofReturnOrders_member</DataField>
+        </Field>
+        <Field Name="BillToNoofCreditMemos_member">
+          <DataField>BillToNoofCreditMemos_member</DataField>
+        </Field>
+        <Field Name="BillToNoofPstdShipments_member">
+          <DataField>BillToNoofPstdShipments_member</DataField>
+        </Field>
+        <Field Name="BillToNoofPstdInvoices_member">
+          <DataField>BillToNoofPstdInvoices_member</DataField>
+        </Field>
+        <Field Name="BillToNoofPstdReturnR_member">
+          <DataField>BillToNoofPstdReturnR_member</DataField>
+        </Field>
+        <Field Name="BillToNoofPstdCrMemos_member">
+          <DataField>BillToNoofPstdCrMemos_member</DataField>
+        </Field>
+        <Field Name="BaseCalendarCode_member">
+          <DataField>BaseCalendarCode_member</DataField>
+        </Field>
+        <Field Name="CopySelltoAddrtoQteFrom_member">
+          <DataField>CopySelltoAddrtoQteFrom_member</DataField>
+        </Field>
+        <Field Name="CustomerType_member">
+          <DataField>CustomerType_member</DataField>
+        </Field>
+        <Field Name="RegistrationDate_member">
+          <DataField>RegistrationDate_member</DataField>
+        </Field>
+        <Field Name="CurrentLoan_member">
+          <DataField>CurrentLoan_member</DataField>
+        </Field>
+        <Field Name="CurrentLoan_memberFormat">
+          <DataField>CurrentLoan_memberFormat</DataField>
+        </Field>
+        <Field Name="CurrentShares_member">
+          <DataField>CurrentShares_member</DataField>
+        </Field>
+        <Field Name="CurrentShares_memberFormat">
+          <DataField>CurrentShares_memberFormat</DataField>
+        </Field>
+        <Field Name="TotalRepayments_member">
+          <DataField>TotalRepayments_member</DataField>
+        </Field>
+        <Field Name="TotalRepayments_memberFormat">
+          <DataField>TotalRepayments_memberFormat</DataField>
+        </Field>
+        <Field Name="PrincipalBalance_member">
+          <DataField>PrincipalBalance_member</DataField>
+        </Field>
+        <Field Name="PrincipalBalance_memberFormat">
+          <DataField>PrincipalBalance_memberFormat</DataField>
+        </Field>
+        <Field Name="PrincipalRepayment_member">
+          <DataField>PrincipalRepayment_member</DataField>
+        </Field>
+        <Field Name="PrincipalRepayment_memberFormat">
+          <DataField>PrincipalRepayment_memberFormat</DataField>
+        </Field>
+        <Field Name="DebtorsType_member">
+          <DataField>DebtorsType_member</DataField>
+        </Field>
+        <Field Name="OutstandingBalance_member">
+          <DataField>OutstandingBalance_member</DataField>
+        </Field>
+        <Field Name="OutstandingBalance_memberFormat">
+          <DataField>OutstandingBalance_memberFormat</DataField>
+        </Field>
+        <Field Name="Status_member">
+          <DataField>Status_member</DataField>
+        </Field>
+        <Field Name="FOSAAccount_member">
+          <DataField>FOSAAccount_member</DataField>
+        </Field>
+        <Field Name="OldAccountNo_member">
+          <DataField>OldAccountNo_member</DataField>
+        </Field>
+        <Field Name="LoanProductFilter_member">
+          <DataField>LoanProductFilter_member</DataField>
+        </Field>
+        <Field Name="EmployerCode_member">
+          <DataField>EmployerCode_member</DataField>
+        </Field>
+        <Field Name="DateofBirth_member">
+          <DataField>DateofBirth_member</DataField>
+        </Field>
+        <Field Name="EMailPersonal_member">
+          <DataField>EMailPersonal_member</DataField>
+        </Field>
+        <Field Name="StationDepartment_member">
+          <DataField>StationDepartment_member</DataField>
+        </Field>
+        <Field Name="HomeAddress_member">
+          <DataField>HomeAddress_member</DataField>
+        </Field>
+        <Field Name="Location_member">
+          <DataField>Location_member</DataField>
+        </Field>
+        <Field Name="SubLocation_member">
+          <DataField>SubLocation_member</DataField>
+        </Field>
+        <Field Name="District_member">
+          <DataField>District_member</DataField>
+        </Field>
+        <Field Name="ResonsforStatusChange_member">
+          <DataField>ResonsforStatusChange_member</DataField>
+        </Field>
+        <Field Name="PayrollStaffNo_member">
+          <DataField>PayrollStaffNo_member</DataField>
+        </Field>
+        <Field Name="IDNo_member">
+          <DataField>IDNo_member</DataField>
+        </Field>
+        <Field Name="MobilePhoneNo_member">
+          <DataField>MobilePhoneNo_member</DataField>
+        </Field>
+        <Field Name="MaritalStatus_member">
+          <DataField>MaritalStatus_member</DataField>
+        </Field>
+        <Field Name="Signature_member">
+          <DataField>Signature_member</DataField>
+        </Field>
+        <Field Name="PassportNo_member">
+          <DataField>PassportNo_member</DataField>
+        </Field>
+        <Field Name="Gender_member">
+          <DataField>Gender_member</DataField>
+        </Field>
+        <Field Name="WithdrawalDate_member">
+          <DataField>WithdrawalDate_member</DataField>
+        </Field>
+        <Field Name="WithdrawalFee_member">
+          <DataField>WithdrawalFee_member</DataField>
+        </Field>
+        <Field Name="WithdrawalFee_memberFormat">
+          <DataField>WithdrawalFee_memberFormat</DataField>
+        </Field>
+        <Field Name="StatusWithdrawalApp_member">
+          <DataField>StatusWithdrawalApp_member</DataField>
+        </Field>
+        <Field Name="WithdrawalApplicationDate_member">
+          <DataField>WithdrawalApplicationDate_member</DataField>
+        </Field>
+        <Field Name="InvestmentMonthlyCont_member">
+          <DataField>InvestmentMonthlyCont_member</DataField>
+        </Field>
+        <Field Name="InvestmentMonthlyCont_memberFormat">
+          <DataField>InvestmentMonthlyCont_memberFormat</DataField>
+        </Field>
+        <Field Name="InvestmentMaxLimit_member">
+          <DataField>InvestmentMaxLimit_member</DataField>
+        </Field>
+        <Field Name="InvestmentMaxLimit_memberFormat">
+          <DataField>InvestmentMaxLimit_memberFormat</DataField>
+        </Field>
+        <Field Name="CurrentInvestmentTotal_member">
+          <DataField>CurrentInvestmentTotal_member</DataField>
+        </Field>
+        <Field Name="CurrentInvestmentTotal_memberFormat">
+          <DataField>CurrentInvestmentTotal_memberFormat</DataField>
+        </Field>
+        <Field Name="DocumentNoFilter_member">
+          <DataField>DocumentNoFilter_member</DataField>
+        </Field>
+        <Field Name="SharesRetained_member">
+          <DataField>SharesRetained_member</DataField>
+        </Field>
+        <Field Name="SharesRetained_memberFormat">
+          <DataField>SharesRetained_memberFormat</DataField>
+        </Field>
+        <Field Name="RegistrationFeePaid_member">
+          <DataField>RegistrationFeePaid_member</DataField>
+        </Field>
+        <Field Name="RegistrationFeePaid_memberFormat">
+          <DataField>RegistrationFeePaid_memberFormat</DataField>
+        </Field>
+        <Field Name="RegistrationFee_member">
+          <DataField>RegistrationFee_member</DataField>
+        </Field>
+        <Field Name="RegistrationFee_memberFormat">
+          <DataField>RegistrationFee_memberFormat</DataField>
+        </Field>
+        <Field Name="SocietyCode_member">
+          <DataField>SocietyCode_member</DataField>
+        </Field>
+        <Field Name="InsuranceFund_member">
+          <DataField>InsuranceFund_member</DataField>
+        </Field>
+        <Field Name="InsuranceFund_memberFormat">
+          <DataField>InsuranceFund_memberFormat</DataField>
+        </Field>
+        <Field Name="MonthlyContribution_member">
+          <DataField>MonthlyContribution_member</DataField>
+        </Field>
+        <Field Name="MonthlyContribution_memberFormat">
+          <DataField>MonthlyContribution_memberFormat</DataField>
+        </Field>
+        <Field Name="InvestmentBF_member">
+          <DataField>InvestmentBF_member</DataField>
+        </Field>
+        <Field Name="InvestmentBF_memberFormat">
+          <DataField>InvestmentBF_memberFormat</DataField>
+        </Field>
+        <Field Name="DividendAmount_member">
+          <DataField>DividendAmount_member</DataField>
+        </Field>
+        <Field Name="DividendAmount_memberFormat">
+          <DataField>DividendAmount_memberFormat</DataField>
+        </Field>
+        <Field Name="NameofChief_member">
+          <DataField>NameofChief_member</DataField>
+        </Field>
+        <Field Name="OfficeTelephoneNo_member">
+          <DataField>OfficeTelephoneNo_member</DataField>
+        </Field>
+        <Field Name="ExtensionNo_member">
+          <DataField>ExtensionNo_member</DataField>
+        </Field>
+        <Field Name="InsuranceContribution_member">
+          <DataField>InsuranceContribution_member</DataField>
+        </Field>
+        <Field Name="InsuranceContribution_memberFormat">
+          <DataField>InsuranceContribution_memberFormat</DataField>
+        </Field>
+        <Field Name="Advice_member">
+          <DataField>Advice_member</DataField>
+        </Field>
+        <Field Name="Province_member">
+          <DataField>Province_member</DataField>
+        </Field>
+        <Field Name="PreviousShareContribution_member">
+          <DataField>PreviousShareContribution_member</DataField>
+        </Field>
+        <Field Name="PreviousShareContribution_memberFormat">
+          <DataField>PreviousShareContribution_memberFormat</DataField>
+        </Field>
+        <Field Name="UnallocatedFunds_member">
+          <DataField>UnallocatedFunds_member</DataField>
+        </Field>
+        <Field Name="UnallocatedFunds_memberFormat">
+          <DataField>UnallocatedFunds_memberFormat</DataField>
+        </Field>
+        <Field Name="RefundRequestAmount_member">
+          <DataField>RefundRequestAmount_member</DataField>
+        </Field>
+        <Field Name="RefundRequestAmount_memberFormat">
+          <DataField>RefundRequestAmount_memberFormat</DataField>
+        </Field>
+        <Field Name="RefundIssued_member">
+          <DataField>RefundIssued_member</DataField>
+        </Field>
+        <Field Name="BatchNo_member">
+          <DataField>BatchNo_member</DataField>
+        </Field>
+        <Field Name="CurrentStatus_member">
+          <DataField>CurrentStatus_member</DataField>
+        </Field>
+        <Field Name="ChequeNo_member">
+          <DataField>ChequeNo_member</DataField>
+        </Field>
+        <Field Name="ChequeDate_member">
+          <DataField>ChequeDate_member</DataField>
+        </Field>
+        <Field Name="AccruedInterest_member">
+          <DataField>AccruedInterest_member</DataField>
+        </Field>
+        <Field Name="AccruedInterest_memberFormat">
+          <DataField>AccruedInterest_memberFormat</DataField>
+        </Field>
+        <Field Name="DefaultedLoansRecovered_member">
+          <DataField>DefaultedLoansRecovered_member</DataField>
+        </Field>
+        <Field Name="WithdrawalPosted_member">
+          <DataField>WithdrawalPosted_member</DataField>
+        </Field>
+        <Field Name="LoanNoFilter_member">
+          <DataField>LoanNoFilter_member</DataField>
+        </Field>
+        <Field Name="CurrectFileLocation_member">
+          <DataField>CurrectFileLocation_member</DataField>
+        </Field>
+        <Field Name="MoveTo1_member">
+          <DataField>MoveTo1_member</DataField>
+        </Field>
+        <Field Name="FileMovementRemarks_member">
+          <DataField>FileMovementRemarks_member</DataField>
+        </Field>
+        <Field Name="StatusChangeDate_member">
+          <DataField>StatusChangeDate_member</DataField>
+        </Field>
+        <Field Name="LastPaymentDate_member">
+          <DataField>LastPaymentDate_member</DataField>
+        </Field>
+        <Field Name="DiscountedAmount_member">
+          <DataField>DiscountedAmount_member</DataField>
+        </Field>
+        <Field Name="DiscountedAmount_memberFormat">
+          <DataField>DiscountedAmount_memberFormat</DataField>
+        </Field>
+        <Field Name="CurrentSavings_member">
+          <DataField>CurrentSavings_member</DataField>
+        </Field>
+        <Field Name="CurrentSavings_memberFormat">
+          <DataField>CurrentSavings_memberFormat</DataField>
+        </Field>
+        <Field Name="PayrollUpdated_member">
+          <DataField>PayrollUpdated_member</DataField>
+        </Field>
+        <Field Name="LastMarkingDate_member">
+          <DataField>LastMarkingDate_member</DataField>
+        </Field>
+        <Field Name="DividendsCapitalised_member">
+          <DataField>DividendsCapitalised_member</DataField>
+        </Field>
+        <Field Name="DividendsCapitalised_memberFormat">
+          <DataField>DividendsCapitalised_memberFormat</DataField>
+        </Field>
+        <Field Name="FOSAOutstandingBalance_member">
+          <DataField>FOSAOutstandingBalance_member</DataField>
+        </Field>
+        <Field Name="FOSAOutstandingBalance_memberFormat">
+          <DataField>FOSAOutstandingBalance_memberFormat</DataField>
+        </Field>
+        <Field Name="FOSAOustandingInterest_member">
+          <DataField>FOSAOustandingInterest_member</DataField>
+        </Field>
+        <Field Name="FOSAOustandingInterest_memberFormat">
+          <DataField>FOSAOustandingInterest_memberFormat</DataField>
+        </Field>
+        <Field Name="FormationProvince_member">
+          <DataField>FormationProvince_member</DataField>
+        </Field>
+        <Field Name="DivisionDepartment_member">
+          <DataField>DivisionDepartment_member</DataField>
+        </Field>
+        <Field Name="StationSection_member">
+          <DataField>StationSection_member</DataField>
+        </Field>
+        <Field Name="ClosingDepositBalance_member">
+          <DataField>ClosingDepositBalance_member</DataField>
+        </Field>
+        <Field Name="ClosingDepositBalance_memberFormat">
+          <DataField>ClosingDepositBalance_memberFormat</DataField>
+        </Field>
+        <Field Name="ClosingLoanBalance_member">
+          <DataField>ClosingLoanBalance_member</DataField>
+        </Field>
+        <Field Name="ClosingLoanBalance_memberFormat">
+          <DataField>ClosingLoanBalance_memberFormat</DataField>
+        </Field>
+        <Field Name="ClosingInsuranceBalance_member">
+          <DataField>ClosingInsuranceBalance_member</DataField>
+        </Field>
+        <Field Name="ClosingInsuranceBalance_memberFormat">
+          <DataField>ClosingInsuranceBalance_memberFormat</DataField>
+        </Field>
+        <Field Name="DividendProgression_member">
+          <DataField>DividendProgression_member</DataField>
+        </Field>
+        <Field Name="DividendProgression_memberFormat">
+          <DataField>DividendProgression_memberFormat</DataField>
+        </Field>
+        <Field Name="ClosingDate_member">
+          <DataField>ClosingDate_member</DataField>
+        </Field>
+        <Field Name="WelfareFund_member">
+          <DataField>WelfareFund_member</DataField>
+        </Field>
+        <Field Name="WelfareFund_memberFormat">
+          <DataField>WelfareFund_memberFormat</DataField>
+        </Field>
+        <Field Name="DiscountedDividends_member">
+          <DataField>DiscountedDividends_member</DataField>
+        </Field>
+        <Field Name="DiscountedDividends_memberFormat">
+          <DataField>DiscountedDividends_memberFormat</DataField>
+        </Field>
+        <Field Name="ModeofDividendPayment_member">
+          <DataField>ModeofDividendPayment_member</DataField>
+        </Field>
+        <Field Name="QualifyingShares_member">
+          <DataField>QualifyingShares_member</DataField>
+        </Field>
+        <Field Name="QualifyingShares_memberFormat">
+          <DataField>QualifyingShares_memberFormat</DataField>
+        </Field>
+        <Field Name="DefaulterOverideReasons_member">
+          <DataField>DefaulterOverideReasons_member</DataField>
+        </Field>
+        <Field Name="DefaulterOveride_member">
+          <DataField>DefaulterOveride_member</DataField>
+        </Field>
+        <Field Name="ClosureRemarks_member">
+          <DataField>ClosureRemarks_member</DataField>
+        </Field>
+        <Field Name="BankAccountNo_member">
+          <DataField>BankAccountNo_member</DataField>
+        </Field>
+        <Field Name="BankCode_member">
+          <DataField>BankCode_member</DataField>
+        </Field>
+        <Field Name="DividendProcessed_member">
+          <DataField>DividendProcessed_member</DataField>
+        </Field>
+        <Field Name="DividendError_member">
+          <DataField>DividendError_member</DataField>
+        </Field>
+        <Field Name="DividendCapitalized_member">
+          <DataField>DividendCapitalized_member</DataField>
+        </Field>
+        <Field Name="DividendCapitalized_memberFormat">
+          <DataField>DividendCapitalized_memberFormat</DataField>
+        </Field>
+        <Field Name="DividendPaidFOSA_member">
+          <DataField>DividendPaidFOSA_member</DataField>
+        </Field>
+        <Field Name="DividendPaidFOSA_memberFormat">
+          <DataField>DividendPaidFOSA_memberFormat</DataField>
+        </Field>
+        <Field Name="DividendPaidEFT_member">
+          <DataField>DividendPaidEFT_member</DataField>
+        </Field>
+        <Field Name="DividendPaidEFT_memberFormat">
+          <DataField>DividendPaidEFT_memberFormat</DataField>
+        </Field>
+        <Field Name="DividendWithholdingTax_member">
+          <DataField>DividendWithholdingTax_member</DataField>
+        </Field>
+        <Field Name="DividendWithholdingTax_memberFormat">
+          <DataField>DividendWithholdingTax_memberFormat</DataField>
+        </Field>
+        <Field Name="LoanLastPaymentDate_member">
+          <DataField>LoanLastPaymentDate_member</DataField>
+        </Field>
+        <Field Name="OutstandingInterest_member">
+          <DataField>OutstandingInterest_member</DataField>
+        </Field>
+        <Field Name="OutstandingInterest_memberFormat">
+          <DataField>OutstandingInterest_memberFormat</DataField>
+        </Field>
+        <Field Name="LastTransactionDate_member">
+          <DataField>LastTransactionDate_member</DataField>
+        </Field>
+        <Field Name="AccountCategory_member">
+          <DataField>AccountCategory_member</DataField>
+        </Field>
+        <Field Name="TypeOfOrganisation_member">
+          <DataField>TypeOfOrganisation_member</DataField>
+        </Field>
+        <Field Name="SourceOfFunds_member">
+          <DataField>SourceOfFunds_member</DataField>
+        </Field>
+        <Field Name="MPESAMobileNo_member">
+          <DataField>MPESAMobileNo_member</DataField>
+        </Field>
+        <Field Name="ForceNo_member">
+          <DataField>ForceNo_member</DataField>
+        </Field>
+        <Field Name="LastAdviceDate_member">
+          <DataField>LastAdviceDate_member</DataField>
+        </Field>
+        <Field Name="AdviceType_member">
+          <DataField>AdviceType_member</DataField>
+        </Field>
+        <Field Name="ShareBalanceBF_member">
+          <DataField>ShareBalanceBF_member</DataField>
+        </Field>
+        <Field Name="ShareBalanceBF_memberFormat">
+          <DataField>ShareBalanceBF_memberFormat</DataField>
+        </Field>
+        <Field Name="Moveto_member">
+          <DataField>Moveto_member</DataField>
+        </Field>
+        <Field Name="FileMovementRemarks1_member">
+          <DataField>FileMovementRemarks1_member</DataField>
+        </Field>
+        <Field Name="FileMVTUserID_member">
+          <DataField>FileMVTUserID_member</DataField>
+        </Field>
+        <Field Name="FileMVTTime_member">
+          <DataField>FileMVTTime_member</DataField>
+        </Field>
+        <Field Name="FilePreviousLocation_member">
+          <DataField>FilePreviousLocation_member</DataField>
+        </Field>
+        <Field Name="FileMVTDate_member">
+          <DataField>FileMVTDate_member</DataField>
+        </Field>
+        <Field Name="filereceiveddate_member">
+          <DataField>filereceiveddate_member</DataField>
+        </Field>
+        <Field Name="FilereceivedTime_member">
+          <DataField>FilereceivedTime_member</DataField>
+        </Field>
+        <Field Name="FileReceivedby_member">
+          <DataField>FileReceivedby_member</DataField>
+        </Field>
+        <Field Name="fileReceived_member">
+          <DataField>fileReceived_member</DataField>
+        </Field>
+        <Field Name="User_member">
+          <DataField>User_member</DataField>
+        </Field>
+        <Field Name="ChangeLog_member">
+          <DataField>ChangeLog_member</DataField>
+        </Field>
+        <Field Name="Section_member">
+          <DataField>Section_member</DataField>
+        </Field>
+        <Field Name="rejoined_member">
+          <DataField>rejoined_member</DataField>
+        </Field>
+        <Field Name="Jobtitle_member">
+          <DataField>Jobtitle_member</DataField>
+        </Field>
+        <Field Name="Pin_member">
+          <DataField>Pin_member</DataField>
+        </Field>
+        <Field Name="Remitancemode_member">
+          <DataField>Remitancemode_member</DataField>
+        </Field>
+        <Field Name="TermsofService_member">
+          <DataField>TermsofService_member</DataField>
+        </Field>
+        <Field Name="Comment1_member">
+          <DataField>Comment1_member</DataField>
+        </Field>
+        <Field Name="Comment2_member">
+          <DataField>Comment2_member</DataField>
+        </Field>
+        <Field Name="Currentfilelocation_member">
+          <DataField>Currentfilelocation_member</DataField>
+        </Field>
+        <Field Name="WorkProvince_member">
+          <DataField>WorkProvince_member</DataField>
+        </Field>
+        <Field Name="WorkDistrict_member">
+          <DataField>WorkDistrict_member</DataField>
+        </Field>
+        <Field Name="SaccoBranch_member">
+          <DataField>SaccoBranch_member</DataField>
+        </Field>
+        <Field Name="BankBranchCode_member">
+          <DataField>BankBranchCode_member</DataField>
+        </Field>
+        <Field Name="CustomerPaypoint_member">
+          <DataField>CustomerPaypoint_member</DataField>
+        </Field>
+        <Field Name="DateFileOpened_member">
+          <DataField>DateFileOpened_member</DataField>
+        </Field>
+        <Field Name="FileStatus_member">
+          <DataField>FileStatus_member</DataField>
+        </Field>
+        <Field Name="CustomerTitle_member">
+          <DataField>CustomerTitle_member</DataField>
+        </Field>
+        <Field Name="FolioNumber_member">
+          <DataField>FolioNumber_member</DataField>
+        </Field>
+        <Field Name="Movetodescription_member">
+          <DataField>Movetodescription_member</DataField>
+        </Field>
+        <Field Name="Filelocc_member">
+          <DataField>Filelocc_member</DataField>
+        </Field>
+        <Field Name="SCardNo_member">
+          <DataField>SCardNo_member</DataField>
+        </Field>
+        <Field Name="Reasonforfileoverstay_member">
+          <DataField>Reasonforfileoverstay_member</DataField>
+        </Field>
+        <Field Name="LocDescription_member">
+          <DataField>LocDescription_member</DataField>
+        </Field>
+        <Field Name="CurrentBalance_member">
+          <DataField>CurrentBalance_member</DataField>
+        </Field>
+        <Field Name="CurrentBalance_memberFormat">
+          <DataField>CurrentBalance_memberFormat</DataField>
+        </Field>
+        <Field Name="MemberTransferDate_member">
+          <DataField>MemberTransferDate_member</DataField>
+        </Field>
+        <Field Name="ContactPerson_member">
+          <DataField>ContactPerson_member</DataField>
+        </Field>
+        <Field Name="MemberwithdrawableDeposits_member">
+          <DataField>MemberwithdrawableDeposits_member</DataField>
+        </Field>
+        <Field Name="MemberwithdrawableDeposits_memberFormat">
+          <DataField>MemberwithdrawableDeposits_memberFormat</DataField>
+        </Field>
+        <Field Name="CurrentLocation_member">
+          <DataField>CurrentLocation_member</DataField>
+        </Field>
+        <Field Name="GroupCode_member">
+          <DataField>GroupCode_member</DataField>
+        </Field>
+        <Field Name="XmasContribution_member">
+          <DataField>XmasContribution_member</DataField>
+        </Field>
+        <Field Name="XmasContribution_memberFormat">
+          <DataField>XmasContribution_memberFormat</DataField>
+        </Field>
+        <Field Name="BenevolentFund_member">
+          <DataField>BenevolentFund_member</DataField>
+        </Field>
+        <Field Name="BenevolentFund_memberFormat">
+          <DataField>BenevolentFund_memberFormat</DataField>
+        </Field>
+        <Field Name="OfficeBranch_member">
+          <DataField>OfficeBranch_member</DataField>
+        </Field>
+        <Field Name="Department_member">
+          <DataField>Department_member</DataField>
+        </Field>
+        <Field Name="Occupation_member">
+          <DataField>Occupation_member</DataField>
+        </Field>
+        <Field Name="Designation_member">
+          <DataField>Designation_member</DataField>
+        </Field>
+        <Field Name="VillageResidence_member">
+          <DataField>VillageResidence_member</DataField>
+        </Field>
+        <Field Name="IncompleteShares_member">
+          <DataField>IncompleteShares_member</DataField>
+        </Field>
+        <Field Name="ContactPersonPhone_member">
+          <DataField>ContactPersonPhone_member</DataField>
+        </Field>
+        <Field Name="DevelopmentShares_member">
+          <DataField>DevelopmentShares_member</DataField>
+        </Field>
+        <Field Name="DevelopmentShares_memberFormat">
+          <DataField>DevelopmentShares_memberFormat</DataField>
+        </Field>
+        <Field Name="CooperativeShares_member">
+          <DataField>CooperativeShares_member</DataField>
+        </Field>
+        <Field Name="CooperativeShares_memberFormat">
+          <DataField>CooperativeShares_memberFormat</DataField>
+        </Field>
+        <Field Name="OldFosaAccount_member">
+          <DataField>OldFosaAccount_member</DataField>
+        </Field>
+        <Field Name="RecruitedBy_member">
+          <DataField>RecruitedBy_member</DataField>
+        </Field>
+        <Field Name="ContactPersonRelation_member">
+          <DataField>ContactPersonRelation_member</DataField>
+        </Field>
+        <Field Name="ContactPersonOccupation_member">
+          <DataField>ContactPersonOccupation_member</DataField>
+        </Field>
+        <Field Name="MemberNo2_member">
+          <DataField>MemberNo2_member</DataField>
+        </Field>
+        <Field Name="JujaHousing_member">
+          <DataField>JujaHousing_member</DataField>
+        </Field>
+        <Field Name="JujaHousing_memberFormat">
+          <DataField>JujaHousing_memberFormat</DataField>
+        </Field>
+        <Field Name="KonzaHousing_member">
+          <DataField>KonzaHousing_member</DataField>
+        </Field>
+        <Field Name="KonzaHousing_memberFormat">
+          <DataField>KonzaHousing_memberFormat</DataField>
+        </Field>
+        <Field Name="LukenyaHousing_member">
+          <DataField>LukenyaHousing_member</DataField>
+        </Field>
+        <Field Name="LukenyaHousing_memberFormat">
+          <DataField>LukenyaHousing_memberFormat</DataField>
+        </Field>
+        <Field Name="InsuranceonShares_member">
+          <DataField>InsuranceonShares_member</DataField>
+        </Field>
+        <Field Name="InsuranceonShares_memberFormat">
+          <DataField>InsuranceonShares_memberFormat</DataField>
+        </Field>
+        <Field Name="PhysicalStates_member">
+          <DataField>PhysicalStates_member</DataField>
+        </Field>
+        <Field Name="DIOCESE_member">
+          <DataField>DIOCESE_member</DataField>
+        </Field>
+        <Field Name="MobileNo2_member">
+          <DataField>MobileNo2_member</DataField>
+        </Field>
+        <Field Name="EmployerName_member">
+          <DataField>EmployerName_member</DataField>
+        </Field>
+        <Field Name="Title_member">
+          <DataField>Title_member</DataField>
+        </Field>
+        <Field Name="Town_member">
+          <DataField>Town_member</DataField>
+        </Field>
+        <Field Name="HomeTown_member">
+          <DataField>HomeTown_member</DataField>
+        </Field>
+        <Field Name="LoansDefaulterStatus_member">
+          <DataField>LoansDefaulterStatus_member</DataField>
+        </Field>
+        <Field Name="HomePostalCode_member">
+          <DataField>HomePostalCode_member</DataField>
+        </Field>
+        <Field Name="TotalLoansOutstanding_member">
+          <DataField>TotalLoansOutstanding_member</DataField>
+        </Field>
+        <Field Name="TotalLoansOutstanding_memberFormat">
+          <DataField>TotalLoansOutstanding_memberFormat</DataField>
+        </Field>
+        <Field Name="NoofLoansGuaranteed_member">
+          <DataField>NoofLoansGuaranteed_member</DataField>
+        </Field>
+        <Field Name="MemberFound_member">
+          <DataField>MemberFound_member</DataField>
+        </Field>
+        <Field Name="HousingTitle_member">
+          <DataField>HousingTitle_member</DataField>
+        </Field>
+        <Field Name="HousingTitle_memberFormat">
+          <DataField>HousingTitle_memberFormat</DataField>
+        </Field>
+        <Field Name="HousingWater_member">
+          <DataField>HousingWater_member</DataField>
+        </Field>
+        <Field Name="HousingWater_memberFormat">
+          <DataField>HousingWater_memberFormat</DataField>
+        </Field>
+        <Field Name="HousingMain_member">
+          <DataField>HousingMain_member</DataField>
+        </Field>
+        <Field Name="HousingMain_memberFormat">
+          <DataField>HousingMain_memberFormat</DataField>
+        </Field>
+        <Field Name="MemberCanGuaranteeLoan_member">
+          <DataField>MemberCanGuaranteeLoan_member</DataField>
+        </Field>
+        <Field Name="FOSAAccountBal_member">
+          <DataField>FOSAAccountBal_member</DataField>
+        </Field>
+        <Field Name="FOSAAccountBal_memberFormat">
+          <DataField>FOSAAccountBal_memberFormat</DataField>
+        </Field>
+        <Field Name="RejoiningDate_member">
+          <DataField>RejoiningDate_member</DataField>
+        </Field>
+        <Field Name="ActiveLoansGuarantor_member">
+          <DataField>ActiveLoansGuarantor_member</DataField>
+        </Field>
+        <Field Name="LoansGuaranteed_member">
+          <DataField>LoansGuaranteed_member</DataField>
+        </Field>
+        <Field Name="MemberDeposit3_member">
+          <DataField>MemberDeposit3_member</DataField>
+        </Field>
+        <Field Name="MemberDeposit3_memberFormat">
+          <DataField>MemberDeposit3_memberFormat</DataField>
+        </Field>
+        <Field Name="NewloanEligibility_member">
+          <DataField>NewloanEligibility_member</DataField>
+        </Field>
+        <Field Name="NewloanEligibility_memberFormat">
+          <DataField>NewloanEligibility_memberFormat</DataField>
+        </Field>
+        <Field Name="ASAT">
+          <DataField>ASAT</DataField>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>DataSet</rd:DataSetName>
+        <rd:SchemaPath>Report.xsd</rd:SchemaPath>
+        <rd:TableName>Result</rd:TableName>
+      </rd:DataSetInfo>
+    </DataSet>
+  </DataSets>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <ReportItems>
+          <Tablix Name="Table1">
+            <TablixBody>
+              <TablixColumns>
+                <TablixColumn>
+                  <Width>2.09926cm</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>4.94924cm</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>2.1703cm</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>2.74137cm</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>2.34884cm</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>3.86633cm</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>2.64508cm</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>2.22593cm</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>2.3053cm</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>2.3053cm</Width>
+                </TablixColumn>
+              </TablixColumns>
+              <TablixRows>
+                <TablixRow>
+                  <Height>1.00475cm</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Loans__Loan__No__Caption">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value EvaluationMode="Auto">Member No</Value>
+                                  <Style>
+                                    <FontFamily>tahoma</FontFamily>
+                                    <FontSize>7pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <VerticalAlign>Bottom</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>0.075cm</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Client_No_Caption">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value EvaluationMode="Auto">Member Name</Value>
+                                  <Style>
+                                    <FontFamily>tahoma</FontFamily>
+                                    <FontSize>7pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <VerticalAlign>Bottom</VerticalAlign>
+                            <PaddingLeft>0.075cm</PaddingLeft>
+                            <PaddingRight>0.075cm</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Loan_TypeCaption_Control1102760043">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value EvaluationMode="Auto">Deposits</Value>
+                                  <Style>
+                                    <FontFamily>tahoma</FontFamily>
+                                    <FontSize>7pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <VerticalAlign>Bottom</VerticalAlign>
+                            <PaddingLeft>0.075cm</PaddingLeft>
+                            <PaddingRight>0.075cm</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox4">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value EvaluationMode="Auto">Share Capital</Value>
+                                  <Style>
+                                    <FontFamily>tahoma</FontFamily>
+                                    <FontSize>7pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox4</rd:DefaultName>
+                          <Style>
+                            <VerticalAlign>Bottom</VerticalAlign>
+                            <PaddingLeft>0.075cm</PaddingLeft>
+                            <PaddingRight>0.075cm</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox8">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value EvaluationMode="Auto">Current loans</Value>
+                                  <Style>
+                                    <FontFamily>tahoma</FontFamily>
+                                    <FontSize>7pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox8</rd:DefaultName>
+                          <Style>
+                            <VerticalAlign>Bottom</VerticalAlign>
+                            <PaddingLeft>0.075cm</PaddingLeft>
+                            <PaddingRight>0.075cm</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox12">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value EvaluationMode="Auto">Outstanding Balance</Value>
+                                  <Style>
+                                    <FontFamily>tahoma</FontFamily>
+                                    <FontSize>7pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox12</rd:DefaultName>
+                          <Style>
+                            <VerticalAlign>Bottom</VerticalAlign>
+                            <PaddingLeft>0.075cm</PaddingLeft>
+                            <PaddingRight>0.075cm</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox16">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value EvaluationMode="Auto">Principal Balance </Value>
+                                  <Style>
+                                    <FontFamily>tahoma</FontFamily>
+                                    <FontSize>7pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox16</rd:DefaultName>
+                          <Style>
+                            <VerticalAlign>Bottom</VerticalAlign>
+                            <PaddingLeft>0.075cm</PaddingLeft>
+                            <PaddingRight>0.075cm</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox20">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value EvaluationMode="Auto">Housing Title </Value>
+                                  <Style>
+                                    <FontFamily>tahoma</FontFamily>
+                                    <FontSize>7pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox20</rd:DefaultName>
+                          <Style>
+                            <VerticalAlign>Bottom</VerticalAlign>
+                            <PaddingLeft>0.075cm</PaddingLeft>
+                            <PaddingRight>0.075cm</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <rd:Selected>true</rd:Selected>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox27">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value EvaluationMode="Auto">Housing Water </Value>
+                                  <Style>
+                                    <FontFamily>tahoma</FontFamily>
+                                    <FontSize>7pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox27</rd:DefaultName>
+                          <Style>
+                            <VerticalAlign>Bottom</VerticalAlign>
+                            <PaddingLeft>0.075cm</PaddingLeft>
+                            <PaddingRight>0.075cm</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox31">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value EvaluationMode="Auto">Housing Main </Value>
+                                  <Style>
+                                    <FontFamily>tahoma</FontFamily>
+                                    <FontSize>7pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox31</rd:DefaultName>
+                          <Style>
+                            <VerticalAlign>Bottom</VerticalAlign>
+                            <PaddingLeft>0.075cm</PaddingLeft>
+                            <PaddingRight>0.075cm</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+                <TablixRow>
+                  <Height>0.42301cm</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Loans__Loan__No__">
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value EvaluationMode="Auto">=Fields!No_member.Value</Value>
+                                  <Style>
+                                    <FontFamily>tahoma</FontFamily>
+                                    <FontSize>7pt</FontSize>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Left</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>0.075cm</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Loans__Client_Code_">
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value EvaluationMode="Auto">=Fields!Name_member.Value</Value>
+                                  <Style>
+                                    <FontFamily>tahoma</FontFamily>
+                                    <FontSize>7pt</FontSize>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Left</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>0.075cm</PaddingLeft>
+                            <PaddingRight>0.075cm</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Loans_Loans__Loan_Product_Type_">
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value EvaluationMode="Auto">=Fields!CurrentShares_member.Value</Value>
+                                  <Style>
+                                    <FontFamily>Tahoma</FontFamily>
+                                    <FontSize>7pt</FontSize>
+                                    <Format>#,0.00;#,0.00-;''</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <Border />
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>0.075cm</PaddingLeft>
+                            <PaddingRight>0.075cm</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Loans_Loans__Loan_Product_Type_3">
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value EvaluationMode="Auto">=Fields!SharesRetained_member.Value</Value>
+                                  <Style>
+                                    <FontFamily>Tahoma</FontFamily>
+                                    <FontSize>7pt</FontSize>
+                                    <Format>#,0.00;#,0.00-;''</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <Border />
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>0.075cm</PaddingLeft>
+                            <PaddingRight>0.075cm</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="CurrentLoan_member">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value EvaluationMode="Auto">=Fields!CurrentLoan_member.Value</Value>
+                                  <Style>
+                                    <FontFamily>Tahoma</FontFamily>
+                                    <FontSize>7pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>CurrentLoan_member</rd:DefaultName>
+                          <Style>
+                            <Border />
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>0.075cm</PaddingLeft>
+                            <PaddingRight>0.075cm</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="OutstandingBalance_member">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value EvaluationMode="Auto">=Fields!OutstandingBalance_member.Value</Value>
+                                  <Style>
+                                    <FontFamily>Tahoma</FontFamily>
+                                    <FontSize>7pt</FontSize>
+                                    <Format>#,0.00;#,0.00-;''</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>OutstandingBalance_member</rd:DefaultName>
+                          <Style>
+                            <Border />
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>0.075cm</PaddingLeft>
+                            <PaddingRight>0.075cm</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="PrincipalBalance_member">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value EvaluationMode="Auto">=Fields!PrincipalBalance_member.Value</Value>
+                                  <Style>
+                                    <FontFamily>Tahoma</FontFamily>
+                                    <FontSize>7pt</FontSize>
+                                    <Format>#,0.00;#,0.00-;''</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>PrincipalBalance_member</rd:DefaultName>
+                          <Style>
+                            <Border />
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>0.075cm</PaddingLeft>
+                            <PaddingRight>0.075cm</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="HousingTitle_member">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value EvaluationMode="Auto">=Fields!HousingTitle_member.Value</Value>
+                                  <Style>
+                                    <FontFamily>Tahoma</FontFamily>
+                                    <FontSize>7pt</FontSize>
+                                    <Format>#,0.00;#,0.00-;''</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>HousingTitle_member</rd:DefaultName>
+                          <Style>
+                            <Border />
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>0.075cm</PaddingLeft>
+                            <PaddingRight>0.075cm</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="HousingWater_member">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value EvaluationMode="Auto">=Fields!HousingWater_member.Value</Value>
+                                  <Style>
+                                    <FontFamily>Tahoma</FontFamily>
+                                    <FontSize>7pt</FontSize>
+                                    <Format>#,0.00;#,0.00-;''</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>HousingWater_member</rd:DefaultName>
+                          <Style>
+                            <Border />
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>0.075cm</PaddingLeft>
+                            <PaddingRight>0.075cm</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="HousingMain_member">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value EvaluationMode="Auto">=Fields!HousingMain_member.Value</Value>
+                                  <Style>
+                                    <FontFamily>Tahoma</FontFamily>
+                                    <FontSize>7pt</FontSize>
+                                    <Format>#,0.00;#,0.00-;''</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>HousingMain_member</rd:DefaultName>
+                          <Style>
+                            <Border />
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>0.075cm</PaddingLeft>
+                            <PaddingRight>0.075cm</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+                <TablixRow>
+                  <Height>0.30897cm</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox5">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value EvaluationMode="Auto" />
+                                  <Style>
+                                    <FontFamily>tahoma</FontFamily>
+                                    <FontSize>7pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Left</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox5</rd:DefaultName>
+                          <Style>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>0.075cm</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox6">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value EvaluationMode="Auto" />
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox6</rd:DefaultName>
+                          <Style>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox9">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value EvaluationMode="Auto" />
+                                  <Style>
+                                    <FontFamily>Tahoma</FontFamily>
+                                    <FontSize>7pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox9</rd:DefaultName>
+                          <Style>
+                            <Border />
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>0.075cm</PaddingLeft>
+                            <PaddingRight>0.075cm</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox10">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value EvaluationMode="Auto" />
+                                  <Style>
+                                    <FontFamily>Tahoma</FontFamily>
+                                    <FontSize>7pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox10</rd:DefaultName>
+                          <Style>
+                            <Border />
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>0.075cm</PaddingLeft>
+                            <PaddingRight>0.075cm</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="JujaHousing_member">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value EvaluationMode="Auto">=Fields!JujaHousing_member.Value</Value>
+                                  <Style>
+                                    <FontFamily>Tahoma</FontFamily>
+                                    <FontSize>7pt</FontSize>
+                                    <Format>#,0.00;#,0.00-;''</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>JujaHousing_member</rd:DefaultName>
+                          <Style>
+                            <Border />
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>0.075cm</PaddingLeft>
+                            <PaddingRight>0.075cm</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox14">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value EvaluationMode="Auto" />
+                                  <Style>
+                                    <FontFamily>Tahoma</FontFamily>
+                                    <FontSize>7pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox14</rd:DefaultName>
+                          <Style>
+                            <Border />
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>0.075cm</PaddingLeft>
+                            <PaddingRight>0.075cm</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox17">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value EvaluationMode="Auto" />
+                                  <Style>
+                                    <FontFamily>Tahoma</FontFamily>
+                                    <FontSize>7pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox17</rd:DefaultName>
+                          <Style>
+                            <Border />
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>0.075cm</PaddingLeft>
+                            <PaddingRight>0.075cm</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox18">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value EvaluationMode="Auto" />
+                                  <Style>
+                                    <FontFamily>Tahoma</FontFamily>
+                                    <FontSize>7pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox18</rd:DefaultName>
+                          <Style>
+                            <Border />
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>0.075cm</PaddingLeft>
+                            <PaddingRight>0.075cm</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox23">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value EvaluationMode="Auto" />
+                                  <Style>
+                                    <FontFamily>Tahoma</FontFamily>
+                                    <FontSize>7pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox23</rd:DefaultName>
+                          <Style>
+                            <Border />
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>0.075cm</PaddingLeft>
+                            <PaddingRight>0.075cm</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox25">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value EvaluationMode="Auto" />
+                                  <Style>
+                                    <FontFamily>Tahoma</FontFamily>
+                                    <FontSize>7pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox25</rd:DefaultName>
+                          <Style>
+                            <Border />
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>0.075cm</PaddingLeft>
+                            <PaddingRight>0.075cm</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+                <TablixRow>
+                  <Height>0.42301cm</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox2">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value EvaluationMode="Auto" />
+                                  <Style>
+                                    <FontFamily>tahoma</FontFamily>
+                                    <FontSize>7pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Left</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox2</rd:DefaultName>
+                          <Style>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>0.075cm</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox3">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value EvaluationMode="Auto" />
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox3</rd:DefaultName>
+                          <Style>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Loans_Loans__Loan_Product_Type_2">
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value EvaluationMode="Auto">=Sum(Fields!CurrentShares_member.Value)</Value>
+                                  <Style>
+                                    <FontFamily>Tahoma</FontFamily>
+                                    <FontSize>7pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                    <Format>#,0.00;#,0.00-;''</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <Border />
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>0.075cm</PaddingLeft>
+                            <PaddingRight>0.075cm</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Loans_Loans__Loan_Product_Type_5">
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value EvaluationMode="Auto">=Sum(Fields!SharesRetained_member.Value)</Value>
+                                  <Style>
+                                    <FontFamily>Tahoma</FontFamily>
+                                    <FontSize>7pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                    <Format>#,0.00;#,0.00-;''</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <Border />
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>0.075cm</PaddingLeft>
+                            <PaddingRight>0.075cm</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="JujaHousing_member2">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value EvaluationMode="Auto">=Sum(Fields!JujaHousing_member.Value)</Value>
+                                  <Style>
+                                    <FontFamily>Tahoma</FontFamily>
+                                    <FontSize>7pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                    <Format>#,0.00;#,0.00-;''</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>JujaHousing_member</rd:DefaultName>
+                          <Style>
+                            <Border />
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>0.075cm</PaddingLeft>
+                            <PaddingRight>0.075cm</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="KonzaHousing_member2">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value EvaluationMode="Auto">=Sum(Fields!KonzaHousing_member.Value)</Value>
+                                  <Style>
+                                    <FontFamily>Tahoma</FontFamily>
+                                    <FontSize>7pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                    <Format>#,0.00;#,0.00-;''</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>KonzaHousing_member</rd:DefaultName>
+                          <Style>
+                            <Border />
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>0.075cm</PaddingLeft>
+                            <PaddingRight>0.075cm</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="LukenyaHousing_member2">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value EvaluationMode="Auto">=Sum(Fields!LukenyaHousing_member.Value)</Value>
+                                  <Style>
+                                    <FontFamily>Tahoma</FontFamily>
+                                    <FontSize>7pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                    <Format>#,0.00;#,0.00-;''</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>LukenyaHousing_member</rd:DefaultName>
+                          <Style>
+                            <Border />
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>0.075cm</PaddingLeft>
+                            <PaddingRight>0.075cm</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="HousingTitle_member2">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value EvaluationMode="Auto">=Sum(Fields!HousingTitle_member.Value)</Value>
+                                  <Style>
+                                    <FontFamily>Tahoma</FontFamily>
+                                    <FontSize>7pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                    <Format>#,0.00;#,0.00-;''</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>HousingTitle_member</rd:DefaultName>
+                          <Style>
+                            <Border />
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>0.075cm</PaddingLeft>
+                            <PaddingRight>0.075cm</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="HousingWater_member2">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value EvaluationMode="Auto">=Sum(Fields!HousingWater_member.Value)</Value>
+                                  <Style>
+                                    <FontFamily>Tahoma</FontFamily>
+                                    <FontSize>7pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                    <Format>#,0.00;#,0.00-;''</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>HousingWater_member</rd:DefaultName>
+                          <Style>
+                            <Border />
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>0.075cm</PaddingLeft>
+                            <PaddingRight>0.075cm</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="HousingMain_member2">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value EvaluationMode="Auto">=Sum(Fields!HousingMain_member.Value)</Value>
+                                  <Style>
+                                    <FontFamily>Tahoma</FontFamily>
+                                    <FontSize>7pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                    <Format>#,0.00;#,0.00-;''</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>HousingMain_member</rd:DefaultName>
+                          <Style>
+                            <Border />
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>0.075cm</PaddingLeft>
+                            <PaddingRight>0.075cm</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+              </TablixRows>
+            </TablixBody>
+            <TablixColumnHierarchy>
+              <TablixMembers>
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+              </TablixMembers>
+            </TablixColumnHierarchy>
+            <TablixRowHierarchy>
+              <TablixMembers>
+                <TablixMember>
+                  <KeepWithGroup>After</KeepWithGroup>
+                  <RepeatOnNewPage>true</RepeatOnNewPage>
+                  <KeepTogether>true</KeepTogether>
+                </TablixMember>
+                <TablixMember>
+                  <Group Name="Table1_Details_Group">
+                    <DataElementName>Detail</DataElementName>
+                  </Group>
+                  <TablixMembers>
+                    <TablixMember />
+                  </TablixMembers>
+                  <DataElementName>Detail_Collection</DataElementName>
+                  <DataElementOutput>Output</DataElementOutput>
+                  <KeepTogether>true</KeepTogether>
+                </TablixMember>
+                <TablixMember>
+                  <KeepWithGroup>Before</KeepWithGroup>
+                </TablixMember>
+                <TablixMember>
+                  <KeepWithGroup>Before</KeepWithGroup>
+                  <KeepTogether>true</KeepTogether>
+                </TablixMember>
+              </TablixMembers>
+            </TablixRowHierarchy>
+            <DataSetName>DataSet_Result</DataSetName>
+            <Top>0.05292cm</Top>
+            <Left>0.44979cm</Left>
+            <Height>2.15974cm</Height>
+            <Width>27.65696cm</Width>
+            <Style />
+          </Tablix>
+          <Textbox Name="Textbox7">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value EvaluationMode="Auto">Prepared by:-</Value>
+                    <Style>
+                      <FontSize>8pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox5</rd:DefaultName>
+            <Top>2.74811cm</Top>
+            <Left>0.50179cm</Left>
+            <Height>0.48511cm</Height>
+            <Width>2.19552cm</Width>
+            <ZIndex>1</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox11">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value EvaluationMode="Auto">Checked by:-</Value>
+                    <Style>
+                      <FontSize>8pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox5</rd:DefaultName>
+            <Top>3.2685cm</Top>
+            <Left>0.50179cm</Left>
+            <Height>0.48535cm</Height>
+            <Width>2.16024cm</Width>
+            <ZIndex>2</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox19">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value EvaluationMode="Auto">Authorised by:-</Value>
+                    <Style>
+                      <FontSize>8pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox5</rd:DefaultName>
+            <Top>3.78911cm</Top>
+            <Left>0.50179cm</Left>
+            <Height>0.46771cm</Height>
+            <Width>2.19552cm</Width>
+            <ZIndex>3</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox21">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value EvaluationMode="Auto">Approved by:-</Value>
+                    <Style>
+                      <FontSize>8pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox5</rd:DefaultName>
+            <Top>4.2921cm</Top>
+            <Left>0.50179cm</Left>
+            <Height>0.50929cm</Height>
+            <Width>2.16024cm</Width>
+            <ZIndex>4</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox22">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value EvaluationMode="Auto" />
+                    <Style>
+                      <FontSize>8pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value EvaluationMode="Auto">_________________________________Designation______________________ Signature___________________ Date:__________________________</Value>
+                    <Style>
+                      <FontSize>8pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox5</rd:DefaultName>
+            <Top>2.74811cm</Top>
+            <Left>2.69731cm</Left>
+            <Height>0.45007cm</Height>
+            <Width>23.76011cm</Width>
+            <ZIndex>5</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox24">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value EvaluationMode="Auto" />
+                    <Style>
+                      <FontSize>8pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value EvaluationMode="Auto">_________________________________Designation______________________ Signature___________________ Date:__________________________</Value>
+                    <Style>
+                      <FontSize>8pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox5</rd:DefaultName>
+            <Top>3.26848cm</Top>
+            <Left>2.69731cm</Left>
+            <Height>0.45007cm</Height>
+            <Width>23.76011cm</Width>
+            <ZIndex>6</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox26">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value EvaluationMode="Auto" />
+                    <Style>
+                      <FontSize>8pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value EvaluationMode="Auto">_________________________________Designation______________________ Signature___________________ Date:__________________________</Value>
+                    <Style>
+                      <FontSize>8pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox5</rd:DefaultName>
+            <Top>3.78911cm</Top>
+            <Left>2.69731cm</Left>
+            <Height>0.45007cm</Height>
+            <Width>23.76011cm</Width>
+            <ZIndex>7</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox28">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value EvaluationMode="Auto" />
+                    <Style>
+                      <FontSize>8pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value EvaluationMode="Auto">_________________________________Designation______________________ Signature___________________ Date:__________________________</Value>
+                    <Style>
+                      <FontSize>8pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox5</rd:DefaultName>
+            <Top>4.30974cm</Top>
+            <Left>2.69731cm</Left>
+            <Height>0.45007cm</Height>
+            <Width>23.76011cm</Width>
+            <ZIndex>8</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+        </ReportItems>
+        <Height>5.53804cm</Height>
+        <Style />
+      </Body>
+      <Width>28.10675cm</Width>
+      <Page>
+        <PageHeader>
+          <Height>2.29139cm</Height>
+          <PrintOnFirstPage>true</PrintOnFirstPage>
+          <PrintOnLastPage>true</PrintOnLastPage>
+          <ReportItems>
+            <Textbox Name="PageNumberTextBox">
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value EvaluationMode="Auto">=Globals!PageNumber</Value>
+                      <Style>
+                        <FontSize>7pt</FontSize>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style>
+                    <TextAlign>Right</TextAlign>
+                  </Style>
+                </Paragraph>
+              </Paragraphs>
+              <Top>0.59939cm</Top>
+              <Left>24.55025cm</Left>
+              <Height>0.423cm</Height>
+              <Width>0.45cm</Width>
+              <Style>
+                <VerticalAlign>Middle</VerticalAlign>
+              </Style>
+            </Textbox>
+            <Textbox Name="UserIdTextBox">
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value EvaluationMode="Auto">=User!UserID</Value>
+                      <Style>
+                        <FontSize>7pt</FontSize>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style>
+                    <TextAlign>Right</TextAlign>
+                  </Style>
+                </Paragraph>
+              </Paragraphs>
+              <Top>1.02239cm</Top>
+              <Left>21.75025cm</Left>
+              <Height>0.423cm</Height>
+              <Width>3.25cm</Width>
+              <ZIndex>1</ZIndex>
+              <Style>
+                <VerticalAlign>Middle</VerticalAlign>
+              </Style>
+            </Textbox>
+            <Textbox Name="ExecutionTimeTextBox">
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value EvaluationMode="Auto">=Globals!ExecutionTime</Value>
+                      <Style>
+                        <FontSize>7pt</FontSize>
+                        <Format>g</Format>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style>
+                    <TextAlign>Right</TextAlign>
+                  </Style>
+                </Paragraph>
+              </Paragraphs>
+              <Top>0.17639cm</Top>
+              <Left>21.85026cm</Left>
+              <Height>0.423cm</Height>
+              <Width>3.15cm</Width>
+              <ZIndex>2</ZIndex>
+              <Style>
+                <VerticalAlign>Middle</VerticalAlign>
+              </Style>
+            </Textbox>
+            <Textbox Name="COMPANYNAME1">
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value EvaluationMode="Auto">EKEZA Sacco Society Ltd</Value>
+                      <Style>
+                        <FontFamily>tahoma</FontFamily>
+                        <FontWeight>Bold</FontWeight>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style>
+                    <TextAlign>Center</TextAlign>
+                  </Style>
+                </Paragraph>
+              </Paragraphs>
+              <Left>8.28147cm</Left>
+              <Height>0.423cm</Height>
+              <Width>7.80908cm</Width>
+              <ZIndex>3</ZIndex>
+              <Style>
+                <VerticalAlign>Middle</VerticalAlign>
+              </Style>
+            </Textbox>
+            <Textbox Name="CurrReport_PAGENOCaption1">
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value EvaluationMode="Auto">Page</Value>
+                      <Style>
+                        <FontSize>7pt</FontSize>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style />
+                </Paragraph>
+              </Paragraphs>
+              <Top>0.59939cm</Top>
+              <Left>23.80025cm</Left>
+              <Height>0.423cm</Height>
+              <Width>0.75cm</Width>
+              <ZIndex>4</ZIndex>
+              <Style>
+                <VerticalAlign>Middle</VerticalAlign>
+              </Style>
+            </Textbox>
+            <Textbox Name="Textbox15">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value EvaluationMode="Auto">Member balances report</Value>
+                      <Style>
+                        <FontWeight>Bold</FontWeight>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style>
+                    <TextAlign>Center</TextAlign>
+                  </Style>
+                </Paragraph>
+              </Paragraphs>
+              <rd:DefaultName>Textbox15</rd:DefaultName>
+              <Top>0.49356cm</Top>
+              <Left>8.28147cm</Left>
+              <Height>0.6cm</Height>
+              <Width>7.80908cm</Width>
+              <ZIndex>5</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+            <Textbox Name="Textbox1">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value EvaluationMode="Auto">As at .....</Value>
+                      <Style />
+                    </TextRun>
+                    <TextRun>
+                      <Value EvaluationMode="Auto">=First(Fields!ASAT.Value, "DataSet_Result")</Value>
+                      <Style>
+                        <FontSize>8pt</FontSize>
+                        <FontWeight>Bold</FontWeight>
+                        <Format>dd MMMM, yyyy</Format>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style>
+                    <TextAlign>Center</TextAlign>
+                  </Style>
+                </Paragraph>
+              </Paragraphs>
+              <rd:DefaultName>Textbox1</rd:DefaultName>
+              <Top>1.16412cm</Top>
+              <Left>8.28147cm</Left>
+              <Height>0.6cm</Height>
+              <Width>7.80908cm</Width>
+              <ZIndex>6</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+          </ReportItems>
+          <Style />
+        </PageHeader>
+        <PageHeight>29.7cm</PageHeight>
+        <PageWidth>28.1cm</PageWidth>
+        <LeftMargin>1cm</LeftMargin>
+        <RightMargin>0cm</RightMargin>
+        <TopMargin>1cm</TopMargin>
+        <BottomMargin>0cm</BottomMargin>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Cm</rd:ReportUnitType>
+  <rd:ReportID>c05e80d7-6d3c-4983-9a52-ac972f643632</rd:ReportID>
+</Report>
