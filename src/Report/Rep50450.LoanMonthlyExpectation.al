@@ -48,7 +48,7 @@ Report 50450 "Loan Monthly Expectation"
             column(Company_Email; Company."E-Mail")
             {
             }
-            // column(CurrReport_PAGENO; Format(ReportForNav.PageNo))
+            // column(CurrReport_PAGENO; CurrReport.PageNo())
             // {
             // }
             column(UserId; UserId)
@@ -200,20 +200,20 @@ Report 50450 "Loan Monthly Expectation"
         Company.Get();
         Company.CalcFields(Company.Picture);
         ;
-        //ReportsForNavInit;
+        //
 
     end;
 
     trigger OnPostReport()
     begin
         ;
-        //ReportForNav.Post;
+        //
     end;
 
     trigger OnPreReport()
     begin
         ;
-        // ReportsForNavPre;
+        // 
     end;
 
     var

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+<Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns:cl="http://schemas.microsoft.com/sqlserver/reporting/2010/01/componentdefinition" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/reportdefinition">
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
     <DataSource Name="DataSource">
@@ -8,7 +8,7 @@
         <ConnectString />
       </ConnectionProperties>
       <rd:SecurityType>None</rd:SecurityType>
-      <rd:DataSourceID>36379da5-2909-4614-9f7e-f3f7faba3a3e</rd:DataSourceID>
+      <rd:DataSourceID>eee1793a-8776-4c0f-8529-5298f4b99fd8</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <ReportSections>
@@ -65,7 +65,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Application No</Value>
+                                  <Value EvaluationMode="Auto">Application No</Value>
                                   <Style>
                                     <FontFamily>Tahoma</FontFamily>
                                     <FontSize>9pt</FontSize>
@@ -100,7 +100,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Applicant's Name</Value>
+                                  <Value EvaluationMode="Auto">Applicant's Name</Value>
                                   <Style>
                                     <FontFamily>Tahoma</FontFamily>
                                     <FontSize>9pt</FontSize>
@@ -135,7 +135,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Personal No</Value>
+                                  <Value EvaluationMode="Auto">Personal No</Value>
                                   <Style>
                                     <FontFamily>Tahoma</FontFamily>
                                     <FontSize>9pt</FontSize>
@@ -170,7 +170,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Employer</Value>
+                                  <Value EvaluationMode="Auto">Employer</Value>
                                   <Style>
                                     <FontFamily>Tahoma</FontFamily>
                                     <FontSize>9pt</FontSize>
@@ -205,7 +205,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Registration Date</Value>
+                                  <Value EvaluationMode="Auto">Registration Date</Value>
                                   <Style>
                                     <FontFamily>Tahoma</FontFamily>
                                     <FontSize>9pt</FontSize>
@@ -240,7 +240,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Address</Value>
+                                  <Value EvaluationMode="Auto">Address</Value>
                                   <Style>
                                     <FontFamily>Tahoma</FontFamily>
                                     <FontSize>9pt</FontSize>
@@ -275,7 +275,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Mobile No</Value>
+                                  <Value EvaluationMode="Auto">Mobile No</Value>
                                   <Style>
                                     <FontFamily>Tahoma</FontFamily>
                                     <FontSize>9pt</FontSize>
@@ -310,7 +310,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Email Address</Value>
+                                  <Value EvaluationMode="Auto">Email Address</Value>
                                   <Style>
                                     <FontFamily>Tahoma</FontFamily>
                                     <FontSize>9pt</FontSize>
@@ -345,7 +345,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>ID No.</Value>
+                                  <Value EvaluationMode="Auto">ID No.</Value>
                                   <Style>
                                     <FontFamily>Tahoma</FontFamily>
                                     <FontSize>9pt</FontSize>
@@ -380,7 +380,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Gender</Value>
+                                  <Value EvaluationMode="Auto">Gender</Value>
                                   <Style>
                                     <FontFamily>Tahoma</FontFamily>
                                     <FontSize>9pt</FontSize>
@@ -415,7 +415,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Date Of Birth</Value>
+                                  <Value EvaluationMode="Auto">Date Of Birth</Value>
                                   <Style>
                                     <FontFamily>Tahoma</FontFamily>
                                     <FontSize>9pt</FontSize>
@@ -455,7 +455,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!No_MembershipApplications.Value</Value>
+                                  <Value EvaluationMode="Auto">=Fields!No_MembershipApplications.Value</Value>
                                   <Style>
                                     <FontFamily>Tahoma</FontFamily>
                                     <FontSize>8pt</FontSize>
@@ -488,7 +488,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!Name_MembershipApplications.Value</Value>
+                                  <Value EvaluationMode="Auto">=Fields!Name_MembershipApplications.Value</Value>
                                   <Style>
                                     <FontFamily>Tahoma</FontFamily>
                                     <FontSize>8pt</FontSize>
@@ -521,7 +521,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!PersonalNo_MembershipApplications.Value</Value>
+                                  <Value EvaluationMode="Auto">=Fields!PersonalNo_MembershipApplications.Value</Value>
                                   <Style>
                                     <FontFamily>Tahoma</FontFamily>
                                     <FontSize>8pt</FontSize>
@@ -554,7 +554,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!EmployerName_MembershipApplications.Value</Value>
+                                  <Value EvaluationMode="Auto">=Fields!EmployerName_MembershipApplications.Value</Value>
                                   <Style>
                                     <FontFamily>Tahoma</FontFamily>
                                     <FontSize>8pt</FontSize>
@@ -587,7 +587,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!RegistrationDate_MembershipApplications.Value</Value>
+                                  <Value EvaluationMode="Auto">=Fields!RegistrationDate_MembershipApplications.Value</Value>
                                   <Style>
                                     <FontFamily>Tahoma</FontFamily>
                                     <FontSize>8pt</FontSize>
@@ -620,7 +620,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!Address_MembershipApplications.Value</Value>
+                                  <Value EvaluationMode="Auto">=Fields!Address_MembershipApplications.Value</Value>
                                   <Style>
                                     <FontFamily>Tahoma</FontFamily>
                                     <FontSize>8pt</FontSize>
@@ -653,7 +653,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!MobilePhoneNo_MembershipApplications.Value</Value>
+                                  <Value EvaluationMode="Auto">=Fields!MobilePhoneNo_MembershipApplications.Value</Value>
                                   <Style>
                                     <FontFamily>Tahoma</FontFamily>
                                     <FontSize>8pt</FontSize>
@@ -686,7 +686,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!EMailPersonal_MembershipApplications.Value</Value>
+                                  <Value EvaluationMode="Auto">=Fields!EMailPersonal_MembershipApplications.Value</Value>
                                   <Style>
                                     <FontFamily>Tahoma</FontFamily>
                                     <FontSize>8pt</FontSize>
@@ -719,7 +719,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!IDNo_MembershipApplications.Value</Value>
+                                  <Value EvaluationMode="Auto">=Fields!IDNo_MembershipApplications.Value</Value>
                                   <Style>
                                     <FontFamily>Tahoma</FontFamily>
                                     <FontSize>8pt</FontSize>
@@ -753,7 +753,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!Gender_MembershipApplications.Value</Value>
+                                  <Value EvaluationMode="Auto">=Fields!Gender_MembershipApplications.Value</Value>
                                   <Style>
                                     <FontFamily>Tahoma</FontFamily>
                                     <FontSize>8pt</FontSize>
@@ -787,7 +787,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!DateofBirth_MembershipApplications.Value</Value>
+                                  <Value EvaluationMode="Auto">=Fields!DateofBirth_MembershipApplications.Value</Value>
                                   <Style>
                                     <FontFamily>Tahoma</FontFamily>
                                     <FontSize>8pt</FontSize>
@@ -841,8 +841,8 @@
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>DataSet_Result</DataSetName>
-            <Top>0.14584in</Top>
-            <Left>0.01562in</Left>
+            <Top>0.06944in</Top>
+            <Left>0.03125in</Left>
             <Height>0.45833in</Height>
             <Width>12.47758in</Width>
             <Style>
@@ -852,16 +852,40 @@
             </Style>
           </Tablix>
         </ReportItems>
-        <Height>0.65833in</Height>
+        <Height>0.56597in</Height>
         <Style />
       </Body>
-      <Width>12.50883in</Width>
+      <Width>12.60417in</Width>
       <Page>
         <PageHeader>
-          <Height>1.29032in</Height>
+          <Height>1.5682in</Height>
           <PrintOnFirstPage>true</PrintOnFirstPage>
           <PrintOnLastPage>true</PrintOnLastPage>
           <ReportItems>
+            <Line Name="Line1">
+              <Top>3.96587cm</Top>
+              <Left>0cm</Left>
+              <Height>0cm</Height>
+              <Width>31.77243cm</Width>
+              <Style>
+                <Border>
+                  <Style>Solid</Style>
+                  <Width>3pt</Width>
+                </Border>
+                <TopBorder>
+                  <Width>3pt</Width>
+                </TopBorder>
+                <BottomBorder>
+                  <Width>3pt</Width>
+                </BottomBorder>
+                <LeftBorder>
+                  <Width>3pt</Width>
+                </LeftBorder>
+                <RightBorder>
+                  <Width>3pt</Width>
+                </RightBorder>
+              </Style>
+            </Line>
             <Textbox Name="Textbox8">
               <CanGrow>true</CanGrow>
               <KeepTogether>true</KeepTogether>
@@ -869,7 +893,7 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>=First(Fields!Company_Name.Value, "DataSet_Result")</Value>
+                      <Value EvaluationMode="Auto">=First(Fields!Company_Name.Value, "DataSet_Result")</Value>
                       <Style>
                         <FontSize>15pt</FontSize>
                         <FontWeight>Bold</FontWeight>
@@ -882,10 +906,11 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox1</rd:DefaultName>
-              <Top>0.03462in</Top>
+              <Top>0.04167in</Top>
               <Left>9.06438in</Left>
               <Height>0.28125in</Height>
               <Width>3.44445in</Width>
+              <ZIndex>1</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -903,7 +928,7 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>=First(Fields!Company_Address.Value, "DataSet_Result")</Value>
+                      <Value EvaluationMode="Auto">=First(Fields!Company_Address.Value, "DataSet_Result")</Value>
                       <Style>
                         <FontSize>8pt</FontSize>
                         <FontWeight>Bold</FontWeight>
@@ -916,11 +941,11 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox3</rd:DefaultName>
-              <Top>0.34364in</Top>
+              <Top>0.35069in</Top>
               <Left>9.32541in</Left>
               <Height>0.15625in</Height>
               <Width>3.18342in</Width>
-              <ZIndex>1</ZIndex>
+              <ZIndex>2</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -938,7 +963,7 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>=First(Fields!Company_Address_2.Value, "DataSet_Result")</Value>
+                      <Value EvaluationMode="Auto">=First(Fields!Company_Address_2.Value, "DataSet_Result")</Value>
                       <Style>
                         <FontSize>8pt</FontSize>
                         <FontWeight>Bold</FontWeight>
@@ -951,11 +976,11 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox3</rd:DefaultName>
-              <Top>0.52768in</Top>
+              <Top>0.53473in</Top>
               <Left>9.32541in</Left>
               <Height>0.15625in</Height>
               <Width>3.18342in</Width>
-              <ZIndex>2</ZIndex>
+              <ZIndex>3</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -973,7 +998,7 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>=First(Fields!Company_Phone_No.Value, "DataSet_Result")</Value>
+                      <Value EvaluationMode="Auto">=First(Fields!Company_Phone_No.Value, "DataSet_Result")</Value>
                       <Style>
                         <FontSize>8pt</FontSize>
                         <FontWeight>Bold</FontWeight>
@@ -986,11 +1011,11 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox3</rd:DefaultName>
-              <Top>0.7117in</Top>
+              <Top>0.71875in</Top>
               <Left>9.32541in</Left>
               <Height>0.15625in</Height>
               <Width>3.18342in</Width>
-              <ZIndex>3</ZIndex>
+              <ZIndex>4</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -1008,7 +1033,7 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>=First(Fields!Company_Fax_No.Value, "DataSet_Result")</Value>
+                      <Value EvaluationMode="Auto">=First(Fields!Company_Fax_No.Value, "DataSet_Result")</Value>
                       <Style>
                         <FontSize>8pt</FontSize>
                         <FontWeight>Bold</FontWeight>
@@ -1021,11 +1046,11 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox3</rd:DefaultName>
-              <Top>0.90962in</Top>
+              <Top>0.91667in</Top>
               <Left>9.32541in</Left>
               <Height>0.15625in</Height>
               <Width>3.18342in</Width>
-              <ZIndex>4</ZIndex>
+              <ZIndex>5</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -1043,7 +1068,7 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>=First(Fields!Company_Email.Value, "DataSet_Result")</Value>
+                      <Value EvaluationMode="Auto">=First(Fields!Company_Email.Value, "DataSet_Result")</Value>
                       <Style>
                         <FontSize>8pt</FontSize>
                         <FontWeight>Bold</FontWeight>
@@ -1058,11 +1083,45 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox3</rd:DefaultName>
-              <Top>1.09934in</Top>
+              <Top>1.10639in</Top>
               <Left>9.32541in</Left>
               <Height>0.19098in</Height>
               <Width>3.18342in</Width>
-              <ZIndex>5</ZIndex>
+              <ZIndex>6</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+            <Textbox Name="Textbox28">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value EvaluationMode="Auto">MEMBER'S DEPOSIT CONTRIBUTION</Value>
+                      <Style>
+                        <FontWeight>Bold</FontWeight>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style>
+                    <TextAlign>Center</TextAlign>
+                  </Style>
+                </Paragraph>
+              </Paragraphs>
+              <rd:DefaultName>Textbox16</rd:DefaultName>
+              <Top>3.33059cm</Top>
+              <Left>0cm</Left>
+              <Height>0.6cm</Height>
+              <Width>26.97432cm</Width>
+              <ZIndex>7</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -1078,11 +1137,11 @@
               <Value>=First(Fields!Company_Picture.Value, "DataSet_Result")</Value>
               <MIMEType>image/png</MIMEType>
               <Sizing>FitProportional</Sizing>
-              <Top>0cm</Top>
+              <Top>0.01791cm</Top>
               <Left>0cm</Left>
               <Height>3.11893cm</Height>
               <Width>3.29848cm</Width>
-              <ZIndex>6</ZIndex>
+              <ZIndex>8</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>

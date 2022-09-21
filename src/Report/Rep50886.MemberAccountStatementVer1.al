@@ -17,6 +17,10 @@ Report 50886 "Member Account Statement(Ver1)"
             column(No_Members; Customer."No.")
             {
             }
+            column(PageNo_Members; CurrReport.PageNo())
+            {
+
+            }
             column(Name_Members; Customer.Name)
             {
             }

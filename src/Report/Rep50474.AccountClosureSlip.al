@@ -22,7 +22,7 @@ Report 50474 "Account Closure Slip"
             column(FORMAT_TODAY_0_4_; Format(Today, 0, 4))
             {
             }
-            // column(CurrReport_PAGENO; Format(ReportForNav.PageNo))
+            // column(CurrReport_PAGENO; CurrReport.PageNo())
             // {
             // }
             column(UserId; UserId)
@@ -390,27 +390,27 @@ Report 50474 "Account Closure Slip"
         }
         trigger OnOpenPage()
         begin
-            // ReportForNavOpenDesigner := false;
+            ////:= false;
         end;
     }
 
     trigger OnInitReport()
     begin
         ;
-        // ReportsForNavInit;
+        // 
 
     end;
 
     trigger OnPostReport()
     begin
         ;
-        //ReportForNav.Post;
+        //
     end;
 
     trigger OnPreReport()
     begin
         ;
-        //ReportsForNavPre;
+        //
     end;
 
     var

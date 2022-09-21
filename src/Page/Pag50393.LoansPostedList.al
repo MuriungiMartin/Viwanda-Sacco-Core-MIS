@@ -3,7 +3,7 @@ Page 50393 "Loans Posted List"
 {
     CardPageID = "Loans Application Card(Posted)";
     DeleteAllowed = false;
-    Editable = false;
+    Editable = true;
     InsertAllowed = false;
     ModifyAllowed = false;
     PageType = List;
@@ -388,8 +388,12 @@ Page 50393 "Loans Posted List"
     trigger OnAfterGetRecord()
     begin
         Overdue := Overdue::" ";
-        if FormatField(Rec) then
+        if FormatField(Rec) then begin
             Overdue := Overdue::Yes;
+        end;
+
+        "Expected Date of Completion" := CalcDate('5D', Today);
+        Modify();
     end;
 
     var

@@ -49,7 +49,7 @@ Report 50910 "Loans Disburesment Bal Report"
             column(Company_Email; Company."E-Mail")
             {
             }
-            // column(CurrReport_PAGENO; Format(ReportForNav.PageNo))
+            // column(CurrReport_PAGENO; CurrReport.PageNo())
             // {
             // }
             column(UserId; UserId)
@@ -639,7 +639,7 @@ Report 50910 "Loans Disburesment Bal Report"
         }
         trigger OnOpenPage()
         begin
-            // ReportForNavOpenDesigner := false;
+            ////:= false;
         end;
     }
 
@@ -648,14 +648,14 @@ Report 50910 "Loans Disburesment Bal Report"
         Company.Get();
         Company.CalcFields(Company.Picture);
         ;
-        // ReportsForNavInit;
+        // 
 
     end;
 
     trigger OnPostReport()
     begin
         ;
-        // ReportForNav.Post;
+        // 
     end;
 
     trigger OnPreReport()
@@ -665,7 +665,7 @@ Report 50910 "Loans Disburesment Bal Report"
             Name := "COMPY INFOR".Name;
         end;
         ;
-        // ReportsForNavPre;
+        // 
     end;
 
     var

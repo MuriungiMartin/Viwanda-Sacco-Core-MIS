@@ -406,14 +406,14 @@ Report 50971 "Loan Disbursement"
     trigger OnInitReport()
     begin
         ;
-        //ReportsForNavInit;
+        //
 
     end;
 
     trigger OnPostReport()
     begin
         ;
-        //ReportForNav.Post;
+        //
     end;
 
     trigger OnPreReport()
@@ -424,7 +424,7 @@ Report 50971 "Loan Disbursement"
             CompanyEmail := CompanyInfo."E-Mail";
         end
         ;
-        //ReportsForNavPre;
+        //
     end;
 
     var

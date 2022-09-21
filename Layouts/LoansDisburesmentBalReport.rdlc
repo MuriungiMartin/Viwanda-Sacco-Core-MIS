@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+<Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns:cl="http://schemas.microsoft.com/sqlserver/reporting/2010/01/componentdefinition" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/reportdefinition">
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
     <DataSource Name="DataSource">
@@ -8,7 +8,7 @@
         <ConnectString />
       </ConnectionProperties>
       <rd:SecurityType>None</rd:SecurityType>
-      <rd:DataSourceID>9e194a1d-8f98-4028-a7d7-c6e7ef5f87cc</rd:DataSourceID>
+      <rd:DataSourceID>ae3d42ae-1eb4-4aec-9af4-ee2e3e0a0702</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <ReportSections>
@@ -22,7 +22,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>=First(Fields!Company_Name.Value, "DataSet_Result")</Value>
+                    <Value EvaluationMode="Auto">=First(Fields!Company_Name.Value, "DataSet_Result")</Value>
                     <Style>
                       <FontSize>15pt</FontSize>
                       <FontWeight>Bold</FontWeight>
@@ -35,8 +35,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>0.00683in</Top>
-            <Left>8.97745in</Left>
+            <Top>0.03461in</Top>
+            <Left>9.1201in</Left>
             <Height>0.28125in</Height>
             <Width>3.44445in</Width>
             <Style>
@@ -56,7 +56,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>=First(Fields!Company_Address.Value, "DataSet_Result")</Value>
+                    <Value EvaluationMode="Auto">=First(Fields!Company_Address.Value, "DataSet_Result")</Value>
                     <Style>
                       <FontSize>8pt</FontSize>
                       <FontWeight>Bold</FontWeight>
@@ -69,8 +69,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox3</rd:DefaultName>
-            <Top>0.31585in</Top>
-            <Left>9.23848in</Left>
+            <Top>0.34363in</Top>
+            <Left>9.38113in</Left>
             <Height>0.15625in</Height>
             <Width>3.18342in</Width>
             <ZIndex>1</ZIndex>
@@ -91,7 +91,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>=First(Fields!Company_Address_2.Value, "DataSet_Result")</Value>
+                    <Value EvaluationMode="Auto">=First(Fields!Company_Address_2.Value, "DataSet_Result")</Value>
                     <Style>
                       <FontSize>8pt</FontSize>
                       <FontWeight>Bold</FontWeight>
@@ -104,8 +104,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox3</rd:DefaultName>
-            <Top>0.49989in</Top>
-            <Left>9.23848in</Left>
+            <Top>0.52767in</Top>
+            <Left>9.38113in</Left>
             <Height>0.15625in</Height>
             <Width>3.18342in</Width>
             <ZIndex>2</ZIndex>
@@ -126,7 +126,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>=First(Fields!Company_Phone_No.Value, "DataSet_Result")</Value>
+                    <Value EvaluationMode="Auto">=First(Fields!Company_Phone_No.Value, "DataSet_Result")</Value>
                     <Style>
                       <FontSize>8pt</FontSize>
                       <FontWeight>Bold</FontWeight>
@@ -139,8 +139,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox3</rd:DefaultName>
-            <Top>0.68391in</Top>
-            <Left>9.23848in</Left>
+            <Top>0.71169in</Top>
+            <Left>9.38113in</Left>
             <Height>0.15625in</Height>
             <Width>3.18342in</Width>
             <ZIndex>3</ZIndex>
@@ -161,7 +161,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>=First(Fields!Company_Fax_No.Value, "DataSet_Result")</Value>
+                    <Value EvaluationMode="Auto">=First(Fields!Company_Fax_No.Value, "DataSet_Result")</Value>
                     <Style>
                       <FontSize>8pt</FontSize>
                       <FontWeight>Bold</FontWeight>
@@ -174,8 +174,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox3</rd:DefaultName>
-            <Top>0.88183in</Top>
-            <Left>9.23848in</Left>
+            <Top>0.90961in</Top>
+            <Left>9.38113in</Left>
             <Height>0.15625in</Height>
             <Width>3.18342in</Width>
             <ZIndex>4</ZIndex>
@@ -196,7 +196,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>=First(Fields!Company_Email.Value, "DataSet_Result")</Value>
+                    <Value EvaluationMode="Auto">=First(Fields!Company_Email.Value, "DataSet_Result")</Value>
                     <Style>
                       <FontSize>8pt</FontSize>
                       <FontWeight>Bold</FontWeight>
@@ -211,8 +211,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox3</rd:DefaultName>
-            <Top>1.07155in</Top>
-            <Left>9.23848in</Left>
+            <Top>1.09933in</Top>
+            <Left>9.38113in</Left>
             <Height>0.19098in</Height>
             <Width>3.18342in</Width>
             <ZIndex>5</ZIndex>
@@ -231,8 +231,8 @@
             <Value>=First(Fields!Company_Picture.Value, "DataSet_Result")</Value>
             <MIMEType>image/png</MIMEType>
             <Sizing>FitProportional</Sizing>
-            <Top>0cm</Top>
-            <Left>0cm</Left>
+            <Top>0.07055cm</Top>
+            <Left>0.36234cm</Left>
             <Height>3.11893cm</Height>
             <Width>3.29848cm</Width>
             <ZIndex>6</ZIndex>
@@ -249,7 +249,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>LOANS ISSUED</Value>
+                    <Value EvaluationMode="Auto">LOANS ISSUED</Value>
                     <Style>
                       <FontWeight>Bold</FontWeight>
                     </Style>
@@ -261,8 +261,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox16</rd:DefaultName>
-            <Top>3.31268cm</Top>
-            <Left>0cm</Left>
+            <Top>3.38323cm</Top>
+            <Left>0.36234cm</Left>
             <Height>0.6cm</Height>
             <Width>31.55162cm</Width>
             <ZIndex>7</ZIndex>
@@ -277,8 +277,8 @@
             </Style>
           </Textbox>
           <Line Name="Line2">
-            <Top>4.15376cm</Top>
-            <Left>0cm</Left>
+            <Top>4.22431cm</Top>
+            <Left>0.36234cm</Left>
             <Height>0cm</Height>
             <Width>31.55162cm</Width>
             <ZIndex>8</ZIndex>
@@ -344,7 +344,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Loan No.</Value>
+                                  <Value EvaluationMode="Auto">Loan No.</Value>
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
@@ -398,7 +398,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Member No</Value>
+                                  <Value EvaluationMode="Auto">Member No</Value>
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
@@ -452,7 +452,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Member Name</Value>
+                                  <Value EvaluationMode="Auto">Member Name</Value>
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
@@ -505,7 +505,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Employer</Value>
+                                  <Value EvaluationMode="Auto">Employer</Value>
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
@@ -558,7 +558,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Payroll No.</Value>
+                                  <Value EvaluationMode="Auto">Payroll No.</Value>
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
@@ -613,7 +613,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Loan Product</Value>
+                                  <Value EvaluationMode="Auto">Loan Product</Value>
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
@@ -668,7 +668,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Requested Amount</Value>
+                                  <Value EvaluationMode="Auto">Requested Amount</Value>
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
@@ -723,7 +723,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Approved Amount</Value>
+                                  <Value EvaluationMode="Auto">Approved Amount</Value>
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
@@ -778,7 +778,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Instalment</Value>
+                                  <Value EvaluationMode="Auto">Instalment</Value>
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
@@ -833,7 +833,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Upfronts</Value>
+                                  <Value EvaluationMode="Auto">Upfronts</Value>
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
@@ -888,7 +888,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Net Disbursed</Value>
+                                  <Value EvaluationMode="Auto">Net Disbursed</Value>
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
@@ -943,7 +943,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Outstanding Bal</Value>
+                                  <Value EvaluationMode="Auto">Outstanding Bal</Value>
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
@@ -998,7 +998,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Outstanding Int</Value>
+                                  <Value EvaluationMode="Auto">Outstanding Int</Value>
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
@@ -1058,7 +1058,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!Loans__Loan__No__.Value</Value>
+                                  <Value EvaluationMode="Auto">=Fields!Loans__Loan__No__.Value</Value>
                                   <Style>
                                     <FontSize>8pt</FontSize>
                                     <Format>d</Format>
@@ -1112,7 +1112,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!Loans__Client_Code_.Value</Value>
+                                  <Value EvaluationMode="Auto">=Fields!Loans__Client_Code_.Value</Value>
                                   <Style>
                                     <FontSize>8pt</FontSize>
                                   </Style>
@@ -1165,7 +1165,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!Loans__Client_Name_.Value</Value>
+                                  <Value EvaluationMode="Auto">=Fields!Loans__Client_Name_.Value</Value>
                                   <Style>
                                     <FontSize>8pt</FontSize>
                                   </Style>
@@ -1216,7 +1216,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!Employer_Code.Value</Value>
+                                  <Value EvaluationMode="Auto">=Fields!Employer_Code.Value</Value>
                                   <Style>
                                     <FontSize>8pt</FontSize>
                                   </Style>
@@ -1267,7 +1267,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!Staff_No.Value</Value>
+                                  <Value EvaluationMode="Auto">=Fields!Staff_No.Value</Value>
                                   <Style>
                                     <FontSize>8pt</FontSize>
                                     <Format>#,0.00;#,0.00-;''</Format>
@@ -1321,7 +1321,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!LoanProductType_LoansRegister.Value</Value>
+                                  <Value EvaluationMode="Auto">=Fields!LoanProductType_LoansRegister.Value</Value>
                                   <Style>
                                     <FontSize>8pt</FontSize>
                                     <Format>#,0.00;#,0.00-;''</Format>
@@ -1375,7 +1375,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!Loans__Requested_Amount_.Value</Value>
+                                  <Value EvaluationMode="Auto">=Fields!Loans__Requested_Amount_.Value</Value>
                                   <Style>
                                     <FontSize>8pt</FontSize>
                                     <Format>#,0.00;#,0.00-;''</Format>
@@ -1409,7 +1409,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!Loans__Approved_Amount_.Value</Value>
+                                  <Value EvaluationMode="Auto">=Fields!Loans__Approved_Amount_.Value</Value>
                                   <Style>
                                     <FontSize>8pt</FontSize>
                                     <Format>#,0.00;(#,0.00)</Format>
@@ -1443,7 +1443,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!Loans_Installments.Value</Value>
+                                  <Value EvaluationMode="Auto">=Fields!Loans_Installments.Value</Value>
                                   <Style>
                                     <FontSize>8pt</FontSize>
                                   </Style>
@@ -1496,7 +1496,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!Upfronts.Value</Value>
+                                  <Value EvaluationMode="Auto">=Fields!Upfronts.Value</Value>
                                   <Style>
                                     <FontSize>8pt</FontSize>
                                     <Format>#,0.00;(#,0.00)</Format>
@@ -1530,7 +1530,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!Netdisbursed.Value</Value>
+                                  <Value EvaluationMode="Auto">=Fields!Netdisbursed.Value</Value>
                                   <Style>
                                     <FontSize>8pt</FontSize>
                                     <Format>#,0.00;(#,0.00)</Format>
@@ -1564,7 +1564,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!Loans_Loans__Outstanding_Balance_.Value</Value>
+                                  <Value EvaluationMode="Auto">=Fields!Loans_Loans__Outstanding_Balance_.Value</Value>
                                   <Style>
                                     <FontSize>8pt</FontSize>
                                     <Format>#,0.00;(#,0.00)</Format>
@@ -1598,7 +1598,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!Loans__Oustanding_Interest_.Value</Value>
+                                  <Value EvaluationMode="Auto">=Fields!Loans__Oustanding_Interest_.Value</Value>
                                   <Style>
                                     <FontSize>8pt</FontSize>
                                     <Format>#,0.00;(#,0.00)</Format>
@@ -1637,7 +1637,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>TOTAL</Value>
+                                  <Value EvaluationMode="Auto">TOTAL</Value>
                                   <Style>
                                     <FontSize>8pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
@@ -1679,7 +1679,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value />
+                                  <Value EvaluationMode="Auto" />
                                   <Style>
                                     <FontSize>8pt</FontSize>
                                   </Style>
@@ -1713,7 +1713,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value />
+                                  <Value EvaluationMode="Auto" />
                                   <Style>
                                     <FontSize>8pt</FontSize>
                                   </Style>
@@ -1747,7 +1747,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Sum(Fields!Loans__Requested_Amount_.Value)</Value>
+                                  <Value EvaluationMode="Auto">=Sum(Fields!Loans__Requested_Amount_.Value)</Value>
                                   <Style>
                                     <FontSize>8pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
@@ -1783,7 +1783,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Sum(Fields!Loans__Approved_Amount_.Value)</Value>
+                                  <Value EvaluationMode="Auto">=Sum(Fields!Loans__Approved_Amount_.Value)</Value>
                                   <Style>
                                     <FontSize>8pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
@@ -1819,7 +1819,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value />
+                                  <Value EvaluationMode="Auto" />
                                   <Style>
                                     <FontSize>8pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
@@ -1854,7 +1854,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Sum(Fields!Upfronts.Value)</Value>
+                                  <Value EvaluationMode="Auto">=Sum(Fields!Upfronts.Value)</Value>
                                   <Style>
                                     <FontSize>8pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
@@ -1889,7 +1889,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Sum(Fields!Netdisbursed.Value)</Value>
+                                  <Value EvaluationMode="Auto">=Sum(Fields!Netdisbursed.Value)</Value>
                                   <Style>
                                     <FontSize>8pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
@@ -1914,6 +1914,7 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
+                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
@@ -1925,7 +1926,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Sum(Fields!Loans_Loans__Outstanding_Balance_.Value)</Value>
+                                  <Value EvaluationMode="Auto">=Sum(Fields!Loans_Loans__Outstanding_Balance_.Value)</Value>
                                   <Style>
                                     <FontSize>8pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
@@ -1961,7 +1962,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!Loans__Oustanding_Interest_.Value</Value>
+                                  <Value EvaluationMode="Auto">=Fields!Loans__Oustanding_Interest_.Value</Value>
                                   <Style>
                                     <FontSize>8pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
@@ -2023,8 +2024,8 @@
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>DataSet_Result</DataSetName>
-            <Top>4.33015cm</Top>
-            <Left>0cm</Left>
+            <Top>4.4007cm</Top>
+            <Left>0.36234cm</Left>
             <Height>1.45605cm</Height>
             <Width>31.9743cm</Width>
             <ZIndex>9</ZIndex>
@@ -2035,11 +2036,17 @@
             </Style>
           </Tablix>
         </ReportItems>
-        <Height>2.27803in</Height>
+        <Height>6.88594cm</Height>
         <Style />
       </Body>
-      <Width>12.58831in</Width>
+      <Width>32.33664cm</Width>
       <Page>
+        <PageHeight>27cm</PageHeight>
+        <PageWidth>33.5cm</PageWidth>
+        <LeftMargin>1cm</LeftMargin>
+        <RightMargin>1cm</RightMargin>
+        <TopMargin>1cm</TopMargin>
+        <BottomMargin>1cm</BottomMargin>
         <Style />
       </Page>
     </ReportSection>
@@ -2081,8 +2088,8 @@ End Function
 </Code>
   <Language>=User!Language</Language>
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
-  <rd:ReportUnitType>Inch</rd:ReportUnitType>
-  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <rd:ReportUnitType>Cm</rd:ReportUnitType>
+  <rd:ReportID>c05e80d7-6d3c-4983-9a52-ac972f643632</rd:ReportID>
   <DataSets>
     <DataSet Name="DataSet_Result">
       <Fields>

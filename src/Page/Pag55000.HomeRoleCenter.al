@@ -214,7 +214,7 @@ page 55000 "Home Role Center" // default role center change to comapny name
                 Caption = 'Cost Accounting';
                 action("Cost Accounting P/L Statement")
                 {
-                    ApplicationArea = CostAccounting;
+                    ApplicationArea = all;
                     Caption = 'Cost Accounting P/L Statement';
                     Image = "Report";
                     RunObject = Report "Cost Acctg. Statement";
@@ -222,7 +222,7 @@ page 55000 "Home Role Center" // default role center change to comapny name
                 }
                 action("CA P/L Statement per Period")
                 {
-                    ApplicationArea = CostAccounting;
+                    ApplicationArea = all;
                     Caption = 'CA P/L Statement per Period';
                     Image = "Report";
                     RunObject = Report "Cost Acctg. Stmt. per Period";
@@ -230,7 +230,7 @@ page 55000 "Home Role Center" // default role center change to comapny name
                 }
                 action("CA P/L Statement with Budget")
                 {
-                    ApplicationArea = CostAccounting;
+                    ApplicationArea = all;
                     Caption = 'CA P/L Statement with Budget';
                     Image = "Report";
                     RunObject = Report "Cost Acctg. Statement/Budget";
@@ -238,7 +238,7 @@ page 55000 "Home Role Center" // default role center change to comapny name
                 }
                 action("Cost Accounting Analysis")
                 {
-                    ApplicationArea = CostAccounting;
+                    ApplicationArea = all;
                     Caption = 'Cost Accounting Analysis';
                     Image = "Report";
                     RunObject = Report "Cost Acctg. Analysis";
@@ -661,23 +661,51 @@ page 55000 "Home Role Center" // default role center change to comapny name
             group(Action84)
             {
                 Caption = 'Membership Management';
-                action(MembershipApp)
+                group("Individual Membership")
                 {
-                    ApplicationArea = All;
-                    Caption = 'Membership Application';
-                    Promoted = true;
-                    PromotedCategory = Process;
-                    RunObject = Page "Membership Application List";
-                    ToolTip = 'Apply New Members.';
+                    action(MembershipApp)
+                    {
+                        ApplicationArea = All;
+                        Caption = 'Membership Application';
+                        Promoted = true;
+                        PromotedCategory = Process;
+                        RunObject = Page "Membership Application List";
+                        ToolTip = 'Apply New Members.';
+                    }
+                    action(MembersList)
+                    {
+                        ApplicationArea = all;
+                        Caption = 'Member Accounts List';
+                        Promoted = true;
+                        PromotedCategory = Process;
+                        RunObject = Page "Members List";
+                        ToolTip = 'Manage Member Accounts';
+                    }
+                    group("Membership Reports")
+                    {
+
+                    }
                 }
-                action(MembersList)
+
+                group("Membership Withdrawal")
                 {
-                    ApplicationArea = CostAccounting;
-                    Caption = 'Member Accounts List';
-                    Promoted = true;
-                    PromotedCategory = Process;
-                    RunObject = Page "Members List";
-                    ToolTip = 'Manage Member Accounts';
+                    action("Member Withdrawal List")
+                    {
+                        ApplicationArea = all;
+                        Promoted = true;
+                        RunObject = page "Membership Exit List";
+
+                    }
+                    action("Mature Membership Withdrawal")
+                    {
+                        ApplicationArea = all;
+                        Promoted = true;
+                        //RunObject=page mature
+                    }
+                    group("Withdrawal Reports")
+                    {
+
+                    }
                 }
                 group(ChangeRequest)
                 {
@@ -693,7 +721,7 @@ page 55000 "Home Role Center" // default role center change to comapny name
                     }
                     action(AgentNOKSignatoriesChange)
                     {
-                        ApplicationArea = CostAccounting;
+                        ApplicationArea = all;
                         Caption = 'Agent/NOK/Signatories Change';
                         Promoted = true;
                         PromotedCategory = Process;
@@ -995,6 +1023,25 @@ page 55000 "Home Role Center" // default role center change to comapny name
                         Caption = 'Posted Loans';
                         RunObject = Page "Loans Posted List";
                         ToolTip = 'Open the list of the Loans Posted.';
+                    }
+
+                    group("Guarantor Substitution")
+                    {
+                        action("Guarantor Substitution List")
+                        {
+                            ApplicationArea = Basic, Suite;
+                            RunObject = Page "Guarantorship Sub List";
+                        }
+                        action("Effected Guarantor Substitution")
+                        {
+                            ApplicationArea = Basic, Suite;
+                            RunObject = Page "Processed Guarantor Sub List";
+                        }
+
+                    }
+                    group("Loans' Reports")
+                    {
+
                     }
                 }
                 group("FOSA Loans MAnagement")
@@ -1967,9 +2014,9 @@ page 55000 "Home Role Center" // default role center change to comapny name
                 }
                 action("Cost Accounting Setup")
                 {
-                    ApplicationArea = CostAccounting;
+                    ApplicationArea = all;
                     Caption = 'Cost Accounting Setup';
-                    Image = CostAccountingSetup;
+                    Image = allSetup;
                     RunObject = Page "Cost Accounting Setup";
                     ToolTip = 'Specify how you transfer general ledger entries to cost accounting, how you link dimensions to cost centers and cost objects, and how you handle the allocation ID and allocation document number.';
                     ObsoleteState = Pending;

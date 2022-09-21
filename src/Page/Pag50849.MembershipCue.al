@@ -3,6 +3,7 @@ Page 50849 "Membership Cue"
 {
     PageType = CardPart;
     SourceTable = "Membership Cue";
+    // DataAccessIntent
 
     layout
     {
@@ -234,8 +235,8 @@ Page 50849 "Membership Cue"
             "User ID" := UserId;
             Insert;
         end;
-
     end;
+
 
 }
 
