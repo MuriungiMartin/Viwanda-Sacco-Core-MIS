@@ -683,364 +683,506 @@ page 55000 "Home Role Center" // default role center change to comapny name
                     }
                     group("Membership Reports")
                     {
+                        action("Members Applications List")
+                        {
+                            ApplicationArea = all;
+                            promoted = true;
+                            PromotedCategory = Process;
+                            RunObject = report "Members Applications List";
+                            ToolTip = 'Members Appplications List Report';
+                        }
+                        action("Members Register")
+                        {
+                            ApplicationArea = all;
+                            promoted = true;
+                            PromotedCategory = Process;
+                            RunObject = report "Member List Report";
+                            ToolTip = 'Members Register';
 
-                    }
-                }
+                        }
+                        action("Share Capital Balances Report")
+                        {
+                            ApplicationArea = all;
+                            promoted = true;
+                            PromotedCategory = Process;
+                            RunObject = report "Share Capital Balances Report.";
+                            ToolTip = 'Share Capital Balances Report';
+                        }
+                        action("Member Deposit Balances Report")
+                        {
+                            ApplicationArea = all;
+                            promoted = true;
+                            PromotedCategory = Process;
+                            RunObject = report "Member Deposit Balances Repor.";
+                            ToolTip = 'Member Deposit Balances Report';
+                        }
+                        action("Member Benevolent Statement")
+                        {
+                            ApplicationArea = all;
+                            promoted = true;
+                            PromotedCategory = Process;
+                            RunObject = report "Benevolent Fund Report.";
+                            ToolTip = 'Member Benevolent Statement';
 
-                group("Membership Withdrawal")
-                {
-                    action("Member Withdrawal List")
-                    {
-                        ApplicationArea = all;
-                        Promoted = true;
-                        RunObject = page "Membership Exit List";
 
-                    }
-                    action("Mature Membership Withdrawal")
-                    {
-                        ApplicationArea = all;
-                        Promoted = true;
-                        //RunObject=page mature
-                    }
-                    group("Withdrawal Reports")
-                    {
 
+
+
+                        }
                     }
-                }
-                group(ChangeRequest)
-                {
-                    Caption = 'Change Request';
-                    action("Change Request")
+
+                    group("Membership Withdrawal")
                     {
-                        ApplicationArea = All;
-                        Caption = 'Change Request List';
-                        Promoted = true;
-                        PromotedCategory = Process;
-                        RunObject = Page "Change Request List";
-                        ToolTip = 'Change Member Details';
+                        action("Member Withdrawal List")
+                        {
+                            ApplicationArea = all;
+                            Promoted = true;
+                            RunObject = page "Membership Exit List";
+
+                        }
+                        action("Mature Membership Withdrawal")
+                        {
+                            ApplicationArea = all;
+                            Promoted = true;
+                            //RunObject=page mature
+                        }
+                        group("Withdrawal Reports")
+                        {
+
+                        }
                     }
-                    action(AgentNOKSignatoriesChange)
+                    group(ChangeRequest)
                     {
-                        ApplicationArea = all;
-                        Caption = 'Agent/NOK/Signatories Change';
-                        Promoted = true;
-                        PromotedCategory = Process;
-                        RunObject = Page "New Agent/NOK/Sign Change List";
-                    }
-                    group(ReportsChangereq)
-                    {
-                        caption = 'Reports Change Request';
-                        action(ChangeReqMobile)
+                        Caption = 'Change Request';
+                        action("Change Request")
                         {
                             ApplicationArea = All;
-                            Caption = 'Change Req(mobile)';
+                            Caption = 'Change Request List';
                             Promoted = true;
                             PromotedCategory = Process;
-                            RunObject = report "Change Request Report(Mobile)";
+                            RunObject = Page "Change Request List";
+                            ToolTip = 'Change Member Details';
                         }
-                        action(ChangeReqAcc)
+                        action(AgentNOKSignatoriesChange)
                         {
-                            ApplicationArea = All;
-                            Caption = 'Change Req(Account)';
+                            ApplicationArea = all;
+                            Caption = 'Agent/NOK/Signatories Change';
                             Promoted = true;
                             PromotedCategory = Process;
-                            RunObject = report "Change Request Report(Account)";
+                            RunObject = Page "New Agent/NOK/Sign Change List";
                         }
-                    }
-                    group(EffectedChangeReqs)
+                        group(ReportsChangereq)
+                        {
+                            caption = 'Reports Change Request';
+                            action(ChangeReqMobile)
+                            {
+                                ApplicationArea = All;
+                                Caption = 'Change Req(mobile)';
+                                Promoted = true;
+                                PromotedCategory = Process;
+                                RunObject = report "Change Request Report(Mobile)";
+                            }
+                            action(ChangeReqAcc)
+                            {
+                                ApplicationArea = All;
+                                Caption = 'Change Req(Account)';
+                                Promoted = true;
+                                PromotedCategory = Process;
+                                RunObject = report "Change Request Report(Account)";
+                            }
+                        }
+                        group(EffectedChangeReqs)
 
-                    {
-                        Caption = 'Effected Change Requests';
-                        action(updatedchangereqslist)
                         {
-                            ApplicationArea = All;
-                            Caption = 'Updated Change requests';
-                            Promoted = true;
-                            PromotedCategory = Process;
-                            RunObject = page "Updated Change Request List";
+                            Caption = 'Effected Change Requests';
+                            action(updatedchangereqslist)
+                            {
+                                ApplicationArea = All;
+                                Caption = 'Updated Change requests';
+                                Promoted = true;
+                                PromotedCategory = Process;
+                                RunObject = page "Updated Change Request List";
+                            }
+
+                            action(updatedNOKAgentSign)
+                            {
+                                Caption = 'Updated NOK/Agent & Signatories';
+                                RunObject = page "Agent/NOK Change - Effected";
+                            }
                         }
 
-                        action(updatedNOKAgentSign)
-                        {
-                            Caption = 'Updated NOK/Agent & Signatories';
-                            RunObject = page "Agent/NOK Change - Effected";
-                        }
                     }
 
                 }
-
-            }
-            group(Action16)
-            {
-                Caption = 'Fixed Assets';
-                Image = FixedAssets;
-                ToolTip = 'Manage depreciation and insurance of your fixed assets.';
-                action(Action17)
+                group(Action16)
                 {
-                    ApplicationArea = FixedAssets;
                     Caption = 'Fixed Assets';
-                    Promoted = true;
-                    PromotedCategory = Process;
-                    RunObject = Page "Fixed Asset List";
-                    ToolTip = 'Manage periodic depreciation of your machinery or machines, keep track of your maintenance costs, manage insurance policies related to fixed assets, and monitor fixed asset statistics.';
-                }
-                action("Fixed Assets G/L Journals")
-                {
-                    ApplicationArea = FixedAssets;
-                    Caption = 'Fixed Assets G/L Journals';
-                    Promoted = true;
-                    PromotedCategory = Process;
-                    RunObject = Page "General Journal Batches";
-                    RunPageView = WHERE("Template Type" = CONST(Assets),
-                                        Recurring = CONST(false));
-                    ToolTip = 'Post fixed asset transactions, such as acquisition and depreciation, in integration with the general ledger. The FA G/L Journal is a general journal, which is integrated into the general ledger.';
-                }
-                action("Fixed Assets Journals")
-                {
-                    ApplicationArea = FixedAssets;
-                    Caption = 'Fixed Assets Journals';
-                    Promoted = true;
-                    PromotedCategory = Process;
-                    RunObject = Page "FA Journal Batches";
-                    RunPageView = WHERE(Recurring = CONST(false));
-                    ToolTip = 'Post fixed asset transactions, such as acquisition and depreciation book without integration to the general ledger.';
-                }
-                action("Fixed Assets Reclass. Journals")
-                {
-                    ApplicationArea = FixedAssets;
-                    Caption = 'Fixed Assets Reclass. Journals';
-                    Promoted = true;
-                    PromotedCategory = Process;
-                    RunObject = Page "FA Reclass. Journal Batches";
-                    ToolTip = 'Transfer, split, or combine fixed assets by preparing reclassification entries to be posted in the fixed asset journal.';
-                }
-                action(Insurance)
-                {
-                    ApplicationArea = FixedAssets;
-                    Caption = 'Insurance';
-                    Promoted = true;
-                    PromotedCategory = Process;
-                    RunObject = Page "Insurance List";
-                    ToolTip = 'Manage insurance policies for fixed assets and monitor insurance coverage.';
-                }
-                action("Insurance Journals")
-                {
-                    ApplicationArea = FixedAssets;
-                    Caption = 'Insurance Journals';
-                    Promoted = true;
-                    PromotedCategory = Process;
-                    RunObject = Page "Insurance Journal Batches";
-                    ToolTip = 'Post entries to the insurance coverage ledger.';
-                }
-                action("Recurring Fixed Asset Journals")
-                {
-                    ApplicationArea = FixedAssets;
-                    Caption = 'Recurring Fixed Asset Journals';
-                    Promoted = true;
-                    PromotedCategory = Process;
-                    RunObject = Page "FA Journal Batches";
-                    RunPageView = WHERE(Recurring = CONST(true));
-                    ToolTip = 'Post recurring fixed asset transactions, such as acquisition and depreciation book without integration to the general ledger.';
-                }
-            }
-            group("Saving Products Management")
-            {
-                Caption = 'Saving Products Management';
-                Image = Bank;
-                ToolTip = 'Manage Saving Accounts Eg. FOSA Savings and Fixed Deposits';
-                Visible = false;
-                action("Account Applications")
-                {
-                    ApplicationArea = basic, suite;
-                    Caption = 'Membership Products Application';
-                    Image = Customer;
-                    RunObject = page "Member Account Application";
-                    ToolTip = 'Open New membership products accounts Application.';
-
-                }
-                action("Member FOSA Accounts")
-                {
-                    ApplicationArea = basic, suite;
-                    Caption = 'Member Savings Accounts';
-                    Image = Customer;
-                    RunObject = page "Member Accounts List";
-                    ToolTip = 'Open Members'' FOSA Accounts';
-                    Visible = false;
-
-                }
-                group("Fixed Deposits Mgmt ")
-                {
-                    Caption = 'Fixed Deposits Mgmt';
-                    Image = Bank;
-                    ToolTip = 'Open Fixed Deposits Submodule';
-                    action("Fixed Deposits List")
-                    {
-                        ApplicationArea = basic, suite;
-                        Caption = 'Fixed Deposits Savings Accounts';
-                        Image = Account;
-                        RunObject = page "Fixed Deposit Acc. List";
-                        ToolTip = 'Open Fixed Deposits'' FOSA Accounts';
-
-                    }
-                    action("Fixed Deposits Setup")
-                    {
-                        ApplicationArea = basic, suite;
-                        Caption = 'Fixed Deposits Types';
-                        Image = Account;
-                        RunObject = page "Fixed deposit Types list";
-                        ToolTip = 'Open Fixed Deposits'' Types';
-
-                    }
-                    action("Fixed Deposits interest")
-                    {
-                        ApplicationArea = basic, suite;
-                        Caption = 'Fixed Deposits Interest';
-                        Image = Account;
-                        RunObject = page "Fixed Deposit Interest Rates";
-                        ToolTip = 'Open Fixed Deposits'' Interest Rates';
-
-                    }
-                }
-                group("Cashier Banking")
-                {
-                    Caption = 'Cashier-Banking';
                     Image = FixedAssets;
-
-                    action("Cashier Transactions Authorisation")
+                    ToolTip = 'Manage depreciation and insurance of your fixed assets.';
+                    action(Action17)
                     {
-                        ApplicationArea = Basic;
-                        Caption = 'Cashier Transactions Authorisation';
-                        RunObject = Page "Cashier Trans Authorisations";
+                        ApplicationArea = FixedAssets;
+                        Caption = 'Fixed Assets';
+                        Promoted = true;
+                        PromotedCategory = Process;
+                        RunObject = Page "Fixed Asset List";
+                        ToolTip = 'Manage periodic depreciation of your machinery or machines, keep track of your maintenance costs, manage insurance policies related to fixed assets, and monitor fixed asset statistics.';
                     }
-                    action("EFT List")
+                    action("Fixed Assets G/L Journals")
                     {
-                        ApplicationArea = Basic;
-                        Caption = 'EFT List';
-                        RunObject = Page "New EFT/RTGS List";
+                        ApplicationArea = FixedAssets;
+                        Caption = 'Fixed Assets G/L Journals';
+                        Promoted = true;
+                        PromotedCategory = Process;
+                        RunObject = Page "General Journal Batches";
+                        RunPageView = WHERE("Template Type" = CONST(Assets),
+                                        Recurring = CONST(false));
+                        ToolTip = 'Post fixed asset transactions, such as acquisition and depreciation, in integration with the general ledger. The FA G/L Journal is a general journal, which is integrated into the general ledger.';
                     }
-                    action("Petty Cash")
+                    action("Fixed Assets Journals")
                     {
-                        ApplicationArea = Basic;
-                        Caption = 'Petty Cash';
-                        RunObject = Page "New Petty Cash Payments List";
+                        ApplicationArea = FixedAssets;
+                        Caption = 'Fixed Assets Journals';
+                        Promoted = true;
+                        PromotedCategory = Process;
+                        RunObject = Page "FA Journal Batches";
+                        RunPageView = WHERE(Recurring = CONST(false));
+                        ToolTip = 'Post fixed asset transactions, such as acquisition and depreciation book without integration to the general ledger.';
                     }
-                    action("Posted Petty Cash")
+                    action("Fixed Assets Reclass. Journals")
                     {
-                        ApplicationArea = Basic;
-                        Caption = 'Posted Petty Cash';
-                        RunObject = Page "Posted Petty Cash Payments";
+                        ApplicationArea = FixedAssets;
+                        Caption = 'Fixed Assets Reclass. Journals';
+                        Promoted = true;
+                        PromotedCategory = Process;
+                        RunObject = Page "FA Reclass. Journal Batches";
+                        ToolTip = 'Transfer, split, or combine fixed assets by preparing reclassification entries to be posted in the fixed asset journal.';
                     }
-                    action("Funds Transfer")
+                    action(Insurance)
                     {
-                        ApplicationArea = Basic;
-                        Caption = 'Funds Transfer';
-                        RunObject = Page "Funds Transfer List";
+                        ApplicationArea = FixedAssets;
+                        Caption = 'Insurance';
+                        Promoted = true;
+                        PromotedCategory = Process;
+                        RunObject = Page "Insurance List";
+                        ToolTip = 'Manage insurance policies for fixed assets and monitor insurance coverage.';
                     }
-                }
-                group("ATM Banking")
-                {
-                    Caption = 'ATM Banking';
-                    action(ATMApplication)
+                    action("Insurance Journals")
                     {
-                        ApplicationArea = Basic, Suite;
-                        Caption = 'ATM Card Application';
-                        RunObject = page "ATM Cards Application - New";
-
+                        ApplicationArea = FixedAssets;
+                        Caption = 'Insurance Journals';
+                        Promoted = true;
+                        PromotedCategory = Process;
+                        RunObject = Page "Insurance Journal Batches";
+                        ToolTip = 'Post entries to the insurance coverage ledger.';
                     }
-                    action(ATMProcessed)
+                    action("Recurring Fixed Asset Journals")
                     {
-                        ApplicationArea = Basic, Suite;
-                        Caption = 'Processed ATM Cards';
-                        RunObject = page "ATM Cards Appl. - Processed";
-
-                    }
-                    action(ATMTransactionDetails)
-                    {
-                        ApplicationArea = Basic, Suite;
-                        Caption = 'ATM Transaction Details';
-                        RunObject = page "Atm Transaction Details";
-
-                    }
-                    action(ATMRequestBatch)
-                    {
-                        ApplicationArea = Basic, Suite;
-                        Caption = 'ATM Card Request Batch List';
-                        RunObject = page "ATM Card Request Batch List";
-
-                    }
-                    action(ATMBatchReceiptsBatch)
-                    {
-                        ApplicationArea = Basic, Suite;
-                        Caption = 'ATM Card Receipt Batch List';
-                        RunObject = page "ATM Card Receipt Batch List";
-
+                        ApplicationArea = FixedAssets;
+                        Caption = 'Recurring Fixed Asset Journals';
+                        Promoted = true;
+                        PromotedCategory = Process;
+                        RunObject = Page "FA Journal Batches";
+                        RunPageView = WHERE(Recurring = CONST(true));
+                        ToolTip = 'Post recurring fixed asset transactions, such as acquisition and depreciation book without integration to the general ledger.';
                     }
                 }
-
-            }
-            group("Loans Management")
-            {
-                Caption = 'Loan Management';
-                Image = CreditCard;
-                ToolTip = 'Loans'' Management Module';
-                group("BOSA Loans Management")
+                group("Saving Products Management")
                 {
-                    Caption = 'BOSA Loan Management';
+                    Caption = 'Saving Products Management';
+                    Image = Bank;
+                    ToolTip = 'Manage Saving Accounts Eg. FOSA Savings and Fixed Deposits';
+                    Visible = false;
+                    action("Account Applications")
+                    {
+                        ApplicationArea = basic, suite;
+                        Caption = 'Membership Products Application';
+                        Image = Customer;
+                        RunObject = page "Member Account Application";
+                        ToolTip = 'Open New membership products accounts Application.';
+
+                    }
+                    action("Member FOSA Accounts")
+                    {
+                        ApplicationArea = basic, suite;
+                        Caption = 'Member Savings Accounts';
+                        Image = Customer;
+                        RunObject = page "Member Accounts List";
+                        ToolTip = 'Open Members'' FOSA Accounts';
+                        Visible = false;
+
+                    }
+                    group("Fixed Deposits Mgmt ")
+                    {
+                        Caption = 'Fixed Deposits Mgmt';
+                        Image = Bank;
+                        ToolTip = 'Open Fixed Deposits Submodule';
+                        action("Fixed Deposits List")
+                        {
+                            ApplicationArea = basic, suite;
+                            Caption = 'Fixed Deposits Savings Accounts';
+                            Image = Account;
+                            RunObject = page "Fixed Deposit Acc. List";
+                            ToolTip = 'Open Fixed Deposits'' FOSA Accounts';
+
+                        }
+                        action("Fixed Deposits Setup")
+                        {
+                            ApplicationArea = basic, suite;
+                            Caption = 'Fixed Deposits Types';
+                            Image = Account;
+                            RunObject = page "Fixed deposit Types list";
+                            ToolTip = 'Open Fixed Deposits'' Types';
+
+                        }
+                        action("Fixed Deposits interest")
+                        {
+                            ApplicationArea = basic, suite;
+                            Caption = 'Fixed Deposits Interest';
+                            Image = Account;
+                            RunObject = page "Fixed Deposit Interest Rates";
+                            ToolTip = 'Open Fixed Deposits'' Interest Rates';
+
+                        }
+                    }
+                    group("Cashier Banking")
+                    {
+                        Caption = 'Cashier-Banking';
+                        Image = FixedAssets;
+
+                        action("Cashier Transactions Authorisation")
+                        {
+                            ApplicationArea = Basic;
+                            Caption = 'Cashier Transactions Authorisation';
+                            RunObject = Page "Cashier Trans Authorisations";
+                        }
+                        action("EFT List")
+                        {
+                            ApplicationArea = Basic;
+                            Caption = 'EFT List';
+                            RunObject = Page "New EFT/RTGS List";
+                        }
+                        action("Petty Cash")
+                        {
+                            ApplicationArea = Basic;
+                            Caption = 'Petty Cash';
+                            RunObject = Page "New Petty Cash Payments List";
+                        }
+                        action("Posted Petty Cash")
+                        {
+                            ApplicationArea = Basic;
+                            Caption = 'Posted Petty Cash';
+                            RunObject = Page "Posted Petty Cash Payments";
+                        }
+                        action("Funds Transfer")
+                        {
+                            ApplicationArea = Basic;
+                            Caption = 'Funds Transfer';
+                            RunObject = Page "Funds Transfer List";
+                        }
+                    }
+                    group("ATM Banking")
+                    {
+                        Caption = 'ATM Banking';
+                        action(ATMApplication)
+                        {
+                            ApplicationArea = Basic, Suite;
+                            Caption = 'ATM Card Application';
+                            RunObject = page "ATM Cards Application - New";
+
+                        }
+                        action(ATMProcessed)
+                        {
+                            ApplicationArea = Basic, Suite;
+                            Caption = 'Processed ATM Cards';
+                            RunObject = page "ATM Cards Appl. - Processed";
+
+                        }
+                        action(ATMTransactionDetails)
+                        {
+                            ApplicationArea = Basic, Suite;
+                            Caption = 'ATM Transaction Details';
+                            RunObject = page "Atm Transaction Details";
+
+                        }
+                        action(ATMRequestBatch)
+                        {
+                            ApplicationArea = Basic, Suite;
+                            Caption = 'ATM Card Request Batch List';
+                            RunObject = page "ATM Card Request Batch List";
+
+                        }
+                        action(ATMBatchReceiptsBatch)
+                        {
+                            ApplicationArea = Basic, Suite;
+                            Caption = 'ATM Card Receipt Batch List';
+                            RunObject = page "ATM Card Receipt Batch List";
+
+                        }
+                    }
+
+                }
+                group("Loans Management")
+                {
+                    Caption = 'Loan Management';
                     Image = CreditCard;
-                    ToolTip = 'BOSA Loans'' Management Module';
-                    action("BOSA Loan Application")
+                    ToolTip = 'Loans'' Management Module';
+                    group("BOSA Loans Management")
                     {
-                        ApplicationArea = Basic, Suite;
-                        Caption = 'BOSA Loan Application';
+                        Caption = 'BOSA Loan Management';
                         Image = CreditCard;
-                        RunObject = Page "Loan Application BOSA(New)";
-                        ToolTip = 'Open BOSA Loan Applications';
-                    }
-                    action("Pending BOSA Loan Application")
-                    {
-                        ApplicationArea = Basic, Suite;
-                        Caption = 'Pending BOSA Loan Applications';
-                        Image = CreditCard;
-                        RunObject = Page "Loans  List- pending approval";
-                        ToolTip = 'Open the list of Pending BOSA Loan Applications.';
-                    }
-                    action("Approved Loans")
-                    {
-                        ApplicationArea = Basic, Suite;
-                        Caption = 'Approved Loans Pending Disbursement.';
-                        RunObject = Page "Loans Application List(Approv)";
-                        ToolTip = 'Open the list of Approved Loans Pending Disbursement.';
-                    }
-                    action("Batch List")
-                    {
-                        ApplicationArea = Basic, Suite;
-                        RunObject = page "Loans Disbursment Batch List";
-                        Caption = 'Loan Batch List';
-                    }
-                    action("Posted Loans")
-                    {
-                        ApplicationArea = Basic, Suite;
-                        Caption = 'Posted Loans';
-                        RunObject = Page "Loans Posted List";
-                        ToolTip = 'Open the list of the Loans Posted.';
-                    }
-
-                    group("Guarantor Substitution")
-                    {
-                        action("Guarantor Substitution List")
+                        ToolTip = 'BOSA Loans'' Management Module';
+                        action("BOSA Loan Application")
                         {
                             ApplicationArea = Basic, Suite;
-                            RunObject = Page "Guarantorship Sub List";
+                            Caption = 'BOSA Loan Application';
+                            Image = CreditCard;
+                            RunObject = Page "Loan Application BOSA(New)";
+                            ToolTip = 'Open BOSA Loan Applications';
                         }
-                        action("Effected Guarantor Substitution")
+                        action("Pending BOSA Loan Application")
                         {
                             ApplicationArea = Basic, Suite;
-                            RunObject = Page "Processed Guarantor Sub List";
+                            Caption = 'Pending BOSA Loan Applications';
+                            Image = CreditCard;
+                            RunObject = Page "Loans  List- pending approval";
+                            ToolTip = 'Open the list of Pending BOSA Loan Applications.';
+                        }
+                        action("Approved Loans")
+                        {
+                            ApplicationArea = Basic, Suite;
+                            Caption = 'Approved Loans Pending Disbursement.';
+                            RunObject = Page "Loans Application List(Approv)";
+                            ToolTip = 'Open the list of Approved Loans Pending Disbursement.';
+                        }
+                        action("Batch List")
+                        {
+                            ApplicationArea = Basic, Suite;
+                            RunObject = page "Loans Disbursment Batch List";
+                            Caption = 'Loan Batch List';
+                        }
+                        action("Posted Loans")
+                        {
+                            ApplicationArea = Basic, Suite;
+                            Caption = 'Posted Loans';
+                            RunObject = Page "Loans Posted List";
+                            ToolTip = 'Open the list of the Loans Posted.';
                         }
 
-                    }
-                    group("Loans' Reports")
-                    {
+                        group("Guarantor Substitution")
+                        {
+                            action("Guarantor Substitution List")
+                            {
+                                ApplicationArea = Basic, Suite;
+                                RunObject = Page "Guarantorship Sub List";
+                            }
+                            action("Effected Guarantor Substitution")
+                            {
+                                ApplicationArea = Basic, Suite;
+                                RunObject = Page "Processed Guarantor Sub List";
+                            }
+
+                        }
+                        group("Loans' Reports")
+                        {
+                            action("Loans Balances Report")
+                            {
+                                ApplicationArea = all;
+                                promoted = true;
+                                PromotedCategory = Process;
+                                RunObject = report "Loans Balances Report";
+                                ToolTip = 'Loans Balances Report';
+                            }
+                            action("Loan Defaulter Aging")
+                            {
+                                ApplicationArea = all;
+                                promoted = true;
+                                PromotedCategory = Process;
+                                RunObject = report "Loan Defaulter Aging";
+                                ToolTip = 'Loan Defaulter Aging';
+                            }
+                            action("Loans Monthly Expectation")
+                            {
+                                ApplicationArea = all;
+                                promoted = true;
+                                PromotedCategory = Process;
+                                RunObject = report "Loans Monthly Expectation";
+                                ToolTip = 'Loans Monthly Expectation';
+                            }
+                            action("Loans Guard Report")
+                            {
+                                ApplicationArea = all;
+                                promoted = true;
+                                PromotedCategory = Process;
+                                RunObject = report "Loans Guard Report";
+                                ToolTip = 'Loans Guard Report';
+                            }
+                            action("Guaranters List")
+                            {
+                                ApplicationArea = all;
+                                promoted = true;
+                                PromotedCategory = Process;
+                                RunObject = report "Guaranters List";
+                                ToolTip = 'Guaranters List';
+                            }
+                            action("Loans Disbursement Listing")
+                            {
+                                ApplicationArea = all;
+                                promoted = true;
+                                PromotedCategory = Process;
+                                RunObject = report "Loan Disbursement List";
+                                ToolTip = 'Loans Disbursment Listing';
+                            }
+                            action("Loan Movement  Report")
+                            {
+                                ApplicationArea = all;
+                                promoted = true;
+                                PromotedCategory = Process;
+                                RunObject = report "Loan Movement Report";
+                                ToolTip = 'Loan Movement Report';
+                            }
+                            action("Loans Register")
+                            {
+                                ApplicationArea = all;
+                                promoted = true;
+                                PromotedCategory = Process;
+                                RunObject = Report "Loans Register";
+                                ToolTip = 'Loan Register Report';
+                            }
+                            action("Loan Batch Payments")
+                            {
+                                ApplicationArea = all;
+                                promoted = true;
+                                PromotedCategory = Process;
+                                RunObject = Report "Loans Batch Payments";
+                                ToolTip = 'Loan Batch Payments Report';
+                            }
+                            action("Loan Movement Report")
+                            {
+                                ApplicationArea = all;
+                                promoted = true;
+                                PromotedCategory = Process;
+                                RunObject = Report "Loan Movement Report";
+                                ToolTip = 'Loan Movement Report';
+                            }
+                            action("Loans Areas Report")
+                            {
+                                ApplicationArea = all;
+                                promoted = true;
+                                PromotedCategory = Process;
+                                RunObject = Report "Loan Arrears Report";
+                                ToolTip = 'Loan Areas Report';
+                            }
+                            action("Loans Monthly Expectatuion")
+                            {
+                                ApplicationArea = all;
+                                promoted = true;
+                                PromotedCategory = Process;
+                                RunObject = Report "Loan Monthly Expectation";
+                                ToolTip = 'Loan Register Report';
+                            }
+
+                        }
 
                     }
                 }
