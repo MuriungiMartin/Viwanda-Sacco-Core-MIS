@@ -751,6 +751,7 @@ page 55000 "Home Role Center" // default role center change to comapny name
 
                         }
                     }
+
                     group(ChangeRequest)
                     {
                         Caption = 'Change Request';
@@ -771,6 +772,7 @@ page 55000 "Home Role Center" // default role center change to comapny name
                             PromotedCategory = Process;
                             RunObject = Page "New Agent/NOK/Sign Change List";
                         }
+
                         group(ReportsChangereq)
                         {
                             caption = 'Reports Change Request';
@@ -1344,6 +1346,18 @@ page 55000 "Home Role Center" // default role center change to comapny name
                             }
                         }
                     }
+                }
+
+            }
+            group("Periodic Activities")
+            {
+                action("Viwanda CheckOff Adivice")
+                {
+                    ApplicationArea = All;
+
+                    Promoted = true;
+                    PromotedCategory = Process;
+                    RunObject = page "Viwanda CheckOff Advice";
                 }
 
             }

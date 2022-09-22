@@ -13,5 +13,5 @@ controladdin "MpesaAddin"
     StartupScript = 'mpesastartup.js';
     event ControlReady()
 
-    procedure pay(phone: Integer)
+    procedure pay()
 }
