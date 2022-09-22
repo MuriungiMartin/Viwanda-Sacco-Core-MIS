@@ -8,9 +8,28 @@ pageextension 50101 "customerListExtension" extends "Customer List"
     {
 
     }
+    actions
+    {
+
+    }
     trigger OnOpenPage()
+    var
+        cust: Record Customer;
+        myInt: Integer;
     begin
-        SetRange(ISNormalMember, false);
+        // SetRange(ISNormalMember, false);
+
     end;
+
+    trigger OnAfterGetRecord()
+    var
+        myInt: Integer;
+    begin
+
+
+
+    end;
+
+
 
 }
