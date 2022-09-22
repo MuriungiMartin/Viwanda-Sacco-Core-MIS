@@ -90,6 +90,5 @@ page 51396 "ChequeCard"
     }
 
     var
-        myInt: Integer;
         workflowIntergration: Codeunit WorkflowIntegration;
 }
