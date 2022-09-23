@@ -998,9 +998,10 @@ Page 50361 "Membership Application Card"
                         ApprovalsMgmt: Codeunit "Approvals Mgmt.";
                         WFEvents: codeunit "Custom Workflow Events";
                     begin
-
+                        FnValidatefields(rec);
                         if WorkflowManagement.CheckMembershipApplicationApprovalsWorkflowEnabled(Rec) then
                             WorkflowManagement.OnSendMembershipApplicationForApproval(Rec);
+
 
                     end;
                 }
@@ -3330,6 +3331,22 @@ Page 50361 "Membership Application Card"
             */
 
     end;
+
+    protected procedure FnValidatefields(MemberApp: Record "Membership Applications")
+    begin
+        TestField("ID No.");
+        TestField("Phone No.");
+        TestField("KRA PIN");
+        TestField("First Name");
+        TestField("Last Name");
+        TestField("Date of Birth");
+        TestField("Postal Code");
+        TestField("Individual Category");
+        TestField("Bank Account No");
+
+    end;
+
+
 
     local procedure FnRunAMLDueDiligenceCheck()
     begin
