@@ -120,6 +120,31 @@ Page 50366 "Members List"
                     RunPageLink = "Customer No." = field("No.");
                     Visible = false;
                 }
+                action("Update details")
+                {
+                    Promoted = true;
+                    PromotedCategory = Process;
+                    trigger OnAction()
+                    var
+                        cust: Record Customer;
+                        myInt: Integer;
+                    begin
+                        if cust.FindSet() then begin
+                            repeat
+                                cust.ISNormalMember := true;
+                                cust.Name := cust."First Name" + ' ' + cust."Middle Name" + ' ' + cust."Last Name";
+                                cust."Customer Posting Group" := 'MEMBER';
+                                cust."Global Dimension 1 Code" := 'BOSA';
+                                cust."Global Dimension 2 Code" := 'NAIROBI';
+                                cust."Monthly Contribution" := 3000;
+                                myInt += 1;
+                                cust.Modify();
+                            until cust.Next() = 0;
+                            Message('Successfully updated %1 records', myInt);
+                        end;
+                    end;
+                }
+
                 action(Contacts)
                 {
                     ApplicationArea = Basic;
@@ -372,11 +397,19 @@ Page 50366 "Members List"
             }
         }
     }
+    trigger OnOpenPage()
+    var
+        myInt: Integer;
+    begin
+        Message('Publishing is true');
+    end;
 
     trigger OnAfterGetRecord()
+    var
+        cust: Record Customer;
+        myInt: Integer;
     begin
 
-        //MemberLiability:=SFactory.FnGetMemberLiability("No.");
     end;
 
     var

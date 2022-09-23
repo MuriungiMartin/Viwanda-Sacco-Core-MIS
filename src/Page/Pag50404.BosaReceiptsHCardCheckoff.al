@@ -105,13 +105,21 @@ Page 50404 "Bosa Receipts H Card-Checkoff"
 
                 trigger OnAction()
                 begin
-                    Cust.Reset;
-                    Cust.SetRange(Cust."No.", ReceiptsProcessingLines."Member No");
-                    if Cust.Find('-') then begin
-                        //REPEAT
-                        ReceiptsProcessingLines."Member Found" := true;
-                        ReceiptsProcessingLines.Modify;
-                        //UNTIL Cust.NEXT=0;
+                    RcptBufLines.Reset;
+                    RcptBufLines.SetRange(RcptBufLines."Receipt Header No", No);
+                    if RcptBufLines.Find('-') then begin
+                        repeat
+                            Cust.Reset;
+                            Cust.SetRange(Cust."No.", RcptBufLines."Member No");
+                            if Cust.Find('-') then begin
+                                //REPEAT
+                                RcptBufLines."Member Found" := true;
+                                RcptBufLines.Name := Cust.Name;
+                                RcptBufLines."Staff/Payroll No" := Cust."No.";
+                                RcptBufLines.Modify;
+                                //UNTIL Cust.NEXT=0;
+                            end;
+                        until RcptBufLines.Next() = 0;
                     end;
                     RcptBufLines.Reset;
                     RcptBufLines.SetRange(RcptBufLines."Receipt Header No", No);
@@ -136,7 +144,7 @@ Page 50404 "Bosa Receipts H Card-Checkoff"
             action("Post check off")
             {
                 ApplicationArea = Basic;
-                Caption = 'Post check off';
+                Caption = 'Process check off';
 
                 trigger OnAction()
                 begin
@@ -483,7 +491,7 @@ Page 50404 "Bosa Receipts H Card-Checkoff"
                                         Gnljnline."Posting Date" := "Posting date";
                                         Gnljnline.Description := Remarks;
                                         if RunBal > Cust."Monthly Contribution" then
-                                            Gnljnline.Amount := Cust."Monthly Contribution" * -1
+                                            Gnljnline.Amount := (genstup."Retained Shares" - Cust."Shares Retained") * -1
                                         else
                                             Gnljnline.Amount := RunBal * -1;
                                         Gnljnline.Validate(Gnljnline.Amount);

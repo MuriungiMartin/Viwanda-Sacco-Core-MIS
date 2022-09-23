@@ -740,15 +740,20 @@ page 55000 "Home Role Center" // default role center change to comapny name
                             RunObject = page "Membership Exit List";
 
                         }
-                        action("Mature Membership Withdrawal")
+                        action("Posted Membership Withdrawal")
                         {
                             ApplicationArea = all;
                             Promoted = true;
-                            //RunObject=page mature
+                            RunObject = page "Posted Member Withdrawal List";
                         }
                         group("Withdrawal Reports")
                         {
-
+                            action("Member Exit list")
+                            {
+                                ApplicationArea = all;
+                                Promoted = true;
+                                RunObject = report "Membership Withdrawal Report";
+                            }
                         }
                     }
 

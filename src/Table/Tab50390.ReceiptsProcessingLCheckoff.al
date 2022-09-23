@@ -105,7 +105,7 @@ Table 50390 "ReceiptsProcessing_L-Checkoff"
         }
         field(25; "Member No"; Code[20])
         {
-            TableRelation = Customer."No." where("Customer Type" = filter(Member));
+            TableRelation = Customer."No." where(ISNormalMember = filter(true));
 
             trigger OnValidate()
             begin
