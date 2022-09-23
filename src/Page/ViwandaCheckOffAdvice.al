@@ -3,7 +3,7 @@ page 59022 "Viwanda CheckOff Advice"
     PageType = List;
     ApplicationArea = All;
     UsageCategory = Lists;
-    SourceTable = "Viwanda Checkoff Off Advice";
+    SourceTable = "Viwanda Checkoff Advice";
     PromotedActionCategories = 'New caption,Process caption,Report caption,Category4 caption';
 
     layout
@@ -18,145 +18,13 @@ page 59022 "Viwanda CheckOff Advice"
                     ApplicationArea = All;
 
                 }
-                field(Amount; Amount)
-                {
-                    ApplicationArea = All;
 
-                }
-                field("No Repayment"; "No Repayment")
-                {
-                    ApplicationArea = All;
-
-                }
-                field("Staff Not Found"; "Staff Not Found")
-                {
-                    ApplicationArea = All;
-
-                }
-                field("Date Filter"; "Date Filter")
-                {
-                    ApplicationArea = All;
-
-                }
-                field("Transaction Date"; "Transaction Date")
-                {
-                    ApplicationArea = All;
-
-                }
-                field(Generated; Generated)
-                {
-                    ApplicationArea = All;
-
-                }
-                field("Payment No"; "Payment No")
-                {
-                    ApplicationArea = All;
-
-                }
-                field(Posted; Posted)
-                {
-                    ApplicationArea = All;
-
-                }
-                field("Multiple Receipts"; "Multiple Receipts")
-                {
-                    ApplicationArea = All;
-
-                }
-                field(Name; Name)
-                {
-                    ApplicationArea = All;
-
-                }
-                field("Early Remitances"; "Early Remitances")
-                {
-                    ApplicationArea = All;
-
-                }
-                field("Early Remitance Amount"; "Early Remitance Amount")
-                {
-                    ApplicationArea = All;
-
-                }
-                field("Trans Type"; "Trans Type")
-                {
-                    ApplicationArea = All;
-
-                }
-                field(Description; Description)
-                {
-                    ApplicationArea = All;
-
-                }
-                field("Member Found"; "Member Found")
-                {
-                    ApplicationArea = All;
-
-                }
-                field("Search Index"; "Search Index")
-                {
-                    ApplicationArea = All;
-
-                }
-                field("Loan Found"; "Loan Found")
-                {
-                    ApplicationArea = All;
-                }
-                field("Loan No"; "Loan No")
-                {
-                    ApplicationArea = All;
-
-                }
-                field(User; User)
-                {
-                    ApplicationArea = All;
-
-                }
-                field("Member Moved"; "Member Moved")
-                {
-                    ApplicationArea = All;
-
-                }
-                field("Employer Code"; "Employer Code")
-                {
-                    ApplicationArea = All;
-
-                }
-                field("Batch No."; "Batch No.")
-                {
-                    ApplicationArea = All;
-
-                }
                 field("Member No"; "Member No")
                 {
                     ApplicationArea = All;
 
                 }
-                field("ID No."; "ID No.")
-                {
-                    ApplicationArea = All;
 
-                }
-                field("Receipt Header No"; "Receipt Header No")
-                {
-                    ApplicationArea = All;
-
-                }
-                field("Receipt Line No"; "Receipt Line No")
-                {
-                    ApplicationArea = All;
-
-                }
-                field("Account Type"; "Account Type")
-                {
-                    ApplicationArea = All;
-
-                }
-                field("Entry No"; "Entry No")
-                {
-                    ApplicationArea = All;
-
-                }
                 field("Sacco Shares"; "Sacco Shares")
                 {
                     ApplicationArea = All;
@@ -213,9 +81,13 @@ page 59022 "Viwanda CheckOff Advice"
             {
                 ApplicationArea = All;
                 Promoted = true;
-
+                PromotedCategory = Process;
                 trigger OnAction();
                 begin
+                    ObjAdvice.Reset();
+
+                    if ObjAdvice.FindSet() then
+                        ObjAdvice.DeleteAll();
                     FnGenerateViwandaAdvice();
                 end;
             }
@@ -239,7 +111,7 @@ page 59022 "Viwanda CheckOff Advice"
         ObjLschedule: Record "Loan Repayment Schedule";
         VarLoanInterest: Decimal;
         VarEntryNo: Integer;
-        ObjAdvice: Record "Viwanda Checkoff Off Advice";
+        ObjAdvice: Record "Viwanda Checkoff Advice";
 
     protected procedure FnGenerateViwandaAdvice()
     begin
@@ -287,12 +159,15 @@ page 59022 "Viwanda CheckOff Advice"
                 if ObjCust."Outstanding Balance" > 0 then begin
                     VarTotalLoan := ObjCust."Outstanding Balance";
                 end;
-                if ObjCust."Welfare Contribution" > 0 then begin
-                    VarSaccoBenevolent := ObjCust."Welfare Contribution";
-                end;
+                VarSaccoBenevolent := ObjSaccoGen."Benevolent Fund Contribution";
                 //---------------------In the checkoff blocktemplate sacco interet comprises of interest, insurance and registration fee-------------------------
                 VarSaccoTotalInterest := VarLoanInterest + VarInsuranceFee + VarRegFee;
-                VarEntryNo += 1;
+                ObjAdvice.Reset();
+                ;
+                if ObjAdvice.Find('+') then begin
+                    VarEntryNo := ObjAdvice."Entry No" + 1;
+                end else
+                    VarEntryNo := 1;
                 ObjAdvice.Init();
                 ObjAdvice."Entry No" := VarEntryNo;
                 ObjAdvice."Staff/Payroll No" := ObjCust."No.";
@@ -302,7 +177,8 @@ page 59022 "Viwanda CheckOff Advice"
                 ObjAdvice."Sacco Total Interest" := VarSaccoTotalInterest;
                 ObjAdvice."Sacco Shares" := varDeposits + varShareCapital;
                 ObjAdvice."Sacco Total Loan" := VarTotalLoan;
-
+                if ObjAdvice."Member No" <> '' then
+                    ObjAdvice.Insert(true);
             until
             ObjCust.Next() = 0;
         end;

@@ -618,6 +618,7 @@ Table 50398 "Sacco General Set-Up"
         }
         field(176; "Benevolent Fund Contribution"; Decimal)
         {
+            
         }
         field(177; "ATM Card Renewal Fee Coop"; Decimal)
         {
